@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/86350" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2023-01-16T16:55:05</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/86350</id>
+
+		<entry>
+		<author><name><![CDATA[Rigachupe]]></name></author>
+		<updated>2023-01-16T16:55:05</updated>
+
+		<published>2023-01-16T16:55:05</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252819#p252819</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252819#p252819"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252819#p252819"><![CDATA[
+Thank you Hydrogen Maniac. I figured it out from the link. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>EDIT: <br>1) There seems to be some sort of FOV problem with camera.lua. I replaced the fov value math.pi/2 to math.rad(60) and it looks better.<br>2) Also in init.lua calling love.graphics.setMeshCullMode("back") would be great, because normally you do not want to draw back faces for polygons to speed things up.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=178662">Rigachupe</a> — Mon Jan 16, 2023 4:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hydrogen Maniac]]></name></author>
+		<updated>2023-01-16T16:17:30</updated>
+
+		<published>2023-01-16T16:17:30</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252816#p252816</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252816#p252816"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252816#p252816"><![CDATA[
+<blockquote class="uncited"><div>Is there a way to add something like a light point so the faces of rendered models would not look so flat on screen?</div></blockquote>You can add all kinds of lighting effects using shaders. Groverburger shared a simple lighting shader earlier in the thread that might be to your liking: <br><a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=86350&amp;start=130" class="postlink">viewtopic.php?f=5&amp;t=86350&amp;start=130</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137328">Hydrogen Maniac</a> — Mon Jan 16, 2023 4:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hydrogen Maniac]]></name></author>
+		<updated>2023-01-16T16:04:47</updated>
+
+		<published>2023-01-16T16:04:47</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252814#p252814</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252814#p252814"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252814#p252814"><![CDATA[
+<blockquote class="uncited"><div>Interesting. How could i make a cube model in that way?</div></blockquote>Since a cube is just six planes put togheter you can simply add the remaining sides to the above code snippet like so:<div class="codebox"><p>Code: </p><pre><code>local verts = {-- top{0,1,1, 0,0},{0,0,1, 0,1},{1,1,1, 1,0},{0,0,1, 0,1},{1,0,1, 1,1},{1,1,1, 1,0},-- bottom{0,0,0, 1,0},{0,1,0, 1,1},{1,1,0, 0,1},{1,0,0, 0,0},{0,0,0, 1,0},{1,1,0, 0,1},-- side 1{0,0,1, 0,0},{0,0,0, 0,1},{1,0,1, 1,0},{0,0,0, 0,1},{1,0,0, 1,1},{1,0,1, 1,0},-- side 2{0,1,0, 1,1},{0,1,1, 1,0},{1,1,1, 0,0},{1,1,0, 0,1},{0,1,0, 1,1},{1,1,1, 0,0},-- side 3{0,0,0, 1,1},{0,0,1, 1,0},{0,1,1, 0,0},{0,1,0, 0,1},{0,0,0, 1,1},{0,1,1, 0,0},-- side 4{1,0,1, 0,0},{1,0,0, 0,1},{1,1,1, 1,0},{1,0,0, 0,1},{1,1,0, 1,1},{1,1,1, 1,0},}model = g3d.newModel(verts, "pathtotexture.png")</code></pre></div>I wrote the above code with g3d.camera.up set to {0,0,1} so the uv's might look a little off with the default settings.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137328">Hydrogen Maniac</a> — Mon Jan 16, 2023 4:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vico]]></name></author>
+		<updated>2023-01-16T15:21:16</updated>
+
+		<published>2023-01-16T15:21:16</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252810#p252810</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252810#p252810"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252810#p252810"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>So, i really want to see, like a individual example of how it works (eg. <em class="text-italics">model = g3d.newModel(&lt;stuff to render a cube using pure text and not .objs&gt;, texture, translation, rotation, scale);</em>).</div></blockquote>Building a model using code is pretty straight forward. The below code creates a model of a plane.<br><div class="codebox"><p>Code: </p><pre><code>local verts = {{0,1,0, 0,0},{0,0,0, 0,1},{1,1,0, 1,0},{0,0,0, 0,1},{1,0,0, 1,1},{1,1,0, 1,0},}model = g3d.newModel(verts, "pathtotexture.png")</code></pre></div>Each vertex is composed like this: {x,y,z, u,v} and three vertices in a row creates a triangle.<br><br>Note that the model might appear flipped or at an angle depending on what g3d.camera.up is set to and that the models' normals are determined by the order of the vertices.</div></blockquote>Interesting. How could i make a cube model in that way?<br>Also, i think i can plug in a json library to load and save the models. That would be very similar to how Minecraft (and maybe Minetest, idk) store the models. Maybe in the future i can also try to implement a way to load <a href="https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cem_model.txt" class="postlink">Optifine's CEM models</a>, that are JSON files that describe more details for entity animations.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139626">vico</a> — Mon Jan 16, 2023 3:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rigachupe]]></name></author>
+		<updated>2023-01-16T14:32:37</updated>
+
+		<published>2023-01-16T14:32:37</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252809#p252809</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252809#p252809"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252809#p252809"><![CDATA[
+Is there a way to add something like a light point so the faces of rendered models would not look so flat on screen?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=178662">Rigachupe</a> — Mon Jan 16, 2023 2:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hydrogen Maniac]]></name></author>
+		<updated>2023-01-16T14:18:38</updated>
+
+		<published>2023-01-16T14:18:38</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252806#p252806</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252806#p252806"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252806#p252806"><![CDATA[
+<blockquote class="uncited"><div>So, i really want to see, like a individual example of how it works (eg. <em class="text-italics">model = g3d.newModel(&lt;stuff to render a cube using pure text and not .objs&gt;, texture, translation, rotation, scale);</em>).</div></blockquote>Building a model using code is pretty straight forward. The below code creates a model of a plane.<br><div class="codebox"><p>Code: </p><pre><code>local verts = {{0,1,0, 0,0},{0,0,0, 0,1},{1,1,0, 1,0},{0,0,0, 0,1},{1,0,0, 1,1},{1,1,0, 1,0},}model = g3d.newModel(verts, "pathtotexture.png")</code></pre></div>Each vertex is composed like this: {x,y,z, u,v} and three vertices in a row creates a triangle.<br><br>Note that the model might appear flipped or at an angle depending on what g3d.camera.up is set to and that the models' normals are determined by the order of the vertices.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137328">Hydrogen Maniac</a> — Mon Jan 16, 2023 2:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vico]]></name></author>
+		<updated>2023-01-16T08:34:03</updated>
+
+		<published>2023-01-16T08:34:03</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252798#p252798</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252798#p252798"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252798#p252798"><![CDATA[
+<blockquote class="uncited"><div>groverburger has made a basic voxel game here, you can check the way chunks are  meshed here<br><a href="https://github.com/groverburger/g3d_voxel/blob/master/lib/chunkremesh.lua" class="postlink">https://github.com/groverburger/g3d_vox ... remesh.lua</a><br><br>and I think (not a real user of g3d though) you can either load obj files or feed the data directly, at least that's what the docs are saying here:<br><a href="https://github.com/groverburger/g3d/wiki/Model#g3dnewmodelmesh-texture-translation-rotation-scale" class="postlink">https://github.com/groverburger/g3d/wik ... tion-scale</a></div></blockquote>Thanks for the tips.<br><br>I actually checked the code from g3d_voxel, but i find it too much "complex" against my current understanding of the platform to extract meaningful information from it; i still in the step of trying to draw individual shapes on the screen, then slowly proceed to code the chunk format and so on. So, i really want to see, like a individual example of how it works (eg. <em class="text-italics">model = g3d.newModel(&lt;stuff to render a cube using pure text and not .objs&gt;, texture, translation, rotation, scale);</em>).<br><br>The reason i'm reluctant to use .obj format for the models is because in long-term i want to use a way similar to how Minecraft store its models (JSON), so that's why i refrain to rely on .obj at this height of my learning; i fear i will become too dependant of .objs that later when i will start ditching it altogether in favour of .json models i will really struggle to remake the entire rendering code.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139626">vico</a> — Mon Jan 16, 2023 8:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nikki]]></name></author>
+		<updated>2023-01-13T14:00:30</updated>
+
+		<published>2023-01-13T14:00:30</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252751#p252751</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252751#p252751"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252751#p252751"><![CDATA[
+groverburger has made a basic voxel game here, you can check the way chunks are  meshed here<br><a href="https://github.com/groverburger/g3d_voxel/blob/master/lib/chunkremesh.lua" class="postlink">https://github.com/groverburger/g3d_vox ... remesh.lua</a><br><br>and I think (not a real user of g3d though) you can either load obj files or feed the data directly, at least that's what the docs are saying here:<br><a href="https://github.com/groverburger/g3d/wiki/Model#g3dnewmodelmesh-texture-translation-rotation-scale" class="postlink">https://github.com/groverburger/g3d/wik ... tion-scale</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138818">Nikki</a> — Fri Jan 13, 2023 2:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vico]]></name></author>
+		<updated>2023-01-13T00:15:51</updated>
+
+		<published>2023-01-13T00:15:51</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252744#p252744</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252744#p252744"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=252744#p252744"><![CDATA[
+Hello!<br><br>Just start playing around with g3d trying to make a simple voxel game, i have a question about models: do i need to load a .obj file or is possible to render basic shapes (like a cube) via pure code?<br><br>I have plans to create a text-based format for models (like Minecraft does using .json-like format) and i dont want to use .obj at all.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139626">vico</a> — Fri Jan 13, 2023 12:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pbmn]]></name></author>
+		<updated>2022-10-12T12:28:40</updated>
+
+		<published>2022-10-12T12:28:40</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=251143#p251143</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=251143#p251143"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=251143#p251143"><![CDATA[
+[/quote]<br>What kind of animations? Texture animation or model animation? For the first one, you can update the texture of a model every frame to change its texture for animations. For the second, look into the Hoarder's Horrible House of Stuff project. I believe it uses bones in its models to animate the main character. If I'm not mistaken.<br>[/quote]<br><br>oh I've already got Billboarding to work and also model animations, it was through Inter Quake Models, just needed to add that plugin to Blender, export then load them in LOVE, it wasn't that bad, just a bit confusing at first. Thanks so much for the reply BTW!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=162495">pbmn</a> — Wed Oct 12, 2022 12:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-09-23T17:56:44</updated>
+
+		<published>2022-09-23T17:56:44</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250880#p250880</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250880#p250880"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250880#p250880"><![CDATA[
+<blockquote class="uncited"><div>Hey (whoever responds) Im having a weird issue,<br><br>Im not totally sure why but my test model unloads when I use  love.window.setMode to change the resolution, the weirder part is it doesnt unload the 'background' model, only the scene model.<br><br>screenshotItem.png</div></blockquote>I don't see anything wrong with the code. Can you post a .love file that shows the problem instead?<br><blockquote class="uncited"><div>So I'm making a 3D 3rd person camera movement with player tracking functionality and player control with G3D and it's going very well! Loved the engine!<br>Just now finished making the Groveburger's 3d-fps level 100% playable in 3rd person. I'd love to make this cam lib available soon! I only need to make it smoother and have more camera options, like changing to first person and wall/occlusion detection adjustments.<br><br>I think this may help future projects as well <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><br>But does anyone here knows how to make billboarding for sprites in g3d? I'm thinking of making animated 2D sprites for the player running/idle/jumping...<br><br><img src="https://i.imgur.com/eYPTJ8F.png" class="postimage" alt="Image"></div></blockquote>Billboarding basically means taking a flat textured polygon and rotating it to always face the camera. So you can do it one of two ways. Either rotate the sprite object in the Lua code or I believe you can use a vertex shader to rotate it as well. Some of the projects that use g3d do this. Look at their code and get some ideas. Off the top of my head, Leadhaul uses 2D sprites with a billboard shader IIRC.<br><blockquote class="uncited"><div>Does g3d support animations?</div></blockquote>What kind of animations? Texture animation or model animation? For the first one, you can update the texture of a model every frame to change its texture for animations. For the second, look into the Hoarder's Horrible House of Stuff project. I believe it uses bones in its models to animate the main character. If I'm not mistaken.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Sep 23, 2022 5:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pbmn]]></name></author>
+		<updated>2022-08-15T18:57:46</updated>
+
+		<published>2022-08-15T18:57:46</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250164#p250164</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250164#p250164"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=250164#p250164"><![CDATA[
+So I'm making a 3D 3rd person camera movement with player tracking functionality and player control with G3D and it's going very well! Loved the engine!<br>Just now finished making the Groveburger's 3d-fps level 100% playable in 3rd person. I'd love to make this cam lib available soon! I only need to make it smoother and have more camera options, like changing to first person and wall/occlusion detection adjustments.<br><br>I think this may help future projects as well <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><br>But does anyone here knows how to make billboarding for sprites in g3d? I'm thinking of making animated 2D sprites for the player running/idle/jumping...<br><br><img src="https://i.imgur.com/eYPTJ8F.png" class="postimage" alt="Image"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=162495">pbmn</a> — Mon Aug 15, 2022 6:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[LucidPolygon]]></name></author>
+		<updated>2022-08-02T20:11:58</updated>
+
+		<published>2022-08-02T20:11:58</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249886#p249886</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249886#p249886"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249886#p249886"><![CDATA[
+Hey (whoever responds) Im having a weird issue,<br><br>Im not totally sure why but my test model unloads when I use  love.window.setMode to change the resolution, the weirder part is it doesnt unload the 'background' model, only the scene model.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><img src="http://love2d.org/forums/download/file.php?id=21400" class="postimage" alt="screenshotItem.png" onclick="viewableArea(this);" /></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=200916">LucidPolygon</a> — Tue Aug 02, 2022 8:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Raph]]></name></author>
+		<updated>2022-07-26T13:08:15</updated>
+
+		<published>2022-07-26T13:08:15</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249706#p249706</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249706#p249706"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249706#p249706"><![CDATA[
+Does g3d support animations?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=199756">Raph</a> — Tue Jul 26, 2022 1:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-07-09T16:24:40</updated>
+
+		<published>2022-07-09T16:24:40</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249442#p249442</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249442#p249442"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=249442#p249442"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Out of curiosity, would writing an Ambient Occlusion shader be possible, if so would it be trivial, and if so would it work fast enough to not cause slowdown? Or should I not bother trying to write one? I feel like my game would look much better with subtle AO. In my old raycasting project I baked AO into the floor textures and it helped the look of the game a lot. But I'd love to do it myself. I just don't know where to start. I have been looking at tutorials online, but of course they're all meant for Unity and stuff like that so you have to try and translate it to how it would work in Löve.</div></blockquote>I've been trying to figure this out too and while I never managed to wrap my head around some of the pure glsl tutorials out there for things like SSAO, I did come up with this solution for my not-quite-voxel game.<br><br>Untitled.png<br><br>Since the game you showed off earlier used voxel terrain maybe some of this will translate, all you really need in your shader code is a function that takes a position as an argument and returns a boolean depending on whether or not the position is inside the terrain. <br><br>My ao implementation works by darkening each pixel based on the shortest distance to any adjacent surface. The grid like nature of the world makes finding this distance fairly straight forward since you only really need to check in 8 directions and finding the distance between a point and a grid line in a cardinal direction just boils down to getting the decimals of either the X,Y or Z component and finding the position of a corner of a given grid cell just requires you to floor the position vector.<br><br>A simpler solution would be to sample random points around each fragment and darken each pixel a little for every sample which lands inside an occluded part of the map. This will however produce some pretty noisy results and is generally less performant, although the noisiness could in theory be reduced by blurring the result but I never got around to that. Glsl doesn't have any noise functions built in but there are plenty of simple implementations out there, just know that most user made noise functions tend to have some quirks. The screenshot below is from an earlier version of the project which used this sort of ao.<br><br>Untitled2.png<br><br>I also found <a href="https://0fps.net/2013/07/03/ambient-occlusion-for-minecraft-like-worlds/" class="postlink">this article about ao in minecraft like worlds</a> which might be of interest. I don't think the default g3d shader supports vertex colors so you might have to implement that on your own if this method interests you.<br><br>I hope this was of some help  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>THat's really cool. Do you have any example code you wrote I can look at and get an idea where to start? I'm still learning the ins and outs of shaders and it's amazing what can be done.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sat Jul 09, 2022 4:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hydrogen Maniac]]></name></author>
+		<updated>2022-05-19T12:11:58</updated>
+
+		<published>2022-05-19T12:11:58</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248106#p248106</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248106#p248106"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248106#p248106"><![CDATA[
+<blockquote class="uncited"><div>Out of curiosity, would writing an Ambient Occlusion shader be possible, if so would it be trivial, and if so would it work fast enough to not cause slowdown? Or should I not bother trying to write one? I feel like my game would look much better with subtle AO. In my old raycasting project I baked AO into the floor textures and it helped the look of the game a lot. But I'd love to do it myself. I just don't know where to start. I have been looking at tutorials online, but of course they're all meant for Unity and stuff like that so you have to try and translate it to how it would work in Löve.</div></blockquote>I've been trying to figure this out too and while I never managed to wrap my head around some of the pure glsl tutorials out there for things like SSAO, I did come up with this solution for my not-quite-voxel game.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><img src="http://love2d.org/forums/download/file.php?id=21115" class="postimage" alt="Untitled.png" onclick="viewableArea(this);" /></dt></dl></div>Since the game you showed off earlier used voxel terrain maybe some of this will translate, all you really need in your shader code is a function that takes a position as an argument and returns a boolean depending on whether or not the position is inside the terrain. <br><br>My ao implementation works by darkening each pixel based on the shortest distance to any adjacent surface. The grid like nature of the world makes finding this distance fairly straight forward since you only really need to check in 8 directions and finding the distance between a point and a grid line in a cardinal direction just boils down to getting the decimals of either the X,Y or Z component and finding the position of a corner of a given grid cell just requires you to floor the position vector.<br><br>A simpler solution would be to sample random points around each fragment and darken each pixel a little for every sample which lands inside an occluded part of the map. This will however produce some pretty noisy results and is generally less performant, although the noisiness could in theory be reduced by blurring the result but I never got around to that. Glsl doesn't have any noise functions built in but there are plenty of simple implementations out there, just know that most user made noise functions tend to have some quirks. The screenshot below is from an earlier version of the project which used this sort of ao.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><img src="http://love2d.org/forums/download/file.php?id=21116" class="postimage" alt="Untitled2.png" onclick="viewableArea(this);" /></dt></dl></div>I also found <a href="https://0fps.net/2013/07/03/ambient-occlusion-for-minecraft-like-worlds/" class="postlink">this article about ao in minecraft like worlds</a> which might be of interest. I don't think the default g3d shader supports vertex colors so you might have to implement that on your own if this method interests you.<br><br>I hope this was of some help  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137328">Hydrogen Maniac</a> — Thu May 19, 2022 12:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-05-18T18:27:35</updated>
+
+		<published>2022-05-18T18:27:35</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248102#p248102</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248102#p248102"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=248102#p248102"><![CDATA[
+Out of curiosity, would writing an Ambient Occlusion shader be possible, if so would it be trivial, and if so would it work fast enough to not cause slowdown? Or should I not bother trying to write one? I feel like my game would look much better with subtle AO. In my old raycasting project I baked AO into the floor textures and it helped the look of the game a lot. But I'd love to do it myself. I just don't know where to start. I have been looking at tutorials online, but of course they're all meant for Unity and stuff like that so you have to try and translate it to how it would work in Löve.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Wed May 18, 2022 6:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[groverburger]]></name></author>
+		<updated>2022-05-06T06:35:54</updated>
+
+		<published>2022-05-06T06:35:54</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247865#p247865</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247865#p247865"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.2 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247865#p247865"><![CDATA[
+Hey everyone! The new release of g3d, 1.5.2 is out now!<br><br>The new changes are:<br>- Obj loading can now optionally flip the u and v coordinates when an obj file is loaded, which is useful when importing files from Blender<br>- Obj loading functionality is now available from the g3d namespace with g3d.loadObj(path, uFlip, vFlip) which returns a table that can be passed into g3d.newModel()<br>- Obj loading is now slightly more simple and efficient<br>- g3d's vector library is now available from the g3d namespace under g3d.vectors<br>- Updated the license to 2022<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141115">groverburger</a> — Fri May 06, 2022 6:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-04-22T00:22:39</updated>
+
+		<published>2022-04-22T00:22:39</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247604#p247604</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247604#p247604"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247604#p247604"><![CDATA[
+Yeah! That works well enough.<br><br>But I have a really stupid problem I've been trying to figure out for hours now relating to shaders.<br><br>Edit: I've posted my own thread for this question. A solution was found.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Apr 22, 2022 12:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[groverburger]]></name></author>
+		<updated>2022-04-08T20:27:18</updated>
+
+		<published>2022-04-08T20:27:18</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247355#p247355</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247355#p247355"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247355#p247355"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Yep, the easiest way to achieve this is to change the camera's up vector, and make it point up and slightly to whatever direction you want to tilt.<br><br>Something like:<div class="codebox"><p>Code: </p><pre><code>g3d.camera.up = {some vector here}g3d.camera.updateViewMatrix()</code></pre></div></div></blockquote>Interesting but it seems to rotate the world itself instead of just the camera. In other words, if I'm looking forward and I change say the Y value, it'll look right until I turn my head at which point I realize it's changing the world itself instead of just rolling the camera.<br><br>I tried to just use Löve's translation stuff like push, rotate, translate, pop to just rotate the image itself but of course since g3d is all shader based it just ignores all that. lol</div></blockquote>The solution I found was to update the up vector every frame, and change it based on what direction the camera's looking. Otherwise it will just tilt in the same direction and not respect in what direction you're looking, which will feel like the world is tilted and not the camera.<br><br>Here's an example of what I would put in my update function:<div class="codebox"><p>Code: </p><pre><code>local direction, pitch = g3d.camera.getDirectionPitch()local tilt = 0.05local tiltDirection = direction + math.pi/2g3d.camera.up = {math.cos(tiltDirection)*tilt*math.cos(pitch), math.sin(tiltDirection)*tilt*math.cos(pitch), 1}g3d.camera.updateViewMatrix()</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141115">groverburger</a> — Fri Apr 08, 2022 8:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-04-05T22:00:15</updated>
+
+		<published>2022-04-05T22:00:15</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247321#p247321</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247321#p247321"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247321#p247321"><![CDATA[
+<blockquote class="uncited"><div>Yep, the easiest way to achieve this is to change the camera's up vector, and make it point up and slightly to whatever direction you want to tilt.<br><br>Something like:<div class="codebox"><p>Code: </p><pre><code>g3d.camera.up = {some vector here}g3d.camera.updateViewMatrix()</code></pre></div></div></blockquote>Interesting but it seems to rotate the world itself instead of just the camera. In other words, if I'm looking forward and I change say the Y value, it'll look right until I turn my head at which point I realize it's changing the world itself instead of just rolling the camera.<br><br>I tried to just use Löve's translation stuff like push, rotate, translate, pop to just rotate the image itself but of course since g3d is all shader based it just ignores all that. lol<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Tue Apr 05, 2022 10:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[groverburger]]></name></author>
+		<updated>2022-04-04T18:57:23</updated>
+
+		<published>2022-04-04T18:57:23</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247304#p247304</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247304#p247304"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247304#p247304"><![CDATA[
+<blockquote class="uncited"><div>Question though: Is there a way to tilt the camera around the third axis? You can spin it around the Z (Turning) axis. Tilt it on the X (Looking up and down) axis. But how if possible, do you tilt it on the Y (Forward) axis? Is this possible officially? Or can it be easily implemented? I guess it would also be referred to as rolling the camera.</div></blockquote>Yep, the easiest way to achieve this is to change the camera's up vector, and make it point up and slightly to whatever direction you want to tilt.<br><br>Something like:<div class="codebox"><p>Code: </p><pre><code>g3d.camera.up = {some vector here}g3d.camera.updateViewMatrix()</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141115">groverburger</a> — Mon Apr 04, 2022 6:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-04-03T21:34:07</updated>
+
+		<published>2022-04-03T21:34:07</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247286#p247286</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247286#p247286"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=247286#p247286"><![CDATA[
+Question though: Is there a way to tilt the camera around the third axis? You can spin it around the Z (Turning) axis. Tilt it on the X (Looking up and down) axis. But how if possible, do you tilt it on the Y (Forward) axis? Is this possible officially? Or can it be easily implemented? I guess it would also be referred to as rolling the camera.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sun Apr 03, 2022 9:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2022-03-07T13:58:43</updated>
+
+		<published>2022-03-07T13:58:43</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246966#p246966</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246966#p246966"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246966#p246966"><![CDATA[
+I'll just forget about that whole thing. If I want a flat shade I'll just make my models with single color textures. lol<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Mon Mar 07, 2022 1:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[EngineerSmith]]></name></author>
+		<updated>2022-01-28T20:48:08</updated>
+
+		<published>2022-01-28T20:48:08</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246306#p246306</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246306#p246306"/>
+		<title type="html"><![CDATA[Re: Groverburger's 3D Engine (g3d) v1.5.1 Release]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=86350&amp;p=246306#p246306"><![CDATA[
+<blockquote class="uncited"><div>You'd just load the .mtl file instead of a .png file and it would parse the .mtl file instead. (I only want the face color definitions, not trying to replicate stuff like shiny metal or rough brick textures or whatever) I could probably try and figure it out myself.</div></blockquote>Honestly, if you want a really simple system. First you read the MTL file and grab the colours for the different materials definitions, then as you parse the OBJ you switch which material you use when the command appears (I think I remember it being usemtl &lt;material name&gt; or something) and you then just use that materials colour within each vertex. Then you don't need to have separate meshes for each object - this won't work if you want different textures however - unless they're all on the same texture.<br><br>The wiki covers all what the readable files mean <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file#Material_template_library" class="postlink">https://en.wikipedia.org/wiki/Wavefront ... te_library</a> you probably want to focus on the key `Kd` in each material for the diffuse colour, and then the others if you want a more interesting lighting.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=184613">EngineerSmith</a> — Fri Jan 28, 2022 8:48 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

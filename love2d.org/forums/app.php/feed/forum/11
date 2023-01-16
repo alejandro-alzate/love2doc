@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/forum/11" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2016-01-16T13:03:40</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/forum/11</id>
+
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2016-01-16T13:03:40</updated>
+
+		<published>2016-01-16T13:03:40</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81619&amp;p=193611#p193611</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81619&amp;p=193611#p193611"/>
+		<title type="html"><![CDATA[LÖVE-Android • Deprecated!]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81619&amp;p=193611#p193611"><![CDATA[
+Welcome to the LÖVE-Android port subforum. As you will have noticed, this forum has been locked, since android support was merged into LÖVE 0.10.0. Any android-specific issues can now go in the normal forums (like Support &amp; Development).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Jan 16, 2016 1:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2016-01-16T12:56:45</updated>
+
+		<published>2016-01-16T12:56:45</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193610#p193610</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193610#p193610"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: love-android + dofile in *.love]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193610#p193610"><![CDATA[
+Oh.. <br>Thanks, bartbes!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Sat Jan 16, 2016 12:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2016-01-16T12:51:52</updated>
+
+		<published>2016-01-16T12:51:52</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193607#p193607</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193607#p193607"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: love-android + dofile in *.love]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193607#p193607"><![CDATA[
+Because require doesn't take filenames, it takes module names. To turn a module name into a path, you replace all dots with slashes, and append .lua, so, "menu.lua" looks for the file "menu/lua.lua". Instead, you want to pass it "menu".<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Jan 16, 2016 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2016-01-16T12:48:32</updated>
+
+		<published>2016-01-16T12:48:32</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193606#p193606</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193606#p193606"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: love-android + dofile in *.love]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193606#p193606"><![CDATA[
+The thing is, when i write <div class="codebox"><p>Code: </p><pre><code>require "menu.lua"</code></pre></div> i got this:<br><img src="https://www.dropbox.com/s/zrwtp2g74nd85z7/SH.png?dl=1" class="postimage" alt="Image"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Sat Jan 16, 2016 12:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2016-01-16T12:38:05</updated>
+
+		<published>2016-01-16T12:38:05</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193604#p193604</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193604#p193604"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: love-android + dofile in *.love]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193604#p193604"><![CDATA[
+dofile does not work with love.filesystem. It working on your linux machine is simply an artefact of where you're running it from, the same directory as menu.lua. Either use love.filesystem.load, and call the returned function, or use require anyway. I see no reason why your file can't be loaded with require, as it puts no restrictions on the file.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Jan 16, 2016 12:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2016-01-16T12:00:22</updated>
+
+		<published>2016-01-16T12:00:22</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193602#p193602</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193602#p193602"/>
+		<title type="html"><![CDATA[LÖVE-Android • love-android + dofile in *.love]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81616&amp;p=193602#p193602"><![CDATA[
+Hello there! <br><br><br>I know there are tons of dofile-related questions and threads, but I wasn't able to find answer to my question.<br><br>There's a *.love file which runs perfectly on Linux (Debian Jessie) with the LÖVE 0.1.10 (built from sources), but fails to execute on Android device.<br><br>The "main.lua" file starts with:<div class="codebox"><p>Code: </p><pre><code>debug = truelocal debug_file = io.open("debug.txt")game = {}game.animations = {}game.previous_level = nilgame.current_level = 1game.started = falsegame.in_menu = truegame.font = love.graphics.newFont("pixel.ttf", 18)dofile("menu.lua")dofile("tbl_ser.lua")game.anim8 = require 'anim8/anim8'</code></pre></div><strong class="text-strong">*</strong>Note the line with <em class="text-italics">dofile("menu.lua")</em>.<br><br>While it's "ok" on full-fledged Linux, on Android I'm getting the <div class="codebox"><p>Code: </p><pre><code>main.lua:15: module 'menu.lua' not found</code></pre></div> error.<br><br>If I were opening just a main.lua file... <br>Then my guess would have been the error occurred due to a wrongly set working dir...<br>But I'm running a <em class="text-italics">*.love</em> file! Does LÖVE for android unpack content of a love file to some temp dir?<br><br>Hom am I supposed to use multiple files on Android?<br><br><span style="text-decoration:underline">Note: </span><br>The menu.lua file <em class="text-italics">can't</em> be loaded by "require" as is. <br>"menu.lua" is not really a library but rather a saved separately menu-related code.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Sat Jan 16, 2016 12:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2016-01-12T07:30:09</updated>
+
+		<published>2016-01-12T07:30:09</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193404#p193404</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193404#p193404"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Google Play Games Services]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193404#p193404"><![CDATA[
+Their rest api most likely require HTTPS which love doesn't include sadly. But there are other threads that show how to integrate Google play services. I'm sure you can adapt them for your needs. I would also like to say that if you do code your own solution please share it with us \o/ lol.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Tue Jan 12, 2016 7:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-11T20:33:26</updated>
+
+		<published>2016-01-11T20:33:26</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193390#p193390</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193390#p193390"/>
+		<title type="html"><![CDATA[LÖVE-Android • Google Play Games Services]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81580&amp;p=193390#p193390"><![CDATA[
+I'm wondering about how one might integrate <a href="https://developers.google.com/games/services/" class="postlink">Google Play Games Services</a> into a Love2D project running with love-android-sdl2. I know Love2D comes with LuaJIT and FFI, so you can call native C functions like so<br><div class="codebox"><p>Code: </p><pre><code>local ffi = require("ffi")ffi.cdef[[int printf(const char *fmt, ...);]]ffi.C.printf("%s running on %s %s\n", jit.version, jit.os, jit.arch)function love.load()love.window.setMode( 120, 100 )love.graphics.setBackgroundColor(80, 80, 80)endfunction love.draw()love.graphics.printf("Check terminal...", 0, love.graphics.getHeight()/2 - 12, love.graphics.getWidth(), "center")end</code></pre></div>Not that this example is particularly useful, but you can see that we can execute C functions nicely. This all nice and dandy, but it doesn't seem to help for accessing Play Games APIs. They offer an API for Android, C++, and for Web via REST. So I'm thinking "How should I implement this?". Do I need a special Java/Android interface for Lua/Love2D? Perhaps a C++ interface would be better? Should I use LuaJIT FFI to call a C function which then uses JNI? Should I somehow use their REST API (I'm unsure of the limitations)?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Mon Jan 11, 2016 8:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-11T04:50:10</updated>
+
+		<published>2016-01-11T04:50:10</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193370#p193370</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193370#p193370"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193370#p193370"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>That is part of my exit() function. It looked a little like this:<div class="codebox"><p>Code: </p><pre><code>function exit()    sfx.stop("music")    -- Some code for stopping all sound effects    love.event.quit()end</code></pre></div></div></blockquote>Alright, so maybe we ought to try something like this...<div class="codebox"><p>Code: </p><pre><code>local exiting = false -- we can set this to true from a user dialoglocal focus_switch = false -- we'll set this when the app goes out of focusfunction love.focus(in_focus)    if not in_focus then        focus_switch = true        love.event.quit()    endendfunction love.quit()    if exiting then        -- code to execute for exiting the program        -- from a user dialog. Perhaps something to        -- to ask if they'd really like to exit or not.        return false    elseif focus_switch then        love.audio.stop()        -- optionally, make multiple calls to love.audio.stop(source)        -- where 'source' is a specific audio source. You can do this        -- to only stop certain audio if you desire.        --------------------------------------------------------------        -- If you must, call sfx.stop("music") and other code instead        -- for stopping all other audio effects.        return false    end    return trueend</code></pre></div></div></blockquote>I don't really understand your example, sorry. What is the point of exiting and focus_switch exactly? On my friends Huawei, the problem seems to be that the game is still in focus after he has pressed the home button.</div></blockquote>You may have multiple ways to exit your game and so the love.quit() callback should handle those. I'm just giving an example. The exiting and focus_switch variables are both boolean values which you can switch to control how the callback works. If you only want one call, then you can reduce it to the following<br><div class="codebox"><p>Code: </p><pre><code>function love.focus(in_focus)    if not in_focus then        love.event.quit()    endendfunction love.quit()    love.audio.stop()    -- optionally, make multiple calls to love.audio.stop(source)    -- where 'source' is a specific audio source. You can do this    -- to only stop certain audio if you desire.    --------------------------------------------------------------    -- If you must, call sfx.stop("music") and other code instead    -- for stopping all other audio effects.    return falseend</code></pre></div>So, if the window is not in focus, love.event.quit() is called. This triggers the love.quit() callback which stops all audio with love.audio.stop(). If you don't actually want to quit, then you might simply try this<br><div class="codebox"><p>Code: </p><pre><code>function love.focus(in_focus)    if not in_focus then        love.audio.stop()    endend</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Mon Jan 11, 2016 4:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasperelo]]></name></author>
+		<updated>2016-01-10T11:16:02</updated>
+
+		<published>2016-01-10T11:16:02</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193337#p193337</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193337#p193337"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193337#p193337"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>Haven't tested stuff on mobile yet; however, I would use <a href="https://love2d.org/wiki/love.event.quit" class="postlink">love.event.quit()</a> to cause the program to abort and use the <a href="https://love2d.org/wiki/love.quit" class="postlink">love.quit</a> callback for cleaning up resources. Try to use love.event.quit() in the love.focus() callback and see what it does on your friend's Huawei.</div></blockquote>That is part of my exit() function. It looked a little like this:<div class="codebox"><p>Code: </p><pre><code>function exit()    sfx.stop("music")    -- Some code for stopping all sound effects    love.event.quit()end</code></pre></div></div></blockquote>Alright, so maybe we ought to try something like this...<div class="codebox"><p>Code: </p><pre><code>local exiting = false -- we can set this to true from a user dialoglocal focus_switch = false -- we'll set this when the app goes out of focusfunction love.focus(in_focus)    if not in_focus then        focus_switch = true        love.event.quit()    endendfunction love.quit()    if exiting then        -- code to execute for exiting the program        -- from a user dialog. Perhaps something to        -- to ask if they'd really like to exit or not.        return false    elseif focus_switch then        love.audio.stop()        -- optionally, make multiple calls to love.audio.stop(source)        -- where 'source' is a specific audio source. You can do this        -- to only stop certain audio if you desire.        --------------------------------------------------------------        -- If you must, call sfx.stop("music") and other code instead        -- for stopping all other audio effects.        return false    end    return trueend</code></pre></div></div></blockquote>I don't really understand your example, sorry. What is the point of exiting and focus_switch exactly? On my friends Huawei, the problem seems to be that the game is still in focus after he has pressed the home button.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=46295">Kasperelo</a> — Sun Jan 10, 2016 11:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[teeter11]]></name></author>
+		<updated>2016-01-09T22:13:06</updated>
+
+		<published>2016-01-09T22:13:06</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193323#p193323</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193323#p193323"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ANT DEBUG stack overflow!]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193323#p193323"><![CDATA[
+ok so i tried a different version of ant and it still didnt work<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134527">teeter11</a> — Sat Jan 09, 2016 10:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-09T21:20:14</updated>
+
+		<published>2016-01-09T21:20:14</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193320#p193320</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193320#p193320"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193320#p193320"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Haven't tested stuff on mobile yet; however, I would use <a href="https://love2d.org/wiki/love.event.quit" class="postlink">love.event.quit()</a> to cause the program to abort and use the <a href="https://love2d.org/wiki/love.quit" class="postlink">love.quit</a> callback for cleaning up resources. Try to use love.event.quit() in the love.focus() callback and see what it does on your friend's Huawei.</div></blockquote>That is part of my exit() function. It looked a little like this:<div class="codebox"><p>Code: </p><pre><code>function exit()    sfx.stop("music")    -- Some code for stopping all sound effects    love.event.quit()end</code></pre></div></div></blockquote>Alright, so maybe we ought to try something like this...<div class="codebox"><p>Code: </p><pre><code>local exiting = false -- we can set this to true from a user dialoglocal focus_switch = false -- we'll set this when the app goes out of focusfunction love.focus(in_focus)    if not in_focus then        focus_switch = true        love.event.quit()    endendfunction love.quit()    if exiting then        -- code to execute for exiting the program        -- from a user dialog. Perhaps something to        -- to ask if they'd really like to exit or not.        return false    elseif focus_switch then        love.audio.stop()        -- optionally, make multiple calls to love.audio.stop(source)        -- where 'source' is a specific audio source. You can do this        -- to only stop certain audio if you desire.        --------------------------------------------------------------        -- If you must, call sfx.stop("music") and other code instead        -- for stopping all other audio effects.        return false    end    return trueend</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Sat Jan 09, 2016 9:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[teeter11]]></name></author>
+		<updated>2016-01-09T21:14:35</updated>
+
+		<published>2016-01-09T21:14:35</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193319#p193319</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193319#p193319"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ANT DEBUG stack overflow!]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193319#p193319"><![CDATA[
+it happens even when not using lovetoandroid but i can try using the newest ant<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134527">teeter11</a> — Sat Jan 09, 2016 9:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-09T21:04:44</updated>
+
+		<published>2016-01-09T21:04:44</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193317#p193317</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193317#p193317"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ant debug build error on Mac OS 10.7]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193317#p193317"><![CDATA[
+<blockquote class="uncited"><div>Try to run "ant clean", sometimes it solves the problem.</div></blockquote>I've tried this. "ant clean" runs nicely but doesn't fix the issue.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Sat Jan 09, 2016 9:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2016-01-09T20:51:23</updated>
+
+		<published>2016-01-09T20:51:23</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193316#p193316</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193316#p193316"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ANT DEBUG stack overflow!]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193316#p193316"><![CDATA[
+This is a really strange bug.<br>What happens if you remove the ant directory from your pc and then run LoveToAndroid? <br>maybe ant is broken on your computer(try reinstalling it) and LoveToAndroid uses that version before it's own ant version.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Sat Jan 09, 2016 8:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2016-01-09T20:20:52</updated>
+
+		<published>2016-01-09T20:20:52</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193314#p193314</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193314#p193314"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193314#p193314"><![CDATA[
+I think love.audio.stop stops all playing sources and is automatically called, so you shouldn't need to do that.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sat Jan 09, 2016 8:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasperelo]]></name></author>
+		<updated>2016-01-09T19:01:11</updated>
+
+		<published>2016-01-09T19:01:11</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193312#p193312</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193312#p193312"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193312#p193312"><![CDATA[
+<blockquote class="uncited"><div>Haven't tested stuff on mobile yet; however, I would use <a href="https://love2d.org/wiki/love.event.quit" class="postlink">love.event.quit()</a> to cause the program to abort and use the <a href="https://love2d.org/wiki/love.quit" class="postlink">love.quit</a> callback for cleaning up resources. Try to use love.event.quit() in the love.focus() callback and see what it does on your friend's Huawei.</div></blockquote>That is part of my exit() function. It looked a little like this:<div class="codebox"><p>Code: </p><pre><code>function exit()    sfx.stop("music")    -- Some code for stopping all sound effects    love.event.quit()end</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=46295">Kasperelo</a> — Sat Jan 09, 2016 7:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[teeter11]]></name></author>
+		<updated>2016-01-09T17:52:13</updated>
+
+		<published>2016-01-09T17:52:13</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193310#p193310</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193310#p193310"/>
+		<title type="html"><![CDATA[LÖVE-Android • ANT DEBUG stack overflow!]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81568&amp;p=193310#p193310"><![CDATA[
+So ive been trying to add ads to my game and when i deploy with ant debug i get a stack overflow and then a spam of <br><div class="codebox"><p>Code: </p><pre><code>at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)</code></pre></div>heres the entire log<br><br>NOTE: im using loveToAndroid-v01 but this still happens when not using it!<br><div class="codebox"><p>Code: </p><pre><code>C:\Users\teete\Desktop\loveToAndroid-v01&gt;REM set variablesC:\Users\teete\Desktop\loveToAndroid-v01&gt;setlocalC:\Users\teete\Desktop\loveToAndroid-v01&gt;set ANT_HOME=C:\Users\teete\Desktop\loveToAndroid-v01\\tools\antC:\Users\teete\Desktop\loveToAndroid-v01&gt;set JAVA_HOME=C:\Users\teete\Desktop\loveToAndroid-v01\\tools\jdkC:\Users\teete\Desktop\loveToAndroid-v01&gt;set ANDROID_HOME=C:\Users\teete\Desktop\loveToAndroid-v01\\tools\androidC:\Users\teete\Desktop\loveToAndroid-v01&gt;set PATH=C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\teete\Desktop\loveToAndroid-v01\\tools\ant\binC:\Users\teete\Desktop\loveToAndroid-v01&gt;REM cd and remove previoius outputC:\Users\teete\Desktop\loveToAndroid-v01&gt;del game.apk /qC:\Users\teete\Desktop\loveToAndroid-v01&gt;cd tools\love-android-sdl2C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;rd gen /s/qC:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;rd bin /s/qC:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;REM easier game copyingC:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;IF EXIST ..\..\game.love (del assets\game.love copy ..\..\game.love assets\game.love)        1 file(s) copied.C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;REM easier icon copyingC:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;IF EXIST ..\..\icon.png (del res\drawable-xxhdpi\ic_launcher.png copy ..\..\icon.png res\drawable-xxhdpi\ic_launcher.png)        1 file(s) copied.C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;REM compile and moveC:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2&gt;call ant debugBuildfile: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\build.xml-set-mode-check:-set-debug-files:-check-env: [checkenv] Android SDK Tools Revision 24.3.3 [checkenv] Installed at C:\Users\teete\Desktop\loveToAndroid-v01\tools\android-setup:     [echo] Project Name: love_android_sdl2  [gettype] Project Type: Application-set-debug-mode:-debug-obfuscation-check:-pre-build:-build-setup:[getbuildtools] Using latest Build Tools: 19.1.0     [echo] Resolving Build Target for love_android_sdl2...[gettarget] Project Target:   Android 4.4.2[gettarget] API level:        19     [echo] ----------     [echo] Creating output directories if needed...    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin\res    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin\rsObj    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin\rsLibs    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\gen    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin\classes    [mkdir] Created dir: C:\Users\teete\Desktop\loveToAndroid-v01\tools\love-android-sdl2\bin\dexedLibs     [echo] ----------     [echo] Resolving Dependencies for love_android_sdl2...BUILD FAILEDC:\Users\teete\Desktop\loveToAndroid-v01\tools\android\tools\ant\build.xml:573: java.lang.StackOverflowError        at java.io.InputStream.&lt;init&gt;(InputStream.java:45)        at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:123)        at com.android.io.FileWrapper.getContents(FileWrapper.java:91)        at com.android.sdklib.internal.project.ProjectProperties.parsePropertyFile(ProjectProperties.java:460)        at com.android.sdklib.internal.project.ProjectProperties.load(ProjectProperties.java:260)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:285)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)        at com.android.ant.DependencyHelper.resolveFullLibraryDependencies(DependencyHelper.java:292)Total time: 1 secondThe system cannot find the file specified.ECHO is off.Press any key to close</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134527">teeter11</a> — Sat Jan 09, 2016 5:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bio1712]]></name></author>
+		<updated>2016-01-09T12:24:59</updated>
+
+		<published>2016-01-09T12:24:59</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193302#p193302</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193302#p193302"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ant debug build error on Mac OS 10.7]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193302#p193302"><![CDATA[
+Try to run "ant clean", sometimes it solves the problem.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136963">bio1712</a> — Sat Jan 09, 2016 12:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[undef]]></name></author>
+		<updated>2016-01-09T06:44:41</updated>
+
+		<published>2016-01-09T06:44:41</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193297#p193297</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193297#p193297"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193297#p193297"><![CDATA[
+<blockquote class="uncited"><div>I don't know about Android, but on iOS Apple will probably reject your app from the app store if you programmatically quit it (as that looks like a crash to the user, and apps are never supposed to quit themselves in the iOS app lifecycle).</div></blockquote>Interesting.<br>What do you do then on iOS? Just remove an option to exit the game?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=122723">undef</a> — Sat Jan 09, 2016 6:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2016-01-09T01:34:45</updated>
+
+		<published>2016-01-09T01:34:45</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193293#p193293</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193293#p193293"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193293#p193293"><![CDATA[
+I don't know about Android, but on iOS Apple will probably reject your app from the app store if you programmatically quit it (as that looks like a crash to the user, and apps are never supposed to quit themselves in the iOS app lifecycle).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sat Jan 09, 2016 1:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-09T01:24:49</updated>
+
+		<published>2016-01-09T01:24:49</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193292#p193292</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193292#p193292"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: Proper way to exit game]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81551&amp;p=193292#p193292"><![CDATA[
+Haven't tested stuff on mobile yet; however, I would use <a href="https://love2d.org/wiki/love.event.quit" class="postlink">love.event.quit()</a> to cause the program to abort and use the <a href="https://love2d.org/wiki/love.quit" class="postlink">love.quit</a> callback for cleaning up resources. Try to use love.event.quit() in the love.focus() callback and see what it does on your friend's Huawei.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Sat Jan 09, 2016 1:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-09T01:14:44</updated>
+
+		<published>2016-01-09T01:14:44</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193291#p193291</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193291#p193291"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ant debug build error on Mac OS 10.7]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193291#p193291"><![CDATA[
+<blockquote class="uncited"><div>I googled and it seems that on stackoverflow that this question has never received any answers. If you are just building a regular apk for developing your game then you can get an updated one here<br>builds.BobbyJones.me <br><br>If you were building for another reason then I suggest googling around for a solution unless someone else here would know.</div></blockquote>I'm building so that I can port my love2d applications. I don't post on fora often and can assure you I've done my share of "googling around" already, that's why I'm here. The things which I've realized are that<br><ol style="list-style-type:decimal"><li> The build exited with code 139, meaning the program died with signal 11 (aka SIGSEGV or "Segmentation Fault")</li><li> It has something to do with progaurd, as the 694th line in build.xml is <div class="codebox"><p>Code: </p><pre><code>proguardFile="${out.absolute.dir}/proguard.txt"&gt;</code></pre></div></li><li> The issue may have to do with hold old my system is, seeing as it's unique to Mac OS 10.7 as I can ascertain and have previously received signal 4 with the newer version of adb. So perhaps it's accessing nonexistent address space or is attempting to execute an illegal opcode?</li></ol>If you or anyone else know a solution or any specific tidbits such as this, that would be helpful.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Sat Jan 09, 2016 1:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2016-01-08T12:03:01</updated>
+
+		<published>2016-01-08T12:03:01</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193255#p193255</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193255#p193255"/>
+		<title type="html"><![CDATA[LÖVE-Android • Re: ant debug build error on Mac OS 10.7]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193255#p193255"><![CDATA[
+I googled and it seems that on stackoverflow that this question has never received any answers. If you are just building a regular apk for developing your game then you can get an updated one here<br>builds.BobbyJones.me <br><br>If you were building for another reason then I suggest googling around for a solution unless someone else here would know.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Fri Jan 08, 2016 12:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GiveMeAnthony]]></name></author>
+		<updated>2016-01-08T04:16:28</updated>
+
+		<published>2016-01-08T04:16:28</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193242#p193242</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193242#p193242"/>
+		<title type="html"><![CDATA[LÖVE-Android • ant debug build error on Mac OS 10.7]]></title>
+
+					<category term="LÖVE-Android" scheme="http://love2d.org/forums/viewforum.php?f=11" label="LÖVE-Android"/>
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=81558&amp;p=193242#p193242"><![CDATA[
+I have adb working on Mac 10.7. Previously, I was having issues because adb was the newest version. Now, I'm trying to build Love for Android and I'm getting this error.<br><div class="codebox"><p>Code: </p><pre><code>BUILD FAILED/Developer/SDKs/android-sdk/tools/ant/build.xml:649: The following error occurred while executing this line:/Developer/SDKs/android-sdk/tools/ant/build.xml:694: null returned: 139</code></pre></div>The "139" tells me that this is a segmentation fault. I'm presuming it's because ant uses an illegal instruction for Mac 10.7. If that's the case, which version of ant should I get. If I'm completely off, how do I fix this?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137410">GiveMeAnthony</a> — Fri Jan 08, 2016 4:16 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/83260" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2022-10-02T00:10:04</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/83260</id>
+
+		<entry>
+		<author><name><![CDATA[Iori Branford]]></name></author>
+		<updated>2022-09-25T21:54:54</updated>
+
+		<published>2022-09-25T21:54:54</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250949#p250949</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250949#p250949"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250949#p250949"><![CDATA[
+<blockquote class="uncited"><div>Awesome!<br><br>Have you launched a game with it Iori?</div></blockquote>I have started to port my first shipped title <a href="https://ioribranford.itch.io/demonizer" class="postlink">Demonizer</a>.<br>It runs, but there is a lot I need to improve and polish up to be competitive with similar Switch games.<br><blockquote class="uncited"><div>Can you give some details about the love2d 11.4 functions support, what features don't work ?<br>At the moment I use <div class="codebox"><p>Code: </p><pre><code>function love.mousepressed(xOrg, yOrg, button, istouch, presses)</code></pre></div>That work for the Ipad, but does it work for the switch?<br>And for example the switch controllers, could I use the <div class="codebox"><p>Code: </p><pre><code>function love.mousemoved(xOrg, yOrg, dx, dy, istouch)</code></pre></div>I guess it will take a year for the game is ready, but I love the idea that the game is runnable at the switch.</div></blockquote>I expect touch-as-mouse to work, I haven't used it, but touchpressed/touchmoved/touchreleased do work.<br><br>Some features are not available until I figure out how to build the libraries:<ul><li>Networking via lua-enet or luasocket</li><li>Playing tracker module audio files (EDIT 10/1/2022: MP3 added!)</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137781">Iori Branford</a> — Sun Sep 25, 2022 9:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gcmartijn]]></name></author>
+		<updated>2022-09-25T16:03:06</updated>
+
+		<published>2022-09-25T16:03:06</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250937#p250937</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250937#p250937"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250937#p250937"><![CDATA[
+<blockquote class="uncited"><div>I'm pleased to share my port to Switch via the official Nintendo SDK. It is based on the main branch.</div></blockquote>Can you give some details about the love2d 11.4 functions support, what features don't work ?<br>At the moment I use <div class="codebox"><p>Code: </p><pre><code>function love.mousepressed(xOrg, yOrg, button, istouch, presses)</code></pre></div>That work for the Ipad, but does it work for the switch?<br>And for example the switch controllers, could I use the <div class="codebox"><p>Code: </p><pre><code>function love.mousemoved(xOrg, yOrg, dx, dy, istouch)</code></pre></div>I guess it will take a year for the game is ready, but I love the idea that the game is runnable at the switch.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145326">gcmartijn</a> — Sun Sep 25, 2022 4:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gingerbeardman]]></name></author>
+		<updated>2022-09-25T08:58:14</updated>
+
+		<published>2022-09-25T08:58:14</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250921#p250921</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250921#p250921"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250921#p250921"><![CDATA[
+Awesome!<br><br>Have you launched a game with it Iori?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137058">gingerbeardman</a> — Sun Sep 25, 2022 8:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Iori Branford]]></name></author>
+		<updated>2022-10-02T00:10:04</updated>
+
+		<published>2022-09-25T05:50:13</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250920#p250920</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250920#p250920"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=250920#p250920"><![CDATA[
+I'm pleased to share my port to Switch via the official Nintendo SDK. It is based on the main branch.<br><br>You will need to be licensed for Switch development with a <a href="https://developer.nintendo.com/register" class="postlink">Nintendo developer account</a>, signed NDA and <a href="https://developer.nintendo.com/group/development/getting-started/nintendo-switch-access-request" class="postlink">Nintendo Switch access approval</a>.<br><br>This will let you access the Switch dev forums where I posted the link to the private repo.<br>I can't link to my thread directly but you can find it:<br><strong class="text-strong"><a href="https://developer.nintendo.com/group/development/developer-support" class="postlink">Developer Support</a> &gt; Nintendo Switch forums &gt; English &gt; Nintendo SDK &gt; General Discussion &gt; LÖVE for Nintendo Switch</strong><br><br>There, post a reply with your Github username to request access, or download the snapshot in the attached zip file.<br>You'll of course need an official devkit to run it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137781">Iori Branford</a> — Sun Sep 25, 2022 5:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gingerbeardman]]></name></author>
+		<updated>2021-12-05T17:33:52</updated>
+
+		<published>2021-12-05T17:33:52</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=245209#p245209</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=245209#p245209"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=245209#p245209"><![CDATA[
+Boom! Cheers<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137058">gingerbeardman</a> — Sun Dec 05, 2021 5:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2021-08-12T21:33:11</updated>
+
+		<published>2021-08-12T21:33:11</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=243009#p243009</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=243009#p243009"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=243009#p243009"><![CDATA[
+<a href="https://github.com/retronx-team/love-nx" class="postlink">https://github.com/retronx-team/love-nx</a><br><br>This kinda flew under the radar, but you can build an NRO file to either run .love files or package up your game to distribute. Obviously for homebrew purposes only if you don't have a devkit.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Thu Aug 12, 2021 9:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gpg]]></name></author>
+		<updated>2021-05-14T23:00:08</updated>
+
+		<published>2021-05-14T23:00:08</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=240957#p240957</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=240957#p240957"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=240957#p240957"><![CDATA[
+You would have to download the source, modify love.cpp to use a window library to make a render window for the console then build it for the console. THATS IT.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=177219">gpg</a> — Fri May 14, 2021 11:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DerpChest]]></name></author>
+		<updated>2020-10-21T11:35:10</updated>
+
+		<published>2020-10-21T11:35:10</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=236468#p236468</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=236468#p236468"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=236468#p236468"><![CDATA[
+Actually, The game "Move or Die" made it's way to PS4, and it is a love game, also I saw someone port love into the switch once<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=159356">DerpChest</a> — Wed Oct 21, 2020 11:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2018-11-26T22:16:54</updated>
+
+		<published>2018-11-26T22:16:54</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224354#p224354</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224354#p224354"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224354#p224354"><![CDATA[
+I'm not currently in a position where I could personally provide that type of service (both because I don't have access to a Switch at home to port love to, and because my full-time day job is a similar line of work), but that doesn't mean someone else wouldn't be able to do it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Nov 26, 2018 10:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gianmichele]]></name></author>
+		<updated>2018-11-26T09:59:20</updated>
+
+		<published>2018-11-26T09:59:20</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224347#p224347</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224347#p224347"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=224347#p224347"><![CDATA[
+Per FNA documentation:<br><br>"While there is no special code needed for Nintendo Switch support (100% of the platform code is in SDL and BRUTE, two separate projects), all consulting and documentation is private, per NDA requirements."<br><br><a href="https://github.com/FNA-XNA/FNA/wiki/Appendix-A:-FNA-on-Consoles" class="postlink">https://github.com/FNA-XNA/FNA/wiki/App ... n-Consoles</a><br><br>I was wondering if a similar arrangement could be done for LÖVE? @slime?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134541">gianmichele</a> — Mon Nov 26, 2018 9:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gg]]></name></author>
+		<updated>2018-11-05T16:05:11</updated>
+
+		<published>2018-11-05T16:05:11</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223994#p223994</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223994#p223994"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223994#p223994"><![CDATA[
+This is a GREAT idea!  If you <strong class="text-strong">LÖVE</strong>LY people want to get a group together then I will help you get it done!  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141154">gg</a> — Mon Nov 05, 2018 4:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[EliterScripts]]></name></author>
+		<updated>2018-11-04T14:57:09</updated>
+
+		<published>2018-11-04T14:57:09</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223968#p223968</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223968#p223968"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=223968#p223968"><![CDATA[
+Just out of pure curiosity, does the Nintendo Switch non-disclosure agreement allow for developers to communicate and share with other developers that have also signed the NDA? If so, is there a way to check and verify that someone else has signed the NDA? If so, is it possible for LOVE developers to host a "hidden" or "secluded" section of the website dedicated to people putting their LOVE games on the Nintendo Switch?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135824">EliterScripts</a> — Sun Nov 04, 2018 2:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tassilo]]></name></author>
+		<updated>2018-07-25T18:12:52</updated>
+
+		<published>2018-07-25T18:12:52</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222310#p222310</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222310#p222310"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222310#p222310"><![CDATA[
+Being a Switch-dev with SDK and a devkit, wouldn't it be possible to recompile Love for the switch? Anyone any idea how the workflow of this might look like? How would I be launching .love files?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138115">Tassilo</a> — Wed Jul 25, 2018 6:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tassilo]]></name></author>
+		<updated>2018-07-25T17:30:26</updated>
+
+		<published>2018-07-25T17:30:26</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222309#p222309</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222309#p222309"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=222309#p222309"><![CDATA[
+So I take it there's no news related to LÖVE on the switch? I tried contacting the Pocket Rumble team both by Twitter and EMail, but unfortunately didn't get any response.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138115">Tassilo</a> — Wed Jul 25, 2018 5:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[aidalgol]]></name></author>
+		<updated>2018-01-28T01:31:17</updated>
+
+		<published>2018-01-28T01:31:17</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=218049#p218049</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=218049#p218049"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=218049#p218049"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>It may be easier though for game developers to port their games to the aforementioned consoles by porting LÖVE to use Nintendo's SDK, but they will have to do it on their own and won't be able to share that development publicly (much less as open source)</div></blockquote>Depends on what you mean by share, I'd guess. You could always publicly say, "I have a port, if you've signed the nintendo NDA you can email me for the code". So it'd be like open source but only within the secret club.</div></blockquote>this is exactly how it works.</div></blockquote>Oh good, I was under the impression that even <em class="text-italics">this</em> was forbidden by the NDA.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=29233">aidalgol</a> — Sun Jan 28, 2018 1:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2018-01-26T03:03:48</updated>
+
+		<published>2018-01-26T03:03:48</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217983#p217983</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217983#p217983"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217983#p217983"><![CDATA[
+Not really. But it does means that porting LÖVE to Switch is well within the grasp of a normal programmer.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Fri Jan 26, 2018 3:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Epitoaster]]></name></author>
+		<updated>2018-01-22T23:30:46</updated>
+
+		<published>2018-01-22T23:30:46</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217910#p217910</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217910#p217910"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=217910#p217910"><![CDATA[
+Pocket Rumble is on switch, Pocket Rumble is made in LÖVE so therefore LÖVE is on nintendo switch.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138394">Epitoaster</a> — Mon Jan 22, 2018 11:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adekto]]></name></author>
+		<updated>2017-10-29T14:34:31</updated>
+
+		<published>2017-10-29T14:34:31</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=216119#p216119</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=216119#p216119"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=216119#p216119"><![CDATA[
+out of curiosity why cant we share the compile system? i mean unity and unreal have it<br>even if its under heavy nda knowing it will work with would be helpful<br><br>having looked at the Nintendo development page you can go with webkit meaning if you can run your game in electron or similar your not far off, would not recommend running emscripten but something more like the old <a href="https://love2d.org/forums/viewtopic.php?f=12&amp;t=77911" class="postlink">loveJS</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=79341">adekto</a> — Sun Oct 29, 2017 2:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2017-10-08T08:49:51</updated>
+
+		<published>2017-10-08T08:49:51</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215661#p215661</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215661#p215661"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215661#p215661"><![CDATA[
+We need to make it real...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Sun Oct 08, 2017 8:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gingerbeardman]]></name></author>
+		<updated>2017-10-07T23:22:43</updated>
+
+		<published>2017-10-07T23:22:43</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215653#p215653</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215653#p215653"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=215653#p215653"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>It may be easier though for game developers to port their games to the aforementioned consoles by porting LÖVE to use Nintendo's SDK, but they will have to do it on their own and won't be able to share that development publicly (much less as open source)</div></blockquote>Depends on what you mean by share, I'd guess. You could always publicly say, "I have a port, if you've signed the nintendo NDA you can email me for the code". So it'd be like open source but only within the secret club.</div></blockquote>this is exactly how it works. Here's info about this process as it applies to MonoGame (another framework) which was used in the recent port of Stardew Valley.<br><br><a href="http://community.monogame.net/t/is-switch-monogame-ready/8989/2" class="postlink">http://community.monogame.net/t/is-swit ... ady/8989/2</a><br><br>So I think somebody on the LÖVE team should talk to Nintendo at: <a href="https://developer.nintendo.com" class="postlink">https://developer.nintendo.com</a> or maybe tweeting Tim Symons at NOE: @timfollowsyou or your friendly local Nintendo Developer Advocate<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137058">gingerbeardman</a> — Sat Oct 07, 2017 11:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alloyed]]></name></author>
+		<updated>2017-03-10T18:29:55</updated>
+
+		<published>2017-03-10T18:29:55</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210580#p210580</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210580#p210580"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210580#p210580"><![CDATA[
+<blockquote class="uncited"><div>It may be easier though for game developers to port their games to the aforementioned consoles by porting LÖVE to use Nintendo's SDK, but they will have to do it on their own and won't be able to share that development publicly (much less as open source)</div></blockquote>Depends on what you mean by share, I'd guess. You could always publicly say, "I have a port, if you've signed the nintendo NDA you can email me for the code". So it'd be like open source but only within the secret club.<br>ofc for this to be worth it you'd need to have a game worth selling on the switch /shrug<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136682">alloyed</a> — Fri Mar 10, 2017 6:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2017-03-11T06:29:10</updated>
+
+		<published>2017-03-10T12:14:58</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210571#p210571</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210571#p210571"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210571#p210571"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Yesterday I tried running a javascript NES emulator, and surprisingly it worked. I'm going to try and see if love.js also runs on it, this would be great!</div></blockquote>Did you try running it in the in-switch web browser? If so - that's pretty good news!</div></blockquote>Yes, it was running in the browser. I'll try to run LÖVE tonight and will post the results here <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><br><br>EDIT: doesn't work yet. No proper webgl support<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Fri Mar 10, 2017 12:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2017-03-10T10:54:11</updated>
+
+		<published>2017-03-10T10:54:11</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210568#p210568</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210568#p210568"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210568#p210568"><![CDATA[
+<blockquote class="uncited"><div>Yesterday I tried running a javascript NES emulator, and surprisingly it worked. I'm going to try and see if love.js also runs on it, this would be great!</div></blockquote>Did you try running it in the in-switch web browser? If so - that's pretty good news!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Fri Mar 10, 2017 10:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2017-03-10T05:58:47</updated>
+
+		<published>2017-03-10T05:58:47</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210562#p210562</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210562#p210562"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210562#p210562"><![CDATA[
+Yesterday I tried running a javascript NES emulator, and surprisingly it worked. I'm going to try and see if love.js also runs on it, this would be great!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Fri Mar 10, 2017 5:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2017-03-10T02:09:13</updated>
+
+		<published>2017-03-10T02:09:13</published>
+		<id>http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210558#p210558</id>
+		<link href="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210558#p210558"/>
+		<title type="html"><![CDATA[Re: LÖVE for the Switch]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?t=83260&amp;p=210558#p210558"><![CDATA[
+Man, if the Switch gets hacked and an unofficial port of Löve somehow ended up on it...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Mar 10, 2017 2:09 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
