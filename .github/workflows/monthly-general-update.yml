@@ -31,14 +31,6 @@ jobs:
           LATEST_VERSION=$(cat latest-version.txt)
           echo $(cat remote-version.txt)
           echo $(cat latest-version.txt)
-          echo "remote ${{ steps.extract_version.outputs.version }}"
-          if [ "$LATEST_VERSION" != "${{ steps.extract_version.outputs.version }}" ]; then
-            echo "LÖVE version updated."
-            echo "${{ steps.extract_version.outputs.version }}" > latest-version.txt
-          else
-            echo "LÖVE version unchanged."
-            exit 1
-          fi
         
       - name: Commit and push changes
         run: |
@@ -47,6 +39,14 @@ jobs:
           git add remote-version.txt
           git commit -m "Automatic Update of remote-version.txt"
           git push
+          echo "remote ${{ steps.extract_version.outputs.version }}"
+          if [ "$LATEST_VERSION" != "${{ steps.extract_version.outputs.version }}" ]; then
+            echo "LÖVE version updated."
+            echo "${{ steps.extract_version.outputs.version }}" > latest-version.txt
+          else
+            echo "LÖVE version unchanged."
+            exit 1
+          fi
 
   mirror_website:
     needs: check_version
