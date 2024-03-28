@@ -17,3 +17,11 @@ jobs:
         
       - name: Update README.md
         run: lua update_readme.lua
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Update README.md"
+          git push
