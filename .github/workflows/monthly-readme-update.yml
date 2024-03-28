@@ -1,8 +1,8 @@
-name: Update README.md monthly
+name: Update README.md daily
 
 on:
   schedule:
-    - cron: '0 0 1 * *' 
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
