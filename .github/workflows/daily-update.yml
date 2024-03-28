@@ -1,0 +1,19 @@
+name: Check for LÖVE version update & update if theres a new version
+
+on:
+  schedule:
+    - cron: '0 0 0 * *' # Runs the workflow every day at midnight UTC
+  workflow_dispatch: # Manually triggered workflow
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Install Lua 5.4
+        run: sudo apt-get install lua5.4 curl grep -y
+        
+      - name: Update README.md
+        run: lua update_readme.lua

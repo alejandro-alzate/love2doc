@@ -1,4 +1,4 @@
-name: Check for LÖVE version update
+name: Check for LÖVE version update & update if theres a new version
 
 on:
   schedule:
@@ -21,6 +21,7 @@ jobs:
         id: extract_version
         run: |
           VERSION=$(curl -s https://love2d.org/ | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+')
+          echo $VERSION
           echo "::set-output name=version::$VERSION"
           
       - name: Compare with latest version
@@ -52,16 +53,3 @@ jobs:
       - name: Update latest version
         run: echo ::set-output name=version::$(cat latest-version.txt)
         
-      - name: Update README.md
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const fs = require('fs');
-            let readmeContent = fs.readFileSync('README.md', 'utf8');
-            readmeContent = readmeContent.replace(/!\[LOVE\]\(https:\/\/img\.shields\.io\/badge\/Local%20L%C3%96VE-[0-9]+\.[0-9]+-EA316E\.svg\?style=flat-square\)/, `![LOVE](https://img.shields.io/badge/L%C3%96VE-${{ needs.mirror_website.outputs.version }}-EA316E.svg?style=flat-square)`);
-            if ("${{ needs.mirror_website.outputs.version }}" == "$(cat latest-version.txt)") {
-                readmeContent = readmeContent.replace(/!\[Up to date \| .*?\]/, '![Up to date | Yes](https://img.shields.io/badge/Up%20to%20date-Yes-brightgreen)');
-            } else {
-                readmeContent = readmeContent.replace(/!\[Up to date \| .*?\]/, '![Up to date | No](https://img.shields.io/badge/Up%20to%20date-No-red)');
-            }
-            fs.writeFileSync('README.md', readmeContent);
