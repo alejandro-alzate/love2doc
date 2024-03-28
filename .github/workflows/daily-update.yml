@@ -2,8 +2,8 @@ name: Check for LÖVE version update & update if theres a new version
 
 on:
   schedule:
-    - cron: '0 0 0 * *' # Runs the workflow every day at midnight UTC
-  workflow_dispatch: # Manually triggered workflow
+    - cron: '0 0 12 1 */2 *' #At 12:00 PM, on day 1 of the month, every 2 months
+  workflow_dispatch:
 
 jobs:
   update_readme:
