@@ -29,8 +29,8 @@ jobs:
         id: compare_versions
         run: |
           LATEST_VERSION=$(cat latest-version.txt)
-          $(cat remote-version.txt)
-          $(cat latest-version.txt)
+          echo $(cat remote-version.txt)
+          echo $(cat latest-version.txt)
           echo "remote ${{ steps.extract_version.outputs.version }}"
           if [ "$LATEST_VERSION" != "${{ steps.extract_version.outputs.version }}" ]; then
             echo "LÖVE version updated."
