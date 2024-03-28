@@ -6,6 +6,24 @@ on:
   workflow_dispatch:
 
 jobs:
+  remove_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Remove readme
+        run: rm README.md
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add *
+          git commit -m "Automatic Remove of README.md"
+          git push
+          echo "Just fail don't notify me"
+
   update_readme:
     runs-on: ubuntu-latest
     steps:
