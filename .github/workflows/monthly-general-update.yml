@@ -24,6 +24,14 @@ jobs:
           echo $VERSION
           echo $VERSION > remote-version.txt
           echo "::set-output name=version::$VERSION"
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add remote-version.txt
+          git commit -m "Automatic Update of remote-version.txt"
+          git push
           
       - name: Compare with latest version
         id: compare_versions
