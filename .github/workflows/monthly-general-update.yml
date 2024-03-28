@@ -34,12 +34,6 @@ jobs:
         
       - name: Commit and push changes
         run: |
-          git pull
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add remote-version.txt
-          git commit -m "Automatic Update of remote-version.txt"
-          git push
           echo "remote ${{ steps.extract_version.outputs.version }}"
           if [ "$LATEST_VERSION" != "${{ steps.extract_version.outputs.version }}" ]; then
             echo "LÖVE version updated."
