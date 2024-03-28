@@ -58,7 +58,7 @@ jobs:
           script: |
             const fs = require('fs');
             let readmeContent = fs.readFileSync('README.md', 'utf8');
-            readmeContent = readmeContent.replace(/!\[LOVE\]\(https:\/\/img\.shields\.io\/badge\/L%C3%96VE-[0-9]+\.[0-9]+-EA316E\.svg\?style=flat-square\)/, `![LOVE](https://img.shields.io/badge/L%C3%96VE-${{ needs.mirror_website.outputs.version }}-EA316E.svg?style=flat-square)`);
+            readmeContent = readmeContent.replace(/!\[LOVE\]\(https:\/\/img\.shields\.io\/badge\/Local%20L%C3%96VE-[0-9]+\.[0-9]+-EA316E\.svg\?style=flat-square\)/, `![LOVE](https://img.shields.io/badge/L%C3%96VE-${{ needs.mirror_website.outputs.version }}-EA316E.svg?style=flat-square)`);
             if ("${{ needs.mirror_website.outputs.version }}" == "$(cat latest-version.txt)") {
                 readmeContent = readmeContent.replace(/!\[Up to date \| .*?\]/, '![Up to date | Yes](https://img.shields.io/badge/Up%20to%20date-Yes-brightgreen)');
             } else {
