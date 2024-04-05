@@ -6,7 +6,7 @@
 # inflated more than i'll ever be able to do legitimate.
 
 MSG="Automatic partial update"
-COOLDOWN="1m"
+COOLDOWN="30"
 
 function upload() {
 	git push
