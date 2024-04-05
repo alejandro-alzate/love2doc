@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/Config_Files_(简体中文) by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Config Files (简体中文) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Config_Files_(简体中文)","wgTitle":"Config Files (简体中文)","wgCurRevisionId":23691,"wgRevisionId":23691,"wgArticleId":1780,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["LÖVE","Callbacks"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Config_Files_(简体中文)","wgRelevantArticleId":1780,"wgRequestId":"3546d527a71ebd9d913f9777","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="Config Files (简体中文)" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Config_Files_简体中文 rootpage-Config_Files_简体中文 skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="http://love2d.org/wiki/Config_Files_(简体中文)" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Talk:Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Config Files (简体中文)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E4.BB.8B.E7.BB.8D"><span class="tocnumber">1</span> <span class="toctext">介绍</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#love.conf"><span class="tocnumber">2</span> <span class="toctext">love.conf</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Love_.E5.BD.93.E5.89.8D.E7.89.88.E6.9C.AC.E7.9A.84.E9.85.8D.E7.BD.AE.E6.96.87.E4.BB.B6"><span class="tocnumber">3</span> <span class="toctext">Love 当前版本的配置文件</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E7.AE.80.E5.8D.95.E8.AF.B4.E6.98.8E"><span class="tocnumber">4</span> <span class="toctext">简单说明</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#identity"><span class="tocnumber">4.1</span> <span class="toctext">identity</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#appendidentity"><span class="tocnumber">4.2</span> <span class="toctext">appendidentity</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#version"><span class="tocnumber">4.3</span> <span class="toctext">version</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#console"><span class="tocnumber">4.4</span> <span class="toctext">console</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#accelerometerjoystick"><span class="tocnumber">4.5</span> <span class="toctext">accelerometerjoystick</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#externalstorage"><span class="tocnumber">4.6</span> <span class="toctext">externalstorage</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#gammacorrect"><span class="tocnumber">4.7</span> <span class="toctext">gammacorrect</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#audio.mixwithsystem"><span class="tocnumber">4.8</span> <span class="toctext">audio.mixwithsystem</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#window"><span class="tocnumber">4.9</span> <span class="toctext">window</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#window.fullscreentype"><span class="tocnumber">4.10</span> <span class="toctext">window.fullscreentype</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#See_Also"><span class="tocnumber">5</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Other_Languages"><span class="tocnumber">6</span> <span class="toctext">Other Languages</span></a></li>
+</ul>
+</div>
+
+<h2><span id="介绍"></span><span class="mw-headline" id=".E4.BB.8B.E7.BB.8D">介绍</span></h2>
+<p>如果在游戏文件夹中（或在 .love 文件中）有一个名为 <code>conf.lua</code> 的文件, 它将在 LÖVE 模块加载 <i>之前</i> 运行。你能使用这个文件重写稍后将被 LÖVE '启动' 脚本调用的 <code>love.conf</code> 函数。利用 <code>love.conf</code> 函数, 可以设置一些配置选项和改变一些设置，诸如窗口默认尺寸，要加载哪些模块及其它的一些设置。
+</p>
+<h2><span class="mw-headline" id="love.conf">love.conf</span></h2>
+<p><code>love.conf</code> 函数有一个参数:一个填满所有默认数值的表，并且你可以根据喜好更改这些参数。例如，想更改默认的屏幕尺寸：
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">conf</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1024</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">768</span>
+    <span class="cm">--[[ 0.8及之前版本为:</span>
+<span class="cm">    t.screen.width = 1024</span>
+<span class="cm">    t.screen.height = 768</span>
+<span class="cm">    ]]</span>
+<span class="kr">end</span>
+</pre></div>
+<p>再举个栗子：如果不需要物理模块或手柄模块，就这么写
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">conf</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">joystick</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">physics</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="kr">end</span>
+</pre></div>
+<p>在发行游戏时，把不需要的模块设置为false是一件值得鼓励的事。这将稍微减少启动时间（特别是禁用 joystick 模块）和减少内存占用（稍微的）。
+</p>
+<h2><span id="Love_当前版本的配置文件"></span><span class="mw-headline" id="Love_.E5.BD.93.E5.89.8D.E7.89.88.E6.9C.AC.E7.9A.84.E9.85.8D.E7.BD.AE.E6.96.87.E4.BB.B6">Love 当前版本的配置文件</span></h2>
+<p>下面是 LÖVE <a href="http://love2d.org/wiki/11.0" title="11.0">11.0</a> 版本的所有选项及它们的缺省值列表：
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> 
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">conf</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">identity</span> <span class="o">=</span> <span class="kc">nil</span>                   <span class="c1">-- 盘存文件夹的名称 (string)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">appendidentity</span> <span class="o">=</span> <span class="kc">false</span>            <span class="c1">-- Search files in source directory before save directory (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;11.0&quot;</span>                <span class="c1">-- 此游戏对应的 LÖVE 版本(string)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">console</span> <span class="o">=</span> <span class="kc">false</span>                  <span class="c1">-- 附带控制台 (boolean, Windows only)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">accelerometerjoystick</span> <span class="o">=</span> <span class="kc">true</span>      <span class="c1">-- 通过将其暴露为操纵杆来启用 iOS and Android 上的加速度计 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">externalstorage</span> <span class="o">=</span> <span class="kc">false</span>           <span class="c1">-- 设为 True 会使程序在 Android 的外部存储中储存（和在同一目录读取）文件 (boolean) </span>
+    <span class="n">t</span><span class="p">.</span><span class="n">gammacorrect</span> <span class="o">=</span> <span class="kc">false</span>              <span class="c1">-- 当系统支持时，启用伽玛校正渲染 (boolean)</span>
+
+    <span class="n">t</span><span class="p">.</span><span class="n">audio</span><span class="p">.</span><span class="n">mixwithsystem</span> <span class="o">=</span> <span class="kc">true</span>        <span class="c1">-- 在 LOVE 运行时启用后台播放 (boolean, iOS and Android only)</span>
+
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Untitled&quot;</span>        <span class="c1">-- 程序窗口标题 (string)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">icon</span> <span class="o">=</span> <span class="kc">nil</span>                <span class="c1">-- 使用一张游戏目录中的图片作为窗口图标 (string)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">800</span>               <span class="c1">-- 程序窗口宽 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">600</span>              <span class="c1">-- 程序窗口高 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">borderless</span> <span class="o">=</span> <span class="kc">false</span>        <span class="c1">-- 移除所有程序边框的视觉效果 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">resizable</span> <span class="o">=</span> <span class="kc">false</span>         <span class="c1">-- 允许鼠标拖动调整窗口的宽度和高度 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">minwidth</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1">-- 程序窗口的最小宽度，仅当t.window.resizable = true 时生效 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">minheight</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c1">-- 程序窗口的最小高度，仅当t.window.resizable = true 时生效 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">fullscreen</span> <span class="o">=</span> <span class="kc">false</span>        <span class="c1">-- 打开程序后全屏运行游戏 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">fullscreentype</span> <span class="o">=</span> <span class="s2">&quot;desktop&quot;</span> <span class="c1">-- 全屏的模式，有 &quot;desktop&quot; 桌面全屏 和 &quot;exclusive&quot; 全屏 两种选择 (string)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">vsync</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1">-- 垂直同步模式 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">msaa</span> <span class="o">=</span> <span class="mi">0</span>                  <span class="c1">-- 多样本采样抗锯齿时的样本数 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">depth</span> <span class="o">=</span> <span class="kc">nil</span>                <span class="c1">-- The number of bits per sample in the depth buffer</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">stencil</span> <span class="o">=</span> <span class="kc">nil</span>              <span class="c1">-- The number of bits per sample in the stencil buffer</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">display</span> <span class="o">=</span> <span class="mi">1</span>               <span class="c1">-- 显示器的指示显示窗口 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">highdpi</span> <span class="o">=</span> <span class="kc">false</span>           <span class="c1">-- 允许在视网膜显示器(Retina)下使用高DPI模式 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">nil</span>                    <span class="c1">-- 指定显示中窗口位置的 x坐标 (number)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="kc">nil</span>                    <span class="c1">-- 指定显示中窗口位置的 y坐标 (number)</span>
+ 
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">audio</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 audio        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">true</span>               <span class="c1">-- 加载 data        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">event</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 event        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="kc">true</span>               <span class="c1">-- 加载 font        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">graphics</span> <span class="o">=</span> <span class="kc">true</span>          <span class="c1">-- 加载 graphics     模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 image        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">joystick</span> <span class="o">=</span> <span class="kc">true</span>          <span class="c1">-- 加载 the joystick 模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">keyboard</span> <span class="o">=</span> <span class="kc">true</span>          <span class="c1">-- 加载 keyboard     模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">math</span> <span class="o">=</span> <span class="kc">true</span>              <span class="c1">-- 加载 math         模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">mouse</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 mouse        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">physics</span> <span class="o">=</span> <span class="kc">true</span>           <span class="c1">-- 加载 physics      模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">sound</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 sound        模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">system</span> <span class="o">=</span> <span class="kc">true</span>            <span class="c1">-- 加载 system       模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">thread</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 thread       模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">timer</span> <span class="o">=</span> <span class="kc">true</span>             <span class="c1">-- 加载 timer        模块 (boolean)，取消加载此模块会导致 love.update 中 delta time 为 0</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">touch</span> <span class="o">=</span> <span class="kc">true</span>              <span class="c1">-- 加载 touch       模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">video</span> <span class="o">=</span> <span class="kc">true</span>              <span class="c1">-- 加载 video       模块 (boolean)</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">window</span> <span class="o">=</span> <span class="kc">true</span>            <span class="c1">-- 加载 window       模块 (boolean)</span>
+<span class="kr">end</span>
+</pre></div>
+<p><b>0.92</b> 后未检验 注意，不能禁止<a href="http://love2d.org/wiki/love.filesystem" title="love.filesystem">love.filesystem</a>; 他是被强制使用的。同样对 <a href="http://love2d.org/wiki/love" title="love">love</a> 模块本身也是如此。
+</p><p>最新版本的<code>love.conf</code>函数的选项内容总是可能会发生变化的，请注意这一点，<b>0.92</b>及更早版本的<code>love.conf</code>配置列表请参看<a rel="nofollow" class="external text" href="http://love2d.org/wiki/Config_Files#love.conf">英文wiki</a>
+</p>
+<h2><span id="简单说明"></span><span class="mw-headline" id=".E7.AE.80.E5.8D.95.E8.AF.B4.E6.98.8E">简单说明</span></h2>
+<h4><span class="mw-headline" id="identity">identity</span></h4>
+<p>identity的值应该为存盘目录名，而非存盘的绝对或相对路径：
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">t</span><span class="p">.</span><span class="n">identity</span> <span class="o">=</span> <span class="s2">&quot;gabe_HL3&quot;</span> <span class="c1">-- 正确</span>
+<span class="cm">--[[</span>
+<span class="cm">t.identity = &quot;c:/Users/gabe/HL3&quot;、&quot;./save&quot; 以及 &quot; ~/config/gabe&quot; 都是错误的 </span>
+<span class="cm">]]</span>
+</pre></div>
+<p>另外 <a href="http://love2d.org/wiki/love.filesystem.setIdentity" title="love.filesystem.setIdentity">love.filesystem.setIdentity</a> 函数也可以用来设置love2d的存盘目录名。
+</p>
+<h4><span class="mw-headline" id="appendidentity">appendidentity</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/11.0" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>This flag determines if game directory should be searched first then save directory (<code>true</code>) or otherwise (<code>false</code>)
+</p>
+<h4><span class="mw-headline" id="version">version</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.8.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.8.0" title="0.8.0">0.8.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p><code>t.version</code>设置的意义在于告诉玩家作者在开发此款游戏时使用的love2d版本，<code>t.version</code>的值应当为一个字符串，即类似<code>"0.9.2"</code>这样的。顺便说一句love2d的版本号规则，love2d的版本号遵循X.Y.Z的设定，X代表主版本号，通常意味着有革命性的功能变化；Y代表次版本号，一般表示有局部的功能改进；Z是补丁版本号，通常意味着非常少或者没有功能改进，只是程序稳定性或BUG修复。
+</p><p>通常一款love2d开发的游戏，在主版本号和次版本号相同，补丁版本号不同的love2d下运行时，兼容性问题是非常小的；当你所运行的love2d引擎程序（请注意love2d引擎和love2d游戏包是两个不同物体）和作者开发所使用的主版本和次版本号不同时，不建议运行此游戏，你应当更换到和作者同版本的love2d引擎程序来运行游戏。
+</p>
+<h4><span class="mw-headline" id="console">console</span></h4>
+<p>确定是否应在游戏窗口旁边打开控制台 (仅 Windows) 。 注意：在OSX上，您可以通过在终端运行 LÖVE 来获取控制台输出，在 Windows 上，当使用 LÖVE <a href="http://love2d.org/wiki/0.10.2" title="0.10.2">0.10.2</a> 时，可通过运行 <code>lovec.exe</code> 而非 <code>love.exe</code> 来做到这一点。
+</p>
+<h4><span class="mw-headline" id="accelerometerjoystick">accelerometerjoystick</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.10.0" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>决定 iOS 和 Android 上的加速度计是否应当作为一个三轴的 <a href="http://love2d.org/wiki/Joystick" title="Joystick">Joystick</a> 被暴露。在不使用加速度计时禁用它可能会减少 CPU 使用率。
+</p>
+<h4><span class="mw-headline" id="externalstorage">externalstorage</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.1&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.10.1" title="0.10.1">0.10.1</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>设置文件应当保存在 Android 的 外部存储（true）或 内部存储（false） 中。
+</p>
+<h4><span class="mw-headline" id="gammacorrect">gammacorrect</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.10.0" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>决定是否启用 <a href="http://love2d.org/wiki/love.graphics.isGammaCorrect" title="love.graphics.isGammaCorrect">gamma-correct rendering</a> ，需要系统支持。
+</p>
+<h4><span class="mw-headline" id="audio.mixwithsystem">audio.mixwithsystem</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/11.0" title="11.0">11.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>设置来自其他应用的背景 音效 / 音乐  在 LÖVE 打开时是否播放。查看 <a href="http://love2d.org/wiki/love.system.hasBackgroundMusic" title="love.system.hasBackgroundMusic">love.system.hasBackgroundMusic</a> 获得更多细节。
+</p>
+<h4><span class="mw-headline" id="window">window</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.9.0" title="0.9.0">0.9.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p><code>t.window</code>系列设置项用以设置游戏窗口相关内容，例如窗口宽和高，是否能拖拽修改宽高，是否默认全屏等等。
+</p><p>需要说明，在0.8及之前版本设置窗口的变量叫做<code>t.screen</code>,如果你的程序想同时兼容新老love2d引擎，可以这样写
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">conf</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="c1">--在0.9版本下写法</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">window</span> <span class="ow">or</span> <span class="n">t</span><span class="p">.</span><span class="n">screen</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1024</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">768</span>
+    <span class="c1">--t.window的其他子项以此类推</span>
+
+    <span class="c1">--在0.8及之前版本写法</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">screen</span> <span class="ow">or</span> <span class="n">t</span><span class="p">.</span><span class="n">window</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">screen</span><span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="kr">end</span>
+</pre></div>
+<h4><span class="mw-headline" id="window.fullscreentype">window.fullscreentype</span></h4>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="http://love2d.org/wiki/0.9.0" title="0.9.0">0.9.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This flag is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p><code>window.fullscreentype</code>用来设置游戏全屏的方式，可选值为<code>normal</code>和<code>desktop</code>。其中desktop指的是保留操作系统的任务栏（OSX的Dock及Linux下的Dock类程序亦保留）和程序的标题栏模式的全屏方式。
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="http://love2d.org/wiki/love_(简体中文)" title="love (简体中文)">love (简体中文)</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="http://love2d.org/wiki/Config_Files_(Dansk)" title="Config Files (Dansk)">Dansk</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Deutsch)" title="Config Files (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files" title="Config Files">English</a>&#160;&#8211; 
+<a href="http://love2d.org/wiki/Config_Files_(Español)" title="Config Files (Español)">Español</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Français)" title="Config Files (Français)">Français</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Indonesia)" title="Config Files (Indonesia)">Indonesia</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Magyar)" title="Config Files (Magyar)">Magyar</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Polski)" title="Config Files (Polski)">Polski</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Português)" title="Config Files (Português)">Português</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Svenska)" title="Config Files (Svenska)">Svenska</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Русский)" title="Config Files (Русский)">Русский</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Українська)" title="Config Files (Українська)">Українська</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(日本語)" title="Config Files (日本語)">日本語</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Config_Files_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Config Files (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a class="mw-selflink selflink">简体中文</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(Tiếng_Việt)" title="Config Files (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Config_Files_(한국어)" title="Config Files (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="http://love2d.org/wiki/Help:i18n" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240404173016
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.047 seconds
+Real time usage: 0.547 seconds
+Preprocessor visited node count: 596/1000000
+Preprocessor generated node count: 1299/1000000
+Post‐expand include size: 5751/2097152 bytes
+Template argument size: 1498/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 16080/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  112.812      1 -total
+  4.92%    5.546      1 Template:i18n
+  4.24%    4.784      8 Template:newin
+  2.65%    2.985     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:1780-0!canonical and timestamp 20240404173016 and revision id 23691
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=Config_Files_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87)&amp;oldid=23691">http://love2d.org/w/index.php?title=Config_Files_(简体中文)&amp;oldid=23691</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="http://love2d.org/wiki/Category:LÖVE" title="Category:LÖVE">LÖVE</a></li><li><a href="http://love2d.org/wiki/Category:Callbacks" title="Category:Callbacks">Callbacks</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Config+Files+%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Config_Files_(简体中文)" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Config_Files_(简体中文)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;oldid=23691" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Config_Files_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="http://love2d.org/wiki/Special:Browse/:Config-5FFiles-5F(简体中文)" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 16 October 2019, at 13:06.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.047","walltime":"0.547","ppvisitednodes":{"value":596,"limit":1000000},"ppgeneratednodes":{"value":1299,"limit":1000000},"postexpandincludesize":{"value":5751,"limit":2097152},"templateargumentsize":{"value":1498,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16080,"limit":5000000},"timingprofile":["100.00%  112.812      1 -total","  4.92%    5.546      1 Template:i18n","  4.24%    4.784      8 Template:newin","  2.65%    2.985     28 Template:Lang"]},"cachereport":{"timestamp":"20240404173016","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
+<!-- Mirrored from love2d.org/wiki/Config_Files_(简体中文) by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:00 GMT -->
+</html>
