@@ -1,5 +1,5 @@
 MSG="Automatic partial update"
-COOLDOWN="10s"
+COOLDOWN="1m"
 
 function upload() {
 	git push
