@@ -19,17 +19,17 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3ANetworking_with_UDP-2DTheClient_-28日本語-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-05T23:44:25+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3ANetworking_with_UDP-2DTheClient">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-05T23:44:16+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3ANetworking_with_UDP-2DTheClient_-28日本語-29">
-		<rdfs:label>Tutorial:Networking with UDP-TheClient (日本語)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3ANetworking_with_UDP-2DTheClient_-28日本語-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3ANetworking_with_UDP-2DTheClient_-28日本語-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3ANetworking_with_UDP-2DTheClient">
+		<rdfs:label>Tutorial:Networking with UDP-TheClient</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3ANetworking_with_UDP-2DTheClient"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3ANetworking_with_UDP-2DTheClient"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Networking with UDP-TheClient (日本語)</swivt:wikiPageSortKey>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Networking with UDP-TheClient</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
