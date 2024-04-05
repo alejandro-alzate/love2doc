@@ -2986,4 +2986,1315 @@
 		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errorhandler_-28日本語-29"/>
 		<swivt:page rdf:resource="http://love2d.org/wiki/love.errorhandler_-28日本語-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
-		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</s
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errorhandler (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getCRequirePath">
+		<rdfs:label>love.filesystem.getCRequirePath</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getCRequirePath"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getCRequirePath"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getCRequirePath</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getCRequirePath_-28日本語-29">
+		<rdfs:label>love.filesystem.getCRequirePath (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getCRequirePath_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getCRequirePath_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getCRequirePath (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getInfo">
+		<rdfs:label>love.filesystem.getInfo</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getInfo"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getInfo"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getInfo</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getInfo_-28日本語-29">
+		<rdfs:label>love.filesystem.getInfo (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getInfo_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getInfo_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getInfo (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.setCRequirePath">
+		<rdfs:label>love.filesystem.setCRequirePath</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.setCRequirePath"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.setCRequirePath"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.setCRequirePath</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.setCRequirePath_-28日本語-29">
+		<rdfs:label>love.filesystem.setCRequirePath (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.setCRequirePath_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.setCRequirePath_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.setCRequirePath (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.applyTransform">
+		<rdfs:label>love.graphics.applyTransform</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.applyTransform"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.applyTransform"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.applyTransform</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.applyTransform_-28日本語-29">
+		<rdfs:label>love.graphics.applyTransform (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.applyTransform_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.applyTransform_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.applyTransform (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.captureScreenshot">
+		<rdfs:label>love.graphics.captureScreenshot</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.captureScreenshot"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.captureScreenshot"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.captureScreenshot</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.captureScreenshot_-28Русский-29">
+		<rdfs:label>love.graphics.captureScreenshot (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.captureScreenshot_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.captureScreenshot_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.captureScreenshot (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.drawInstanced">
+		<rdfs:label>love.graphics.drawInstanced</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.drawInstanced"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.drawInstanced"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.drawInstanced</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.drawLayer">
+		<rdfs:label>love.graphics.drawLayer</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.drawLayer"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.drawLayer"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.drawLayer</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.drawLayer_-28日本語-29">
+		<rdfs:label>love.graphics.drawLayer (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.drawLayer_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.drawLayer_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.drawLayer (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.flushBatch">
+		<rdfs:label>love.graphics.flushBatch</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.flushBatch"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.flushBatch"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.flushBatch</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.flushBatch_-28日本語-29">
+		<rdfs:label>love.graphics.flushBatch (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.flushBatch_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.flushBatch_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.flushBatch (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getDPIScale">
+		<rdfs:label>love.graphics.getDPIScale</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getDPIScale"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getDPIScale"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getDPIScale</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getDPIScale_-28日本語-29">
+		<rdfs:label>love.graphics.getDPIScale (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getDPIScale_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getDPIScale_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getDPIScale (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getDepthMode">
+		<rdfs:label>love.graphics.getDepthMode</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getDepthMode"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getDepthMode"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getDepthMode</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getDepthMode_-28日本語-29">
+		<rdfs:label>love.graphics.getDepthMode (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getDepthMode_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getDepthMode_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getDepthMode (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getFrontFaceWinding">
+		<rdfs:label>love.graphics.getFrontFaceWinding</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getFrontFaceWinding"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getFrontFaceWinding"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getFrontFaceWinding</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getFrontFaceWinding_-28日本語-29">
+		<rdfs:label>love.graphics.getFrontFaceWinding (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getFrontFaceWinding_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getFrontFaceWinding_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getFrontFaceWinding (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getImageFormats">
+		<rdfs:label>love.graphics.getImageFormats</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getImageFormats"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getImageFormats"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getImageFormats</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getMeshCullMode">
+		<rdfs:label>love.graphics.getMeshCullMode</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getMeshCullMode"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getMeshCullMode"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getMeshCullMode</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getMeshCullMode_-28日本語-29">
+		<rdfs:label>love.graphics.getMeshCullMode (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getMeshCullMode_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getMeshCullMode_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getMeshCullMode (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelDimensions">
+		<rdfs:label>love.graphics.getPixelDimensions</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelDimensions"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelDimensions"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelDimensions</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelDimensions_-28日本語-29">
+		<rdfs:label>love.graphics.getPixelDimensions (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelDimensions_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelDimensions_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelDimensions (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelHeight">
+		<rdfs:label>love.graphics.getPixelHeight</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelHeight"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelHeight"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelHeight</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelHeight_-28日本語-29">
+		<rdfs:label>love.graphics.getPixelHeight (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelHeight_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelHeight_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelHeight (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelWidth">
+		<rdfs:label>love.graphics.getPixelWidth</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelWidth"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelWidth"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelWidth</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getPixelWidth_-28日本語-29">
+		<rdfs:label>love.graphics.getPixelWidth (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getPixelWidth_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getPixelWidth_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getPixelWidth (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getStackDepth">
+		<rdfs:label>love.graphics.getStackDepth</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getStackDepth"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getStackDepth"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getStackDepth</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getStackDepth_-28日本語-29">
+		<rdfs:label>love.graphics.getStackDepth (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getStackDepth_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getStackDepth_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getStackDepth (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getTextureTypes">
+		<rdfs:label>love.graphics.getTextureTypes</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getTextureTypes"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getTextureTypes"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getTextureTypes</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.getTextureTypes_-28日本語-29">
+		<rdfs:label>love.graphics.getTextureTypes (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.getTextureTypes_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.getTextureTypes_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.getTextureTypes (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.inverseTransformPoint">
+		<rdfs:label>love.graphics.inverseTransformPoint</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.inverseTransformPoint"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.inverseTransformPoint"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.inverseTransformPoint</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.inverseTransformPoint_-28日本語-29">
+		<rdfs:label>love.graphics.inverseTransformPoint (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.inverseTransformPoint_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.inverseTransformPoint_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.inverseTransformPoint (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newArrayImage">
+		<rdfs:label>love.graphics.newArrayImage</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newArrayImage"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newArrayImage"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newArrayImage</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newArrayImage_-28日本語-29">
+		<rdfs:label>love.graphics.newArrayImage (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newArrayImage_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newArrayImage_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newArrayImage (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newCubeImage">
+		<rdfs:label>love.graphics.newCubeImage</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newCubeImage"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newCubeImage"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newCubeImage</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newCubeImage_-28日本語-29">
+		<rdfs:label>love.graphics.newCubeImage (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newCubeImage_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newCubeImage_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newCubeImage (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newVolumeImage">
+		<rdfs:label>love.graphics.newVolumeImage</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newVolumeImage"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newVolumeImage"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newVolumeImage</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.newVolumeImage_-28日本語-29">
+		<rdfs:label>love.graphics.newVolumeImage (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.newVolumeImage_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.newVolumeImage_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.newVolumeImage (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.replaceTransform">
+		<rdfs:label>love.graphics.replaceTransform</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.replaceTransform"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.replaceTransform"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.replaceTransform</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.replaceTransform_-28日本語-29">
+		<rdfs:label>love.graphics.replaceTransform (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.replaceTransform_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.replaceTransform_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.replaceTransform (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setDepthMode">
+		<rdfs:label>love.graphics.setDepthMode</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setDepthMode"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setDepthMode"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setDepthMode</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setDepthMode_-28日本語-29">
+		<rdfs:label>love.graphics.setDepthMode (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setDepthMode_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setDepthMode_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setDepthMode (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setFrontFaceWinding">
+		<rdfs:label>love.graphics.setFrontFaceWinding</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setFrontFaceWinding"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setFrontFaceWinding"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setFrontFaceWinding</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setFrontFaceWinding_-28日本語-29">
+		<rdfs:label>love.graphics.setFrontFaceWinding (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setFrontFaceWinding_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setFrontFaceWinding_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setFrontFaceWinding (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setMeshCullMode">
+		<rdfs:label>love.graphics.setMeshCullMode</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setMeshCullMode"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setMeshCullMode"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setMeshCullMode</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.setMeshCullMode_-28日本語-29">
+		<rdfs:label>love.graphics.setMeshCullMode (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.setMeshCullMode_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.setMeshCullMode_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.setMeshCullMode (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.transformPoint">
+		<rdfs:label>love.graphics.transformPoint</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.transformPoint"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.transformPoint"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.transformPoint</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.transformPoint_-28日本語-29">
+		<rdfs:label>love.graphics.transformPoint (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.transformPoint_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.transformPoint_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.transformPoint (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.validateShader">
+		<rdfs:label>love.graphics.validateShader</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.validateShader"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.validateShader"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.validateShader</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.graphics.validateShader_-28日本語-29">
+		<rdfs:label>love.graphics.validateShader (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.graphics.validateShader_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.graphics.validateShader_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.graphics.validateShader (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.hasDeprecationOutput">
+		<rdfs:label>love.hasDeprecationOutput</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.hasDeprecationOutput"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.hasDeprecationOutput</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.hasDeprecationOutput_-28Slovenský-29">
+		<rdfs:label>love.hasDeprecationOutput (Slovenský)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput_-28Slovenský-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.hasDeprecationOutput_-28Slovenský-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.hasDeprecationOutput (Slovenský)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.hasDeprecationOutput_-28Русский-29">
+		<rdfs:label>love.hasDeprecationOutput (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.hasDeprecationOutput_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.hasDeprecationOutput (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.hasDeprecationOutput_-28日本語-29">
+		<rdfs:label>love.hasDeprecationOutput (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.hasDeprecationOutput_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.hasDeprecationOutput (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.newTransform">
+		<rdfs:label>love.math.newTransform</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.newTransform"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.newTransform"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.newTransform</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.newTransform_-28Українська-29">
+		<rdfs:label>love.math.newTransform (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.newTransform_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.newTransform_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.newTransform (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.newTransform_-28日本語-29">
+		<rdfs:label>love.math.newTransform (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.newTransform_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.newTransform_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.newTransform (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.mouse.isCursorSupported">
+		<rdfs:label>love.mouse.isCursorSupported</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.mouse.isCursorSupported"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.mouse.isCursorSupported"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.mouse.isCursorSupported</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.mouse.isCursorSupported_-28Español-29">
+		<rdfs:label>love.mouse.isCursorSupported (Español)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.mouse.isCursorSupported_-28Español-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.mouse.isCursorSupported_-28Español-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.mouse.isCursorSupported (Español)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.mouse.isCursorSupported_-28Français-29">
+		<rdfs:label>love.mouse.isCursorSupported (Français)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.mouse.isCursorSupported_-28Français-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.mouse.isCursorSupported_-28Français-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.mouse.isCursorSupported (Français)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.mouse.isCursorSupported_-28日本語-29">
+		<rdfs:label>love.mouse.isCursorSupported (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.mouse.isCursorSupported_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.mouse.isCursorSupported_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.mouse.isCursorSupported (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput">
+		<rdfs:label>love.setDeprecationOutput</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput_-28Italiano-29">
+		<rdfs:label>love.setDeprecationOutput (Italiano)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput_-28Italiano-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput_-28Italiano-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput (Italiano)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput_-28Slovenský-29">
+		<rdfs:label>love.setDeprecationOutput (Slovenský)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput_-28Slovenský-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput_-28Slovenský-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput (Slovenský)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput_-28Русский-29">
+		<rdfs:label>love.setDeprecationOutput (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput_-28日本語-29">
+		<rdfs:label>love.setDeprecationOutput (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.system.hasBackgroundMusic">
+		<rdfs:label>love.system.hasBackgroundMusic</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.system.hasBackgroundMusic"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.system.hasBackgroundMusic"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.system.hasBackgroundMusic</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.system.hasBackgroundMusic_-28Slovenský-29">
+		<rdfs:label>love.system.hasBackgroundMusic (Slovenský)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.system.hasBackgroundMusic_-28Slovenský-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.system.hasBackgroundMusic_-28Slovenský-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.system.hasBackgroundMusic (Slovenský)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.system.hasBackgroundMusic_-28Русский-29">
+		<rdfs:label>love.system.hasBackgroundMusic (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.system.hasBackgroundMusic_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.system.hasBackgroundMusic_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.system.hasBackgroundMusic (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.system.hasBackgroundMusic_-28日本語-29">
+		<rdfs:label>love.system.hasBackgroundMusic (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.system.hasBackgroundMusic_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.system.hasBackgroundMusic_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.system.hasBackgroundMusic (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.getDPIScale">
+		<rdfs:label>love.window.getDPIScale</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.getDPIScale"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.getDPIScale"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.getDPIScale</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.getDPIScale_-28日本語-29">
+		<rdfs:label>love.window.getDPIScale (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.getDPIScale_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.getDPIScale_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.getDPIScale (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.isMinimized">
+		<rdfs:label>love.window.isMinimized</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.isMinimized"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.isMinimized"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.isMinimized</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.isMinimized_-28日本語-29">
+		<rdfs:label>love.window.isMinimized (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.isMinimized_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.isMinimized_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.isMinimized (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.restore">
+		<rdfs:label>love.window.restore</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.restore"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.restore"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.restore</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.restore_-28日本語-29">
+		<rdfs:label>love.window.restore (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.restore_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.restore_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.restore (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.updateMode">
+		<rdfs:label>love.window.updateMode</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.updateMode"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.updateMode"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.updateMode</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.window.updateMode_-28日本語-29">
+		<rdfs:label>love.window.updateMode (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.window.updateMode_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.window.updateMode_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettySince rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.window.updateMode (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Löve_Frames">
+		<rdfs:label>Löve Frames</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Löve_Frames"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Löve_Frames"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:LOVE_Min_Version rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Löve Frames</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Löve_Frames_-28Français-29">
+		<rdfs:label>Löve Frames (Français)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Löve_Frames_-28Français-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Löve_Frames_-28Français-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:LOVE_Min_Version rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Löve Frames (Français)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Löve_Frames_-28日本語-29">
+		<rdfs:label>Löve Frames (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Löve_Frames_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Löve_Frames_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:LOVE_Min_Version rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Löve Frames (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/-28Image-29-3AgetData_-28日本語-29">
+		<rdfs:label>(Image):getData (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/-28Image-29-3AgetData_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/-28Image-29-3AgetData_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Image):getData (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Body-3AgetContactList">
+		<rdfs:label>Body:getContactList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Body-3AgetContactList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Body-3AgetContactList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body:getContactList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Body-3AgetFixtureList">
+		<rdfs:label>Body:getFixtureList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Body-3AgetFixtureList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Body-3AgetFixtureList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body:getFixtureList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Body-3AgetJointList">
+		<rdfs:label>Body:getJointList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Body-3AgetJointList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Body-3AgetJointList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body:getJointList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/CanvasFormat_-28日本語-29">
+		<rdfs:label>CanvasFormat (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/CanvasFormat_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/CanvasFormat_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CanvasFormat (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/CompressedImageFormat">
+		<rdfs:label>CompressedImageFormat</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/CompressedImageFormat"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/CompressedImageFormat"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompressedImageFormat</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Decoder-3AgetChannels">
+		<rdfs:label>Decoder:getChannels</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Decoder-3AgetChannels"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Decoder-3AgetChannels"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decoder:getChannels</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Decoder-3AgetChannels_-28日本語-29">
+		<rdfs:label>Decoder:getChannels (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Decoder-3AgetChannels_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Decoder-3AgetChannels_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decoder:getChannels (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/ParticleSystem-3AgetAreaSpread">
+		<rdfs:label>ParticleSystem:getAreaSpread</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/ParticleSystem-3AgetAreaSpread"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/ParticleSystem-3AgetAreaSpread"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParticleSystem:getAreaSpread</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/ParticleSystem-3AgetAreaSpread_-28日本語-29">
+		<rdfs:label>ParticleSystem:getAreaSpread (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/ParticleSystem-3AgetAreaSpread_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/ParticleSystem-3AgetAreaSpread_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParticleSystem:getAreaSpread (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/ParticleSystem-3AsetAreaSpread">
+		<rdfs:label>ParticleSystem:setAreaSpread</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/ParticleSystem-3AsetAreaSpread"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/ParticleSystem-3AsetAreaSpread"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParticleSystem:setAreaSpread</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/ParticleSystem-3AsetAreaSpread_-28日本語-29">
+		<rdfs:label>ParticleSystem:setAreaSpread (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/ParticleSystem-3AsetAreaSpread_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/ParticleSystem-3AsetAreaSpread_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParticleSystem:setAreaSpread (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/PrismaticJoint-3AhasLimitEnabled_-28日本語-29">
+		<rdfs:label>PrismaticJoint:hasLimitEnabled (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/PrismaticJoint-3AhasLimitEnabled_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/PrismaticJoint-3AhasLimitEnabled_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrismaticJoint:hasLimitEnabled (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/PrismaticJoint-3AhasLimitsEnabled">
+		<rdfs:label>PrismaticJoint:hasLimitsEnabled</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/PrismaticJoint-3AhasLimitsEnabled"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/PrismaticJoint-3AhasLimitsEnabled"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrismaticJoint:hasLimitsEnabled</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/RevoluteJoint-3AhasLimitsEnabled">
+		<rdfs:label>RevoluteJoint:hasLimitsEnabled</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/RevoluteJoint-3AhasLimitsEnabled"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/RevoluteJoint-3AhasLimitsEnabled"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RevoluteJoint:hasLimitsEnabled</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/RevoluteJoint-3AhasLimitsEnabled_-28日本語-29">
+		<rdfs:label>RevoluteJoint:hasLimitsEnabled (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/RevoluteJoint-3AhasLimitsEnabled_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/RevoluteJoint-3AhasLimitsEnabled_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RevoluteJoint:hasLimitsEnabled (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/SoundData-3AgetChannels">
+		<rdfs:label>SoundData:getChannels</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/SoundData-3AgetChannels"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/SoundData-3AgetChannels"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoundData:getChannels</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/SoundData-3AgetChannels_-28Українська-29">
+		<rdfs:label>SoundData:getChannels (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/SoundData-3AgetChannels_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/SoundData-3AgetChannels_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoundData:getChannels (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/SoundData-3AgetChannels_-28日本語-29">
+		<rdfs:label>SoundData:getChannels (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/SoundData-3AgetChannels_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/SoundData-3AgetChannels_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoundData:getChannels (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Source-3AgetChannels">
+		<rdfs:label>Source:getChannels</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Source-3AgetChannels"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Source-3AgetChannels"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source:getChannels</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Source-3AgetChannels_-28Українська-29">
+		<rdfs:label>Source:getChannels (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Source-3AgetChannels_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Source-3AgetChannels_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source:getChannels (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetBodyList">
+		<rdfs:label>World:getBodyList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetBodyList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetBodyList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getBodyList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetBodyList_-28日本語-29">
+		<rdfs:label>World:getBodyList (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetBodyList_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetBodyList_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getBodyList (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetContactList">
+		<rdfs:label>World:getContactList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetContactList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetContactList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getContactList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetContactList_-28日本語-29">
+		<rdfs:label>World:getContactList (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetContactList_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetContactList_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getContactList (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetJointList">
+		<rdfs:label>World:getJointList</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetJointList"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetJointList"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getJointList</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/World-3AgetJointList_-28日本語-29">
+		<rdfs:label>World:getJointList (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/World-3AgetJointList_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/World-3AgetJointList_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World:getJointList (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.getSourceCount">
+		<rdfs:label>love.audio.getSourceCount</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.getSourceCount"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.getSourceCount"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.getSourceCount</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.getSourceCount_-28Русский-29">
+		<rdfs:label>love.audio.getSourceCount (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.getSourceCount_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.getSourceCount_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.getSourceCount (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.getSourceCount_-28日本語-29">
+		<rdfs:label>love.audio.getSourceCount (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.getSourceCount_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.getSourceCount_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.getSourceCount (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand">
+		<rdfs:label>love.errhand</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand_-28Slovenský-29">
+		<rdfs:label>love.errhand (Slovenský)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand_-28Slovenský-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand_-28Slovenský-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand (Slovenský)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand_-28Русский-29">
+		<rdfs:label>love.errhand (Русский)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand_-28Русский-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand_-28Русский-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand (Русский)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand_-28Українська-29">
+		<rdfs:label>love.errhand (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand_-28日本語-29">
+		<rdfs:label>love.errhand (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.exists">
+		<rdfs:label>love.filesystem.exists</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.exists"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.exists"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.exists</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.exists_-28日本語-29">
+		<rdfs:label>love.filesystem.exists (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.exists_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.exists_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.exists (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getLastModified">
+		<rdfs:label>love.filesystem.getLastModified</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getLastModified"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getLastModified"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getLastModified</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getLastModified_-28日本語-29">
+		<rdfs:label>love.filesystem.getLastModified (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getLastModified_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getLastModified_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getLastModified (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getSize">
+		<rdfs:label>love.filesystem.getSize</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getSize"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getSize"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getSize</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.getSize_-28日本語-29">
+		<rdfs:label>love.filesystem.getSize (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.getSize_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.getSize_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.getSize (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isDirectory">
+		<rdfs:label>love.filesystem.isDirectory</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isDirectory"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isDirectory"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isDirectory</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isDirectory_-28日本語-29">
+		<rdfs:label>love.filesystem.isDirectory (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isDirectory_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isDirectory_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isDirectory (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isFile">
+		<rdfs:label>love.filesystem.isFile</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isFile"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isFile"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isFile</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isFile_-28日本語-29">
+		<rdfs:label>love.filesystem.isFile (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isFile_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isFile_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isFile (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isSymlink">
+		<rdfs:label>love.filesystem.isSymlink</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isSymlink"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isSymlink"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isSymlink</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filesystem.isSymlink_-28日本語-29">
+		<rdfs:label>love.filesystem.isSymlink (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filesystem.isSymlink_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filesystem.isSymlink_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filesystem.isSymlink (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.compress">
+		<rdfs:label>love.math.compress</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.compress"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.compress"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.compress</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.compress_-28Українська-29">
+		<rdfs:label>love.math.compress (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.compress_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.compress_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.compress (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.compress_-28日本語-29">
+		<rdfs:label>love.math.compress (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.compress_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.compress_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.compress (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.decompress">
+		<rdfs:label>love.math.decompress</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.decompress"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.decompress"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.decompress</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.decompress_-28Українська-29">
+		<rdfs:label>love.math.decompress (Українська)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.decompress_-28Українська-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.decompress_-28Українська-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.decompress (Українська)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.math.decompress_-28日本語-29">
+		<rdfs:label>love.math.decompress (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.math.decompress_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.math.decompress_-28日本語-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.math.decompress (日本語)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.mouse.hasCursor">
+		<rdfs:label>love.mouse.hasCursor</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.mouse.hasCursor"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.mouse.hasCursor"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.mouse.hasCursor</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/0.11.0">
+		<rdfs:label>0.11.0</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/0.11.0"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/0.11.0"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:redirectsTo rdf:resource="&wiki;11.0"/>
+		<owl:sameAs rdf:resource="&wiki;11.0"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.11.0</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3APrettyRemoved">
+		<rdfs:label>PrettyRemoved</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3APrettyRemoved"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3APrettyRemoved"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrettyRemoved</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3APrettySince">
+		<rdfs:label>PrettySince</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3APrettySince"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3APrettySince"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrettySince</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ALOVE_Min_Version">
+		<rdfs:label>LOVE Min Version</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3ALOVE_Min_Version"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3ALOVE_Min_Version"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LOVE Min Version</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3APrettyDeprecated">
+		<rdfs:label>PrettyDeprecated</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3APrettyDeprecated"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3APrettyDeprecated"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrettyDeprecated</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AVersions" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ACodename" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AInternalVersion" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AReleaseDate" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AStatus" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#redirectsTo" />
+	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
+</rdf:RDF>
