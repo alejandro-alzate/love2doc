@@ -1,12 +1,12 @@
 MSG="Automatic partial update"
-COOLDOWN="2m"
+COOLDOWN="10s"
 
 function upload() {
 	git push
 }
 
 function commit() {
-	git commit -m "$(MSG) At: $(date) "
+	git commit -m "$MSG At: $(date)"
 }
 
 function add() {
