@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/ucp.php?mode=delete_cookies&sid=8eb7c7071f861cf9195127925f45447b by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>LÖVE - User Control Panel - Delete cookies</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="https://love2d.org/forums/app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="https://love2d.org/forums/app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://love2d.org/forums/app.php/feed/topics">				
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="https://love2d.org/forums/assets/css/font-awesome.min.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/normalize.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/base.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/utilities.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/common.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/links.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/content.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/buttons.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/cp.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/forms.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/icons.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/colours.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/responsive.css?assets_version=46" rel="stylesheet">
+
+<link href="https://love2d.org/forums/styles/grouplove/theme/stylesheet.css?assets_version=46" rel="stylesheet">
+
+<link href="https://love2d.org/forums/styles/prosilver/theme/en/stylesheet.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="https://love2d.org/forums/assets/cookieconsent/cookieconsent.min.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="https://love2d.org/highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-ucp ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="https://love2d.org/">Home</a>
+		<a href="https://love2d.org/wiki">Wiki</a>
+		<a href="https://love2d.org/forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="https://love2d.org/forums/search.php" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="https://love2d.org/forums/index.php" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+			
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="https://love2d.org/forums/search.php" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="https://love2d.org/forums/search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://love2d.org/forums/search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="https://love2d.org/forums/search.php" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="https://love2d.org/forums/memberlist.php" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="https://love2d.org/forums/memberlist.php?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="https://love2d.org/forums/app.php/help/faq" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="https://love2d.org/forums/ucp.php?mode=login&amp;redirect=ucp.php%3Fmode%3Ddelete_cookies" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="https://love2d.org/forums/ucp.php?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<form id="confirm" action="https://love2d.org/forums/ucp.php?mode=delete_cookies&amp;confirm_key=HF763TYL60" method="post">
+<div class="panel">
+	<div class="inner">
+
+	<h2 class="message-title">Delete cookies</h2>
+	<p>Are you sure you want to delete all cookies set by this board?</p>
+
+	<fieldset class="submit-buttons">
+		<input type="hidden" name="confirm_uid" value="1" />
+<input type="hidden" name="sess" value="8eb7c7071f861cf9195127925f45447b" />
+<input type="hidden" name="sid" value="8eb7c7071f861cf9195127925f45447b" />
+
+		<input type="submit" name="confirm" value="Yes" class="button2" />&nbsp;
+		<input type="submit" name="cancel" value="No" class="button2" />
+	</fieldset>
+
+	</div>
+</div>
+</form>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="https://love2d.org/forums/index.php" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="https://love2d.org/forums/ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="https://love2d.org/forums/memberlist.php" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://love2d.org/forums/memberlist.php?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://love2d.org/forums/memberlist.php?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="https://love2d.org/forums/assets/javascript/jquery-3.6.0.min.js?assets_version=46"></script>
+<script type="text/javascript" src="https://love2d.org/forums/assets/javascript/core.js?assets_version=46"></script>
+
+	<script src="https://love2d.org/forums/assets/cookieconsent/cookieconsent.min.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="https://love2d.org/MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="https://love2d.org/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="https://love2d.org/forums/styles/prosilver/template/forum_fn.js?assets_version=46"></script>
+<script src="https://love2d.org/forums/styles/prosilver/template/ajax.js?assets_version=46"></script>
+
+<script src="https://love2d.org/egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/ucp.php?mode=delete_cookies&sid=8eb7c7071f861cf9195127925f45447b by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:15 GMT -->
+</html>
+

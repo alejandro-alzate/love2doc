@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=76998 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>delay in love.run() - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="https://love2d.org/forums/app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="https://love2d.org/forums/app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="https://love2d.org/forums/app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Support and Development" href="https://love2d.org/forums/app.php/feed/forum/4">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - delay in love.run()" href="https://love2d.org/forums/app.php/feed/topic/76998">	
+	<link rel="canonical" href="https://love2d.org/forums/viewtopic.php?t=76998">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="https://love2d.org/forums/assets/css/font-awesome.min.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/normalize.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/base.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/utilities.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/common.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/links.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/content.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/buttons.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/cp.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/forms.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/icons.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/colours.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/forums/styles/prosilver/theme/responsive.css?assets_version=46" rel="stylesheet">
+
+<link href="https://love2d.org/forums/styles/grouplove/theme/stylesheet.css?assets_version=46" rel="stylesheet">
+
+<link href="https://love2d.org/forums/styles/prosilver/theme/en/stylesheet.css?assets_version=46" rel="stylesheet">
+<link href="https://love2d.org/favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="https://love2d.org/forums/assets/cookieconsent/cookieconsent.min.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="https://love2d.org/highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="https://love2d.org/">Home</a>
+		<a href="https://love2d.org/wiki">Wiki</a>
+		<a href="https://love2d.org/forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="https://love2d.org/forums/search.php" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="https://love2d.org/forums/index.php" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="4"><a itemprop="item" href="https://love2d.org/forums/viewforum.php?f=4"><span itemprop="name">Support and Development</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="https://love2d.org/forums/search.php" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="https://love2d.org/forums/search.php?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://love2d.org/forums/search.php?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="https://love2d.org/forums/search.php" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="https://love2d.org/forums/memberlist.php" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="https://love2d.org/forums/memberlist.php?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="https://love2d.org/forums/app.php/help/faq" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="https://love2d.org/forums/ucp.php?mode=login&amp;redirect=viewtopic.php%3Ff%3D4%26t%3D76998" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="https://love2d.org/forums/ucp.php?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="https://love2d.org/forums/viewtopic.php?t=76998">delay in love.run()</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions about the LÖVE API, installing LÖVE and other support related questions go here.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			Before you make a thread asking for help, <a href="http://love2d.org/forums/viewtopic.php?f=4&amp;t=2982" class="postlink">read this</a>.
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="https://love2d.org/forums/posting.php?mode=reply&amp;t=76998" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="https://love2d.org/forums/viewtopic.php?t=76998&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="https://love2d.org/forums/search.php" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="76998" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			8 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p160878" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile160878">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53593" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=53593_1456236063.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53593" class="username">AntonioModer</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=53593&amp;sr=posts">202</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 15, 2012 5:31 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Belarus</dd>
+																						
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact AntonioModer">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact AntonioModer</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://uid.me/antoniomoder" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://facebook.com/moder.antonio/" title="Facebook">
+										<span class="contact-icon phpbb_facebook-icon">Facebook</span>									</a>
+																																																<a href="http://twitter.com/AntonioModer" title="Twitter">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																																																<a href="https://youtube.com/user/theantoniomoder" title="Youtube" class="last-cell">
+										<span class="contact-icon phpbb_youtube-icon">Youtube</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content160878">
+
+					<h3 class="first">
+						<a href="https://love2d.org/forums/viewtopic.php?p=160878#p160878">delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=160878" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=160878#p160878" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53593" class="username">AntonioModer</a></strong> &raquo; </span><time datetime="2014-01-16T07:28:24+00:00">Thu Jan 16, 2014 7:28 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Why use this delay in love.run()? (<a href="http://www.love2d.org/wiki/love.run" class="postlink">http://www.love2d.org/wiki/love.run</a>)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if love.timer then love.timer.sleep(0.001) end</code></pre></div>
+This reduces the speed of execution!<br>
+My guess: Maybe, for the timer to work with high accuracy?</div>
+
+			
+			
+									
+						
+							<div id="sig160878" class="signature"><span style="font-size:80%;line-height:116%"><a href="https://github.com/AntonioModer" class="postlink"><strong class="text-strong">My github</strong></a> | <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=80762" class="postlink"><strong class="text-strong">Simple "realtime global 2D-radiosity"</strong></a> | <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=80751" class="postlink"><strong class="text-strong">LÖVE "pixel-accuracy" 2D-shadows</strong></a> | <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=10040" class="postlink"><strong class="text-strong">LÖVE SLICE ENGINE</strong></a><br>
+<a href="https://drive.google.com/open?id=0BxsLw2s2AfEiUVIyMWtUSm1LTDQ" class="postlink"><strong class="text-strong">My PC and Android-smarphone specs</strong></a><br>
+</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p160880" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile160880">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=103181" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=103181_1364936243.png" width="72" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=103181" class="username">Plu</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=103181&amp;sr=posts">722</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 15, 2013 9:36 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content160880">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=160880#p160880">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=160880" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=160880#p160880" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=103181" class="username">Plu</a></strong> &raquo; </span><time datetime="2014-01-16T08:22:04+00:00">Thu Jan 16, 2014 8:22 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I believe it's to give control back to the Operating System so it doesn't forcefully cut your program short whenever it feels like it. But the devs can probably explain it better <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p160881" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile160881">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=1399_1564614858.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a>							</dt>
+
+						<dd class="profile-rank">Solid Snayke</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=1399&amp;sr=posts">3132</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Aug 23, 2010 6:45 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nova Scotia, Canada</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact slime">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact slime</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://twitter.com/slime73" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content160881">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=160881#p160881">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=160881" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=160881#p160881" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a></strong> &raquo; </span><time datetime="2014-01-16T08:50:19+00:00">Thu Jan 16, 2014 8:50 am</time>
+			</p>
+			
+			
+			
+			<div class="content">It does a few things:<br>
+- Limits FPS to 1000 if vsync isn't enabled.<br>
+- Massively reduces CPU usage in many situations (especially with vsync disabled.)<br>
+- gives control back to the OS for a bit, as Plu mentioned.<br>
+<br>
+It's (in theory) a 1-millisecond CPU-side sleep per frame. 60 FPS (the refresh rate of a typical monitor) is 16.6 milliseconds per frame, so in reality the sleep isn't using much of the total CPU time you have available to maintain 60 FPS (and it doesn't sleep the GPU - keep in mind the GPU runs asynchronously as well, so sleeping the CPU won't slow down the GPU if you're GPU-bound.)</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p160885" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile160885">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=13784_1426705892.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784" class="username">veethree</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=13784&amp;sr=posts">875</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Dec 10, 2011 7:18 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content160885">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=160885#p160885">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=160885" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=160885#p160885" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784" class="username">veethree</a></strong> &raquo; </span><time datetime="2014-01-16T09:32:00+00:00">Thu Jan 16, 2014 9:32 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Out of curiosity, what's the purpose of the 1000 fps limit? Not that 1000 fps isn't enough.</div>
+
+			
+			
+									
+						
+							<div id="sig160885" class="signature"><a href="https://github.com/veethree" class="postlink">Github</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p160937" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile160937">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82315" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=82315_1396800735.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82315" class="username">BoopDeePoop</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=82315&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Dec 30, 2012 4:15 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content160937">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=160937#p160937">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=160937" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=160937#p160937" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82315" class="username">BoopDeePoop</a></strong> &raquo; </span><time datetime="2014-01-16T22:10:51+00:00">Thu Jan 16, 2014 10:10 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>veethree wrote:</cite>Out of curiosity, what's the purpose of the 1000 fps limit? Not that 1000 fps isn't enough.</div></blockquote>
+
+There has to be some sort of set limit to the frames that you can get.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p198627" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile198627">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072" class="username">mode7</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=63072&amp;sr=posts">35</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 21, 2012 5:45 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact mode7">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact mode7</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://mogliinmostra-it.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content198627">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=198627#p198627">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=198627" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=198627#p198627" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072" class="username">mode7</a></strong> &raquo; </span><time datetime="2016-05-13T20:07:12+00:00">Fri May 13, 2016 8:07 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Sorry for bumping this old thread, but I guess it's the right place to post this, since it's even linked in the wiki.<br>
+<br>
+I got really interested in this explanation, as it obviously works for LÖVE even though it absolutely shouldn't (!).<br>
+<br>
+I played around with SDL a bit lately and ran into the same issue with my game loop eating up the whole CPU core.<br>
+I had a look a the LÖVE2D source code and saw that love.timer.sleep looks like this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>void Timer::sleep(double seconds) const
+{
+	if (seconds &gt; 0)
+		love::sleep((unsigned int)(seconds*1000));
+}
+</code></pre></div>
+Which in turn just calls an SDL function
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>void sleep(unsigned int ms)
+{
+	SDL_Delay(ms);
+}
+</code></pre></div>
+
+This means love.timer.sleep(0.001) translates to: SDL_Delay(1)<br>
+<br>
+The problem is, that this won't actually wait for 1ms, but more likely for about 10ms, as stated here:<br>
+<a href="https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdldelay.html" class="postlink">https://www.libsdl.org/release/SDL-1.2. ... delay.html</a>
+<blockquote class="uncited"><div>Note: Count on a delay granularity of at least 10 ms. Some platforms have shorter clock ticks but this is the most common.</div></blockquote> <br>
+<br>
+This is also exactly how SDL will behave in my tests, dropping the framerate signifcantly bellow 1000 fps (more like 75)<br>
+OS specific calls to Thread.Sleep behave the same way, so WHY is this working for LOVE?<br>
+<br>
+It would be great if some of the Devs would shed some light on this.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p198629" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile198629">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" class="avatar"><img class="avatar" src="https://love2d.org/forums/download/file.php?avatar=1399_1564614858.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a>							</dt>
+
+						<dd class="profile-rank">Solid Snayke</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=1399&amp;sr=posts">3132</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Aug 23, 2010 6:45 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nova Scotia, Canada</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact slime">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact slime</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://twitter.com/slime73" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content198629">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=198629#p198629">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=198629" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=198629#p198629" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a></strong> &raquo; </span><time datetime="2016-05-13T20:43:14+00:00">Fri May 13, 2016 8:43 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">The SDL 1.2 docs don't reflect how SDL 2.0 works (and those docs don't really reflect modern operating systems anyway – SDL 1.2 was released a decade and a half ago). LÖVE has used SDL 2.0 since version 0.9.0. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+<br>
+SDL 2.0 also makes sure to set the Windows sleep timer period to 1ms.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p198632" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile198632">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072" class="username">mode7</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="https://love2d.org/forums/search.php?author_id=63072&amp;sr=posts">35</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Aug 21, 2012 5:45 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact mode7">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact mode7</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://mogliinmostra-it.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content198632">
+
+					<h3 >
+						<a href="https://love2d.org/forums/viewtopic.php?p=198632#p198632">Re: delay in love.run()</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="https://love2d.org/forums/posting.php?mode=quote&amp;p=198632" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="https://love2d.org/forums/viewtopic.php?p=198632#p198632" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072" class="username">mode7</a></strong> &raquo; </span><time datetime="2016-05-13T21:13:11+00:00">Fri May 13, 2016 9:13 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks for the insightfull explanation. I guess setting the OS specific sleep period makes all the difference.<br>
+<br>
+As it turns out I was using an outdated version of SDL2. Replaced it with the one from LÖVE and it works like a charm.<br>
+<br>
+I'm still not sure if the period will always result to exactly 1ms as the SDL doc just implies it might not be reliable and might return more.<br>
+So I eventually ended up enforcing VSYNC which seems like a much safer choice - at least for me.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="https://love2d.org/forums/posting.php?mode=reply&amp;t=76998" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="https://love2d.org/forums/viewtopic.php?t=76998&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=76998">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			8 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="https://love2d.org/forums/viewforum.php?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Support and Development”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="https://love2d.org/forums/viewforum.php?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="https://love2d.org/forums/viewforum.php?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="https://love2d.org/forums/viewonline.php">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span> and 3 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="https://love2d.org/forums/index.php" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="https://love2d.org/forums/ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="https://love2d.org/forums/memberlist.php" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="https://love2d.org/forums/memberlist.php?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="https://love2d.org/forums/memberlist.php?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="https://love2d.org/forums/assets/javascript/jquery-3.6.0.min.js?assets_version=46"></script>
+<script type="text/javascript" src="https://love2d.org/forums/assets/javascript/core.js?assets_version=46"></script>
+
+	<script src="https://love2d.org/forums/assets/cookieconsent/cookieconsent.min.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="https://love2d.org/MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="https://love2d.org/highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="https://love2d.org/forums/styles/prosilver/template/forum_fn.js?assets_version=46"></script>
+<script src="https://love2d.org/forums/styles/prosilver/template/ajax.js?assets_version=46"></script>
+
+<script src="https://love2d.org/egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=76998 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:34 GMT -->
+</html>

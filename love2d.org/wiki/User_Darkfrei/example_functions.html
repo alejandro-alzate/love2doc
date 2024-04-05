@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/User:Darkfrei/example_functions by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>User:Darkfrei/example functions - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Darkfrei/example_functions","wgTitle":"Darkfrei/example functions","wgCurRevisionId":28966,"wgRevisionId":28966,"wgArticleId":7843,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with syntax highlighting errors"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Darkfrei/example_functions","wgRelevantArticleId":7843,"wgRequestId":"c1b69d34579ad0f0f51be5a0","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Darkfrei"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="http://love2d.org/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="User:Darkfrei/example functions" href="http://love2d.org/w/index.php?title=Special:ExportRDF/User:Darkfrei/example_functions&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Darkfrei_example_functions rootpage-User_Darkfrei skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-user" class="selected"><a href="http://love2d.org/wiki/User:Darkfrei/example_functions" title="View the user page [c]" accesskey="c">User page</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=User_talk:Darkfrei/example_functions&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">User:Darkfrei/example functions</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"><span class="subpages">&lt; <a href="/wiki/User:Darkfrei" title="User:Darkfrei">User:Darkfrei</a></span></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Prints_table"><span class="tocnumber">1</span> <span class="toctext">Prints table</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Draw_grid"><span class="tocnumber">2</span> <span class="toctext">Draw grid</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Draw_mouse_position"><span class="tocnumber">3</span> <span class="toctext">Draw mouse position</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Beep"><span class="tocnumber">4</span> <span class="toctext">Beep</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Point_in_area"><span class="tocnumber">5</span> <span class="toctext">Point in area</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Is_value_in_list"><span class="tocnumber">6</span> <span class="toctext">Is value in list</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Normalization_and_multiplication"><span class="tocnumber">7</span> <span class="toctext">Normalization and multiplication</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Evaluate_a_point_from_any_amount_of_control_points"><span class="tocnumber">8</span> <span class="toctext">Evaluate a point from any amount of control points</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Split_string_with_separator"><span class="tocnumber">9</span> <span class="toctext">Split string with separator</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Split_string_to_list_of_symbols"><span class="tocnumber">10</span> <span class="toctext">Split string to list of symbols</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Push_rectangle_from_line"><span class="tocnumber">11</span> <span class="toctext">Push rectangle from line</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Easy_vector_math"><span class="tocnumber">12</span> <span class="toctext">Easy vector math</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Count_vowels_in_the_string"><span class="tocnumber">13</span> <span class="toctext">Count vowels in the string</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Reverse_words.2C_but_not_word_sequence"><span class="tocnumber">14</span> <span class="toctext">Reverse words, but not word sequence</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Make_snake_matrix"><span class="tocnumber">15</span> <span class="toctext">Make snake matrix</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Flatten_deep_list"><span class="tocnumber">16</span> <span class="toctext">Flatten deep list</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Merge_tables"><span class="tocnumber">17</span> <span class="toctext">Merge tables</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Insert_multiple_values_at_once"><span class="tocnumber">18</span> <span class="toctext">Insert multiple values at once</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Table_partition"><span class="tocnumber">19</span> <span class="toctext">Table partition</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Memoize_function"><span class="tocnumber">20</span> <span class="toctext">Memoize function</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Sort_by_key_values"><span class="tocnumber">21</span> <span class="toctext">Sort by key values</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Nearest_point_on_the_nearest_diagonal"><span class="tocnumber">22</span> <span class="toctext">Nearest point on the nearest diagonal</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Get_dx_and_dy_for_diagonal_marching"><span class="tocnumber">23</span> <span class="toctext">Get dx and dy for diagonal marching</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Project_point_to_line_in_3D"><span class="tocnumber">24</span> <span class="toctext">Project point to line in 3D</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Function_overloading"><span class="tocnumber">25</span> <span class="toctext">Function overloading</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Check_if_the_way_to_point_exists"><span class="tocnumber">26</span> <span class="toctext">Check if the way to point exists</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Get_toroidal_distance_vector_between_two_points_in_toroidal_world"><span class="tocnumber">27</span> <span class="toctext">Get toroidal distance vector between two points in toroidal world</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Parabola_equations"><span class="tocnumber">28</span> <span class="toctext">Parabola equations</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Prints_table">Prints table</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;{&#39;</span> <span class="o">..</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="s2">&quot;,&quot;</span><span class="p">)</span><span class="o">..</span><span class="s1">&#39;},&#39;</span><span class="p">)</span>
+</pre></div>
+<h2><span class="mw-headline" id="Draw_grid">Draw grid</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">draw_grid</span> <span class="p">()</span>
+	<span class="kd">local</span> <span class="n">grid_size</span> <span class="o">=</span> <span class="mi">20</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setLineWidth</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">getDimensions</span><span class="p">(</span> <span class="p">)</span>
+	<span class="kr">for</span> <span class="n">x</span> <span class="o">=</span> <span class="n">grid_size</span><span class="p">,</span> <span class="n">width</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">grid_size</span> <span class="kr">do</span>
+		<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+	<span class="kr">end</span>
+	<span class="kr">for</span> <span class="n">y</span> <span class="o">=</span> <span class="n">grid_size</span><span class="p">,</span> <span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">grid_size</span> <span class="kr">do</span>
+		<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="Draw_mouse_position">Draw mouse position</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">draw_mouse</span> <span class="p">()</span>
+	<span class="kd">local</span> <span class="n">mx</span><span class="p">,</span> <span class="n">my</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">getPosition</span> <span class="p">()</span>
+	<span class="kd">local</span> <span class="n">text</span> <span class="o">=</span> <span class="n">mx</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">my</span>
+	<span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">getFont</span><span class="p">()</span>
+	<span class="kd">local</span> <span class="n">w</span> <span class="o">=</span> <span class="n">font</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">h</span> <span class="o">=</span> <span class="n">font</span><span class="p">:</span><span class="n">getHeight</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">my</span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="n">mx</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">my</span><span class="p">,</span><span class="n">mx</span><span class="p">,</span><span class="n">my</span><span class="o">-</span><span class="n">h</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="Beep">Beep</span></h2>
+<p>Define it:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">rate</span> <span class="o">=</span> <span class="mi">44100</span>
+<span class="kd">local</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">32</span>
+<span class="kd">local</span> <span class="n">tone</span> <span class="o">=</span> <span class="mi">440</span> <span class="c1">-- Hz</span>
+<span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">rate</span><span class="o">/</span><span class="n">tone</span><span class="p">)</span> <span class="c1">-- 128</span>
+<span class="kd">local</span> <span class="n">soundData</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">sound</span><span class="p">.</span><span class="n">newSoundData</span><span class="p">(</span><span class="n">length</span><span class="o">*</span><span class="n">rate</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">length</span><span class="o">*</span><span class="n">rate</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span> <span class="n">soundData</span><span class="p">:</span><span class="n">setSample</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">%</span><span class="n">p</span><span class="o">&gt;</span><span class="n">p</span><span class="o">/</span><span class="mi">2</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="kr">end</span>
+<span class="kd">local</span> <span class="n">source</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">audio</span><span class="p">.</span><span class="n">newSource</span><span class="p">(</span><span class="n">soundData</span><span class="p">)</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">beep</span><span class="p">()</span> <span class="n">source</span><span class="p">:</span><span class="n">play</span><span class="p">()</span> <span class="kr">end</span>
+</pre></div>
+<p>Call it:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">beep</span><span class="p">()</span>
+</pre></div>
+<h2><span class="mw-headline" id="Point_in_area">Point in area</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">is_in_area</span> <span class="p">(</span><span class="n">mx</span><span class="p">,</span><span class="n">my</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="c1">-- mouse position and rectangle</span>
+	<span class="kr">if</span> <span class="p">(</span><span class="n">mx</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">mx</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">))</span> <span class="ow">and</span>
+	   <span class="p">(</span><span class="n">my</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">my</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="kc">true</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Is_value_in_list">Is value in list</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">is_value_in_list</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">list</span><span class="p">)</span>
+	<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span> <span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="kr">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">value</span> <span class="kr">then</span>
+			<span class="kr">return</span> <span class="kc">true</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Normalization_and_multiplication">Normalization and multiplication</span></h2>
+<p>Set magnitude to this vector:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">normul</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span> <span class="c1">-- normalization and multiplication</span>
+	<span class="kd">local</span> <span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">^</span><span class="mf">0.5</span>
+	<span class="n">factor</span><span class="o">=</span> <span class="n">factor</span> <span class="ow">or</span> <span class="mi">1</span>
+	<span class="kr">return</span> <span class="n">factor</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">d</span><span class="p">,</span> <span class="n">factor</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="n">d</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Evaluate_a_point_from_any_amount_of_control_points">Evaluate a point from any amount of control points</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span> <span class="nf">evaluate</span> <span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">ccpc</span> <span class="o">=</span> <span class="n">curve</span><span class="p">:</span><span class="n">getControlPointCount</span><span class="p">(</span> <span class="p">)</span>
+	<span class="kr">if</span> <span class="n">ccpc</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">curve</span><span class="p">:</span><span class="n">evaluate</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+	<span class="kr">elseif</span> <span class="n">ccpc</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">curve</span><span class="p">:</span><span class="n">getControlPoint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="kr">else</span>
+		<span class="kr">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Split_string_with_separator">Split string with separator</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span>  <span class="nf">split</span> <span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">separator</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">tabl</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kr">for</span> <span class="n">str</span> <span class="kr">in</span> <span class="nb">string.gmatch</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s2">&quot;[^&quot;</span><span class="o">..</span><span class="n">separator</span><span class="o">..</span><span class="s2">&quot;]+&quot;</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="nb">table.insert</span> <span class="p">(</span><span class="n">tabl</span><span class="p">,</span> <span class="n">str</span><span class="p">)</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="n">tabl</span>
+<span class="kr">end</span>
+<span class="c1">--split (&quot;123#456&quot;, &quot;#&quot;) -- results: {&quot;123&quot;, &quot;456&quot;}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Split_string_to_list_of_symbols">Split string to list of symbols</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span>  <span class="nf">split2</span> <span class="p">(</span><span class="n">string</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">tabl</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="n">string</span><span class="p">:</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="nb">table.insert</span><span class="p">(</span><span class="n">tabl</span><span class="p">,</span> <span class="nb">tonumber</span> <span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="kr">end</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="n">tabl</span>
+<span class="kr">end</span>
+<span class="c1">--split2 (&quot;123&quot;) -- results: {1, 2, 3}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Push_rectangle_from_line">Push rectangle from line</span></h2>
+<p>(made with chatGPT Feb 13 2023)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">pushRectOutOfLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+  <span class="c1">-- Вычисляем вектор направления линии</span>
+  <span class="kd">local</span> <span class="n">lineDirX</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span>
+  <span class="kd">local</span> <span class="n">lineDirY</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span>
+  
+  <span class="c1">-- Нормализуем вектор направления линии</span>
+  <span class="kd">local</span> <span class="n">lineLength</span> <span class="o">=</span> <span class="nb">math.sqrt</span><span class="p">(</span><span class="n">lineDirX</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">lineDirY</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">lineDirX</span> <span class="o">=</span> <span class="n">lineDirX</span> <span class="o">/</span> <span class="n">lineLength</span>
+  <span class="n">lineDirY</span> <span class="o">=</span> <span class="n">lineDirY</span> <span class="o">/</span> <span class="n">lineLength</span>
+  
+  <span class="c1">-- Вычисляем вектор от начальной точки линии до прямоугольника</span>
+  <span class="kd">local</span> <span class="n">toRectX</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x1</span>
+  <span class="kd">local</span> <span class="n">toRectY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y1</span>
+  
+  <span class="c1">-- Проекция вектора от начальной точки линии до прямоугольника на вектор направления линии</span>
+  <span class="kd">local</span> <span class="n">dot</span> <span class="o">=</span> <span class="n">toRectX</span> <span class="o">*</span> <span class="n">lineDirX</span> <span class="o">+</span> <span class="n">toRectY</span> <span class="o">*</span> <span class="n">lineDirY</span>
+  
+  <span class="c1">-- Находим ближайшую точку на линии</span>
+  <span class="kd">local</span> <span class="n">nearestX</span><span class="p">,</span> <span class="n">nearestY</span>
+  <span class="kr">if</span> <span class="n">dot</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="kr">then</span>
+    <span class="n">nearestX</span><span class="p">,</span> <span class="n">nearestY</span> <span class="o">=</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+  <span class="kr">elseif</span> <span class="n">dot</span> <span class="o">&gt;=</span> <span class="n">lineLength</span> <span class="kr">then</span>
+    <span class="n">nearestX</span><span class="p">,</span> <span class="n">nearestY</span> <span class="o">=</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span>
+  <span class="kr">else</span>
+    <span class="n">nearestX</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">dot</span> <span class="o">*</span> <span class="n">lineDirX</span>
+    <span class="n">nearestY</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">dot</span> <span class="o">*</span> <span class="n">lineDirY</span>
+  <span class="kr">end</span>
+  
+  <span class="c1">-- Вычисляем вектор от ближайшей точки на линии до прямоугольника</span>
+  <span class="kd">local</span> <span class="n">toRectX</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">nearestX</span>
+  <span class="kd">local</span> <span class="n">toRectY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">nearestY</span>
+  
+  <span class="c1">-- Если прямоугольник пересекает линию</span>
+  <span class="kr">if</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">toRectX</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">w</span><span class="o">/</span><span class="mi">2</span> <span class="ow">and</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">toRectY</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span> <span class="kr">then</span>
+    <span class="c1">-- Вычисляем вектор выталкивания</span>
+    <span class="kd">local</span> <span class="n">pushX</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">toRectX</span><span class="p">))</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">sign</span><span class="p">(</span><span class="n">toRectX</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">pushY</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">toRectY</span><span class="p">))</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">sign</span><span class="p">(</span><span class="n">toRectY</span><span class="p">)</span>
+    
+    <span class="c1">-- Возвращаем вектор выталкивания и нормаль линии</span>
+    <span class="kr">return</span> <span class="n">pushX</span><span class="p">,</span> <span class="n">pushY</span><span class="p">,</span> <span class="n">lineDirX</span><span class="p">,</span> <span class="n">lineDirY</span>
+  <span class="kr">end</span>
+  
+  <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Short version:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">PushOutRectangleFromLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">toRectX</span><span class="p">,</span> <span class="n">toRectY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y1</span>
+  <span class="kd">local</span> <span class="n">lineDirectionX</span><span class="p">,</span> <span class="n">lineDirectionY</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span>
+  <span class="kd">local</span> <span class="n">lineLength</span> <span class="o">=</span> <span class="nb">math.sqrt</span><span class="p">(</span><span class="n">lineDirectionX</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">lineDirectionY</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">lineDirectionX</span><span class="p">,</span> <span class="n">lineDirectionY</span> <span class="o">=</span> <span class="n">lineDirectionX</span> <span class="o">/</span> <span class="n">lineLength</span><span class="p">,</span> <span class="n">lineDirectionY</span> <span class="o">/</span> <span class="n">lineLength</span>
+  <span class="kd">local</span> <span class="n">dotProduct</span> <span class="o">=</span> <span class="n">toRectX</span> <span class="o">*</span> <span class="n">lineDirectionX</span> <span class="o">+</span> <span class="n">toRectY</span> <span class="o">*</span> <span class="n">lineDirectionY</span>
+  <span class="kd">local</span> <span class="n">closestPointX</span><span class="p">,</span> <span class="n">closestPointY</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">dotProduct</span> <span class="o">*</span> <span class="n">lineDirectionX</span><span class="p">,</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">dotProduct</span> <span class="o">*</span> <span class="n">lineDirectionY</span>
+  <span class="kd">local</span> <span class="n">distanceX</span><span class="p">,</span> <span class="n">distanceY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">closestPointX</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">closestPointY</span>
+  <span class="kd">local</span> <span class="n">intersectX</span><span class="p">,</span> <span class="n">intersectY</span> <span class="o">=</span> <span class="n">closestPointX</span><span class="p">,</span> <span class="n">closestPointY</span>
+  
+  <span class="kr">if</span> <span class="n">dotProduct</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="kr">then</span>
+    <span class="n">intersectX</span><span class="p">,</span> <span class="n">intersectY</span> <span class="o">=</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+    <span class="n">distanceX</span><span class="p">,</span> <span class="n">distanceY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y1</span>
+  <span class="kr">elseif</span> <span class="n">dotProduct</span> <span class="o">&gt;</span> <span class="n">lineLength</span> <span class="kr">then</span>
+    <span class="n">intersectX</span><span class="p">,</span> <span class="n">intersectY</span> <span class="o">=</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span>
+    <span class="n">distanceX</span><span class="p">,</span> <span class="n">distanceY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y2</span>
+  <span class="kr">end</span>
+  
+  <span class="kr">if</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceX</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">w</span> <span class="o">/</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceY</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">h</span> <span class="o">/</span> <span class="mi">2</span> <span class="kr">then</span>
+    <span class="kd">local</span> <span class="n">pushX</span><span class="p">,</span> <span class="n">pushY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    
+    <span class="kr">if</span> <span class="n">w</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceX</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">h</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceY</span><span class="p">)</span> <span class="kr">then</span>
+      <span class="n">pushX</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">sign</span><span class="p">(</span><span class="n">distanceX</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">w</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceX</span><span class="p">))</span>
+    <span class="kr">else</span>
+      <span class="n">pushY</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">sign</span><span class="p">(</span><span class="n">distanceY</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">distanceY</span><span class="p">))</span>
+    <span class="kr">end</span>
+    
+    <span class="kr">return</span> <span class="n">pushX</span><span class="p">,</span> <span class="n">pushY</span>
+  <span class="kr">end</span>
+  
+  <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="kr">end</span>
+</pre></div>
+<p>(fixed normal)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">PushOutRectangleFromLine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">toRectX</span><span class="p">,</span> <span class="n">toRectY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y1</span>
+    <span class="kd">local</span> <span class="n">lineLength</span> <span class="o">=</span> <span class="nb">math.sqrt</span><span class="p">((</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">^</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span> <span class="o">^</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">normalX</span><span class="p">,</span> <span class="n">normalY</span> <span class="o">=</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span> <span class="o">/</span> <span class="n">lineLength</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">/</span> <span class="n">lineLength</span>
+    <span class="kd">local</span> <span class="n">dot</span> <span class="o">=</span> <span class="n">toRectX</span> <span class="o">*</span> <span class="n">normalX</span> <span class="o">+</span> <span class="n">toRectY</span> <span class="o">*</span> <span class="n">normalY</span>
+    <span class="kd">local</span> <span class="n">intersectX</span><span class="p">,</span> <span class="n">intersectY</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">dot</span> <span class="o">*</span> <span class="n">normalX</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">dot</span> <span class="o">*</span> <span class="n">normalY</span>
+
+    <span class="kr">if</span> <span class="n">intersectX</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="kr">then</span>
+        <span class="n">intersectX</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="kr">elseif</span> <span class="n">intersectX</span> <span class="o">&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span> <span class="kr">then</span>
+        <span class="n">intersectX</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span>
+    <span class="kr">end</span>
+
+    <span class="kr">if</span> <span class="n">intersectY</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="kr">then</span>
+        <span class="n">intersectY</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="kr">elseif</span> <span class="n">intersectY</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span> <span class="kr">then</span>
+        <span class="n">intersectY</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span>
+    <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">distance</span> <span class="o">=</span> <span class="p">(</span><span class="n">toRectX</span> <span class="o">-</span> <span class="n">intersectX</span><span class="p">)</span> <span class="o">*</span> <span class="n">normalX</span> <span class="o">+</span> <span class="p">(</span><span class="n">toRectY</span> <span class="o">-</span> <span class="n">intersectY</span><span class="p">)</span> <span class="o">*</span> <span class="n">normalY</span>
+
+    <span class="kr">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="kr">then</span>
+        <span class="n">intersectX</span> <span class="o">=</span> <span class="n">intersectX</span> <span class="o">+</span> <span class="n">distance</span> <span class="o">*</span> <span class="n">normalX</span>
+        <span class="n">intersectY</span> <span class="o">=</span> <span class="n">intersectY</span> <span class="o">+</span> <span class="n">distance</span> <span class="o">*</span> <span class="n">normalY</span>
+    <span class="kr">end</span>
+
+    <span class="kr">return</span> <span class="n">intersectX</span><span class="p">,</span> <span class="n">intersectY</span><span class="p">,</span> <span class="n">normalX</span><span class="p">,</span> <span class="n">normalY</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Easy_vector_math">Easy vector math</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">-- Определение метатаблицы для векторов</span>
+<span class="kd">local</span> <span class="n">Vector</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">Vector</span><span class="p">.</span><span class="n">__index</span> <span class="o">=</span> <span class="n">Vector</span>
+
+<span class="c1">-- Конструктор вектора</span>
+<span class="kr">function</span> <span class="nc">Vector</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">}</span>
+  <span class="nb">setmetatable</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">v</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Перегрузка оператора сложения</span>
+<span class="kr">function</span> <span class="nc">Vector</span><span class="p">.</span><span class="nf">__add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Перегрузка оператора вычитания</span>
+<span class="kr">function</span> <span class="nc">Vector</span><span class="p">.</span><span class="nf">__sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Перегрузка оператора умножения на скаляр</span>
+<span class="kr">function</span> <span class="nc">Vector</span><span class="p">.</span><span class="nf">__mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span> <span class="kr">then</span>
+    <span class="kr">return</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+  <span class="kr">elseif</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span> <span class="kr">then</span>
+    <span class="kr">return</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+  <span class="kr">else</span>
+    <span class="nb">error</span><span class="p">(</span><span class="s2">&quot;Can only multiply vector by scalar.&quot;</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Пример использования</span>
+<span class="kd">local</span> <span class="n">v1</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">v2</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">v3</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">+</span> <span class="n">v2</span> <span class="c1">-- v3 будет иметь координаты (6, 8)</span>
+<span class="kd">local</span> <span class="n">v4</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">-</span> <span class="n">v2</span> <span class="c1">-- v4 будет иметь координаты (-2, -2)</span>
+<span class="kd">local</span> <span class="n">v5</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">-- v5 будет иметь координаты (4, 6)</span>
+<span class="kd">local</span> <span class="n">v6</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">v2</span> <span class="c1">-- v6 будет иметь координаты (12, 15)</span>
+
+
+<span class="nb">print</span> <span class="p">(</span>
+	<span class="n">v1</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v1</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+	<span class="n">v2</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v2</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+	<span class="n">v3</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v3</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+	<span class="n">v4</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v4</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+	<span class="n">v5</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v5</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+	<span class="n">v6</span><span class="p">.</span><span class="n">x</span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="n">v6</span><span class="p">.</span><span class="n">y</span>
+<span class="p">)</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Count_vowels_in_the_string">Count vowels in the string</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">Here</span> <span class="n">is</span> <span class="n">a</span> <span class="kr">function</span> <span class="nf">to</span> <span class="n">count</span> <span class="n">vowels</span> <span class="kr">in</span> <span class="n">the</span> <span class="n">string</span><span class="p">:</span>
+
+<span class="kr">function</span> <span class="nf">countVowels</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="n">_</span><span class="p">,</span> <span class="n">nvow</span> <span class="o">=</span> <span class="nb">string.gsub</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s2">&quot;[AEIOUaeiou]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">nvow</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countVowels</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">))</span> <span class="c1">-- 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countVowels</span><span class="p">(</span><span class="s2">&quot;Lua is awesome&quot;</span><span class="p">))</span> <span class="c1">-- 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countVowels</span><span class="p">(</span><span class="s2">&quot;fbwklfbwjf&quot;</span><span class="p">))</span> <span class="c1">-- 0</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span id="Reverse_words,_but_not_word_sequence"></span><span class="mw-headline" id="Reverse_words.2C_but_not_word_sequence">Reverse words, but not word sequence</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">reverseWord</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">last</span> <span class="o">=</span> <span class="nb">string.len</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+  <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="n">last</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">..</span> <span class="nb">string.sub</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">return</span> <span class="n">res</span>
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nf">reverseWords</span> <span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+  <span class="kr">for</span> <span class="n">word</span> <span class="kr">in</span> <span class="n">str</span><span class="p">:</span><span class="n">gmatch</span><span class="p">(</span><span class="s2">&quot;%S+&quot;</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">..</span> <span class="s1">&#39; &#39;</span> <span class="o">..</span> <span class="n">reverseWord</span> <span class="p">(</span><span class="n">word</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">return</span> <span class="n">text</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reverseWords</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">))</span> <span class="c1">-- &quot;olleH dlrow&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reverseWords</span><span class="p">(</span><span class="s2">&quot;Lua is awesome&quot;</span><span class="p">))</span> <span class="c1">-- &quot;auL si emosewa&quot;</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Make_snake_matrix">Make snake matrix</span></h2>
+<p>as 
+snakeMatrix (3) -- {{1, 2, 3}, {6, 5, 4}, {7, 8, 9}}
+</p><p>snakeMatrix (4) -- {{1, 2, 3, 4}, {8, 7, 6, 5}, {9, 10, 11, 12}, {16, 15, 14, 13}}
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">snakeMatrix</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">matrix</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
+		<span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="kr">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+			<span class="kr">for</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
+				<span class="nb">table.insert</span> <span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+				<span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+			<span class="kr">end</span>
+		<span class="kr">else</span>
+			<span class="kr">for</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
+				<span class="nb">table.insert</span> <span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+				<span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+		<span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span>
+	<span class="kr">end</span>	
+	<span class="kr">return</span> <span class="n">matrix</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">showDeepList</span> <span class="p">(</span><span class="n">tabl</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">tabl</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;table&quot;</span> <span class="kr">then</span>
+		<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">tabl</span> <span class="kr">do</span>
+			<span class="nb">table.insert</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">showDeepList</span> <span class="p">(</span><span class="n">tabl</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+		<span class="kr">end</span>
+	<span class="kr">else</span>
+		<span class="n">list</span> <span class="o">=</span> <span class="n">tabl</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="s1">&#39;{&#39;</span><span class="o">..</span> <span class="nb">table.concat</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">)</span> <span class="o">..</span><span class="s1">&#39;}&#39;</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">showDeepList</span><span class="p">(</span><span class="n">snakeMatrix</span> <span class="p">(</span><span class="mi">3</span><span class="p">)))</span> <span class="c1">-- {{1, 2, 3}, {6, 5, 4}, {7, 8, 9}}</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">showDeepList</span><span class="p">(</span><span class="n">snakeMatrix</span> <span class="p">(</span><span class="mi">4</span><span class="p">)))</span> <span class="c1">-- {{1, 2, 3, 4}, {8, 7, 6, 5}, {9, 10, 11, 12}, {16, 15, 14, 13}}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Flatten_deep_list">Flatten deep list</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">deepFlatten</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">tabl</span><span class="p">)</span>
+	<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">tabl</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="kr">if</span> <span class="nb">type</span> <span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;table&quot;</span> <span class="kr">then</span>
+			<span class="n">deepFlatten</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+		<span class="kr">else</span>
+			<span class="nb">table.insert</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">flatten</span> <span class="p">(</span><span class="n">tabl</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="n">deepFlatten</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">tabl</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="n">list</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">},</span> <span class="mi">7</span><span class="p">},</span> <span class="mi">8</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">))</span> <span class="c1">-- &quot;1, 2, 3, 4, 5, 6, 7, 8&quot;</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Merge_tables">Merge tables</span></h2>
+<p>(for Lua 5.3)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">mergeTables</span> <span class="p">(...)</span> <span class="c1">-- ... is varargs</span>
+	<span class="kd">local</span> <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">arg</span> <span class="o">=</span> <span class="p">{...}</span>
+	<span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">list</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="kr">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">value</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="kr">do</span>
+			<span class="nb">table.insert</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="n">res</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">t2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">t3</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">t4</span> <span class="o">=</span> <span class="n">mergeTables</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">t4</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">))</span> <span class="c1">-- &quot;1, 2, 3, 4, 5, 6, 7, 8, 9&quot;</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Insert_multiple_values_at_once">Insert multiple values at once</span></h2>
+<p>(for Lua 5.3)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">insertMultiple</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="p">...)</span>
+<span class="c1">--	local arg = {...}</span>
+<span class="c1">--	for _, value in ipairs(arg) do</span>
+<span class="c1">--		table.insert (list, value)</span>
+<span class="c1">--	end</span>
+
+<span class="c1">-- same, but faster:</span>
+	<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">select</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="p">...)</span> <span class="kr">do</span>
+		<span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">select</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">...)</span>
+		<span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">line</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">insertMultiple</span> <span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">unpack</span> <span class="p">(</span><span class="n">line</span><span class="p">))</span> <span class="c1">-- 1	2	3	4</span>
+</pre></div>
+<h2><span class="mw-headline" id="Table_partition">Table partition</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">isEven</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">partition</span> <span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">p</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span> <span class="c1">-- positive und negative</span>
+	<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="kr">if</span> <span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="nb">table.insert</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+		<span class="kr">else</span>
+			<span class="nb">table.insert</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">n</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">evens</span><span class="p">,</span> <span class="n">odds</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">isEven</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">evens</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">))</span> <span class="c1">-- &quot;2, 4, 6&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">odds</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">))</span> <span class="c1">-- &quot;1, 3, 5&quot;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Memoize_function">Memoize function</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">sleep</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="kr">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sleeping for &quot;</span><span class="o">..</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">..</span><span class="s2">&quot; seconds...&quot;</span><span class="p">)</span>
+		<span class="nb">os.execute</span><span class="p">(</span><span class="s2">&quot;ping -n 2 localhost &gt; nul&quot;</span><span class="p">)</span>
+		<span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+	<span class="kr">end</span>
+<span class="c1">--	os.execute(&quot;ping -n &quot;.. tonumber(n+1) ..&quot; localhost &gt; nul&quot;)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">slowFunction</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="n">sleep</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">memoize</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">return</span> <span class="kr">function</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="kr">if</span> <span class="n">cache</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="kc">nil</span> <span class="kr">then</span>
+            <span class="n">cache</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="kr">end</span>
+        <span class="kr">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">memoizedFunction</span> <span class="o">=</span> <span class="n">memoize</span><span class="p">(</span><span class="n">slowFunction</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">memoizedFunction</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">-- Sleeping for 1 second... 25</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">memoizedFunction</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">-- 25 (no waiting, just result)</span>
+</pre></div>
+<h2><span class="mw-headline" id="Sort_by_key_values">Sort by key values</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">ageSort</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="n">a</span><span class="p">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">age</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">people</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">32</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">18</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Dave&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">42</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Eve&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">29</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">table.sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">ageSort</span><span class="p">)</span>
+
+<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">people</span><span class="p">)</span> <span class="kr">do</span>
+	<span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Result:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre>1	Charlie	18
+2	Alice	25
+3	Eve	29
+4	Bob	32
+5	Dave	42</pre></div>
+<p><br />
+Universal solution:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">sortByKey</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">return</span> <span class="kr">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">people</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">32</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">18</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Dave&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">42</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Eve&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">29</span> <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="nb">table.sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">sortByKey</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;	sorted by age:&#39;</span><span class="p">)</span>
+<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">people</span><span class="p">)</span> <span class="kr">do</span>
+	<span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="nb">table.sort</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="n">sortByKey</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;	sorted by name:&#39;</span><span class="p">)</span>
+<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">people</span><span class="p">)</span> <span class="kr">do</span>
+	<span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">age</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Result:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="n">sorted</span> <span class="n">by</span> <span class="n">age</span><span class="p">:</span>
+<span class="mi">1</span>	<span class="n">Charlie</span>	<span class="mi">18</span>
+<span class="mi">2</span>	<span class="n">Alice</span>	<span class="mi">25</span>
+<span class="mi">3</span>	<span class="n">Eve</span>	<span class="mi">29</span>
+<span class="mi">4</span>	<span class="n">Bob</span>	<span class="mi">32</span>
+<span class="mi">5</span>	<span class="n">Dave</span>	<span class="mi">42</span>
+
+	<span class="n">sorted</span> <span class="n">by</span> <span class="n">name</span><span class="p">:</span>
+<span class="mi">1</span>	<span class="n">Alice</span>	<span class="mi">25</span>
+<span class="mi">2</span>	<span class="n">Bob</span>	<span class="mi">32</span>
+<span class="mi">3</span>	<span class="n">Charlie</span>	<span class="mi">18</span>
+<span class="mi">4</span>	<span class="n">Dave</span>	<span class="mi">42</span>
+<span class="mi">5</span>	<span class="n">Eve</span>	<span class="mi">29</span>
+</pre></div>
+<h2><span class="mw-headline" id="Nearest_point_on_the_nearest_diagonal">Nearest point on the nearest diagonal</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span> <span class="nf">calculateNearestDiagonal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1">-- x, y - point position</span>
+<span class="c1">-- y1 = x; y2 = 1-x - tile diagonals in range x=[0, 1]</span>
+  <span class="kd">local</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">x</span><span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">%</span><span class="mi">1</span>
+	<span class="kd">local</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="n">dy</span><span class="o">-</span><span class="n">dx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+	<span class="kd">local</span> <span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="n">dy</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">dx</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+	<span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+	<span class="n">dy</span> <span class="o">=</span> <span class="n">dy</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="nb">math.abs</span> <span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">math.abs</span> <span class="p">(</span><span class="n">t2</span><span class="p">)</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="n">dx</span> <span class="o">+</span> <span class="n">t1</span><span class="p">,</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t1</span>
+	<span class="kr">else</span>
+		<span class="kr">return</span> <span class="n">dx</span> <span class="o">-</span> <span class="n">t2</span><span class="p">,</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t2</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Get_dx_and_dy_for_diagonal_marching">Get dx and dy for diagonal marching</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">getDiagonalMarch</span> <span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+<span class="c1">--	https://www.desmos.com/calculator/jmvgydivg3</span>
+	<span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">math.pi</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">dx</span> <span class="o">=</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">dy</span> <span class="o">=</span> <span class="nb">math.sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="nb">math.pi</span><span class="o">/</span><span class="mi">2</span> <span class="kr">then</span>
+		<span class="kd">local</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">k</span><span class="p">,</span> <span class="n">dy</span> <span class="o">*</span> <span class="n">k</span>
+	<span class="kr">elseif</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="nb">math.pi</span> <span class="kr">then</span>
+		<span class="kd">local</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">k</span><span class="p">,</span> <span class="n">dy</span> <span class="o">*</span> <span class="n">k</span>
+	<span class="kr">elseif</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="nb">math.pi</span><span class="o">*</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span> <span class="kr">then</span>
+		<span class="kd">local</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="o">-</span><span class="n">dx</span> <span class="o">*</span> <span class="n">k</span><span class="p">,</span> <span class="o">-</span><span class="n">dy</span> <span class="o">*</span> <span class="n">k</span>
+	<span class="kr">else</span>
+		<span class="kd">local</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">dx</span> <span class="o">+</span> <span class="o">-</span><span class="n">dy</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="n">dx</span> <span class="o">*</span> <span class="n">k</span><span class="p">,</span> <span class="n">dy</span> <span class="o">*</span> <span class="n">k</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Project_point_to_line_in_3D">Project point to line in 3D</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">projectionPointToLine3D</span> <span class="p">(</span><span class="n">xa</span><span class="p">,</span> <span class="n">ya</span><span class="p">,</span> <span class="n">za</span><span class="p">,</span> <span class="n">xb</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">zb</span><span class="p">,</span> <span class="n">xm</span><span class="p">,</span> <span class="n">ym</span><span class="p">,</span> <span class="n">zm</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">((</span><span class="n">xb</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">xm</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">yb</span> <span class="o">-</span> <span class="n">ya</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">ym</span> <span class="o">-</span> <span class="n">ya</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">zb</span> <span class="o">-</span> <span class="n">za</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">zm</span> <span class="o">-</span> <span class="n">za</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="n">xb</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">yb</span> <span class="o">-</span> <span class="n">ya</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">zb</span> <span class="o">-</span> <span class="n">za</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">xp</span> <span class="o">=</span> <span class="n">xa</span> <span class="o">+</span> <span class="n">t</span> <span class="o">*</span> <span class="p">(</span><span class="n">xb</span> <span class="o">-</span> <span class="n">xa</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">yp</span> <span class="o">=</span> <span class="n">ya</span> <span class="o">+</span> <span class="n">t</span> <span class="o">*</span> <span class="p">(</span><span class="n">yb</span> <span class="o">-</span> <span class="n">ya</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">zp</span> <span class="o">=</span> <span class="n">za</span> <span class="o">+</span> <span class="n">t</span> <span class="o">*</span> <span class="p">(</span><span class="n">zb</span> <span class="o">-</span> <span class="n">za</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">zp</span><span class="p">,</span> <span class="n">t</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Function_overloading">Function overloading</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">exp_mt</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">__call</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">arr</span> <span class="kr">do</span>
+      <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">math.exp</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="kr">end</span>
+    <span class="kr">return</span> <span class="n">res</span>
+  <span class="kr">end</span>
+<span class="p">}</span>
+
+<span class="nb">setmetatable</span><span class="p">(</span><span class="nb">math.exp</span><span class="p">,</span> <span class="n">exp_mt</span><span class="p">)</span>
+
+<span class="c1">-- Пример использования</span>
+<span class="kd">local</span> <span class="n">input</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">output</span> <span class="o">=</span> <span class="nb">math.exp</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">))</span> <span class="c1">-- выводит: 2.718281828459, 7.3890560989307, 20.085536923188, 54.598150033145, 148.41315910258</span>
+</pre></div>
+<p><br />
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">-- создаем метатаблицу для чисел и массивов</span>
+<span class="kd">local</span> <span class="n">exp_mt</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">__call</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="c1">-- если x является числом, применяем exp к нему</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span> <span class="kr">then</span>
+      <span class="kr">return</span> <span class="nb">math.exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="c1">-- если x является массивом, применяем exp к каждому элементу массива</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;table&quot;</span> <span class="kr">then</span>
+      <span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+      <span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">math.exp</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+      <span class="kr">end</span>
+      <span class="kr">return</span> <span class="n">result</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+<span class="p">}</span>
+
+<span class="c1">-- создаем новую функцию exp, которая использует метатаблицу</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="nb">setmetatable</span><span class="p">({},</span> <span class="n">exp_mt</span><span class="p">)</span>
+
+<span class="c1">-- вычисление экспоненты числа</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">-- 7.3890560989307</span>
+
+<span class="c1">-- вычисление экспоненты массива</span>
+<span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">table.concat</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">))</span> <span class="c1">-- 2.718281828459, 7.3890560989307, 20.085536923188</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Check_if_the_way_to_point_exists">Check if the way to point exists</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span> <span class="nf">isWayTo</span> <span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span> <span class="c1">-- astar</span>
+	<span class="kd">local</span> <span class="n">openSet</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">closedHashes</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">nodesGrid</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="kd">local</span> <span class="n">neighborSet</span> <span class="o">=</span> <span class="p">{{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="o">=-</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="n">x</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">}}</span>
+
+	<span class="kd">local</span> <span class="kr">function</span> <span class="nf">heuristic</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+		<span class="kr">return</span> <span class="nb">math.abs</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">math.abs</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y2</span><span class="p">)</span>
+	<span class="kr">end</span>
+	
+	<span class="kd">local</span> <span class="kr">function</span> <span class="nf">isFree</span> <span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+		<span class="kr">if</span> <span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="ow">and</span> <span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="ow">and</span> <span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
+			<span class="kr">return</span> <span class="kc">true</span>
+		<span class="kr">end</span>
+		<span class="kr">return</span> <span class="kc">false</span>
+	<span class="kr">end</span>
+		
+	<span class="kd">local</span> <span class="kr">function</span> <span class="nf">nearestNode</span> <span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+		<span class="kd">local</span> <span class="n">fMin</span> <span class="o">=</span> <span class="nb">math.huge</span>
+		<span class="kd">local</span> <span class="n">currentIndex</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="kr">do</span>
+			<span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="n">f</span>
+			<span class="kr">if</span> <span class="n">f</span> <span class="o">&lt;</span> <span class="n">fMin</span> <span class="kr">then</span>
+				<span class="n">fMin</span> <span class="o">=</span> <span class="n">f</span>
+				<span class="n">currentIndex</span> <span class="o">=</span> <span class="n">i</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+		<span class="kr">return</span> <span class="n">currentIndex</span>
+	<span class="kr">end</span>
+	
+	<span class="kd">local</span> <span class="kr">function</span> <span class="nf">getNeighbors</span><span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
+		<span class="kd">local</span> <span class="n">neighbors</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="kr">in</span> <span class="nb">ipairs</span> <span class="p">(</span><span class="n">neighborSet</span><span class="p">)</span> <span class="kr">do</span>
+			<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x0</span><span class="o">+</span><span class="n">d</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y0</span><span class="o">+</span><span class="n">d</span><span class="p">.</span><span class="n">y</span>
+			<span class="kr">if</span> <span class="n">isFree</span> <span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="kr">then</span>
+				<span class="kd">local</span> <span class="n">node</span> <span class="o">=</span> <span class="n">nodesGrid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span>
+				<span class="nb">table.insert</span> <span class="p">(</span><span class="n">neighbors</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+		<span class="kr">return</span> <span class="n">neighbors</span>
+	<span class="kr">end</span>
+
+	<span class="kr">for</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span> <span class="kr">do</span>
+		<span class="n">nodesGrid</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="kr">for</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="kr">do</span>
+			<span class="n">nodesGrid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">}</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	
+	<span class="kd">local</span> <span class="n">current</span> <span class="o">=</span> <span class="n">nodesGrid</span><span class="p">[</span><span class="n">y1</span><span class="p">][</span><span class="n">x1</span><span class="p">]</span>
+	<span class="n">current</span><span class="p">.</span><span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">current</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">heuristic</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+	<span class="nb">table.insert</span><span class="p">(</span><span class="n">openSet</span><span class="p">,</span> <span class="n">current</span><span class="p">)</span>
+
+	<span class="kr">while</span> <span class="o">#</span><span class="n">openSet</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
+		<span class="kd">local</span> <span class="n">currentIndex</span> <span class="o">=</span> <span class="n">nearestNode</span> <span class="p">(</span><span class="n">openSet</span><span class="p">)</span>
+		<span class="n">current</span> <span class="o">=</span> <span class="nb">table.remove</span> <span class="p">(</span><span class="n">openSet</span><span class="p">,</span> <span class="n">currentIndex</span><span class="p">)</span>
+		<span class="n">closedHashes</span><span class="p">[</span><span class="n">current</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+
+		<span class="kr">if</span> <span class="n">current</span><span class="p">.</span><span class="n">x</span> <span class="o">==</span> <span class="n">x2</span> <span class="ow">and</span> <span class="n">current</span><span class="p">.</span><span class="n">y</span> <span class="o">==</span> <span class="n">y2</span> <span class="kr">then</span>
+			<span class="kr">return</span> <span class="kc">true</span>
+		<span class="kr">end</span>
+
+		<span class="kd">local</span> <span class="n">neighbors</span> <span class="o">=</span> <span class="n">getNeighbors</span><span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">current</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">current</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+		<span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">neighbor</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span> <span class="kr">do</span>
+			<span class="kr">if</span> <span class="ow">not</span> <span class="n">closedHashes</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="kr">then</span>
+				<span class="kd">local</span> <span class="n">gScore</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">g</span> <span class="o">+</span> <span class="mi">1</span>
+				<span class="n">neighbor</span><span class="p">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">gScore</span>
+				<span class="n">neighbor</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">gScore</span> <span class="o">+</span> <span class="n">heuristic</span><span class="p">(</span><span class="n">neighbor</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">neighbor</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+				<span class="n">closedHashes</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+				<span class="nb">table.insert</span><span class="p">(</span><span class="n">openSet</span><span class="p">,</span> <span class="n">neighbor</span><span class="p">)</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+
+	<span class="kr">return</span> <span class="kc">false</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">map1</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+	<span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+	<span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">isWayTo</span> <span class="p">(</span><span class="n">map1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">-- true</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Get_toroidal_distance_vector_between_two_points_in_toroidal_world">Get toroidal distance vector between two points in toroidal world</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="kr">function</span> <span class="nf">getToroidalDistanceVector</span> <span class="p">(</span><span class="n">cellA</span><span class="p">,</span> <span class="n">cellB</span><span class="p">,</span> <span class="n">gridWidth</span><span class="p">,</span> <span class="n">gridHeight</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">cellB</span><span class="p">.</span><span class="n">x</span><span class="o">-</span><span class="n">cellA</span><span class="p">.</span><span class="n">x</span>
+	<span class="kd">local</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">cellB</span><span class="p">.</span><span class="n">y</span><span class="o">-</span><span class="n">cellA</span><span class="p">.</span><span class="n">y</span>
+	<span class="kr">if</span> <span class="nb">math.abs</span> <span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">gridWidth</span><span class="o">/</span><span class="mi">2</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">dx</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span>
+			<span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span> <span class="o">-</span> <span class="n">gridWidth</span>
+		<span class="kr">else</span>
+			<span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span> <span class="o">+</span> <span class="n">gridWidth</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	<span class="kr">if</span> <span class="nb">math.abs</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">gridHeight</span><span class="o">/</span><span class="mi">2</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">dy</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span>
+			<span class="n">dy</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">-</span> <span class="n">gridHeight</span>
+		<span class="kr">else</span>
+			<span class="n">dy</span> <span class="o">=</span> <span class="n">dy</span> <span class="o">+</span> <span class="n">gridHeight</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Example how to use it:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">getToroidalDistanceVector</span> <span class="p">(</span><span class="n">cellA</span><span class="p">,</span> <span class="n">cellB</span><span class="p">,</span> <span class="n">gridWidth</span><span class="p">,</span> <span class="n">gridHeight</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">toroidalDistance</span> <span class="o">=</span> <span class="nb">math.sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">*</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span><span class="o">*</span><span class="n">dy</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">middlePoint</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">cellA</span><span class="p">.</span><span class="n">x</span><span class="o">+</span><span class="n">dx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">cellA</span><span class="p">.</span><span class="n">y</span><span class="o">+</span><span class="n">dy</span><span class="o">/</span><span class="mi">2</span><span class="p">}</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Parabola_equations">Parabola equations</span></h2>
+<p>g is gravity (also ay)
+</p><p>v0 is a speed by the start
+</p><p>t is a time: by the start t = 0
+</p><p>alphaD is an angle in degrees
+</p><p>alpha is an angle in radians, so alpha = 3.14/180*alphaD 
+</p><p>vx0, vy0 are velocities as
+vx0 = v0 * cos (alpha)
+vy0 = v0 * sin (alpha)
+</p><p>x0, y0 are starting coordinates.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">parabolaUpdate</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">vy1</span> <span class="o">=</span> <span class="n">vy</span> <span class="ow">or</span> <span class="n">vy0</span>
+  <span class="n">vy1</span> <span class="o">=</span> <span class="n">vy1</span> <span class="o">-</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">g</span> <span class="c1">-- or plus</span>
+
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">x0</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">vx0</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">vy</span> <span class="o">+</span> <span class="n">vy1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">vy</span> <span class="o">=</span> <span class="n">vy1</span>
+<span class="kr">end</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">parabolaGetValueByTime</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">+</span> <span class="n">vy0</span> <span class="o">*</span> <span class="n">t</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">t</span><span class="o">^</span><span class="mi">2</span>
+  <span class="kr">return</span> <span class="n">y</span>
+<span class="kr">end</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">parabolaGetValue</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">y</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span>
+  <span class="kr">return</span> <span class="n">y</span>
+<span class="kr">end</span>
+
+<span class="o">&lt;</span><span class="n">source</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;lua&quot;</span><span class="o">&gt;</span>
+<span class="kr">function</span> <span class="nf">getParabolaCoefficients</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
+  <span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">g</span><span class="o">/</span><span class="p">(</span><span class="n">v0</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span>
+  <span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="n">tan</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">x0</span>
+  <span class="kd">local</span> <span class="n">c</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">x0</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">x0</span><span class="o">^</span><span class="mi">2</span>
+  <span class="kr">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
+<span class="kr">end</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">10.5</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="mf">14.142</span>
+<span class="n">alphaD</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getParabolaCoefficients</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="mf">3.14</span><span class="o">/</span><span class="mi">180</span><span class="o">*</span><span class="n">alphaD</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
+<span class="o">-</span><span class="mf">0.0525</span>
+<span class="mf">1.21</span>
+<span class="o">-</span><span class="mf">1.21</span>
+</pre></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240405181300
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.142 seconds
+Real time usage: 3.889 seconds
+Preprocessor visited node count: 444/1000000
+Preprocessor generated node count: 912/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 114275/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:7843-0!canonical and timestamp 20240405181256 and revision id 28966
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;oldid=28966">http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;oldid=28966</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://love2d.org/w/index.php?title=Category:Pages_with_syntax_highlighting_errors&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages with syntax highlighting errors (page does not exist)">Pages with syntax highlighting errors</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ADarkfrei%2Fexample+functions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/User:Darkfrei/example_functions" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/User:Darkfrei/example_functions" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-contributions"><a href="http://love2d.org/wiki/Special:Contributions/Darkfrei" title="A list of contributions by this user">User contributions</a></li>
+											<li id="t-log"><a href="http://love2d.org/wiki/Special:Log/Darkfrei">Logs</a></li>
+											<li id="t-userrights"><a href="http://love2d.org/wiki/Special:UserRights/Darkfrei">View user groups</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;oldid=28966" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=User:Darkfrei/example_functions&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="http://love2d.org/wiki/Special:Browse/:User:Darkfrei-2Fexample-5Ffunctions" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 23 September 2023, at 13:53.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.142","walltime":"3.889","ppvisitednodes":{"value":444,"limit":1000000},"ppgeneratednodes":{"value":912,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":114275,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240405181300","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":3929});});</script></body>
+<!-- Mirrored from love2d.org/wiki/User:Darkfrei/example_functions by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 22:12:16 GMT -->
+</html>
