@@ -20,7 +20,7 @@
 	xmlns:property="&property;">
 
 	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3ANetworking_with_UDP-2DTheServer">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-05T21:09:01+00:00</swivt:creationDate>
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-05T23:45:19+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
 	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3ANetworking_with_UDP-2DTheServer">
