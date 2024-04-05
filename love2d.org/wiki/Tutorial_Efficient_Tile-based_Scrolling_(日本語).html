@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 19:02:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:Efficient Tile-based Scrolling (日本語) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Efficient_Tile-based_Scrolling_(日本語)","wgTitle":"Efficient Tile-based Scrolling (日本語)","wgCurRevisionId":17599,"wgRevisionId":17599,"wgArticleId":4688,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Efficient_Tile-based_Scrolling_(日本語)","wgRelevantArticleId":4688,"wgRequestId":"d1697d28e10c5e3d08d505e9","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Efficient Tile-based Scrolling (日本語)" href="../w/indexe6e7.php?title=Special:ExportRDF/Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Efficient_Tile-based_Scrolling_日本語 rootpage-Tutorial_Efficient_Tile-based_Scrolling_日本語 skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="Tutorial_Efficient_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="Tutorial_talk_Efficient_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html?title=Tutorial_talk:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/index4b25.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/index5867.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:Efficient Tile-based Scrolling (日本語)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>この教本では、より効率的なタイル・ベースのスクローリングに対する <a href="SpriteBatch_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SpriteBatch (日本語)">SpriteBatch</a> クラスの手ほどきです。基本的なタイル・ベースのスクローリングの教本については、<a href="Tutorial_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Tile-based Scrolling (日本語)">タイル・ベースのスクロール</a>を参照してください。
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_Tutorial-SpritebatchScreenshot.html" class="image"><img alt="" src="../w/images/thumb/c/c1/Tutorial-SpritebatchScreenshot.jpg/300px-Tutorial-SpritebatchScreenshot.jpg" width="300" height="225" class="thumbimage" srcset="/w/images/thumb/c/c1/Tutorial-SpritebatchScreenshot.jpg/450px-Tutorial-SpritebatchScreenshot.jpg 1.5x, /w/images/thumb/c/c1/Tutorial-SpritebatchScreenshot.jpg/600px-Tutorial-SpritebatchScreenshot.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Tutorial-SpritebatchScreenshot.html" class="internal" title="Enlarge"></a></div>簡単なマップ生成器によるタイル・ベースのスクローリングの画面撮影。</div></div></div>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Quads_.E3.81.8A.E3.82.88.E3.81.B3_SpriteBatch"><span class="tocnumber">1</span> <span class="toctext">Quads および SpriteBatch</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E3.83.9E.E3.83.83.E3.83.97.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96"><span class="tocnumber">2</span> <span class="toctext">マップの初期化</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#SpriteBatch_.E3.81.B8.E3.81.AE.E3.82.BF.E3.82.A4.E3.83.AB.E3.83.9E.E3.83.83.E3.83.97.E8.BF.BD.E5.8A.A0"><span class="tocnumber">3</span> <span class="toctext">SpriteBatch へのタイルマップ追加</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.80.8B.E5.88.A5.E3.81.AE.E7.A7.BB.E5.8B.95"><span class="tocnumber">4</span> <span class="toctext">個別の移動</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#.E9.80.A3.E7.B6.9A.E7.9A.84.E3.81.AA.E7.A7.BB.E5.8B.95"><span class="tocnumber">5</span> <span class="toctext">連続的な移動</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#.E3.81.BE.E3.81.A8.E3.82.81"><span class="tocnumber">6</span> <span class="toctext">まとめ</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#.E3.81.9D.E3.81.AE.E3.81.BB.E3.81.8B.E3.81.AE.E8.A8.80.E8.AA.9E"><span class="tocnumber">7</span> <span class="toctext">そのほかの言語</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Quads_および_SpriteBatch"></span><span class="mw-headline" id="Quads_.E3.81.8A.E3.82.88.E3.81.B3_SpriteBatch"><a href="Quad_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Quad (日本語)">Quads</a> および <a href="SpriteBatch_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SpriteBatch (日本語)">SpriteBatch</a></span></h2>
+<p><a href="love.graphics-178.html" title="love.graphics.draw (日本語)">love.graphics.draw</a> メソッドは <a href="Quad_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Quad (日本語)">Quad</a> により指定された画像を部分的に描画することができます。 Quad が単一画像の異なる部分から描画される場合は、SpriteBatch の使用およびフレームごとに Quad を変更しないことでシステムをより効率的にすることができます。
+</p><p>SpriteBatch の作成時に、 Quad ("タイル") が扱う画像および Quad へ追加する最大数を指定する必要があります。この場合は、画面上で可視化されるタイルの最大数です。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tilesetBatch</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newSpriteBatch</span><span class="p">(</span><span class="n">tilesetImage</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span> <span class="o">*</span> <span class="n">tilesDisplayHeight</span><span class="p">)</span>
+</pre></div>
+<h2><span id="マップの初期化"></span><span class="mw-headline" id=".E3.83.9E.E3.83.83.E3.83.97.E3.81.AE.E5.88.9D.E6.9C.9F.E5.8C.96">マップの初期化</span></h2>
+<p>下記により地図を初期化します。説明に関しては<a href="Tile-based_Scrolling_Tutorial_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html?title=Tile-based_Scrolling_Tutorial_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" class="new" title="Tile-based Scrolling Tutorial (日本語) (page does not exist)">タイル・ベースのスクロール</a>を参照してください。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+  <span class="n">mapWidth</span> <span class="o">=</span> <span class="mi">60</span>
+  <span class="n">mapHeight</span> <span class="o">=</span> <span class="mi">40</span>
+  
+  <span class="n">map</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">mapWidth</span> <span class="kr">do</span>
+    <span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">mapHeight</span> <span class="kr">do</span>
+      <span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">math</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+
+  <span class="n">mapX</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">mapY</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">tilesDisplayWidth</span> <span class="o">=</span> <span class="mi">26</span>
+  <span class="n">tilesDisplayHeight</span> <span class="o">=</span> <span class="mi">20</span>
+  
+  <span class="n">zoomX</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">zoomY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="SpriteBatch_へのタイルマップ追加"></span><span class="mw-headline" id="SpriteBatch_.E3.81.B8.E3.81.AE.E3.82.BF.E3.82.A4.E3.83.AB.E3.83.9E.E3.83.83.E3.83.97.E8.BF.BD.E5.8A.A0">SpriteBatch へのタイルマップ追加</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_Resource-ExampleEfficientTileset.html" class="image"><img alt="" src="../w/images/thumb/b/b5/Resource-ExampleEfficientTileset.png/300px-Resource-ExampleEfficientTileset.png" width="300" height="460" class="thumbimage" srcset="/w/images/thumb/b/b5/Resource-ExampleEfficientTileset.png/450px-Resource-ExampleEfficientTileset.png 1.5x, /w/images/b/b5/Resource-ExampleEfficientTileset.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Resource-ExampleEfficientTileset.html" class="internal" title="Enlarge"></a></div>タイルセットの一例。</div></div></div>
+<p>次に、タイルセットを読み込み、 Quad に対して使用したいタイルを作成して、タイルを SpriteBatch オブジェクトを作成します。用例には、 <a rel="nofollow" class="external text" href="http://silveiraneto.net/2009/02/02/my-free-tileset-version-7/">http://silveiraneto.net/...</a> にて配布されているフリーのタイルセットを使用します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+  <span class="p">...</span> <span class="c1">-- マップの初期化</span>
+  
+  <span class="n">tilesetImage</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span> <span class="s2">&quot;tileset.png&quot;</span> <span class="p">)</span>
+  <span class="n">tilesetImage</span><span class="p">:</span><span class="n">setFilter</span><span class="p">(</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">)</span> <span class="c1">--  この &quot;線形フィルタ&quot; はタイルの大きさを変更した場合に発生する一部の人工生成物を削除します。</span>
+  <span class="n">tileSize</span> <span class="o">=</span> <span class="mi">32</span>
+  
+  <span class="c1">-- 芝生</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+  <span class="c1">-- 台所の床タイル</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+  <span class="c1">-- 床張り</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+  <span class="c1">-- 赤い絨毯の中間</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+
+  <span class="n">tilesetBatch</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newSpriteBatch</span><span class="p">(</span><span class="n">tilesetImage</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span> <span class="o">*</span> <span class="n">tilesDisplayHeight</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>SpriteBatch へ現在可視化されるタイルのみを追加したいとします。これを行うには、タイルセットを更新する関数を作成して、マップのフォーカスを変更するたびに呼び出します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">updateTilesetBatch</span><span class="p">()</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">clear</span><span class="p">()</span>
+  <span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayHeight</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+      <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">add</span><span class="p">(</span><span class="n">tileQuads</span><span class="p">[</span><span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">mapX</span><span class="p">][</span><span class="n">y</span><span class="o">+</span><span class="n">mapY</span><span class="p">]],</span> <span class="n">x</span><span class="o">*</span><span class="n">tileSize</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">tileSize</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">flush</span><span class="p">()</span>
+<span class="kr">end</span>
+</pre></div>
+<p>最後に、 SpriteBatch を描画するためにそれを <code><a href="love.graphics-178.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> へ送信します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">tilesetBatch</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="個別の移動"></span><span class="mw-headline" id=".E5.80.8B.E5.88.A5.E3.81.AE.E7.A7.BB.E5.8B.95">個別の移動</span></h2>
+<p>マップの中を移動することは <a href="Tutorial_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Tile-based Scrolling (日本語)">タイル・ベースのスクロール</a>と同様の方法で実現します。キーが押されたり、それに従ってマップを更新するかどうかを確認します。必ず SpriteBatch の更新に関しても忘れず行う必要があります。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">-- マップの移動において重要な関数</span>
+<span class="kr">function</span> <span class="nf">moveMap</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">)</span>
+  <span class="n">oldMapX</span> <span class="o">=</span> <span class="n">mapX</span>
+  <span class="n">oldMapY</span> <span class="o">=</span> <span class="n">mapY</span>
+  <span class="n">mapX</span> <span class="o">=</span> <span class="nb">math.max</span><span class="p">(</span><span class="nb">math.min</span><span class="p">(</span><span class="n">mapX</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">mapWidth</span> <span class="o">-</span> <span class="n">tilesDisplayWidth</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="n">mapY</span> <span class="o">=</span> <span class="nb">math.max</span><span class="p">(</span><span class="nb">math.min</span><span class="p">(</span><span class="n">mapY</span> <span class="o">+</span> <span class="n">dy</span><span class="p">,</span> <span class="n">mapHeight</span> <span class="o">-</span> <span class="n">tilesDisplayHeight</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+&#160; <span class="c1">-- 実際に移動した場合のみ更新します。</span>
+  <span class="kr">if</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">mapX</span><span class="p">)</span> <span class="o">~=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">oldMapX</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">mapY</span><span class="p">)</span> <span class="o">~=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">oldMapY</span><span class="p">)</span> <span class="kr">then</span>
+    <span class="n">updateTilesetBatch</span><span class="p">()</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="連続的な移動"></span><span class="mw-headline" id=".E9.80.A3.E7.B6.9A.E7.9A.84.E3.81.AA.E7.A7.BB.E5.8B.95">連続的な移動</span></h2>
+<p>mapX および mapY に非整数値を利用することで移動を少し改善します。 SpriteBatch への Quad 追加時に、整数部分のみ考慮を行う一方で描画では端数部分を扱うために SpriteBatch のシフトを行うことがあります。 <a href="love-671.html" title="love.keypressed (日本語)">love.keypressed</a> コールバックを <a href="love-667.html" title="love.update (日本語)">love.update</a> へ置き換えることで少ない手順にてマップを移動します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>SpriteBatch の更新へ floor を追加します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">updateTilesetBatch</span><span class="p">()</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">clear</span><span class="p">()</span>
+  <span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayHeight</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+      <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">add</span><span class="p">(</span><span class="n">tileQuads</span><span class="p">[</span><span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">mapX</span><span class="p">)][</span><span class="n">y</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">mapY</span><span class="p">)]],</span>
+        <span class="n">x</span><span class="o">*</span><span class="n">tileSize</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">tileSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">flush</span><span class="p">()</span>
+<span class="kr">end</span>
+</pre></div>
+<p>最後に、端数部分により SpriteBatch をシフトします。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">tilesetBatch</span><span class="p">,</span>
+    <span class="nb">math.floor</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">mapX</span><span class="o">%</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">tileSize</span><span class="p">),</span> <span class="nb">math.floor</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">mapY</span><span class="o">%</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">tileSize</span><span class="p">))</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FPS: &quot;</span><span class="o">..</span><span class="n">love</span><span class="p">.</span><span class="n">timer</span><span class="p">.</span><span class="n">getFPS</span><span class="p">(),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="まとめ"></span><span class="mw-headline" id=".E3.81.BE.E3.81.A8.E3.82.81">まとめ</span></h2>
+<p>このコードにzoomX および zoomY 変数を挿入します。例えば 16x16 のタイルは 32x32 のタイルとして描画されます。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">map</span> <span class="c1">-- タイルデータの格納</span>
+<span class="kd">local</span> <span class="n">mapWidth</span><span class="p">,</span> <span class="n">mapHeight</span> <span class="c1">-- タイルの幅と高さ</span>
+
+<span class="kd">local</span> <span class="n">mapX</span><span class="p">,</span> <span class="n">mapY</span> <span class="c1">-- タイルにおける視点 x,y です。3.25 といった断片的な値です。</span>
+
+<span class="kd">local</span> <span class="n">tilesDisplayWidth</span><span class="p">,</span> <span class="n">tilesDisplayHeight</span> <span class="c1">-- 表示するタイルの本数</span>
+<span class="kd">local</span> <span class="n">zoomX</span><span class="p">,</span> <span class="n">zoomY</span>
+
+<span class="kd">local</span> <span class="n">tilesetImage</span>
+<span class="kd">local</span> <span class="n">tileSize</span> <span class="c1">-- ピクセル単位でのタイルの大きさ</span>
+<span class="kd">local</span> <span class="n">tileQuads</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 異なるタイルに対して使用されたタイルの部品</span>
+<span class="kd">local</span> <span class="n">tilesetSprite</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+  <span class="n">setupMap</span><span class="p">()</span>
+  <span class="n">setupMapView</span><span class="p">()</span>
+  <span class="n">setupTileset</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">setupMap</span><span class="p">()</span>
+  <span class="n">mapWidth</span> <span class="o">=</span> <span class="mi">60</span>
+  <span class="n">mapHeight</span> <span class="o">=</span> <span class="mi">40</span>
+  
+  <span class="n">map</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">mapWidth</span> <span class="kr">do</span>
+    <span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">mapHeight</span> <span class="kr">do</span>
+      <span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">math</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">setupMapView</span><span class="p">()</span>
+  <span class="n">mapX</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">mapY</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">tilesDisplayWidth</span> <span class="o">=</span> <span class="mi">26</span>
+  <span class="n">tilesDisplayHeight</span> <span class="o">=</span> <span class="mi">20</span>
+  
+  <span class="n">zoomX</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">zoomY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">setupTileset</span><span class="p">()</span>
+  <span class="n">tilesetImage</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span> <span class="s2">&quot;tileset.png&quot;</span> <span class="p">)</span>
+  <span class="n">tilesetImage</span><span class="p">:</span><span class="n">setFilter</span><span class="p">(</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">)</span> <span class="c1">-- この &quot;線形フィルタ&quot; はタイルの大きさを変更した場合に発生する一部の人工生成物を削除します。</span>
+  <span class="n">tileSize</span> <span class="o">=</span> <span class="mi">32</span>
+  
+&#160; <span class="c1">-- 芝生</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+&#160; <span class="c1">-- 台所の床タイル</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+&#160; <span class="c1">-- 床張り</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+&#160; <span class="c1">-- 赤い絨毯の中間</span>
+  <span class="n">tileQuads</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newQuad</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span> <span class="n">tileSize</span><span class="p">,</span>
+    <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">tilesetImage</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
+  
+  <span class="n">tilesetBatch</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newSpriteBatch</span><span class="p">(</span><span class="n">tilesetImage</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span> <span class="o">*</span> <span class="n">tilesDisplayHeight</span><span class="p">)</span>
+  
+  <span class="n">updateTilesetBatch</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">updateTilesetBatch</span><span class="p">()</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">clear</span><span class="p">()</span>
+  <span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tilesDisplayHeight</span><span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+      <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">add</span><span class="p">(</span><span class="n">tileQuads</span><span class="p">[</span><span class="n">map</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">mapX</span><span class="p">)][</span><span class="n">y</span><span class="o">+</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">mapY</span><span class="p">)]],</span>
+        <span class="n">x</span><span class="o">*</span><span class="n">tileSize</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">tileSize</span><span class="p">)</span>
+    <span class="kr">end</span>
+  <span class="kr">end</span>
+  <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">flush</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="c1">-- マップの移動において重要な関数</span>
+<span class="kr">function</span> <span class="nf">moveMap</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">)</span>
+  <span class="n">oldMapX</span> <span class="o">=</span> <span class="n">mapX</span>
+  <span class="n">oldMapY</span> <span class="o">=</span> <span class="n">mapY</span>
+  <span class="n">mapX</span> <span class="o">=</span> <span class="nb">math.max</span><span class="p">(</span><span class="nb">math.min</span><span class="p">(</span><span class="n">mapX</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">mapWidth</span> <span class="o">-</span> <span class="n">tilesDisplayWidth</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="n">mapY</span> <span class="o">=</span> <span class="nb">math.max</span><span class="p">(</span><span class="nb">math.min</span><span class="p">(</span><span class="n">mapY</span> <span class="o">+</span> <span class="n">dy</span><span class="p">,</span> <span class="n">mapHeight</span> <span class="o">-</span> <span class="n">tilesDisplayHeight</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+&#160; <span class="c1">-- 実際に移動した場合のみ更新します。</span>
+  <span class="kr">if</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">mapX</span><span class="p">)</span> <span class="o">~=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">oldMapX</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">mapY</span><span class="p">)</span> <span class="o">~=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">oldMapY</span><span class="p">)</span> <span class="kr">then</span>
+    <span class="n">updateTilesetBatch</span><span class="p">()</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>  <span class="kr">then</span>
+    <span class="n">moveMap</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">tileSize</span> <span class="o">*</span> <span class="n">dt</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">tilesetBatch</span><span class="p">,</span>
+    <span class="nb">math.floor</span><span class="p">(</span><span class="o">-</span><span class="n">zoomX</span><span class="o">*</span><span class="p">(</span><span class="n">mapX</span><span class="o">%</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">tileSize</span><span class="p">),</span> <span class="nb">math.floor</span><span class="p">(</span><span class="o">-</span><span class="n">zoomY</span><span class="o">*</span><span class="p">(</span><span class="n">mapY</span><span class="o">%</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">tileSize</span><span class="p">),</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="n">zoomX</span><span class="p">,</span> <span class="n">zoomY</span><span class="p">)</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FPS: &quot;</span><span class="o">..</span><span class="n">love</span><span class="p">.</span><span class="n">timer</span><span class="p">.</span><span class="n">getFPS</span><span class="p">(),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span id="そのほかの言語"></span><span class="mw-headline" id=".E3.81.9D.E3.81.AE.E3.81.BB.E3.81.8B.E3.81.AE.E8.A8.80.E8.AA.9E">そのほかの言語</span></h2>
+<div class="i18n">
+<p><a href="Tutorial_Efficient_Tile-based_Scrolling_(Dansk).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Deutsch).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling.html" title="Tutorial:Efficient Tile-based Scrolling">English</a>&#160;&#8211; 
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Espa%c3%b1ol).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Fran%c3%a7ais).html" title="Tutorial:Efficient Tile-based Scrolling (Français)">Français</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Indonesia).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Italiano).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Lietuvi%c5%a1kai).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Magyar).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Nederlands).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Polski).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Portugu%c3%aas).html" title="Tutorial:Efficient Tile-based Scrolling (Português)">Português</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Rom%c3%a2n%c4%83).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Slovensk%c3%bd).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Suomi).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Svenska).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(T%c3%bcrk%c3%a7e).html?title=Tutorial:Efficient_Tile-based_Scrolling_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%c4%8cesky).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Русский) (page does not exist)">Русский</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a class="mw-selflink selflink">日本語</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html?title=Tutorial:Efficient_Tile-based_Scrolling_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="Tutorial_Efficient_Tile-based_Scrolling_(%ed%95%9c%ea%b5%ad%ec%96%b4).html?title=Tutorial:Efficient_Tile-based_Scrolling_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Efficient Tile-based Scrolling (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240404175825
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.056 seconds
+Real time usage: 1.037 seconds
+Preprocessor visited node count: 355/1000000
+Preprocessor generated node count: 823/1000000
+Post‐expand include size: 4739/2097152 bytes
+Template argument size: 2822/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 37290/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.797      1 -total
+100.00%    5.797      1 Template:i18n
+ 53.06%    3.076     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:4688-0!canonical and timestamp 20240404175824 and revision id 17599
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/indexd335.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e)&amp;oldid=17599">http://love2d.org/w/index.php?title=Tutorial:Efficient_Tile-based_Scrolling_(日本語)&amp;oldid=17599</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Tutorials.html" title="Category:Tutorials">Tutorials</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/index9c19.html?title=Special:UserLogin&amp;returnto=Tutorial%3AEfficient+Tile-based+Scrolling+%28%E6%97%A5%E6%9C%AC%E8%AA%9E%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Gradients.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Tutorial_Efficient_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Tutorial_Efficient_Tile-based_Scrolling_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/index1eed.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index4184.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;oldid=17599" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index3b31.html?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 21 September 2016, at 00:59.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.056","walltime":"1.037","ppvisitednodes":{"value":355,"limit":1000000},"ppgeneratednodes":{"value":823,"limit":1000000},"postexpandincludesize":{"value":4739,"limit":2097152},"templateargumentsize":{"value":2822,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":37290,"limit":5000000},"timingprofile":["100.00%    5.797      1 -total","100.00%    5.797      1 Template:i18n"," 53.06%    3.076     28 Template:Lang"]},"cachereport":{"timestamp":"20240404175825","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":28});});</script></body>
+<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2024 19:02:33 GMT -->
+</html>
