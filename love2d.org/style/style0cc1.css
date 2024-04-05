@@ -1,0 +1,594 @@
+
+/* Quicksand */
+@font-face {
+	font-family: 'Quicksand';
+	font-weight: 700;
+	src: url('fonts/quicksand-bold.woff');
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	font-weight: 400;
+	src: url('fonts/quicksand-regular.woff');
+}
+
+/* Sofia Pro Light */
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('fonts/sofia-pro-light.woff');
+	font-weight: normal;
+}
+
+/* Main Style */
+h1 {
+	display: none;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+	font-family: Sofia Pro, sans-serif;
+	background-color: #e0f4fc; 
+	padding: 0;
+	margin: 0;
+}
+
+body, a {
+	color: #383f4a;
+	position: relative;
+}
+
+a:active {}
+a:link {}
+a:visited {}
+a:hover {
+	color: #ea316e;
+}
+
+*::selection {
+	background-color: #ea316e;
+	color: white;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+}
+
+h1, h2, h3, dt {
+	font-family: Quicksand, sans-serif;
+	color: #1b4d68;
+}
+
+h2 {
+	white-space: nowrap;
+}
+
+#debug {
+	padding: 1em;
+	position: absolute;
+	opacity: 0.8;
+	font-size: 10px;
+	display: none;
+}
+
+#debug:target { display: block; }
+
+#debug::after { content: "Regular"; }
+
+main {
+	display: block;
+	padding: 1em;
+
+	background: url("logo.png") no-repeat 1.5em 1em;
+	background-size: 200px auto;
+	box-sizing: border-box;
+}
+
+main, footer > section {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+
+/* Main menu */
+
+main > nav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+main > nav > ul > li {
+	display: inline-block;
+}
+
+main > nav > ul > li img {
+	height: 30px;
+	width: auto;
+}
+
+main > nav {
+	text-align: right;
+}
+
+/* SECTION */
+
+section#download > div,
+section#features {
+	display: table;
+}
+
+section#download > div {
+	width: 100%;
+}
+
+section#features > section {
+	display: table-cell;
+	width: 50%;
+}
+
+section#download > div > dl {
+	display: table-cell;
+}
+
+/* Titles and Icons */
+section#features > section:nth-child(1) > h2,
+section#features > section:nth-child(2) > h2,
+section#examples > h2, 
+section#games > h2 {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+section#features > section#opensource > h2 {
+	padding-left: 40px;
+	background-image: url("icons/bucket.png");
+}
+
+section#features > section#community > h2 {
+	padding-left: 80px;
+	background-image: url("icons/birds.png");
+}
+
+section#examples > h2 {
+	padding-left: 45px;
+	background-image: url("icons/hydrogen.png");
+}
+
+section#games > h2 {
+	padding-left: 45px;
+	background-image: url("icons/cartridge.png");
+}
+
+/* Bluebox */
+
+section#download, section#examples dd {
+	background: url(box.svg);
+	padding: 1em 2em 1em 2em;
+	background-size: 100% 100%;
+	margin-bottom: 1em;
+}
+
+/* Intro */
+
+section#intro {
+	margin: 50px 0 0 140px;
+	min-height: 100px;
+}
+
+/* Download */
+
+section#download {
+	font-size: 16px;
+}
+
+section#download > h2 {
+	color: #25aae1;
+	font-size: 18px;
+}
+
+section#download div {
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding-left: 40px;
+	margin: 0;
+	line-height: 20px;
+}
+
+section#download a {
+	text-decoration: none;
+}
+
+#windows { background-image: url("icons/windows.png"); }
+#osx { background-image: url("icons/apple.png"); }
+#ubuntu { background-image: url("icons/ubuntu.png"); }
+#other { background-image: url("icons/heart.png"); }
+
+section#download dt {
+	font-weight: bold;
+}
+
+section#download dd {
+	margin: 0;
+}
+
+/* Features */
+
+section#features {
+	padding: 1em;
+}
+
+section#features > section:first-child {
+	padding-right: 1em;
+}
+
+/* Examples */
+
+section#examples {
+	padding: 1em;
+}
+
+section#examples dt {
+	margin: 1em 0 0.3em 1em;
+	font-weight: bold;
+	color: #4c90b1;
+}
+
+section#examples dd {
+	margin: 0;
+	padding: 1em 1em 1em 2em;
+}
+
+section#examples code {
+	padding: 0;
+	white-space: wrap;
+}
+
+section#examples pre {
+	margin: 0;
+}
+
+/* Examples */
+
+section#games {
+	padding: 1em;
+}
+
+section#games ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	-webkit-columns: 3;
+	-moz-columns: 3;
+	columns: 3;
+}
+
+section#games ul img {
+	border: none;
+	width: 100%;
+	height: auto;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: #1a1a1a;
+	color: #e0f4fc;
+	font-size: 14px;
+	padding: 1em;
+}
+
+footer > section {
+	display: table;
+}
+
+footer, footer a, footer h3 {
+	color: #e0f4fc;
+}
+
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer > section > div {
+	padding-right: 1em;
+	box-sizing: border-box;
+	display: table-cell;
+}
+
+footer > section > div:last-child {
+	padding-right: 0;
+}
+
+#stuff {
+	width: 22%;
+}
+
+#donate {
+	width: 18%;
+}
+
+#donate ul img {
+	width: 100px;
+	height: auto;
+}
+
+
+#moon {
+	background-image: url(moon.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 80% auto;
+}
+
+#contact {
+	width: 20%;
+}
+
+#documentation {
+	width: 22%;
+}
+
+#documentation ul {
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	columns: 2;
+}
+
+
+@media screen and (max-width: 880px) {
+	#debug::after { content: "880px"; }
+
+	section#download > div > dl {
+		background-size: 1.5em;
+		background-position: top 0.2em left 0; 
+		padding-left: 1.8em;
+	}
+}
+
+@media screen and (max-width: 830px) {
+	#debug::after { content: "830px"; }
+
+	section#download > div > dl {
+		background-size: 0;
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#debug::after { content: "750px"; }
+
+	section#download > div {
+		display: flex;
+		width: auto;
+		flex-wrap: wrap;
+	}
+
+	section#download > div > dl {
+		display: block;
+		flex: 1 1 40%;
+		background-size: 32px;
+		padding-left: 40px;
+		padding-bottom: 1em;
+		box-sizing: border-box;
+	}
+
+	section#features,
+	section#examples,
+	section#games {
+		padding: 0.5em;
+	}
+
+	section#examples code {
+		font-size: 14px;
+	}
+
+	footer > section {
+		display: block;
+	}
+
+	#stuff, #donate, #contact, #documentation {
+		border-top: 1px solid #3c3c3c;
+		width: auto;
+		padding: 1em;
+		display: block;
+	}
+
+	#stuff{
+		border-top: none;
+		padding-top: 0;
+	}
+
+	#moon {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#debug::after { content: "600px"; }
+
+	main {
+		background-image: url("logo_h.png");
+		background-repeat:  no-repeat;
+		background-position: 50% 4em;
+		background-size: 250px auto;
+	}
+
+	main > nav {
+
+	}
+
+
+	section#intro {
+		margin: 110px 0 0 0;
+		padding: 1em;
+	}
+
+	section#download {
+		display: block;
+		width: -moz-fit-content;
+		width: -webkit-fit-content;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	section#download > div {
+		display: inline-block;
+		width: auto;
+	}
+
+	section#features,
+	section#examples,
+	section#games {
+		padding: 0em;
+	}
+
+	section#features {
+		display: block;
+		width: auto;
+	}
+
+	section#features > section {
+		display: block;
+		width: auto;
+	}
+
+	section#download > div > dl {
+		display: block;
+	}
+
+	section#download > div > dl:last-child {
+		padding-bottom: 0;
+	}
+
+	section#examples dt {
+		margin: 1em 0 0.3em 0em;
+	}
+
+	section#examples dd {
+		padding: 0.5em 0.5em 0.5em 1em;
+	}
+
+	section#examples code {
+		font-size: 12px;
+	}
+
+	section#games ul {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns: 2;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#debug::after { content: "450px"; }
+
+	section#games ul {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+	}
+
+	section#examples code {
+		font-size: 8px;
+	}
+}
+
+/** HLJS **/
+
+.hljs {
+    display: block;
+    color: #1b4d68;
+    font-family: Consolas, monospace;
+}
+
+.hljs-keyword {
+    font-weight: bold;
+}
+
+.hljs-title {
+    font-weight: bold;
+}
+
+.hljs-string {
+    color: #00a651;
+}
+
+.hljs-title {
+    color: #e6457b;
+}
+
+.hljs-number {
+    color: #25aae1;
+}
+
+.hljs-comment {
+    color: #7798a9;
+}
+
+.hljs-indent {
+    display: inline-block;
+    width: 1em;
+}
+
+/* IMPORTANT STUFF */
+
+@-webkit-keyframes slide {
+	to {
+		background-position: 0 32px;
+	}
+}
+
+@keyframes slide {
+	to {
+		background-position: 0 32px;
+	}
+}
+
+#germanunkol:target {
+	background-image: url(smallheart.png);
+
+	animation-duration: 1s;
+	animation-name: slide;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: slide;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes acid {
+	to {
+		-webkit-filter: hue-rotate(360deg);
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes acid {
+	to {
+		-webkit-filter: hue-rotate(360deg);
+		filter: hue-rotate(360deg);
+	}
+}
+
+#germanunkol:target main {
+	opacity: 0.8;
+	background-color: white;
+	animation-duration: 5s;
+	animation-name: acid;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-name: acid;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
