@@ -19,25 +19,24 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.errhand">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:09:00+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.lowmemory">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:10:23+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.errhand">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.lowmemory">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ACallbacks"/>
-		<rdfs:label>love.errhand</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.errhand"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/love.errhand"/>
+		<rdfs:label>love.lowmemory</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.lowmemory"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.lowmemory"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Deprecated rdf:resource="&wiki;110"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The error handler, used to display error messages.</property:Description>
-		<property:PrettyDeprecated rdf:resource="&wiki;11.0"/>
-		<property:Since rdf:resource="&wiki;000"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Callback function triggered when the system is running out of memory on mobile devices.</property:Description>
+		<property:PrettySince rdf:resource="&wiki;0.10.0"/>
+		<property:Since rdf:resource="&wiki;100"/>
 		<property:Subcategory rdf:resource="&wiki;General"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-14T09:59:50Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458831.9165509</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.errhand</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-31T14:36:46Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458880.1088657</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.lowmemory</swivt:wikiPageSortKey>
 		<property:parent rdf:resource="&wiki;love"/>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
@@ -45,9 +44,8 @@
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
-	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADeprecated" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADescription" />
-	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3APrettyDeprecated" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3APrettySince" />
 	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ASince" />
 	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ASubcategory" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
