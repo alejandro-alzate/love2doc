@@ -19,23 +19,23 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Game_Distribution_-28Українська-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:40:19+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Game_Distribution_-28Tiếng_Việt-29">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:40:44+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Game_Distribution_-28Українська-29">
-		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Українська-29"/>
-		<rdfs:label>Game Distribution (Українська)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Game_Distribution_-28Українська-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Game_Distribution_-28Українська-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Game_Distribution_-28Tiếng_Việt-29">
+		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE"/>
+		<rdfs:label>Game Distribution (Tiếng Việt)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Game_Distribution_-28Tiếng_Việt-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Game_Distribution_-28Tiếng_Việt-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-11T11:38:20Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2459041.9849537</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game Distribution (Українська)</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-09-13T21:05:37Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2456184.3789005</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game Distribution (Tiếng Việt)</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
-	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Українська-29" />
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
