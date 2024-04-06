@@ -19,37 +19,27 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:58:53+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/On_The_Roadside">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:59:04+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Oh_Snap-2C_Aliens-21">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/On_The_Roadside">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>Oh Snap, Aliens!</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Oh_Snap-2C_Aliens-21"/>
+		<rdfs:label>On The Roadside</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/On_The_Roadside"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/On_The_Roadside"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ANevon"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2D space action shooter game</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shooter</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6.2</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:OhSnapAliens-Screenshot2.jpg</property:Screenshot>
-		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abandoned</property:Status>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-13T14:39:50Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455422.1109954</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</swivt:wikiPageSortKey>
-	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/OhSnapAliens">
-		<rdfs:label>OhSnapAliens</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/OhSnapAliens"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/OhSnapAliens"/>
-		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
-		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<owl:sameAs rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OhSnapAliens</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3ARmcode"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On The Roadside is a turn-based strategy game in which you take control of a squad of mercenaries fighting for survival in a world shaped by unknown forces.</property:Description>
+		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategy</property:Genre>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.10.2</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On The Roadside</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:shoot.gif</property:Screenshot>
+		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Development</property:Status>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-11T23:21:29Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457796.4732523</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On The Roadside</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />
@@ -66,6 +56,5 @@
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
-	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#redirectsTo" />
 	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
 </rdf:RDF>

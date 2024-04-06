@@ -19,37 +19,37 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:58:53+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Pirate_Bay">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:59:17+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Oh_Snap-2C_Aliens-21">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Pirate_Bay">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>Oh Snap, Aliens!</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Oh_Snap-2C_Aliens-21"/>
+		<rdfs:label>Pirate Bay</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Pirate_Bay"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Pirate_Bay"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ANevon"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2D space action shooter game</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shooter</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6.2</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:OhSnapAliens-Screenshot2.jpg</property:Screenshot>
-		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abandoned</property:Status>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-13T14:39:50Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455422.1109954</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3ASiENcE"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics based game.</property:Description>
+		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcade</property:Genre>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.7.2</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pirate Bay</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:Piratebay_02.png</property:Screenshot>
+		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final</property:Status>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-12-25T05:00:32Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2456651.7087037</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pirate Bay</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/OhSnapAliens">
-		<rdfs:label>OhSnapAliens</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/OhSnapAliens"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/OhSnapAliens"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/PirateBay">
+		<rdfs:label>PirateBay</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/PirateBay"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/PirateBay"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<owl:sameAs rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OhSnapAliens</swivt:wikiPageSortKey>
+		<swivt:redirectsTo rdf:resource="&wiki;Pirate_Bay"/>
+		<owl:sameAs rdf:resource="&wiki;Pirate_Bay"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PirateBay</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />

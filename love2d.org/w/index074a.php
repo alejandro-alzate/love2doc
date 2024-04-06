@@ -19,27 +19,26 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Noahs_Ark">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:58:48+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/SURVIVE">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T20:00:29+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Noahs_Ark">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/SURVIVE">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>Noahs Ark</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Noahs_Ark"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Noahs_Ark"/>
+		<rdfs:label>SURVIVE</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/SURVIVE"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/SURVIVE"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ATechnocat"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Help Noah find his animals!</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platform/Adventure</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.7.0</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noah's Ark</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:NoahsArk.png</property:Screenshot>
-		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Released</property:Status>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-01-10T17:10:49Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455572.2158449</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noahs Ark</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3ARagzouken"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An entry for Ludum Dare 24 - Steal biomass from enemy organisms to increase your race's dominance.</property:Description>
+		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</property:Genre>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8.0</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SURVIVE</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:SURVIVE-screenshot.png</property:Screenshot>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-02T10:25:56Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457694.9346759</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SURVIVE</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />
@@ -52,7 +51,6 @@
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ALOVE_Version" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AName" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AScreenshot" />
-	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AStatus" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />

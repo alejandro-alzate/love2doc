@@ -19,37 +19,37 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:58:53+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Sukippu">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T20:00:19+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Oh_Snap-2C_Aliens-21">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Sukippu">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>Oh Snap, Aliens!</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Oh_Snap-2C_Aliens-21"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Oh_Snap-2C_Aliens-21"/>
+		<rdfs:label>Sukippu</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Sukippu"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Sukippu"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ANevon"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2D space action shooter game</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shooter</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6.2</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:OhSnapAliens-Screenshot2.jpg</property:Screenshot>
-		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abandoned</property:Status>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-13T14:39:50Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455422.1109954</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh Snap, Aliens!</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AVitaminx"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defend your barrio by skipping the rope.</property:Description>
+		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arcade</property:Genre>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sukippu</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:sukippu_640x480.jpg</property:Screenshot>
+		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">early wip</property:Status>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-24T03:27:40Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457624.644213</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sukippu</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/OhSnapAliens">
-		<rdfs:label>OhSnapAliens</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/OhSnapAliens"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/OhSnapAliens"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/sukippu">
+		<rdfs:label>sukippu</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/sukippu"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/sukippu"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<owl:sameAs rdf:resource="&wiki;Oh_Snap-2C_Aliens-21"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OhSnapAliens</swivt:wikiPageSortKey>
+		<swivt:redirectsTo rdf:resource="&wiki;Sukippu"/>
+		<owl:sameAs rdf:resource="&wiki;Sukippu"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sukippu</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />
