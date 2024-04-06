@@ -19,24 +19,24 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.directorydropped">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T16:34:35+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.filedropped">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T16:36:11+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.directorydropped">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.filedropped">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ACallbacks"/>
-		<rdfs:label>love.directorydropped</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.directorydropped"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/love.directorydropped"/>
+		<rdfs:label>love.filedropped</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.filedropped"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.filedropped"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Callback function triggered when a directory is dragged and dropped onto the window.</property:Description>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Callback function triggered when a file is dragged and dropped onto the window.</property:Description>
 		<property:PrettySince rdf:resource="&wiki;0.10.0"/>
 		<property:Since rdf:resource="&wiki;100"/>
 		<property:Subcategory rdf:resource="&wiki;Window"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T22:31:40Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458550.4386574</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.directorydropped</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-10T04:54:19Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2459923.7043866</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.filedropped</swivt:wikiPageSortKey>
 		<property:parent rdf:resource="&wiki;love"/>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
