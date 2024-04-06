@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/love.touchpressed by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 16:53:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>love.touchpressed - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.touchpressed","wgTitle":"love.touchpressed","wgCurRevisionId":22498,"wgRevisionId":22498,"wgArticleId":4064,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Callbacks"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.touchpressed","wgRelevantArticleId":4064,"wgRequestId":"ba67bc2de19354a1825eb5f1","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="love.touchpressed" href="../w/index664e.php?title=Special:ExportRDF/love.touchpressed&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_touchpressed rootpage-love_touchpressed skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="love-59.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="Talk_love.touchpressed?title=Talk:love.touchpressed&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/index067d.html?title=love.touchpressed&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/index3790.html?title=love.touchpressed&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.touchpressed</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Available since LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>This function is not supported in earlier versions.</small>
+</td></tr></tbody></table>
+<p>Callback function triggered when the touch screen is touched.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Function"><span class="tocnumber">1</span> <span class="toctext">Function</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Synopsis"><span class="tocnumber">1.1</span> <span class="toctext">Synopsis</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Arguments"><span class="tocnumber">1.2</span> <span class="toctext">Arguments</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Returns"><span class="tocnumber">1.3</span> <span class="toctext">Returns</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Notes"><span class="tocnumber">2</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_Also"><span class="tocnumber">3</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Other_Languages"><span class="tocnumber">4</span> <span class="toctext">Other Languages</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Function">Function</span></h2>
+<h3><span class="mw-headline" id="Synopsis">Synopsis</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">touchpressed</span><span class="p">(</span> <span class="n">id</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">pressure</span> <span class="p">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Arguments">Arguments</span></h3>
+<dl><dt><code><a href="light_userdata.html" title="light userdata">light userdata</a> id</code></dt>
+<dd>The identifier for the touch press.</dd>
+<dt><code><a href="number.html" title="number">number</a> x</code></dt>
+<dd>The x-axis position of the touch press inside the window, in pixels.</dd>
+<dt><code><a href="number.html" title="number">number</a> y</code></dt>
+<dd>The y-axis position of the touch press inside the window, in pixels.</dd>
+<dt><code><a href="number.html" title="number">number</a> dx</code></dt>
+<dd>The x-axis movement of the touch press inside the window, in pixels. This should always be zero.</dd>
+<dt><code><a href="number.html" title="number">number</a> dy</code></dt>
+<dd>The y-axis movement of the touch press inside the window, in pixels. This should always be zero.</dd>
+<dt><code><a href="number.html" title="number">number</a> pressure</code></dt>
+<dd>The amount of pressure being applied. Most touch screens aren't pressure sensitive, in which case the pressure will be 1.</dd></dl>
+<h3><span class="mw-headline" id="Returns">Returns</span></h3>
+<p>Nothing.
+</p>
+<h2><span class="mw-headline" id="Notes">Notes</span></h2>
+<p>The identifier is only guaranteed to be unique for the specific touch press until <a href="love-60.html" title="love.touchreleased">love.touchreleased</a> is called with that identifier, at which point it may be reused for new touch presses.
+</p><p>The unofficial Android and iOS ports of LÖVE 0.9.2 reported touch positions as normalized values in the range of [0, 1], whereas this API reports positions in pixels.
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="love.html" title="love">love</a></li>
+<li><a href="love-60.html" title="love.touchreleased">love.touchreleased</a></li>
+<li><a href="love-58.html" title="love.touchmoved">love.touchmoved</a></li>
+<li><a href="love-18.html" title="love.touch">love.touch</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="love.touchpressed_(Dansk)?title=love.touchpressed_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love.touchpressed_(Deutsch)?title=love.touchpressed_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a class="mw-selflink selflink">English</a>&#160;&#8211; 
+<a href="love-1434.html?title=love.touchpressed_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="love-1435.html" title="love.touchpressed (Français)">Français</a>&#160;&#8211;
+<a href="love.touchpressed_(Indonesia)?title=love.touchpressed_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="love.touchpressed_(Italiano)?title=love.touchpressed_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="love-1436.html?title=love.touchpressed_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="love.touchpressed_(Magyar)?title=love.touchpressed_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="love.touchpressed_(Nederlands)?title=love.touchpressed_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="love.touchpressed_(Polski)?title=love.touchpressed_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love-1437.html?title=love.touchpressed_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="love-1438.html?title=love.touchpressed_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="love-1439.html?title=love.touchpressed_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="love.touchpressed_(Suomi)?title=love.touchpressed_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="love.touchpressed_(Svenska)?title=love.touchpressed_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="love-1440.html?title=love.touchpressed_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="love-1441.html?title=love.touchpressed_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="love-1442.html?title=love.touchpressed_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="love-1443.html?title=love.touchpressed_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="love-1444.html" title="love.touchpressed (Русский)">Русский</a>&#160;&#8211;
+<a href="love-1445.html?title=love.touchpressed_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="love-1446.html" title="love.touchpressed (Українська)">Українська</a>&#160;&#8211;
+<a href="love-1447.html?title=love.touchpressed_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="love-1448.html?title=love.touchpressed_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love-1449.html" title="love.touchpressed (日本語)">日本語</a>&#160;&#8211;
+<a href="love-1450.html?title=love.touchpressed_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love-1451.html?title=love.touchpressed_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="love-1452.html?title=love.touchpressed_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="love-1453.html?title=love.touchpressed_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="love.touchpressed (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240405222138
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.024 seconds
+Real time usage: 0.124 seconds
+Preprocessor visited node count: 392/1000000
+Preprocessor generated node count: 1197/1000000
+Post‐expand include size: 4538/2097152 bytes
+Template argument size: 2160/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 545/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  110.768      1 -total
+  4.99%    5.532      1 Template:i18n
+  3.63%    4.025      1 Template:newin
+  2.65%    2.937     28 Template:Lang
+  1.98%    2.189      6 Template:param
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:4064-0!canonical and timestamp 20240405222138 and revision id 22498
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/index8150.html?title=love.touchpressed&amp;oldid=22498">http://love2d.org/w/index.php?title=love.touchpressed&amp;oldid=22498</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Callbacks.html" title="Category:Callbacks">Callbacks</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/indexa582.html?title=Special:UserLogin&amp;returnto=love.touchpressed" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-59.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-59.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/indexf0d0.html?title=love.touchpressed&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index8150.html?title=love.touchpressed&amp;oldid=22498" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index8f67.html?title=love.touchpressed&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_love-59.html" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 7 March 2019, at 22:29.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.024","walltime":"0.124","ppvisitednodes":{"value":392,"limit":1000000},"ppgeneratednodes":{"value":1197,"limit":1000000},"postexpandincludesize":{"value":4538,"limit":2097152},"templateargumentsize":{"value":2160,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":545,"limit":5000000},"timingprofile":["100.00%  110.768      1 -total","  4.99%    5.532      1 Template:i18n","  3.63%    4.025      1 Template:newin","  2.65%    2.937     28 Template:Lang","  1.98%    2.189      6 Template:param"]},"cachereport":{"timestamp":"20240405222138","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":33});});</script></body>
+<!-- Mirrored from love2d.org/wiki/love.touchpressed by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 16:53:55 GMT -->
+</html>
