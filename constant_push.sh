@@ -5,7 +5,12 @@
 # reason this script exist is quite petty, so my commit history gets
 # inflated more than I'll ever be able to do legitimately.
 
-MSG="Automatic partial update"
+# Disclaimer: this DOES NOT PULL FROM love2d.org/
+# This is the command to do so,
+# make sure to execute this at the root of the folder:
+# httrack love2d.org/wiki -p7
+
+MSG="Automatic partial update at: "
 COOLDOWN="1h"
 
 function upload() {
@@ -13,7 +18,7 @@ function upload() {
 }
 
 function commit() {
-	git commit -m "$MSG At: $(date)"
+	git commit -m "$MSG $(date)"
 }
 
 function add() {
