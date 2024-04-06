@@ -67,7 +67,8 @@ if isAprilFoolsDay() then content = aprilFoolsContent end
 local query = [[curl -s https://love2d.org/ | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > remote-version.txt]]
 os.execute(query)
 
-os.execute("")
+os.execute("cat love2d.org/index.html | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > latest-version.txt")
+os.execute("cat latest-version.txt")
 
 local localversion = readAll("latest-version.txt") or "0.0"
 local remotversion = readAll("remote-version.txt")
