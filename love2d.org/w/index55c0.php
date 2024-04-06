@@ -19,19 +19,19 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/User-3APekka">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T15:30:48+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/PO2_Syndrome">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T15:30:56+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/User-3APekka">
-		<rdfs:label>User:Pekka</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/User-3APekka"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/User-3APekka"/>
-		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swivt:wikiNamespace>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/PO2_Syndrome">
+		<rdfs:label>PO2 Syndrome</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/PO2_Syndrome"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/PO2_Syndrome"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-07-25T17:01:34Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2456134.2094213</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pekka</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-03-19T19:21:03Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2456006.3062847</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO2 Syndrome</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
