@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:42:20 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -78,7 +78,7 @@
    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The SPACE key is held down!&quot;</span>
 <span class="kr">end</span>
 </pre></div>
-<p>キーの完全な一覧は<a href="KeyConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="KeyConstant (日本語)">こちら</a>にあります。この確認を行う最良の場所は <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> <a href="Category_Callbacks_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Category:Callbacks (日本語)">コールバック</a>の内側です： 利用者からの入力を取得および画面へなにかを描画する前に変数の更新を行うことができます。従って、修正後の <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> コールバックはこのような内容になります:
+<p>キーの完全な一覧は<a href="KeyConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="KeyConstant (日本語)">こちら</a>にあります。この確認を行う最良の場所は <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> <a href="Category_Callbacks_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Category:Callbacks (日本語)">コールバック</a>の内側です： 利用者からの入力を取得および画面へなにかを描画する前に変数の更新を行うことができます。従って、修正後の <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> コールバックはこのような内容になります:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span> <span class="kr">then</span>
@@ -86,7 +86,7 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>どのキーまたは現在押されているキーを検知する必要がある間ならば、これは申し分なく非常に良いものであり、特定のキーが押された、および・または、離されたときに様々な動作を指定する必要がある場合があります。このための簡潔な方法は <code><a href="love-671.html" title="love.keypressed (日本語)">love.keypressed</a></code> および <code><a href="love-672.html" title="love.keyreleased (日本語)">love.keyreleased</a></code> キーボード専用コールバックを使用することです。それは既に存じている <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> または <code><a href="love-668.html" title="love.draw (日本語)">love.draw</a></code> コールバックと同様の方法で動作を行い、イベントが発生するごとに対象のコードを実行します。例えば:
+<p>どのキーまたは現在押されているキーを検知する必要がある間ならば、これは申し分なく非常に良いものであり、特定のキーが押された、および・または、離されたときに様々な動作を指定する必要がある場合があります。このための簡潔な方法は <code><a href="love-611.html" title="love.keypressed (日本語)">love.keypressed</a></code> および <code><a href="love-612.html" title="love.keyreleased (日本語)">love.keyreleased</a></code> キーボード専用コールバックを使用することです。それは既に存じている <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> または <code><a href="love-608.html" title="love.draw (日本語)">love.draw</a></code> コールバックと同様の方法で動作を行い、イベントが発生するごとに対象のコードを実行します。例えば:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span> <span class="n">key</span> <span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;return&quot;</span> <span class="kr">then</span>
@@ -130,22 +130,22 @@
 <span class="kr">end</span>
 </pre></div>
 <h2><span id="マウス・イベントの捕獲"></span><span class="mw-headline" id=".E3.83.9E.E3.82.A6.E3.82.B9.E3.83.BB.E3.82.A4.E3.83.99.E3.83.B3.E3.83.88.E3.81.AE.E6.8D.95.E7.8D.B2">マウス・イベントの捕獲</span></h2>
-<p>さて、キーボードにより利用者と対話する方法を既に存じています。しかし、机上に鎮座する小型齧歯類に関してはどうでしょうか？ さて、マウスの入力動作は同様の方法です： <code><a href="love.mouse-27.html" title="love.mouse.isDown (日本語)">love.mouse.isDown</a></code> メソッドおよび <code><a href="love-669.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> および <code><a href="love-670.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> コールバックがあります。さあ、 <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> コールバックへ数行書き加えましょう:
+<p>さて、キーボードにより利用者と対話する方法を既に存じています。しかし、机上に鎮座する小型齧歯類に関してはどうでしょうか？ さて、マウスの入力動作は同様の方法です： <code><a href="love.mouse-27.html" title="love.mouse.isDown (日本語)">love.mouse.isDown</a></code> メソッドおよび <code><a href="love-609.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> および <code><a href="love-610.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> コールバックがあります。さあ、 <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> コールバックへ数行書き加えましょう:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="kr">then</span>
    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Right mouse button has been pressed&quot;</span>
 <span class="kr">end</span>
 </pre></div>
-<p>確認できる通り、 <code><a href="love.keyboard-14.html" title="love.keyboard.isDown (日本語)">love.keyboard.isDown</a></code> と非常に似ており、さらに、<a href="MouseConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="MouseConstant (日本語)">こちら</a>でマウスに関連する引数の全一覧を参照することができます。このメソッドでマウス・ホイールが上方向または下方向へ回転されたかどうかを確認することができます。ゲームのウィンドウ内にあるマウス・ポインターの現在位置を検知するための二つの手軽なメソッドがあります： <code><a href="love.mouse-28.html" title="love.mouse.getX (日本語)">love.mouse.getX</a></code> および <code><a href="love.mouse-29.html" title="love.mouse.getY (日本語)">love.mouse.getY</a></code> です。それぞれマウス・ポインターの現在座標を返します。さあ、 <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> コールバックの最初へ、これらの行を追加した用例を見てみましょう：
+<p>確認できる通り、 <code><a href="love.keyboard-14.html" title="love.keyboard.isDown (日本語)">love.keyboard.isDown</a></code> と非常に似ており、さらに、<a href="MouseConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="MouseConstant (日本語)">こちら</a>でマウスに関連する引数の全一覧を参照することができます。このメソッドでマウス・ホイールが上方向または下方向へ回転されたかどうかを確認することができます。ゲームのウィンドウ内にあるマウス・ポインターの現在位置を検知するための二つの手軽なメソッドがあります： <code><a href="love.mouse-28.html" title="love.mouse.getX (日本語)">love.mouse.getX</a></code> および <code><a href="love.mouse-29.html" title="love.mouse.getY (日本語)">love.mouse.getY</a></code> です。それぞれマウス・ポインターの現在座標を返します。さあ、 <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> コールバックの最初へ、これらの行を追加した用例を見てみましょう：
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">mouse_x</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">getX</span><span class="p">()</span>
 <span class="n">mouse_y</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">getY</span><span class="p">()</span>
 </pre></div>
-<p>また、この行は <code><a href="love-667.html" title="love.update (日本語)">love.update</a></code> コールバックへ追加します:
+<p>また、この行は <code><a href="love-607.html" title="love.update (日本語)">love.update</a></code> コールバックへ追加します:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Mouse X: &quot;</span><span class="o">..</span> <span class="n">mouse_x</span> <span class="o">..</span> <span class="s2">&quot; Mouse Y: &quot;</span> <span class="o">..</span> <span class="n">mouse_y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span> <span class="p">)</span>
 </pre></div>
-<p><code><a href="love-669.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> および <code><a href="love-670.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> コールバックはキーボードに非常に似たメソッドであり相当品として動作します：
+<p><code><a href="love-609.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> および <code><a href="love-610.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> コールバックはキーボードに非常に似たメソッドであり相当品として動作します：
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">mousepressed</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">button</span> <span class="o">==</span> <span class="s1">&#39;l&#39;</span> <span class="kr">then</span>
@@ -167,7 +167,7 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>最後に、さらに二つの有用なマウス関連のメソッドがあります: <code><a href="love.mouse-30.html" title="love.mouse.setVisible (日本語)">love.mouse.setVisible</a></code> および <code><a href="love.mouse-31.html" title="love.mouse.isVisible (日本語)">love.mouse.isVisible</a></code> です。一つめはマウス・ポインターの表示または非表示を行い、二つめはマウス・ポインターが表示されているかどうかを検出します。さあ、 <code><a href="love-671.html" title="love.keypressed (日本語)">love.keypressed</a></code> コールバックへさらにコードを追加しましょう:
+<p>最後に、さらに二つの有用なマウス関連のメソッドがあります: <code><a href="love.mouse-30.html" title="love.mouse.setVisible (日本語)">love.mouse.setVisible</a></code> および <code><a href="love.mouse-31.html" title="love.mouse.isVisible (日本語)">love.mouse.isVisible</a></code> です。一つめはマウス・ポインターの表示または非表示を行い、二つめはマウス・ポインターが表示されているかどうかを検出します。さあ、 <code><a href="love-611.html" title="love.keypressed (日本語)">love.keypressed</a></code> コールバックへさらにコードを追加しましょう:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span> <span class="kr">then</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">isVisible</span><span class="p">()</span> <span class="kr">then</span>
@@ -311,7 +311,7 @@ Retrieved from "<a dir="ltr" href="../w/indexd8e2.html?title=Tutorial:Using_Inpu
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -362,5 +362,5 @@ Retrieved from "<a dir="ltr" href="../w/indexd8e2.html?title=Tutorial:Using_Inpu
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.043","walltime":"1.351","ppvisitednodes":{"value":357,"limit":1000000},"ppgeneratednodes":{"value":847,"limit":1000000},"postexpandincludesize":{"value":3637,"limit":2097152},"templateargumentsize":{"value":1720,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":12343,"limit":5000000},"timingprofile":["100.00%    6.985      1 -total","100.00%    6.985      1 Template:i18n"," 55.24%    3.859     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170106","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:42:38 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>

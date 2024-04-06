@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:15:17 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -50,7 +50,7 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>LÖVE でフォントを用いるのは、さほど難しいことではありませんが、気をつけることは使用前に設定を行うことです。フォント・オブジェクトからテキストを直接表示する方法は存在せず、現在のフォントに基づき常に <code><a href="love.graphics-182.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を用いてテキストは表示されます。 LÖVE で利用可能なフォントは三種類あります:
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>LÖVE でフォントを用いるのは、さほど難しいことではありませんが、気をつけることは使用前に設定を行うことです。フォント・オブジェクトからテキストを直接表示する方法は存在せず、現在のフォントに基づき常に <code><a href="love.graphics-181.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を用いてテキストは表示されます。 LÖVE で利用可能なフォントは三種類あります:
 </p>
 <ul><li>標準フォント (Bitstream Vera Sans)</li>
 <li>FreeType 2 にて対応している任意のフォント・ファイル</li>
@@ -79,7 +79,7 @@
 <p>ダウンロードしたフォントには著作権があり、その一部には改変禁止や商用利用禁止などの使用許諾条件または利用制限があることに留意してください。
 </p>
 <h2><span id="画像を使用してフォント・オブジェクトを作成する"></span><span class="mw-headline" id=".E7.94.BB.E5.83.8F.E3.82.92.E4.BD.BF.E7.94.A8.E3.81.97.E3.81.A6.E3.83.95.E3.82.A9.E3.83.B3.E3.83.88.E3.83.BB.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.92.E4.BD.9C.E6.88.90.E3.81.99.E3.82.8B">画像を使用してフォント・オブジェクトを作成する</span></h2>
-<p>特別な画像の形式に全て依存するため、画像フォントについて解説するのは少し難しいです。これ<a href="File_Resource-Imagefont.html" class="image" title="用例画像"><img alt="用例画像" src="../w/images/6/67/Resource-Imagefont.png" width="973" height="17" /></a>を参照すれば特定色により各々が分離され、一列に沿ったグリフから構成されていることが理解できるでしょう。この色はグリフを分離するために使用され全ての文字および一覧の最初から検出される必要があります(全ての方向は左から)。この画像に基づくフォントの作成方法は下記の通りです。
+<p>特別な画像の形式に全て依存するため、画像フォントについて解説するのは少し難しいです。これ<a href="File_Resource-Imagefont.html" class="image" title="用例画像"><img alt="用例画像" src="../w/images/6/67/Resource-Imagefont.html" width="973" height="17" /></a>を参照すれば特定色により各々が分離され、一列に沿ったグリフから構成されていることが理解できるでしょう。この色はグリフを分離するために使用され全ての文字および一覧の最初から検出される必要があります(全ての方向は左から)。この画像に基づくフォントの作成方法は下記の通りです。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">font</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImageFont</span><span class="p">(</span><span class="s2">&quot;imagefont.png&quot;</span><span class="p">,</span>
     <span class="s2">&quot; abcdefghijklmnopqrstuvwxyz&quot;</span> <span class="o">..</span>
@@ -103,7 +103,7 @@
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setNewFont</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
 </pre></div>
 <h2><span id="テキストの整形と描画"></span><span class="mw-headline" id=".E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.81.AE.E6.95.B4.E5.BD.A2.E3.81.A8.E6.8F.8F.E7.94.BB">テキストの整形と描画</span></h2>
-<p>さて、新規のフォント・オブジェクトがあるので、なにかで使用したいとします。テキストを描画するには <code><a href="love.graphics-182.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を呼び出します:
+<p>さて、新規のフォント・オブジェクトがあるので、なにかで使用したいとします。テキストを描画するには <code><a href="love.graphics-181.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を呼び出します:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is some awesome text&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
@@ -116,8 +116,8 @@
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the first line</span><span class="se">\n</span><span class="s2">This is the second one.</span><span class="se">\n</span><span class="s2">(and a third)</span><span class="se">\n\n</span><span class="s2">fifth&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </pre></div>
-<p>引数 '100' および '200' は、それぞれテキストの <i>x</i> 位置および <i>y</i> 位置です。LÖVE 0.6.0 以前では、テキストを描画するために <code><a href="love.graphics-165.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> にて代用されていました。
-</p><p>しかし、 LÖVE では <code><a href="love.graphics-182.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を使用することで単語の折り返しと揃え方を指定したテキストを描画することができます：
+<p>引数 '100' および '200' は、それぞれテキストの <i>x</i> 位置および <i>y</i> 位置です。LÖVE 0.6.0 以前では、テキストを描画するために <code><a href="love.graphics-164.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> にて代用されていました。
+</p><p>しかし、 LÖVE では <code><a href="love.graphics-181.html" title="love.graphics.print (日本語)">love.graphics.print</a></code> 関数を使用することで単語の折り返しと揃え方を指定したテキストを描画することができます：
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;A really long sentence which will probably be broken into many pieces by my love.&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
 </pre></div>
@@ -264,7 +264,7 @@ Retrieved from "<a dir="ltr" href="../w/indexb5f2.html?title=Tutorial:Fonts_and_
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -315,5 +315,5 @@ Retrieved from "<a dir="ltr" href="../w/indexb5f2.html?title=Tutorial:Fonts_and_
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.040","walltime":"1.182","ppvisitednodes":{"value":372,"limit":1000000},"ppgeneratednodes":{"value":867,"limit":1000000},"postexpandincludesize":{"value":3811,"limit":2097152},"templateargumentsize":{"value":1894,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6431,"limit":5000000},"timingprofile":["100.00%    5.566      1 -total","100.00%    5.566      1 Template:i18n"," 54.00%    3.006     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170011","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":28});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:15:31 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>

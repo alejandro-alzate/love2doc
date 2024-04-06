@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/love.hasDeprecationOutput_(Slovenský) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:32 GMT -->
+<!-- Mirrored from love2d.org/wiki/love.physics_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:37 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
-<title>love.hasDeprecationOutput (Slovenský) - LOVE</title>
+<title>love.physics (Português) - LOVE</title>
 <script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.hasDeprecationOutput_(Slovenský)","wgTitle":"love.hasDeprecationOutput (Slovenský)","wgCurRevisionId":22196,"wgRevisionId":22196,"wgArticleId":6574,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Templates (Slovenský)","Functions (Slovenský)","Slovenský"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.hasDeprecationOutput_(Slovenský)","wgRelevantArticleId":6574,"wgRequestId":"3ea0c83a771c6ce9e846639a","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.physics_(Português)","wgTitle":"love.physics (Português)","wgCurRevisionId":25602,"wgRevisionId":25602,"wgArticleId":1473,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Modules"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.physics_(Português)","wgRelevantArticleId":1473,"wgRequestId":"ea4d6f477f7171974c1cf387","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
 });mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
-<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
 <link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
 <script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
 <!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 <meta name="generator" content="MediaWiki 1.31.12"/>
-<link rel="alternate" type="application/rdf+xml" title="love.hasDeprecationOutput (Slovenský)" href="../w/index0096-2.html?title=Special:ExportRDF/love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;xmlmime=rdf"/>
+<link rel="alternate" type="application/rdf+xml" title="love.physics (Português)" href="../w/index671d.html?title=Special:ExportRDF/love.physics_(Portugu%C3%AAs)&amp;xmlmime=rdf"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
 <link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_hasDeprecationOutput_Slovenský rootpage-love_hasDeprecationOutput_Slovenský skin-love action-view"><div id="globalWrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_physics_Português rootpage-love_physics_Português skin-love action-view"><div id="globalWrapper">
 		<div id="column-content">
 			<div id="content" class="mw-body" role="main">
 				<a id="top"></a>
@@ -34,14 +34,14 @@
 			<div>
 				<ul>
 				<li id="ca-nstab-main" class="selected"><a href="love-354.html" title="View the content page [c]" accesskey="c">Page</a></li>
-				<li id="ca-talk" class="new"><a href="../w/indexc745.html?title=Talk:love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
-				<li id="ca-viewsource"><a href="../w/index8a71.html?title=love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
-				<li id="ca-history"><a href="../w/index5d06.html?title=love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				<li id="ca-talk" class="new"><a href="../w/index44fc.html?title=Talk:love.physics_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/indexbda1.html?title=love.physics_(Portugu%C3%AAs)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/index7017.html?title=love.physics_(Portugu%C3%AAs)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
 				</ul>
 							</div>
 		</div>
 	
-				<h1 id="firstHeading" class="firstHeading" lang="en">love.hasDeprecationOutput (Slovenský)</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.physics (Português)</h1>
 
 				<div id="bodyContent">
 					<!-- <div id="siteSub">From LOVE</div> -->
@@ -50,75 +50,301 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;11.0&#93;&#93;">
-<tbody><tr>
-<td><i> <b>Dostupná od LÖVE <a href="11.html" title="11.0">11.0</a></b> </i>
-</td></tr>
-<tr>
-<td><small>Táto funkcia nie je dostupá v predchádzajúcich verziách.</small>
-</td></tr></tbody></table>
-<p>Zistí, či LÖVE zobrazí varovania pri používaní zastaraných funkcií. Táto funkcia je predvolene vypnutá v <a href="../w/indexddad.html?title=love.filesystem.isFused_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="love.filesystem.isFused (Slovenský) (page does not exist)">zlúčenom móde</a> a v inom nastavení je zapnutá.
-</p><p>Ak je táto funkcia povolená, prvé použitie formálne odmietnutej funkcie LÖVE zobrazí krátku správu v spodnej časti okna a napíše správu do konzoly.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Pode simular corpos rígidos 2D de uma maneira realista. Este módulo é basicamente uma ligação ao <a rel="nofollow" class="external text" href="http://www.box2d.org/about">Box2D</a> (versão 2.3.0 - <a rel="nofollow" class="external text" href="http://www.box2d.org/documentation/">manual</a>)
+</p><p>Para casos simples (e mais comuns), um número pequeno de bibliotecas existem, que são geralmente mais populares que love.physics e podem ser encontradas aqui: <a rel="nofollow" class="external free" href="https://github.com/love2d-community/awesome-love2d#physics">https://github.com/love2d-community/awesome-love2d#physics</a>
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
-<li class="toclevel-1 tocsection-1"><a href="#Funkcia"><span class="tocnumber">1</span> <span class="toctext">Funkcia</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Preh.C4.BEad"><span class="tocnumber">1.1</span> <span class="toctext">Prehľad</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Argumenty"><span class="tocnumber">1.2</span> <span class="toctext">Argumenty</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#Vr.C3.A1ti"><span class="tocnumber">1.3</span> <span class="toctext">Vráti</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-5"><a href="#Pozri_tie.C5.BE"><span class="tocnumber">2</span> <span class="toctext">Pozri tiež</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#.C4.8Eal.C5.A1ie_jazyky"><span class="tocnumber">3</span> <span class="toctext">Ďalšie jazyky</span></a></li>
+<li class="toclevel-1 tocsection-1"><a href="#Tipos"><span class="tocnumber">1</span> <span class="toctext">Tipos</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Fun.C3.A7.C3.B5es"><span class="tocnumber">2</span> <span class="toctext">Funções</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Enums"><span class="tocnumber">3</span> <span class="toctext">Enums</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Veja_tamb.C3.A9m"><span class="tocnumber">4</span> <span class="toctext">Veja também</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Outros_Idiomas"><span class="tocnumber">5</span> <span class="toctext">Outros Idiomas</span></a></li>
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="Funkcia">Funkcia</span></h2>
-<h3><span id="Prehľad"></span><span class="mw-headline" id="Preh.C4.BEad">Prehľad</span></h3>
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">enabled</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">hasDeprecationOutput</span><span class="p">(</span> <span class="p">)</span>
-</pre></div>
-<h3><span class="mw-headline" id="Argumenty">Argumenty</span></h3>
-<p>Žiadne.
-</p>
-<h3><span id="Vráti"></span><span class="mw-headline" id="Vr.C3.A1ti">Vráti</span></h3>
-<dl><dt><code><a href="../w/index6aa7.html?title=boolean_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="boolean (Slovenský) (page does not exist)">boolean</a> enabled</code></dt>
-<dd>Či je povolené zobrazovať varovania o používaní zastaraných funkcií.</dd></dl>
-<h2><span id="Pozri_tiež"></span><span class="mw-headline" id="Pozri_tie.C5.BE">Pozri tiež</span></h2>
-<ul><li><a href="love_(Slovensk%c3%bd).html" title="love (Slovenský)">love</a></li>
-<li><a href="love-364.html" title="love.setDeprecationOutput (Slovenský)">love.setDeprecationOutput</a></li></ul>
-<h2><span id="Ďalšie_jazyky"></span><span class="mw-headline" id=".C4.8Eal.C5.A1ie_jazyky">Ďalšie jazyky</span></h2>
+<h2><span class="mw-headline" id="Tipos">Tipos</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Body_(Portugu%c3%aas).html" title="Body (Português)">Body (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Corpos são objetos com velocidade e posição.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="CircleShape_(Portugu%c3%aas).html" title="CircleShape (Português)">CircleShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Círculo estende Forma e adiciona um raio e a posição local.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Contact_(Portugu%c3%aas).html" title="Contact (Português)">Contact (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Contatos são objetos criados para gerenciar as colisões no mundo.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Fixture_(Portugu%c3%aas).html" title="Fixture (Português)">Fixture (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Fixtures anexam formas a corpos.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Joint_(Portugu%c3%aas).html" title="Joint (Português)">Joint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Attach multiple bodies together to interact in unique ways.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="PolygonShape_(Portugu%c3%aas).html" title="PolygonShape (Português)">PolygonShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Polígonos são convexos com até 8 lados.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Shape_(Portugu%c3%aas).html" title="Shape (Português)">Shape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Formas são objetos usados para controlar massas e colisões.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="World_(Portugu%c3%aas).html" title="World (Português)">World (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Um mundo é um objeto que contem corpos e juntas.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span id="Funções"></span><span class="mw-headline" id="Fun.C3.A7.C3.B5es">Funções</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-40.html" title="love.physics.getDistance (Português)">love.physics.getDistance (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retorna os dois pontos mais próximos entre duas fixtures e a distância entre eles.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-45.html" title="love.physics.getMeter (Português)">love.physics.getMeter (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retorna a escala de pixels para metro.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-49.html" title="love.physics.newBody (Português)">love.physics.newBody (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria um novo corpo.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-53.html" title="love.physics.newChainShape (Português)">love.physics.newChainShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma nova <a href="../w/indexbf24.html?title=ChainShape_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="ChainShape (Português) (page does not exist)">ChainShape</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-56.html" title="love.physics.newCircleShape (Português)">love.physics.newCircleShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria um novo CircleShape em (x,y) nas coordenadas local.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-58.html" title="love.physics.newDistanceJoint (Português)">love.physics.newDistanceJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta de distância entre dois corpos.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-62.html" title="love.physics.newEdgeShape (Português)">love.physics.newEdgeShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma nova <a href="../w/indexc791.html?title=EdgeShape_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="EdgeShape (Português) (page does not exist)">EdgeShape</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-64.html" title="love.physics.newFixture (Português)">love.physics.newFixture (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria e anexa uma fixture.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-65.html" title="love.physics.newFrictionJoint (Português)">love.physics.newFrictionJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Uma <a href="../w/index8b4d.html?title=FrictionJoint_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="FrictionJoint (Português) (page does not exist)">FrictionJoint</a> aplica fricção a um corpo.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-67.html" title="love.physics.newGearJoint (Português)">love.physics.newGearJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta de engrenagem conectando duas juntas.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-70.html" title="love.physics.newMotorJoint (Português)">love.physics.newMotorJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta entre os dois corpos que controla o movimento relativo entre eles.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-72.html" title="love.physics.newMouseJoint (Português)">love.physics.newMouseJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta entre o corpo e o mouse.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-76.html" title="love.physics.newPolygonShape (Português)">love.physics.newPolygonShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria um novo PolygonShape.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-80.html" title="love.physics.newPrismaticJoint (Português)">love.physics.newPrismaticJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta prismática entre dois Corpos.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-83.html" title="love.physics.newPulleyJoint (Português)">love.physics.newPulleyJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta de polia para juntar dois Corpos entre si e o solo.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-87.html" title="love.physics.newRectangleShape (Português)">love.physics.newRectangleShape (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Atalho para criar um PolygonShapes retangular.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-90.html" title="love.physics.newRevoluteJoint (Português)">love.physics.newRevoluteJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta de ponto fixo entre dois Corpos.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-93.html" title="love.physics.newRopeJoint (Português)">love.physics.newRopeJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma junta entre dois corpos que impõe uma distância máxima entre eles.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-95.html" title="love.physics.newWeldJoint (Português)">love.physics.newWeldJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Uma <a href="../w/index175b.html?title=WeldJoint_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="WeldJoint (Português) (page does not exist)">WeldJoint</a> basicamente cola dois corpos juntos.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-97.html" title="love.physics.newWheelJoint (Português)">love.physics.newWheelJoint (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria uma nova junta de roda.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-100.html" title="love.physics.newWorld (Português)">love.physics.newWorld (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cria um novo Mundo.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.physics-101.html" title="love.physics.setMeter (Português)">love.physics.setMeter (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Determina a escala de pixels para metro.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span class="mw-headline" id="Enums">Enums</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="BodyType_(Portugu%c3%aas).html" title="BodyType (Português)">BodyType (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Os tipos de um <a href="Body_(Portugu%c3%aas).html" title="Body (Português)">Corpo</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="JointType_(Portugu%c3%aas).html" title="JointType (Português)">JointType (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Diferentes tipos de juntas.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="ShapeType_(Portugu%c3%aas).html" title="ShapeType (Português)">ShapeType (Português)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Os diferentes tipos de <a href="Shape_(Portugu%c3%aas).html" title="Shape (Português)">Formas</a>, como retornado por <a href="Shape_getType_(Portugu%c3%aas).html" title="Shape:getType (Português)">Shape:getType</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span id="Veja_também"></span><span class="mw-headline" id="Veja_tamb.C3.A9m">Veja também</span></h2>
+<ul><li><a href="love_(Portugu%c3%aas).html" title="love (Português)">love</a></li>
+<li><a href="Tutorial_Physics_(Portugu%c3%aas).html?title=Tutorial:Physics_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Português) (page does not exist)">Tutorial:Física</a></li>
+<li><a href="Tutorial_PhysicsCollisionCallbacks_(Portugu%c3%aas).html?title=Tutorial:PhysicsCollisionCallbacks_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Português) (page does not exist)">Tutorial:FísicaCallbacksDeColisão</a></li></ul>
+<h2><span class="mw-headline" id="Outros_Idiomas">Outros Idiomas</span></h2>
 <div class="i18n">
-<p><a href="../w/index5c4d.html?title=love.hasDeprecationOutput_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
-<a href="../w/index9fcc.html?title=love.hasDeprecationOutput_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
-<a href="love-25.html" title="love.hasDeprecationOutput">English</a>&#160;&#8211; 
-<a href="../w/index1dc7.html?title=love.hasDeprecationOutput_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Español) (page does not exist)">Español</a>&#160;&#8211;
-<a href="love-352.html" title="love.hasDeprecationOutput (Français)">Français</a>&#160;&#8211;
-<a href="../w/indexf515.html?title=love.hasDeprecationOutput_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
-<a href="love-353.html" title="love.hasDeprecationOutput (Italiano)">Italiano</a>&#160;&#8211;
-<a href="../w/index9664.html?title=love.hasDeprecationOutput_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
-<a href="../w/index8c0c.html?title=love.hasDeprecationOutput_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
-<a href="../w/index58c7.html?title=love.hasDeprecationOutput_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
-<a href="../w/indexf90d.html?title=love.hasDeprecationOutput_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Polski) (page does not exist)">Polski</a>&#160;&#8211;
-<a href="../w/index5991.html?title=love.hasDeprecationOutput_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Português) (page does not exist)">Português</a>&#160;&#8211;
-<a href="../w/indexc875.html?title=love.hasDeprecationOutput_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Română) (page does not exist)">Română</a>&#160;&#8211;
-<a class="mw-selflink selflink">Slovenský</a>&#160;&#8211;
-<a href="../w/indexfca5.html?title=love.hasDeprecationOutput_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
-<a href="../w/indexf29f.html?title=love.hasDeprecationOutput_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
-<a href="../w/indexb1e2.html?title=love.hasDeprecationOutput_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
-<a href="../w/index3868.html?title=love.hasDeprecationOutput_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Česky) (page does not exist)">Česky</a>&#160;&#8211;
-<a href="../w/index902c.html?title=love.hasDeprecationOutput_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
-<a href="../w/indexad9a.html?title=love.hasDeprecationOutput_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Български) (page does not exist)">Български</a>&#160;&#8211;
-<a href="love-355.html" title="love.hasDeprecationOutput (Русский)">Русский</a>&#160;&#8211;
-<a href="../w/indexc839.html?title=love.hasDeprecationOutput_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Српски) (page does not exist)">Српски</a>&#160;&#8211;
-<a href="../w/indexbcc8.html?title=love.hasDeprecationOutput_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Українська) (page does not exist)">Українська</a>&#160;&#8211;
-<a href="../w/indexfc5a.html?title=love.hasDeprecationOutput_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (עברית) (page does not exist)">עברית</a>&#160;&#8211;
-<a href="../w/index1e1a.html?title=love.hasDeprecationOutput_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
-<a href="love-356.html" title="love.hasDeprecationOutput (日本語)">日本語</a>&#160;&#8211;
-<a href="../w/indexba02.html?title=love.hasDeprecationOutput_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
-<a href="love-357.html" title="love.hasDeprecationOutput (简体中文)">简体中文</a>&#160;&#8211;
-<a href="../w/index04f1.html?title=love.hasDeprecationOutput_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
-<a href="../w/index3fee.html?title=love.hasDeprecationOutput_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="love.hasDeprecationOutput (한국어) (page does not exist)">한국어</a> 
+<p><a href="love-345.html?title=love.physics_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love-346.html" title="love.physics (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="love-13.html" title="love.physics">English</a>&#160;&#8211; 
+<a href="../w/index2fb3.html?title=love.physics_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="love-347.html" title="love.physics (Français)">Français</a>&#160;&#8211;
+<a href="love-348.html?title=love.physics_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="love-349.html" title="love.physics (Italiano)">Italiano</a>&#160;&#8211;
+<a href="love-350.html?title=love.physics_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="love-351.html?title=love.physics_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="love-352.html?title=love.physics_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="love-353.html?title=love.physics_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a class="mw-selflink selflink">Português</a>&#160;&#8211;
+<a href="love-355.html" title="love.physics (Română)">Română</a>&#160;&#8211;
+<a href="love-356.html?title=love.physics_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="love-357.html?title=love.physics_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="love-358.html?title=love.physics_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="love-359.html?title=love.physics_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="love-360.html" title="love.physics (Česky)">Česky</a>&#160;&#8211;
+<a href="love-361.html?title=love.physics_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="love-362.html?title=love.physics_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="love-75.html" title="love.physics (Русский)">Русский</a>&#160;&#8211;
+<a href="love-363.html?title=love.physics_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="love-364.html?title=love.physics_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="love-365.html?title=love.physics_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="love-366.html?title=love.physics_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love-367.html" title="love.physics (日本語)">日本語</a>&#160;&#8211;
+<a href="love-368.html?title=love.physics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.physics (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love-369.html" title="love.physics (简体中文)">简体中文</a>&#160;&#8211;
+<a href="love-370.html" title="love.physics (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="love-371.html" title="love.physics (한국어)">한국어</a> 
 <br />
 <span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
 </p>
@@ -126,36 +352,36 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20240405213634
+Cached time: 20240405224909
 Cache expiry: 86400
 Dynamic content: false
-[SMW] In‐text annotation parser time: 0.001 seconds
-CPU time usage: 0.027 seconds
-Real time usage: 0.136 seconds
-Preprocessor visited node count: 385/1000000
-Preprocessor generated node count: 1488/1000000
-Post‐expand include size: 4617/2097152 bytes
-Template argument size: 2272/2097152 bytes
-Highest expansion depth: 7/40
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.081 seconds
+Real time usage: 0.099 seconds
+Preprocessor visited node count: 1472/1000000
+Preprocessor generated node count: 3394/1000000
+Post‐expand include size: 44246/2097152 bytes
+Template argument size: 5879/2097152 bytes
+Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 329/5000000 bytes
+Unstrip post‐expand size: 0/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  121.682      1 -total
-  6.89%    8.386      1 Template:newin_(Slovenský)
-  4.34%    5.275      1 Template:i18n
-  2.39%    2.902     28 Template:Lang
-  2.07%    2.516      1 Template:inýPrvok_(Slovenský)
-  1.24%    1.503      1 Template:param_(Slovenský)
+100.00%   46.834      1 -total
+ 25.88%   12.119     33 Template:ListingFields
+ 11.43%    5.351      1 Template:i18n
+  5.93%    2.778     28 Template:Lang
+  2.43%    1.139      3 Template:ListingIntro
+  1.79%    0.837      3 Template:ListingOutro
 -->
 </div>
-<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:6574-0!canonical and timestamp 20240405213634 and revision id 22196
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:1473-0!canonical and timestamp 20240405224909 and revision id 25602
  -->
 </div><div class="printfooter">
-Retrieved from "<a dir="ltr" href="../w/indexfb98-2.html?title=love.hasDeprecationOutput_(Slovensk%c3%bd)&amp;oldid=22196">http://love2d.org/w/index.php?title=love.hasDeprecationOutput_(Slovenský)&amp;oldid=22196</a>"</div>
-					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Categories</a>: <ul><li><a href="../w/indexf678.html?title=Category:Templates_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Category:Templates (Slovenský) (page does not exist)">Templates (Slovenský)</a></li><li><a href="Category_Functions_(Slovensk%c3%bd).html" title="Category:Functions (Slovenský)">Functions (Slovenský)</a></li><li><a href="Category_Slovensk%c3%bd.html" title="Category:Slovenský">Slovenský</a></li></ul></div></div>					<!-- end content -->
+Retrieved from "<a dir="ltr" href="../w/indexf71f.html?title=love.physics_(Portugu%c3%aas)&amp;oldid=25602">http://love2d.org/w/index.php?title=love.physics_(Português)&amp;oldid=25602</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Modules.html" title="Category:Modules">Modules</a></li></ul></div></div>					<!-- end content -->
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -166,7 +392,7 @@ Retrieved from "<a dir="ltr" href="../w/indexfb98-2.html?title=love.hasDeprecati
 
 				<div class="pBody">
 					<ul>
-													<li id="pt-login"><a href="../w/index2292-4.html?title=Special:UserLogin&amp;returnto=love.hasDeprecationOutput+%28Slovensk%C3%BD%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+													<li id="pt-login"><a href="../w/index4939.html?title=Special:UserLogin&amp;returnto=love.physics+%28Portugu%C3%AAs%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
 											</ul>
 				</div>
 			</div>
@@ -241,13 +467,13 @@ Retrieved from "<a dir="ltr" href="../w/indexfb98-2.html?title=love.hasDeprecati
 
 			<div class="pBody">
 				<ul>
-											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-353.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-353.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-196.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-196.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
 											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-											<li id="t-print"><a href="../w/indexd5c0.html?title=love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-											<li id="t-permalink"><a href="../w/index2b98-3.html?title=love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;oldid=22196" title="Permanent link to this revision of the page">Permanent link</a></li>
-											<li id="t-info"><a href="../w/indexbf89-2.html?title=love.hasDeprecationOutput_(Slovensk%C3%BD)&amp;action=info" title="More information about this page">Page information</a></li>
-											<li id="t-smwbrowselink"><a href="Special_Browse/_love-353.html" rel="search">Browse properties</a></li>
+											<li id="t-print"><a href="../w/indexbde5.html?title=love.physics_(Portugu%C3%AAs)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index8435-2.html?title=love.physics_(Portugu%C3%AAs)&amp;oldid=25602" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index29f4-2.html?title=love.physics_(Portugu%C3%AAs)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_love-196.html" rel="search">Browse properties</a></li>
 									</ul>
 							</div>
 		</div>
@@ -262,7 +488,7 @@ Retrieved from "<a dir="ltr" href="../w/indexfb98-2.html?title=love.hasDeprecati
 									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
 							</div>
 					<ul id="f-list">
-									<li id="lastmod"> This page was last edited on 27 December 2018, at 09:17.</li>
+									<li id="lastmod"> This page was last edited on 28 November 2020, at 15:45.</li>
 									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
 									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
 									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
@@ -270,6 +496,6 @@ Retrieved from "<a dir="ltr" href="../w/indexfb98-2.html?title=love.hasDeprecati
 							</ul>
 		</div>
 		</div>
-		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.027","walltime":"0.136","ppvisitednodes":{"value":385,"limit":1000000},"ppgeneratednodes":{"value":1488,"limit":1000000},"postexpandincludesize":{"value":4617,"limit":2097152},"templateargumentsize":{"value":2272,"limit":2097152},"expansiondepth":{"value":7,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":329,"limit":5000000},"timingprofile":["100.00%  121.682      1 -total","  6.89%    8.386      1 Template:newin_(Slovenský)","  4.34%    5.275      1 Template:i18n","  2.39%    2.902     28 Template:Lang","  2.07%    2.516      1 Template:inýPrvok_(Slovenský)","  1.24%    1.503      1 Template:param_(Slovenský)"]},"cachereport":{"timestamp":"20240405213634","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":35});});</script></body>
-<!-- Mirrored from love2d.org/wiki/love.hasDeprecationOutput_(Slovenský) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:32 GMT -->
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.081","walltime":"0.099","ppvisitednodes":{"value":1472,"limit":1000000},"ppgeneratednodes":{"value":3394,"limit":1000000},"postexpandincludesize":{"value":44246,"limit":2097152},"templateargumentsize":{"value":5879,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   46.834      1 -total"," 25.88%   12.119     33 Template:ListingFields"," 11.43%    5.351      1 Template:i18n","  5.93%    2.778     28 Template:Lang","  2.43%    1.139      3 Template:ListingIntro","  1.79%    0.837      3 Template:ListingOutro"]},"cachereport":{"timestamp":"20240405224909","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
+<!-- Mirrored from love2d.org/wiki/love.physics_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:37 GMT -->
 </html>

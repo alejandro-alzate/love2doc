@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 03:57:59 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -50,8 +50,8 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Les fonctions <a href="Category_Callbacks_(Fran%c3%a7ais).html" title="Category:Callbacks (Français)">callback</a> (fonctions de rappel) sont appelées dans LÖVE par la fonction <a href="love-625.html" title="love.run (Français)">love.run</a> pour effectuer des tâches diverses et sont toutes facultatives. Toutefois, pour une expérience de jeu complète il faudra probablement en utiliser la quasi-totalité, il est donc intéressant de les connaître.
-</p><p>Une fonction de rappel, pour ceux qui sont nouveaux en programmation ou peu familier avec ce terme, est une fonction qui fonctionne en arrière en quelque sorte. Dans le cas d'une fonction classique comme <a href="love.graphics-166.html" title="love.graphics.draw (Français)">love.graphics.draw</a> ou math.floor, vous appelez cette fonction et LÖVE ou Lua effectue une tâche. Dans le cas d'une fonction de rappel (callback), au contraire, c'est vous qui développez la fonction et LÖVE qui l'appelle lorsque nécessaire. Cela permet de laisser votre code organisé et optimal. Par exemple, comme love.load ne sera appelé que lorsque le jeu est démarré pour la première fois (avant tout autre callback), c'est un endroit approprié pour placer le code qui charge le contenu du jeu et prépare également ses différents éléments.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Les fonctions <a href="Category_Callbacks_(Fran%c3%a7ais).html" title="Category:Callbacks (Français)">callback</a> (fonctions de rappel) sont appelées dans LÖVE par la fonction <a href="love-565.html" title="love.run (Français)">love.run</a> pour effectuer des tâches diverses et sont toutes facultatives. Toutefois, pour une expérience de jeu complète il faudra probablement en utiliser la quasi-totalité, il est donc intéressant de les connaître.
+</p><p>Une fonction de rappel, pour ceux qui sont nouveaux en programmation ou peu familier avec ce terme, est une fonction qui fonctionne en arrière en quelque sorte. Dans le cas d'une fonction classique comme <a href="love.graphics-165.html" title="love.graphics.draw (Français)">love.graphics.draw</a> ou math.floor, vous appelez cette fonction et LÖVE ou Lua effectue une tâche. Dans le cas d'une fonction de rappel (callback), au contraire, c'est vous qui développez la fonction et LÖVE qui l'appelle lorsque nécessaire. Cela permet de laisser votre code organisé et optimal. Par exemple, comme love.load ne sera appelé que lorsque le jeu est démarré pour la première fois (avant tout autre callback), c'est un endroit approprié pour placer le code qui charge le contenu du jeu et prépare également ses différents éléments.
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
@@ -68,7 +68,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="love.load"><a href="love-626.html" title="love.load (Français)">love.load</a></span></h2>
+<h2><span class="mw-headline" id="love.load"><a href="love-566.html" title="love.load (Français)">love.load</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
    <span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -79,7 +79,7 @@
 </pre></div>
 <p>Cette fonction est appelée une seule fois, lorsque le jeu est lancé, et est généralement celle où vous chargez des ressources, initialisez des variables et des paramètres spécifiques. Toutes ces choses peuvent aussi bien être faites n'importe où, mais les faire à cette endroit signifie qu'elles ne sont exécutées qu'une fois, ce qui économise beaucoup de ressources système.
 </p>
-<h2><span class="mw-headline" id="love.update"><a href="love-627.html" title="love.update (Français)">love.update</a></span></h2>
+<h2><span class="mw-headline" id="love.update"><a href="love-567.html" title="love.update (Français)">love.update</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- Cela incrémentera num par 100 à chaque seconde</span>
@@ -88,13 +88,13 @@
 </pre></div>
 <p>Cette fonction est appelée en permanence et sera probablement l'endroit où la plupart de vos calculs seront effectués. 'dt' signifie «&#160;<a href="love.timer-8.html" title="love.timer.getDelta (Français)">delta temps</a>&#160;», c'est le nombre de secondes depuis la dernière fois que cette fonction a été appelée (qui est habituellement une petite valeur du type 0.025714). 
 </p>
-<h2><span class="mw-headline" id="love.draw"><a href="love-628.html" title="love.draw (Français)">love.draw</a></span></h2>
+<h2><span class="mw-headline" id="love.draw"><a href="love-568.html" title="love.draw (Français)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cliquez et glissez le gâteau autour, ou utilisez les touches de direction&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><code><a href="love-628.html" title="love.draw (Français)">love.draw</a></code> est l'endroit pour tout ce qui concerne l'affichage («&#160;draw&#160;» signifie tracer) et si vous appelez l'un des <code><a href="love.graphics-166.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> en dehors de cette fonction elle n'aura pas d'effet. Cette fonction est aussi appelée en permanence, gardez donc à l'esprit que si vous modifiez la police/couleur/mode/etc à la fin de la fonction, alors cela aura un effet sur les éléments au début de la fonction. Par exemple&#160;: 
+<p><code><a href="love-568.html" title="love.draw (Français)">love.draw</a></code> est l'endroit pour tout ce qui concerne l'affichage («&#160;draw&#160;» signifie tracer) et si vous appelez l'un des <code><a href="love.graphics-165.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> en dehors de cette fonction elle n'aura pas d'effet. Cette fonction est aussi appelée en permanence, gardez donc à l'esprit que si vous modifiez la police/couleur/mode/etc à la fin de la fonction, alors cela aura un effet sur les éléments au début de la fonction. Par exemple&#160;: 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -106,7 +106,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ce texte est rouge&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.mousepressed"><a href="love-629.html" title="love.mousepressed (Français)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="love-569.html" title="love.mousepressed (Français)">love.mousepressed</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Disponible depuis LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -121,9 +121,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Cette fonction (souris pressée) est appelée à chaque fois qu'un bouton de la souris est pressé. Elle reçoit le bouton et les coordonnées de l'emplacement où celui-ci a été pressé. Le bouton peut être l'une de ces <a href="MouseConstant_(Fran%c3%a7ais).html" title="MouseConstant (Français)">constantes</a>. Cette fonction va de paire avec <code><a href="love-630.html" title="love.mousereleased (Français)">love.mousereleased</a></code> (souris relâché). 
+<p>Cette fonction (souris pressée) est appelée à chaque fois qu'un bouton de la souris est pressé. Elle reçoit le bouton et les coordonnées de l'emplacement où celui-ci a été pressé. Le bouton peut être l'une de ces <a href="MouseConstant_(Fran%c3%a7ais).html" title="MouseConstant (Français)">constantes</a>. Cette fonction va de paire avec <code><a href="love-570.html" title="love.mousereleased (Français)">love.mousereleased</a></code> (souris relâché). 
 </p>
-<h2><span class="mw-headline" id="love.mousereleased"><a href="love-630.html" title="love.mousereleased (Français)">love.mousereleased</a></span></h2>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="love-570.html" title="love.mousereleased (Français)">love.mousereleased</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Disponible depuis LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -137,9 +137,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Cette fonction (souris relâchée) est appelée chaque fois qu'un bouton de la souris est relâché et il reçoit le bouton et les coordonnées de l'endroit où il a été relâché. Vous pouvez avoir cette fonction avec ou sans <code><a href="love-629.html" title="love.mousepressed (Français)">love.mousepressed</a></code>, ces 2 fonctions ne sont absolument pas liées.
+<p>Cette fonction (souris relâchée) est appelée chaque fois qu'un bouton de la souris est relâché et il reçoit le bouton et les coordonnées de l'endroit où il a été relâché. Vous pouvez avoir cette fonction avec ou sans <code><a href="love-569.html" title="love.mousepressed (Français)">love.mousepressed</a></code>, ces 2 fonctions ne sont absolument pas liées.
 </p>
-<h2><span class="mw-headline" id="love.keypressed"><a href="love-631.html" title="love.keypressed (Français)">love.keypressed</a></span></h2>
+<h2><span class="mw-headline" id="love.keypressed"><a href="love-571.html" title="love.keypressed (Français)">love.keypressed</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was pressed.&quot;</span>
@@ -148,9 +148,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Cette fonction (touche préssée) est appelée chaque fois qu'une touche du clavier est enfoncée et reçoit la touche (key) qui a été enfoncée. La touche peut être l'une de ces <a href="KeyConstant_(Fran%c3%a7ais).html" title="KeyConstant (Français)">constantes</a>. Cette fonction va très bien avec <code><a href="love-632.html" title="love.keyreleased (Français)">love.keyreleased</a></code> (touche relâchée). 
+<p>Cette fonction (touche préssée) est appelée chaque fois qu'une touche du clavier est enfoncée et reçoit la touche (key) qui a été enfoncée. La touche peut être l'une de ces <a href="KeyConstant_(Fran%c3%a7ais).html" title="KeyConstant (Français)">constantes</a>. Cette fonction va très bien avec <code><a href="love-572.html" title="love.keyreleased (Français)">love.keyreleased</a></code> (touche relâchée). 
 </p>
-<h2><span class="mw-headline" id="love.keyreleased"><a href="love-632.html" title="love.keyreleased (Français)">love.keyreleased</a></span></h2>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="love-572.html" title="love.keyreleased (Français)">love.keyreleased</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was released.&quot;</span>
@@ -159,9 +159,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Cette fonction est appelée chaque fois qu'une touche du clavier est relâchée et reçoit la touche (key) qui a été relâchée. Vous pouvez avoir cette fonction avec ou sans <code><a href="love-631.html" title="love.keypressed (Français)">love.keypressed</a></code> (touche pressée), elles ne sont absolument pas liées.
+<p>Cette fonction est appelée chaque fois qu'une touche du clavier est relâchée et reçoit la touche (key) qui a été relâchée. Vous pouvez avoir cette fonction avec ou sans <code><a href="love-571.html" title="love.keypressed (Français)">love.keypressed</a></code> (touche pressée), elles ne sont absolument pas liées.
 </p>
-<h2><span class="mw-headline" id="love.focus"><a href="love-633.html" title="love.focus (Français)">love.focus</a></span></h2>
+<h2><span class="mw-headline" id="love.focus"><a href="love-573.html" title="love.focus (Français)">love.focus</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LOST FOCUS&quot;</span><span class="p">)</span>
@@ -172,7 +172,7 @@
 </pre></div>
 <p>Cette fonction est appelée lorsque l'utilisateur clique hors ou dans la fenêtre LÖVE. Par exemple, s'il joue en mode fenêtré et qu'il clique sur son navigateur Internet, le jeu pourrait être notifié et automatiquement mettre en pause la partie. 
 </p>
-<h2><span class="mw-headline" id="love.quit"><a href="love-634.html" title="love.quit (Français)">love.quit</a></span></h2>
+<h2><span class="mw-headline" id="love.quit"><a href="love-574.html" title="love.quit (Français)">love.quit</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thanks for playing! Come back soon!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
@@ -312,7 +312,7 @@ Retrieved from "<a dir="ltr" href="../w/indexbeb0.html?title=Tutorial:Callback_F
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -363,5 +363,5 @@ Retrieved from "<a dir="ltr" href="../w/indexbeb0.html?title=Tutorial:Callback_F
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.042","walltime":"1.005","ppvisitednodes":{"value":429,"limit":1000000},"ppgeneratednodes":{"value":1127,"limit":1000000},"postexpandincludesize":{"value":4803,"limit":2097152},"templateargumentsize":{"value":2208,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10536,"limit":5000000},"timingprofile":["100.00%  595.420      1 -total","  0.97%    5.754      1 Template:i18n","  0.52%    3.099     28 Template:Lang","  0.44%    2.609      2 Template:newin_(Français)"]},"cachereport":{"timestamp":"20240405165934","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":27});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 03:58:26 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 </html>

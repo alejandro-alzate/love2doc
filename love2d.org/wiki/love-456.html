@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/love.textinput_(简体中文) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:35 GMT -->
+<!-- Mirrored from love2d.org/wiki/love.timer_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:38 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
-<title>love.textinput (简体中文) - LOVE</title>
+<title>love.timer (Français) - LOVE</title>
 <script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.textinput_(简体中文)","wgTitle":"love.textinput (简体中文)","wgCurRevisionId":28186,"wgRevisionId":28186,"wgArticleId":8190,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Callbacks"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.textinput_(简体中文)","wgRelevantArticleId":8190,"wgRequestId":"4ff887387229760e88aeb6bd","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
-});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
-<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.timer_(Français)","wgTitle":"love.timer (Français)","wgCurRevisionId":26682,"wgRevisionId":26682,"wgArticleId":826,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Modules (Français)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.timer_(Français)","wgRelevantArticleId":826,"wgRequestId":"0662dff7894ec3431f5ac287","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);});</script>
 <link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
 <script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
 <!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 <meta name="generator" content="MediaWiki 1.31.12"/>
-<link rel="alternate" type="application/rdf+xml" title="love.textinput (简体中文)" href="../w/index7676-5.html?title=Special:ExportRDF/love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;xmlmime=rdf"/>
+<link rel="alternate" type="application/rdf+xml" title="love.timer (Français)" href="../w/index4d2a-4.html?title=Special:ExportRDF/love.timer_(Fran%C3%A7ais)&amp;xmlmime=rdf"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
 <link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
 <!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
 </head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_textinput_简体中文 rootpage-love_textinput_简体中文 skin-love action-view"><div id="globalWrapper">
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_timer_Français rootpage-love_timer_Français skin-love action-view"><div id="globalWrapper">
 		<div id="column-content">
 			<div id="content" class="mw-body" role="main">
 				<a id="top"></a>
@@ -34,14 +34,14 @@
 			<div>
 				<ul>
 				<li id="ca-nstab-main" class="selected"><a href="love-456.html" title="View the content page [c]" accesskey="c">Page</a></li>
-				<li id="ca-talk" class="new"><a href="../w/index614f.html?title=Talk:love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
-				<li id="ca-viewsource"><a href="../w/indexed47.html?title=love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
-				<li id="ca-history"><a href="../w/indexc580-2.html?title=love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				<li id="ca-talk" class="new"><a href="../w/indexa5ba.html?title=Talk:love.timer_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/index1501.html?title=love.timer_(Fran%C3%A7ais)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/indexcf46.html?title=love.timer_(Fran%C3%A7ais)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
 				</ul>
 							</div>
 		</div>
 	
-				<h1 id="firstHeading" class="firstHeading" lang="en">love.textinput (简体中文)</h1>
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.timer (Français)</h1>
 
 				<div id="bodyContent">
 					<!-- <div id="siteSub">From LOVE</div> -->
@@ -50,132 +50,99 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Fournit des fonctions de temps de grande précision.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
 <tbody><tr>
-<td><i> <b>Available since LÖVE <a href="0.9.html" title="0.9.0">0.9.0</a></b> </i>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>Attention cette page ne reflète pas forcément la totalité des modules, types, fonctions etc, voir la <a href="love-17.html" title="love.timer">version en anglais de cette page</a> pour vérifier.
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><h2><span class="mw-headline" id="Fonctions">Fonctions</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-26.html" title="love.timer.getAverageDelta (Français)">love.timer.getAverageDelta (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne le delta de temps moyen pendant la dernière seconde.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
 </td></tr>
+
 <tr>
-<td><small>This variant is not supported in earlier versions.</small>
-</td></tr></tbody></table>
-<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#.E5.87.BD.E6.95.B0"><span class="tocnumber">1</span> <span class="toctext">函数</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#.E6.A6.82.E8.A6.81"><span class="tocnumber">1.1</span> <span class="toctext">概要</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#.E5.8F.82.E6.95.B0"><span class="tocnumber">1.2</span> <span class="toctext">参数</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#Returns"><span class="tocnumber">1.3</span> <span class="toctext">Returns</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-5"><a href="#.E6.B3.A8.E9.87.8A"><span class="tocnumber">2</span> <span class="toctext">注释</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#.E4.BE.8B.E5.AD.90"><span class="tocnumber">3</span> <span class="toctext">例子</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#.E5.85.B6.E4.BB.96.E7.9B.B8.E5.85.B3"><span class="tocnumber">4</span> <span class="toctext">其他相关</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#.E5.85.B6.E4.BB.96.E8.AF.AD.E8.A8.80"><span class="tocnumber">5</span> <span class="toctext">其他语言</span></a></li>
-</ul>
-</div>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-8.html" title="love.timer.getDelta (Français)">love.timer.getDelta (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne le temps écoulé entre les deux dernières images.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
 
-<h2><span id="函数"></span><span class="mw-headline" id=".E5.87.BD.E6.95.B0">函数</span></h2>
-<p>当用户输入文本时调用。例如，如果在键盘上按下 shift + 2，则会生成“@”。
-</p>
-<h3><span id="概要"></span><span class="mw-headline" id=".E6.A6.82.E8.A6.81">概要</span></h3>
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">textinput</span><span class="p">(</span> <span class="n">text</span> <span class="p">)</span>
-</pre></div>
-<h3><span id="参数"></span><span class="mw-headline" id=".E5.8F.82.E6.95.B0">参数</span></h3>
-<dl><dt><code><a href="string-2.html" title="string">string</a> text</code></dt>
-<dd>UTF-8 文本</dd></dl>
-<h3><span class="mw-headline" id="Returns">Returns</span></h3>
-<p>无返回
-</p>
-<h2><span id="注释"></span><span class="mw-headline" id=".E6.B3.A8.E9.87.8A">注释</span></h2>
-<p>在 Android 和 iOS 上，默认禁用 textinput；调用love.keyboard.setTextInput来启用它。
-</p>
-<h2><span id="例子"></span><span class="mw-headline" id=".E4.BE.8B.E5.AD.90">例子</span></h2>
-<p>记录并打印用户输入的文本。
-</p>
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Type away! -- &quot;</span>
-<span class="kr">end</span>
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-36.html" title="love.timer.getFPS (Français)">love.timer.getFPS (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne le nombre d'images par seconde actuel.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
 
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">textinput</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">..</span> <span class="n">t</span>
-<span class="kr">end</span>
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-47.html" title="love.timer.getTime (Français)">love.timer.getTime (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne la valeur d'un chronomètre précis avec un temps de départ donné auparavant.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.3.html" title="0.3.2">0.3.2</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
 
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
-    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">getWidth</span><span class="p">())</span>
-<span class="kr">end</span>
-</pre></div>
-<p>打印用户输入的文字，并在按下退格键（backspace）时删除一个文字。
-</p>
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">utf8</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-53.html" title="love.timer.sleep (Français)">love.timer.sleep (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Met en pause le fil d'exécution actuel pour une durée de temps spécifiée.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.2.html" title="0.2.1">0.2.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
 
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Type away! -- &quot;</span>
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.timer-58.html" title="love.timer.step (Français)">love.timer.step (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Mesure le temps entre deux images temporelles.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
 
-    <span class="c1">-- enable key repeat so backspace can be held down to trigger love.keypressed multiple times.</span>
-    <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">setKeyRepeat</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
-<span class="kr">end</span>
-
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">textinput</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">..</span> <span class="n">t</span>
-<span class="kr">end</span>
-
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;backspace&quot;</span> <span class="kr">then</span>
-        <span class="c1">-- get the byte offset to the last UTF-8 character in the string.</span>
-        <span class="kd">local</span> <span class="n">byteoffset</span> <span class="o">=</span> <span class="nb">utf8.offset</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-        <span class="kr">if</span> <span class="n">byteoffset</span> <span class="kr">then</span>
-            <span class="c1">-- remove the last UTF-8 character.</span>
-            <span class="c1">-- string.sub operates on bytes rather than UTF-8 characters, so we couldn&#39;t do string.sub(text, 1, -2).</span>
-            <span class="n">text</span> <span class="o">=</span> <span class="nb">string.sub</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">byteoffset</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="kr">end</span>
-    <span class="kr">end</span>
-<span class="kr">end</span>
-
-<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
-    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">getWidth</span><span class="p">())</span>
-<span class="kr">end</span>
-</pre></div>
-<h2><span id="其他相关"></span><span class="mw-headline" id=".E5.85.B6.E4.BB.96.E7.9B.B8.E5.85.B3">其他相关</span></h2>
-<ul><li><a href="love_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html" title="love (简体中文)">love (简体中文)</a></li>
-<li><a href="love-41.html" title="love.keypressed">love.keypressed</a></li>
-<li><a href="love.keyboard-10.html" title="love.keyboard.setTextInput">love.keyboard.setTextInput</a></li>
-<li><a href="love.keyboard-7.html" title="love.keyboard.hasTextInput">love.keyboard.hasTextInput</a></li>
-<li><a href="utf8.html" title="utf8">utf8</a></li>
-<li><a rel="nofollow" class="external text" href="https://wiki.libsdl.org/Tutorials/TextInput">textinput vs keypressed</a></li></ul>
+</tbody></table>
+<h2><span id="Voir_également"></span><span class="mw-headline" id="Voir_.C3.A9galement">Voir également</span></h2>
+<ul><li><a href="love_(Fran%c3%a7ais).html" title="love (Français)">love (Français)</a></li></ul>
 <p><br />
 </p>
-<h2><span id="其他语言"></span><span class="mw-headline" id=".E5.85.B6.E4.BB.96.E8.AF.AD.E8.A8.80">其他语言</span></h2>
+<h2><span class="mw-headline" id="Autres_langues">Autres langues</span></h2>
 <div class="i18n">
-<p><a href="../w/index71fb.html?title=love.textinput_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
-<a href="love-450.html" title="love.textinput (Deutsch)">Deutsch</a>&#160;&#8211;
-<a href="love-44.html" title="love.textinput">English</a>&#160;&#8211; 
-<a href="love-451.html" title="love.textinput (Español)">Español</a>&#160;&#8211;
-<a href="love-452.html" title="love.textinput (Français)">Français</a>&#160;&#8211;
-<a href="../w/indexcdc3.html?title=love.textinput_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
-<a href="../w/index6823.html?title=love.textinput_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
-<a href="../w/index84fe.html?title=love.textinput_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
-<a href="../w/indexa6e9.html?title=love.textinput_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
-<a href="../w/indexc8f8.html?title=love.textinput_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
-<a href="../w/index90dc.html?title=love.textinput_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Polski) (page does not exist)">Polski</a>&#160;&#8211;
-<a href="../w/index0826.html?title=love.textinput_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Português) (page does not exist)">Português</a>&#160;&#8211;
-<a href="../w/index733f.html?title=love.textinput_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Română) (page does not exist)">Română</a>&#160;&#8211;
-<a href="../w/indexaf44.html?title=love.textinput_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
-<a href="../w/index7681.html?title=love.textinput_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
-<a href="../w/index85b9.html?title=love.textinput_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
-<a href="../w/index21c4.html?title=love.textinput_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
-<a href="../w/indexd03e.html?title=love.textinput_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Česky) (page does not exist)">Česky</a>&#160;&#8211;
-<a href="../w/index1117.html?title=love.textinput_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
-<a href="../w/index640c.html?title=love.textinput_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Български) (page does not exist)">Български</a>&#160;&#8211;
-<a href="love-453.html" title="love.textinput (Русский)">Русский</a>&#160;&#8211;
-<a href="../w/indexdae0.html?title=love.textinput_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Српски) (page does not exist)">Српски</a>&#160;&#8211;
-<a href="love-454.html" title="love.textinput (Українська)">Українська</a>&#160;&#8211;
-<a href="../w/index3e8c.html?title=love.textinput_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (עברית) (page does not exist)">עברית</a>&#160;&#8211;
-<a href="../w/index099d.html?title=love.textinput_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
-<a href="love-455.html" title="love.textinput (日本語)">日本語</a>&#160;&#8211;
-<a href="../w/indexda7f.html?title=love.textinput_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
-<a class="mw-selflink selflink">简体中文</a>&#160;&#8211;
-<a href="../w/indexf0ba.html?title=love.textinput_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.textinput (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
-<a href="love-457.html" title="love.textinput (한국어)">한국어</a> 
+<p><a href="love-453.html?title=love.timer_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love-454.html" title="love.timer (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="love-17.html" title="love.timer">English</a>&#160;&#8211; 
+<a href="love-455.html" title="love.timer (Español)">Español</a>&#160;&#8211;
+<a class="mw-selflink selflink">Français</a>&#160;&#8211;
+<a href="love-457.html?title=love.timer_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="love-458.html" title="love.timer (Italiano)">Italiano</a>&#160;&#8211;
+<a href="love-459.html?title=love.timer_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="love-460.html?title=love.timer_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="love-461.html" title="love.timer (Nederlands)">Nederlands</a>&#160;&#8211;
+<a href="love-462.html?title=love.timer_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love-463.html" title="love.timer (Português)">Português</a>&#160;&#8211;
+<a href="love-464.html" title="love.timer (Română)">Română</a>&#160;&#8211;
+<a href="love-465.html" title="love.timer (Slovenský)">Slovenský</a>&#160;&#8211;
+<a href="love-466.html?title=love.timer_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="love-467.html?title=love.timer_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="love-468.html?title=love.timer_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="love-469.html?title=love.timer_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="love-470.html?title=love.timer_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="love-471.html?title=love.timer_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="love-79.html" title="love.timer (Русский)">Русский</a>&#160;&#8211;
+<a href="love-472.html?title=love.timer_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="love-473.html" title="love.timer (Українська)">Українська</a>&#160;&#8211;
+<a href="../w/index7c70.html?title=love.timer_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="love-474.html?title=love.timer_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love-475.html" title="love.timer (日本語)">日本語</a>&#160;&#8211;
+<a href="love-476.html?title=love.timer_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.timer (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love-477.html" title="love.timer (简体中文)">简体中文</a>&#160;&#8211;
+<a href="love-478.html" title="love.timer (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="love-479.html" title="love.timer (한국어)">한국어</a> 
 <br />
 <span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
 </p>
@@ -183,35 +150,37 @@
 
 <!-- 
 NewPP limit report
-Cached time: 20240405220119
+Cached time: 20240405175538
 Cache expiry: 86400
 Dynamic content: false
-[SMW] In‐text annotation parser time: 0.001 seconds
-CPU time usage: 0.028 seconds
-Real time usage: 0.324 seconds
-Preprocessor visited node count: 339/1000000
-Preprocessor generated node count: 1051/1000000
-Post‐expand include size: 3674/2097152 bytes
-Template argument size: 1433/2097152 bytes
-Highest expansion depth: 5/40
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.036 seconds
+Real time usage: 0.050 seconds
+Preprocessor visited node count: 501/1000000
+Preprocessor generated node count: 1439/1000000
+Post‐expand include size: 11008/2097152 bytes
+Template argument size: 2185/2097152 bytes
+Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 5133/5000000 bytes
+Unstrip post‐expand size: 0/5000000 bytes
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  308.622      1 -total
-  1.77%    5.473      1 Template:i18n
-  0.96%    2.976     28 Template:Lang
-  0.47%    1.446      1 Template:param
-  0.45%    1.399      1 Template:newin
+100.00%   33.212      1 -total
+ 15.65%    5.199      1 Template:i18n
+  8.74%    2.903      6 Template:ListingFields
+  8.66%    2.877     28 Template:Lang
+  3.46%    1.148      1 Template:notice
+  2.91%    0.966      1 Template:ListingIntro
+  2.18%    0.723      1 Template:ListingOutro
 -->
 </div>
-<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:8190-0!canonical and timestamp 20240405220119 and revision id 28186
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:826-0!canonical and timestamp 20240405175538 and revision id 26682
  -->
 </div><div class="printfooter">
-Retrieved from "<a dir="ltr" href="../w/indexef9d-2.html?title=love.textinput_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87)&amp;oldid=28186">http://love2d.org/w/index.php?title=love.textinput_(简体中文)&amp;oldid=28186</a>"</div>
-					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Callbacks.html" title="Category:Callbacks">Callbacks</a></li></ul></div></div>					<!-- end content -->
+Retrieved from "<a dir="ltr" href="../w/indexf82f.html?title=love.timer_(Fran%c3%a7ais)&amp;oldid=26682">http://love2d.org/w/index.php?title=love.timer_(Français)&amp;oldid=26682</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Modules_(Fran%c3%a7ais).html" title="Category:Modules (Français)">Modules (Français)</a></li></ul></div></div>					<!-- end content -->
 										<div class="visualClear"></div>
 				</div>
 			</div>
@@ -222,7 +191,7 @@ Retrieved from "<a dir="ltr" href="../w/indexef9d-2.html?title=love.textinput_(%
 
 				<div class="pBody">
 					<ul>
-													<li id="pt-login"><a href="../w/index8a51.html?title=Special:UserLogin&amp;returnto=love.textinput+%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+													<li id="pt-login"><a href="../w/indexf348.html?title=Special:UserLogin&amp;returnto=love.timer+%28Fran%C3%A7ais%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
 											</ul>
 				</div>
 			</div>
@@ -297,13 +266,13 @@ Retrieved from "<a dir="ltr" href="../w/indexef9d-2.html?title=love.textinput_(%
 
 			<div class="pBody">
 				<ul>
-											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-455.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
-											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-455.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-232.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-232.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
 											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
-											<li id="t-print"><a href="../w/index04e2.html?title=love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
-											<li id="t-permalink"><a href="../w/index7a48-2.html?title=love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;oldid=28186" title="Permanent link to this revision of the page">Permanent link</a></li>
-											<li id="t-info"><a href="../w/index0457.html?title=love.textinput_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=info" title="More information about this page">Page information</a></li>
-											<li id="t-smwbrowselink"><a href="Special_Browse/_love-455.html" rel="search">Browse properties</a></li>
+											<li id="t-print"><a href="../w/index4480.html?title=love.timer_(Fran%C3%A7ais)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index18d3.html?title=love.timer_(Fran%C3%A7ais)&amp;oldid=26682" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index7042.html?title=love.timer_(Fran%C3%A7ais)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_love-232.html" rel="search">Browse properties</a></li>
 									</ul>
 							</div>
 		</div>
@@ -318,7 +287,7 @@ Retrieved from "<a dir="ltr" href="../w/indexef9d-2.html?title=love.textinput_(%
 									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
 							</div>
 					<ul id="f-list">
-									<li id="lastmod"> This page was last edited on 12 January 2023, at 20:28.</li>
+									<li id="lastmod"> This page was last edited on 17 May 2021, at 12:23.</li>
 									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
 									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
 									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
@@ -326,6 +295,6 @@ Retrieved from "<a dir="ltr" href="../w/indexef9d-2.html?title=love.textinput_(%
 							</ul>
 		</div>
 		</div>
-		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.028","walltime":"0.324","ppvisitednodes":{"value":339,"limit":1000000},"ppgeneratednodes":{"value":1051,"limit":1000000},"postexpandincludesize":{"value":3674,"limit":2097152},"templateargumentsize":{"value":1433,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5133,"limit":5000000},"timingprofile":["100.00%  308.622      1 -total","  1.77%    5.473      1 Template:i18n","  0.96%    2.976     28 Template:Lang","  0.47%    1.446      1 Template:param","  0.45%    1.399      1 Template:newin"]},"cachereport":{"timestamp":"20240405220119","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":32});});</script></body>
-<!-- Mirrored from love2d.org/wiki/love.textinput_(简体中文) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:35 GMT -->
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.036","walltime":"0.050","ppvisitednodes":{"value":501,"limit":1000000},"ppgeneratednodes":{"value":1439,"limit":1000000},"postexpandincludesize":{"value":11008,"limit":2097152},"templateargumentsize":{"value":2185,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   33.212      1 -total"," 15.65%    5.199      1 Template:i18n","  8.74%    2.903      6 Template:ListingFields","  8.66%    2.877     28 Template:Lang","  3.46%    1.148      1 Template:notice","  2.91%    0.966      1 Template:ListingIntro","  2.18%    0.723      1 Template:ListingOutro"]},"cachereport":{"timestamp":"20240405175538","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
+<!-- Mirrored from love2d.org/wiki/love.timer_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:38 GMT -->
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Gridlocked_Player_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:17:37 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Gridlocked_Player_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -62,13 +62,13 @@
 </div>
 
 <h2><span id="コードの開始"></span><span class="mw-headline" id=".E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E9.96.8B.E5.A7.8B">コードの開始</span></h2>
-<p>最初に、自機を作成する必要があります。完了後に自機は様相を持つようになるため、従って player 変数を <a href="love-666.html" title="love.load (日本語)">love.load</a>() 内へテーブルとして作成します。
+<p>最初に、自機を作成する必要があります。完了後に自機は様相を持つようになるため、従って player 変数を <a href="love-606.html" title="love.load (日本語)">love.load</a>() 内へテーブルとして作成します。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
 	<span class="n">player</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="kr">end</span>
 </pre></div>
-<p>次に何を行っているのか確認する必要があるでしょう。 <a href="love-668.html" title="love.draw (日本語)">love.draw</a>() にて <a href="love.graphics-164.html" title="love.graphics.rectangle (日本語)">love.graphics.rectangle</a>() を使用することで自機に見立てた長方形を表示することができます。
+<p>次に何を行っているのか確認する必要があるでしょう。 <a href="love-608.html" title="love.draw (日本語)">love.draw</a>() にて <a href="love.graphics-163.html" title="love.graphics.rectangle (日本語)">love.graphics.rectangle</a>() を使用することで自機に見立てた長方形を表示することができます。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
 	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
@@ -87,8 +87,8 @@
 	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><a href="File_Grid_player_1.html" class="image"><img alt="Grid player 1.gif" src="../w/images/6/67/Grid_player_1.gif" width="800" height="600" /></a>
-</p><p>これで自機は位置を保持するようになったので、 <a href="love-671.html" title="love.keypressed (日本語)">love.keypressed</a>() を使用して操作の一部を追加します。していることは key の参照を行い一致するかどうかを確認して、一致すれば player テーブルにある値を変更します。
+<p><a href="File_Grid_player_1.html" class="image"><img alt="Grid player 1.gif" src="../w/images/6/67/Grid_player_1.html" width="800" height="600" /></a>
+</p><p>これで自機は位置を保持するようになったので、 <a href="love-611.html" title="love.keypressed (日本語)">love.keypressed</a>() を使用して操作の一部を追加します。していることは key の参照を行い一致するかどうかを確認して、一致すれば player テーブルにある値を変更します。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
@@ -150,7 +150,7 @@
 	<span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>恐らく気付いているでしょうが、多分ですが違いを一切見ることはできません。速度を制御するために <a href="love-667.html" title="love.update (日本語)">love.update</a> の <a href="dt_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="dt (日本語)">dt</a> 引数を使用して、位置の差に dt を乗算する必要があります:
+<p>恐らく気付いているでしょうが、多分ですが違いを一切見ることはできません。速度を制御するために <a href="love-607.html" title="love.update (日本語)">love.update</a> の <a href="dt_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="dt (日本語)">dt</a> 引数を使用して、位置の差に dt を乗算する必要があります:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
@@ -234,7 +234,7 @@
 <span class="kr">end</span>
 </pre></div>
 <p>この二重ループに関して数点ほど注意があります。 map テーブルは参照による方法で整列されます。この意味は座標であり通常の思考方法とは逆です。 x および y ではなく、 map は y および x です。さらに map は32 ピクセル単位です。それは歩行不能な正方形を描画する場合に、それらの位置に 32 を乗算する必要があることを意味します。
-</p><p><a href="File_Grid_player_2.html" class="image"><img alt="Grid player 2.gif" src="../w/images/7/71/Grid_player_2.gif" width="800" height="600" /></a>
+</p><p><a href="File_Grid_player_2.html" class="image"><img alt="Grid player 2.gif" src="../w/images/7/71/Grid_player_2.html" width="800" height="600" /></a>
 </p><p>自機が map 上の場所を歩行試験ができる関数を作成します。この関数は場所上を歩行可能なら true を、歩行不能なら false を返します。関数には二つの値を指定します: 変更する x および 変更する y です。 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">testMap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -338,7 +338,7 @@
 	<span class="kr">return</span> <span class="kc">true</span>
 <span class="kr">end</span>
 </pre></div>
-<p><a href="File_Grid_player_3.html" class="image"><img alt="Grid player 3.gif" src="../w/images/9/92/Grid_player_3.gif" width="800" height="600" /></a>
+<p><a href="File_Grid_player_3.html" class="image"><img alt="Grid player 3.gif" src="../w/images/9/92/Grid_player_3.html" width="800" height="600" /></a>
 </p><p>その他にも改良可能な若干の事項があります:
 </p>
 <ul><li>もちろん、この記事で網羅された技法を使用して、美術面を改良可能です: <a rel="nofollow" class="external autonumber" href="http://tommybrunn.com/2011/01/how-to-make-placeholder-art/">[1]</a></li>
@@ -438,7 +438,7 @@ Retrieved from "<a dir="ltr" href="../w/index36a5.html?title=Tutorial:Gridlocked
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -489,5 +489,5 @@ Retrieved from "<a dir="ltr" href="../w/index36a5.html?title=Tutorial:Gridlocked
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.059","walltime":"1.514","ppvisitednodes":{"value":122,"limit":1000000},"ppgeneratednodes":{"value":336,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":43773,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240405190924","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":31});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Gridlocked_Player_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:17:50 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Gridlocked_Player_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>

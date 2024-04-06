@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Gridlocked_Player&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>View source for Tutorial:Gridlocked Player - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Gridlocked_Player","wgTitle":"Gridlocked Player","wgCurRevisionId":9628,"wgRevisionId":0,"wgArticleId":1970,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Gridlocked_Player","wgRelevantArticleId":1970,"wgRequestId":"767a8e373eb39d97373b9532","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.edit.collapsibleFooter","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Gridlocked Player" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Tutorial:Gridlocked_Player&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Gridlocked_Player rootpage-Tutorial_Gridlocked_Player skin-love action-edit"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="http://love2d.org/wiki/Tutorial:Gridlocked_Player">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Tutorial_talk:Gridlocked_Player&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource" class="selected"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">View source for Tutorial:Gridlocked Player</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub">← <a href="/wiki/Tutorial:Gridlocked_Player" title="Tutorial:Gridlocked Player">Tutorial:Gridlocked Player</a></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text"><p>You do not have permission to edit this page, for the following reason:
+</p>
+<div class="permissions-errors">
+<p>The action you have requested is limited to users in the group: <a href="http://love2d.org/wiki/LOVE:Users" title="LOVE:Users">Users</a>.
+</p>
+</div>
+<hr />
+<p>You can view and copy the source of this page.
+</p><textarea readonly="" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" class="mw-editfont-monospace" lang="en" dir="ltr" name="wpTextbox1">In this tutorial, we will create a VERY basic game wherein you can move a "player" around the screen in fixed increments, but the player graphic moves in smaller increments. This could be useful if you are creating a game that is tile-based, and want your player to stay aligned to the grid, but don't want them to appear to teleport around.
+
+== Starting Code ==
+
+To start with, we need to create a player. The player will have several aspects before we're done, so we're going to make the player variable a table inside of [[love.load]]().
+&lt;source lang="lua">
+function love.load()
+	player = {}
+end
+&lt;/source>
+
+Next we'll need to see what we're doing. We can render the player as a rectangle using [[love.graphics.rectangle]]() in [[love.draw]]().
+&lt;source lang="lua">
+function love.draw()
+	love.graphics.rectangle("fill", 0, 0, 32, 32)
+end
+&lt;/source>
+
+Let's fill in the player table a little so that the player has a position. Note that we're using the shorthand way of putting variables into a table: just define them inside the curly brackets, using commas to separate them. (We also need to change the parameters in love.graphics.rectangle to use these new values.)
+&lt;source lang="lua">
+function love.load()
+	player = {
+		x = 256,
+		y = 256
+	}
+end
+
+function love.draw()
+	love.graphics.rectangle("fill", player.x, player.y, 32, 32)
+end
+&lt;/source>
+
+[[File:Grid_player_1.gif]]
+
+Now that the player has position, let's add in some controls using [[love.keypressed]](). All we do is check to see if the key matches, and change the value in the player table.
+&lt;source lang="lua">
+function love.keypressed(key)
+	if key == "down" then
+		player.y = player.y + 32
+	end
+end
+&lt;/source>
+
+So we now have a little square that can teleport down by one grid unit (32 pixels in our case, the same length that we made our player).
+
+== Expansion ==
+
+We can expand this to more keys using elseif. Notice that everything is still in units of 32, a common tile size that plays nice with [[PO2_Syndrome]].
+&lt;source lang="lua">
+function love.keypressed(key)
+	if key == "up" then
+		player.y = player.y - 32
+	elseif key == "down" then
+		player.y = player.y + 32
+	elseif key == "left" then
+		player.x = player.x - 32
+	elseif key == "right" then
+		player.x = player.x + 32
+	end
+end
+&lt;/source>
+
+So we now have a happy little square that can jump around the screen as fast as you can hit the keyboard. Now let's add in the smooth transitions. To do this, we're going to need to shift up the variables in the player table. Don't forget that this will affect all references to the player table.
+
+There are two things that we will now need. One, we need actual XY coordinates as opposed to the gridlocked coordinates that will now serve as destination coordinates. Two, we need to update the actual coordinates in love.update() to move towards the destination coordinates. We can do that with a simple math problem: 
+&lt;source lang="lua">
+actual_x = actual_x - (actual_x - destination_x)
+&lt;/source>
+Or, in real Lua this time:
+&lt;source lang="lua">
+function love.load()
+	player = {
+		grid_x = 256,
+		grid_y = 256,
+		act_x = 200,
+		act_y = 200
+	}
+end
+
+function love.update(dt)
+	player.act_y = player.act_y - (player.act_y - player.grid_y)
+	player.act_x = player.act_x - (player.act_x - player.grid_x)
+end
+
+function love.draw()
+	love.graphics.rectangle("fill", player.act_x, player.act_y, 32, 32)
+end
+
+function love.keypressed(key)
+	if key == "up" then
+		player.grid_y = player.grid_y - 32
+	elseif key == "down" then
+		player.grid_y = player.grid_y + 32
+	elseif key == "left" then
+		player.grid_x = player.grid_x - 32
+	elseif key == "right" then
+		player.grid_x = player.grid_x + 32
+	end
+end
+&lt;/source>
+
+As you probably noticed, you probably can't see any difference. We need to use [[love.update]]'s [[dt]] parameter to control speed, by multiplying the difference of the positions by dt:
+&lt;source lang="lua">
+function love.update(dt)
+	player.act_y = player.act_y - ((player.act_y - player.grid_y) * dt)
+	player.act_x = player.act_x - ((player.act_x - player.grid_x) * dt)
+end
+&lt;/source>
+
+Still not quite right though. Now the player is unbearably slow (but at least he's consistent from computer to computer!). Let's give the player a speed attribute to control how fast he moves, by multiplying dt by the speed:
+&lt;source lang="lua">
+function love.load()
+	player = {
+		grid_x = 256,
+		grid_y = 256,
+		act_x = 200,
+		act_y = 200,
+		speed = 10
+	}
+end
+
+function love.update(dt)
+	player.act_y = player.act_y - ((player.act_y - player.grid_y) * player.speed * dt)
+	player.act_x = player.act_x - ((player.act_x - player.grid_x) * player.speed * dt)
+end
+&lt;/source>
+
+== Putting it all together ==
+
+Here is the full code:
+&lt;source lang="lua">
+function love.load()
+	player = {
+		grid_x = 256,
+		grid_y = 256,
+		act_x = 200,
+		act_y = 200,
+		speed = 10
+	}
+end
+
+function love.update(dt)
+	player.act_y = player.act_y - ((player.act_y - player.grid_y) * player.speed * dt)
+	player.act_x = player.act_x - ((player.act_x - player.grid_x) * player.speed * dt)
+end
+
+function love.draw()
+	love.graphics.rectangle("fill", player.act_x, player.act_y, 32, 32)
+end
+
+function love.keypressed(key)
+	if key == "up" then
+		player.grid_y = player.grid_y - 32
+	elseif key == "down" then
+		player.grid_y = player.grid_y + 32
+	elseif key == "left" then
+		player.grid_x = player.grid_x - 32
+	elseif key == "right" then
+		player.grid_x = player.grid_x + 32
+	end
+end
+&lt;/source>
+
+== Adding collision ==
+
+Now let's add some world detail. To start with, we need to create a table of values that will dictate whether we can walk onto a grid or not.
+
+&lt;source lang="lua">
+function love.load()
+map = {
+	{ 1, 1, 1, 1 },
+	{ 1, 0, 0, 1 },
+	{ 1, 0, 1, 1 },
+	{ 1, 1, 1, 1 }
+}
+end
+&lt;/source>
+
+This map table holds four subtables, each of which holds four values. Each subtable is a horizontal row in the map, with each value representing a single tile in that row. We used 1s and 0s because they're easy to type.
+
+Now let's draw these values to the screen. Since we only have two types, we can get away with just drawing one of the types... let's say the 1s. We loop through the subtables by using a simple for loop, and then loop through the values inside each subtable.
+&lt;source lang="lua">
+function love.draw()
+	for y=1, #map do
+		for x=1, #map[y] do
+			if map[y][x] == 1 then
+				love.graphics.rectangle("line", x * 32, y * 32, 32, 32)
+			end
+		end
+	end
+end
+&lt;/source>
+
+A couple things to note about this double loop. The map table is arranged the way that we will see it. This means that are coordinates are flipped from how we usually think... instead of being x and then y, the map is y and then x. Also, the map is in units of 32 (one player width). That means that when we draw the unwalkable squares, we have to multiply their positions by 32.
+
+[[File:Grid_player_2.gif]]
+
+Now let's make a function to test if the player can walk over a spot on our map. This function will return true if we can walk over the spot, and false if we cannot. The function will be given two values: our change in x and our change in y. 
+
+&lt;source lang="lua">
+function testMap(x, y)
+	if map[(player.grid_y / 32) + y][(player.grid_x / 32) + x] == 1 then
+		return false
+	end
+	return true
+end
+&lt;/source>
+
+Things to note about this function. Since we're working in map units, the values passed in will usually just be 1, -1, or 0. That's why they are not divided by 32, unlike the player grid coordinates.
+
+Speaking of the player grid coordinates, the reason we did not have to pass those in is because the player is a global variable. 
+
+So now we can put this function into use by sticking it in the keypressed function. Remember, the test function works in map units, rather than pixel units, so if we're trying to move up one grid, we pass (0, -1).
+
+&lt;source lang="lua">
+function love.keypressed(key)
+	if key == "up" then
+		if testMap(0, -1) then
+			player.grid_y = player.grid_y - 32
+		end
+	elseif key == "down" then
+		if testMap(0, 1) then
+			player.grid_y = player.grid_y + 32
+		end
+	elseif key == "left" then
+		if testMap(-1, 0) then
+			player.grid_x = player.grid_x - 32
+		end
+	elseif key == "right" then
+		if testMap(1, 0) then
+			player.grid_x = player.grid_x + 32
+		end
+	end
+end
+&lt;/source>
+
+You may have noticed that if you try to run this now, the program crashes. This is because our player starts outside of our map. If we expand the map we can fix the bug. Here is the full code with the expanded map.
+
+&lt;source lang="lua">
+function love.load()
+	player = {
+		grid_x = 256,
+		grid_y = 256,
+		act_x = 200,
+		act_y = 200,
+		speed = 10
+	}
+	map = {
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+		{ 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1 },
+		{ 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1 },
+		{ 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1 },
+		{ 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+	}
+end
+
+function love.update(dt)
+	player.act_y = player.act_y - ((player.act_y - player.grid_y) * player.speed * dt)
+	player.act_x = player.act_x - ((player.act_x - player.grid_x) * player.speed * dt)
+end
+
+function love.draw()
+	love.graphics.rectangle("fill", player.act_x, player.act_y, 32, 32)
+	for y=1, #map do
+		for x=1, #map[y] do
+			if map[y][x] == 1 then
+				love.graphics.rectangle("line", x * 32, y * 32, 32, 32)
+			end
+		end
+	end
+end
+
+function love.keypressed(key)
+	if key == "up" then
+		if testMap(0, -1) then
+			player.grid_y = player.grid_y - 32
+		end
+	elseif key == "down" then
+		if testMap(0, 1) then
+			player.grid_y = player.grid_y + 32
+		end
+	elseif key == "left" then
+		if testMap(-1, 0) then
+			player.grid_x = player.grid_x - 32
+		end
+	elseif key == "right" then
+		if testMap(1, 0) then
+			player.grid_x = player.grid_x + 32
+		end
+	end
+end
+
+function testMap(x, y)
+	if map[(player.grid_y / 32) + y][(player.grid_x / 32) + x] == 1 then
+		return false
+	end
+	return true
+end
+&lt;/source>
+
+[[File:Grid_player_3.gif]]
+
+There are several ways this could be improved. 
+* The art could be touched up, of course, using the techniques covered in this article: [http://tommybrunn.com/2011/01/how-to-make-placeholder-art/] 
+* We could also implement some extra controls, such as binding the Escape key to [[love.event.push]]('quit'), which would quit the game. 
+* The player is inside of a closed map, but if the map was open and the player tried to leave it, the game would crash. We could easily add some checks to prevent this from happening.
+* The map starts off at 32,32 when it would make more sense for it to start at 0,0. A little bit of arithmetic could fix this pretty easily, but it does make the code a bit more complex and hard to follow.
+But for the purposes of this tutorial we have enough already.
+
+[[Category:Tutorials]]
+
+{{#set:LOVE Version=0.8.0}}
+{{#set:Description=A tutorial for learning how to create a gridlocked player.}}
+</textarea><div class="templatesUsed"></div><p id="mw-returnto">Return to <a href="http://love2d.org/wiki/Tutorial:Gridlocked_Player" title="Tutorial:Gridlocked Player">Tutorial:Gridlocked Player</a>.</p>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/wiki/Tutorial:Gridlocked_Player">http://love2d.org/wiki/Tutorial:Gridlocked_Player</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Tutorial%3AGridlocked+Player&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Tutorial:Gridlocked_Player" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Tutorial:Gridlocked_Player" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Gridlocked_Player&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:48 GMT -->
+</html>

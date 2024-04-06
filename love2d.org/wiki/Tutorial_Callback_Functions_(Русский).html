@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Русский) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 03:59:50 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Русский) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -67,7 +67,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="love.load"><a href="love-646.html" title="love.load (Русский)">love.load</a></span></h2>
+<h2><span class="mw-headline" id="love.load"><a href="love-586.html" title="love.load (Русский)">love.load</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
    <span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -78,7 +78,7 @@
 </pre></div>
 <p>Эта функция вызывается только один раз в начале игры, и, как правило, она используется для загрузки ресурсов, инициализации переменных и определения конкретных настроек. Всё это можно делать в других местах, но их выполнения в этой функции означает, что они выполнятся только один раз, экономя много системных ресурсов.
 </p>
-<h2><span class="mw-headline" id="love.update"><a href="love-647.html" title="love.update (Русский)">love.update</a></span></h2>
+<h2><span class="mw-headline" id="love.update"><a href="love-587.html" title="love.update (Русский)">love.update</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- это увеличивает num на 100 в секунду</span>
@@ -87,13 +87,13 @@
 </pre></div>
 <p>Эта функция вызывается непрерывно, и, вероятно, будет находится там, где выполняется большинство ваших математических операциях. 'dt' обозначает "<a href="love.timer-10.html" title="love.timer.getDelta (Русский)">изменение (дельту) времени</a>" и является количеством секунд, прошедших с последнего раза, как эта функция была вызвана (обычно малое значение, такое как 0,025714).
 </p>
-<h2><span class="mw-headline" id="love.draw"><a href="love-648.html" title="love.draw (Русский)">love.draw</a></span></h2>
+<h2><span class="mw-headline" id="love.draw"><a href="love-588.html" title="love.draw (Русский)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Чтобы переместить торт, щелкните по нему и передвигайте мышь или используйте клавиши со стрелками.&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p>В функции <code><a href="love-648.html" title="love.draw (Русский)">love.draw</a></code> происходит весь процесс отрисовки (если вы ещё не поняли), а если вы вызовете любую функцию <code><a href="love.graphics-168.html" title="love.graphics.draw (Русский)">love.graphics.draw</a></code> вне этой функции, то это не даст никакого результата. Эта функция также называется непрерывной, так что имейте в виду, что если вы измените шрифт/цвет/режим/и т.д. в конце функции, то она будет влиять на всё находящиеся в начале функции. Например: 
+<p>В функции <code><a href="love-588.html" title="love.draw (Русский)">love.draw</a></code> происходит весь процесс отрисовки (если вы ещё не поняли), а если вы вызовете любую функцию <code><a href="love.graphics-167.html" title="love.graphics.draw (Русский)">love.graphics.draw</a></code> вне этой функции, то это не даст никакого результата. Эта функция также называется непрерывной, так что имейте в виду, что если вы измените шрифт/цвет/режим/и т.д. в конце функции, то она будет влиять на всё находящиеся в начале функции. Например: 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -105,7 +105,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Этот текст красный.&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.mousepressed"><a href="love-649.html" title="love.mousepressed (Русский)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="love-589.html" title="love.mousepressed (Русский)">love.mousepressed</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Available since LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -120,9 +120,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Эта функция вызывается всякий раз, когда нажата кнопка мыши, и получает кнопки и координаты, где кнопки были нажаты. Кнопкой может быть любая из <a href="MouseConstant_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="MouseConstant (Русский)">констант</a>. Эта функция очень хорошо работает с функцией <code><a href="love-650.html" title="love.mousereleased (Русский)">love.mousereleased</a></code>. 
+<p>Эта функция вызывается всякий раз, когда нажата кнопка мыши, и получает кнопки и координаты, где кнопки были нажаты. Кнопкой может быть любая из <a href="MouseConstant_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="MouseConstant (Русский)">констант</a>. Эта функция очень хорошо работает с функцией <code><a href="love-590.html" title="love.mousereleased (Русский)">love.mousereleased</a></code>. 
 </p>
-<h2><span class="mw-headline" id="love.mousereleased"><a href="love-650.html" title="love.mousereleased (Русский)">love.mousereleased</a></span></h2>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="love-590.html" title="love.mousereleased (Русский)">love.mousereleased</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Available since LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -136,10 +136,10 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Эта функция вызывается всякий раз, когда отпущена кнопка мыши, и получает кнопки и координаты, где кнопки были отпущены. Вы можете использовать эту функцию совместно с функцией <code><a href="love-649.html" title="love.mousepressed (Русский)">love.mousepressed</a></code> или отдельно, так как они никак не связаны.
+<p>Эта функция вызывается всякий раз, когда отпущена кнопка мыши, и получает кнопки и координаты, где кнопки были отпущены. Вы можете использовать эту функцию совместно с функцией <code><a href="love-589.html" title="love.mousepressed (Русский)">love.mousepressed</a></code> или отдельно, так как они никак не связаны.
 </p><p><br />
 </p>
-<h2><span class="mw-headline" id="love.keypressed"><a href="love-651.html" title="love.keypressed (Русский)">love.keypressed</a></span></h2>
+<h2><span class="mw-headline" id="love.keypressed"><a href="love-591.html" title="love.keypressed (Русский)">love.keypressed</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Клавиша B была нажата.&quot;</span>
@@ -148,9 +148,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Эта функция вызывается всякий раз, когда нажата клавиша на клавиатуре, и получает кнопки, которые были нажаты. Кнопкой может быть любая из <a href="KeyConstant_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="KeyConstant (Русский)">констант</a>. Эта функция очень хорошо работает с функцией <code><a href="love-652.html" title="love.keyreleased (Русский)">love.keyreleased</a></code>.
+<p>Эта функция вызывается всякий раз, когда нажата клавиша на клавиатуре, и получает кнопки, которые были нажаты. Кнопкой может быть любая из <a href="KeyConstant_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="KeyConstant (Русский)">констант</a>. Эта функция очень хорошо работает с функцией <code><a href="love-592.html" title="love.keyreleased (Русский)">love.keyreleased</a></code>.
 </p>
-<h2><span class="mw-headline" id="love.keyreleased"><a href="love-652.html" title="love.keyreleased (Русский)">love.keyreleased</a></span></h2>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="love-592.html" title="love.keyreleased (Русский)">love.keyreleased</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Клавиша B была отпущена.&quot;</span>
@@ -159,9 +159,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Эта функция вызывается всякий раз, когда отпущена клавиша на клавиатуре, и получает кнопки, которые были отпущены. Вы можете использовать эту функцию совместно с функцией <code><a href="love-651.html" title="love.keypressed (Русский)">love.keypressed</a></code> или отдельно, так как они никак не связаны.
+<p>Эта функция вызывается всякий раз, когда отпущена клавиша на клавиатуре, и получает кнопки, которые были отпущены. Вы можете использовать эту функцию совместно с функцией <code><a href="love-591.html" title="love.keypressed (Русский)">love.keypressed</a></code> или отдельно, так как они никак не связаны.
 </p>
-<h2><span class="mw-headline" id="love.focus"><a href="love-653.html" title="love.focus (Русский)">love.focus</a></span></h2>
+<h2><span class="mw-headline" id="love.focus"><a href="love-593.html" title="love.focus (Русский)">love.focus</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ФОКУС ПОТЕРЯН&quot;</span><span class="p">)</span>
@@ -172,7 +172,7 @@
 </pre></div>
 <p>Эта функция вызывается всякий раз, когда пользователь щелкает по окну и вне окна LOVE. Например, если он играет в оконную игру и пользователь щелкает по своему интернет-браузеру, игра может быть уведомлена об этом и можно автоматически поставить игру на паузу..
 </p>
-<h2><span class="mw-headline" id="love.quit"><a href="love-654.html" title="love.quit (Русский)">love.quit</a></span></h2>
+<h2><span class="mw-headline" id="love.quit"><a href="love-594.html" title="love.quit (Русский)">love.quit</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Спасибо за игру! Возвращайтесь скорее!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
@@ -312,7 +312,7 @@ Retrieved from "<a dir="ltr" href="../w/indexb174.html?title=Tutorial:Callback_F
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -363,5 +363,5 @@ Retrieved from "<a dir="ltr" href="../w/indexb174.html?title=Tutorial:Callback_F
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.043","walltime":"1.102","ppvisitednodes":{"value":429,"limit":1000000},"ppgeneratednodes":{"value":1127,"limit":1000000},"postexpandincludesize":{"value":4709,"limit":2097152},"templateargumentsize":{"value":2208,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10855,"limit":5000000},"timingprofile":["100.00%  630.913      1 -total","  0.94%    5.959      1 Template:i18n","  0.50%    3.168     28 Template:Lang","  0.41%    2.587      2 Template:newin"]},"cachereport":{"timestamp":"20240405134942","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Русский) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:00:15 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Русский) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 </html>

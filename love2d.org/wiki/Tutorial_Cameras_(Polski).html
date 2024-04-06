@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:06:03 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -81,17 +81,17 @@
 </p><p>W pierwszej części zajmiemy się podstawami tworzenia kamer.
 </p><p>Funkcje z których będziemy korzystać
 </p>
-<ul><li><a href="love.graphics-169.html?title=love.graphics.pop_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.pop (Polski) (page does not exist)">love.graphics.pop</a></li>
-<li><a href="love.graphics-170.html?title=love.graphics.push_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.push (Polski) (page does not exist)">love.graphics.push</a></li>
-<li><a href="love.graphics-171.html?title=love.graphics.translate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.translate (Polski) (page does not exist)">love.graphics.translate</a> -- translacja/przesunięcie</li>
-<li><a href="love.graphics-172.html?title=love.graphics.rotate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.rotate (Polski) (page does not exist)">love.graphics.rotate</a> -- obrót</li>
-<li><a href="love.graphics-173.html?title=love.graphics.scale_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.scale (Polski) (page does not exist)">love.graphics.scale</a>  -- skalowanie</li></ul>
-<p>LÖVE posiada stos przekształceń (geometrycznych), a dokładniej stos [b]informacji o  danym przekształczeniu[/b]. <code><a href="love.graphics-170.html?title=love.graphics.push_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.push (Polski) (page does not exist)">love.graphics.push</a></code> pozwala odłożyć aktualne przekształcenie na stos (pozwala to <i>zapamiętać</i> przekształcenie <i>na później</i>), natomiast <a href="love.graphics-169.html?title=love.graphics.pop_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.pop (Polski) (page does not exist)">love.graphics.pop</a> zdejmuje przekształcenie ze stosu (nadpisując tym samym aktualne przewształceni, tym zdjętym przed chwilą ze stosu).
+<ul><li><a href="love.graphics-168.html?title=love.graphics.pop_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.pop (Polski) (page does not exist)">love.graphics.pop</a></li>
+<li><a href="love.graphics-169.html?title=love.graphics.push_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.push (Polski) (page does not exist)">love.graphics.push</a></li>
+<li><a href="love.graphics-170.html?title=love.graphics.translate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.translate (Polski) (page does not exist)">love.graphics.translate</a> -- translacja/przesunięcie</li>
+<li><a href="love.graphics-171.html?title=love.graphics.rotate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.rotate (Polski) (page does not exist)">love.graphics.rotate</a> -- obrót</li>
+<li><a href="love.graphics-172.html?title=love.graphics.scale_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.scale (Polski) (page does not exist)">love.graphics.scale</a>  -- skalowanie</li></ul>
+<p>LÖVE posiada stos przekształceń (geometrycznych), a dokładniej stos [b]informacji o  danym przekształczeniu[/b]. <code><a href="love.graphics-169.html?title=love.graphics.push_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.push (Polski) (page does not exist)">love.graphics.push</a></code> pozwala odłożyć aktualne przekształcenie na stos (pozwala to <i>zapamiętać</i> przekształcenie <i>na później</i>), natomiast <a href="love.graphics-168.html?title=love.graphics.pop_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.pop (Polski) (page does not exist)">love.graphics.pop</a> zdejmuje przekształcenie ze stosu (nadpisując tym samym aktualne przewształceni, tym zdjętym przed chwilą ze stosu).
 </p><p>Na [b]informację o przekształceniu[/b], składają się trzy elementy: przesunięcie, skalowanie i obrót. W trakcie każdej operacji rysowania:
 </p>
-<ul><li>argumenty x i y przekazywane do funkcji <a href="love.graphics-171.html?title=love.graphics.translate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.translate (Polski) (page does not exist)">love.graphics.translates</a>ą dodawane do współrzędnych x i y,</li>
-<li>obie współrzędne są mnożone przez argument funkcji <a href="love.graphics-173.html?title=love.graphics.scale_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.scale (Polski) (page does not exist)">love.graphics.scale</a></li>
-<li>każdy punkt jest obracany względem lewego górnego rogu o kąt podany jako argument do funkcji <a href="love.graphics-172.html?title=love.graphics.rotate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.rotate (Polski) (page does not exist)">love.graphics.rotate</a>(w radianach).</li></ul>
+<ul><li>argumenty x i y przekazywane do funkcji <a href="love.graphics-170.html?title=love.graphics.translate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.translate (Polski) (page does not exist)">love.graphics.translates</a>ą dodawane do współrzędnych x i y,</li>
+<li>obie współrzędne są mnożone przez argument funkcji <a href="love.graphics-172.html?title=love.graphics.scale_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.scale (Polski) (page does not exist)">love.graphics.scale</a></li>
+<li>każdy punkt jest obracany względem lewego górnego rogu o kąt podany jako argument do funkcji <a href="love.graphics-171.html?title=love.graphics.rotate_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.rotate (Polski) (page does not exist)">love.graphics.rotate</a>(w radianach).</li></ul>
 <p>Mając te wiedzę możemy stworzyć naszą pierwszą kamerę
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
@@ -162,7 +162,7 @@ Wartości zmiennej skala powyżej 1 będą oddalały kamerę, podczas gdy mniejs
 <span class="kr">return</span> <span class="n">camera</span>
 </pre></div>
 <p>Moduł kamery  jest tablicą, która zawiera informację gdzie ma być umiejscowiona kamera. Kluczowe są funkcje <code>set</code> i <code>unset</code>. <code>set</code> zmienia <i>aktualne przekształcenie</i>, na informacje zawarte w module kamery (ale wcześniej zapisuje bieżący stan, dzięki czemu moduł kamery będzie w stanie obsługiwać kilka <i>widokow</i> w jednej ramce. <code>unset</code> po prostu przywraca poprzednie ustawienie, korzystając z wspomnianej funkcji pop. Pozostałe funkcje stanowią pomoc przy przemieszczaniu kamery.
-</p><p>Kamery można użyć poprzez następujący kod w callbacku <a href="love-675.html" title="love.draw (Polski)">love.draw (Polski)</a>:
+</p><p>Kamery można użyć poprzez następujący kod w callbacku <a href="love-615.html" title="love.draw (Polski)">love.draw (Polski)</a>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
   <span class="n">camera</span><span class="p">:</span><span class="n">set</span><span class="p">()</span> <span class="c1">-- zaapliwowanie ustawień kamery</span>
@@ -172,7 +172,7 @@ Wartości zmiennej skala powyżej 1 będą oddalały kamerę, podczas gdy mniejs
   <span class="n">camera</span><span class="p">:</span><span class="n">unset</span><span class="p">()</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Natomiast w callbacku <a href="love-676.html" title="love.update (Polski)">love.update (Polski)</a>, można zmieniać położenie kamery.
+<p>Natomiast w callbacku <a href="love-616.html" title="love.update (Polski)">love.update (Polski)</a>, można zmieniać położenie kamery.
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">camera</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="n">camera</span><span class="p">:</span><span class="n">scale</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -427,7 +427,7 @@ Retrieved from "<a dir="ltr" href="../w/index1cc9.html?title=Tutorial:Cameras_(P
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -478,5 +478,5 @@ Retrieved from "<a dir="ltr" href="../w/index1cc9.html?title=Tutorial:Cameras_(P
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.049","walltime":"1.132","ppvisitednodes":{"value":360,"limit":1000000},"ppgeneratednodes":{"value":843,"limit":1000000},"postexpandincludesize":{"value":3405,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":22925,"limit":5000000},"timingprofile":["100.00%    5.807      1 -total","100.00%    5.807      1 Template:i18n"," 53.57%    3.111     28 Template:Lang"]},"cachereport":{"timestamp":"20240405165949","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":27});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:06:26 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 03:59:16 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -50,8 +50,8 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Hàm <a href="Category_Callbacks_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html?title=Category:Callbacks_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Category:Callbacks (Tiếng Việt) (page does not exist)">callback</a> trong LÖVE được gọi bởi <a href="love-636.html?title=love.run_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.run (Tiếng Việt) (page does not exist)">love.run</a> để thực hiện những nhiệm vụ khác nhau, và chúng đều tùy ý có thể có hoặc không. Tuy nhiên, trải nghiệm game thực thụ đòi hỏi dùng đến gần như toàn bộ callback, vì vậy bạn nên biết chúng là gì.
-</p><p>Callback, đối với người mới lập trình hoặc chưa biết đến thuật ngữ này, có thể được coi là một hàm hoạt động theo hướng ngược lại. Trong một hàm thông thường như <a href="love.graphics-167.html?title=love.graphics.draw_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.draw (Tiếng Việt) (page does not exist)">love.graphics.draw</a> hoặc math.floor, bạn có thể gọi nó rồi Love hoặc Lua thực hiện một thao tác. Còn callback thì là một hàm bạn lập trình nên và Love gọi đến ở những thời điểm nhất định. Điều này khiến cho bạn dễ dàng giữ cho mã lệnh ngăn nắp và tối ưu. Chẳng hạn, vì love.load chỉ được gọi khi trò chơi khởi động lần đầu (trước bất cứ callback nào khác), nên đó sẽ là nơi phù hợp để đặt mã lệnh nạp nội dung của trò chơi, hoặc nếu không thì thực hiện khâu chuẩn bị.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Hàm <a href="Category_Callbacks_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html?title=Category:Callbacks_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Category:Callbacks (Tiếng Việt) (page does not exist)">callback</a> trong LÖVE được gọi bởi <a href="love-576.html?title=love.run_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.run (Tiếng Việt) (page does not exist)">love.run</a> để thực hiện những nhiệm vụ khác nhau, và chúng đều tùy ý có thể có hoặc không. Tuy nhiên, trải nghiệm game thực thụ đòi hỏi dùng đến gần như toàn bộ callback, vì vậy bạn nên biết chúng là gì.
+</p><p>Callback, đối với người mới lập trình hoặc chưa biết đến thuật ngữ này, có thể được coi là một hàm hoạt động theo hướng ngược lại. Trong một hàm thông thường như <a href="love.graphics-166.html?title=love.graphics.draw_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.draw (Tiếng Việt) (page does not exist)">love.graphics.draw</a> hoặc math.floor, bạn có thể gọi nó rồi Love hoặc Lua thực hiện một thao tác. Còn callback thì là một hàm bạn lập trình nên và Love gọi đến ở những thời điểm nhất định. Điều này khiến cho bạn dễ dàng giữ cho mã lệnh ngăn nắp và tối ưu. Chẳng hạn, vì love.load chỉ được gọi khi trò chơi khởi động lần đầu (trước bất cứ callback nào khác), nên đó sẽ là nơi phù hợp để đặt mã lệnh nạp nội dung của trò chơi, hoặc nếu không thì thực hiện khâu chuẩn bị.
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
@@ -68,7 +68,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="love.load"><a href="love-637.html" title="love.load (Tiếng Việt)">love.load</a></span></h2>
+<h2><span class="mw-headline" id="love.load"><a href="love-577.html" title="love.load (Tiếng Việt)">love.load</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
    <span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -79,7 +79,7 @@
 </pre></div>
 <p>Hàm này được gọi đúng một lần, khi trò chơi khởi động, và thường là nơi bạn nạp những nguyên liệu trò chơi, khởi tạo các biến và thiết lập các giá trị riêng. Tất cả những thứ này cũng có thể được đặt ở nơi khác, nhưng đặt ở đây sẽ đồng nghĩa với việc chúng được thực hiện đúng một lần, tiết kiệm được nhiều tài nguyên hệ thống.
 </p>
-<h2><span class="mw-headline" id="love.update"><a href="love-638.html" title="love.update (Tiếng Việt)">love.update</a></span></h2>
+<h2><span class="mw-headline" id="love.update"><a href="love-578.html" title="love.update (Tiếng Việt)">love.update</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- mỗi giây làm tăng num thêm 100 </span>
@@ -88,13 +88,13 @@
 </pre></div>
 <p>Hàm này được gọi liên tục và có thể sẽ là nơi phần lớn phép toán được thực hiện. 'dt' đóng vai trò "<a href="love.timer-9.html?title=love.timer.getDelta_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.timer.getDelta (Tiếng Việt) (page does not exist)">delta time</a>" và là số giây trôi qua kể từ lần cuối cùng hàm này được gọi (thường là một giá trị nhỏ như 0.025714). 
 </p>
-<h2><span class="mw-headline" id="love.draw"><a href="love-639.html" title="love.draw (Tiếng Việt)">love.draw</a></span></h2>
+<h2><span class="mw-headline" id="love.draw"><a href="love-579.html" title="love.draw (Tiếng Việt)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nhấn chuột và kéo rê hình chiếc bánh, hoặc dùng các phím mũi tên&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><code><a href="love-639.html" title="love.draw (Tiếng Việt)">love.draw</a></code> là nơi mà tất cả việc vẽ được tiến hành (nếu điều này còn chưa đủ rõ ràng) và nếu bạn gọi bất kì lệnh nào của  <code><a href="love.graphics-167.html?title=love.graphics.draw_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.draw (Tiếng Việt) (page does not exist)">love.graphics.draw</a></code> nào bên ngoài hàm này thì nó sẽ không có hiệu quả gì. Hàm này cũng được gọi liên tục, vì vậy hãy nhớ rằng nếu bạn thay đổi font/color/mode/etc ở cuối hàm thì nó sẽ có ảnh hưởng đến những thứ ở đầu hàm. Chẳng hạn: 
+<p><code><a href="love-579.html" title="love.draw (Tiếng Việt)">love.draw</a></code> là nơi mà tất cả việc vẽ được tiến hành (nếu điều này còn chưa đủ rõ ràng) và nếu bạn gọi bất kì lệnh nào của  <code><a href="love.graphics-166.html?title=love.graphics.draw_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.draw (Tiếng Việt) (page does not exist)">love.graphics.draw</a></code> nào bên ngoài hàm này thì nó sẽ không có hiệu quả gì. Hàm này cũng được gọi liên tục, vì vậy hãy nhớ rằng nếu bạn thay đổi font/color/mode/etc ở cuối hàm thì nó sẽ có ảnh hưởng đến những thứ ở đầu hàm. Chẳng hạn: 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -106,7 +106,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dòng chữ này màu đỏ&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.mousepressed"><a href="love-640.html" title="love.mousepressed (Tiếng Việt)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="love-580.html" title="love.mousepressed (Tiếng Việt)">love.mousepressed</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Available since LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -121,9 +121,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Hàm này được gọi đến mỗi khi một nút chuột được nhấn và nó nhận nút chuột cùng tọa độ của con trỏ chuột lúc nhấn. Nút có thể có bất cứ giá trị nào trong số  <a href="MouseConstant_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="MouseConstant (Tiếng Việt)">các giá trị ấn định</a>. Hàm này kết hợp nhịp nhàng với <code><a href="love-641.html" title="love.mousereleased (Tiếng Việt)">love.mousereleased</a></code>. 
+<p>Hàm này được gọi đến mỗi khi một nút chuột được nhấn và nó nhận nút chuột cùng tọa độ của con trỏ chuột lúc nhấn. Nút có thể có bất cứ giá trị nào trong số  <a href="MouseConstant_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="MouseConstant (Tiếng Việt)">các giá trị ấn định</a>. Hàm này kết hợp nhịp nhàng với <code><a href="love-581.html" title="love.mousereleased (Tiếng Việt)">love.mousereleased</a></code>. 
 </p>
-<h2><span class="mw-headline" id="love.mousereleased"><a href="love-641.html" title="love.mousereleased (Tiếng Việt)">love.mousereleased</a></span></h2>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="love-581.html" title="love.mousereleased (Tiếng Việt)">love.mousereleased</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Available since LÖVE <a href="0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -137,10 +137,10 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Hàm này được gọi mỗi khi một nút chuột được nhả ra; hàm nhận vào nút cùng với tọa độ của con trỏ chuột lúc nhả. Bạn có thể kèm hàm này với hàm <code><a href="love-640.html" title="love.mousepressed (Tiếng Việt)">love.mousepressed</a></code> hoặc viết riêng; chúng không có bất kì sự liên hệ nào.
+<p>Hàm này được gọi mỗi khi một nút chuột được nhả ra; hàm nhận vào nút cùng với tọa độ của con trỏ chuột lúc nhả. Bạn có thể kèm hàm này với hàm <code><a href="love-580.html" title="love.mousepressed (Tiếng Việt)">love.mousepressed</a></code> hoặc viết riêng; chúng không có bất kì sự liên hệ nào.
 </p><p><br />
 </p>
-<h2><span class="mw-headline" id="love.mousepressed_2"><a href="love-642.html" title="love.keypressed (Tiếng Việt)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed_2"><a href="love-582.html" title="love.keypressed (Tiếng Việt)">love.mousepressed</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Phím B được nhấn.&quot;</span>
@@ -149,9 +149,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Hàm này được gọi mỗi khi phím được nhấn; nó nhận vào phím vừa nhấn này. Phím có thể nhận bất kì <a href="KeyConstant_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="KeyConstant (Tiếng Việt)">giá trị ấn định</a> nào. Hàm này kết hợp rất tốt với <code><a href="love-643.html" title="love.keyreleased (Tiếng Việt)">love.keyreleased</a></code>.
+<p>Hàm này được gọi mỗi khi phím được nhấn; nó nhận vào phím vừa nhấn này. Phím có thể nhận bất kì <a href="KeyConstant_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="KeyConstant (Tiếng Việt)">giá trị ấn định</a> nào. Hàm này kết hợp rất tốt với <code><a href="love-583.html" title="love.keyreleased (Tiếng Việt)">love.keyreleased</a></code>.
 </p>
-<h2><span class="mw-headline" id="love.keyreleased"><a href="love-643.html" title="love.keyreleased (Tiếng Việt)">love.keyreleased</a></span></h2>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="love-583.html" title="love.keyreleased (Tiếng Việt)">love.keyreleased</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Phím B được nhả.&quot;</span>
@@ -162,7 +162,7 @@
 </pre></div>
 <p>Hàm này được gọi mỗi khi phím được nhấn; nó nhận vào phím vừa nhả này. Bạn có thể dùng hàm này cùng với <code><a href="love-41.html" title="love.keypressed">love.keypressed</a> (Tiếng Việt)|love.keypressed</code> hoặc dùng riêng; chúng không có bất kì sự liên hệ nào.
 </p>
-<h2><span class="mw-headline" id="love.focus"><a href="love-644.html?title=love.focus_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.focus (Tiếng Việt) (page does not exist)">love.focus</a></span></h2>
+<h2><span class="mw-headline" id="love.focus"><a href="love-584.html?title=love.focus_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.focus (Tiếng Việt) (page does not exist)">love.focus</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LOST FOCUS&quot;</span><span class="p">)</span>
@@ -181,7 +181,7 @@
 	<span class="c1">-- Phần còn lại của hàm love.update bạn viết có thể đưa vào đây</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.quit"><a href="love-645.html?title=love.quit_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.quit (Tiếng Việt) (page does not exist)">love.quit</a></span></h2>
+<h2><span class="mw-headline" id="love.quit"><a href="love-585.html?title=love.quit_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="love.quit (Tiếng Việt) (page does not exist)">love.quit</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cám ơn bạn đã chơi! Mong được gặp lại!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
@@ -321,7 +321,7 @@ Retrieved from "<a dir="ltr" href="../w/indexc30d.html?title=Tutorial:Callback_F
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -372,5 +372,5 @@ Retrieved from "<a dir="ltr" href="../w/indexc30d.html?title=Tutorial:Callback_F
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.043","walltime":"1.115","ppvisitednodes":{"value":438,"limit":1000000},"ppgeneratednodes":{"value":1147,"limit":1000000},"postexpandincludesize":{"value":4709,"limit":2097152},"templateargumentsize":{"value":2208,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11509,"limit":5000000},"timingprofile":["100.00%  694.206      1 -total","  0.79%    5.478      1 Template:i18n","  0.42%    2.925     28 Template:Lang","  0.36%    2.514      2 Template:newin"]},"cachereport":{"timestamp":"20240405165939","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 03:59:50 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 </html>

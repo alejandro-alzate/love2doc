@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Config_Files_(Deutsch) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 06:05:03 GMT -->
+<!-- Mirrored from love2d.org/wiki/Config_Files_(Deutsch) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:22 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -103,7 +103,7 @@
 <span class="kr">end</span>
 </pre></div>
 <p>Es wird empfohlen, unbenutzte Module auf <code>false</code> zu setzen, wenn du dein Spiel veröffentlichst, da sich dadurch die Startgeschwindigkeit und der Verbrauch des Arbeitsspeichers (geringfügig) verringert.
-</p><p>Beachte, dass du <a href="love-169.html" title="love.filesystem (Deutsch)">love.filesystem</a> nicht abschalten kannst, da es zwingend vorhanden sein muss. Dasselbe gilt auch für das <a href="love_(Deutsch).html" title="love (Deutsch)">love</a>-Modul selbst. Auch <a href="love-225.html" title="love.graphics (Deutsch)">love.graphics</a> und <a href="love-589.html" title="love.window (Deutsch)">love.window</a> müssen aktiviert sein.
+</p><p>Beachte, dass du <a href="love-128.html" title="love.filesystem (Deutsch)">love.filesystem</a> nicht abschalten kannst, da es zwingend vorhanden sein muss. Dasselbe gilt auch für das <a href="love_(Deutsch).html" title="love (Deutsch)">love</a>-Modul selbst. Auch <a href="love-183.html" title="love.graphics (Deutsch)">love.graphics</a> und <a href="love-535.html" title="love.window (Deutsch)">love.window</a> müssen aktiviert sein.
 </p>
 <h2><span class="mw-headline" id="Aktuelle_Konfigurationsdatei">Aktuelle Konfigurationsdatei</span></h2>
 <p>Hier ist eine Liste aller Optionen mit ihren Standardwerten für LÖVE <a href="0.9-2.html" title="0.9.2">0.9.2</a>:
@@ -154,7 +154,7 @@
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">t</span><span class="p">.</span><span class="n">identity</span> <span class="o">=</span> <span class="s2">&quot;gabe_HL3&quot;</span> <span class="c1">-- Richtig</span>
 <span class="n">t</span><span class="p">.</span><span class="n">identity</span> <span class="o">=</span> <span class="s2">&quot;c:/Users/gabe/HL3&quot;</span> <span class="c1">-- Falsch</span>
 </pre></div>
-<p>Alternativ kann <a href="love.filesystem-48.html" title="love.filesystem.setIdentity (Deutsch)">love.filesystem.setIdentity</a> verwendet werden um den Speicherordner außerhalb der Konfigurationsdatei zu bestimmen.
+<p>Alternativ kann <a href="love.filesystem-46.html" title="love.filesystem.setIdentity (Deutsch)">love.filesystem.setIdentity</a> verwendet werden um den Speicherordner außerhalb der Konfigurationsdatei zu bestimmen.
 </p>
 <h4><span class="mw-headline" id="version">version</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.8.0&#93;&#93;">
@@ -177,7 +177,7 @@
 <tr>
 <td><small>These flags are not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Es ist möglich die Erstellung des Fensters solange aufzuschieben, bis <a href="love.window-44.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> das erste Mal im Code aufgerufen wird. Um dies zu bewerkstelligen muss in der Konfigurationsdatei <code>t.window = nil</code> (oder <code>t.screen = nil</code> in älteren Versionen) gesetzt werden. Vorsicht ist geboten, da LÖVE abstürzen kann, wenn eine Funktion aus <a href="love-225.html" title="love.graphics (Deutsch)">love.graphics</a> aufgerufen wird, bevor das Fenster mit <a href="love.window-44.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> erstellt wurde.
+<p>Es ist möglich die Erstellung des Fensters solange aufzuschieben, bis <a href="love.window-43.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> das erste Mal im Code aufgerufen wird. Um dies zu bewerkstelligen muss in der Konfigurationsdatei <code>t.window = nil</code> (oder <code>t.screen = nil</code> in älteren Versionen) gesetzt werden. Vorsicht ist geboten, da LÖVE abstürzen kann, wenn eine Funktion aus <a href="love-183.html" title="love.graphics (Deutsch)">love.graphics</a> aufgerufen wird, bevor das Fenster mit <a href="love.window-43.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> erstellt wurde.
 </p>
 <h4><span class="mw-headline" id="window.title">window.title</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
@@ -187,7 +187,7 @@
 <tr>
 <td><small>This flag is not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Bestimmt den Titel des Spielefensters. Alternativ kann <a href="love.window-73.html" title="love.window.setTitle (Deutsch)">love.window.setTitle</a> verwendet werden.
+<p>Bestimmt den Titel des Spielefensters. Alternativ kann <a href="love.window-71.html" title="love.window.setTitle (Deutsch)">love.window.setTitle</a> verwendet werden.
 </p>
 <h4><span class="mw-headline" id="window.icon">window.icon</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
@@ -197,7 +197,7 @@
 <tr>
 <td><small>This flag is not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Ein Pfad der auf eine Bilddatei zeigt, welche als Symbol für das Spielefenster verwendet werden soll. Zu beachten ist hierbei, dass nicht alle Systeme mit großen Icons zurecht kommen. Das Icon kann auch über <a href="love.window-102.html?title=love.window.setIcon_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setIcon (Deutsch) (page does not exist)">love.window.setIcon</a> angepasst werden.
+<p>Ein Pfad der auf eine Bilddatei zeigt, welche als Symbol für das Spielefenster verwendet werden soll. Zu beachten ist hierbei, dass nicht alle Systeme mit großen Icons zurecht kommen. Das Icon kann auch über <a href="love.window-99.html?title=love.window.setIcon_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setIcon (Deutsch) (page does not exist)">love.window.setIcon</a> angepasst werden.
 </p>
 <h4><span id="window.width_&amp;_window.height"></span><span class="mw-headline" id="window.width_.26_window.height">window.width &amp; window.height</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
@@ -247,7 +247,7 @@
 <tr>
 <td><small>This flag is not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Bestimmt ob das Spiel im Vollbildmodus (<code>true</code>) oder im Fenstermodus (<code>false</code>) gestartet werden soll. Der Vollbildmodus kann außerdem über <a href="love.window-131.html?title=love.window.setFullscreen_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setFullscreen (Deutsch) (page does not exist)">love.window.setFullscreen</a> oder <a href="love.window-44.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> verändert werden.
+<p>Bestimmt ob das Spiel im Vollbildmodus (<code>true</code>) oder im Fenstermodus (<code>false</code>) gestartet werden soll. Der Vollbildmodus kann außerdem über <a href="love.window-127.html?title=love.window.setFullscreen_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setFullscreen (Deutsch) (page does not exist)">love.window.setFullscreen</a> oder <a href="love.window-43.html?title=love.window.setMode_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.setMode (Deutsch) (page does not exist)">love.window.setMode</a> verändert werden.
 </p>
 <h4><span class="mw-headline" id="window.fullscreentype">window.fullscreentype</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.0&#93;&#93;">
@@ -297,7 +297,7 @@
 <tr>
 <td><small>This flag is not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Siehe <a href="love.window-217.html?title=love.window.getPixelScale_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.getPixelScale (Deutsch) (page does not exist)">love.window.getPixelScale</a>. Diese Option sollte deaktiviert bleiben, solange das Spiel nicht auf einem Mac mit Retina-Display getestet werden kann, da einige Änderungen am Code vorgenommen werden müssen um alles korrekt darstellen zu können.
+<p>Siehe <a href="love.window-210.html?title=love.window.getPixelScale_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.window.getPixelScale (Deutsch) (page does not exist)">love.window.getPixelScale</a>. Diese Option sollte deaktiviert bleiben, solange das Spiel nicht auf einem Mac mit Retina-Display getestet werden kann, da einige Änderungen am Code vorgenommen werden müssen um alles korrekt darstellen zu können.
 </p>
 <h4><span class="mw-headline" id="window.srgb">window.srgb</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.9.1&#93;&#93;">
@@ -317,7 +317,7 @@
 <tr>
 <td><small>These flags are not supported in earlier versions.</small>
 </td></tr></tbody></table>
-<p>Bestimmt die Position des Spielefensters auf dem Bildschirm des Nutzers. Diese kann auch via <a href="love.window-189.html" title="love.window.setPosition (Deutsch)">love.window.setPosition</a> verändert werden.
+<p>Bestimmt die Position des Spielefensters auf dem Bildschirm des Nutzers. Diese kann auch via <a href="love.window-183.html" title="love.window.setPosition (Deutsch)">love.window.setPosition</a> verändert werden.
 </p>
 <h4><span class="mw-headline" id="release">release</span></h4>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.8.0&#93;&#93;">
@@ -335,7 +335,7 @@
 <td><small>This flag is not supported in that and later versions.</small>
 </td></tr></tbody></table>
 <p><br />
-Wenn <code>t.release</code> aktiviert ist, nutzt LÖVE den <a href="love-1786.html?title=love.releaseerrhand_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.releaseerrhand (Deutsch) (page does not exist)">"Release Error Handler"</a>, welcher überschrieben werden kann um weitere Informationen auszugeben.
+Wenn <code>t.release</code> aktiviert ist, nutzt LÖVE den <a href="love-1700.html?title=love.releaseerrhand_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="love.releaseerrhand (Deutsch) (page does not exist)">"Release Error Handler"</a>, welcher überschrieben werden kann um weitere Informationen auszugeben.
 </p><p>Der Standard-Handler zeigt außerdem eine Nachricht an, über die der Entwickler benachrichtigt werden kann, indem es die <code>title, author</code> und <code>url</code> Werte aus der conf.lua benutzt. 
 </p>
 <h2><span class="mw-headline" id="Older_Versions">Older Versions</span></h2>
@@ -603,7 +603,7 @@ Retrieved from "<a dir="ltr" href="../w/index600a.html?title=Config_Files_(Deuts
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -655,5 +655,5 @@ Retrieved from "<a dir="ltr" href="../w/index600a.html?title=Config_Files_(Deuts
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.074","walltime":"0.848","ppvisitednodes":{"value":981,"limit":1000000},"ppgeneratednodes":{"value":2059,"limit":1000000},"postexpandincludesize":{"value":9022,"limit":2097152},"templateargumentsize":{"value":1832,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":39806,"limit":5000000},"timingprofile":["100.00%  413.214      1 -total","  1.91%    7.904     17 Template:newin","  1.31%    5.433      1 Template:i18n","  0.72%    2.975     28 Template:Lang","  0.36%    1.505      1 Template:oldin"]},"cachereport":{"timestamp":"20240405170518","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":28});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Config_Files_(Deutsch) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 06:05:17 GMT -->
+<!-- Mirrored from love2d.org/wiki/Config_Files_(Deutsch) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:22 GMT -->
 </html>

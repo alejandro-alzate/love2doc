@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:37:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -52,7 +52,7 @@
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>この用例では、緑色の地面を転がる赤玉の作成します。
 </p><p>このページの末尾に関税品の用例を掲載してあります。また、関数はすべて一本のファイルに記述します: main.lua
-</p><p><a href="love-666.html" title="love.load (日本語)">love.load</a>() 関数から説明を始めます。
+</p><p><a href="love-606.html" title="love.load (日本語)">love.load</a>() 関数から説明を始めます。
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
@@ -101,7 +101,7 @@
 &#160; <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 &#160; <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<p>さて <a href="love-666.html" title="love.load (日本語)">love.load</a>() 関数をラップするために、画面の大きさおよび背景色を設定します。
+<p>さて <a href="love-606.html" title="love.load (日本語)">love.load</a>() 関数をラップするために、画面の大きさおよび背景色を設定します。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&#160; <span class="c1">-- グラフィックスの設定を初期化します</span>
 &#160; <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mf">0.41</span><span class="p">,</span> <span class="mf">0.53</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)</span> <span class="c1">-- 背景の描画色を綺麗な青色にします</span>
@@ -109,7 +109,7 @@
 <span class="kr">end</span>
 </pre></div>
 <p>よろしい、それで物理演算エンジンの初期化設定には十分です。
-さて <a href="love-667.html" title="love.update (日本語)">love.update</a>() 関数を編集します。
+さて <a href="love-607.html" title="love.update (日本語)">love.update</a>() 関数を編集します。
 </p>
 <h3><span id="love.update()"></span><span class="mw-headline" id="love.update.28.29">love.update()</span></h3>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
@@ -147,7 +147,7 @@
 </pre></div>
 <p>このファイルを <a href="zip_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html?title=zip_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" class="new" title="zip (日本語) (page does not exist)">zip ファイル</a>へ格納して、 physics.love (または任意のもの) へ名称変更して、実行してください。また、約束したように、緑が茂る環境内で玉は周辺を転がります。
 </p>
-<div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="File_Tutorial-PhysicsBall.html" class="image"><img alt="" src="../w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/300px-Tutorial-PhysicsBall.jpg" width="300" height="309" class="thumbimage" srcset="/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/450px-Tutorial-PhysicsBall.jpg 1.5x, /w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/600px-Tutorial-PhysicsBall.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Tutorial-PhysicsBall.html" class="internal" title="Enlarge"></a></div>ほぼ完成品のスクリーンショット。</div></div></div>
+<div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="File_Tutorial-PhysicsBall.html" class="image"><img alt="" src="../w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/300px-Tutorial-PhysicsBall.html" width="300" height="309" class="thumbimage" srcset="/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/450px-Tutorial-PhysicsBall.jpg 1.5x, /w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/600px-Tutorial-PhysicsBall.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Tutorial-PhysicsBall.html" class="internal" title="Enlarge"></a></div>ほぼ完成品のスクリーンショット。</div></div></div>
 <h2><span class="mw-headline" id="main.lua">main.lua</span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
   <span class="c1">-- 世界において１メートル当たりの高さは 64 ピクセルです</span>
@@ -370,7 +370,7 @@ Retrieved from "<a dir="ltr" href="../w/index6970.html?title=Tutorial:Physics_(%
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -421,5 +421,5 @@ Retrieved from "<a dir="ltr" href="../w/index6970.html?title=Tutorial:Physics_(%
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.051","walltime":"0.729","ppvisitednodes":{"value":326,"limit":1000000},"ppgeneratednodes":{"value":771,"limit":1000000},"postexpandincludesize":{"value":3420,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":38302,"limit":5000000},"timingprofile":["100.00%    5.561      1 -total","100.00%    5.561      1 Template:i18n_(日本語)"," 51.68%    2.874     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170053","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":27});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:38:12 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>

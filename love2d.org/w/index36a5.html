@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%e6%97%a5%e6%9c%ac%e8%aa%9e)&oldid=17122 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:Gridlocked Player (日本語) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Gridlocked_Player_(日本語)","wgTitle":"Gridlocked Player (日本語)","wgCurRevisionId":17122,"wgRevisionId":17122,"wgArticleId":4685,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Gridlocked_Player_(日本語)","wgRelevantArticleId":4685,"wgRequestId":"2b73423736d5c7406cd69584","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Gridlocked Player (日本語)" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Gridlocked_Player_日本語 rootpage-Tutorial_Gridlocked_Player_日本語 skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="http://love2d.org/wiki/Tutorial:Gridlocked_Player_(日本語)">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Tutorial_talk:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:Gridlocked Player (日本語)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"><div class="mw-revision"><div id="mw-revision-info">Revision as of 11:18, 28 August 2016 by <a href="/wiki/User:Greenwing" class="mw-userlink" title="User:Greenwing"><bdi>Greenwing</bdi></a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Greenwing" class="mw-usertoollinks-talk" title="User talk:Greenwing">talk</a> | <a href="/wiki/Special:Contributions/Greenwing" class="mw-usertoollinks-contribs" title="Special:Contributions/Greenwing">contribs</a>)</span></div><div id="mw-revision-nav">(<a href="/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;diff=prev&amp;oldid=17122" title="Tutorial:Gridlocked Player (日本語)">diff</a>) <a href="/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;direction=prev&amp;oldid=17122" title="Tutorial:Gridlocked Player (日本語)">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>このチュートリアルでは、固定された間隔で&quot;自機&quot;が画面内を移動できる非常に基礎的なゲームを作成します。これはタイルベースのゲームを作成しているとき、自機がグリッド内に同調して滞在して欲しいのに、それらが転送されて周囲に出現して欲しくはない場合に有用です。
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E9.96.8B.E5.A7.8B"><span class="tocnumber">1</span> <span class="toctext">コードの開始</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E6.8B.A1.E5.BC.B5"><span class="tocnumber">2</span> <span class="toctext">拡張</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E5.AF.BE.E8.B1.A1.E3.81.AE.E5.85.A8.E9.85.8D.E7.BD.AE"><span class="tocnumber">3</span> <span class="toctext">対象の全配置</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#.E8.A1.9D.E7.AA.81.E3.81.AE.E8.BF.BD.E5.8A.A0"><span class="tocnumber">4</span> <span class="toctext">衝突の追加</span></a></li>
+</ul>
+</div>
+
+<h2><span id="コードの開始"></span><span class="mw-headline" id=".E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E9.96.8B.E5.A7.8B">コードの開始</span></h2>
+<p>最初に、自機を作成する必要があります。完了後に自機は様相を持つようになるため、従って player 変数を <a href="http://love2d.org/wiki/love.load_(日本語)" title="love.load (日本語)">love.load</a>() 内へテーブルとして作成します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">end</span>
+</pre></div>
+<p>次に何を行っているのか確認する必要があるでしょう。 <a href="http://love2d.org/wiki/love.draw_(日本語)" title="love.draw (日本語)">love.draw</a>() にて <a href="http://love2d.org/wiki/love.graphics.rectangle_(日本語)" title="love.graphics.rectangle (日本語)">love.graphics.rectangle</a>() を使用することで自機に見立てた長方形を表示することができます。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>自機の位置を保持するために player テーブルへ少し書き加えます。テーブルへ変数を記入するために速記法を使用していることに注意してください。それらをカンマを使用して分離を行い、カーリー・ブラケットの内側で定義します (さらに、これらの新規値を使用するには love.graphics.rectangle にある引数を変更する必要があります)。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">x</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">y</span> <span class="o">=</span> <span class="mi">256</span>
+	<span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p><a href="http://love2d.org/wiki/File:Grid_player_1.gif" class="image"><img alt="Grid player 1.gif" src="http://love2d.org/w/images/6/67/Grid_player_1.gif" width="800" height="600" /></a>
+</p><p>これで自機は位置を保持するようになったので、 <a href="http://love2d.org/wiki/love.keypressed_(日本語)" title="love.keypressed (日本語)">love.keypressed</a>() を使用して操作の一部を追加します。していることは key の参照を行い一致するかどうかを確認して、一致すれば player テーブルにある値を変更します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>従って、これで小型の正方形は１グリッド単位ずつ下方向へテレポートします (この場合は 32 ピクセルであり、 player は同じ長さは進みます)。
+</p>
+<h2><span id="拡張"></span><span class="mw-headline" id=".E6.8B.A1.E5.BC.B5">拡張</span></h2>
+<p>これは elseif を使用してより多くの key を拡張することができます。全て 32 単位のままであることに注意してください。タイルにおいて共通の大きさは <a href="http://love2d.org/wiki/PO2_Syndrome_(日本語)" title="PO2 Syndrome (日本語)">PO2_Syndrome</a> を利用します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>従って、これでキーボードを打鍵するのと同じくらい高速に画面の中を飛び越えることを満たすことができる小型の正方形があります。さて滑らかな遷移を追加します。これを行うには、 player テーブルにある方向担当の変数を変更する必要があります。
+</p><p>現在必要な物が二つあります。一つ目は、現在において転送先の座標として有用なグリッドに固定された (gridlocked) とは異なる実際の X, Y 座標が必要です。二つ目は、転送先の座標へ移動するために love.update() にある実際の座標を更新する必要があります。これは単純な数学の問題により行うことができます: 
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">actual_x</span> <span class="o">=</span> <span class="n">actual_x</span> <span class="o">-</span> <span class="p">(</span><span class="n">actual_x</span> <span class="o">-</span> <span class="n">destination_x</span><span class="p">)</span>
+</pre></div>
+<p>あるいは、この場合 Lua では:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">grid_x</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">grid_y</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">act_x</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">act_y</span> <span class="o">=</span> <span class="mi">200</span>
+	<span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>恐らく気付いているでしょうが、多分ですが違いを一切見ることはできません。速度を制御するために <a href="http://love2d.org/wiki/love.update_(日本語)" title="love.update (日本語)">love.update</a> の <a href="http://love2d.org/wiki/dt_(日本語)" title="dt (日本語)">dt</a> 引数を使用して、位置の差に dt を乗算する必要があります:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>しかしながら全く正しくないままです。 player は我慢できないほど遅いです (が、少なくとも計算機から計算機まで一貫しています！)。速く移動するか制御するために dt へ速度を乗算することで player に speed 属性を与えます:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">grid_x</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">grid_y</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">act_x</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">act_y</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+	<span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="対象の全配置"></span><span class="mw-headline" id=".E5.AF.BE.E8.B1.A1.E3.81.AE.E5.85.A8.E9.85.8D.E7.BD.AE">対象の全配置</span></h2>
+<p>こちらは完全なコードです:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">grid_x</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">grid_y</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">act_x</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">act_y</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+	<span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">-</span> <span class="mi">32</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+		<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="mi">32</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="衝突の追加"></span><span class="mw-headline" id=".E8.A1.9D.E7.AA.81.E3.81.AE.E8.BF.BD.E5.8A.A0">衝突の追加</span></h2>
+<p>さて、なにか詳細な世界に追加しましょう。最初に、グリッド上を歩行することができる、またはできないように指示するためにテーブルの値を作成する必要があります。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+<span class="n">map</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+	<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+	<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+	<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="kr">end</span>
+</pre></div>
+<p>この map テーブルは４つの下位テーブルを保持しており、それぞれ４つの値を保持しています。それぞれの下位テーブルは map にある水平の列であり、それぞれの値は列において単一のタイルを表します。それは種類としては容易であるため 1s および 0s を使用しています。
+</p><p>これらの値を画面へ描画します。二種類のみ保持するため、種類のうち一つだけを描画することができます…。 1s について言及しましょう。単一ループを使用することで下位テーブルを経由してループを行い、さらにそれぞれのテーブル内の値を経由してループします。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span> <span class="kr">do</span>
+		<span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="kr">do</span>
+			<span class="kr">if</span> <span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+				<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">32</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>この二重ループに関して数点ほど注意があります。 map テーブルは参照による方法で整列されます。この意味は座標であり通常の思考方法とは逆です。 x および y ではなく、 map は y および x です。さらに map は32 ピクセル単位です。それは歩行不能な正方形を描画する場合に、それらの位置に 32 を乗算する必要があることを意味します。
+</p><p><a href="http://love2d.org/wiki/File:Grid_player_2.gif" class="image"><img alt="Grid player 2.gif" src="http://love2d.org/w/images/7/71/Grid_player_2.gif" width="800" height="600" /></a>
+</p><p>自機が map 上の場所を歩行試験ができる関数を作成します。この関数は場所上を歩行可能なら true を、歩行不能なら false を返します。関数には二つの値を指定します: 変更する x および 変更する y です。 
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">testMap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">map</span><span class="p">[(</span><span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">/</span> <span class="mi">32</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span><span class="p">][(</span><span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">/</span> <span class="mi">32</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="kc">false</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="kc">true</span>
+<span class="kr">end</span>
+</pre></div>
+<p>この関数に関して注意すべきこと。マップ単位で動作するため、通常時に渡される値は 1, -1 または 0 です。そのため、自機のグリッド座標とは異なり 32 での除算は行いません。
+</p><p>player のグリッド座標について言及すると、それらを内部へ渡す必要がなかった理由は player はグローバル変数だからです。
+</p><p>従って、この関数を keypressed 関数へ挿入することで使用することができます。留意しておくことは、試験関数の動作はピクセル単位ではなくマップ単位であり、よって一つのグリッド上を移動しようとする時は (0, -1) を渡します。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">-</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">-</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>いまこれを実行しようとすればプログラムは異常終了することに気づくでしょう。 この理由は自機がマップの範囲外から出発するからです。地図を拡張すれば不具合を修正することができます。こちらには地図に拡張を施した完全なコードがあります。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">player</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="n">grid_x</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">grid_y</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+		<span class="n">act_x</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">act_y</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+		<span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+	<span class="p">}</span>
+	<span class="n">map</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span>
+		<span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">}</span>
+	<span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_y</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+	<span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="p">((</span><span class="n">player</span><span class="p">.</span><span class="n">act_x</span> <span class="o">-</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span><span class="p">)</span> <span class="o">*</span> <span class="n">player</span><span class="p">.</span><span class="n">speed</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_x</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">act_y</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+	<span class="kr">for</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span> <span class="kr">do</span>
+		<span class="kr">for</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="kr">do</span>
+			<span class="kr">if</span> <span class="n">map</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+				<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">32</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+			<span class="kr">end</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">-</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">-</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="kr">then</span>
+		<span class="kr">if</span> <span class="n">testMap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="kr">then</span>
+			<span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">=</span> <span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="mi">32</span>
+		<span class="kr">end</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">testMap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+	<span class="kr">if</span> <span class="n">map</span><span class="p">[(</span><span class="n">player</span><span class="p">.</span><span class="n">grid_y</span> <span class="o">/</span> <span class="mi">32</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span><span class="p">][(</span><span class="n">player</span><span class="p">.</span><span class="n">grid_x</span> <span class="o">/</span> <span class="mi">32</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+		<span class="kr">return</span> <span class="kc">false</span>
+	<span class="kr">end</span>
+	<span class="kr">return</span> <span class="kc">true</span>
+<span class="kr">end</span>
+</pre></div>
+<p><a href="http://love2d.org/wiki/File:Grid_player_3.gif" class="image"><img alt="Grid player 3.gif" src="http://love2d.org/w/images/9/92/Grid_player_3.gif" width="800" height="600" /></a>
+</p><p>その他にも改良可能な若干の事項があります:
+</p>
+<ul><li>もちろん、この記事で網羅された技法を使用して、美術面を改良可能です: <a rel="nofollow" class="external autonumber" href="http://tommybrunn.com/2011/01/how-to-make-placeholder-art/">[1]</a></li>
+<li>Escape キーへ <a href="http://love2d.org/wiki/love.event.push_(日本語)" title="love.event.push (日本語)">love.event.push</a>('quit') を割り当てることによるゲームの終了といった一部追加の操作を実装することは可能です。</li>
+<li>自機は閉鎖空間のマップ内に存在しますが、マップが開いており自機が脱出しようとした場合は、ゲームは異常終了します。この不具合を防止するために簡単な検査を一部追加することは可能です。</li>
+<li>マップを 32, 32 から開始する場合において 0, 0 から開始することはかなり多くの意味があります。これを僅かな算術で容易に修正することはできますが、それは少しコードが複雑になり理解するのが困難になります。</li></ul>
+<p>しかし、この教本の用途は十分にあります。
+</p><p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240405190924
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.059 seconds
+Real time usage: 1.514 seconds
+Preprocessor visited node count: 122/1000000
+Preprocessor generated node count: 336/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 43773/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:4685-0!canonical and timestamp 20240405190923 and revision id 17122
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%e6%97%a5%e6%9c%ac%e8%aa%9e)&amp;oldid=17122">http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(日本語)&amp;oldid=17122</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://love2d.org/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Tutorial%3AGridlocked+Player+%28%E6%97%A5%E6%9C%AC%E8%AA%9E%29&amp;returntoquery=oldid%3D17122" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Tutorial:Gridlocked_Player_(日本語)" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Tutorial:Gridlocked_Player_(日本語)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;oldid=17122&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;oldid=17122" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 28 August 2016, at 11:18.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.059","walltime":"1.514","ppvisitednodes":{"value":122,"limit":1000000},"ppgeneratednodes":{"value":336,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":43773,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240405190924","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":31});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Gridlocked_Player_(%e6%97%a5%e6%9c%ac%e8%aa%9e)&oldid=17122 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:48 GMT -->
+</html>

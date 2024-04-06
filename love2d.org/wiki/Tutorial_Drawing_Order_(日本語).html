@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Drawing_Order_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:08:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Drawing_Order_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -87,7 +87,7 @@
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">object</span><span class="p">,</span> <span class="n">objects</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">object</span><span class="p">:</span><span class="n">getWidth</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">objects</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span>  <span class="n">object</span><span class="p">:</span><span class="n">getHeight</span><span class="p">())</span>
 </pre></div>
 <p><code>object</code> パラメータは描画する画像を指定しており次の２つの引数は画面状において画像の右上角を何処に描画すべきかを指定します。<code>object[i]</code> で指定された x および y 座標 の水平の中央に指定した画像の下部を配置するために幅および画像の高さの半分を減算します。
-</p><p>オーケー、画面周辺に自機を移動させるためのある方法を作成したと仮定しており、全体のものを描画する準備を終えています (または、そうでなければ違いを理解していないことでありこれでは全く以て無意味です)。これを行う方法を知らないのであれば、支援用に別の教本を数本ほど参照することをお勧めします。簡潔さに関しては <code><a href="love-668.html" title="love.draw (日本語)">love.draw</a></code> 関数全体を示して次に何が起こるかを説明します:
+</p><p>オーケー、画面周辺に自機を移動させるためのある方法を作成したと仮定しており、全体のものを描画する準備を終えています (または、そうでなければ違いを理解していないことでありこれでは全く以て無意味です)。これを行う方法を知らないのであれば、支援用に別の教本を数本ほど参照することをお勧めします。簡潔さに関しては <code><a href="love-608.html" title="love.draw (日本語)">love.draw</a></code> 関数全体を示して次に何が起こるかを説明します:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span> 
     <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">:</span><span class="n">getWidth</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">scene</span><span class="p">:</span><span class="n">getWidth</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
@@ -251,7 +251,7 @@ Retrieved from "<a dir="ltr" href="../w/indexdef2.html?title=Tutorial:Drawing_Or
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -302,5 +302,5 @@ Retrieved from "<a dir="ltr" href="../w/indexdef2.html?title=Tutorial:Drawing_Or
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.041","walltime":"0.602","ppvisitednodes":{"value":290,"limit":1000000},"ppgeneratednodes":{"value":703,"limit":1000000},"postexpandincludesize":{"value":3753,"limit":2097152},"templateargumentsize":{"value":1836,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":9971,"limit":5000000},"timingprofile":["100.00%    9.286      1 -total","100.00%    9.286      1 Template:i18n"," 54.70%    5.080     28 Template:Lang"]},"cachereport":{"timestamp":"20240405190035","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Drawing_Order_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:09:09 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Drawing_Order_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:18 GMT -->
 </html>

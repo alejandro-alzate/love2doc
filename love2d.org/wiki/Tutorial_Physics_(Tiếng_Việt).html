@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:37:10 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -52,7 +52,7 @@
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Trong ví dụ này ta sẽ tạo nên một quả bóng đỏ lăn trên nền xanh.
 </p><p>Ví dụ sau khi hoàn thành sẽ có ở cuối trang này. Tất cả những hàm liệt kê cần được đặt trong một file có tên main.lua
-</p><p>Ta sẽ bắt đầu bằng hàm <a href="love-637.html" title="love.load (Tiếng Việt)">love.load</a>().
+</p><p>Ta sẽ bắt đầu bằng hàm <a href="love-577.html" title="love.load (Tiếng Việt)">love.load</a>().
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
@@ -99,7 +99,7 @@
   <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
   <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<p>Bây giờ để kết thúc hàm <a href="love-637.html" title="love.load (Tiếng Việt)">love.load</a>(), ta hãy lập kích thước màn hình và màu nền.
+<p>Bây giờ để kết thúc hàm <a href="love-577.html" title="love.load (Tiếng Việt)">love.load</a>(), ta hãy lập kích thước màn hình và màu nền.
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>  <span class="c1">--thiết lập đồ họa ban đầu</span>
   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mi">104</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">248</span><span class="p">)</span> <span class="c1">--đặt nền màu xanh lam</span>
@@ -107,7 +107,7 @@
 <span class="kr">end</span>
 </pre></div>
 <p>Được rồi, như vậy là đủ khâu thiết lập ban đầu cho cơ chế vật lý. 
-Bây giờ ta cần viết hàm <a href="love-638.html" title="love.update (Tiếng Việt)">love.update</a>(). 
+Bây giờ ta cần viết hàm <a href="love-578.html" title="love.update (Tiếng Việt)">love.update</a>(). 
 </p>
 <h3><span id="love.update()"></span><span class="mw-headline" id="love.update.28.29">love.update()</span></h3>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
@@ -144,7 +144,7 @@ Bây giờ ta cần viết hàm <a href="love-638.html" title="love.update (Ti�
 </pre></div>
 <p>Đến đây ta đã hoàn thành rồi! Hãy đặt file này vào trong <a href="zip.html" title="zip">file nén</a>, đổi tên nó thành physics.love (hoặc cái gì cũng được), rồi chạy nó. Và bạn sẽ có một quả bóng lăn trên nền xanh mướt như tôi đã hứa.
 </p>
-<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_Tutorial-PhysicsBall.html" class="image"><img alt="" src="../w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/300px-Tutorial-PhysicsBall.jpg" width="300" height="309" class="thumbimage" srcset="/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/450px-Tutorial-PhysicsBall.jpg 1.5x, /w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/600px-Tutorial-PhysicsBall.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Tutorial-PhysicsBall.html" class="internal" title="Enlarge"></a></div>Hình chụp của sản phẩm gần được hoàn thành.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File_Tutorial-PhysicsBall.html" class="image"><img alt="" src="../w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/300px-Tutorial-PhysicsBall.html" width="300" height="309" class="thumbimage" srcset="/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/450px-Tutorial-PhysicsBall.jpg 1.5x, /w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/600px-Tutorial-PhysicsBall.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File_Tutorial-PhysicsBall.html" class="internal" title="Enlarge"></a></div>Hình chụp của sản phẩm gần được hoàn thành.</div></div></div>
 <p><br />
 </p>
 <h2><span class="mw-headline" id="File_main.lua">File main.lua</span></h2>
@@ -341,7 +341,7 @@ Retrieved from "<a dir="ltr" href="../w/index50ad.html?title=Tutorial:Physics_(T
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -392,5 +392,5 @@ Retrieved from "<a dir="ltr" href="../w/index50ad.html?title=Tutorial:Physics_(T
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.048","walltime":"0.718","ppvisitednodes":{"value":320,"limit":1000000},"ppgeneratednodes":{"value":755,"limit":1000000},"postexpandincludesize":{"value":3405,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":37617,"limit":5000000},"timingprofile":["100.00%    5.426      1 -total","100.00%    5.426      1 Template:i18n"," 52.96%    2.874     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170050","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:37:28 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Physics_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>

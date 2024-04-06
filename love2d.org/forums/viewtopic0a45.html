@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=259172 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Games and Creations" href="app.php/feed/forum/14.html">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike" href="app.php/feed/topic/95547.html">	
+	<link rel="canonical" href="viewtopicf393.html?t=95547">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a itemprop="item" href="viewforum9780.html?f=14"><span itemprop="name">Games and Creations</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpd1fc.html?mode=login&amp;redirect=viewtopic.php%3Fp%3D259172" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopicf393.html?t=95547">Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Show off your games, demos and other (playable) creations.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="postingdfed.html?mode=reply&amp;t=95547" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic051a.html?t=95547&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="95547" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			10 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p258728" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258728">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="avatar"><img class="avatar" src="download/file38f9.html?avatar=167496_1693289243.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchfbbb.html?author_id=167496&amp;sr=posts">1088</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 10, 2020 1:57 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258728">
+
+					<h3 class="first">
+						<a href="viewtopic40fb.html?p=258728#p258728">Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd94a.html?mode=quote&amp;p=258728" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic40fb.html?p=258728#p258728" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a></strong> &raquo; </span><time datetime="2024-02-16T01:54:41+00:00">Fri Feb 16, 2024 1:54 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Please help me test my traditional roguelike (just a tutorial so far) so I can fix any small quirks now. I want to give as little info as possible to see how you guys like it. <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"><br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file606a.html?id=23995&amp;mode=view"><img src="download/filebd85.html?id=23995" class="postimage" alt="IMG_20240101_022028.png" /></a></dt>
+						<dd>IMG_20240101_022028.png (138.2 KiB) Viewed 1299 times</dd>
+		</dl>
+		
+		
+			</div>
+
+
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/file8814.html?id=23991">madcrawl_alpha.love</a></dt>
+						<dd>(19.3 MiB) Downloaded 70 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+									
+						
+							<div id="sig258728" class="signature">The risk I took was calculated,<br>
+but man, am I bad at math.<br>
+<br>
+-<a href="https://www1.cbn.com/teachingsheets/born-again-how-to-be-saved" class="postlink">How to be saved and born again</a> <img class="smilies" src="images/smilies/ms-huh.html" width="16" height="16" alt=":huh:" title="Huuh..."></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258730" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258730">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistfc40.html?mode=viewprofile&amp;u=210592" class="username">SugarRayLua</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche070.html?author_id=210592&amp;sr=posts">53</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Dec 03, 2022 7:52 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258730">
+
+					<h3 >
+						<a href="viewtopicd740.html?p=258730#p258730">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingaaa0.html?mode=quote&amp;p=258730" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd740.html?p=258730#p258730" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistfc40.html?mode=viewprofile&amp;u=210592" class="username">SugarRayLua</a></strong> &raquo; </span><time datetime="2024-02-16T06:48:15+00:00">Fri Feb 16, 2024 6:48 am</time>
+			</p>
+			
+			
+			
+			<div class="content">@Gunroar:Cannon(),<br>
+<br>
+Initial impressions very positive! I like the somewhat unique quirky vibe of your roguelike. Runs well on iOS mobile (iPad). Still trying to figure out though what all is going on as I play... will give more feedback after figure more of it out. <img alt="👍" class="emoji smilies" draggable="false" src="http://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"><img alt="😊" class="emoji smilies" draggable="false" src="http://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258731" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258731">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist965a.html?mode=viewprofile&amp;u=169762" class="avatar"><img class="avatar" src="download/file6644.html?avatar=169762_1684859335.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist965a.html?mode=viewprofile&amp;u=169762" class="username">GVovkiv</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbb45.html?author_id=169762&amp;sr=posts">668</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 15, 2021 7:29 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258731">
+
+					<h3 >
+						<a href="viewtopiccd9f.html?p=258731#p258731">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd56f.html?mode=quote&amp;p=258731" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccd9f.html?p=258731#p258731" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist965a.html?mode=viewprofile&amp;u=169762" class="username">GVovkiv</a></strong> &raquo; </span><time datetime="2024-02-16T08:52:30+00:00">Fri Feb 16, 2024 8:52 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Seems fun, tho I don't understand almost nothing about what happening, lol<br>
+<br>
+Anyway, seems that items didn't get properly removed from inventory after usage, and if you will try to use again item that supposed to be removed, you will get error:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Error
+
+nest/creature.lua:1727: attempt to index local 'item' (a nil value)
+
+
+Traceback
+
+[love "callbacks.lua"]:228: in function 'handler'
+nest/creature.lua:1727: in function 'reloadWieldPos'
+nest/creature.lua:1944: in function 'wieldItem'
+nest/map.lua:3925: in function 'itemPopUp'
+nest/map.lua:2864: in function 'r'
+toybox/libs/gooi/gooi.lua:905: in function '_released'
+toybox/libs/gooi/gooi.lua:865: in function 'released'
+toybox/entities/Room.lua:1254: in function '__mousereleased'
+toybox/entities/Game.lua:228: in function 'mousereleased'
+toybox/LGML.lua:390: in function &lt;toybox/LGML.lua:389&gt;
+[love "callbacks.lua"]:154: in function &lt;[love "callbacks.lua"]:144&gt;
+[C]: in function 'xpcall'</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig258731" class="signature"><a href="https://www.youtube.com/channel/UCTNhdp5lS3bFlQb1SXzM0Fg/" class="postlink">https://www.youtube.com/channel/UCTNhdp ... b1SXzM0Fg/</a><br>
+<a href="https://github.com/Vovkiv/resolution_solution" class="postlink">https://github.com/Vovkiv/resolution_solution</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258734" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258734">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="avatar"><img class="avatar" src="download/file38f9.html?avatar=167496_1693289243.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchfbbb.html?author_id=167496&amp;sr=posts">1088</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 10, 2020 1:57 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258734">
+
+					<h3 >
+						<a href="viewtopic62d6.html?p=258734#p258734">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting114f.html?mode=quote&amp;p=258734" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic62d6.html?p=258734#p258734" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a></strong> &raquo; </span><time datetime="2024-02-16T13:27:49+00:00">Fri Feb 16, 2024 1:27 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm sorry about explaining so little in way of controls, etc. But I want to see how easy it is to learn the controls from experimentation (it's also heavily mouse based though). So far seems easy to learn at least.<br>
+
+<blockquote cite="./viewtopic.php?p=258730#p258730"><div><cite><a href="memberlistfc40.html?mode=viewprofile&amp;u=210592">SugarRayLua</a> wrote: <a href="viewtopicd740.html?p=258730#p258730" data-post-id="258730" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Fri Feb 16, 2024 6:48 am</span></cite>
+@Gunroar:Cannon(),<br>
+<br>
+Initial impressions very positive! I like the somewhat unique quirky vibe of your roguelike. Runs well on iOS mobile (iPad). Still trying to figure out though what all is going on as I play... will give more feedback after figure more of it out. <img alt="👍" class="emoji smilies" draggable="false" src="http://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"><img alt="😊" class="emoji smilies" draggable="false" src="http://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg">
+</div></blockquote>
+
+Thanks, I worked on it on mobile a lot so I guess it would run well there (though still meant for PC, but who knows).<br>
+And thank you for the promised feedback <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"><br>
+<br>
+
+<blockquote cite="./viewtopic.php?p=258731#p258731"><div><cite><a href="memberlist965a.html?mode=viewprofile&amp;u=169762">GVovkiv</a> wrote: <a href="viewtopiccd9f.html?p=258731#p258731" data-post-id="258731" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Fri Feb 16, 2024 8:52 am</span></cite>
+Seems fun, tho I don't understand almost nothing about what happening, lol<br>
+<br>
+Anyway, seems that items didn't get properly removed from inventory after usage, and if you will try to use again item that supposed to be removed, you will get error:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Error
+
+nest/creature.lua:1727: attempt to index local 'item' (a nil value)
+
+
+Traceback
+
+[love "callbacks.lua"]:228: in function 'handler'
+nest/creature.lua:1727: in function 'reloadWieldPos'
+nest/creature.lua:1944: in function 'wieldItem'
+nest/map.lua:3925: in function 'itemPopUp'
+nest/map.lua:2864: in function 'r'
+toybox/libs/gooi/gooi.lua:905: in function '_released'
+toybox/libs/gooi/gooi.lua:865: in function 'released'
+toybox/entities/Room.lua:1254: in function '__mousereleased'
+toybox/entities/Game.lua:228: in function 'mousereleased'
+toybox/LGML.lua:390: in function &lt;toybox/LGML.lua:389&gt;
+[love "callbacks.lua"]:154: in function &lt;[love "callbacks.lua"]:144&gt;
+[C]: in function 'xpcall'</code></pre></div>
+</div></blockquote>
+
+Ahh, yes. Gvovkiv!! You're a Saviour! These are the exact types of things I need. Thank you. (And yep, this is that "big" thing I've been working on, though I did hide most of the actual content <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> )<br>
+<br>
+Though it's a weird bug that hasn't happened to me before, I'll check it out.<br>
+Please try to play more to see if any more bugs are discovered <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry"> (Though it's ermmm... relatively bug free and the "tutorial" is able to be completed.)<br>
+<br>
+It's a turn based game. Kind of like Pixel dungeon. <img class="smilies" src="images/smilies/ms-rofl.html" width="16" height="16" alt=":rofl:" title="ROFL"> What exactly makes little sense?</div>
+
+			
+			
+									
+						
+							<div id="sig258734" class="signature">The risk I took was calculated,<br>
+but man, am I bad at math.<br>
+<br>
+-<a href="https://www1.cbn.com/teachingsheets/born-again-how-to-be-saved" class="postlink">How to be saved and born again</a> <img class="smilies" src="images/smilies/ms-huh.html" width="16" height="16" alt=":huh:" title="Huuh..."></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258744" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258744">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.html?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">772</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258744">
+
+					<h3 >
+						<a href="viewtopic1f38.html?p=258744#p258744">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting38cf.html?mode=quote&amp;p=258744" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1f38.html?p=258744#p258744" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2024-02-17T09:07:01+00:00">Sat Feb 17, 2024 9:07 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Have to tap key twice to start the game. Can I tap just once? The constant droning noise in the bground? Does it ever stop? Left handers don't use WSAD. It seems turn based but hard to tell. My friends move too far ahead and I've lost them. The 'chat' log is at the top but my character is centre of screen. Suggest the text appears below the character at first - so you see it - as well as in the log. Why screen sometime red, sometimes yellow, sometimes grey?<br>
+<br>
+No bugs so yay!</div>
+
+			
+			
+									
+						
+							<div id="sig258744" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258749" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258749">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="avatar"><img class="avatar" src="download/file38f9.html?avatar=167496_1693289243.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchfbbb.html?author_id=167496&amp;sr=posts">1088</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 10, 2020 1:57 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258749">
+
+					<h3 >
+						<a href="viewtopic5051.html?p=258749#p258749">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingbf73.html?mode=quote&amp;p=258749" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5051.html?p=258749#p258749" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a></strong> &raquo; </span><time datetime="2024-02-17T14:03:23+00:00">Sat Feb 17, 2024 2:03 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=258744#p258744"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopic1f38.html?p=258744#p258744" data-post-id="258744" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sat Feb 17, 2024 9:07 am</span></cite>
+Have to tap key twice to start the game. Can I tap just once? 
+</div></blockquote> Ahh. That might be a bug. Is it before or after a quote shows up.<br>
+
+<blockquote class="uncited"><div>The constant droning noise in the bground? Does it ever stop?</div></blockquote>
+That's the heartbeat ...? <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry">  It's supposed to be the heart beat of your HP bar. Is it too fast and/or annoying? <br>
+
+<blockquote class="uncited"><div>
+Left handers don't use WSAD. </div></blockquote>
+I thought I put allowance for using arrow keys<br>
+
+<blockquote class="uncited"><div>It seems turn based but hard to tell.
+</div></blockquote>
+For real, it's that hard to tell. Any ideas to make it clearer? <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry"><br>
+
+ <blockquote class="uncited"><div>My friends move too far ahead and I've lost them. </div></blockquote> I know they move pretty fast. Though the way they're going is ...obvious? (is it?) And it's also pretty easy to catch up, no?
+<blockquote class="uncited"><div>
+<br>
+The 'chat' log is at the top but my character is centre of screen. Suggest the text appears below the character at first - so you see it - as well as in the log.</div></blockquote>
+Okay, like a notification/cry like thing next to he character. Like dealing damage in Diablo or Vampire survivors. That pop up like thing?
+<blockquote class="uncited"><div> Why screen sometime red, sometimes yellow, sometimes grey?
+</div></blockquote>
+Lighting <img class="smilies" src="images/smilies/ms-unplzd.html" width="16" height="16" alt=":|" title="Neutral"><br>
+
+<blockquote class="uncited"><div>
+No bugs so yay!
+</div></blockquote>
+Yay! <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"> <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry"><br>
+<br>
+Thank you for all the finds. Please (please <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry"> ) try and play more despite all the inconveniences. I really can't do this part of the dev without all you guys <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"><br>
+<br>
+(Just found an error caused by pressing escape during game <img class="smilies" src="images/smilies/ms-rofl.html" width="16" height="16" alt=":rofl:" title="ROFL">)</div>
+
+			
+			
+									
+						
+							<div id="sig258749" class="signature">The risk I took was calculated,<br>
+but man, am I bad at math.<br>
+<br>
+-<a href="https://www1.cbn.com/teachingsheets/born-again-how-to-be-saved" class="postlink">How to be saved and born again</a> <img class="smilies" src="images/smilies/ms-huh.html" width="16" height="16" alt=":huh:" title="Huuh..."></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259157" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259157">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="avatar"><img class="avatar" src="download/file38f9.html?avatar=167496_1693289243.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchfbbb.html?author_id=167496&amp;sr=posts">1088</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 10, 2020 1:57 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259157">
+
+					<h3 >
+						<a href="viewtopic4f01.html?p=259157#p259157">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting21e8.html?mode=quote&amp;p=259157" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4f01.html?p=259157#p259157" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a></strong> &raquo; </span><time datetime="2024-04-03T02:06:55+00:00">Wed Apr 03, 2024 2:06 am</time>
+			</p>
+			
+			
+			
+			<div class="content">New Update: <a href="https://hmmmgames.itch.io/madcrawl" class="postlink">https://hmmmgames.itch.io/madcrawl</a><br>
+(Sorry, I tried but uploading the love file here isn't working for my &gt;30MB file <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry">)<br>
+<br>
+Please, can you (yes YOU) help and playtest it. <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"><br>
+I really need the feedback.<br>
+<br>
+Though I came on a weekday. That's my bad. I'll prompt again on Saturday.</div>
+
+			
+			
+									
+						
+							<div id="sig259157" class="signature">The risk I took was calculated,<br>
+but man, am I bad at math.<br>
+<br>
+-<a href="https://www1.cbn.com/teachingsheets/born-again-how-to-be-saved" class="postlink">How to be saved and born again</a> <img class="smilies" src="images/smilies/ms-huh.html" width="16" height="16" alt=":huh:" title="Huuh..."></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259162" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259162">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.html?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">772</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259162">
+
+					<h3 >
+						<a href="viewtopic294b.html?p=259162#p259162">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingb2b8.html?mode=quote&amp;p=259162" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic294b.html?p=259162#p259162" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2024-04-03T13:30:54+00:00">Wed Apr 03, 2024 1:30 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Since you said 'please' I'll give this another shot when I return from vacation next week. <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+<br>
+Any release notes for this update?</div>
+
+			
+			
+									
+						
+							<div id="sig259162" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259163" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259163">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="avatar"><img class="avatar" src="download/file38f9.html?avatar=167496_1693289243.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchfbbb.html?author_id=167496&amp;sr=posts">1088</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 10, 2020 1:57 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259163">
+
+					<h3 >
+						<a href="viewtopic39a0.html?p=259163#p259163">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5e24.html?mode=quote&amp;p=259163" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic39a0.html?p=259163#p259163" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste80f.html?mode=viewprofile&amp;u=167496" class="username">Gunroar:Cannon()</a></strong> &raquo; </span><time datetime="2024-04-03T16:57:52+00:00">Wed Apr 03, 2024 4:57 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=259162#p259162"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopic294b.html?p=259162#p259162" data-post-id="259162" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Apr 03, 2024 1:30 pm</span></cite>
+Since you said 'please' I'll give this another shot when I return from vacation next week. <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">
+</div></blockquote>
+Thank you <img class="smilies" src="images/smilies/ms-cry.html" width="16" height="16" alt=":cry:" title="Cry"><br>
+
+<blockquote class="uncited"><div>
+Any release notes for this update?
+</div></blockquote>
+Ermmm...there's a readme.txt in the windows zip? (Love2d can still run exe files as love files I believe). I don't really know how to make release note <img class="smilies" src="images/smilies/ms-razz.html" width="16" height="16" alt=":P" title="Razz">. I ... Tried to fix the problems addressed above (though I don't think all, such as lighting).</div>
+
+			
+			
+									
+						
+							<div id="sig259163" class="signature">The risk I took was calculated,<br>
+but man, am I bad at math.<br>
+<br>
+-<a href="https://www1.cbn.com/teachingsheets/born-again-how-to-be-saved" class="postlink">How to be saved and born again</a> <img class="smilies" src="images/smilies/ms-huh.html" width="16" height="16" alt=":huh:" title="Huuh..."></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259172" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259172">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.html?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">772</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259172">
+
+					<h3 >
+						<a href="viewtopic0a45.html?p=259172#p259172">Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting758d.html?mode=quote&amp;p=259172" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0a45.html?p=259172#p259172" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2024-04-04T10:53:46+00:00">Thu Apr 04, 2024 10:53 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I try to publish a simple bullet point list of things I fixed and things I know I didn't fix (known issues) so my fan base will know what to expect with each download.  You can see how very simple this can be on my itch.io page (dev log) available in my signature.</div>
+
+			
+			
+									
+						
+							<div id="sig259172" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingdfed.html?mode=reply&amp;t=95547" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic051a.html?t=95547&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=95547">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			10 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum9780.html?f=14" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Games and Creations”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=259172 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:39 GMT -->
+</html>

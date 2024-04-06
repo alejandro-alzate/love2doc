@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:41:54 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -78,7 +78,7 @@
    <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;A tecla ESPAÇO foi pressionada!&quot;</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Você pode encontrar a relação completa de teclas <a href="KeyConstant_(Portugu%c3%aas).html" title="KeyConstant (Português)">aqui</a>. O melhor local para realizar essa verificação é dentro do callback <code><a href="love-681.html" title="love.update (Português)">love.update</a></code>, dessa forma, somos capazes de obter a entrada do usuário e atualizar nossas variáveis antes de tirar as nossas coisas da tela. Então, o nosso callback love.update modificado deve ficar assim:
+<p>Você pode encontrar a relação completa de teclas <a href="KeyConstant_(Portugu%c3%aas).html" title="KeyConstant (Português)">aqui</a>. O melhor local para realizar essa verificação é dentro do callback <code><a href="love-621.html" title="love.update (Português)">love.update</a></code>, dessa forma, somos capazes de obter a entrada do usuário e atualizar nossas variáveis antes de tirar as nossas coisas da tela. Então, o nosso callback love.update modificado deve ficar assim:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span> <span class="kr">then</span>
@@ -86,7 +86,7 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Ainda que isso funcione perfeitamente, talvez nós apenas desejássemos saber quais teclas estão sendo pressionadas no momento e especificar diferentes comportamentos quando elas estão pressionadas ou forem soltas. Uma maneira elegante de fazer isso é usando os retornos de teclado <code><a href="love-682.html" title="love.keypressed (Português)">love.keypressed</a></code> e <code><a href="love-683.html" title="love.keyreleased (Português)">love.keyreleased</a></code>. Eles trabalham de forma semelhante aos já conhecidos <code><a href="love-681.html" title="love.update (Português)">love.update</a></code> e <code><a href="love-684.html" title="love.draw (Português)">love.draw</a></code>, executando o nosso código toda vez que o evento é acionado. Por exemplo:
+<p>Ainda que isso funcione perfeitamente, talvez nós apenas desejássemos saber quais teclas estão sendo pressionadas no momento e especificar diferentes comportamentos quando elas estão pressionadas ou forem soltas. Uma maneira elegante de fazer isso é usando os retornos de teclado <code><a href="love-622.html" title="love.keypressed (Português)">love.keypressed</a></code> e <code><a href="love-623.html" title="love.keyreleased (Português)">love.keyreleased</a></code>. Eles trabalham de forma semelhante aos já conhecidos <code><a href="love-621.html" title="love.update (Português)">love.update</a></code> e <code><a href="love-624.html" title="love.draw (Português)">love.draw</a></code>, executando o nosso código toda vez que o evento é acionado. Por exemplo:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span> <span class="n">tecla</span> <span class="p">)</span>
    <span class="kr">if</span> <span class="n">tecla</span> <span class="o">==</span> <span class="s2">&quot;return&quot;</span> <span class="kr">then</span>
@@ -134,22 +134,22 @@
 <p><br />
 </p>
 <h2><span class="mw-headline" id="Capturando_eventos_do_mouse">Capturando eventos do mouse</span></h2>
-<p>Muito bem, agora que nós já sabemos como interagir com o jogador através do teclado, que tal tentarmos interagir através do mouse? As entradas do teclado funcionam de forma semelhante ao visto no teclado, nós temos o método  <code><a href="love.mouse-22.html" title="love.mouse.isDown (Português)">love.mouse.isDown</a></code> e os callbacks <code><a href="love-685.html" title="love.mousepressed (Português)">love.mousepressed</a></code> e <code><a href="love-685.html" title="love.mousepressed (Português)">love.mousepressed</a></code>. Agora, vamos adicionar algumas linhas em nosso <code><a href="love-681.html" title="love.update (Português)">love.update</a></code>:
+<p>Muito bem, agora que nós já sabemos como interagir com o jogador através do teclado, que tal tentarmos interagir através do mouse? As entradas do teclado funcionam de forma semelhante ao visto no teclado, nós temos o método  <code><a href="love.mouse-22.html" title="love.mouse.isDown (Português)">love.mouse.isDown</a></code> e os callbacks <code><a href="love-625.html" title="love.mousepressed (Português)">love.mousepressed</a></code> e <code><a href="love-625.html" title="love.mousepressed (Português)">love.mousepressed</a></code>. Agora, vamos adicionar algumas linhas em nosso <code><a href="love-621.html" title="love.update (Português)">love.update</a></code>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="kr">then</span>
    <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;O botão direito do mouse foi pressionado!&quot;</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Como você pode ver, este método é bastante similar ao método <code><a href="love.keyboard-15.html" title="love.keyboard.isDown (Português)">love.keyboard.isDown</a></code>, o que inclui uma relação de botões própria, a qual pode ser vista <a href="MouseConstant_(Portugu%c3%aas).html" title="MouseConstant (Português)">aqui</a>. Além de verificar se os botões do mouse estão sendo pressionados, também é possível descobrir se a sua roda está sendo girada (e para qual direção). Ainda existem outros dois métodos que nos apresentam a posição da tela onde o mouse está posicionado: <code><a href="love.mouse-23.html" title="love.mouse.getX (Português)">love.mouse.getX</a></code> e <code><a href="love.mouse-24.html" title="love.mouse.getY (Português)">love.mouse.getY</a></code>. Cada um irá retornar a coordenada atual do ponteiro do mouse. Vejamos o que acontece ao adicionar estas duas linhas de código ao nosso callback <code><a href="love-681.html" title="love.update (Português)">love.update</a></code>:
+<p>Como você pode ver, este método é bastante similar ao método <code><a href="love.keyboard-15.html" title="love.keyboard.isDown (Português)">love.keyboard.isDown</a></code>, o que inclui uma relação de botões própria, a qual pode ser vista <a href="MouseConstant_(Portugu%c3%aas).html" title="MouseConstant (Português)">aqui</a>. Além de verificar se os botões do mouse estão sendo pressionados, também é possível descobrir se a sua roda está sendo girada (e para qual direção). Ainda existem outros dois métodos que nos apresentam a posição da tela onde o mouse está posicionado: <code><a href="love.mouse-23.html" title="love.mouse.getX (Português)">love.mouse.getX</a></code> e <code><a href="love.mouse-24.html" title="love.mouse.getY (Português)">love.mouse.getY</a></code>. Cada um irá retornar a coordenada atual do ponteiro do mouse. Vejamos o que acontece ao adicionar estas duas linhas de código ao nosso callback <code><a href="love-621.html" title="love.update (Português)">love.update</a></code>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">mouse_x</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">getX</span><span class="p">()</span>
 <span class="n">mouse_y</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">mouse</span><span class="p">.</span><span class="n">getY</span><span class="p">()</span>
 </pre></div>
-<p>E esta linha ao callback <code><a href="love-684.html" title="love.draw (Português)">love.draw</a></code>:
+<p>E esta linha ao callback <code><a href="love-624.html" title="love.draw (Português)">love.draw</a></code>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Mouse X: &quot;</span><span class="o">..</span> <span class="n">mouse_x</span> <span class="o">..</span> <span class="s2">&quot; Mouse Y: &quot;</span> <span class="o">..</span> <span class="n">mouse_y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span> <span class="p">)</span>
 </pre></div>
-<p>Os <code><a href="love-685.html" title="love.mousepressed (Português)">love.mousepressed</a></code> e <code><a href="love-686.html" title="love.mousereleased (Português)">love.mousereleased</a></code> trabalham de forma muito semelhante aos os seus homólogos de teclado:
+<p>Os <code><a href="love-625.html" title="love.mousepressed (Português)">love.mousepressed</a></code> e <code><a href="love-626.html" title="love.mousereleased (Português)">love.mousereleased</a></code> trabalham de forma muito semelhante aos os seus homólogos de teclado:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">mousepressed</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">botao</span><span class="p">)</span>
   <span class="kr">if</span> <span class="n">botao</span> <span class="o">==</span> <span class="s1">&#39;l&#39;</span> <span class="kr">then</span>
@@ -171,7 +171,7 @@
   <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Por fim, existem outros dois métodos bastante interessantes relacionados ao mouse: <code><a href="love.mouse-25.html" title="love.mouse.setVisible (Português)">love.mouse.setVisible</a></code> e <code><a href="love.mouse-26.html" title="love.mouse.isVisible (Português)">love.mouse.isVisible</a></code>. O primeiro deles permite que você oculte/exiba o cursor do mouse, enquanto o segundo permite que você saiba se o cursor do mouse está visível ou não. Vamos adicionar mais algumas linhas de código ao nosso callback <code><a href="love-682.html" title="love.keypressed (Português)">love.keypressed</a></code>:
+<p>Por fim, existem outros dois métodos bastante interessantes relacionados ao mouse: <code><a href="love.mouse-25.html" title="love.mouse.setVisible (Português)">love.mouse.setVisible</a></code> e <code><a href="love.mouse-26.html" title="love.mouse.isVisible (Português)">love.mouse.isVisible</a></code>. O primeiro deles permite que você oculte/exiba o cursor do mouse, enquanto o segundo permite que você saiba se o cursor do mouse está visível ou não. Vamos adicionar mais algumas linhas de código ao nosso callback <code><a href="love-622.html" title="love.keypressed (Português)">love.keypressed</a></code>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">if</span> <span class="n">tecla</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span> <span class="kr">then</span>
 <span class="c1">--Use o trecho de código abaixo</span>
@@ -318,7 +318,7 @@ Retrieved from "<a dir="ltr" href="../w/indexd151.html?title=Tutorial:Using_Inpu
 							<ul>
 											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
 											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
-											<li id="n-randompage"><a href="number_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
 									</ul>
 					</div>
 		</div>
@@ -369,5 +369,5 @@ Retrieved from "<a dir="ltr" href="../w/indexd151.html?title=Tutorial:Using_Inpu
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.047","walltime":"1.198","ppvisitednodes":{"value":357,"limit":1000000},"ppgeneratednodes":{"value":847,"limit":1000000},"postexpandincludesize":{"value":3637,"limit":2097152},"templateargumentsize":{"value":1720,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":12723,"limit":5000000},"timingprofile":["100.00%    6.741      1 -total","100.00%    6.741      1 Template:i18n"," 55.63%    3.750     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170105","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":125});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 04:42:20 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Using_Input_(Português) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:19 GMT -->
 </html>
