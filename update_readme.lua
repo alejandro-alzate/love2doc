@@ -31,6 +31,8 @@ When contributing do **not** bother in editing README.md directly because is cre
 Being run every now and then
 ]]
 
+local aprilFoolsContent =
+
 --The workflow installs it so don't even bother.
 --os.execute("sudo apt-get update\nsudo apt-get install -y curl grep")
 
