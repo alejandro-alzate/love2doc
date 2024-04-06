@@ -19,17 +19,17 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AGraphic_Tranformations">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T15:59:53+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AGridlocked_Player">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T16:00:55+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3AGraphic_Tranformations">
-		<rdfs:label>Tutorial:Graphic Tranformations</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AGraphic_Tranformations"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3AGraphic_Tranformations"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3AGridlocked_Player">
+		<rdfs:label>Tutorial:Gridlocked Player</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AGridlocked_Player"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3AGridlocked_Player"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphic Tranformations</swivt:wikiPageSortKey>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gridlocked Player</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
