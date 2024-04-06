@@ -59,7 +59,7 @@ whewn contwibuting duwu **not** bothew in editing weadme.md diwectwy because iws
 being wun evewy now awnd then
 ]]
 
-if isAprilFoolsDay() or true then content = aprilFoolsContent end
+if isAprilFoolsDay() then content = aprilFoolsContent end
 
 --The workflow installs it so don't even bother.
 --os.execute("sudo apt-get update\nsudo apt-get install -y curl grep")
