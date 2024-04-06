@@ -8,7 +8,7 @@
 # Disclaimer: this DOES NOT PULL FROM love2d.org/
 # This is the command to do so,
 # make sure to execute this at the root of the folder:
-# httrack love2d.org/wiki -p7
+# httrack -c3 --keep-alive -p7 -%X "Crawler-Info: The love2doc archive project https://github.com/alejandro-alzate/love2doc"
 
 MSG="Automatic partial update at: "
 COOLDOWN="1h"

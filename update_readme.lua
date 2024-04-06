@@ -64,15 +64,23 @@ if isAprilFoolsDay() then content = aprilFoolsContent end
 --The workflow installs it so don't even bother.
 --os.execute("sudo apt-get update\nsudo apt-get install -y curl grep")
 
-local query = [[curl -s https://love2d.org/ | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > remote-version.txt]]
-os.execute(query)
+local grabCommand = [[| grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' ]]
+local remoteQuery = [[curl -s https://love2d.org/ ]]
+local remoteFile  = [[> remote-version.txt]]
+local localQuery  = [[cat love2d.org/index.html ]]
+local localFile   = [[> latest-version.txt]]
 
-local query = [[cat ./love2d.org/index.html | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > ./latest-version.txt]]
-os.execute(query)
+--Query from the online page what version is displayed in the main page
+--local query = [[curl -s https://love2d.org/ | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > remote-version.txt]]
+os.execute(remoteQuery .. grabCommand .. remoteFile)
+
+--Same but extracting it from our local copy
+--local query = [[cat ./love2d.org/index.html | grep -oP '<h2>Download LÖVE \K[0-9]+\.[0-9]+' | tr -d '\n' > ./latest-version.txt]]
+os.execute(localQuery .. grabCommand .. localFile)
 
 local localversion = readAll("latest-version.txt") or "0.0"
 local remotversion = readAll("remote-version.txt")
-print("local:", localversion, "remote:", remotversion)
+print("local:", localversion, "remote:", remotversion, tonumber(localversion) < tonumber(remotversion) and "outdated" or "up to date")
 
 --os.execute(string.format("echo '%s' > remote-version.txt", remotversion:gsub("\n", "")))
 
