@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=233156 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>boon - A build tool for LÖVE - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - boon - A build tool for LÖVE" href="app.php/feed/topic/86573">	
+	<link rel="canonical" href="viewtopic2a87.html?t=86573">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp85a2.html?mode=login&amp;redirect=viewtopic.php%3Fp%3D233156" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic2a87.html?t=86573">boon - A build tool for LÖVE</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting830a.html?mode=reply&amp;t=86573" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic0169.html?t=86573&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="86573" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			17 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic0a1a.html?t=86573&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic0a1a.html?t=86573&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p226841" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile226841">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="avatar"><img class="avatar" src="download/fileb594.png?avatar=127310_1456766869.png" width="78" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchece6.html?author_id=127310&amp;sr=posts">79</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 18, 2013 4:44 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content226841">
+
+					<h3 class="first">
+						<a href="viewtopic5faf.html?p=226841#p226841">boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc2eb.html?mode=quote&amp;p=226841" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5faf.html?p=226841#p226841" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a></strong> &raquo; </span><time datetime="2019-04-20T19:23:10+00:00">Sat Apr 20, 2019 7:23 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Hello everyone!<br>
+<br>
+Packaging and distribution can be a big hassle for LÖVE, which is why great tools like love-release and other packagers exist. However, installing these can be tricky and error prone. I've experienced a number of dependency issues with love-release (libzip, luarocks, etc.) and it has led to a lot of frustration. I just wanted a tool that was easy to install, easy to use, and can build my game quickly and without any trouble.<br>
+<br>
+So, I created a tool called boon: <a href="https://github.com/camchenry/boon" class="postlink">https://github.com/camchenry/boon</a><br>
+<br>
+boon is a build tool for LÖVE. It makes it easy to package your game for multiple platforms, similar to love-release. It is a single executable with no other dependencies. It runs on Windows, macOS, and Linux. It can be used across multiple projects and makes automated building a breeze.<br>
+<br>
+<span style="font-size:150%;line-height:116%">Features</span>
+<ul>
+<li>Package your game for multiple platforms. Supported platforms: <ul>
+<li> Native (.love)</li>
+<li> Windows (.exe)</li>
+<li> macOS (.app)</li>
+<li>Linux (coming soon)</li>
+</ul></li>
+<li> Package your game for multiple versions of LÖVE. Supported versions: <ul>
+<li> 11.1x</li>
+<li> 0.10.2</li>
+</ul></li>
+<li> No external dependencies</li>
+<li> Deploy to multiple destinations (coming soon)</li>
+</ul>
+
+You can download the latest release here: <a href="https://github.com/camchenry/boon/releases" class="postlink">https://github.com/camchenry/boon/releases</a><br>
+<br>
+Basic instructions for getting started are in the README: <a href="https://github.com/camchenry/boon/blob/master/README.md" class="postlink">https://github.com/camchenry/boon/blob/master/README.md</a><br>
+<br>
+This is an early release so there is guaranteed to be bugs, so let me know what issues you come across and I would be glad to help resolve them.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232031" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232031">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="avatar"><img class="avatar" src="download/fileb594.png?avatar=127310_1456766869.png" width="78" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchece6.html?author_id=127310&amp;sr=posts">79</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 18, 2013 4:44 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232031">
+
+					<h3 >
+						<a href="viewtopic3663.html?p=232031#p232031">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8317.html?mode=quote&amp;p=232031" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3663.html?p=232031#p232031" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a></strong> &raquo; </span><time datetime="2020-02-11T05:27:20+00:00">Tue Feb 11, 2020 5:27 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hello, just wanted to let you all know that I have updated the library to be compatible with version 11.3 of LOVE. I do not have much time to add new features at the moment, but I am maintaining the library. Please submit any issues on the GitHub repository, thank you.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232049" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232049">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist1617.html?mode=viewprofile&amp;u=134541" class="username">gianmichele</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche60b.html?author_id=134541&amp;sr=posts">63</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jan 14, 2014 11:03 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232049">
+
+					<h3 >
+						<a href="viewtopica371.html?p=232049#p232049">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingab6a.html?mode=quote&amp;p=232049" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica371.html?p=232049#p232049" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1617.html?mode=viewprofile&amp;u=134541" class="username">gianmichele</a></strong> &raquo; </span><time datetime="2020-02-11T15:33:44+00:00">Tue Feb 11, 2020 3:33 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Very nice! Thank you very much</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232184" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232184">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist2d68.html?mode=viewprofile&amp;u=146084" class="username">Kel</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search038c.html?author_id=146084&amp;sr=posts">3</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Feb 16, 2020 7:48 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232184">
+
+					<h3 >
+						<a href="viewtopic97ce.html?p=232184#p232184">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6c23.html?mode=quote&amp;p=232184" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic97ce.html?p=232184#p232184" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist2d68.html?mode=viewprofile&amp;u=146084" class="username">Kel</a></strong> &raquo; </span><time datetime="2020-02-16T20:03:00+00:00">Sun Feb 16, 2020 8:03 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">This looks useful. Thank you for making it, Ikroth.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232370" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232370">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist089f.html?mode=viewprofile&amp;u=125453" class="username">pauljessup</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8190.html?author_id=125453&amp;sr=posts">355</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 03, 2013 4:06 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232370">
+
+					<h3 >
+						<a href="viewtopic0e23.html?p=232370#p232370">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd9f4.html?mode=quote&amp;p=232370" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0e23.html?p=232370#p232370" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist089f.html?mode=viewprofile&amp;u=125453" class="username">pauljessup</a></strong> &raquo; </span><time datetime="2020-02-27T19:32:02+00:00">Thu Feb 27, 2020 7:32 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Doesn't work on OSX- even after you install love, it keeps saying "can't find windows version of love"<br>
+<br>
+And when you ls that directory it spits out, it shows the love files in the directory it mentions.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232498" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232498">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="avatar"><img class="avatar" src="download/fileb594.png?avatar=127310_1456766869.png" width="78" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchece6.html?author_id=127310&amp;sr=posts">79</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 18, 2013 4:44 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232498">
+
+					<h3 >
+						<a href="viewtopic4fee.html?p=232498#p232498">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingb13b.html?mode=quote&amp;p=232498" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4fee.html?p=232498#p232498" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a></strong> &raquo; </span><time datetime="2020-03-06T18:08:33+00:00">Fri Mar 06, 2020 6:08 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=232370#p232370"><div><cite><a href="memberlist089f.html?mode=viewprofile&amp;u=125453">pauljessup</a> wrote: <a href="viewtopic0e23.html?p=232370#p232370" data-post-id="232370" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Thu Feb 27, 2020 7:32 pm</span></cite>
+Doesn't work on OSX- even after you install love, it keeps saying "can't find windows version of love"<br>
+<br>
+And when you ls that directory it spits out, it shows the love files in the directory it mentions.
+</div></blockquote>
+
+Hi, thank you for the report. Would you mind opening an issue on GitHub so I can keep track of this? It would also greatly help me if you could include screenshots of the problem. I do not currently have access to a macOS device. I will look into this as soon as I get a chance.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232631" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232631">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="avatar"><img class="avatar" src="download/fileb594.png?avatar=127310_1456766869.png" width="78" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchece6.html?author_id=127310&amp;sr=posts">79</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 18, 2013 4:44 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232631">
+
+					<h3 >
+						<a href="viewtopicd9fe.html?p=232631#p232631">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6043.html?mode=quote&amp;p=232631" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd9fe.html?p=232631#p232631" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a></strong> &raquo; </span><time datetime="2020-03-16T00:23:51+00:00">Mon Mar 16, 2020 12:23 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Please pardon the double post, but I wanted to announce the next version of boon, 0.2.0, which can be found here: <a href="https://github.com/camchenry/boon/releases/tag/0.2.0" class="postlink">https://github.com/camchenry/boon/releases/tag/0.2.0</a>.<br>
+<br>
+This was a primarily bug-fixing and clean-up release, but there are still some good changes. Here's what's changed:<br>
+<br>
+<span style="font-size:150%;line-height:116%">Added</span>
+<ul>
+<li> New build report to show output file name, elapsed time, and total output size.<br>
+<img src="https://user-images.githubusercontent.com/1514176/76713798-9c191200-66f9-11ea-9e80-8f38fbcdcda8.png" class="postimage" alt="Image"></li>
+</ul>
+
+<span style="font-size:150%;line-height:116%">Changed</span>
+<ul>
+<li> Error handling to better highlight what caused an error to occur. An error will now display a list of causes, in order. <ul>
+    <li> Before: <img src="https://user-images.githubusercontent.com/1514176/76713893-35e0bf00-66fa-11ea-8cbf-8cb8da2d42ce.png" class="postimage" alt="Image"></li>
+    <li> After: <img src="https://user-images.githubusercontent.com/1514176/76713895-3f6a2700-66fa-11ea-81a7-3c18d576d6da.png" class="postimage" alt="Image"></li>
+</ul></li>
+<li> "boon build" learned how to build all supported targets at the same time using the --target all option.</li>
+</ul>
+
+<span style="font-size:150%;line-height:116%">Fixed</span>
+<ul>
+<li> "boon love download" no longer makes an extra unnecessary HTTP request when downloading LÖVE which should improve performance.</li>
+<li> "boon --version" now displays the correct release version.</li>
+<li> Unnecessary references (pointers) to small integers values have been removed, slightly improving performance.</li>
+<li> Library dependencies have been updated, improving performance and fixing many issues.</li>
+<li> Duplicate entries in the ignore list when merging default and project configuration, removing unneeded work on build.</li>
+<li> Copy semantics for platform/bitness enums, which may have resolved some issues with cross-platform compatibility.</li>
+</ul>
+
+I would also like to note that the issue which pauljessup was experiencing is now fixed, thanks to their help.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232651" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232651">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="avatar"><img class="avatar" src="download/filecde0.png?avatar=139789_1703784207.png" width="59" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcd1c.html?author_id=139789&amp;sr=posts">472</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jan 18, 2018 9:14 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232651">
+
+					<h3 >
+						<a href="viewtopicedf7.html?p=232651#p232651">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc1e2.html?mode=quote&amp;p=232651" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicedf7.html?p=232651#p232651" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a></strong> &raquo; </span><time datetime="2020-03-17T18:54:43+00:00">Tue Mar 17, 2020 6:54 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Quick suggestion, Ikroth - update the OP here and the GitHub README.md to indicate that Linux <em class="text-italics">is</em> now supported.  And Love 11.3 too.  <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"></div>
+
+			
+			
+									
+						
+							<div id="sig232651" class="signature">Any code samples/ideas by me should be considered Public Domain (no attribution needed) license unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p232654" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile232654">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="avatar"><img class="avatar" src="download/fileb594.png?avatar=127310_1456766869.png" width="78" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchece6.html?author_id=127310&amp;sr=posts">79</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 18, 2013 4:44 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content232654">
+
+					<h3 >
+						<a href="viewtopic5ef7.html?p=232654#p232654">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1337.html?mode=quote&amp;p=232654" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5ef7.html?p=232654#p232654" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7aa0.html?mode=viewprofile&amp;u=127310" class="username">Ikroth</a></strong> &raquo; </span><time datetime="2020-03-18T01:20:43+00:00">Wed Mar 18, 2020 1:20 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=232651#p232651"><div><cite><a href="memberlist4b21.html?mode=viewprofile&amp;u=139789">milon</a> wrote: <a href="viewtopicedf7.html?p=232651#p232651" data-post-id="232651" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Tue Mar 17, 2020 6:54 pm</span></cite>
+Quick suggestion, Ikroth - update the OP here and the GitHub README.md to indicate that Linux <em class="text-italics">is</em> now supported.  And Love 11.3 too.  <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink">
+</div></blockquote>
+
+I believe that the description is still accurate. boon supports Linux in the sense that there is a binary of boon itself that can run on 64 bit architectures, however there is no native Linux build target for games. The only way to "build for Linux" is creating a love file and asking users to install LOVE on their own machine. Of course, native Linux build would be a genuine executable, but that suffers from portability issues. So, I would consider boon to support Linux builds when it can create something like an AppImage or a Snap. I would like to make that possible, but it is a large task and I do not have the time at the moment to do it.<br>
+<br>
+As far as supporting 11.3 goes, I believe I have updated all of the references for this release, but if I missed any, please let me know.<br>
+<br>
+Thank you for your comments.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p233156" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile233156">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist6a09.html?mode=viewprofile&amp;u=144713" class="avatar"><img class="avatar" src="download/file3931.png?avatar=144713_1587141643.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist6a09.html?mode=viewprofile&amp;u=144713" class="username">JuanjoSalvador</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc600.html?author_id=144713&amp;sr=posts">26</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 27, 2019 9:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Almeria, ES</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact JuanjoSalvador">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact JuanjoSalvador</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://jsalvador.me/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/Linuxneitor" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content233156">
+
+					<h3 >
+						<a href="viewtopic042d.html?p=233156#p233156">Re: boon - A build tool for LÖVE</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting26f7.html?mode=quote&amp;p=233156" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic042d.html?p=233156#p233156" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist6a09.html?mode=viewprofile&amp;u=144713" class="username">JuanjoSalvador</a></strong> &raquo; </span><time datetime="2020-04-18T17:08:16+00:00">Sat Apr 18, 2020 5:08 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm using a Makefile for make my builds (also TravisCI to test and build), so I don't get the point of a build tool. Anyway, it seems pretty nice, I'm going to install and start to use it <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+							<div id="sig233156" class="signature"><a href="https://juanjosalvador.itch.io/" class="postlink"><strong class="text-strong">itch.io profile</strong></a> - When I'm uploading my works and devblogs<br>
+<a href="https://github.com/JuanjoSalvador" class="postlink"><strong class="text-strong">GitHub</strong></a> - All my code is here!<br>
+<a href="https://github.com/JuanjoSalvador/horchata" class="postlink"><strong class="text-strong">Horchata</strong></a> - A set of Lua modules I wrote to make some task easier</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting830a.html?mode=reply&amp;t=86573" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic0169.html?t=86573&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=86573">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			17 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic0a1a.html?t=86573&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic0a1a.html?t=86573&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=233156 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:58 GMT -->
+</html>

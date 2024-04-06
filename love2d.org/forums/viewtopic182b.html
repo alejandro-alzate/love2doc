@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?t=12078 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>sukippu - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Games and Creations" href="app.php/feed/forum/14.html">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - sukippu" href="app.php/feed/topic/12078.html">	
+	<link rel="canonical" href="viewtopic182b.html?t=12078">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a itemprop="item" href="viewforum9780.html?f=14"><span itemprop="name">Games and Creations</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp0a51.html?mode=login&amp;redirect=viewtopic.php%3Ft%3D12078" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic182b.html?t=12078">sukippu</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Show off your games, demos and other (playable) creations.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting75e2.html?mode=reply&amp;t=12078" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic6c69.html?t=12078&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="12078" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			6 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p72351" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile72351">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="avatar"><img class="avatar" src="download/file56c7.html?avatar=70251_1364786076.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9493.html?author_id=70251&amp;sr=posts">95</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 19, 2012 7:16 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> international</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vitaminx">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vitaminx</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/humansarepuppies/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content72351">
+
+					<h3 class="first">
+						<a href="viewtopicb1aa.html?p=72351#p72351">sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga2f8.html?mode=quote&amp;p=72351" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb1aa.html?p=72351#p72351" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a></strong> &raquo; </span><time datetime="2012-12-20T05:00:04+00:00">Thu Dec 20, 2012 5:00 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hey guys!<br>
+<br>
+I'm quite new to LOVE / Lua but not that new to programming... and totally enthusiastic about games.<br>
+So I started a little mini game project to test out LOVE - actually because I was looking for a multiplatform engine which can be used for both free and commercial projects.<br>
+<br>
+It will be a very simple game called "sukippu" - google translator says that this is the japanese writing for "rope skipping", if it's true... who knows  <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"> <br>
+The name also says what it'll be about in the end - you have to skip ropes with an ever-increasing speed.<br>
+<br>
+So, here's the github project: <a href="https://github.com/humansarepuppies/sukippu" class="postlink">https://github.com/humansarepuppies/sukippu</a><br>
+<br>
+Any comments, suggestions for improvements are very welcome  <img class="smilies" src="images/smilies/ms-ultra-glee.html" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"><br>
+<br>
+have fun and thanks for that lovely engine!<br>
+vitaminx</div>
+
+			
+			
+									
+						
+							<div id="sig72351" class="signature">experimental art since 13.75 gigayears<br>
+<a href="https://github.com/humansarepuppies" class="postlink">https://github.com/humansarepuppies</a><br>
+<a href="http://stardiaries-lab.blogspot.com/" class="postlink">http://stardiaries-lab.blogspot.com/</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p72352" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile72352">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistbd0e.html?mode=viewprofile&amp;u=319" class="avatar"><img class="avatar" src="download/file14cd.html?avatar=319_1233288210.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistbd0e.html?mode=viewprofile&amp;u=319" class="username">Inny</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search65b7.html?author_id=319&amp;sr=posts">652</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 30, 2009 3:41 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> New York</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content72352">
+
+					<h3 >
+						<a href="viewtopic4aca.html?p=72352#p72352">Re: sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga430.html?mode=quote&amp;p=72352" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4aca.html?p=72352#p72352" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistbd0e.html?mode=viewprofile&amp;u=319" class="username">Inny</a></strong> &raquo; </span><time datetime="2012-12-20T05:09:59+00:00">Thu Dec 20, 2012 5:09 am</time>
+			</p>
+			
+			
+			
+			<div class="content">You're off to a very good start. One request that's pretty standard here is that you make a .love file and upload it with your post, so the time investment of people downloading and trying out your code is so low that everyone will do it. Also, enjoy working with Love and Lua, learn as much as you can, read everything you can get your hands on, search the forum because a lot of things have been talked about and a lot of questions have been answered, ask lots of your own questions. Welcome to the community!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p72353" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile72353">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="avatar"><img class="avatar" src="download/file56c7.html?avatar=70251_1364786076.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9493.html?author_id=70251&amp;sr=posts">95</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 19, 2012 7:16 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> international</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vitaminx">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vitaminx</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/humansarepuppies/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content72353">
+
+					<h3 >
+						<a href="viewtopicc768.html?p=72353#p72353">Re: sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2876-2.html?mode=quote&amp;p=72353" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc768.html?p=72353#p72353" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a></strong> &raquo; </span><time datetime="2012-12-20T05:21:38+00:00">Thu Dec 20, 2012 5:21 am</time>
+			</p>
+			
+			
+			
+			<div class="content">OK here's the love file <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/file2e6f.html?id=6381">sukippu_121220.love</a></dt>
+						<dd>(1.02 MiB) Downloaded 337 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig72353" class="signature">experimental art since 13.75 gigayears<br>
+<a href="https://github.com/humansarepuppies" class="postlink">https://github.com/humansarepuppies</a><br>
+<a href="http://stardiaries-lab.blogspot.com/" class="postlink">http://stardiaries-lab.blogspot.com/</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p80923" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile80923">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="avatar"><img class="avatar" src="download/file56c7.html?avatar=70251_1364786076.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9493.html?author_id=70251&amp;sr=posts">95</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 19, 2012 7:16 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> international</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vitaminx">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vitaminx</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/humansarepuppies/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content80923">
+
+					<h3 >
+						<a href="viewtopicf664.html?p=80923#p80923">Re: sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge102.html?mode=quote&amp;p=80923" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf664.html?p=80923#p80923" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a></strong> &raquo; </span><time datetime="2013-02-19T07:47:23+00:00">Tue Feb 19, 2013 7:47 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hi again!<br>
+<br>
+I've added my game project to the wiki, just in case you're interested in following the progress <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <a href="../wiki/Sukippu.html" class="postlink">https://www.love2d.org/wiki/Sukippu</a><br>
+I did a complete artwork and code overhaul, attached is the current wip version.<br>
+<br>
+As always, I'd be happy about feedback of you Love2D guys and girls  <img class="smilies" src="images/smilies/ms-ultrahappy.html" width="16" height="16" alt=":ultrahappy:" title="Ultrahappy"><br>
+<br>
+P.S.: there's no menu-driven settings editor yet, but the game generates a config file after the first start at ~/.local/share/love/sukippu/game.conf<br>
+You can manually edit screen resolution, fullscreen and volume there.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/fileb32a.html?id=6959">sukippu_130219_131447.love</a></dt>
+						<dd>(1.23 MiB) Downloaded 267 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig80923" class="signature">experimental art since 13.75 gigayears<br>
+<a href="https://github.com/humansarepuppies" class="postlink">https://github.com/humansarepuppies</a><br>
+<a href="http://stardiaries-lab.blogspot.com/" class="postlink">http://stardiaries-lab.blogspot.com/</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p80932" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile80932">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20d6.html?author_id=54284&amp;sr=posts">712</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 22, 2012 4:54 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Germanunkol">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Germanunkol</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.germanunkol.de/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content80932">
+
+					<h3 >
+						<a href="viewtopicf40e.html?p=80932#p80932">Re: sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingfb6f.html?mode=quote&amp;p=80932" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf40e.html?p=80932#p80932" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a></strong> &raquo; </span><time datetime="2013-02-19T08:42:04+00:00">Tue Feb 19, 2013 8:42 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm confused.. any button I press closes the game in this new version.<br>
+And the first version only shows the credits?<br>
+It looks and sounds nice, but I can't actually do anything yet...?</div>
+
+			
+			
+									
+						
+							<div id="sig80932" class="signature"><a href="http://www.germanunkol.de/trainsported" class="postlink">trAInsported</a> - Write AI to control your trains<br>
+<a href="http://michagamedev.wordpress.com/" class="postlink">Bandana (Dev blog)</a> - Platformer featuring an awesome little ninja by Micha and me<br>
+<a href="http://www.germanunkol.de/gridcars/" class="postlink">GridCars</a> - Our jam entry for LD31<br>
+<a href="http://www.germanunkol.de/" class="postlink">Germanunkol.de</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p81077" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile81077">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="avatar"><img class="avatar" src="download/file56c7.html?avatar=70251_1364786076.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9493.html?author_id=70251&amp;sr=posts">95</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 19, 2012 7:16 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> international</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vitaminx">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vitaminx</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/humansarepuppies/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content81077">
+
+					<h3 >
+						<a href="viewtopicfaf0.html?p=81077#p81077">Re: sukippu</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2ce6.html?mode=quote&amp;p=81077" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfaf0.html?p=81077#p81077" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist9475.html?mode=viewprofile&amp;u=70251" class="username">vitaminx</a></strong> &raquo; </span><time datetime="2013-02-20T02:27:44+00:00">Wed Feb 20, 2013 2:27 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Sorry, it's not playable yet, it's just the artwork and some animation <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I forgot to mention...<br>
+<br>
+next steps would be:<br>
+1) an introduction story (character animations, interactions, storyline etc.)<br>
+2) game menu (play / settings / quit, etc.)<br>
+3) the actual game<br>
+<br>
+so before step 1 isn't finished don't expect the keyboard to do anything else than <em class="text-italics">love.push("quit")</em>  <img class="smilies" src="images/smilies/ms-glee.html" width="16" height="16" alt="^^" title="Glee"><br>
+<br>
+P.S.: I have quite a lot of free time next month so I hope to reach step 3 at end of March or so.</div>
+
+			
+			
+									
+						
+							<div id="sig81077" class="signature">experimental art since 13.75 gigayears<br>
+<a href="https://github.com/humansarepuppies" class="postlink">https://github.com/humansarepuppies</a><br>
+<a href="http://stardiaries-lab.blogspot.com/" class="postlink">http://stardiaries-lab.blogspot.com/</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting75e2.html?mode=reply&amp;t=12078" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic6c69.html?t=12078&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=12078">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			6 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum9780.html?f=14" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Games and Creations”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?t=12078 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:03 GMT -->
+</html>

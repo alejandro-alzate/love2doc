@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=1240 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Pölygamy: a collection of LÖVE helper libraries - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Pölygamy: a collection of LÖVE helper libraries" href="app.php/feed/topic/1240.html">	
+	<link rel="canonical" href="viewtopic1119.html?t=1240">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpf60c.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D1240" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic1119.html?t=1240">Pölygamy: a collection of LÖVE helper libraries</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting3071.html?mode=reply&amp;t=1240" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopice13e-2.html?t=1240&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="1240" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			55 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic39aa.html?t=1240&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic8c35-2.html?t=1240&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopice3a6.html?t=1240&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic22ba.html?t=1240&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic3f5a.html?t=1240&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic39aa.html?t=1240&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p12081" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12081">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="avatar"><img class="avatar" src="download/file45bf.html?avatar=915_1264461217.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchf83f.html?author_id=915&amp;sr=posts">98</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 25, 2010 4:06 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12081">
+
+					<h3 class="first">
+						<a href="viewtopic75b5.html?p=12081#p12081">Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf213.html?mode=quote&amp;p=12081" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic75b5.html?p=12081#p12081" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a></strong> &raquo; </span><time datetime="2010-01-25T16:26:41+00:00">Mon Jan 25, 2010 4:26 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Current version : 0.4.1 (for LÖVE 0.6.1, it should also work with 0.6.0)
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/file0248.html?id=1688">Polygamy041.love</a></dt>
+						<dd>(13.69 KiB) Downloaded 865 times</dd>
+		</dl>
+		
+			</div>
+
+Pölygamy is a collection of LÖVE helper libraries designed to help you simplify your (or at least my) code base.<br>
+<br>
+It allows to define different configurations for different phases of a game (menu, in game, pause screen, etc...), and to define related things in one place.<br>
+<br>
+Polygamy.keyboard and Polygamy.state are now available (see the release notes at the end of this post for the details), and Polygamy.timer is in the works (supporting multiple timelines and the ability to pause, stop and delete repetitive timers). <br>
+<br>
+<span style="text-decoration:underline"><strong class="text-strong">Polygamy.keyboard</strong></span> 
+<ul><li>allows to bind keys to callbacks in a declarative fashion,</li> 
+<li>supports multiple, switchable configurations</li> 
+<li>supports configuration (single) inheritance.</li>
+<li>supports useful ranges ([f-j] is expanded to f, g, h, j) and other patterns inspired by the Lua patterns library.</li>
+<li>allows to treat the keyboard as a key matrix (full support for US qwerty keyboards only at the moment, but the common subset of qwerty, azerty and qwertz can be used universally (sorry, dvorak users))</li>
+<li>is freindly with both imperative and OO coding styles.</li></ul>
+
+<span style="text-decoration:underline"><strong class="text-strong">Polygamy.state</strong></span> 
+<ul><li>allows to design each game state as if it were a full LÖVE app (custom update and draw callbacks),</li> 
+<li> supports state transitions (through before( from, to, ... ) and after( from, to, ... ) callbacks)</li></ul>
+
+Please note that Pölygamy requires to use the bundled love.run() loop.<br>
+<br>
+<span style="text-decoration:underline"><strong class="text-strong">TOC:</strong></span>
+<ul><li> A dummy game using Pölygamy.</li>
+<li> Polygamy.keyboard tutorial</li>
+<li> Polygamy.keyboard API reference</li>
+<li> Polygamy.state API reference</li>
+<li> Change Log</li>
+<li> TODO</li>
+<li> the polygamy.love 0.4.0 file</li></ul>
+
+<br>
+<span style="text-decoration:underline"><strong class="text-strong"><span style="font-size:150%;line-height:116%">A dummy game using Pölygamy:</span></strong></span><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>require "path.to.Polygamy.init" -- must be outside the load callback.
+                                -- since it creates a custom love.run loop</code></pre></div>
+for convenience:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local state, goto, pkeyboard = Polygamy.state, Polygamy.state.goto, Polygamy.keyboard   
+-- Load your ressources, initialize your code... then : 
+</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>title = state( "Title Screen" )
+              --============--
+
+function title.before() pkeyboard.use( "title" ); print"menu" end
+function title.update(dt)  --[[ your title update callback ]] end
+function title.draw()      --[[ draw your fine title here  ]] end
+
+pkeyboard( "title" ):setConfig( "pressed", {
+	[{" ", "return"}] = function() goto("In Game")       end,
+	escape            = function() love.event.push('q') end,
+})</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>ingame = state( "In Game" )
+               --=======--
+
+function ingame.before( from, to, ... )
+	if from == "Title Screen" then --[[Game.state.reset()]] end
+	Polygamy.timer:resume()
+	pkeyboard.use( to ) -- to == "In game" in this case
+	print "In Game"
+end
+
+function ingame.update( dt ) --[[ instill life in your game world ]] end
+
+function ingame.draw()   --[[ and render it in its full glory ]] end
+</code></pre></div><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function ingame.after( from, to, ... )
+	Polygamy.timer:pause()	
+	if to == "Pause Screen" then
+		-- dim the screen, take a screenshot
+	end
+end</code></pre></div><div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>pkeyboard("In Game"):setConfig("pressed", {
+	
+	[" %arrows "] = { held = function(key,_,_,dt) Hero:move(key,dt); end },
+	[" "]  = function() Hero:shoot()           end,
+	escape = function() goto( "Title Screen" ) end,
+	p      = function() goto( "Pause Screen" ) end
+})
+</code></pre></div>
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>pause = state( "Pause Screen" )
+                   --============--
+function pause.before() pkeyboard.use( "pause" ); print"Pause" end
+function pause.update(dt) end -- if you don't define it, the previous callback remains active.
+function pause.draw() --[[ display "Paused" on top of the screenshot.]] end
+
+
+pkeyboard( "pause" ):setConfig( "pressed", {
+	escape = function() goto( "Title Screen" ) end,
+	p      = function() goto( "In Game" )      end
+})</code></pre></div>
+then get the ball rolling :-)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function love.load() 
+	goto("Title Screen") 
+	print"Start" 
+end</code></pre></div>
+
+<br>
+<br>
+<br>
+<span style="text-decoration:underline"><strong class="text-strong"><span style="font-size:150%;line-height:116%">Polygamy.keyboard tutorial:</span></strong></span><br>
+<br>
+Here's a basic keyboard configuration:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Polygamy.keyboard("ingame"):setconfig( "held", {
+	left  = function(dt) hero.position=hero.position - dt * 10 end,
+	right = function(dt) hero.position=hero.position + dt * 10  end,
+	up    = hero.jump 
+	[" "] = {
+		pressed  = hero.shoot,
+		held     = hero.accumulateEnergy,
+		released = hero.unleashDevastativeBlow
+	},
+	esc   = {pressed = game.pause},
+	[Polygamy.default] = function(key) menu.type(key) end -- useful if the current field is a text field.
+} )</code></pre></div>
+The keys take either a <span style="text-decoration:underline">function object</span> or a <span style="text-decoration:underline">table</span> as parameter. When a function is passed, it is assigned to the default action for this definition (in this case "<span style="text-decoration:underline">held</span>", specified as the first parameter). "<span style="text-decoration:underline">pressed</span>", "<span style="text-decoration:underline">held</span>" and "<span style="text-decoration:underline">released</span>" are valid action values.<br>
+<br>
+The special [<span style="text-decoration:underline">Polygamy.default</span>] entry is passed every key not explicity assigned.<br>
+<br>
+You can <span style="text-decoration:underline"><strong class="text-strong">activate a configuration</strong></span> with: <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Polygamy.keyboard.use( "configuration handle" )</code></pre></div>
+
+<span style="text-decoration:underline"><strong class="text-strong">Inheritance</strong></span> works as follows:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Polygamy.keyboard("the Lost Vikings, in game"):setConfig( "pressed", { esc = pause } )
+
+for _, viking in ipairs[ olaf, eric, baleog ] do
+	Polygamy.keyboard( viking ):setConfig("held", {  -- You can use any type of object as a configuration name.
+		[ "%arrows" ] = viking.move -- expanded to "up", "down", "left" and "right"
+                                    -- these strings are passed to viking.move
+		[" "] = viking.action
+	})
+	Polygamy(viking):setParent("the Lost Vikings, in game")
+end
+
+Polygamy.keyboard.use( olaf ) -- the keys move Olaf, esc pauses the game
+Polygamy.keyboard.use( erik ) -- now Erik is active, and esc still works.
+</code></pre></div>
+
+When a key is pressed, Polygamy looks for the key in the active table, then in the (grand-)parents tables. If it isn't found, Polygamy looks for the [Polygamy.default] key in the active table, then along the inheritance chain.<br>
+<br>
+You can <span style="text-decoration:underline"><strong class="text-strong">modify</strong></span> an existing configuration by using keyboardObject:s<span style="text-decoration:underline"><strong class="text-strong">setConfig</strong></span>(<em class="text-italics">&lt;string&gt;</em> defaultAction, <em class="text-italics">&lt;table&gt;</em> actions),  The default action only applies to the table assigned at that moment.<br>
+<br>
+See the second page of this thread for the details about the various patterns [%arrows], etc...<br>
+<br>
+The <span style="text-decoration:underline"><strong class="text-strong">deggenerate case</strong></span> (one configuration, only the default "pressed" and "released" callbacks) implements the basic love.keypressed and .keyreleased callbacks.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Polygamy.keyboard("default"):setConfig("pressed",{
+	[Polygamy.delault] = {
+		pressed  = function(key) --[[ your code here ]] end,
+		released = function(key) --[[ your code here ]] end 
+	}
+})</code></pre></div> <br>
+<br>
+<br>
+<span style="font-size:150%;line-height:116%"><span style="text-decoration:underline"><strong class="text-strong">Polygamy.keyboard API</strong></span></span>:<br>
+
+<ul>
+<li><span style="text-decoration:underline">Polygamy.keyboard</span><strong class="text-strong">(</strong> <em class="text-italics">&lt;any&gt;</em> configName <strong class="text-strong">)</strong> =&gt; keyboardObject<br>
+<em class="text-italics"> - returns a keyboard object. Creates a new one if needed.</em></li>
+<li><span style="text-decoration:underline">keyboardObject<strong class="text-strong">:setConfig</strong></span>( <em class="text-italics">&lt;string&gt;</em> defaultAction, <em class="text-italics">&lt;table&gt;</em> actions )<br>
+<em class="text-italics"> - creates or change a keyboard configuration.</em></li>
+<li><span style="text-decoration:underline">keyboardObject<strong class="text-strong">:setParent</strong></span>(<em class="text-italics">&lt;any&gt;</em> otherConfigName)</li> 
+<li><span style="text-decoration:underline">Polygamy.keyboard<strong class="text-strong">.use</strong></span>(<em class="text-italics">&lt;any&gt;</em> configName)<br>
+<em class="text-italics"> - enables a configuration.</em></li></ul>
+
+<br>
+The <span style="text-decoration:underline"><strong class="text-strong">action table structure</strong></span> is as follows<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>{
+	key = {
+		pressed = function( key, row, column, unicode ) ... end,
+		released = function( key, row, column ) ... end,
+		held = function( key, row, column, dt ) ... end
+	},
+	key = function(key, row, column, [ unicode | dt ]) ... end, -- the function is assigned to the default action.
+                         -- "dt" is only relevant if the default mode is "held".
+	key = "whatever except a function or a table", -- deletes the key.
+	[Polygamy.default] = any of the above.
+}</code></pre></div>
+Use Polygamy.Tools.nop (an empty function) if you want to shadow the action of a parent.<br>
+<br>
+<span style="font-size:150%;line-height:116%"><span style="text-decoration:underline"><strong class="text-strong">The Polygamy.state API</strong></span></span>:<br>
+
+<ul>
+<li><span style="text-decoration:underline">Polygamy.state</span><strong class="text-strong">(</strong> <em class="text-italics">&lt;any&gt;</em> stateName <strong class="text-strong">)</strong> =&gt; stateObject<br>
+<em class="text-italics"> - returns a state object. Creates a new one if needed.</em></li>
+<li><span style="text-decoration:underline">Polygamy.state<strong class="text-strong">.goto</strong></span>( <em class="text-italics">&lt;any&gt;</em> stateName <strong class="text-strong">)</strong><br>
+<em class="text-italics"> - Schedules the switch to a given state and the Execution of the after() callback of the source state, and the before() callback of the target state. These changes are then handled at a safe point in the main loop.</em></li>
+
+<li><span style="text-decoration:underline">stateObject<strong class="text-strong">.before</strong></span>( <em class="text-italics">&lt;any&gt;</em> from, <em class="text-italics">&lt;any&gt;</em> to, ... )</li>
+<li><span style="text-decoration:underline">stateObject<strong class="text-strong">.update</strong></span>( <em class="text-italics">&lt;delta&gt;</em> dt )</li>
+<li><span style="text-decoration:underline">stateObject<strong class="text-strong">.draw</strong></span>()</li>
+<li><span style="text-decoration:underline">stateObject<strong class="text-strong">.after</strong></span>( <em class="text-italics">&lt;any&gt;</em> from, <em class="text-italics">&lt;any&gt;</em> to, ... )</li></ul>
+
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%"><span style="text-decoration:underline">Change log:</span></span></strong><br>
+<br>
+<span style="font-size:85%;line-height:116%"><strong class="text-strong">v0.4.1</strong> (2010/02/17)<br>
+</span><ul>
+<li> First release of Polygamy.state</li>
+<li> Simplification of the Polygamy.keyboard API</li>
+<li> Custom love.run loop with the ability to insert custom callbacks in the main loop</li>
+<li> The modules are loaded on the fly when needed, and their corresponding callbacks are inserted in the main loop automatically.</li>
+<li> Removed the per config typematic support.</li>
+<li> Polygamy.timer is also bundled, but it's untested and certainly buggy</li></ul>
+
+<br>
+<strong class="text-strong">v0.3.1</strong> (2010/02/03)
+<ul>
+<li> First working version published  <img class="smilies" src="images/smilies/ms-megagrin.html" width="16" height="16" alt=":megagrin:" title="Mega Grin">.</li>
+<li> [q-r] =&gt; {q, w, e, r} (horizontal). -- [x-5] =&gt; {x, d, r, 5} (diagonal) -- [6-h]  =&gt; {6, y, h} (vertical) -- [f1-f10] =&gt; {f1, f2, ... , f10} -- Assumes an US qwerty keyboard at the moment.</li>
+<li> Simplified the callbacks a bit.</li>
+<li> Don't use doto().replaceWith() at the moment if inheritance is involved (known bug).</li></ul>
+
+<strong class="text-strong">v0.3</strong> (2010/02/02)
+<ul>
+<li> /!\ Still not tested (and completely broken)</li>
+<li> TypeMatic (key repeat).</li>
+<li> Unicode.</li>
+<li> Track the active context (to reset options).</li>
+<li> Reset options on doto actions.</li>
+<li> Pattern matching.</li>
+<li> pass key coordinates to all callbacks.</li>
+<li> "Before" blocks.</li>
+<li> Extensive code documentation.</li></ul>
+
+<strong class="text-strong">v0.2</strong> (2010/01/28)
+<ul><li>Complete rewrite of Polygamy.keyboard.</li>
+<li>New API</li>
+<li>Extensive documentation</li></ul>
+
+<strong class="text-strong">v0.1:</strong> (2010/01/25)
+<ul><li>initial release of Polygamy.keyboard.</li></ul>[/size]<br>
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%"><span style="text-decoration:underline">TODO</span></span></strong><br>
+<span style="font-size:85%;line-height:116%"></span><ul><li>Debug Polygamy.timer</li>
+<li> Revamp and simplify the custom love.run loop</li>
+<li> test keyboard and state.makeLove</li>
+<li>Implement inheritance in Polygamy.state, which may require to...</li>
+<li>... create a custom polyupdate callback instead of overwriting love.update??</li>
+<li>Document Polygamy.nop and how to mask a parent key in a descendant.</li>
+<li> Document the keyboard patterns, the keyboard as a grid and the before keyboard callback.</li>
+<li>Keyboard config serialization to disk.</li>
+<li> ??Learn how to turn Pölygamy into a real Lua 5.1 Module</li></ul>[/size]</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a> on Wed Jul 21, 2010 9:02 am, edited 66 times in total.
+									</div>
+			
+						
+							<div id="sig12081" class="signature">Hermaphroditism is not a crime. <em class="text-italics">-- <a href="http://consonnes.net/" class="postlink">LSB Superstar</a></em><br>
+<br>
+All code published with this account is licensed under the <a href="http://danslalune.posterous.com/the-romantic-wtf-public-license" class="postlink">Romantic WTF public license</a> unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12156" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12156">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchaa3c.html?author_id=731&amp;sr=posts">112</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 20, 2009 6:38 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12156">
+
+					<h3 >
+						<a href="viewtopic6b37.html?p=12156#p12156">Re: Small keyboard input library: Request for feedback.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting131e.html?mode=quote&amp;p=12156" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6b37.html?p=12156#p12156" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a></strong> &raquo; </span><time datetime="2010-01-27T21:34:45+00:00">Wed Jan 27, 2010 9:34 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I need to read through it more, but it looks promising. If it can save me some time, I might use it, I'll look into it more later.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12160" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12160">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="avatar"><img class="avatar" src="download/file45bf.html?avatar=915_1264461217.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchf83f.html?author_id=915&amp;sr=posts">98</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 25, 2010 4:06 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12160">
+
+					<h3 >
+						<a href="viewtopic86bb.html?p=12160#p12160">Re: Small keyboard input library: Request for feedback.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting252e.html?mode=quote&amp;p=12160" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic86bb.html?p=12160#p12160" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a></strong> &raquo; </span><time datetime="2010-01-27T22:24:26+00:00">Wed Jan 27, 2010 10:24 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm actually thinking of reversing the exposed table hierarchy to<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>PoG.default={}
+PoG.K.addPartner("ingame", {
+	key = {
+		pressed=function() ... end,
+		released=...
+	},
+	key = ...,
+	[PoG.default] = ... -- default behaviour
+}
+</code></pre></div>
+It makes more sense from a code organisation perspective. It would be transformed to the previous representation for internal use.</div>
+
+			
+			
+									
+						
+							<div id="sig12160" class="signature">Hermaphroditism is not a crime. <em class="text-italics">-- <a href="http://consonnes.net/" class="postlink">LSB Superstar</a></em><br>
+<br>
+All code published with this account is licensed under the <a href="http://danslalune.posterous.com/the-romantic-wtf-public-license" class="postlink">Romantic WTF public license</a> unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12183" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12183">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="avatar"><img class="avatar" src="download/file45bf.html?avatar=915_1264461217.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchf83f.html?author_id=915&amp;sr=posts">98</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 25, 2010 4:06 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12183">
+
+					<h3 >
+						<a href="viewtopic59f1.html?p=12183#p12183">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga249.html?mode=quote&amp;p=12183" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic59f1.html?p=12183#p12183" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a></strong> &raquo; </span><time datetime="2010-01-28T17:17:32+00:00">Thu Jan 28, 2010 5:17 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Polygamy.keyboard v0.2, with extensive documentation has been  added to  the first post.</div>
+
+			
+			
+									
+						
+							<div id="sig12183" class="signature">Hermaphroditism is not a crime. <em class="text-italics">-- <a href="http://consonnes.net/" class="postlink">LSB Superstar</a></em><br>
+<br>
+All code published with this account is licensed under the <a href="http://danslalune.posterous.com/the-romantic-wtf-public-license" class="postlink">Romantic WTF public license</a> unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12184" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12184">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist7fb9.html?mode=viewprofile&amp;u=617" class="username">iza</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchad12.html?author_id=617&amp;sr=posts">10</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jul 11, 2009 7:16 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12184">
+
+					<h3 >
+						<a href="viewtopic92cc.html?p=12184#p12184">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingea31.html?mode=quote&amp;p=12184" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic92cc.html?p=12184#p12184" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7fb9.html?mode=viewprofile&amp;u=617" class="username">iza</a></strong> &raquo; </span><time datetime="2010-01-28T17:35:03+00:00">Thu Jan 28, 2010 5:35 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Haha I love the name.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12189" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12189">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchaa3c.html?author_id=731&amp;sr=posts">112</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 20, 2009 6:38 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12189">
+
+					<h3 >
+						<a href="viewtopic8b60.html?p=12189#p12189">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1c2a.html?mode=quote&amp;p=12189" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8b60.html?p=12189#p12189" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a></strong> &raquo; </span><time datetime="2010-01-28T21:32:01+00:00">Thu Jan 28, 2010 9:32 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">looks damn nice. will test out as soon as i need keyboard input in more than one situation. would it be possible for you to upload the compiled "lib" as it were? for the lazies like me out here <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12190" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12190">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="avatar"><img class="avatar" src="download/file45bf.html?avatar=915_1264461217.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchf83f.html?author_id=915&amp;sr=posts">98</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 25, 2010 4:06 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12190">
+
+					<h3 >
+						<a href="viewtopic7a35.html?p=12190#p12190">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1efc.html?mode=quote&amp;p=12190" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7a35.html?p=12190#p12190" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist43d8.html?mode=viewprofile&amp;u=915" class="username">pygy</a></strong> &raquo; </span><time datetime="2010-01-28T21:42:00+00:00">Thu Jan 28, 2010 9:42 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks,<br>
+<br>
+I'll debug it first, it's absolutely untested as it is and I'm too tired to do that now.<br>
+<br>
+What do you mean by "bundled"? as a .lua, or as a .love file?<br>
+What would be the point of distributing .love files for libraries that will be extracted anyway?</div>
+
+			
+			
+									
+						
+							<div id="sig12190" class="signature">Hermaphroditism is not a crime. <em class="text-italics">-- <a href="http://consonnes.net/" class="postlink">LSB Superstar</a></em><br>
+<br>
+All code published with this account is licensed under the <a href="http://danslalune.posterous.com/the-romantic-wtf-public-license" class="postlink">Romantic WTF public license</a> unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12196" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12196">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchaa3c.html?author_id=731&amp;sr=posts">112</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 20, 2009 6:38 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12196">
+
+					<h3 >
+						<a href="viewtopic73ee.html?p=12196#p12196">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1059.html?mode=quote&amp;p=12196" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic73ee.html?p=12196#p12196" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist523b.html?mode=viewprofile&amp;u=731" class="username">Geti</a></strong> &raquo; </span><time datetime="2010-01-29T03:04:03+00:00">Fri Jan 29, 2010 3:04 am</time>
+			</p>
+			
+			
+			
+			<div class="content">i mean compiled bytecode, from luac.<br>
+<a href="http://www.lua.org/manual/4.0/luac.html" class="postlink">http://www.lua.org/manual/4.0/luac.html</a></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12205" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12205">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist781b.html?mode=viewprofile&amp;u=147" class="avatar"><img class="avatar" src="download/file5461.html?avatar=147_1275144396.jpg" width="90" height="81" alt="User avatar" /></a>														</div>
+								<a href="memberlist781b.html?mode=viewprofile&amp;u=147" style="color: #00AA00;" class="username-coloured">bartbes</a>							</dt>
+
+						<dd class="profile-rank">Sex machine</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha0c2.html?author_id=147&amp;sr=posts">4946</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 29, 2008 10:35 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+																	
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact bartbes">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact bartbes</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://twitter.com/bartbes" title="Twitter">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																																																<a href="https://youtube.com/user/bartbes" title="Youtube" class="last-cell">
+										<span class="contact-icon phpbb_youtube-icon">Youtube</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12205">
+
+					<h3 >
+						<a href="viewtopicc7fa.html?p=12205#p12205">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7eaf.html?mode=quote&amp;p=12205" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc7fa.html?p=12205#p12205" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist781b.html?mode=viewprofile&amp;u=147" style="color: #00AA00;" class="username-coloured">bartbes</a></strong> &raquo; </span><time datetime="2010-01-29T07:18:56+00:00">Fri Jan 29, 2010 7:18 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Why bytecode?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p12209" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile12209">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="avatar"><img class="avatar" src="download/file95dd.html?avatar=436_1359407191.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a>							</dt>
+
+						<dd class="profile-rank">The Omniscient</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1279.html?author_id=436&amp;sr=posts">6506</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Feb 20, 2009 4:29 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Robin">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Robin</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://robinwell.net/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content12209">
+
+					<h3 >
+						<a href="viewtopic237b.html?p=12209#p12209">Re: Pölygamy: a collection of LÖVE helper libraries</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc0e7.html?mode=quote&amp;p=12209" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic237b.html?p=12209#p12209" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a></strong> &raquo; </span><time datetime="2010-01-29T11:22:42+00:00">Fri Jan 29, 2010 11:22 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Geti wrote:</cite>looks damn nice. will test out as soon as i need keyboard input in more than one situation. would it be possible for you to upload the compiled "lib" as it were? for the lazies like me out here <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>
+The whole point of Lua is that you don't have to compile it to make it work.</div>
+
+			
+			
+									
+						
+							<div id="sig12209" class="signature"><a href="viewtopica648.html?f=4&amp;t=2982#p30978" class="postlink">Help us help you</a>: attach a .love.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting3071.html?mode=reply&amp;t=1240" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopice13e-2.html?t=1240&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=1240">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			55 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic39aa.html?t=1240&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic8c35-2.html?t=1240&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopice3a6.html?t=1240&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic22ba.html?t=1240&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic3f5a.html?t=1240&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic39aa.html?t=1240&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=1240 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:10 GMT -->
+</html>

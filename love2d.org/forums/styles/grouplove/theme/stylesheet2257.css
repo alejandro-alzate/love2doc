@@ -1,0 +1,134 @@
+/* Overrides */
+
+.rtl .dropdown-extended .header .header_settings, .rtl .dropdown-container-right {
+	text-align: right;
+}
+
+.rtl .dropdown-extended .header .header_settings {
+	float: left;
+}
+
+.wrap {
+	border-color: 0;
+	border-radius: 0;
+	padding: 1em;
+}
+
+.search-header {
+	margin-top: 0;
+}
+
+.inline-attachment dd {
+	display: none;
+}
+
+.attach-image img {
+	border: 0 !important;
+}
+
+.attachbox img {
+	max-width: 15em !important;
+}
+
+/* Our stuff */
+
+nav {
+	padding: 1em;
+	background-color: #dcefff;
+	border-bottom: 1px solid #cadceb;
+	border-radius: 5px 5px 0 0;
+}
+
+nav a {
+	display: inline-block;
+	padding: 0.5em 1em 0.5em 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+nav a:active,
+nav a:link,
+nav a:visited {
+	color: white;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+.dark { background-color: #154451; }
+.green { background-color: #25b786; }
+.blue { background-color: #1e86be; }
+.pink { background-color: #da5d86; }
+
+nav a:nth-child(1) { background-color: #154451; }
+nav a:nth-child(2) { background-color: #25b786; }
+nav a:nth-child(3) { background-color: #1e86be; }
+nav a:nth-child(4) { background-color: #da5d86; }
+
+html {
+	background-color: #6cbee4;
+}
+
+body {
+	background-color: #6cbee4;
+	padding: 0 1em 1em 1em;
+}
+
+#love_wrap, #love_header {
+	margin: 0 auto 0 auto;
+	max-width: 1100px;
+}
+
+#love_wrap {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 150, 0.20);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 150, 0.20);
+	box-shadow:         0px 0px 10px 0px rgba(50, 50, 150, 0.20);
+}
+
+#love_content {
+	background-color: #f8fcff;
+	border-radius: 0px 0px 5px 5px;
+	border: 1px solid transparent;
+}
+
+#love_header {
+	height: 129px;
+	background-image: url("images/love_right.html"), url("images/love_left.html");
+	background-position: bottom right, top left;
+	background-repeat: no-repeat, no-repeat;
+}
+
+#wrap {
+	border: 1px;
+}
+
+.content > img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.codebox {
+	background-color: rgb(248, 248, 255);
+}
+
+.codebox code {
+	color: #000;
+}
+
+.search-header {
+	box-shadow: none;
+}
+
+ul.navlinks {
+	border-top: none;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.forumbg {
+	background-color: #0076B1;
+	background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #12A3EB 2px, #0076B1 92px, #0076B1 100%);
+	background-image: linear-gradient(to bottom, #6ACEFF 0%,#12A3EB 2px,#0076B1 92px,#0076B1 100%);
+	background-repeat: repeat-x;
+}

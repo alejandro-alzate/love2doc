@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2825 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Invader - Reinvention of Vertical Shoot-em-up Game - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Games and Creations" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Invader - Reinvention of Vertical Shoot-em-up Game" href="app.php/feed/topic/2825.html">	
+	<link rel="canonical" href="viewtopic88e6.html?t=2825">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a itemprop="item" href="viewforum9780.html?f=14"><span itemprop="name">Games and Creations</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp4084.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D2825" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic88e6.html?t=2825">Invader - Reinvention of Vertical Shoot-em-up Game</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Show off your games, demos and other (playable) creations.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting2d02.html?mode=reply&amp;t=2825" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic203b.html?t=2825&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2825" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p29417" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29417">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistd74d.html?mode=viewprofile&amp;u=1666" class="username">hengying</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4cf7.html?author_id=1666&amp;sr=posts">5</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Dec 11, 2010 2:33 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29417">
+
+					<h3 class="first">
+						<a href="viewtopicec87.html?p=29417#p29417">Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1c55.html?mode=quote&amp;p=29417" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicec87.html?p=29417#p29417" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd74d.html?mode=viewprofile&amp;u=1666" class="username">hengying</a></strong> &raquo; </span><time datetime="2011-04-14T13:00:16+00:00">Thu Apr 14, 2011 1:00 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Almost everyone has played some kind of shoot-em-up game, but did you ever think about how the player’s plane could upgrade it’s weapon? This Invader game could tell you the secret.<br>
+Weapon towers floating in the Universe, if a power source attached it, it would become to an active weapon, shooting at opponents. If it lost the power source, it will be floating again.<br>
+<br>
+LÖVE 0.7.1 is needed to play this game.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/filefd76.html?id=2513">InvaderGame.love</a></dt>
+						<dd>(210.68 KiB) Downloaded 1446 times</dd>
+		</dl>
+		
+			</dd>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file45aa.html?id=2512&amp;mode=view"><img src="download/filee020.html?id=2512" class="postimage" alt="03_fight2.png" /></a></dt>
+						<dd>03_fight2.png (36.63 KiB) Viewed 11770 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29418" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29418">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist194b.html?mode=viewprofile&amp;u=69" class="avatar"><img class="avatar" src="download/file0062.html?avatar=69_1688399868.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist194b.html?mode=viewprofile&amp;u=69" class="username">ivan</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2ddf.html?author_id=69&amp;sr=posts">1911</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 07, 2008 1:39 pm</dd>		
+		
+																
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ivan">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ivan</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://2dengine.com/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/2dengine" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29418">
+
+					<h3 >
+						<a href="viewtopicdc21.html?p=29418#p29418">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting47dd.html?mode=quote&amp;p=29418" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicdc21.html?p=29418#p29418" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist194b.html?mode=viewprofile&amp;u=69" class="username">ivan</a></strong> &raquo; </span><time datetime="2011-04-14T13:08:48+00:00">Thu Apr 14, 2011 1:08 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Cool idea. I see this game more as an arena shooter (where enemies and guns come in from all sides of the screen) rather than a scrolling shmup. There's quite a bit of potential here especially if the gameplay was a bit faster.</div>
+
+			
+			
+									
+						
+							<div id="sig29418" class="signature"><a href="https://2dengine.com/" class="postlink">https://2dengine.com</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29432" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29432">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf992.html?mode=viewprofile&amp;u=1135" class="avatar"><img class="avatar" src="download/file151a.html?avatar=1135_1294790777.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf992.html?mode=viewprofile&amp;u=1135" class="username">EmmanuelOga</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9543.html?author_id=1135&amp;sr=posts">56</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Apr 22, 2010 9:42 pm</dd>		
+		
+																					<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Buenos Aires, Argentina</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact EmmanuelOga">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact EmmanuelOga</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://emmanueloga.com/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="ymsgr:sendim?EmmanuelOga" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29432">
+
+					<h3 >
+						<a href="viewtopic7d71.html?p=29432#p29432">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting053b.html?mode=quote&amp;p=29432" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7d71.html?p=29432#p29432" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf992.html?mode=viewprofile&amp;u=1135" class="username">EmmanuelOga</a></strong> &raquo; </span><time datetime="2011-04-14T16:43:22+00:00">Thu Apr 14, 2011 4:43 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Fun an addictive <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I think I'd like to be able to shoot myself though. Those walls killing the player are annoying too. I'd rather to be completely stripped down of weapons but allow me to continue (perhaps with a chance of getting a single humble weapon after being strip down). Not sure if you can get killed by the enemies bullets, looks like they can only hurt your weapons.</div>
+
+			
+			
+									
+						
+							<div id="sig29432" class="signature">--------------------------------------------------------------------------------------------------------<br>
+<a href="http://emmanueloga.com/" class="postlink">http://EmmanuelOga.com</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29483" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29483">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist7a44.html?mode=viewprofile&amp;u=184" class="avatar"><img class="avatar" src="download/file201b.html?avatar=184_1338209341.png" width="90" height="88" alt="User avatar" /></a>														</div>
+								<a href="memberlist7a44.html?mode=viewprofile&amp;u=184" class="username">schme16</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search10eb.html?author_id=184&amp;sr=posts">127</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Oct 02, 2008 2:46 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29483">
+
+					<h3 >
+						<a href="viewtopiccf7f.html?p=29483#p29483">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8169.html?mode=quote&amp;p=29483" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccf7f.html?p=29483#p29483" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist7a44.html?mode=viewprofile&amp;u=184" class="username">schme16</a></strong> &raquo; </span><time datetime="2011-04-15T08:24:57+00:00">Fri Apr 15, 2011 8:24 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I love this idea, it's a little like: <a href="http://www.captainforever.com/captainforever.php" class="postlink">http://www.captainforever.com/captainforever.php</a>, so I support this idea 100%  <img class="smilies" src="images/smilies/ms-ultra-glee.html" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"></div>
+
+			
+			
+									
+						
+							<div id="sig29483" class="signature">My Development Diary - <a href="http://shanegadsby.info/" class="postlink">http://shanegadsby.info</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29500" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29500">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="avatar"><img class="avatar" src="download/filed1c2.html?avatar=710_1275310726.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1e62.html?author_id=710&amp;sr=posts">3153</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 03, 2009 5:22 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Madrid, Spain</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact kikito">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact kikito</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://github.com/kikito" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29500">
+
+					<h3 >
+						<a href="viewtopicfc41.html?p=29500#p29500">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting77c5.html?mode=quote&amp;p=29500" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfc41.html?p=29500#p29500" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a></strong> &raquo; </span><time datetime="2011-04-15T17:56:42+00:00">Fri Apr 15, 2011 5:56 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I liked it a lot, and it reminded me of <a href="http://www.asahi-net.or.jp/~cs8k-cyu/windows/tf_e.html" class="postlink">tumiki fighters</a>.</div>
+
+			
+			
+									
+						
+							<div id="sig29500" class="signature">When I write <strong class="text-strong">def</strong> I mean <strong class="text-strong">function</strong>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29609" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29609">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste57f.html?mode=viewprofile&amp;u=2085" class="avatar"><img class="avatar" src="download/file2802.html?avatar=2085_1299698070.png" width="90" height="81" alt="User avatar" /></a>														</div>
+								<a href="memberliste57f.html?mode=viewprofile&amp;u=2085" class="username">baby_nux</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8d59.html?author_id=2085&amp;sr=posts">25</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 04, 2011 3:21 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29609">
+
+					<h3 >
+						<a href="viewtopiccb57.html?p=29609#p29609">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8202.html?mode=quote&amp;p=29609" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccb57.html?p=29609#p29609" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste57f.html?mode=viewprofile&amp;u=2085" class="username">baby_nux</a></strong> &raquo; </span><time datetime="2011-04-17T02:22:41+00:00">Sun Apr 17, 2011 2:22 am</time>
+			</p>
+			
+			
+			
+			<div class="content">just curious, how to repair/heal my ship/shape  ?<br>
+<br>
+can be fun if there have repair/heal feature.<br>
+and those wall is annoying me alot <img class="smilies" src="images/smilies/ms-glee.html" width="16" height="16" alt="^^" title="Glee">.<br>
+<br>
+overall, nice gameplay, nice idea.<br>
+<br>
+sry for my english</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29633" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29633">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistd74d.html?mode=viewprofile&amp;u=1666" class="username">hengying</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4cf7.html?author_id=1666&amp;sr=posts">5</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Dec 11, 2010 2:33 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29633">
+
+					<h3 >
+						<a href="viewtopic5530.html?p=29633#p29633">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9c57.html?mode=quote&amp;p=29633" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5530.html?p=29633#p29633" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd74d.html?mode=viewprofile&amp;u=1666" class="username">hengying</a></strong> &raquo; </span><time datetime="2011-04-17T10:58:56+00:00">Sun Apr 17, 2011 10:58 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>baby_nux wrote:</cite>just curious, how to repair/heal my ship/shape  ?<br>
+<br>
+can be fun if there have repair/heal feature.<br>
+and those wall is annoying me alot <img class="smilies" src="images/smilies/ms-glee.html" width="16" height="16" alt="^^" title="Glee">.<br>
+<br>
+overall, nice gameplay, nice idea.<br>
+<br>
+sry for my english</div></blockquote>
+
+Player is just the "power source", player have to protect his "power source".<br>
+The power source could not be healed, so try to surround the power source with "weapon towers" (what I called the floating weapons).<br>
+<br>
+Try to avoid the "power source" hitting on the "wall bricks". The bricks will limit the weapons<br>
+of the player, otherwise it would be very easy to win.<br>
+<br>
+It's not very difficult, just be patient ...<br>
+Hope you enjoy it!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p29636" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile29636">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" class="avatar"><img class="avatar" src="download/file9243.html?avatar=1087_1349875914.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd677.html?author_id=1087&amp;sr=posts">917</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 04, 2010 9:14 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vrld">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vrld</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://vrld.org/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content29636">
+
+					<h3 >
+						<a href="viewtopic459c.html?p=29636#p29636">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9d0b.html?mode=quote&amp;p=29636" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic459c.html?p=29636#p29636" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a></strong> &raquo; </span><time datetime="2011-04-17T12:32:32+00:00">Sun Apr 17, 2011 12:32 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Very nice game. The aiming turrents feel kind of useless when you are not left or right of the enemy though. Maybe making their aiming a bit inaccurate could fix the problem.</div>
+
+			
+			
+									
+						
+							<div id="sig29636" class="signature">I have come here to chew bubblegum and kick ass... and I'm all out of bubblegum.<br>
+<br>
+<a href="http://vrld.github.com/hump/" class="postlink">hump</a> | <a href="http://vrld.github.com/HC/" class="postlink">HC</a> | <a href="http://github.com/vrld/SUIT" class="postlink">SUIT</a> | <a href="https://github.com/vrld/moonshine" class="postlink">moonshine</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p32320" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile32320">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc30c.html?mode=viewprofile&amp;u=3330" class="avatar"><img class="avatar" src="download/file3679.html?avatar=3330_1307045300.gif" width="28" height="20" alt="User avatar" /></a>														</div>
+								<a href="memberlistc30c.html?mode=viewprofile&amp;u=3330" class="username">bitlord</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche1bf.html?author_id=3330&amp;sr=posts">10</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jun 02, 2011 7:06 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content32320">
+
+					<h3 >
+						<a href="viewtopicd78b.html?p=32320#p32320">Re: Invader - Reinvention of Vertical Shoot-em-up Game</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0ece.html?mode=quote&amp;p=32320" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd78b.html?p=32320#p32320" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc30c.html?mode=viewprofile&amp;u=3330" class="username">bitlord</a></strong> &raquo; </span><time datetime="2011-06-08T23:45:44+00:00">Wed Jun 08, 2011 11:45 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">this is great. what is the license of the code? I want to expand the game</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting2d02.html?mode=reply&amp;t=2825" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic203b.html?t=2825&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=2825">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum9780.html?f=14" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Games and Creations”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2825 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:02 GMT -->
+</html>

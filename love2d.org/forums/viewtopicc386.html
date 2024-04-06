@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=15166 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>trAInsported - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Games and Creations" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - trAInsported" href="app.php/feed/topic/15166.html">	
+	<link rel="canonical" href="viewtopic9131.html?t=15166">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a itemprop="item" href="viewforum9780.html?f=14"><span itemprop="name">Games and Creations</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpc47e.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D15166" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic9131.html?t=15166">trAInsported</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Show off your games, demos and other (playable) creations.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting27d6.html?mode=reply&amp;t=15166" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic8846.html?t=15166&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="15166" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			211 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>22</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;15166" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic9028.html?t=15166&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicec36.html?t=15166&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopicd8b2.html?t=15166&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic60b3.html?t=15166&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopic369c.html?t=15166&amp;start=210" role="button">22</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic9028.html?t=15166&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p78471" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78471">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20d6.html?author_id=54284&amp;sr=posts">712</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 22, 2012 4:54 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Germanunkol">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Germanunkol</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.germanunkol.de/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78471">
+
+					<h3 class="first">
+						<a href="viewtopic17b3.html?p=78471#p78471">trAInsported</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingb4e2.html?mode=quote&amp;p=78471" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic17b3.html?p=78471#p78471" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a></strong> &raquo; </span><time datetime="2013-02-07T17:46:27+00:00">Thu Feb 07, 2013 5:46 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><a href="http://trainsportedgame.no-ip.org/" class="postlink"><img src="http://somepic.someserver.de/pics/big/8fb47b58061c358ea88fde333c7a64f4.png" class="postimage" alt="Image"></a><br>
+<br>
+<strong class="text-strong">UPDATE:</strong> New version online. See "Download" below.<br>
+<br>
+Fellow Lovers,<br>
+<br>
+I need some lua-capable testers for my new game.<br>
+It's in alpha-state, please excuse any bugs.<br>
+I also need windows and mac testers, because I have no windows/mac here - some parts of the game might not work on those machines yet because I do some file/folder manipulation in the game directory. If there's any issue with file creation or reading, please report!<br>
+<span style="text-decoration:underline"><br>
+<strong class="text-strong">Introducing: trAInsported</strong></span><br>
+In the near future, trains have been replaced by trAIns, rail-bound vehicles controlled by AI. It is your job to create this AI as you play the tutorials, challange maps and random matches. When your AI is ready, upload it to let it challange other players in live matches on the online server!<br>
+<br>
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/yFKZd8nEQyA?fs=1" frameborder="0" allowfullscreen=""></iframe><br>
+<br>
+<a href="http://trainsportedgame.no-ip.org/gallery/halfsize/2013-1-12_3-30-8.png" class="postlink"><img src="http://trainsportedgame.no-ip.org/gallery/thumbs/2013-1-12_3-30-8.png" class="postimage" alt="Image"></a> <a href="http://trainsportedgame.no-ip.org/gallery/halfsize/2013-1-8_23-55-13_s.png" class="postlink"><img src="http://trainsportedgame.no-ip.org/gallery/thumbs/2013-1-8_23-55-13_s.png" class="postimage" alt="Image"></a> <a href="http://trainsportedgame.no-ip.org/gallery/halfsize/2013-1-13_0-30-45_s.png" class="postlink"><img src="http://trainsportedgame.no-ip.org/gallery/thumbs/2013-1-13_0-30-45_s.png" class="postimage" alt="Image"></a><br>
+<br>
+<span style="text-decoration:underline"><br>
+<strong class="text-strong">Website</strong></span><br>
+<a href="http://trainsportedgame.no-ip.org/" class="postlink">Official Website</a> (Check out for images and for info on upcoming live matches and score lists)<br>
+<br>
+<br>
+<span style="text-decoration:underline"><strong class="text-strong">Getting started</strong></span>
+<ul>
+<li>To start off, play through the tutorials.</li>
+<li>Once you get the hang of it, create an AI which is as good as possible in the matches that you set up using "Compete" in the main menu.</li>
+<li>Upload that AI to the server, to watch it compete against other AIs! The server will automatically choose the AIs that have not been in many matches than the ones who've been online for a long time. This means that after uploading, your AI should be in a live match within the next 10 Minutes or so. Check the website to see upcoming matches!</li>
+<li>Check out the included Documentation.html for a full list of functions to use in your AI.</li></ul>
+
+<img src="http://trainsportedgame.no-ip.org/upload/ai/Admin/TestAI_rank.svg" class="postimage" alt="Image"><br>
+<strong class="text-strong"><span style="text-decoration:underline">Other stuff:</span></strong><br>
+<br>
+Please take the game and website apart wherever you can. I want to know security issues as soon as possible. The AI scripts created by the players are executed in a sandbox - if there's any security problems with that I want to know before I show the game to a broader audience.<br>
+<br>
+<strong class="text-strong"><span style="text-decoration:underline">Trivia:</span></strong><ul>
+<li>The main server (and webserver) are running on my raspberry pi. That means it might be a little slow sometimes... There might even be a bit of downtime now and then, please excuse this!</li>
+<li>The challenge maps aren't done yet. Once done with the tutorial, you can try to create an AI which will do well in the "random" matches or the ones set up using "compete". Then upload that to my site.</li>
+<li>The AIs on my site (which you'll see if you start the game and connect to the main server) are not smart ones. They're dummy AIs used to test the game... if you can beat them, you're already one large step into the right direction!</li></ul>
+
+Comments and Criticism welcome!</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a> on Thu Oct 22, 2015 3:50 pm, edited 25 times in total.
+									</div>
+			
+						
+							<div id="sig78471" class="signature"><a href="http://www.germanunkol.de/trainsported" class="postlink">trAInsported</a> - Write AI to control your trains<br>
+<a href="http://michagamedev.wordpress.com/" class="postlink">Bandana (Dev blog)</a> - Platformer featuring an awesome little ninja by Micha and me<br>
+<a href="http://www.germanunkol.de/gridcars/" class="postlink">GridCars</a> - Our jam entry for LD31<br>
+<a href="http://www.germanunkol.de/" class="postlink">Germanunkol.de</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78493" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78493">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="avatar"><img class="avatar" src="download/file1095.png?avatar=12793_1441922280.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbf5d.html?author_id=12793&amp;sr=posts">1949</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 06, 2011 7:11 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78493">
+
+					<h3 >
+						<a href="viewtopic5865.html?p=78493#p78493">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingcb2f.html?mode=quote&amp;p=78493" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5865.html?p=78493#p78493" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a></strong> &raquo; </span><time datetime="2013-02-07T20:00:04+00:00">Thu Feb 07, 2013 8:00 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">When you check if '+' or '-' is pressed, could you check the unicode value? Otherwise, on different keyboard layouts people have to press where that key is in the English keyboard layout, and LÖVE doesn't want to read '+' on my Italian keyboard</div>
+
+			
+			
+									
+						
+							<div id="sig78493" class="signature">lf = love.filesystem<br>
+ls = love.sound<br>
+la = love.audio<br>
+lp = love.physics<br>
+lt = love.thread<br>
+li = love.image<br>
+lg = love.graphics</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78497" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78497">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist800a.html?mode=viewprofile&amp;u=52278" class="avatar"><img class="avatar" src="download/file963d.html?avatar=52278_1338644844.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist800a.html?mode=viewprofile&amp;u=52278" class="username">Darky</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search7baa.html?author_id=52278&amp;sr=posts">66</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jun 02, 2012 1:41 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Darky">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Darky</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://darky-ben.fr/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78497">
+
+					<h3 >
+						<a href="viewtopicedee.html?p=78497#p78497">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6a30.html?mode=quote&amp;p=78497" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicedee.html?p=78497#p78497" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist800a.html?mode=viewprofile&amp;u=52278" class="username">Darky</a></strong> &raquo; </span><time datetime="2013-02-07T20:25:58+00:00">Thu Feb 07, 2013 8:25 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>people have to press where that key is in the English keyboard layout</div></blockquote>
+I agree.<br>
+<br>
+So, I'm on osx (10.6.8) and it works like a charm, exept for two things : <br>
+- when I load the game with the "--host trainsportedgame.no-ip.org" part, tutorials are buggy (the map is not loaded correctly)<br>
+- Why can't we change the screen resolution ? it's too wide for my laptop-screen !<br>
+<br>
+I'll try the "Compete" mode later !<br>
+<br>
+Nice job anyway !</div>
+
+			
+			
+									
+						
+							<div id="sig78497" class="signature"><strong class="text-strong"><a href="http://darky-ben.fr/Xut" class="postlink">http://darky-ben.fr/Xut</a></strong> my webcomic (french)</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78504" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78504">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20d6.html?author_id=54284&amp;sr=posts">712</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 22, 2012 4:54 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Germanunkol">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Germanunkol</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.germanunkol.de/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78504">
+
+					<h3 >
+						<a href="viewtopicd95a.html?p=78504#p78504">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingbdcd.html?mode=quote&amp;p=78504" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd95a.html?p=78504#p78504" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a></strong> &raquo; </span><time datetime="2013-02-07T21:26:27+00:00">Thu Feb 07, 2013 9:26 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Nixola wrote:</cite>When you check if '+' or '-' is pressed, could you check the unicode value? Otherwise, on different keyboard layouts people have to press where that key is in the English keyboard layout, and LÖVE doesn't want to read '+' on my Italian keyboard</div></blockquote>
+Will fix this. Sorry.<br>
+There's no other keys it affects though, right?<br>
+
+<blockquote><div><cite>Darky wrote:</cite>
+- Why can't we change the screen resolution ? it's too wide for my laptop-screen !
+</div></blockquote>
+There will be a screen-resolution switch soon. I just haven't gotten around to it.<br>
+A quick workaround: Unzip the .love file, edit the conf.lua file (the setting is way down the bottom) and then rezip the stuff and rename it to trAInsported.love.<br>
+
+<blockquote><div><cite>Darky wrote:</cite>
+- when I load the game with the "--host trainsportedgame.no-ip.org" part, tutorials are buggy (the map is not loaded correctly)</div></blockquote>
+Hm, I thought I had fixed this. Can you go a little into detail? What went wrong?<br>
+Is it rendering the wrong map? This is all threadded... that's why it got pretty complicated.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a> on Thu Feb 07, 2013 10:17 pm, edited 1 time in total.
+									</div>
+			
+						
+							<div id="sig78504" class="signature"><a href="http://www.germanunkol.de/trainsported" class="postlink">trAInsported</a> - Write AI to control your trains<br>
+<a href="http://michagamedev.wordpress.com/" class="postlink">Bandana (Dev blog)</a> - Platformer featuring an awesome little ninja by Micha and me<br>
+<a href="http://www.germanunkol.de/gridcars/" class="postlink">GridCars</a> - Our jam entry for LD31<br>
+<a href="http://www.germanunkol.de/" class="postlink">Germanunkol.de</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78505" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78505">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="avatar"><img class="avatar" src="download/file4734.html?avatar=3657_1359843231.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="username">Larsii30</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2b71.html?author_id=3657&amp;sr=posts">267</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Sep 11, 2011 9:36 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78505">
+
+					<h3 >
+						<a href="viewtopice93f.html?p=78505#p78505">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3d9c.html?mode=quote&amp;p=78505" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopice93f.html?p=78505#p78505" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="username">Larsii30</a></strong> &raquo; </span><time datetime="2013-02-07T21:31:13+00:00">Thu Feb 07, 2013 9:31 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Get this error when starting the first tutorial. :/ 
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file1f3d.html?id=22855&amp;mode=view"><img src="download/filea83d.html?id=22855" class="postimage" alt="Zeo3Okj.png" /></a></dt>
+						<dd>Zeo3Okj.png (13.38 KiB) Viewed 914 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Very promising images btw.<br>
+edit:<br>
+oh and I use love 0.8.0 JIT</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78507" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78507">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20d6.html?author_id=54284&amp;sr=posts">712</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 22, 2012 4:54 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Germanunkol">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Germanunkol</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.germanunkol.de/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78507">
+
+					<h3 >
+						<a href="viewtopic4716.html?p=78507#p78507">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9831.html?mode=quote&amp;p=78507" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4716.html?p=78507#p78507" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a></strong> &raquo; </span><time datetime="2013-02-07T21:44:15+00:00">Thu Feb 07, 2013 9:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">What OS do you have?<br>
+<br>
+Please try again and start the game with:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>love trAInsported.love</code></pre></div>
+(Without the --host option)<br>
+<br>
+Does that work?<br>
+<br>
+It might just be the attempt to render the server's live match and the tutorial map at the same time which causes it to fail.<br>
+<br>
+Thanks for the kind words guys!</div>
+
+			
+			
+									
+						
+							<div id="sig78507" class="signature"><a href="http://www.germanunkol.de/trainsported" class="postlink">trAInsported</a> - Write AI to control your trains<br>
+<a href="http://michagamedev.wordpress.com/" class="postlink">Bandana (Dev blog)</a> - Platformer featuring an awesome little ninja by Micha and me<br>
+<a href="http://www.germanunkol.de/gridcars/" class="postlink">GridCars</a> - Our jam entry for LD31<br>
+<a href="http://www.germanunkol.de/" class="postlink">Germanunkol.de</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78513" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78513">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="avatar"><img class="avatar" src="download/file1095.png?avatar=12793_1441922280.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbf5d.html?author_id=12793&amp;sr=posts">1949</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 06, 2011 7:11 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78513">
+
+					<h3 >
+						<a href="viewtopicb494.html?p=78513#p78513">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting11f0.html?mode=quote&amp;p=78513" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb494.html?p=78513#p78513" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a></strong> &raquo; </span><time datetime="2013-02-07T22:06:51+00:00">Thu Feb 07, 2013 10:06 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Germanunkol wrote:</cite><blockquote><div><cite>Nixola wrote:</cite>When you check if '+' or '-' is pressed, could you check the unicode value? Otherwise, on different keyboard layouts people have to press where that key is in the English keyboard layout, and LÖVE doesn't want to read '+' on my Italian keyboard</div></blockquote>
+Will fix this. Sorry.<br>
+There's no other keys it affects though, right?</div></blockquote>
+Every symbol is affected, I don't know about , and . because they're in the same position<br>
+
+<blockquote><div><cite>Germanunkol wrote:</cite><blockquote><div><cite>Nixola wrote:</cite>
+- Why can't we change the screen resolution ? it's too wide for my laptop-screen !
+</div></blockquote></div></blockquote>
+That wasn't me! <img class="smilies" src="images/smilies/ms-surprise.html" width="16" height="16" alt=":o" title="Surprised"><br>
+<span style="font-size:50%;line-height:116%">(Even though I wanted to write it too, but I forgot it)</span><br>
+<br>
+By the way good job, it's a good game, I didn't find any bug yet and (last but not least - last but first? Last but most? I'm open to suggestions) it teaches Lua!</div>
+
+			
+			
+									
+						
+							<div id="sig78513" class="signature">lf = love.filesystem<br>
+ls = love.sound<br>
+la = love.audio<br>
+lp = love.physics<br>
+lt = love.thread<br>
+li = love.image<br>
+lg = love.graphics</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78515" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78515">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20d6.html?author_id=54284&amp;sr=posts">712</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jun 22, 2012 4:54 pm</dd>		
+		
+											
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Germanunkol">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Germanunkol</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.germanunkol.de/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78515">
+
+					<h3 >
+						<a href="viewtopic4916.html?p=78515#p78515">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting451c.html?mode=quote&amp;p=78515" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4916.html?p=78515#p78515" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista16e.html?mode=viewprofile&amp;u=54284" class="username">Germanunkol</a></strong> &raquo; </span><time datetime="2013-02-07T22:31:18+00:00">Thu Feb 07, 2013 10:31 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Oh sorry, I deleted the wrong part of the quote tag... It's fixed now!<br>
+<br>
+I just noticed I get no connection to the server right now.<br>
+The website is up, but the ssh and game's ports are blocked for some reason. I think this is my router (It was the last time it happened), but I'm halfway accross Europe from it right now. I hope it'll work again in a while...<br>
+<br>
+The + and - have been changed to unicode. Now I'm going to bed... <img class="smilies" src="images/smilies/ms-razz.html" width="16" height="16" alt=":P" title="Razz"><br>
+<br>
+P.S. Did anyone try it on windows? Does the tutorialAI2.lua file get created correctly on windows?</div>
+
+			
+			
+									
+						
+							<div id="sig78515" class="signature"><a href="http://www.germanunkol.de/trainsported" class="postlink">trAInsported</a> - Write AI to control your trains<br>
+<a href="http://michagamedev.wordpress.com/" class="postlink">Bandana (Dev blog)</a> - Platformer featuring an awesome little ninja by Micha and me<br>
+<a href="http://www.germanunkol.de/gridcars/" class="postlink">GridCars</a> - Our jam entry for LD31<br>
+<a href="http://www.germanunkol.de/" class="postlink">Germanunkol.de</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78517" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78517">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="avatar"><img class="avatar" src="download/file4734.html?avatar=3657_1359843231.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="username">Larsii30</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2b71.html?author_id=3657&amp;sr=posts">267</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Sep 11, 2011 9:36 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78517">
+
+					<h3 >
+						<a href="viewtopic62f4.html?p=78517#p78517">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf339.html?mode=quote&amp;p=78517" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic62f4.html?p=78517#p78517" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistaf78.html?mode=viewprofile&amp;u=3657" class="username">Larsii30</a></strong> &raquo; </span><time datetime="2013-02-07T22:39:07+00:00">Thu Feb 07, 2013 10:39 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Nixola wrote:</cite>
+<br>
+By the way good job, it's a good game, I didn't find any bug yet...</div></blockquote>
+
+I agree with the "good game" but I got a couple of errors while trying out. <br>
+I managed to get ingame but when I'm pressing "reload" I get this error :
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file6561.html?id=22854&amp;mode=view"><img src="download/file6188.html?id=22854" class="postimage" alt="SC5oJzx.png" /></a></dt>
+						<dd>SC5oJzx.png (11.62 KiB) Viewed 915 times</dd>
+		</dl>
+		
+		
+			</div>
+
+I'm on Windows 7.<br>
+<br>
+edit: no tutorialAI2.lua inside the save directory of trAInsported.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p78520" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile78520">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="avatar"><img class="avatar" src="download/file1095.png?avatar=12793_1441922280.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbf5d.html?author_id=12793&amp;sr=posts">1949</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 06, 2011 7:11 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content78520">
+
+					<h3 >
+						<a href="viewtopic5c29.html?p=78520#p78520">Re: trAInsported: Alpha testers needed</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting787b.html?mode=quote&amp;p=78520" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5c29.html?p=78520#p78520" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a></strong> &raquo; </span><time datetime="2013-02-07T22:50:52+00:00">Thu Feb 07, 2013 10:50 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">The .lua file should be in the AI folder near the .love, not in the save folder... About the bug I only think that Germanunkol should check if the string exist, but it looks like an unexpected and unusual bug</div>
+
+			
+			
+									
+						
+							<div id="sig78520" class="signature">lf = love.filesystem<br>
+ls = love.sound<br>
+la = love.audio<br>
+lp = love.physics<br>
+lt = love.thread<br>
+li = love.image<br>
+lg = love.graphics</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting27d6.html?mode=reply&amp;t=15166" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic8846.html?t=15166&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=15166">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			211 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>22</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;15166" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic9028.html?t=15166&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicec36.html?t=15166&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopicd8b2.html?t=15166&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic60b3.html?t=15166&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopic369c.html?t=15166&amp;start=210" role="button">22</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic9028.html?t=15166&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum9780.html?f=14" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Games and Creations”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Ahrefs [Bot]</span> and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=15166 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:03 GMT -->
+</html>

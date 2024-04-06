@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=84110 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Möan.lua - A simple messagebox system. - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed.html">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Möan.lua - A simple messagebox system." href="app.php/feed/topic/84110.html">	
+	<link rel="canonical" href="viewtopic7961.html?t=84110">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp2be6.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D84110" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic7961.html?t=84110">Möan.lua - A simple messagebox system.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="postingd941.html?mode=reply&amp;t=84110" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic2284.html?t=84110&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="84110" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			41 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopica458.html?t=84110&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicd31b.html?t=84110&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic97a6.html?t=84110&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic73c0.html?t=84110&amp;start=40" role="button">5</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopica458.html?t=84110&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p213700" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213700">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="avatar"><img class="avatar" src="download/file4df8.html?avatar=138192_1499561042.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search25b6.html?author_id=138192&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Jul 17, 2016 7:20 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213700">
+
+					<h3 class="first">
+						<a href="viewtopic434f.html?p=213700#p213700">Möan.lua - A simple messagebox system.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc736.html?mode=quote&amp;p=213700" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic434f.html?p=213700#p213700" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a></strong> &raquo; </span><time datetime="2017-07-03T11:16:32+00:00">Mon Jul 03, 2017 11:16 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I noticed there wasn't anything recent around that does this kind of thing - so I made one!<br>
+<br>
+Simply;
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Moan.speak("Title", {"Hello world!", "It's me;--Möan.lua"})
+</code></pre></div>
+
+<strong class="text-strong">Features:</strong><br>
+- Multiple choice option selector<br>
+- Typing effects + UTF8 text support<br>
+- HUMP+flux camera integration<br>
+- Message box icons + title colours<br>
+- Typing skips<br>
+- Simple theming<br>
+<br>
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/ctu9hI-NhfI?fs=1" frameborder="0" allowfullscreen=""></iframe><br>
+<br>
+A full example,
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>avatar = love.graphics.newImage("image.png")
+Moan.speak({"Red snake", {255,0,0}}, {"Message one", "two--and", "three..."}, {x=10, y=10, image=avatar,
+                  onstart=function() something() end, oncomplete=function() something() end,
+                  options={
+                   {"Option one",  function() option1() end},
+                   {"Option two",  function() option2() end},
+                   {"Option three",function() option3() end}}
+                  })
+</code></pre></div>
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file1060.html?id=15601&amp;mode=view"><img src="download/filee4f3.html?id=15601" class="postimage" alt="2017-10-23-132122_1366x768_scrot.png" /></a></dt>
+						<dd>2017-10-23-132122_1366x768_scrot.png (21.54 KiB) Viewed 27923 times</dd>
+		</dl>
+		
+		
+			</div>
+
+The choices will be displayed on the last message in the message array.<br>
+Icons for the message box must be 380x380px - I've yet to sort out some kind of auto-scaling for this...<br>
+<br>
+Anyway, here's the full documentation: <span style="font-size:150%;line-height:116%"><a href="https://github.com/twentytwoo/Moan.lua" class="postlink">https://github.com/twentytwoo/Moan.lua</a></span><br>
+<br>
+Let me know what you think! Please tell me about any bugs + features you think should be added  <img class="smilies" src="images/smilies/ms-nyu.html" width="16" height="16" alt=":nyu:" title="Nyu"> <br>
+<br>
+<strong class="text-strong">Updates:</strong><br>
+- noImage image is now options, for text only messageboxes<br>
+- Added defMsgContainer(), an alternate way to store messages (for use with metatables for e.g.)<br>
+- Added Moan.keypressed + bug fixes, updated .love<br>
+- Added history of all messages, Moan.history.<br>
+- Added quick text pre-wrap algo<br>
+- Added option for colored title text<br>
+- Removed arbitrary 3 option limit, now "infinite"<br>
+- UI update, variable typing speeds, made HUMP camera integration optional, update .love<br>
+- Fixed recursion crashing, fixed UTF8 support<br>
+- Added sound effect on keys typed<br>
+- Added pauses, for ~dramatic effect~<br>
+- Changed syntax yet again<br>
+- Simplified function calling, updated .love<br>
+- Added demo .love<br>
+- Re-write, version 0.2.0 - now has multiple choice, execute functions on choice, choose specific icons and a better font, cleaner code base<br>
+- Cleaned up the Global namespace, a lot.<br>
+- Added UTF-8 support, thanks @FuffySifilis<br>
+- Added Moan.advanceMsg() so you can have programmable control over changing messages</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/filea854.html?id=15641">Moan.love</a></dt>
+						<dd>(336.61 KiB) Downloaded 963 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+													<div class="notice">
+					Last edited by <a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a> on Wed Nov 01, 2017 5:08 am, edited 29 times in total.
+									</div>
+			
+						
+							<div id="sig213700" class="signature"><strong class="text-strong"><a href="https://ttxi.itch.io/lssx" class="postlink">lssx</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/Moan.lua" class="postlink">Möan.lua</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/fLUIds" class="postlink">fLUIds</a></strong> | <strong class="text-strong"><a href="https://ttxi.gq/" class="postlink">ttxi.gq</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi" class="postlink">GitHub</a></strong></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p213740" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213740">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3cfa.html?mode=viewprofile&amp;u=139325" class="username">FuffySifilis</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha81f.html?author_id=139325&amp;sr=posts">1</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Jul 05, 2017 10:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213740">
+
+					<h3 >
+						<a href="viewtopicd82b.html?p=213740#p213740">Re: [library] Möan.lua - Easy Messaging (like a VN)</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc660.html?mode=quote&amp;p=213740" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd82b.html?p=213740#p213740" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3cfa.html?mode=viewprofile&amp;u=139325" class="username">FuffySifilis</a></strong> &raquo; </span><time datetime="2017-07-05T11:06:14+00:00">Wed Jul 05, 2017 11:06 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Replace this here
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if typePosition &lt;= string.len(textToPrint) then
+		if showingMessage then
+			-- Decrease timer
+		    typeTimer = typeTimer - dt
+		end
+	    if typeTimer &lt;= 0 then
+		    -- Timer done, we need to print a new letter:
+		    -- Adjust position, use string.sub to get sub-string
+		    if typeTimer &lt;= 0 then
+		        typeTimer = typeSpeed
+		        typePosition = typePosition + 1
+		        printedText = string.sub(textToPrint, 0, typePosition)
+		    end
+	    end
+	end
+</code></pre></div>
+On this 
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>	if typePosition &lt;= string.len(textToPrint) then
+		if showingMessage then
+			-- Decrease timer
+		    typeTimer = typeTimer - dt
+		end
+	    if typeTimer &lt;= 0 then
+		    -- Timer done, we need to print a new letter:
+		    -- Adjust position, use string.sub to get sub-string
+		    if typeTimer &lt;= 0 then
+		        typeTimer = typeSpeed
+		        typePosition = typePosition + 1
+				  local byteoffset = utf8.offset(textToPrint, typePosition)
+               if byteoffset then		       
+			  printedText = string.sub(textToPrint, 0, byteoffset - 1)
+			   end
+		    end
+	    end
+	end
+</code></pre></div> To support another language <br>
+<img src="http://www.picshare.ru/uploads/170705/wHFsFCYqRl.png" class="postimage" alt="Image"><br>
+or<br>
+<img src="http://www.picshare.ru/uploads/170705/5SS77sye14.png" class="postimage" alt="Image"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p213749" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213749">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="avatar"><img class="avatar" src="download/file4df8.html?avatar=138192_1499561042.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search25b6.html?author_id=138192&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Jul 17, 2016 7:20 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213749">
+
+					<h3 >
+						<a href="viewtopicc699.html?p=213749#p213749">Re: [library] Möan.lua - Easy Messaging (like a VN)</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4a65.html?mode=quote&amp;p=213749" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc699.html?p=213749#p213749" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a></strong> &raquo; </span><time datetime="2017-07-05T15:42:08+00:00">Wed Jul 05, 2017 3:42 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Testing it out the UTF8 doesn't seem to work on my end - using love 0.10.2
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file160e.html?id=15279&amp;mode=view"><img src="download/filebfa1.html?id=15279" class="postimage" alt="2017-07-05-165040_1366x768_scrot.png" /></a></dt>
+						<dd>2017-07-05-165040_1366x768_scrot.png (6.42 KiB) Viewed 28927 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Also the icons for the messagebox have to be 380x380 px to fit properly - I'm working on trying some things to fix this...</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a> on Fri Jul 14, 2017 1:40 am, edited 1 time in total.
+									</div>
+			
+						
+							<div id="sig213749" class="signature"><strong class="text-strong"><a href="https://ttxi.itch.io/lssx" class="postlink">lssx</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/Moan.lua" class="postlink">Möan.lua</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/fLUIds" class="postlink">fLUIds</a></strong> | <strong class="text-strong"><a href="https://ttxi.gq/" class="postlink">ttxi.gq</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi" class="postlink">GitHub</a></strong></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p213750" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213750">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="avatar"><img class="avatar" src="download/file34bc.html?avatar=80325_1451847465.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha5b1.html?author_id=80325&amp;sr=posts">3440</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 13, 2012 2:55 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Absurdistan, Hungary</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact zorg">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact zorg</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://soon.tm.exclamationma.rk/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/zorg_z0rg_z0r8" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213750">
+
+					<h3 >
+						<a href="viewtopic8a47.html?p=213750#p213750">Re: [library] Möan.lua - Easy Messaging (like a VN)</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6521.html?mode=quote&amp;p=213750" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8a47.html?p=213750#p213750" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a></strong> &raquo; </span><time datetime="2017-07-05T17:08:36+00:00">Wed Jul 05, 2017 5:08 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">It does work, you just need to use a font that actually has the characters you want to display.</div>
+
+			
+			
+									
+						
+							<div id="sig213750" class="signature"><a href="../wiki/User_Zorg.html" class="postlink">Me and my stuff <img class="smilies" src="images/smilies/ms-three.html" width="16" height="16" alt=":3" title="Awww"></a><span style="font-size:10%;line-height:116%">True Neutral Aspirant. Why, yes, i do indeed enjoy sarcastically correcting others when they make the most blatant of spelling mistakes. No bullying or trolling the innocent tho.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p213753" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213753">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="avatar"><img class="avatar" src="download/file4df8.html?avatar=138192_1499561042.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search25b6.html?author_id=138192&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Jul 17, 2016 7:20 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213753">
+
+					<h3 >
+						<a href="viewtopic30e0.html?p=213753#p213753">Re: [library] Möan.lua - Easy Messaging (like a VN)</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd20a.html?mode=quote&amp;p=213753" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic30e0.html?p=213753#p213753" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a></strong> &raquo; </span><time datetime="2017-07-05T18:12:17+00:00">Wed Jul 05, 2017 6:12 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=213750#p213750"><div><cite><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325">zorg</a> wrote: <a href="viewtopic8a47.html?p=213750#p213750" data-post-id="213750" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Jul 05, 2017 5:08 pm</span></cite>
+It does work, you just need to use a font that actually has the characters you want to display.
+</div></blockquote>
+
+Makes sense - I assumed we we're using the same font since they look the same, my bad. Guess I'll go set up some fallbacks now <img class="smilies" src="images/smilies/ms-shy.html" width="16" height="16" alt=":oops:" title="Embarrassed"></div>
+
+			
+			
+									
+						
+							<div id="sig213753" class="signature"><strong class="text-strong"><a href="https://ttxi.itch.io/lssx" class="postlink">lssx</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/Moan.lua" class="postlink">Möan.lua</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/fLUIds" class="postlink">fLUIds</a></strong> | <strong class="text-strong"><a href="https://ttxi.gq/" class="postlink">ttxi.gq</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi" class="postlink">GitHub</a></strong></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p213869" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile213869">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="avatar"><img class="avatar" src="download/file4df8.html?avatar=138192_1499561042.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search25b6.html?author_id=138192&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Jul 17, 2016 7:20 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content213869">
+
+					<h3 >
+						<a href="viewtopic8a7e.html?p=213869#p213869">Re: [library] Möan.lua - Easy Messaging (like a VN) with multiple choices</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf101.html?mode=quote&amp;p=213869" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8a7e.html?p=213869#p213869" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a></strong> &raquo; </span><time datetime="2017-07-13T20:55:27+00:00">Thu Jul 13, 2017 8:55 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Currently in the process of a total rewrite to include selectable message options which can trigger functions, pauses and more<br>
+<br>
+<strong class="text-strong">EDIT:</strong> Rewrite done, docs updated and a demo .love added</div>
+
+			
+			
+									
+						
+							<div id="sig213869" class="signature"><strong class="text-strong"><a href="https://ttxi.itch.io/lssx" class="postlink">lssx</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/Moan.lua" class="postlink">Möan.lua</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/fLUIds" class="postlink">fLUIds</a></strong> | <strong class="text-strong"><a href="https://ttxi.gq/" class="postlink">ttxi.gq</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi" class="postlink">GitHub</a></strong></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p219533" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile219533">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="avatar"><img class="avatar" src="download/file4df8.html?avatar=138192_1499561042.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search25b6.html?author_id=138192&amp;sr=posts">39</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Jul 17, 2016 7:20 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content219533">
+
+					<h3 >
+						<a href="viewtopic7e5c.html?p=219533#p219533">Re: Möan.lua - A simple messagebox system.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd0bd.html?mode=quote&amp;p=219533" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7e5c.html?p=219533#p219533" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistefe7.html?mode=viewprofile&amp;u=138192" class="username">milk</a></strong> &raquo; </span><time datetime="2018-03-31T13:45:44+00:00">Sat Mar 31, 2018 1:45 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">It's not dead!, I've recently had some spare time to start working on this again. Now that I'm much more comfortable with OO and LOVE I've started yet another re-write which should be done by summer time (exams are hell) - anyway, here's what I had in mind for when it's done:<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file0050.html?id=16126&amp;mode=view"><img src="download/fileacb8.html?id=16126" class="postimage" alt="2018-03-31-144227_1366x768_scrot.png" /></a></dt>
+						<dd>2018-03-31-144227_1366x768_scrot.png (18.23 KiB) Viewed 27168 times</dd>
+		</dl>
+		
+		
+			</div></div>
+
+			
+			
+									
+						
+							<div id="sig219533" class="signature"><strong class="text-strong"><a href="https://ttxi.itch.io/lssx" class="postlink">lssx</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/Moan.lua" class="postlink">Möan.lua</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi/fLUIds" class="postlink">fLUIds</a></strong> | <strong class="text-strong"><a href="https://ttxi.gq/" class="postlink">ttxi.gq</a></strong> | <strong class="text-strong"><a href="https://github.com/ttxi" class="postlink">GitHub</a></strong></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p219611" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile219611">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist58fd.html?mode=viewprofile&amp;u=139134" class="username">BukkitmanMC</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search50ff.html?author_id=139134&amp;sr=posts">10</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 29, 2017 4:06 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content219611">
+
+					<h3 >
+						<a href="viewtopicc65b.html?p=219611#p219611">Re: Möan.lua - A simple messagebox system.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge5f9.html?mode=quote&amp;p=219611" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc65b.html?p=219611#p219611" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist58fd.html?mode=viewprofile&amp;u=139134" class="username">BukkitmanMC</a></strong> &raquo; </span><time datetime="2018-04-03T02:46:11+00:00">Tue Apr 03, 2018 2:46 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This is such a useful library! is it free to use? I am planning on using it in a game, maybe with a few small modifications if it is ok for you</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p219625" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile219625">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="avatar"><img class="avatar" src="download/file0973.html?avatar=139677_1540316948.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb979.html?author_id=139677&amp;sr=posts">89</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Dec 04, 2017 1:47 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content219625">
+
+					<h3 >
+						<a href="viewtopic1e71.html?p=219625#p219625">Re: Möan.lua - A simple messagebox system.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc8e9.html?mode=quote&amp;p=219625" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1e71.html?p=219625#p219625" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a></strong> &raquo; </span><time datetime="2018-04-03T10:50:08+00:00">Tue Apr 03, 2018 10:50 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This library looks really interesting. Do you remember the dialog boxes in Grandia 1?<br>
+<br>
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/GoVXTTnP7pc?fs=1" frameborder="0" allowfullscreen=""></iframe><br>
+(Scroll to 11:24)<br>
+<br>
+I really liked that game, because of the changing emotion images of the characters. I'm sure this can be archived by putting more Moan.speak calls with different images. However, a dialog with n changes would cause nested functions n deep, since the next Moan.speak call needs to be placed in the oncomplete, it doesn't need? It would be great if we could pass more information for each text. I.e.:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>{
+    { message = "Message one", image = avatar_happy }, -- table instead of string for a complexer step in the conversation
+    "two--and", -- this could remove the image or keep using avatar_happy
+    { message = "three...", image = avatar_sad }
+}
+</code></pre></div>
+
+Also: Instead of passing the options into another parameter, you also could allow to specify options in the message tables itself like I would do with the changing image. The oncomplete function should pass all selected options, so I could make 3 choices and react to those after the conversation has been made. An additional parameter in the options table could even contain follow up messages. Here is a more complete example: <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>avatar_happy = love.graphics.newImage("image_happy.png")
+avatar_sad = love.graphics.newImage("image_sad.png")
+Moan.speak({"Red snake", {255,0,0}}, 
+    { message = "Message one", image = avatar_happy },
+    "two--and",
+    { message = "three...", image = avatar_sad, options = {
+        	{"Option one",  function() option1() end},
+        	{"Option two",  function() option2() end, { message = "You selected Option 2.", image = avatar_happy }}, -- we could keep nesting here
+        	{"Option three",function() option3() end}}
+    	}
+    }, {x=10, y=10, image=avatar, onstart=function() something() end, oncomplete=function(selectedOptions) something() end, 
+    options={
+        	{"End option one",  function() endoption1() end},
+        	{"End option two",  function() endoption2() end},
+        	{"End option three",function() endoption3() end}}
+    })
+</code></pre></div>
+
+Also, I'm a huge fan of this kind of dialog boxes:<br>
+<img src="http://www.cubed3.com/media/2016/May/ffixpc3.jpg" class="postimage" alt="Image"><br>
+<br>
+Sadly it might feel playful, but lacks the expressions of images. I always was hoping to find something like this with images in a game. Maybe you are interested in enhancing this lib to allow such a speech bubble mode to display image and text in a bubble that arrows to a specific point on the screen. This example also shows how important customisation is. Can your dialog boxes be customised by using textures?<br>
+<br>
+<br>
+Just my open thoughts. <img class="smilies" src="images/smilies/ms-ultra-glee.html" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"><br>
+Anyway, keep up that good work.</div>
+
+			
+			
+									
+						
+							<div id="sig219625" class="signature"><strong class="text-strong"><a href="http://tinyw.in/6heO" class="postlink">Visual Studio Code Template</a> • <a href="http://tinyw.in/rx3y" class="postlink">RichLÖVE Mobile (AdMob+UnityAds+PlayGamesServices+GameCenter)</a> • <a href="https://discordapp.com/users/357997950393384960/" class="postlink">Add me on Discord</a></strong><br>
+<br>
+<span style="color:#E1EBF2">───<span style="color:#800">▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄</span>───<br>
+───<span style="color:#800">█▒▒░░░░░░░░░▒▒█</span>───<br>
+────<span style="color:#800">█░░<span style="color:#333">█</span>░░░░░<span style="color:#333">█</span>░░█</span>────<br>
+─<span style="color:#800">▄▄</span>──<span style="color:#800">█░░░<span style="color:#333">▀█▀</span>░░░█</span>──<span style="color:#800">▄▄</span>─<br>
+<span style="color:#800">█░░█</span>─<span style="color:#800">▀▄░░░░░░░▄▀</span>─<span style="color:#800">█░░█</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p219829" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile219829">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist6560.html?mode=viewprofile&amp;u=139642" class="username">jdoolin</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd2b7.html?author_id=139642&amp;sr=posts">31</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Nov 18, 2017 7:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content219829">
+
+					<h3 >
+						<a href="viewtopic7964.html?p=219829#p219829">Re: Möan.lua - A simple messagebox system.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting29a4.html?mode=quote&amp;p=219829" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7964.html?p=219829#p219829" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist6560.html?mode=viewprofile&amp;u=139642" class="username">jdoolin</a></strong> &raquo; </span><time datetime="2018-04-08T21:06:04+00:00">Sun Apr 08, 2018 9:06 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=219625#p219625"><div><cite><a href="memberlist99a0.html?mode=viewprofile&amp;u=139677">modiX</a> wrote: <a href="viewtopic1e71.html?p=219625#p219625" data-post-id="219625" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Tue Apr 03, 2018 10:50 am</span></cite>
+This library looks really interesting. Do you remember the dialog boxes in Grandia 1?<br>
+I really liked that game, because of the changing emotion images of the characters. I'm sure this can be archived by putting more Moan.speak calls with different images.<br>
+<br>
+Also, I'm a huge fan of this kind of dialog boxes. [Comic style with a tail indicating the speaker]
+</div></blockquote>
+
+It just so happens that I'm currently working on a Dialogue Panel library specifically meant to work with Möan.lua.  To put it simply, I plan to use Möan's excellent dialogue message system combined with my dialogue panels.<br>
+<br>
+There shouldn't be a problem with supporting multiple character avatars for various emotions, and I'm now working on indicator tails like the Final Fantasy IX screenshot.  Looks like I'm going to need to research Stencils.  Though this may not work with one of the panel styles I'm supporting.<br>
+<br>
+Currently I support three types of panels:  <br>
+<br>
+RectPanels are drawn using Love2D's rectangles, have optional borders (and border colors), rounded corners and drop shadow (with shadow color).<br>
+<br>
+TilePanels are drawn with a nine-box (3x3) image that defines the corners and sides of the panel.  At the moment, Quad bleeding is making it a pain in the arse to scale the center image with a linear filter, so it requires that it be a separate image.  The actual border sides are scaled without interpolation.  I also still need the option to fill it with a simple rectangle instead of a scaled image, or a tiled image.  So that's on the TODO list.<br>
+<br>
+FancyPanels make use of RPG Maker's Windowskin format, which is a single tile atlas that defines panel borders, backgrounds, cursors, and more-text indicators.<br>
+<br>
+I'm also supporting the construction of complex menu layouts composed of multiple panels.  At the moment you can create Fixed size panels and Fitted panels that will size themselves according to their text.  I also have handy placement/alignment functions, such as "top left" and "center screen".<br>
+<br>
+Every panel has an optional Transition (enter the window from the sides, fade-in, zoom/scale-in, wipe, splits).  Fonts are customizable, you can apply drop shadow to text.<br>
+<br>
+Here are some screenshots:<br>
+<br>
+TilePanel, fixed size, center screen:
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file2850.html?id=16163&amp;mode=view"><img src="download/file7b0f.html?id=16163" class="postimage" alt="Dialog-1523221125.png" /></a></dt>
+						<dd>Dialog-1523221125.png (19.53 KiB) Viewed 26843 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Fitted RectPanel with rounded corners, drop shadow and a border, aligned top center
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file8d30.html?id=16162&amp;mode=view"><img src="download/file851f.html?id=16162" class="postimage" alt="Dialog-1523221061.png" /></a></dt>
+						<dd>Dialog-1523221061.png (8.32 KiB) Viewed 26843 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Fitted FancyPanel, top right
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filec123.html?id=16161&amp;mode=view"><img src="download/file6e5c.html?id=16161" class="postimage" alt="Dialog-1523221037.png" /></a></dt>
+						<dd>Dialog-1523221037.png (15.14 KiB) Viewed 26843 times</dd>
+		</dl>
+		
+		
+			</div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingd941.html?mode=reply&amp;t=84110" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic2284.html?t=84110&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=84110">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			41 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopica458.html?t=84110&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicd31b.html?t=84110&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic97a6.html?t=84110&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic73c0.html?t=84110&amp;start=40" role="button">5</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopica458.html?t=84110&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=84110 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:58:10 GMT -->
+</html>
