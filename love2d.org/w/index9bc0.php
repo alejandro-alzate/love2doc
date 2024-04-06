@@ -19,38 +19,28 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/SciTE">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T18:17:11+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Notepad-2B-2B">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T18:16:59+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/SciTE">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Notepad-2B-2B">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AEditor_integration"/>
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ASoftware"/>
-		<rdfs:label>SciTE</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/SciTE"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/SciTE"/>
+		<rdfs:label>Notepad++</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Notepad-2B-2B"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Notepad-2B-2B"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;scite"/>
+		<property:Author rdf:resource="&wiki;Don_HO"/>
 		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source Code Editor</property:Description>
-		<property:License rdf:resource="&wiki;Historical_Permission_Notice_and_Disclaimer"/>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SciTE</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:Scite.png</property:Screenshot>
+		<property:License rdf:resource="&wiki;GNU_General_Public_License"/>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notepad++</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:Notepad++.png</property:Screenshot>
 		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete</property:Status>
 		<property:Type rdf:resource="&wiki;Editor"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-18T08:41:50Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457252.8623843</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SciTE</swivt:wikiPageSortKey>
-	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Scite">
-		<rdfs:label>Scite</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Scite"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Scite"/>
-		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
-		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="&wiki;SciTE"/>
-		<owl:sameAs rdf:resource="&wiki;SciTE"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scite</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-18T08:41:42Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457252.8622917</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notepad++</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AEditor_integration" />
@@ -68,6 +58,5 @@
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
-	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#redirectsTo" />
 	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
 </rdf:RDF>

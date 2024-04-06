@@ -21,6 +21,12 @@ git clone git@github.com:alejandro-alzate/love2doc.git
 ```
 Or just click that juicy green button named "Code" then in the underwhelming grey "Download ZIP" button.
 
+Unzip if you Downloaded it via ZIP
+and open index.html
+And off to the races!
+
+Happy coding everybody!
+
 When contributing do **not** bother in editing README.md directly because is created dinamically by the `update_readme.lua` script
 Being run every now and then
 ]]
@@ -70,7 +76,7 @@ end
 os.execute("echo > README.md")
 for i, line in ipairs(lines) do
 	local cmd = string.format("echo '%s' >> README.md", line)
-	--print(cmd)
+	--print(line)
     os.execute(cmd)
 end
 
