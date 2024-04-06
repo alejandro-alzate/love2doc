@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:00 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -162,7 +162,7 @@ Wartości zmiennej skala powyżej 1 będą oddalały kamerę, podczas gdy mniejs
 <span class="kr">return</span> <span class="n">camera</span>
 </pre></div>
 <p>Moduł kamery  jest tablicą, która zawiera informację gdzie ma być umiejscowiona kamera. Kluczowe są funkcje <code>set</code> i <code>unset</code>. <code>set</code> zmienia <i>aktualne przekształcenie</i>, na informacje zawarte w module kamery (ale wcześniej zapisuje bieżący stan, dzięki czemu moduł kamery będzie w stanie obsługiwać kilka <i>widokow</i> w jednej ramce. <code>unset</code> po prostu przywraca poprzednie ustawienie, korzystając z wspomnianej funkcji pop. Pozostałe funkcje stanowią pomoc przy przemieszczaniu kamery.
-</p><p>Kamery można użyć poprzez następujący kod w callbacku <a href="love-667.html" title="love.draw (Polski)">love.draw (Polski)</a>:
+</p><p>Kamery można użyć poprzez następujący kod w callbacku <a href="love-310.html" title="love.draw (Polski)">love.draw (Polski)</a>:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
   <span class="n">camera</span><span class="p">:</span><span class="n">set</span><span class="p">()</span> <span class="c1">-- zaapliwowanie ustawień kamery</span>
@@ -172,7 +172,7 @@ Wartości zmiennej skala powyżej 1 będą oddalały kamerę, podczas gdy mniejs
   <span class="n">camera</span><span class="p">:</span><span class="n">unset</span><span class="p">()</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Natomiast w callbacku <a href="love-668.html" title="love.update (Polski)">love.update (Polski)</a>, można zmieniać położenie kamery.
+<p>Natomiast w callbacku <a href="love-311.html" title="love.update (Polski)">love.update (Polski)</a>, można zmieniać położenie kamery.
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">camera</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="n">camera</span><span class="p">:</span><span class="n">scale</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -316,7 +316,7 @@ Wartości zmiennej skala powyżej 1 będą oddalały kamerę, podczas gdy mniejs
 <a href="../w/index8973.html?title=Tutorial:Cameras_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
 <a href="../w/indexda06.html?title=Tutorial:Cameras_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
 <a href="../w/indexb0d9.html?title=Tutorial:Cameras_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
-<a href="../w/index1ac5.html?title=Tutorial:Cameras_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="../w/index1ac5-2.html?title=Tutorial:Cameras_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
 <a href="../w/indexc1fa.html?title=Tutorial:Cameras_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Česky) (page does not exist)">Česky</a>&#160;&#8211;
 <a href="../w/index61cf.html?title=Tutorial:Cameras_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
 <a href="../w/index3429.html?title=Tutorial:Cameras_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Cameras (Български) (page does not exist)">Български</a>&#160;&#8211;
@@ -478,5 +478,5 @@ Retrieved from "<a dir="ltr" href="../w/index1cc9.html?title=Tutorial:Cameras_(P
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.049","walltime":"1.132","ppvisitednodes":{"value":360,"limit":1000000},"ppgeneratednodes":{"value":843,"limit":1000000},"postexpandincludesize":{"value":3405,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":22925,"limit":5000000},"timingprofile":["100.00%    5.807      1 -total","100.00%    5.807      1 Template:i18n"," 53.57%    3.111     28 Template:Lang"]},"cachereport":{"timestamp":"20240405165949","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":28});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:00 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Cameras_(Polski) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
 </html>

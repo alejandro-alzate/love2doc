@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Optimising_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:16 GMT -->
+<!-- Mirrored from love2d.org/wiki/Optimising_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:20 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -131,7 +131,7 @@
 初期時代のグラフィカルなゲームの古い原則は"各ピクセルは一回のみ描き込む"ことです(つまり、過剰描画は発生しない)。その時代から幸運にもハードウェアはずっと進歩しており、なにか別の優位性を提供できるのであれば(簡潔なコードといった)、なにか杜撰でも全く妥当ですが、大量の過剰描画を作成するようなエンジンの設計は回避すべきです。
 </p>
 <h2><span id="隠蔽されたループの監視"></span><span class="mw-headline" id=".E9.9A.A0.E8.94.BD.E3.81.95.E3.82.8C.E3.81.9F.E3.83.AB.E3.83.BC.E3.83.97.E3.81.AE.E7.9B.A3.E8.A6.96">隠蔽されたループの監視</span></h2>
-<p>LÖVE では LÖVE ゲームの生存期間中は <i><a href="love-659.html" title="love.update (日本語)">love.update</a>(dt)</i> および <i><a href="love-660.html" title="love.draw (日本語)">love.draw</a>()</i> 関数を頻繁に呼び出します。実際のところ、それらは <i><a href="love-657.html" title="love.run (日本語)">love.run</a>()</i> により隠蔽されたループ本体です。ループへ適用される全ての性能の対価は、これら二種類のコールバックに対しても同様に適用します。
+<p>LÖVE では LÖVE ゲームの生存期間中は <i><a href="love-302.html" title="love.update (日本語)">love.update</a>(dt)</i> および <i><a href="love-303.html" title="love.draw (日本語)">love.draw</a>()</i> 関数を頻繁に呼び出します。実際のところ、それらは <i><a href="love-300.html" title="love.run (日本語)">love.run</a>()</i> により隠蔽されたループ本体です。ループへ適用される全ての性能の対価は、これら二種類のコールバックに対しても同様に適用します。
 </p>
 <h1><span id="その他の小技"></span><span class="mw-headline" id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.B0.8F.E6.8A.80">その他の小技</span></h1>
 <ul><li>trac の <a rel="nofollow" class="external text" href="http://trac.caspring.org/wiki/LuaPerformance">LuaPerformance</a> を参照してください。</li></ul>
@@ -318,5 +318,5 @@ Retrieved from "<a dir="ltr" href="../w/indexe683-3.html?title=Optimising_(%e6%9
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.024","walltime":"0.122","ppvisitednodes":{"value":295,"limit":1000000},"ppgeneratednodes":{"value":659,"limit":1000000},"postexpandincludesize":{"value":3057,"limit":2097152},"templateargumentsize":{"value":1140,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1099,"limit":5000000},"timingprofile":["100.00%    5.596      1 -total","100.00%    5.596      1 Template:i18n"," 52.03%    2.911     28 Template:Lang"]},"cachereport":{"timestamp":"20240405051639","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Optimising_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:16 GMT -->
+<!-- Mirrored from love2d.org/wiki/Optimising_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:20 GMT -->
 </html>

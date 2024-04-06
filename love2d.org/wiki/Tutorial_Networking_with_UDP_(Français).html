@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:57 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -94,7 +94,7 @@ Nous allons commencer par le client LÖVE, puis poursuivre par un serveur indép
 <span class="kd">local</span> <span class="n">world</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- L&#39;état Monde vide</span>
 <span class="kd">local</span> <span class="n">t</span>
 </pre></div>
-<h3><span class="mw-headline" id="love.load"><a href="love-621.html" title="love.load (Français)">love.load</a></span></h3>
+<h3><span class="mw-headline" id="love.load"><a href="love-264.html" title="love.load (Français)">love.load</a></span></h3>
 <p>Premièrement, nous avons besoin d'un socket UDP, depuis lequel nous ferons toutes nos opérations réseau.
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
@@ -141,7 +141,7 @@ Comme nous avons utilisé <i>udp:setpeername</i> précédemment, nous n'avons m�
 	<span class="n">t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">-- (re)set t to 0</span>
 <span class="kr">end</span>
 </pre></div>
-<h3><span class="mw-headline" id="love.update"><a href="love-622.html" title="love.update (Français)">love.update</a></span></h3>
+<h3><span class="mw-headline" id="love.update"><a href="love-265.html" title="love.update (Français)">love.update</a></span></h3>
 <p>Nous commençons avec un peu de non-sens en impliquant <i>t</i> que nous avons déclaré plus tôt&#160;;
 Il est <b>très facile</b> de saturer complétement une connexion réseau si nous ne sommes pas attentif aux paquets que nous envoyons (ou demandons&#160;!), nous mettons donc des barrières  hedge à nos chances en limitant la fréquence à laquelle nous envoyons (ou demandons) des mises à jour.
 </p><p><i>(Pour information, dix fois par seconde est considéré comme bon pour la majortié des jeux normaux (incluant de nombreux <a href="http://en.wikipedia.org/wiki/fr:Jeu_en_ligne_massivement_multijoueur" class="extiw" title="wikipedia:fr:Jeu en ligne massivement multijoueur">MMOs</a>), et vous ne devriez jamais vraiment avoir besoin de plus que 30 mises à jour par seconde, même pour les jeu avec déplacements rapides.)</i>
@@ -363,7 +363,7 @@ Generally, people seem to prefer to just rely on blocking behaviour (which we tu
 <a href="Tutorial_Networking_with_UDP_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Networking with UDP (日本語)">日本語</a>&#160;&#8211;
 <a href="../w/indexfcef.html?title=Tutorial:Networking_with_UDP_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
 <a href="../w/index0ac2.html?title=Tutorial:Networking_with_UDP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
-<a href="../w/index43ae.html?title=Tutorial:Networking_with_UDP_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="../w/index43ae-2.html?title=Tutorial:Networking_with_UDP_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
 <a href="../w/index8630-2.html?title=Tutorial:Networking_with_UDP_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (한국어) (page does not exist)">한국어</a> 
 <br />
 <span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
@@ -515,5 +515,5 @@ Retrieved from "<a dir="ltr" href="../w/index8f2c.html?title=Tutorial:Networking
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.076","walltime":"2.380","ppvisitednodes":{"value":501,"limit":1000000},"ppgeneratednodes":{"value":1199,"limit":1000000},"postexpandincludesize":{"value":6369,"limit":2097152},"templateargumentsize":{"value":3366,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":21992,"limit":5000000},"timingprofile":["100.00% 2342.827      1 -total","  0.25%    5.885      1 Template:i18n","  0.14%    3.183     28 Template:Lang","  0.06%    1.308      2 Template:notice","  0.05%    1.072      3 Template:notice_(Français)"]},"cachereport":{"timestamp":"20240405211029","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":43});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:57 GMT -->
 </html>

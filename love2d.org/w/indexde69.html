@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:22 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:26 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -50,7 +50,7 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Функції <a href="../wiki/Category_Callbacks.html" title="Category:Callbacks">зворотного виклику</a> в LÖVE викликаються функцією <a href="../wiki/love-647.html" title="love.run (Українська)">love.run</a> для виконання різних задач, і всі вони необов'язкові. Однак для створення повного занурення в гру вам, напевне, доведеться використати більшу їх частину, тому важно значить, які функції доступні.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Функції <a href="../wiki/Category_Callbacks.html" title="Category:Callbacks">зворотного виклику</a> в LÖVE викликаються функцією <a href="../wiki/love-290.html" title="love.run (Українська)">love.run</a> для виконання різних задач, і всі вони необов'язкові. Однак для створення повного занурення в гру вам, напевне, доведеться використати більшу їх частину, тому важно значить, які функції доступні.
 </p><p>Для тих, хто починає програмувати чи не знаю цього терміну: функція зворотного виклику — це функція навпаки. Звичайна ви викликаєте функцію, наприклад <a href="../wiki/love.graphics-16.html" title="love.graphics.draw">love.graphics.draw</a> чи math.floor, щоб LÖVE чи Lua щось зробили. А функції зворотного виклику — це функції, які пишете ви самі, а LÖVE іноді їх викликає. Це дозволяє організувати та оптимізувати код. Наприклад, love.load викликається тільки тоді, коли гра запускається (перед будь-якою іншою функцією зворотного виклику), тому в ній можна написати код, який завантажуватиме ігрові ресурси та підготує ігрові об'єкти.
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
@@ -68,7 +68,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="love.load"><a href="../wiki/love-648.html" title="love.load (Українська)">love.load</a></span></h2>
+<h2><span class="mw-headline" id="love.load"><a href="../wiki/love-291.html" title="love.load (Українська)">love.load</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setNewFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -78,7 +78,7 @@
 </pre></div>
 <p>Ця функція викликається тільки один раз, коли гра запускається, і звичайно в ній пишуть код для завантаження ресурсів, ініціалізації змінних та встановлення налаштувань. Все це можна робити і в інших функціях, але ця функція виконується тільки один раз — тому вона не буде потребувати багато системних ресурсів.
 </p>
-<h2><span class="mw-headline" id="love.update"><a href="../wiki/love-649.html" title="love.update (Українська)">love.update</a></span></h2>
+<h2><span class="mw-headline" id="love.update"><a href="../wiki/love-292.html" title="love.update (Українська)">love.update</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- змінна num буде збільшуватися на 100 щосекунди</span>
@@ -87,13 +87,13 @@
 </pre></div>
 <p>Ця функція викликається весь час. Скоріше за все, більшість ваших розрахунків буде в ній. 'dt' значить "<a href="../wiki/love.timer-12.html" title="love.timer.getDelta (Українська)">дельта-час (delta time)</a>" — це кількість секунд, які пройшли після попереднього виклику цієї функції (звичайно це мале число, наприклад, 0.025714). 
 </p>
-<h2><span class="mw-headline" id="love.draw"><a href="../wiki/love-650.html" title="love.draw (Українська)">love.draw</a></span></h2>
+<h2><span class="mw-headline" id="love.draw"><a href="../wiki/love-293.html" title="love.draw (Українська)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Click and drag the cake around or use the arrow keys&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><code><a href="../wiki/love-650.html" title="love.draw (Українська)">love.draw</a></code> — це місце, де виконується код малювання (це можна зрозуміти з назви: draw значить <i>намалювати</i>). Всі функції з <code><a href="../wiki/love.graphics-16.html" title="love.graphics.draw">love.graphics.draw</a></code> мають виконуватися тільки тут — якщо викликати їх в іншому місці, нічого не намалюється. Ця функція також викликається постійно, тому майте на увазі: якщо змінити шрифт/колір/режим/і т.і. в кінці цієї функції, це повпливає на код і на початку. Наприклад:
+<p><code><a href="../wiki/love-293.html" title="love.draw (Українська)">love.draw</a></code> — це місце, де виконується код малювання (це можна зрозуміти з назви: draw значить <i>намалювати</i>). Всі функції з <code><a href="../wiki/love.graphics-16.html" title="love.graphics.draw">love.graphics.draw</a></code> мають виконуватися тільки тут — якщо викликати їх в іншому місці, нічого не намалюється. Ця функція також викликається постійно, тому майте на увазі: якщо змінити шрифт/колір/режим/і т.і. в кінці цієї функції, це повпливає на код і на початку. Наприклад:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -105,7 +105,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Цей текст червоний&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.mousepressed"><a href="../wiki/love-651.html" title="love.mousepressed (Українська)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="../wiki/love-294.html" title="love.mousepressed (Українська)">love.mousepressed</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Доступне починаючи з LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -120,9 +120,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Ця функція викликається тоді, коли натиснуто на клавішу миші, і їй передається натиснута кнопка та координати місця, де був курсор (x та y). Кнопка (button) — це номер кнопки, і доступні всі кнопки, що є на миші. Цю функцію зручно використовувати разом з <code><a href="../wiki/love-652.html" title="love.mousereleased (Українська)">love.mousereleased</a></code> (функцією відпускання миші).
+<p>Ця функція викликається тоді, коли натиснуто на клавішу миші, і їй передається натиснута кнопка та координати місця, де був курсор (x та y). Кнопка (button) — це номер кнопки, і доступні всі кнопки, що є на миші. Цю функцію зручно використовувати разом з <code><a href="../wiki/love-295.html" title="love.mousereleased (Українська)">love.mousereleased</a></code> (функцією відпускання миші).
 </p>
-<h2><span class="mw-headline" id="love.mousereleased"><a href="../wiki/love-652.html" title="love.mousereleased (Українська)">love.mousereleased</a></span></h2>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="../wiki/love-295.html" title="love.mousereleased (Українська)">love.mousereleased</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>Доступне починаючи з LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
@@ -136,9 +136,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Ця функція викликається тоді, коли закінчується натискання на кнопку миші, і вона отримує номер кнопки (button) і координати місця відпускання кнопки. Її можна використовувати і разом з <code><a href="../wiki/love-651.html" title="love.mousepressed (Українська)">love.mousepressed</a></code> (функцією початку натискання), і окремо, вони працюють незалежно.
+<p>Ця функція викликається тоді, коли закінчується натискання на кнопку миші, і вона отримує номер кнопки (button) і координати місця відпускання кнопки. Її можна використовувати і разом з <code><a href="../wiki/love-294.html" title="love.mousepressed (Українська)">love.mousepressed</a></code> (функцією початку натискання), і окремо, вони працюють незалежно.
 </p>
-<h2><span class="mw-headline" id="love.keypressed"><a href="../wiki/love-653.html" title="love.keypressed (Українська)">love.keypressed</a></span></h2>
+<h2><span class="mw-headline" id="love.keypressed"><a href="../wiki/love-296.html" title="love.keypressed (Українська)">love.keypressed</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Натиснуто на клавішу B (И).&quot;</span>
@@ -147,9 +147,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Ця функція викликається, коли натиснуто на будь-яку клавішу на клавіатурі, і їй передається натиснута клавіша. Клавіша може будь однією з <a href="../wiki/KeyConstant.html" title="KeyConstant">констант</a>. Цю функцію зручно використовувати разом з <code><a href="../wiki/love-654.html" title="love.keyreleased (Українська)">love.keyreleased</a></code>.
+<p>Ця функція викликається, коли натиснуто на будь-яку клавішу на клавіатурі, і їй передається натиснута клавіша. Клавіша може будь однією з <a href="../wiki/KeyConstant.html" title="KeyConstant">констант</a>. Цю функцію зручно використовувати разом з <code><a href="../wiki/love-297.html" title="love.keyreleased (Українська)">love.keyreleased</a></code>.
 </p>
-<h2><span class="mw-headline" id="love.keyreleased"><a href="../wiki/love-654.html" title="love.keyreleased (Українська)">love.keyreleased</a></span></h2>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="../wiki/love-297.html" title="love.keyreleased (Українська)">love.keyreleased</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Клавішу B (И) відпущено.&quot;</span>
@@ -158,9 +158,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Ця функція викликається, коли будь яку клавішу на клавіатурі відпущено, і їй передається клавіша (key), яка була відпущена. Цю функцію можна використовувати і разом з <code><a href="../wiki/love-653.html" title="love.keypressed (Українська)">love.keypressed</a></code>, і окремо, вони працюють незалежно. 
+<p>Ця функція викликається, коли будь яку клавішу на клавіатурі відпущено, і їй передається клавіша (key), яка була відпущена. Цю функцію можна використовувати і разом з <code><a href="../wiki/love-296.html" title="love.keypressed (Українська)">love.keypressed</a></code>, і окремо, вони працюють незалежно. 
 </p>
-<h2><span class="mw-headline" id="love.focus"><a href="../wiki/love-655.html" title="love.focus (Українська)">love.focus</a></span></h2>
+<h2><span class="mw-headline" id="love.focus"><a href="../wiki/love-298.html" title="love.focus (Українська)">love.focus</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ФОКУС ВТРАЧЕНО&quot;</span><span class="p">)</span>
@@ -182,7 +182,7 @@
 	<span class="c1">-- Тут буде інший код для love.update</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.quit"><a href="../wiki/love-656.html" title="love.quit (Українська)">love.quit</a></span></h2>
+<h2><span class="mw-headline" id="love.quit"><a href="../wiki/love-299.html" title="love.quit (Українська)">love.quit</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Дякую за гру! Повертайтеся!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
@@ -212,7 +212,7 @@
 <a href="index86be.html?title=Tutorial:Callback_Functions_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
 <a href="index0827.html?title=Tutorial:Callback_Functions_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Česky) (page does not exist)">Česky</a>&#160;&#8211;
 <a href="indexe856.html?title=Tutorial:Callback_Functions_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
-<a href="index69bc.html?title=Tutorial:Callback_Functions_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="index69bc-2.html?title=Tutorial:Callback_Functions_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Български) (page does not exist)">Български</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Callback_Functions_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Tutorial:Callback Functions (Русский)">Русский</a>&#160;&#8211;
 <a href="index2f3a.html?title=Tutorial:Callback_Functions_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Српски) (page does not exist)">Српски</a>&#160;&#8211;
 <a class="mw-selflink selflink">Українська</a>&#160;&#8211;
@@ -374,5 +374,5 @@ Retrieved from "<a dir="ltr" href="index4b9c.html?title=Tutorial:Callback_Functi
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.055","walltime":"1.111","ppvisitednodes":{"value":834,"limit":1000000},"ppgeneratednodes":{"value":2728,"limit":1000000},"postexpandincludesize":{"value":7275,"limit":2097152},"templateargumentsize":{"value":3383,"limit":2097152},"expansiondepth":{"value":10,"limit":40},"expensivefunctioncount":{"value":8,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11303,"limit":5000000},"timingprofile":["100.00% 1091.101      1 -total","  0.75%    8.219     14 Template:translated_link","  0.63%    6.863      2 Template:newin_(Українська)","  0.50%    5.481      1 Template:i18n","  0.27%    2.924     28 Template:Lang","  0.26%    2.848      4 Template:newin_(Українська)/grammatic_form","  0.11%    1.237      2 Template:newin_(Українська)/names"]},"cachereport":{"timestamp":"20240405165941","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":28});});</script></body>
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:22 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:26 GMT -->
 </html>

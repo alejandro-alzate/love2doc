@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:23 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:27 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -171,7 +171,7 @@
 <span class="kr">end</span>
 </pre></div>
 <h2><span id="連続的な移動"></span><span class="mw-headline" id=".E9.80.A3.E7.B6.9A.E7.9A.84.E3.81.AA.E7.A7.BB.E5.8B.95">連続的な移動</span></h2>
-<p>mapX および mapY に非整数値を利用することで移動を少し改善します。 SpriteBatch への Quad 追加時に、整数部分のみ考慮を行う一方で描画では端数部分を扱うために SpriteBatch のシフトを行うことがあります。 <a href="../wiki/love-663.html" title="love.keypressed (日本語)">love.keypressed</a> コールバックを <a href="../wiki/love-659.html" title="love.update (日本語)">love.update</a> へ置き換えることで少ない手順にてマップを移動します。
+<p>mapX および mapY に非整数値を利用することで移動を少し改善します。 SpriteBatch への Quad 追加時に、整数部分のみ考慮を行う一方で描画では端数部分を扱うために SpriteBatch のシフトを行うことがあります。 <a href="../wiki/love-306.html" title="love.keypressed (日本語)">love.keypressed</a> コールバックを <a href="../wiki/love-302.html" title="love.update (日本語)">love.update</a> へ置き換えることで少ない手順にてマップを移動します。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
   <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span>  <span class="kr">then</span>
@@ -505,5 +505,5 @@ Retrieved from "<a dir="ltr" href="indexd335.html?title=Tutorial:Efficient_Tile-
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.059","walltime":"1.050","ppvisitednodes":{"value":355,"limit":1000000},"ppgeneratednodes":{"value":823,"limit":1000000},"postexpandincludesize":{"value":4739,"limit":2097152},"templateargumentsize":{"value":2822,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":37290,"limit":5000000},"timingprofile":["100.00%    6.082      1 -total","100.00%    6.082      1 Template:i18n"," 54.09%    3.290     28 Template:Lang"]},"cachereport":{"timestamp":"20240405190227","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:23 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Efficient_Tile-based_Scrolling_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:27 GMT -->
 </html>

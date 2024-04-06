@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:27 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:28 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -84,7 +84,7 @@
 <span class="kd">local</span> <span class="n">world</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 世界の状態は空です</span>
 <span class="kd">local</span> <span class="n">t</span>
 </pre></div>
-<h3><span class="mw-headline" id="love.load"><a href="../wiki/love-658.html" title="love.load (日本語)">love.load</a></span></h3>
+<h3><span class="mw-headline" id="love.load"><a href="../wiki/love-301.html" title="love.load (日本語)">love.load</a></span></h3>
 <p>最初に、 UDP ソケットが必要であり、その後に全てのネットワーキングを行います。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
@@ -129,7 +129,7 @@
 	<span class="n">t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">-- t へ 0 を(再)設定</span>
 <span class="kr">end</span>
 </pre></div>
-<h3><span class="mw-headline" id="love.update"><a href="../wiki/love-659.html" title="love.update (日本語)">love.update</a></span></h3>
+<h3><span class="mw-headline" id="love.update"><a href="../wiki/love-302.html" title="love.update (日本語)">love.update</a></span></h3>
 <p>以前に宣言した <i>t</i> を含む意味のないことから開始します。送信 (または要求) するパケットに注意を払わなければ、ネットワーク接続を完全に満杯にするのは<b>非常に容易</b>であるため、従ってどのくらい頻繁に更新を送信 (および要求)するかどうかの制限をすることにより対策を見込みます。
 </p><p><i>(記録に関しては、ほとんどの普通のゲームにおいて一秒当たり十回が良いと考えられ (多くの <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Massively_Multiplayer_Online_game">MMO</a> も該当します)、高速に歩測されたゲームであっても、実際には常時三十回以上の更新を必要としないようにしてください)</i>
 </p><p>全ての小さな転送に対して更新を送信することはできますが、ここで単一パケットへ統合することで最終の更新は価値のあるものとなり、使用する帯域幅は徹底的に減少します。
@@ -344,7 +344,7 @@
 <a class="mw-selflink selflink">日本語</a>&#160;&#8211;
 <a href="indexfcef.html?title=Tutorial:Networking_with_UDP_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
 <a href="index0ac2.html?title=Tutorial:Networking_with_UDP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
-<a href="index43ae.html?title=Tutorial:Networking_with_UDP_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="index43ae-2.html?title=Tutorial:Networking_with_UDP_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
 <a href="index8630-2.html?title=Tutorial:Networking_with_UDP_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (한국어) (page does not exist)">한국어</a> 
 <br />
 <span style="text-align:right;"><i><a href="../wiki/Help_i18n.html" title="Help:i18n">More info</a></i></span>
@@ -494,5 +494,5 @@ Retrieved from "<a dir="ltr" href="index7cbc.html?title=Tutorial:Networking_with
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.073","walltime":"2.219","ppvisitednodes":{"value":495,"limit":1000000},"ppgeneratednodes":{"value":1160,"limit":1000000},"postexpandincludesize":{"value":6510,"limit":2097152},"templateargumentsize":{"value":3725,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":22250,"limit":5000000},"timingprofile":["100.00% 1889.867      1 -total","  0.32%    6.040      1 Template:i18n","  0.18%    3.310     28 Template:Lang","  0.10%    1.975      4 Template:notice"]},"cachereport":{"timestamp":"20240405170038","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":32});});</script></body>
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:27 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:28 GMT -->
 </html>

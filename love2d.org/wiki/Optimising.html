@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Optimising by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:16 GMT -->
+<!-- Mirrored from love2d.org/wiki/Optimising by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:20 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -117,7 +117,7 @@ Normally this performance gain is splitting hairs, but there's a common situatio
 <ul><li>In the <b>RIGHT WAY</b> example, we begin by creating a local containing the <i>math.sin()</i> function. its this value which is then used in the loop. Immediately its obvious that we've basically halved the number of look-ups required by this section code, and that's without considering that local look-ups are cheaper than global look ups.</li></ul>
 <h1><span class="mw-headline" id="Love-Specific_Tips">Love-Specific Tips</span></h1>
 <h2><span class="mw-headline" id="Cull_the_herd">Cull the herd</span></h2>
-<p>It can be tempting to design drawing functions that make little or no attempt to consider the visibility of game elements, relying instead on the graphics hardware's basic <a href="../w/index5467.html?title=clipping&amp;action=edit&amp;redlink=1" class="new" title="clipping (page does not exist)">clipping</a> capabilities. if nothing else, this can often give simpler and easier to understand functions.
+<p>It can be tempting to design drawing functions that make little or no attempt to consider the visibility of game elements, relying instead on the graphics hardware's basic <a href="../w/index5467-2.html?title=clipping&amp;action=edit&amp;redlink=1" class="new" title="clipping (page does not exist)">clipping</a> capabilities. if nothing else, this can often give simpler and easier to understand functions.
 </p><p>But even if these elements aren't visible, they still need to be transformed and processed, and their data sent to the card's hardware. Depending on your game's design, you might do additional calculations for that element, such as calculating <a href="../w/indexc32e-2.html?title=look-at&amp;action=edit&amp;redlink=1" class="new" title="look-at (page does not exist)">look-ats</a>, or blending colors. All of which are unnecessary, give that the element isn't actually visible, and on <a href="../w/index6e08.html?title=non-trivial&amp;action=edit&amp;redlink=1" class="new" title="non-trivial (page does not exist)">non-trivial</a> projects, this can be a performance cost you can ill-afford.
 </p><p><a href="../w/index436e-2.html?title=Refactor&amp;action=edit&amp;redlink=1" class="new" title="Refactor (page does not exist)">Refactor</a> your code to avoid calculations that only need to be done visible elements, and avoid sending any data to the hardware about objects you can determine won't be visible.
 </p>
@@ -273,5 +273,5 @@ Retrieved from "<a dir="ltr" href="../w/index9fb7-2.html?title=Optimising&amp;ol
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.015","walltime":"0.115","ppvisitednodes":{"value":56,"limit":1000000},"ppgeneratednodes":{"value":72,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1083,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240405011409","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":31});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Optimising by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:16 GMT -->
+<!-- Mirrored from love2d.org/wiki/Optimising by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:20 GMT -->
 </html>

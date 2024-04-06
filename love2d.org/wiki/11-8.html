@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/11.0_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:44 GMT -->
+<!-- Mirrored from love2d.org/wiki/11.0_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:41 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -73,7 +73,7 @@
 <h2><span id="0.10.2_からの変更点"></span><span class="mw-headline" id="0.10.2_.E3.81.8B.E3.82.89.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9"><a href="0.10-4.html" title="0.10.2 (日本語)">0.10.2</a> からの変更点</span></h2>
 <h3><span id="機能追加"></span><span class="mw-headline" id=".E6.A9.9F.E8.83.BD.E8.BF.BD.E5.8A.A0">機能追加</span></h3>
 <ul><li>結合型実行形式 (fused) ではないゲームのデフォルト動作として、公式廃止予定機能への警告表示を追加。</li>
-<li><a href="love-723.html" title="love.setDeprecationOutput (日本語)">love.setDeprecationOutput</a> および <a href="love-713.html" title="love.hasDeprecationOutput (日本語)">love.hasDeprecationOutput</a> の追加。</li>
+<li><a href="love-366.html" title="love.setDeprecationOutput (日本語)">love.setDeprecationOutput</a> および <a href="love-356.html" title="love.hasDeprecationOutput (日本語)">love.hasDeprecationOutput</a> の追加。</li>
 <li><a href="Object_release_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Object:release (日本語)">Object:release</a> の追加。</li>
 <li><a href="Data_clone_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Data:clone (日本語)">Data:clone</a> の追加。</li>
 <li><a href="love.audio-109.html" title="love.audio.newQueueableSource (日本語)">待ち行列型の音声 Sources</a> を追加。</li>
@@ -87,16 +87,16 @@
 <li><a href="World_update_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="World:update (日本語)">World:update</a> において内部反復処理の実行回数制御に対応した異形を追加。</li>
 <li><a href="Body_isTouching_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Body:isTouching (日本語)">Body:isTouching</a> の追加。</li>
 <li><a href="RopeJoint_setMaxLength_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="RopeJoint:setMaxLength (日本語)">RopeJoint:setMaxLength</a> の追加。</li>
-<li><a href="love-661.html" title="love.mousepressed (日本語)">love.mousepressed</a> および <a href="love-662.html" title="love.mousereleased (日本語)">love.mousereleased</a> へ連続クリックとして用いる presses 引数を追加。</li>
+<li><a href="love-304.html" title="love.mousepressed (日本語)">love.mousepressed</a> および <a href="love-305.html" title="love.mousereleased (日本語)">love.mousereleased</a> へ連続クリックとして用いる presses 引数を追加。</li>
 <li><a href="love.filesystem-172.html" title="love.filesystem.mount (日本語)">love.filesystem.mount</a> において <a href="Data_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Data (日本語)">Data</a> または zip 形式のデータ内容から成る <a href="FileData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="FileData (日本語)">FileData</a> オブジェクトに対応した異形を追加。</li>
 <li><a href="love.filesystem-127.html" title="love.filesystem.getInfo (日本語)">love.filesystem.getInfo</a> の追加 (<a href="love.filesystem-109.html" title="love.filesystem.exists (日本語)">love.filesystem.exists</a> / <a href="love.filesystem-158.html" title="love.filesystem.isFile (日本語)">isFile</a> / <a href="love.filesystem-154.html" title="love.filesystem.isDirectory (日本語)">isDirectory</a> / <a href="love.filesystem-161.html" title="love.filesystem.isSymlink (日本語)">isSymlink</a> / <a href="love.filesystem-129.html" title="love.filesystem.getLastModified (日本語)">getLastModified</a> / <a href="love.filesystem-140.html" title="love.filesystem.getSize (日本語)">getSize</a> から変更)。</li>
 <li>require において C ライブラリの検索に用いる関数として <a href="love.filesystem-184.html" title="love.filesystem.setCRequirePath (日本語)">love.filesystem.setCRequirePath</a> および <a href="love.filesystem-116.html" title="love.filesystem.getCRequirePath (日本語)">love.filesystem.getCRequirePath</a> を追加。</li>
 <li><a href="(File)_read_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="(File):read (日本語)">File:read</a> および <a href="love.filesystem-68.html" title="love.filesystem.read (日本語)">love.filesystem.read</a> において、列挙型で <a href="FileData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="FileData (日本語)">FileData</a> か文字列のどちらかを返すか決定するために異形を追加。</li>
 <li>メッセージが読み取られたか判定するために <a href="Channel_hasRead_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Channel:hasRead (日本語)">Channel:hasRead</a> を追加。 ID は <a href="Channel_push_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Channel:push (日本語)">Channel:push</a> の返値を使います。</li>
 <li><a href="Channel_demand_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Channel:demand (日本語)">Channel:demand</a> および <a href="Channel_supply_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Channel:supply (日本語)">Channel:supply</a> において timeout 引数へ対応した異形を追加。</li>
-<li>メインスレッドのエラーを収集するためのコードをデフォルトの <a href="love-757.html" title="love.threaderror (日本語)">love.threaderror</a> コールバックへ追加。</li>
-<li><a href="love-134.html" title="love.data (日本語)">love.data</a> モジュールの追加。 Hex/Base64 形式の <a href="love.data-20.html" title="love.data.encode (日本語)">エンコーディング関数</a>、MD5 および SHA <a href="love.data-26.html" title="love.data.hash (日本語)">ハッシュ</a>、<a href="love.data-24.html" title="love.data.pack (日本語)">文字列のパック</a>、<a href="love.data-14.html" title="love.data.compress (日本語)">圧縮 API</a> などを実装してあります。</li>
-<li><a href="love-359.html" title="love.math (日本語)">love.math</a> へ <a href="Transform_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Transform (日本語)">Transform</a> オブジェクトを追加</li>
+<li>メインスレッドのエラーを収集するためのコードをデフォルトの <a href="love-400.html" title="love.threaderror (日本語)">love.threaderror</a> コールバックへ追加。</li>
+<li><a href="love-97.html" title="love.data (日本語)">love.data</a> モジュールの追加。 Hex/Base64 形式の <a href="love.data-20.html" title="love.data.encode (日本語)">エンコーディング関数</a>、MD5 および SHA <a href="love.data-26.html" title="love.data.hash (日本語)">ハッシュ</a>、<a href="love.data-24.html" title="love.data.pack (日本語)">文字列のパック</a>、<a href="love.data-14.html" title="love.data.compress (日本語)">圧縮 API</a> などを実装してあります。</li>
+<li><a href="love-179.html" title="love.math (日本語)">love.math</a> へ <a href="Transform_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Transform (日本語)">Transform</a> オブジェクトを追加</li>
 <li><a href="ImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ImageData (日本語)">ImageData</a> および <a href="PixelFormat_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="PixelFormat (日本語)">PixelFormat</a> で RGBA8 (デフォルト), RGBA16, RGBA16F, および RGBA32F など各種形式への対応を追加。</li>
 <li>Radiance HDR, OpenEXR, および 16 bit PNG  の読み込み機能を追加。</li>
 <li><a href="love.graphics-588.html" title="love.graphics.getImageFormats (日本語)">love.graphics.getImageFormats</a> の追加 (<a href="love.graphics-587.html" title="love.graphics.getCompressedImageFormats (日本語)">love.graphics.getCompressedImageFormats</a> から変更)。</li>
@@ -158,7 +158,7 @@
 <ul><li><a href="love.window-119.html" title="love.window.getPixelScale (日本語)">love.window.getPixelScale</a> から <a href="love.window-58.html" title="love.window.getDPIScale (日本語)">love.window.getDPIScale</a> へ改名。</li>
 <li><a href="love.mouse-78.html" title="love.mouse.hasCursor (日本語)">love.mouse.hasCursor</a> から <a href="love.mouse-81.html" title="love.mouse.isCursorSupported (日本語)">love.mouse.isCursorSupported</a> へ改名。</li>
 <li><a href="ParticleSystem_setAreaSpread_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ParticleSystem:setAreaSpread (日本語)">ParticleSystem:setAreaSpread</a> から <a href="ParticleSystem_setEmissionArea_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ParticleSystem:setEmissionArea (日本語)">ParticleSystem:setEmissionArea</a> へ改名。</li>
-<li><a href="love-730.html" title="love.errhand (日本語)">love.errhand</a> から <a href="love-738.html" title="love.errorhandler (日本語)">love.errorhandler</a> へ改名。 love.errhand は定義されているが love.errorhandler が未定義でも、動作を継続します。</li>
+<li><a href="love-373.html" title="love.errhand (日本語)">love.errhand</a> から <a href="love-381.html" title="love.errorhandler (日本語)">love.errorhandler</a> へ改名。 love.errhand は定義されているが love.errorhandler が未定義でも、動作を継続します。</li>
 <li><a href="Source_getChannels_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source:getChannels (日本語)">Source</a>/<a href="SoundData_getChannels_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SoundData:getChannels (日本語)">SoundData</a>/<a href="Decoder_getChannels_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Decoder:getChannels (日本語)">Decoder:getChannels</a> から <a href="Source_getChannelCount_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source:getChannelCount (日本語)">Source</a>/<a href="SoundData_getChannelCount_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SoundData:getChannelCount (日本語)">SoundData</a>/<a href="Decoder_getChannelCount_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Decoder:getChannelCount (日本語)">Decoder:getChannelCount</a> へ改名。</li>
 <li><a href="PrismaticJoint_hasLimitsEnabled_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="PrismaticJoint:hasLimitsEnabled (日本語)">PrismaticJoint:hasLimitsEnabled</a> および <a href="RevoluteJoint_hasLimitsEnabled_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="RevoluteJoint:hasLimitsEnabled (日本語)">RevoluteJoint:hasLimitsEnabled</a> から <a href="PrismaticJoint_areLimitsEnabled_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="PrismaticJoint:areLimitsEnabled (日本語)">PrismaticJoint:areLimitsEnabled</a> および <a href="RevoluteJoint_areLimitsEnabled_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="RevoluteJoint:areLimitsEnabled (日本語)">RevoluteJoint:areLimitsEnabled</a> へ改名。</li>
 <li><a href="love.audio-93.html" title="love.audio.getSourceCount (日本語)">love.audio.getSourceCount</a> から <a href="love.audio-61.html" title="love.audio.getActiveSourceCount (日本語)">love.audio.getActiveSourceCount</a> へ改名。</li>
@@ -207,7 +207,7 @@
 <li>'premultiplied' 方式の <a href="BlendAlphaMode_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="BlendAlphaMode (日本語)">BlendAlphaMode</a> を使わない場合は数式だけ動作してしまうので、'multiply' 方式の <a href="BlendMode_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="BlendMode (日本語)">BlendMode</a>はエラーになるよう変更。</li>
 <li><a href="Shader_send_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Shader:send (日本語)">Shader:send</a> の行列型異形において、デフォルトの行列の解釈方法を列優先ではなく、行優先へ変更。</li>
 <li><a href="Canvas_newImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas:newImageData (日本語)">Canvas:newImageData</a> の異形において Canvas で二次元ではない<a href="TextureType_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="TextureType (日本語)">テクスチャ型</a>を使用、またはミップマップがあるとき、 slice と mipmap インデックス引数で必要となる x/y/width/height を使えるように変更。</li>
-<li><a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a> が有効である場合に <a href="love-247.html" title="love.graphics (日本語)">love.graphics</a>, <a href="love-611.html" title="love.window (日本語)">love.window</a>, および <a href="love-162.html" title="love.event (日本語)">love.event</a> の一部 API でエラーが発生するよう変更。</li>
+<li><a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a> が有効である場合に <a href="love-140.html" title="love.graphics (日本語)">love.graphics</a>, <a href="love-256.html" title="love.window (日本語)">love.window</a>, および <a href="love-106.html" title="love.event (日本語)">love.event</a> の一部 API でエラーが発生するよう変更。</li>
 <li><a href="love.graphics-461.html" title="love.graphics.setCanvas (日本語)">love.graphics.setCanvas</a> の stencil=true (またはカスタムステンシル形式の <a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a>) によりステンシル処理機能を <a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a> を有効にするための変更。</li>
 <li><a href="Mesh_setDrawRange_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Mesh:setDrawRange (日本語)">Mesh:setDrawRange</a> で 'min' と 'max' の代わりに 'start' と 'count' 引数を使うように変更。</li>
 <li><a href="love.image-18.html" title="love.image.newImageData (日本語)">love.image.newImageData</a> として寸法指定の引数 (width, height) と <a href="PixelFormat_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="PixelFormat (日本語)">PixelFormat</a> を引数 (format) として扱えるように変更。</li>
@@ -217,7 +217,7 @@
 <li><a href="love.audio-118.html" title="love.audio.pause (日本語)">love.audio.pause()</a> において、この関数を呼び出して <a href="Source_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source (日本語)">Source</a> を一時停止したときに停止された Source リストを返すよう変更。</li>
 <li><a href="Source_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source (日本語)">Source</a> のシーク動作を変更。各種の Source で境界を超えてシークする場合は仕様変更前と動作は同じです。</li>
 <li><a href="love.timer-60.html" title="love.timer.step (日本語)">love.timer.step</a> において計算済みのデルタ時間を返すよう変更。</li>
-<li>メインループを返す関数である <a href="love-657.html" title="love.run (日本語)">love.run</a> および <a href="love-738.html" title="love.errorhandler (日本語)">love.errorhandler</a> を変更。これらは love が終了するまで呼び出されます。</li>
+<li>メインループを返す関数である <a href="love-300.html" title="love.run (日本語)">love.run</a> および <a href="love-381.html" title="love.errorhandler (日本語)">love.errorhandler</a> を変更。これらは love が終了するまで呼び出されます。</li>
 <li><a href="enet_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" class="mw-redirect" title="enet (日本語)">enet</a> において 'enet' はグローバル空間から外すよう変更。</li>
 <li><a href="love.keyboard-14.html" title="love.keyboard.isDown (日本語)">love.keyboard.isDown</a> および <a href="love.keyboard-46.html" title="love.keyboard.isScancodeDown (日本語)">love.keyboard.isScancodeDown</a> 無効な列挙型値を指定された場合はエラーになるよう変更。</li>
 <li>コマンドライン引数の処理方法に関する改善と更新。</li>
@@ -227,7 +227,7 @@
 <li>正常列挙型値のリストを表示するために不正列挙型値のエラーメッセージを更新。</li>
 <li><a href="Source_seek_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source:seek (日本語)">Source:seek</a> が再生されていないときでも <a href="Source_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source (日本語)">Source</a> が動作するよう更新。</li>
 <li><a href="love.math-71.html" title="love.math.random (日本語)">love.math.random</a> において数値分布の改良のために更新。</li>
-<li>利用可能であるとき <a href="love-247.html" title="love.graphics (日本語)">love.graphics</a>で OpenGL 3.3以降のコアプロファイルに対応するための更新。</li>
+<li>利用可能であるとき <a href="love-140.html" title="love.graphics (日本語)">love.graphics</a>で OpenGL 3.3以降のコアプロファイルに対応するための更新。</li>
 <li><a href="SpriteBatch_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SpriteBatch (日本語)">SpriteBatch</a> は空き容量不足になったときに自動的に容量を確保するよう更新。</li>
 <li><a href="Shader_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Shader (日本語)">Shader</a> において OpenGL ES が利用できる場合の派生関数 (dFdx, dFdy, fwidth) を常時公開するよう更新。* シェーダーコードの変数名として VERTEX と PIXEL を使用可能にするために<a href="Shader_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Shader (日本語)">シェーダー</a>を更新。</li>
 <li><a href="love.graphics-235.html" title="love.graphics.circle (日本語)">love.graphics.circle</a>, <a href="love.graphics-257.html" title="love.graphics.ellipse (日本語)">love.graphics.ellipse</a>, <a href="love.graphics-230.html" title="love.graphics.arc (日本語)">love.graphics.arc</a>, および <a href="love.graphics-158.html" title="love.graphics.rectangle (日本語)">love.graphics.rectangle</a> で使用する線分数の判定時に座標変換尺度を考慮するために更新。</li>
@@ -235,7 +235,7 @@
 <li><a href="Font_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Font (日本語)">フォント</a>グリフ生成におけるアンチ・エイリアシング品質の改善。</li>
 <li><a href="Canvas_newImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas:newImageData (日本語)">Canvas:newImageData</a> において、できる限り形式の近い <a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a> と一致する <a href="ImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ImageData (日本語)">ImageData</a> の形式を返すよう更新。</li>
 <li>未指定時に "@2x", "@3x" などのピクセル密度尺度係数がファイル名の末尾に不可されたものを扱えるようにするために <a href="love.graphics-315.html" title="love.graphics.newImage (日本語)">love.graphics.newImage</a> を更新。</li>
-<li><a href="love-247.html" title="love.graphics (日本語)">love.graphics</a> の座標変換・ステート<a href="love.graphics-168.html" title="love.graphics.push (日本語)">スタック深度</a>を最大 64 から 128 へ拡張するための更新。</li>
+<li><a href="love-140.html" title="love.graphics (日本語)">love.graphics</a> の座標変換・ステート<a href="love.graphics-168.html" title="love.graphics.push (日本語)">スタック深度</a>を最大 64 から 128 へ拡張するための更新。</li>
 <li>ユーザーの判断でエラーメッセージをクリップボードにコピー可能にするためにデフォルトのエラーハンドラを更新。</li>
 <li>パスごとの複数テンプレート '?' 文字に対応するために <a href="love.filesystem-186.html" title="love.filesystem.setRequirePath (日本語)">love.filesystem.setRequirePath</a> を更新。</li>
 <li><a href="socket_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="socket (日本語)">luasocket</a> を version 3.0rc1 へ更新。</li>
@@ -251,7 +251,7 @@
 <p><br />
 </p>
 <h3><span id="不具合修正"></span><span class="mw-headline" id=".E4.B8.8D.E5.85.B7.E5.90.88.E4.BF.AE.E6.AD.A3">不具合修正</span></h3>
-<ul><li>エラーメッセージに非 UTF-8 バイトがあるとき、デフォルトの<a href="love-730.html" title="love.errhand (日本語)">エラーハンドラ</a>でエラーが発生していた不具合を修正。</li>
+<ul><li>エラーメッセージに非 UTF-8 バイトがあるとき、デフォルトの<a href="love-373.html" title="love.errhand (日本語)">エラーハンドラ</a>でエラーが発生していた不具合を修正。</li>
 <li>Object モジュールが読み込まれていないスレッドへ love の <a href="Object_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Object (日本語)">Object</a> を送信するときにメモリリークが発生した不具合を修正。</li>
 <li>peer:send の失敗時に <a href="enet_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" class="mw-redirect" title="enet (日本語)">enet</a> でメモリリークが発生していた不具合を修正。</li>
 <li>Linux では必ず -1 を返すように os.execute を修正。</li>
@@ -455,5 +455,5 @@ Retrieved from "<a dir="ltr" href="../w/index4929.html?title=11.0_(%e6%97%a5%e6%
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.050","walltime":"0.056","ppvisitednodes":{"value":280,"limit":1000000},"ppgeneratednodes":{"value":649,"limit":1000000},"postexpandincludesize":{"value":2724,"limit":2097152},"templateargumentsize":{"value":792,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    5.309      1 -total","100.00%    5.309      1 Template:i18n_(日本語)"," 54.17%    2.876     28 Template:Lang"]},"cachereport":{"timestamp":"20240405192425","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":32});});</script></body>
-<!-- Mirrored from love2d.org/wiki/11.0_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:44 GMT -->
+<!-- Mirrored from love2d.org/wiki/11.0_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:41 GMT -->
 </html>

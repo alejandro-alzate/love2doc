@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:22 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:26 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -36,7 +36,7 @@
 				<li id="ca-nstab-tutorial" class="selected"><a href="../wiki/Tutorial_Callback_Functions_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html">Tutorial</a></li>
 				<li id="ca-talk" class="new"><a href="indexaac0.html?title=Tutorial_talk:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
 				<li id="ca-viewsource"><a href="indexf524.html?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
-				<li id="ca-history"><a href="indexc1cb.html?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				<li id="ca-history"><a href="indexc1cb-2.html?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
 				</ul>
 							</div>
 		</div>
@@ -50,7 +50,7 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>LÖVE において<a href="../wiki/Category_Callbacks_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Category:Callbacks (日本語)">コールバック</a>関数は全てオプションであり各種作業を実行するために <a href="../wiki/love-657.html" title="love.run (日本語)">love.run</a> から呼び出されます。とはいえ、恐らく完全な機能のあるゲーム体験ではほぼ全てを利用するため、それらがなにかを熟知するのは賢明です。
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>LÖVE において<a href="../wiki/Category_Callbacks_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Category:Callbacks (日本語)">コールバック</a>関数は全てオプションであり各種作業を実行するために <a href="../wiki/love-300.html" title="love.run (日本語)">love.run</a> から呼び出されます。とはいえ、恐らく完全な機能のあるゲーム体験ではほぼ全てを利用するため、それらがなにかを熟知するのは賢明です。
 </p><p>プログラミング未経験または用語に見覚えがない方々への説明として、コールバックとはある意味で逆方向に動作する受け身のような関数です。一方、 <a href="../wiki/love.graphics-159.html" title="love.graphics.draw (日本語)">love.graphics.draw</a> または Lua の <code>math.floor</code> といった攻めに相当する一般的な関数では、それを呼び出すと LÖVE または Lua が呼び出した関数の処理を行います。他方ではコールバックは開発者が処理内容を記述する関数であり、ある条件を満たすと LÖVE が自動的に呼び出します。または、コールバックの考え方の一つとして、描画、更新、キー入力などイベント発生ごとに呼びだされる独立した受動的なメインルーチンが複数あると考えても良いかもしれません。
 </p><p>コールバックにより品質の悪いコードが書きづらくなり、コードの組織化と最適化の維持がしやすくなります。例えば、 <code>love.load</code> はゲームが最初に開始された時に一度だけ呼び出されるため (
 <code>love.load</code>以外のコールバック以前に)、ゲーム・コンテンツの読み込み、各種初期化や準備を行うコードを記述するのに適切です。
@@ -72,7 +72,7 @@
 </ul>
 </div>
 
-<h2><span class="mw-headline" id="love.load"><a href="../wiki/love-658.html" title="love.load (日本語)">love.load</a></span></h2>
+<h2><span class="mw-headline" id="love.load"><a href="../wiki/love-301.html" title="love.load (日本語)">love.load</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setNewFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -82,7 +82,7 @@
 </pre></div>
 <p>この関数はゲーム開始時に一度だけ呼び出されます。通常、この関数ではリソースの読み込み、変数の初期化、その他の設定を行います。これらの処理は <code>love.load</code> 以外でもできますが、ここで一度だけ行うとシステム・リソースの大幅な節約になります。
 </p>
-<h2><span class="mw-headline" id="love.update"><a href="../wiki/love-659.html" title="love.update (日本語)">love.update</a></span></h2>
+<h2><span class="mw-headline" id="love.update"><a href="../wiki/love-302.html" title="love.update (日本語)">love.update</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- これは num を 1 秒ごとに 100 加算します。</span>
@@ -91,13 +91,13 @@
 </pre></div>
 <p>この関数は継続的に呼び出されます。よって、恐らくほとんどのあなたの計算を済ませる場所になります。 'dt' は"<a href="../wiki/love.timer-13.html" title="love.timer.getDelta (日本語)">デルタ・タイム</a>の意味でありこの関数が以前に呼び出された時からの経過時間を秒数にて表しています （通常は 0.025714 のような小さな値です）。 
 </p>
-<h2><span class="mw-headline" id="love.draw"><a href="../wiki/love-660.html" title="love.draw (日本語)">love.draw</a></span></h2>
+<h2><span class="mw-headline" id="love.draw"><a href="../wiki/love-303.html" title="love.draw (日本語)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Click and drag the cake around or use the arrow keys&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><code><a href="../wiki/love-660.html" title="love.draw (日本語)">love.draw</a></code> は全ての描画処理を集中的に行うための場所であり(まだ十分にそれが明白ではないならば)、この関数の外部で <code><a href="../wiki/love.graphics-159.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> 族の関数を呼び出した場合は効果は一切ありません。この関数についても継続的に呼び出されるため、関数の終わりでフォント・配色・モード(方式)などを変更する場合に関数の始まりのものに影響することに留意してください。例えば:
+<p><code><a href="../wiki/love-303.html" title="love.draw (日本語)">love.draw</a></code> は全ての描画処理を集中的に行うための場所であり(まだ十分にそれが明白ではないならば)、この関数の外部で <code><a href="../wiki/love.graphics-159.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> 族の関数を呼び出した場合は効果は一切ありません。この関数についても継続的に呼び出されるため、関数の終わりでフォント・配色・モード(方式)などを変更する場合に関数の始まりのものに影響することに留意してください。例えば:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -109,7 +109,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This text is red&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.mousepressed"><a href="../wiki/love-661.html" title="love.mousepressed (日本語)">love.mousepressed</a></span></h2>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="../wiki/love-304.html" title="love.mousepressed (日本語)">love.mousepressed</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a> から使用可能</b> </i>
@@ -124,9 +124,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>この関数はマウスのボタンが押されてボタンおよび押された場所の座標を受信する場合は常に呼び出されます。 button は押された任意のボタンの索引です。この関数は <code><a href="../wiki/love-662.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> との併用でも非常に上手く動作します。
+<p>この関数はマウスのボタンが押されてボタンおよび押された場所の座標を受信する場合は常に呼び出されます。 button は押された任意のボタンの索引です。この関数は <code><a href="../wiki/love-305.html" title="love.mousereleased (日本語)">love.mousereleased</a></code> との併用でも非常に上手く動作します。
 </p>
-<h2><span class="mw-headline" id="love.mousereleased"><a href="../wiki/love-662.html" title="love.mousereleased (日本語)">love.mousereleased</a></span></h2>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="../wiki/love-305.html" title="love.mousereleased (日本語)">love.mousereleased</a></span></h2>
 <table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
 <tbody><tr>
 <td><i> <b>LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a> から使用可能</b> </i>
@@ -140,9 +140,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>この関数はマウスのボタンが離されてボタンおよび離された場所の座標を受信する場合は常に呼び出されます。この関数は <code><a href="../wiki/love-661.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> と併用または独立して扱うこともできますが、それはいかなるの方法であっても接続されていません。
+<p>この関数はマウスのボタンが離されてボタンおよび離された場所の座標を受信する場合は常に呼び出されます。この関数は <code><a href="../wiki/love-304.html" title="love.mousepressed (日本語)">love.mousepressed</a></code> と併用または独立して扱うこともできますが、それはいかなるの方法であっても接続されていません。
 </p>
-<h2><span class="mw-headline" id="love.keypressed"><a href="../wiki/love-663.html" title="love.keypressed (日本語)">love.keypressed</a></span></h2>
+<h2><span class="mw-headline" id="love.keypressed"><a href="../wiki/love-306.html" title="love.keypressed (日本語)">love.keypressed</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was pressed.&quot;</span>
@@ -151,9 +151,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>この関数はキーボードのキーが押されて押されたキーを受信する場合は常に呼び出されます。key は <a href="../wiki/KeyConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="KeyConstant (日本語)">定数</a> のいずれかです。この関数は <code><a href="../wiki/love-664.html" title="love.keyreleased (日本語)">love.keyreleased</a></code> との併用で非常に上手く動作します。
+<p>この関数はキーボードのキーが押されて押されたキーを受信する場合は常に呼び出されます。key は <a href="../wiki/KeyConstant_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="KeyConstant (日本語)">定数</a> のいずれかです。この関数は <code><a href="../wiki/love-307.html" title="love.keyreleased (日本語)">love.keyreleased</a></code> との併用で非常に上手く動作します。
 </p>
-<h2><span class="mw-headline" id="love.keyreleased"><a href="../wiki/love-664.html" title="love.keyreleased (日本語)">love.keyreleased</a></span></h2>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="../wiki/love-307.html" title="love.keyreleased (日本語)">love.keyreleased</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
       <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was released.&quot;</span>
@@ -162,9 +162,9 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>この関数はキーボードのキーが離されて離されたキーを受信する場合は常に呼び出されます。この関数は <code><a href="../wiki/love-663.html" title="love.keypressed (日本語)">love.keypressed</a></code> との併用または独立して扱うこともできますが、それはいかなるの方法であっても接続されません。
+<p>この関数はキーボードのキーが離されて離されたキーを受信する場合は常に呼び出されます。この関数は <code><a href="../wiki/love-306.html" title="love.keypressed (日本語)">love.keypressed</a></code> との併用または独立して扱うこともできますが、それはいかなるの方法であっても接続されません。
 </p>
-<h2><span class="mw-headline" id="love.focus"><a href="../wiki/love-665.html" title="love.focus (日本語)">love.focus</a></span></h2>
+<h2><span class="mw-headline" id="love.focus"><a href="../wiki/love-308.html" title="love.focus (日本語)">love.focus</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
   <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LOST FOCUS&quot;</span><span class="p">)</span>
@@ -183,7 +183,7 @@
 	<span class="c1">-- ここへあなたの love.update のコードを記載してください。</span>
 <span class="kr">end</span>
 </pre></div>
-<h2><span class="mw-headline" id="love.quit"><a href="../wiki/love-666.html" title="love.quit (日本語)">love.quit</a></span></h2>
+<h2><span class="mw-headline" id="love.quit"><a href="../wiki/love-309.html" title="love.quit (日本語)">love.quit</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thanks for playing! Come back soon!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
@@ -268,7 +268,7 @@
 <a href="index86be.html?title=Tutorial:Callback_Functions_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
 <a href="index0827.html?title=Tutorial:Callback_Functions_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Česky) (page does not exist)">Česky</a>&#160;&#8211;
 <a href="indexe856.html?title=Tutorial:Callback_Functions_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
-<a href="index69bc.html?title=Tutorial:Callback_Functions_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="index69bc-2.html?title=Tutorial:Callback_Functions_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Български) (page does not exist)">Български</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Callback_Functions_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Tutorial:Callback Functions (Русский)">Русский</a>&#160;&#8211;
 <a href="index2f3a.html?title=Tutorial:Callback_Functions_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Српски) (page does not exist)">Српски</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Callback_Functions_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Tutorial:Callback Functions (Українська)">Українська</a>&#160;&#8211;
@@ -427,5 +427,5 @@ Retrieved from "<a dir="ltr" href="index0c98.html?title=Tutorial:Callback_Functi
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.049","walltime":"1.217","ppvisitednodes":{"value":455,"limit":1000000},"ppgeneratednodes":{"value":1175,"limit":1000000},"postexpandincludesize":{"value":4769,"limit":2097152},"templateargumentsize":{"value":2202,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":15017,"limit":5000000},"timingprofile":["100.00%  800.921      1 -total","  0.71%    5.706      1 Template:i18n","  0.39%    3.141     28 Template:Lang","  0.29%    2.346      2 Template:newin_(日本語)"]},"cachereport":{"timestamp":"20240405093809","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:22 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:26 GMT -->
 </html>

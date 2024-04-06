@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/0.10.1_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:44 GMT -->
+<!-- Mirrored from love2d.org/wiki/0.10.1_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:41 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -79,7 +79,7 @@
 <h3><span id="不具合修正"></span><span class="mw-headline" id=".E4.B8.8D.E5.85.B7.E5.90.88.E4.BF.AE.E6.AD.A3">不具合修正</span></h3>
 <ul><li>ウィンドウの高さが低過ぎる場合にゲームなし画面で発生する Lua のエラーを修正。</li>
 <li>標準<a href="love-28.html" title="love.errhand">エラーハンドラ</a>でマウス<a href="Cursor_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Cursor (日本語)">カーソル</a>が初期状態に戻されてしまう不具合を修正。</li>
-<li><a href="love.filesystem-150.html" title="love.filesystem.init (日本語)">love.filesystem.init</a> を呼び出さずに liblove を直接使おうとしたとき <a href="love-191.html" title="love.filesystem (日本語)">love.filesystem</a> 関数が異常終了する不具合を修正。</li>
+<li><a href="love.filesystem-150.html" title="love.filesystem.init (日本語)">love.filesystem.init</a> を呼び出さずに liblove を直接使おうとしたとき <a href="love-116.html" title="love.filesystem (日本語)">love.filesystem</a> 関数が異常終了する不具合を修正。</li>
 <li>Android においてアプリがアクティブでない、およびアプリを再開する時の一時停止処理を修正。</li>
 <li>相対的状態による再生中の Source において古いキャッシュ済みのものではなく渡された値にて <a href="Source_setRelative_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source:setRelative (日本語)">Source:setRelative</a> を設定するよう修正。</li>
 <li><a href="Video_seek_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Video:seek (日本語)">Video:seek</a> または動画再生終了後に動画 復号処理スレッドが異常停止してしまう不具合を修正。</li>
@@ -88,7 +88,7 @@
 <li>BMFont ファイルを読み込み時に対象の文字の幅が 0 または 高さ 0 になってしまう不具合を修正 (例えば、空白文字)。</li>
 <li><a href="love.graphics-226.html" title="love.graphics.newFont (日本語)">love.graphics.newFont</a> へ <a href="FileData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="FileData (日本語)">FileData</a> を渡したときに異常終了する不具合を修正。</li>
 <li>OpenGL ES 2 システムにおいて <a href="Canvas_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Canvas (日本語)">Canvas</a> 有効時に <a href="love.graphics-240.html" title="love.graphics.clear (日本語)">love.graphics.clear</a> (色テーブル) で異常終了する不具合を修正。</li>
-<li><a href="love-247.html" title="love.graphics (日本語)">love.graphics</a> オブジェクトの生成関数がウィンドウ作成前に呼び出された場合に異常終了ではなくエラーになるように修正。</li>
+<li><a href="love-140.html" title="love.graphics (日本語)">love.graphics</a> オブジェクトの生成関数がウィンドウ作成前に呼び出された場合に異常終了ではなくエラーになるように修正。</li>
 <li>一部の Android デバイスにおいてドライバの不具合により全てのオブジェクトが真っ黒に表示されてしまう不具合を修正。</li>
 <li>Windows 環境下における AMD 社製グラフィックスカードでドライバの不具合により <a href="love.graphics-240.html" title="love.graphics.clear (日本語)">love.graphics.clear</a> が全く動作しなかった不具合を修正。</li>
 <li>[[Shader:sendColor (日本語)|Shader:sendColor] において <a href="love.graphics-175.html" title="love.graphics.isGammaCorrect (日本語)">ガンマ補正表示</a>を有効にしている時に sRGB から 線形 RGB に対して間違った透過値で変換していたのを修正。</li>
@@ -244,5 +244,5 @@ Retrieved from "<a dir="ltr" href="../w/indexac67-2.html?title=0.10.1_(%e6%97%a5
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.014","walltime":"0.018","ppvisitednodes":{"value":20,"limit":1000000},"ppgeneratednodes":{"value":54,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240405191922","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/wiki/0.10.1_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:44 GMT -->
+<!-- Mirrored from love2d.org/wiki/0.10.1_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:59:41 GMT -->
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:57 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -112,8 +112,8 @@
 <span class="kr">end</span>
 </pre></div>
 <p><br />
-<code><a href="love-660.html" title="love.draw (日本語)">love.draw</a></code> の清潔さを維持するために、小型のマップを描画するルーチンを関数にして移動することに決定しました。再び、全く印象的なことはありませんが、各列 (y 値) に対して 各行 (x 値) を確認して、 map テーブルを経由します。 <code>map_display_h</code> と <code>map_display_w</code> 変数を変更するだけで、望むだけタイルを描画することができます。あまりにも高過ぎる値を指定すると画面外にタイルの描画を開始してしまい、処理時間および資源の浪費になることに注意してください。 <code>map_x</code> および <code>map_y</code> の値を変更することにより描画される領域の座標を変更することができます。
-</p><p>明白に、 <code><a href="love-660.html" title="love.draw (日本語)">love.draw</a></code> コールバックで <code>draw_map()</code> を呼び出す必要があります。さて、用例を実行すると、画面上に小型のタイルマップが表示されるはずです。今のところはスクロールは全くできませんが、 <code><a href="love-663.html" title="love.keypressed (日本語)">love.keypressed</a></code> コールバックへ下記を追加することで、できるようになります:
+<code><a href="love-303.html" title="love.draw (日本語)">love.draw</a></code> の清潔さを維持するために、小型のマップを描画するルーチンを関数にして移動することに決定しました。再び、全く印象的なことはありませんが、各列 (y 値) に対して 各行 (x 値) を確認して、 map テーブルを経由します。 <code>map_display_h</code> と <code>map_display_w</code> 変数を変更するだけで、望むだけタイルを描画することができます。あまりにも高過ぎる値を指定すると画面外にタイルの描画を開始してしまい、処理時間および資源の浪費になることに注意してください。 <code>map_x</code> および <code>map_y</code> の値を変更することにより描画される領域の座標を変更することができます。
+</p><p>明白に、 <code><a href="love-303.html" title="love.draw (日本語)">love.draw</a></code> コールバックで <code>draw_map()</code> を呼び出す必要があります。さて、用例を実行すると、画面上に小型のタイルマップが表示されるはずです。今のところはスクロールは全くできませんが、 <code><a href="love-306.html" title="love.keypressed (日本語)">love.keypressed</a></code> コールバックへ下記を追加することで、できるようになります:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
    <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;up&#39;</span> <span class="kr">then</span>
@@ -184,7 +184,7 @@
 <a href="../w/indexbcd4.html?title=Tutorial:Tile-based_Scrolling_Functions_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
 <a href="../w/indexa398.html?title=Tutorial:Tile-based_Scrolling_Functions_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (日本語) (page does not exist)">日本語</a>&#160;&#8211;
 <a href="../w/index87d6.html?title=Tutorial:Tile-based_Scrolling_Functions_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
-<a href="../w/index06e1.html?title=Tutorial:Tile-based_Scrolling_Functions_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="../w/index06e1-2.html?title=Tutorial:Tile-based_Scrolling_Functions_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
 <a href="../w/indexa04f.html?title=Tutorial:Tile-based_Scrolling_Functions_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
 <a href="../w/index3a57.html?title=Tutorial:Tile-based_Scrolling_Functions_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Tile-based Scrolling Functions (한국어) (page does not exist)">한국어</a> 
 <br />
@@ -335,5 +335,5 @@ Retrieved from "<a dir="ltr" href="../w/indexe6b4.html?title=Tutorial:Tile-based
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.042","walltime":"0.568","ppvisitednodes":{"value":290,"limit":1000000},"ppgeneratednodes":{"value":703,"limit":1000000},"postexpandincludesize":{"value":4739,"limit":2097152},"templateargumentsize":{"value":2822,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":27704,"limit":5000000},"timingprofile":["100.00%    5.533      1 -total","100.00%    5.533      1 Template:i18n"," 53.73%    2.973     28 Template:Lang"]},"cachereport":{"timestamp":"20240405170100","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:57 GMT -->
 </html>
