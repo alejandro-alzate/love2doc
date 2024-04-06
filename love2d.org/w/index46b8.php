@@ -349,4 +349,115 @@
 	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setEffect">
 		<rdfs:label>love.audio.setEffect</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setEffect"/>
-		
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setEffect"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setEffect</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setMixWithSystem">
+		<rdfs:label>love.audio.setMixWithSystem</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setMixWithSystem"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setMixWithSystem"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setMixWithSystem</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setOrientation">
+		<rdfs:label>love.audio.setOrientation</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setOrientation"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setOrientation"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setOrientation</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setPlaybackDevice">
+		<rdfs:label>love.audio.setPlaybackDevice</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setPlaybackDevice"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setPlaybackDevice"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setPlaybackDevice</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setPosition">
+		<rdfs:label>love.audio.setPosition</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setPosition"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setPosition"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setPosition</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setVelocity">
+		<rdfs:label>love.audio.setVelocity</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setVelocity"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setVelocity"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setVelocity</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.setVolume">
+		<rdfs:label>love.audio.setVolume</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.setVolume"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.setVolume"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.setVolume</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio.stop">
+		<rdfs:label>love.audio.stop</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio.stop"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio.stop"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio.stop</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love.audio"/>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.audio_-28Português-29">
+		<rdfs:label>love.audio (Português)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.audio_-28Português-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.audio_-28Português-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<property:DisplayName rdf:resource="&wiki;love.audio"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.audio (Português)</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3Aparent">
+		<rdfs:label>parent</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3Aparent"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3Aparent"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADisplayName">
+		<rdfs:label>DisplayName</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Property-3ADisplayName"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Property-3ADisplayName"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</swivt:wikiNamespace>
+		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisplayName</swivt:wikiPageSortKey>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AModules" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADescription" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ASince" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AHas_query" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
+	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
+	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#masterPage" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_depth" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_format" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_size" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_string" />
+	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
+</rdf:RDF>
