@@ -19,50 +19,50 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Category-3ATutorials_-28Polski-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T16:20:14+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Category-3ATutorials_-28Svenska-29">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T16:20:35+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29">
-		<rdfs:label>Tutorials (Polski)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Category-3ATutorials_-28Polski-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Category-3ATutorials_-28Polski-29"/>
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29">
+		<rdfs:label>Tutorials (Svenska)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Category-3ATutorials_-28Svenska-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Category-3ATutorials_-28Svenska-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Has_query rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29-23_QUERY7cc808f1722c35d19c80bff4a06ab6be"/>
-		<property:Has_query rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29-23_QUERY3e54565b4484a76fe0bf31ebe63b3ead"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-08T06:06:22Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458856.7544213</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Polski)</swivt:wikiPageSortKey>
-		<rdfs:subClassOf rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Polski-29"/>
+		<property:Has_query rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29-23_QUERY3e54565b4484a76fe0bf31ebe63b3ead"/>
+		<property:Has_query rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29-23_QUERY3b28616468752b756a5756bd26f89add"/>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-06-07T22:07:41Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455720.4220023</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Svenska)</swivt:wikiPageSortKey>
+		<rdfs:subClassOf rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Svenska-29"/>
 	</owl:Class>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29-23_QUERY7cc808f1722c35d19c80bff4a06ab6be">
-		<swivt:masterPage rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29"/>
-		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</swivt:wikiNamespace>
-		<property:Query_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</property:Query_depth>
-		<property:Query_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">table</property:Query_format>
-		<property:Query_size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</property:Query_size>
-		<property:Query_string rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[Category:Tutorials (Polski)]]</property:Query_string>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Polski)# QUERY7cc808f1722c35d19c80bff4a06ab6be</swivt:wikiPageSortKey>
-	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29-23_QUERY3e54565b4484a76fe0bf31ebe63b3ead">
-		<swivt:masterPage rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29-23_QUERY3e54565b4484a76fe0bf31ebe63b3ead">
+		<swivt:masterPage rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</swivt:wikiNamespace>
 		<property:Query_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</property:Query_depth>
 		<property:Query_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">table</property:Query_format>
 		<property:Query_size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</property:Query_size>
 		<property:Query_string rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[Category:Tutorials]]</property:Query_string>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Polski)# QUERY3e54565b4484a76fe0bf31ebe63b3ead</swivt:wikiPageSortKey>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Svenska)# QUERY3e54565b4484a76fe0bf31ebe63b3ead</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorials_-28Polski-29">
-		<rdfs:label>Tutorials (Polski)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorials_-28Polski-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorials_-28Polski-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29-23_QUERY3b28616468752b756a5756bd26f89add">
+		<swivt:masterPage rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29"/>
+		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</swivt:wikiNamespace>
+		<property:Query_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</property:Query_depth>
+		<property:Query_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">table</property:Query_format>
+		<property:Query_size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</property:Query_size>
+		<property:Query_string rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[[Category:Tutorials (Svenska)]]</property:Query_string>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Svenska)# QUERY3b28616468752b756a5756bd26f89add</swivt:wikiPageSortKey>
+	</swivt:Subject>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorials_-28Svenska-29">
+		<rdfs:label>Tutorials (Svenska)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorials_-28Svenska-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorials_-28Svenska-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29"/>
-		<owl:sameAs rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Polski-29"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Polski)</swivt:wikiPageSortKey>
+		<swivt:redirectsTo rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29"/>
+		<owl:sameAs rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ATutorials_-28Svenska-29"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tutorials (Svenska)</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
@@ -72,7 +72,7 @@
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
-	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Polski-29" />
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE_-28Svenska-29" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#masterPage" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_depth" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AQuery_format" />
