@@ -31,7 +31,25 @@ When contributing do **not** bother in editing README.md directly because is cre
 Being run every now and then
 ]]
 
-local aprilFoolsContent =
+local aprilFoolsContent = [[yeah intensionaw typo iws a wowd gawme of wöve2d awnd documentation now getting sewious,
+Hewe uwu cawn find a copy of wöve2d wiki easy fow cwone.
+Feew fwee tuwu cwone iwt tuwu youw machine.
+ 
+tuwu duwu so, use the fowwowing command:
+```bash
+git cwone git@github.com:awejandwo-awzate/wove2doc.git
+```
+ow juwst cwick thawt juicy gween button named "code" then in the undewwhewming gwey "downwoad zip" button.
+ 
+Unzip if uwu downwoaded iwt via zip
+awnd open index.htmw
+Awnd off tuwu the waces!
+
+Happy apwiw foows awnd coding evewybody!
+
+whewn contwibuting duwu **not** bothew in editing weadme.md diwectwy because iws cweated dinamicawwy by the `update_weadme.wua` scwipt
+being wun evewy now awnd then
+]]
 
 --The workflow installs it so don't even bother.
 --os.execute("sudo apt-get update\nsudo apt-get install -y curl grep")
