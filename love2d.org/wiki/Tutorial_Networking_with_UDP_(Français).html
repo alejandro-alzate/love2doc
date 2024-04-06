@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:Networking with UDP (Français) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Networking_with_UDP_(Français)","wgTitle":"Networking with UDP (Français)","wgCurRevisionId":25887,"wgRevisionId":25887,"wgArticleId":7349,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials (Français)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Networking_with_UDP_(Français)","wgRelevantArticleId":7349,"wgRequestId":"b1ad7b24faddde60f903401c","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Networking with UDP (Français)" href="../w/indexf69c.html?title=Special:ExportRDF/Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Networking_with_UDP_Français rootpage-Tutorial_Networking_with_UDP_Français skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="Tutorial_Networking_with_UDP_(Fran%c3%a7ais).html">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="../w/indexb010.html?title=Tutorial_talk:Networking_with_UDP_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/indexd909.html?title=Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/indexc4eb.html?title=Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:Networking with UDP (Français)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>Traduction en cours, vous êtes les bienvenus pour y participer
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><p>Ceci est une introduction au réseau en utilisant <i>Luasocket</i>. De vous enfuyez pas&#160;! Luasocket est compilé dans LÖVE, et il vaudra le coup, lorsque vous vous y serez habitué.
+</p><p>Ce tutoriel  assume que vous êtes familier avec les fonctions de rappel voir <a href="Tutorial_Callback_Functions_(Fran%c3%a7ais).html" title="Tutorial:Callback Functions (Français)">Tutoriel:Fonctions de rappel</a>, et Lua en général. Le réseau devrait être considéré comme un sujet modérément avancé.
+</p><p>Il y a deux types de sockets (chaussettes de connexion) basiques, et nous allons couvrir UDP dans ce tutoriel. les échanges UDP sont orienté message (par opposition à TCP qui est orienté flux), cela signifie qu'il est orienté autour de messages distincts (et également indépendants) appelés des «&#160;<i>datagrammes</i>&#160;» (<i>datagrams</i>).
+</p><p>Dans le long parcours, une compréhension solide du fonctionnement du réseau est payante, mais pour le moment laissons nous craquer.&#160;:3
+Nous allons commencer par le client LÖVE, puis poursuivre par un serveur indépendant écrit en Lua.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Le_client"><span class="tocnumber">1</span> <span class="toctext">Le client</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#love.load"><span class="tocnumber">1.1</span> <span class="toctext">love.load</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#love.update"><span class="tocnumber">1.2</span> <span class="toctext">love.update</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#love.draw"><span class="tocnumber">1.3</span> <span class="toctext">love.draw</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#The_Server"><span class="tocnumber">2</span> <span class="toctext">The Server</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Conclusion"><span class="tocnumber">3</span> <span class="toctext">Conclusion</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Voir_.C3.A9galement"><span class="tocnumber">4</span> <span class="toctext">Voir également</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Autres_langues"><span class="tocnumber">5</span> <span class="toctext">Autres langues</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Le_client">Le client</span></h2>
+<p>Pour commencer, nous avons besoin de demander la bibliothèque «&#160;socket&#160;». <i>socket</i> fournit les fonctionnalités réseau de bas niveau.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">socket</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;socket&quot;</span>
+
+<span class="c1">-- L&#39;adresse et port du serveur</span>
+<span class="kd">local</span> <span class="n">address</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">12345</span>
+
+<span class="kd">local</span> <span class="n">entity</span> <span class="c1">-- Une entité est ce que nous contrôlons</span>
+<span class="kd">local</span> <span class="n">updaterate</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1">-- Temps d&#39;attente en secondes, avant de demander une mise à jour</span>
+
+<span class="kd">local</span> <span class="n">world</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- L&#39;état Monde vide</span>
+<span class="kd">local</span> <span class="n">t</span>
+</pre></div>
+<h3><span class="mw-headline" id="love.load"><a href="love-621.html" title="love.load (Français)">love.load</a></span></h3>
+<p>Premièrement, nous avons besoin d'un socket UDP, depuis lequel nous ferons toutes nos opérations réseau.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="n">udp</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">udp</span><span class="p">()</span>
+</pre></div>
+<p>Habituellement, un socket lit des blocs (provoquant l'arrêt et l'attente de votre jeu) jusqu'à l'obtention des données. Cela ne nous convientpas, nous lui disons de ne pas faire cela en réglant le temps avant expiration (timeout) à zéro.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="n">udp</span><span class="p">:</span><span class="n">settimeout</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+<p>Contrairement au serveur, nous allons uniquement échanger avec une seule machine, nous allons donc «&#160;connecter&#160;» ce socket à l'adresse et port du serveur en utilisant <i>udp:setpeername</i>.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>UDP est un protocole sans connexion, il s'agit ici d'un commodité fournie par la bibliothèque socket. Il ne change pas les «&#160;<i>bits sur le câble</i>&#160;», et nous pouvons d'ailleurs changer/supprimer cela à n'importe quel moment.
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="n">udp</span><span class="p">:</span><span class="n">setpeername</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</pre></div>
+<p>Semons le <a href="http://en.wikipedia.org/wiki/fr:Générateur_de_nombres_pseudo-aléatoires" class="extiw" title="wikipedia:fr:Générateur de nombres pseudo-aléatoires">générateur de nombres pseudo-aléatoires</a> (PRNG), de façon à ne pas obtenir les mêmes nombres à chaque fois. L'entité (<i>entity</i>) sera ce que nous contrôlons, dans l'interêt de ce tutoriel.
+C'est simplement un nombre, mais nous allons le faire. Nous utilisons simplement la fonction <i>math.random</i> (math.hasard) qui nous donne une identité raisonnablement unique avec peu d'éfforts.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>Un nombre aléatoire pour s'identifier soi-même n'est pas une très bonne méthode de fonctionnement, mais les méthodes correctes vont au delà du but de cet article.)
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="nb">math.randomseed</span><span class="p">(</span><span class="nb">os.time</span><span class="p">())</span> 
+	<span class="n">entity</span> <span class="o">=</span> <span class="nb">tostring</span><span class="p">(</span><span class="nb">math.random</span><span class="p">(</span><span class="mi">99999</span><span class="p">))</span>
+</pre></div>
+<p>Nous faisons ici, notre premier action réelle de réseau&#160;: Nous créeons une chaîne de caractères contenant les données que nous voulons envoyer (en utilisant <i>string.format</i>) puis nous les envoyons en utilisant <i>udp.send</i>.
+Comme nous avons utilisé <i>udp:setpeername</i> précédemment, nous n'avons même pas besoin de spécifier où nous l'envoyons.
+</p><p>C'est... tout, réellement. Le reste ne sert qu'à placer ce contexte et l'utilisation pratique.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="kd">local</span> <span class="n">dg</span> <span class="o">=</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;%s %s %d %d&quot;</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;at&#39;</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+	<span class="n">udp</span><span class="p">:</span><span class="n">send</span><span class="p">(</span><span class="n">dg</span><span class="p">)</span> <span class="c1">-- La ligne magique en question.</span>
+	
+	<span class="c1">-- t n&#39;est qu&#39;une variable que nous utilisons pour nous aider avec la fréquence de mise à jour dans love.update.</span>
+	<span class="n">t</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">-- (re)set t to 0</span>
+<span class="kr">end</span>
+</pre></div>
+<h3><span class="mw-headline" id="love.update"><a href="love-622.html" title="love.update (Français)">love.update</a></span></h3>
+<p>Nous commençons avec un peu de non-sens en impliquant <i>t</i> que nous avons déclaré plus tôt&#160;;
+Il est <b>très facile</b> de saturer complétement une connexion réseau si nous ne sommes pas attentif aux paquets que nous envoyons (ou demandons&#160;!), nous mettons donc des barrières  hedge à nos chances en limitant la fréquence à laquelle nous envoyons (ou demandons) des mises à jour.
+</p><p><i>(Pour information, dix fois par seconde est considéré comme bon pour la majortié des jeux normaux (incluant de nombreux <a href="http://en.wikipedia.org/wiki/fr:Jeu_en_ligne_massivement_multijoueur" class="extiw" title="wikipedia:fr:Jeu en ligne massivement multijoueur">MMOs</a>), et vous ne devriez jamais vraiment avoir besoin de plus que 30 mises à jour par seconde, même pour les jeu avec déplacements rapides.)</i>
+</p><p>Nous pourrions envoyer des mises à jour pour chaque petit mouvement, mais nous allons ici consolider la valeur de la dernière mise à jour dans un seul paquet, réduisant drastiquement notre utilisation de la bande passante.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">deltatime</span><span class="p">)</span>
+	<span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">deltatime</span> <span class="c1">-- Augmente t par le delta (différence) temps</span>
+	
+	<span class="kr">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="n">updaterate</span> <span class="kr">then</span>
+		<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+		<span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="kr">then</span> 	<span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="p">(</span><span class="mi">20</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="kr">end</span>
+		<span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)</span> <span class="kr">then</span> 	<span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="mi">20</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="kr">end</span>
+		<span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span> <span class="kr">then</span> 	<span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="mi">20</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="kr">end</span>
+		<span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)</span> <span class="kr">then</span> 	<span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="mi">20</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="kr">end</span>
+</pre></div>
+<p>De nous vous, nous préparons un paquet <i>payload</i> en utilisant string.format, puis l'envoyons sur son chemin à l'aide de udp:send. C'est la mise à jour de déplacement mentionné au dessus.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>		<span class="kd">local</span> <span class="n">dg</span> <span class="o">=</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;%s %s %f %f&quot;</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;move&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+		<span class="n">udp</span><span class="p">:</span><span class="n">send</span><span class="p">(</span><span class="n">dg</span><span class="p">)</span>
+</pre></div>
+<p>And again! This is a request that the server send us an update for the world state.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>In most designs you don't request world-state updates, you just get them sent to you periodically.
+<p>There's various reasons for this, but there's one <b>BIG</b> one you will have to solemnly take note of: "anti-griefing". World-updates are probably one of biggest things the average game-server will pump out on a regular basis, and griefing with forged update requests would be simple effective.
+So they just don't support update requests, instead giving them out when they feel its appropriate
+</p>
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>		<span class="kd">local</span> <span class="n">dg</span> <span class="o">=</span> <span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;%s %s $&quot;</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="s1">&#39;update&#39;</span><span class="p">)</span>
+		<span class="n">udp</span><span class="p">:</span><span class="n">send</span><span class="p">(</span><span class="n">dg</span><span class="p">)</span>
+
+		<span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">-</span><span class="n">updaterate</span> <span class="c1">-- set t for the next round</span>
+	<span class="kr">end</span>
+</pre></div>
+<p><br />	
+There could well be more than one message waiting for us, so we'll loop until we run out!
+</p><p>And here is something new, the much anticipated other end of <code>udp:send</code>!
+<code>udp:receive</code> will return a waiting packet (or nil, and an error message).
+<i>data</i> is a string, the <b>payload</b> of the far-end's <i>udp:send</i>. We can deal with it the same ways we could deal with any other string in Lua (needless to  say, getting familiar with Lua's <a rel="nofollow" class="external text" href="http://www.lua.org/manual/5.1/manual.html#5.4">string handling functions</a> is a must.)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="kr">repeat</span>
+		<span class="n">data</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">udp</span><span class="p">:</span><span class="n">receive</span><span class="p">()</span>
+
+		<span class="kr">if</span> <span class="n">data</span> <span class="kr">then</span> <span class="c1">-- you remember, right? that all values in lua evaluate as true, save nil and false?</span>
+</pre></div>
+<p><code>string.match</code> is our friend here, its part of <i>string.*</i>, and <i>data</i> is (or should be!) a <b>string</b>. That funky set of characters bares some explanation, though. <i>(Which I haven't gotten to, but I'll leave you with a link to <a rel="nofollow" class="external text" href="http://www.lua.org/manual/5.1/manual.html#5.4.1">5.4.1:Patterns</a>)</i>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>			<span class="n">ent</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">parms</span> <span class="o">=</span> <span class="n">data</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^(%S*) (%S*) (.*)&quot;</span><span class="p">)</span>
+			<span class="kr">if</span> <span class="n">cmd</span> <span class="o">==</span> <span class="s1">&#39;at&#39;</span> <span class="kr">then</span>
+				<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">parms</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^(%-?[%d.e]*) (%-?[%d.e]*)$&quot;</span><span class="p">)</span>
+</pre></div>
+<p>Confirming that the values you received are what you expect is important, since you never known who or what is on the other end (or in between...). Since this is just an example, we'll just use asserts.
+</p><p>And don't forget, even if you matched a "number", the result is still a <b>string</b>! Thankfully conversion is easy in Lua using <code>tonumber()</code>.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>				<span class="nb">assert</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>
+				<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+				<span class="n">world</span><span class="p">[</span><span class="n">ent</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">}</span>
+</pre></div>
+<p>This case shouldn't trigger often, but its always a good idea to check (and log!) any unexpected messages and events. It can help you find bugs in your code...or people trying to hack the server.
+Never forget, you can not trust the client!
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>			<span class="kr">else</span>
+				<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;unrecognised command:&quot;</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+			<span class="kr">end</span>
+</pre></div>
+<p>If <i>data</i> was <code>nil</code>, then <i>msg</i> will contain a short description of the problem (which are also double as error IDs...).
+The most common will be <code>'timeout'</code>, since we <code>socket:settimeout()</code> to zero, any time there isn't data <i>waiting</i> for us, it'll <code>'timeout'</code>. But we should check to see if its a <i>different</i> error, and act accordingly.
+In this case we don't even try to save ourselves, we just error out.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>		<span class="kr">elseif</span> <span class="n">msg</span> <span class="o">~=</span> <span class="s1">&#39;timeout&#39;</span> <span class="kr">then</span> 
+			<span class="nb">error</span><span class="p">(</span><span class="s2">&quot;Network error: &quot;</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+		<span class="kr">end</span>
+	<span class="kr">until</span> <span class="ow">not</span> <span class="n">data</span>
+<span class="kr">end</span>
+</pre></div>
+<h3><span class="mw-headline" id="love.draw">love.draw</span></h3>
+<p>Draw is stunningly simple, since its not really the meat of this example.
+It just loops over the <i>world</i> table, and print the name (key) of everything in their, at its own stored co-ords.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	<span class="c1">-- pretty simple, we </span>
+	<span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">world</span><span class="p">)</span> <span class="kr">do</span>
+		<span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+	<span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>And that's the end of the Client code.
+</p>
+<h2><span class="mw-headline" id="The_Server">The Server</span></h2>
+<p>The server is a little different, for starters its a stand-alone Lua program: it doesn't run in LÖVE.
+</p><p>Once again we begin by <code>require</code>ing socket, and creating  a UDP socket.
+</p><p><i>(LuaSocket </i>isn't<i> compiled into Lua by default. If you are on Windows just get the all-in-one <a rel="nofollow" class="external text" href="http://code.google.com/p/luaforwindows/">Lua for Windows</a> installer, I wouldn't know for Mac, and Linux? you guys know what to do&#160;:3)</i>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">socket</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;socket&quot;</span>
+<span class="kd">local</span> <span class="n">udp</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">udp</span><span class="p">()</span>
+</pre></div>
+<p>And once again, we set the <code>'timeout'</code> to zero.
+</p><p>But next we do something a little different; unlike the client, the server has to be specific about where its 'bound', or the poor clients will never find it. Thus while we can happily let the client auto-bind to whatever it likes, we have to tell the server to bind to something known.
+</p><p>The first part is which <i>interface</i> we should bind to, <code>'*'</code> basically means "all of them". <i>port</i> is simple, the system maintains a list of up to 65535 (!) "ports" ... really just numbers.
+</p><p>Point is that if you send to a particular port, then only things "listening" to that port will be able to receive it,  and likewise you can only read data sent to ports you are listening too. 
+</p><p>Generally speaking, if an address is which machine you want to talk to, then a port is what program on that machine you want to talk to.
+</p>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>On some operating systems, ports between <i>0</i> and <i>1024</i> are "reserved for privileged processes". Its a security precaution for those system. Generally speaking, just not using ports in that range avoids a lot of problems
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">udp</span><span class="p">:</span><span class="n">settimeout</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">udp</span><span class="p">:</span><span class="n">setsockname</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="mi">12345</span><span class="p">)</span>
+</pre></div>
+<p>We declare a whole bunch of local variables that we'll be using the in main server loop below. you probably recognise some of them from the client example, but you are also probably wondering what's with the fruity names, <i>msg_or_ip</i>? <i>port_or_nil</i>?
+</p><p>Well, we're using a slightly different function this time, you'll see when we get there.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">world</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- the empty world-state</span>
+<span class="kd">local</span> <span class="n">data</span><span class="p">,</span> <span class="n">msg_or_ip</span><span class="p">,</span> <span class="n">port_or_nil</span>
+<span class="kd">local</span> <span class="n">entity</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">parms</span>
+</pre></div>
+<p>Indefinite loops are probably not something you are used to if you only know love, but they are quite common. And in fact love has one at its heart, you just don't see it. Regardless, we'll be needing one for our server. And this little variable lets us <i>stop</i> it&#160;:3
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">running</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="nb">print</span> <span class="s2">&quot;Beginning server loop.&quot;</span>
+<span class="kr">while</span> <span class="n">running</span> <span class="kr">do</span>
+</pre></div>
+<p>This next line looks familiar, I'm sure, but we're using <code>udp:receivefrom()</code> this time. its similar to receive, but returns the data, sender's ip address, and the sender's port (which you'll hopefully recognise  as the two things we need to send messages to someone). We didn't have to do this in the client example because we just bound the socket to the server, but that also ignores messages from  sources other than what we've bound to, which obviously won't do at all as a server.
+</p><p><i>(Strictly, we could have just used <code>udp:receivefrom()</code> (and its counterpart, <code>udp:sendto()</code>) in the client. there's nothing special about the functions to prevent it, however <code>send</code>/<code>receive</code> are convenient and perform slightly better.)</i>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="n">data</span><span class="p">,</span> <span class="n">msg_or_ip</span><span class="p">,</span> <span class="n">port_or_nil</span> <span class="o">=</span> <span class="n">udp</span><span class="p">:</span><span class="n">receivefrom</span><span class="p">()</span>
+	<span class="kr">if</span> <span class="n">data</span> <span class="kr">then</span>
+		<span class="c1">-- more of these funky match paterns!</span>
+		<span class="n">entity</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">parms</span> <span class="o">=</span> <span class="n">data</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^(%S*) (%S*) (.*)&quot;</span><span class="p">)</span>
+</pre></div>
+<p>The server implements a few more commands than the client does, the 'move' command updates the position of an entity <i>relative to its current position</i>, 'at' simply sets an entity's location (which we saw in the client), then there's <i>update</i>, which loops through the server's world-state and sends 'at' commands back to the client. and finally there's 'quit', which kills the server.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>		<span class="kr">if</span> <span class="n">cmd</span> <span class="o">==</span> <span class="s1">&#39;move&#39;</span> <span class="kr">then</span>
+			<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">parms</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^(%-?[%d.e]*) (%-?[%d.e]*)$&quot;</span><span class="p">)</span>
+			<span class="nb">assert</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- validation is better, but asserts will serve.</span>
+			<span class="c1">-- don&#39;t forget, even if you matched a &quot;number&quot;, the result is still a string!</span>
+			<span class="c1">-- thankfully conversion is easy in lua.</span>
+			<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+			<span class="c1">-- and finally we stash it away</span>
+			<span class="kd">local</span> <span class="n">ent</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="n">entity</span><span class="p">]</span> <span class="ow">or</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">}</span>
+			<span class="n">world</span><span class="p">[</span><span class="n">entity</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">ent</span><span class="p">.</span><span class="n">x</span><span class="o">+</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">ent</span><span class="p">.</span><span class="n">y</span><span class="o">+</span><span class="n">y</span><span class="p">}</span>
+		<span class="kr">elseif</span> <span class="n">cmd</span> <span class="o">==</span> <span class="s1">&#39;at&#39;</span> <span class="kr">then</span>
+			<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">parms</span><span class="p">:</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^(%-?[%d.e]*) (%-?[%d.e]*)$&quot;</span><span class="p">)</span>
+			<span class="nb">assert</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span> <span class="c1">-- validation is better, but asserts will serve.</span>
+			<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+			<span class="n">world</span><span class="p">[</span><span class="n">entity</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">}</span>
+		<span class="kr">elseif</span> <span class="n">cmd</span> <span class="o">==</span> <span class="s1">&#39;update&#39;</span> <span class="kr">then</span>
+			<span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">world</span><span class="p">)</span> <span class="kr">do</span>
+				<span class="n">udp</span><span class="p">:</span><span class="n">sendto</span><span class="p">(</span><span class="nb">string.format</span><span class="p">(</span><span class="s2">&quot;%s %s %d %d&quot;</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="s1">&#39;at&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="p">),</span> <span class="n">msg_or_ip</span><span class="p">,</span>  <span class="n">port_or_nil</span><span class="p">)</span>
+			<span class="kr">end</span>
+		<span class="kr">elseif</span> <span class="n">cmd</span> <span class="o">==</span> <span class="s1">&#39;quit&#39;</span> <span class="kr">then</span>
+			<span class="n">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</pre></div>
+<p>There's nothing much left to see, other than the <i>socket.sleep' call, which helps reduce the CPU load of the server.</i>
+Generally, people seem to prefer to just rely on blocking behaviour (which we turned off) to keep CPU usage down, but its nice to know how do this without blocking.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>		<span class="kr">else</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;unrecognised command:&quot;</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+		<span class="kr">end</span>
+	<span class="kr">elseif</span> <span class="n">msg_or_ip</span> <span class="o">~=</span> <span class="s1">&#39;timeout&#39;</span> <span class="kr">then</span>
+		<span class="nb">error</span><span class="p">(</span><span class="s2">&quot;Unknown network error: &quot;</span><span class="o">..</span><span class="nb">tostring</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+	<span class="kr">end</span>
+	
+	<span class="n">socket</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span> <span class="s2">&quot;Thank you.&quot;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Conclusion">Conclusion</span></h2>
+<ul><li><a href="Tutorial_Networking_with_UDP-TheClient.html" title="Tutorial:Networking with UDP-TheClient"> The Complete Client Source</a></li>
+<li><a href="Tutorial_Networking_with_UDP-TheServer.html" title="Tutorial:Networking with UDP-TheServer"> The Complete Server Source</a></li></ul>
+<p><a href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" class="extiw" title="wikipedia:User Datagram Protocol">UDP</a> is simple in its usage, but also relies on the developer to get a lot more right, since UDP doesn't make any assurances about the order that datagrams arrive, or even that they arrive at all. These are things that you obviously have to take into account when designing your protocol.
+</p><p>Additionally UDP datagrams have limited sizes; the luasocket Documentation specifically notes that it doesn't support anything over 8k, and frankly you should assume much less.
+</p>
+<h2><span id="Voir_également"></span><span class="mw-headline" id="Voir_.C3.A9galement">Voir également</span></h2>
+<ul><li><a href="../w/index354d.html?title=Networking_with_TCP_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" class="new" title="Networking with TCP (Français) (page does not exist)">Networking with TCP (Français)</a></li>
+<li><a rel="nofollow" class="external text" href="http://w3.impa.br/~diego/software/luasocket/reference.html">luaSocket Reference</a></li>
+<li><a rel="nofollow" class="external text" href="http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html">Beej's Networking Tutorial</a></li></ul>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Autres_langues">Autres langues</span></h2>
+<div class="i18n">
+<p><a href="../w/indexcd73.html?title=Tutorial:Networking_with_UDP_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="../w/index510c.html?title=Tutorial:Networking_with_UDP_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a href="Tutorial_Networking_with_UDP.html" title="Tutorial:Networking with UDP">English</a>&#160;&#8211; 
+<a href="../w/indexf391.html?title=Tutorial:Networking_with_UDP_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a class="mw-selflink selflink">Français</a>&#160;&#8211;
+<a href="../w/index093c.html?title=Tutorial:Networking_with_UDP_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="../w/indexc326.html?title=Tutorial:Networking_with_UDP_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="../w/index7ca7.html?title=Tutorial:Networking_with_UDP_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="../w/indexefac.html?title=Tutorial:Networking_with_UDP_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="../w/indexb24f.html?title=Tutorial:Networking_with_UDP_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="../w/index58b8.html?title=Tutorial:Networking_with_UDP_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="../w/index301b.html?title=Tutorial:Networking_with_UDP_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="../w/indexc4cd.html?title=Tutorial:Networking_with_UDP_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="../w/indexe609.html?title=Tutorial:Networking_with_UDP_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="../w/index61d9.html?title=Tutorial:Networking_with_UDP_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="../w/indexf537.html?title=Tutorial:Networking_with_UDP_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="../w/index520e.html?title=Tutorial:Networking_with_UDP_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="../w/index4f01.html?title=Tutorial:Networking_with_UDP_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="../w/indexa085.html?title=Tutorial:Networking_with_UDP_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="../w/indexfc68.html?title=Tutorial:Networking_with_UDP_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="../w/index9d16.html?title=Tutorial:Networking_with_UDP_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Русский) (page does not exist)">Русский</a>&#160;&#8211;
+<a href="../w/index9283.html?title=Tutorial:Networking_with_UDP_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="../w/indexe0a2.html?title=Tutorial:Networking_with_UDP_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="../w/index6266-2.html?title=Tutorial:Networking_with_UDP_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="../w/index2fd9.html?title=Tutorial:Networking_with_UDP_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="Tutorial_Networking_with_UDP_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Networking with UDP (日本語)">日本語</a>&#160;&#8211;
+<a href="../w/indexfcef.html?title=Tutorial:Networking_with_UDP_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="../w/index0ac2.html?title=Tutorial:Networking_with_UDP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="../w/index43ae.html?title=Tutorial:Networking_with_UDP_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="../w/index8630-2.html?title=Tutorial:Networking_with_UDP_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Networking with UDP (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240405211029
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.076 seconds
+Real time usage: 2.380 seconds
+Preprocessor visited node count: 501/1000000
+Preprocessor generated node count: 1199/1000000
+Post‐expand include size: 6369/2097152 bytes
+Template argument size: 3366/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 21992/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2342.827      1 -total
+  0.25%    5.885      1 Template:i18n
+  0.14%    3.183     28 Template:Lang
+  0.06%    1.308      2 Template:notice
+  0.05%    1.072      3 Template:notice_(Français)
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:7349-0!canonical and timestamp 20240405211027 and revision id 25887
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/index8f2c.html?title=Tutorial:Networking_with_UDP_(Fran%c3%a7ais)&amp;oldid=25887">http://love2d.org/w/index.php?title=Tutorial:Networking_with_UDP_(Français)&amp;oldid=25887</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Tutorials_(Fran%c3%a7ais).html" title="Category:Tutorials (Français)">Tutorials (Français)</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/index1bb7.html?title=Special:UserLogin&amp;returnto=Tutorial%3ANetworking+with+UDP+%28Fran%C3%A7ais%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Tutorial_Networking_with_UDP_(Fran%c3%a7ais).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Tutorial_Networking_with_UDP_(Fran%c3%a7ais).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/indexada9.html?title=Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index3ec9-2.html?title=Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;oldid=25887" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/indexace4-2.html?title=Tutorial:Networking_with_UDP_(Fran%C3%A7ais)&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 31 December 2020, at 01:03.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.076","walltime":"2.380","ppvisitednodes":{"value":501,"limit":1000000},"ppgeneratednodes":{"value":1199,"limit":1000000},"postexpandincludesize":{"value":6369,"limit":2097152},"templateargumentsize":{"value":3366,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":21992,"limit":5000000},"timingprofile":["100.00% 2342.827      1 -total","  0.25%    5.885      1 Template:i18n","  0.14%    3.183     28 Template:Lang","  0.06%    1.308      2 Template:notice","  0.05%    1.072      3 Template:notice_(Français)"]},"cachereport":{"timestamp":"20240405211029","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":43});});</script></body>
+<!-- Mirrored from love2d.org/wiki/Tutorial:Networking_with_UDP_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:55:01 GMT -->
+</html>
