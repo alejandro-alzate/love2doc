@@ -5,6 +5,14 @@ local function readAll(file)
 	--print(file, content)
 	return content
 end
+function isAprilFoolsDay()
+	local currentDate = os.date("*t")
+	if currentDate.month == 4 and currentDate.day == 1 then
+		return true
+	else
+		return false
+	end
+end
 
 local title = "# LÖVE2DOC"
 local localbadge = "[![LOVE](https://img.shields.io/badge/Local_L%%C3%%96VE-%s-EA316E.svg?style=flat-square)](http://love2d.org/)"
@@ -50,6 +58,8 @@ Happy apwiw foows awnd coding evewybody!
 whewn contwibuting duwu **not** bothew in editing weadme.md diwectwy because iws cweated dinamicawwy by the `update_weadme.wua` scwipt
 being wun evewy now awnd then
 ]]
+
+if isAprilFoolsDay() or true then content = aprilFoolsContent end
 
 --The workflow installs it so don't even bother.
 --os.execute("sudo apt-get update\nsudo apt-get install -y curl grep")
