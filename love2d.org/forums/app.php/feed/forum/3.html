@@ -5,11 +5,26 @@
 	<title>LÖVE</title>
 	
 	<link href="https://love2d.org/forums/index.php" />
-	<updated>2024-04-02T17:09:44+00:00</updated>
+	<updated>2024-04-04T00:37:11+00:00</updated>
 
 	<author><name><![CDATA[LÖVE]]></name></author>
 	<id>https://love2d.org/forums/app.php/feed/forum/3</id>
 
+		<entry>
+		<author><name><![CDATA[kev30]]></name></author>
+		<updated>2024-04-04T00:37:11+00:00</updated>
+
+		<published>2024-04-04T00:37:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259168#p259168</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259168#p259168"/>
+		<title type="html"><![CDATA[General • Re: LÖVE 11.5 released!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259168#p259168"><![CDATA[
+hello i am new(bie) i have dl love 11.5 and start him no problem here but when a want  start main.lua "hello world" text, i have this error: <br><br>Error<br><br>[love "boot.lua"]:328: No code to run<br>Your game might be packaged incorrectly.<br>Make sure main.lua is at the top level of the zip.<br><br><br>Traceback<br><br>[love "callbacks.lua"]:228: in function 'handler'<br>[C]: in function 'error'<br>[C]: in function 'xpcall'<br>[C]: in function 'xpcall'<br><br>i have also test whit a game ArnesBreakout_v23 and if i use folder (text) he don"t work (same error 328) but if a use file in .love he work<br><br>if you have a solution to my problem, will be fine <br>best regards<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274161">kev30</a> — Thu Apr 04, 2024 12:37 am</p><hr />
+]]></content>
+	</entry>
 		<entry>
 		<author><name><![CDATA[麻猫和黄猫]]></name></author>
 		<updated>2024-04-02T17:09:44+00:00</updated>
@@ -368,21 +383,6 @@ You may do as you wish. Personally as someone whose project is included in many 
 		
 		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259041#p259041"><![CDATA[
 <blockquote class="uncited"><div>We don't claim this. love 12 is not going to be backwards-compatible with code written for love 11.<br><br>Patch versions (e.g. love 11.4 to 11.5) generally are, but sometimes your game might rely on buggy or implementation-defined behaviour from a specific patch version as well.</div></blockquote>Funny, I found the topic where I got that misconception from and you already answered my follow-up question there 9 years ago. For what it's worth, I recently ported a game from 0.8.0 to 11.0 and it works fine. I guess it ought to, I didn't realize the first stable Love version is also the newest.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=269454">reverent.lapwing</a> — Sun Mar 17, 2024 3:32 pm</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[slime]]></name></author>
-		<updated>2024-03-17T15:19:26+00:00</updated>
-
-		<published>2024-03-17T15:19:26+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259040#p259040</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259040#p259040"/>
-		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259040#p259040"><![CDATA[
-<blockquote class="uncited"><div>In the case of distributions, their packaging system has a dependencies feature designed to address exactly that. It doesn't rely on a random version of the runtime that the user would have installed; it specifies which runtime version is needed for a certain game package, and it would pull that version.</div></blockquote>It'd need to provide the exact same thing as a (perhaps unpacked) appimage of love at that point, right? Since you'd also want all of love's dependencies to be the version you made your game for as well otherwise you'll run into similar problems.<br><br>As an example, love 11.5 ships with SDL 2.28.5. I've had a few people using love through a package manager report bugs to me recently that it takes a long time to start up. As it turns out this is a regression in SDL 2.30's joystick module initialization code on Linux. The package manager they use started providing that version even though love 11.5 wasn't tested against it. If the package manager provided reliable dependencies this wouldn't be a problem.<br><br>Or another example, love 11.5 ships with a specific recent version of LuaJIT 2.1 which fixes many issues with pairs iteration causing freezes, crashes, missing keys, and other weird behaviour. Some package managers which use a global install of LuaJIT 2.1 haven't updated to this version, so if you don't use a standalone love with its dependencies self-contained like the AppImage, you're risking your Lua code randomly freezing on someone's system.<br><blockquote class="uncited"><div>Other thing to consider is that since the version 1.0.0, love is claimed to be backwards compatible.</div></blockquote>We don't claim this. love 12 is not going to be backwards-compatible with code written for love 11.<br><br>Patch versions (e.g. love 11.4 to 11.5) generally are, but sometimes your game might rely on buggy or implementation-defined behaviour from a specific patch version as well.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Mar 17, 2024 3:19 pm</p><hr />
 ]]></content>
 	</entry>
 	</feed>

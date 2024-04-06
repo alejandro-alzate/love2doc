@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:50 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 14:51:11 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -15,7 +15,7 @@
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 <meta name="generator" content="MediaWiki 1.31.12"/>
 <meta name="robots" content="noindex,follow"/>
-<link rel="alternate" type="application/rdf+xml" title="Tutorial:Physics (Русский)" href="index85f8.php?title=Special:ExportRDF/Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;xmlmime=rdf"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Physics (Русский)" href="index85f8.html?title=Special:ExportRDF/Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;xmlmime=rdf"/>
 <link rel="shortcut icon" href="../favicon.ico"/>
 <link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)"/>
 <link rel="EditURI" type="application/rsd+xml" href="api-result251f.xml?action=rsd"/>
@@ -34,7 +34,7 @@
 			<div>
 				<ul>
 				<li id="ca-nstab-tutorial" class="selected"><a href="../wiki/Tutorial_Physics_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html">Tutorial</a></li>
-				<li id="ca-talk" class="new"><a href="../wiki/Tutorial_talk_Physics_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html?title=Tutorial_talk:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-talk" class="new"><a href="index7282.html?title=Tutorial_talk:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
 				<li id="ca-viewsource"><a href="index271a.html?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
 				<li id="ca-history"><a href="indexf482.html?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
 				</ul>
@@ -65,13 +65,13 @@
 </div>
 
 <h3><span id="love.load()"></span><span class="mw-headline" id="love.load.28.29">love.load()</span></h3>
-<p>Прежде всего нам необходимо настроить (создать) мир <a href="../wiki/love.physics-38.html" title="love.physics.newWorld (Русский)">world</a>) для физических тел в нем. 
+<p>Прежде всего нам необходимо настроить (создать) мир <a href="../wiki/love.physics-28.html" title="love.physics.newWorld (Русский)">world</a>) для физических тел в нем. 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
   <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">setMeter</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="c1">-- высота метра в нашем мире будет 64 пикселя</span>
   <span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="o">*</span><span class="mi">64</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">-- создаем мир для тел в нем, с горизонтальной гравитацией равной 0 и вертикальной гравитацией равной 9.81</span>
 </pre></div>
-<p>Теперь, когда мир (<a href="../wiki/love.physics-38.html" title="love.physics.newWorld (Русский)">world</a>) создан, мы можем добавить тела (<a href="../wiki/Body_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Body (Русский)">bodies</a>), формы (<a href="../wiki/Shape_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Shape (Русский)">shapes</a>) и связать (скрепить) (<a href="../wiki/Fixture_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Fixture (Русский)">fixture</a>) их. 
+<p>Теперь, когда мир (<a href="../wiki/love.physics-28.html" title="love.physics.newWorld (Русский)">world</a>) создан, мы можем добавить тела (<a href="../wiki/Body_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Body (Русский)">bodies</a>), формы (<a href="../wiki/Shape_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Shape (Русский)">shapes</a>) и связать (скрепить) (<a href="../wiki/Fixture_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Fixture (Русский)">fixture</a>) их. 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>   <span class="n">objects</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- таблица для хранения объектов в ней</span>
   
@@ -213,36 +213,36 @@
 </p>
 <h2><span id="Другие_языки"></span><span class="mw-headline" id=".D0.94.D1.80.D1.83.D0.B3.D0.B8.D0.B5_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B8">Другие языки</span></h2>
 <div class="i18n">
-<p><a href="../wiki/Tutorial_Physics_(Dansk).html?title=Tutorial:Physics_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Deutsch).html?title=Tutorial:Physics_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<p><a href="index0d8e.html?title=Tutorial:Physics_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="index4008.html?title=Tutorial:Physics_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics.html" title="Tutorial:Physics">English</a>&#160;&#8211; 
-<a href="../wiki/Tutorial_Physics_(Espa%c3%b1ol).html?title=Tutorial:Physics_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="indexe3ea.html?title=Tutorial:Physics_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Español) (page does not exist)">Español</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics_(Fran%c3%a7ais).html" title="Tutorial:Physics (Français)">Français</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Indonesia).html?title=Tutorial:Physics_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Italiano).html?title=Tutorial:Physics_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Lietuvi%c5%a1kai).html?title=Tutorial:Physics_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Magyar).html?title=Tutorial:Physics_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Nederlands).html?title=Tutorial:Physics_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Polski).html?title=Tutorial:Physics_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Polski) (page does not exist)">Polski</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Portugu%c3%aas).html?title=Tutorial:Physics_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Português) (page does not exist)">Português</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Rom%c3%a2n%c4%83).html?title=Tutorial:Physics_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Română) (page does not exist)">Română</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Slovensk%c3%bd).html?title=Tutorial:Physics_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Suomi).html?title=Tutorial:Physics_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(Svenska).html?title=Tutorial:Physics_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(T%c3%bcrk%c3%a7e).html?title=Tutorial:Physics_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="indexd866.html?title=Tutorial:Physics_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="indexe8ec.html?title=Tutorial:Physics_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="indexc2d5.html?title=Tutorial:Physics_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="index6469.html?title=Tutorial:Physics_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="index28e3.html?title=Tutorial:Physics_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="index5356.html?title=Tutorial:Physics_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="index353b.html?title=Tutorial:Physics_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="index25a1.html?title=Tutorial:Physics_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="indexdae1.html?title=Tutorial:Physics_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="index5148.html?title=Tutorial:Physics_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="indexf45c.html?title=Tutorial:Physics_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="indexd722.html?title=Tutorial:Physics_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics_(%c4%8cesky).html" title="Tutorial:Physics (Česky)">Česky</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Tutorial:Physics_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Tutorial:Physics_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="index25a3.html?title=Tutorial:Physics_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="indexf598.html?title=Tutorial:Physics_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Български) (page does not exist)">Български</a>&#160;&#8211;
 <a class="mw-selflink selflink">Русский</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Tutorial:Physics_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Српски) (page does not exist)">Српски</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html?title=Tutorial:Physics_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Українська) (page does not exist)">Українська</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Tutorial:Physics_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (עברית) (page does not exist)">עברית</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Tutorial:Physics_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="index8260-2.html?title=Tutorial:Physics_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="indexfce7.html?title=Tutorial:Physics_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="index6f00.html?title=Tutorial:Physics_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="index6730.html?title=Tutorial:Physics_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Physics (日本語)">日本語</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html?title=Tutorial:Physics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="index58cb.html?title=Tutorial:Physics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html" title="Tutorial:Physics (简体中文)">简体中文</a>&#160;&#8211;
 <a href="../wiki/Tutorial_Physics_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="Tutorial:Physics (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
-<a href="../wiki/Tutorial_Physics_(%ed%95%9c%ea%b5%ad%ec%96%b4).html?title=Tutorial:Physics_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (한국어) (page does not exist)">한국어</a> 
+<a href="indexb39d.html?title=Tutorial:Physics_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (한국어) (page does not exist)">한국어</a> 
 <br />
 <span style="text-align:right;"><i><a href="../wiki/Help_i18n.html" title="Help:i18n">More info</a></i></span>
 </p>
@@ -383,12 +383,12 @@ Retrieved from "<a dir="ltr" href="index1e79.html?title=Tutorial:Physics_(%d0%a0
 					<ul id="f-list">
 									<li id="lastmod"> This page was last edited on 21 April 2014, at 19:49.</li>
 									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
-									<li id="privacy"><a href="../wiki/LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="privacy"><a href="../wiki/LOVE_Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
 									<li id="about"><a href="../wiki/LOVE_About.html" title="LOVE:About">About LOVE</a></li>
 									<li id="disclaimer"><a href="../wiki/LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
 							</ul>
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.050","walltime":"0.793","ppvisitednodes":{"value":320,"limit":1000000},"ppgeneratednodes":{"value":755,"limit":1000000},"postexpandincludesize":{"value":3405,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":38092,"limit":5000000},"timingprofile":["100.00%    5.776      1 -total","100.00%    5.776      1 Template:i18n"," 53.47%    3.088     28 Template:Lang"]},"cachereport":{"timestamp":"20240405145357","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":32});});</script></body>
-<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 13:57:50 GMT -->
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 14:51:11 GMT -->
 </html>
