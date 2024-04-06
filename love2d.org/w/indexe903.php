@@ -19,30 +19,30 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Getting_Started_-28Română-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T03:24:39+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Getting_Started_-28正體中文-29">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T03:26:28+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Getting_Started_-28Română-29">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Getting_Started_-28正體中文-29">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE"/>
-		<rdfs:label>Getting Started (Română)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Getting_Started_-28Română-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Getting_Started_-28Română-29"/>
+		<rdfs:label>Getting Started (正體中文)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Getting_Started_-28正體中文-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Getting_Started_-28正體中文-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-26T08:16:59Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457930.8451273</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getting Started (Română)</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-08T16:58:53Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457609.2075579</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getting Started (正體中文)</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Noţiuni_de_bază">
-		<rdfs:label>Noţiuni de bază</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Noţiuni_de_bază"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Noţiuni_de_bază"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/基礎入門">
+		<rdfs:label>基礎入門</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/基礎入門"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/基礎入門"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:redirectsTo rdf:resource="&wiki;Getting_Started_-28Română-29"/>
-		<owl:sameAs rdf:resource="&wiki;Getting_Started_-28Română-29"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noţiuni de bază</swivt:wikiPageSortKey>
+		<swivt:redirectsTo rdf:resource="&wiki;Getting_Started_-28正體中文-29"/>
+		<owl:sameAs rdf:resource="&wiki;Getting_Started_-28正體中文-29"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">基礎入門</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE" />
