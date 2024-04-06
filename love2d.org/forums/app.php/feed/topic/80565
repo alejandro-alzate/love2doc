@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/80565" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-09-17T01:41:29+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/80565</id>
+
+		<entry>
+		<author><name><![CDATA[Rucikir]]></name></author>
+		<updated>2015-07-31T19:53:32+00:00</updated>
+
+		<published>2015-07-31T19:53:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187303#p187303</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187303#p187303"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187303#p187303"><![CDATA[
+LGPL is a Free Software license, not an Open Source license. Some would have killed for that  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134234">Rucikir</a> — Fri Jul 31, 2015 7:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2015-07-23T20:40:30+00:00</updated>
+
+		<published>2015-07-23T20:40:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186963#p186963</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186963#p186963"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186963#p186963"><![CDATA[
+<blockquote class="uncited"><div>A standalone executable that dynamically links to a library through a .so, .dll, or similar medium is generally accepted as not being a derivative work as defined by the LGPL.</div></blockquote>So a <em class="text-italics">dynamically</em> linked library is generally accepted as not violating the license.<br><blockquote class="uncited"><div>Essentially, if it is a "work that uses the library", then it must be possible for the software to be linked with a newer version of the LGPL-covered program. The most commonly used method for doing so is to use "a suitable shared library mechanism for linking". Alternatively, a statically linked library is allowed if either source code or linkable object files are provided.</div></blockquote>Using a newer version isn't trivially possible, unless you also provide all the components needed to recreate it (possibly with a newer version), so having a statically linked version of those libraries means you have to provide things you don't with the dynamically linked versions.<br><br>So yes, this does say that you're allowed to ship binaries that have those libraries statically linked <em class="text-italics">if</em> you also provide the user/downloader with a way to recreate it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Thu Jul 23, 2015 8:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Daniel_Cortez]]></name></author>
+		<updated>2015-07-23T15:50:51+00:00</updated>
+
+		<published>2015-07-23T15:50:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186951#p186951</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186951#p186951"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186951#p186951"><![CDATA[
+<a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" class="postlink">https://en.wikipedia.org/wiki/GNU_Lesse ... ic_License</a><blockquote class="uncited"><div>A standalone executable that dynamically links to a library through a .so, .dll, or similar medium is generally accepted as not being a derivative work as defined by the LGPL. It would fall under the definition of a "work that uses the Library". Paragraph 5 of the LGPL version 2.1 states:<blockquote class="uncited"><div>A program that contains no derivative of any portion of the Library, but is designed to work with the Library by being compiled or linked with it, is called a "work that uses the Library". Such a work, in isolation, is not a derivative work of the Library, and therefore falls outside the scope of this License.</div></blockquote>Essentially, if it is a "work that uses the library", then it must be possible for the software to be linked with a newer version of the LGPL-covered program. The most commonly used method for doing so is to use "a suitable shared library mechanism for linking". Alternatively, a statically linked library is allowed if either source code or linkable object files are provided.</div></blockquote>Does that mean I can statically compile LGPL-covered libraries with a proprietary application? I just don't know English that well to clearly understand what exactly that text means.<br><br>Btw, <a href="https://ru.wikipedia.org/wiki/GNU_Lesser_General_Public_License" class="postlink">russian version of that article</a> says that some proprietary programs are linked with LGPL-covered libraries statically because LGPL doesn't restrict static linking with non-free programs in any clear way.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134909">Daniel_Cortez</a> — Thu Jul 23, 2015 3:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2015-07-23T04:58:05+00:00</updated>
+
+		<published>2015-07-23T04:58:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186936#p186936</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186936#p186936"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186936#p186936"><![CDATA[
+License files are not the problem! but the terms of those licenses.<br><br>LGPL states that when you use code licensed under the terms of this license all the modifications and additions made to the code should be under the same (or compatible, that is, Open Source) license, since you are combining a library under the terms of this license with your own game you should then distribute your game under this same license, which means you should open source your game and distribute it's source code.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Thu Jul 23, 2015 4:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DhruvCollins]]></name></author>
+		<updated>2020-09-17T01:39:12+00:00</updated>
+
+		<published>2015-07-21T09:52:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186874#p186874</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186874#p186874"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186874#p186874"><![CDATA[
+contact me at my skype we will make a chat brother<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136838">DhruvCollins</a> — Tue Jul 21, 2015 9:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2015-07-20T21:48:45+00:00</updated>
+
+		<published>2015-07-20T21:48:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186837#p186837</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186837#p186837"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186837#p186837"><![CDATA[
+On another note, DLLs are not built into LÖVE because of their license, I think OpenAL is LGPL and if you include it you should make your software use that license or similar, this happens with many of the bundled libs<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Jul 20, 2015 9:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2015-07-19T10:47:36+00:00</updated>
+
+		<published>2015-07-19T10:47:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186776#p186776</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186776#p186776"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186776#p186776"><![CDATA[
+You should also not answer me in a PM, especially because I did say I am not sure about this, as I do not know much about folders priority or what is usual behaviour with libraries on Windows.<br><blockquote class="uncited"><div>Well the DLL(S) Used in love except<br>1.msvcr120.dll<br>2.msvcp120.dll<br>are very less likely to have a conflict...</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun Jul 19, 2015 10:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DhruvCollins]]></name></author>
+		<updated>2015-07-19T10:44:56+00:00</updated>
+
+		<published>2015-07-19T10:44:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186775#p186775</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186775#p186775"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186775#p186775"><![CDATA[
+@Nixola i sent u the answer in PM<br>UPDATE: Im going to upload EXER in some time and till i find a solution im going to supply a Redist.exe with all the LOVE DLL(s)<br>              Which Devs can package with thier games and people also will not need to downoad the extra 6 MB of DLL(s) again<br>              and again.<br>NOTE: Currently EXER only can make the *.love file to *.exe<br>NOTE: Please Post your suggestions..<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136838">DhruvCollins</a> — Sun Jul 19, 2015 10:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2015-07-19T10:28:23+00:00</updated>
+
+		<published>2015-07-19T10:28:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186772#p186772</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186772#p186772"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186772#p186772"><![CDATA[
+I am not sure you should do this. Libs with that name would probably be used by whatever includes them instead, which is not good.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun Jul 19, 2015 10:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DhruvCollins]]></name></author>
+		<updated>2020-09-17T01:37:34+00:00</updated>
+
+		<published>2015-07-19T10:26:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186771#p186771</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186771#p186771"/>
+		<title type="html"><![CDATA[The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186771#p186771"><![CDATA[
+Well the DLL(S) Used in love except<br>1.msvcr120.dll<br>2.msvcp120.dll<br>are very less likely to have a conflict but wii will do this together brother do not worry<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136838">DhruvCollins</a> — Sun Jul 19, 2015 10:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DhruvCollins]]></name></author>
+		<updated>2020-09-17T01:36:03+00:00</updated>
+
+		<published>2015-07-19T10:09:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186770#p186770</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186770#p186770"/>
+		<title type="html"><![CDATA[The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186770#p186770"><![CDATA[
+yes brother the problem is big<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136838">DhruvCollins</a> — Sun Jul 19, 2015 10:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2015-07-19T09:49:36+00:00</updated>
+
+		<published>2015-07-19T09:49:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186767#p186767</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186767#p186767"/>
+		<title type="html"><![CDATA[Re: The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186767#p186767"><![CDATA[
+This sounds good, but I have a few questions:<br><br>1. If the zipper and detector are "100% complete", why are you calling them "beta"? Sounds like a contradiction to me.<br>2. Any advantages over a single line .bat file (other than not having to distribute the .dll files)? For example, will the end user get the same security warnings when building using this method? <br>3. Is it legal to pack the .dll files into the .exe? I think they're distributed separately because of their licensing, but I can be wrong (distributing a .app for Löve seems okay, so I'm not really sure how this works).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Sun Jul 19, 2015 9:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DhruvCollins]]></name></author>
+		<updated>2020-09-17T01:41:29+00:00</updated>
+
+		<published>2015-07-19T09:05:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186766#p186766</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186766#p186766"/>
+		<title type="html"><![CDATA[The Love Distrubution Pack]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186766#p186766"><![CDATA[
+hello guys lets find solution to dll problem!!!! we will call it love distrubtonr pack<br><br>plan<br>zipper  . it load zip and is 100 percent complete beta<br>detector . it will detect false zip and delete otherwise wiruzz corrupt  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death">  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"> <br><br>100 percent complete<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136838">DhruvCollins</a> — Sun Jul 19, 2015 9:05 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
