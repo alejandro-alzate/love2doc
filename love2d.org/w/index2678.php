@@ -19,26 +19,26 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/LifeOnLove">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:57:57+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Freeing_Quency">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:56:42+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/LifeOnLove">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Freeing_Quency">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>LifeOnLove</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/LifeOnLove"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/LifeOnLove"/>
+		<rdfs:label>Freeing Quency</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Freeing_Quency"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Freeing_Quency"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3AMihail.mihno"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classic Conway's Game of Life with Gosper's glider gun data</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simulation</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11.0</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LifeOnLove</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:lifeonlove.png</property:Screenshot>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-02T13:11:35Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458486.0497107</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LifeOnLove</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AVEXED"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defeat onslaughts of vile monsters to free Quency.</property:Description>
+		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Down</property:Genre>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.9.1</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freeing Quency</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:Freeing-Quency.png</property:Screenshot>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-26T18:03:38Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2459027.2525232</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freeing Quency</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />
