@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/forum/5" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-03T07:02:44+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/forum/5</id>
+
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-03T07:02:44+00:00</updated>
+
+		<published>2024-04-03T07:02:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259158#p259158</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259158#p259158"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259158#p259158"><![CDATA[
+Hi @SugarRayLua,<br>Thanks for the feedback! Nice to know the issue is gone <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><blockquote class="uncited"><div>@marknote,<br><br>New release fixed the issue with importing .love files, thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Wed Apr 03, 2024 7:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-04-02T05:18:27+00:00</updated>
+
+		<published>2024-04-02T05:18:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259150#p259150</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259150#p259150"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259150#p259150"><![CDATA[
+@marknote,<br><br>New release fixed the issue with importing .love files, thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Tue Apr 02, 2024 5:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-02T03:27:39+00:00</updated>
+
+		<published>2024-04-02T03:27:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259149#p259149</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259149#p259149"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259149#p259149"><![CDATA[
+Hi @pjft,<br><br>Thanks for the feedback! Sorry to know the editor sometimes crashes. I am using a tree sitter based parser to parse the code for syntax highlighting.<br>I did meet some crash caused by the parser before, but very rarely recently. I will keep an eye on this issue. <br>Thanks<br><blockquote class="uncited"><div>Thanks for the update - the changes are nice! I did experience a similar unreliability when trying to edit a file - it crashed a few times. Nothing major, but worth highlighting.<br><br>Thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Tue Apr 02, 2024 3:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-02T03:23:10+00:00</updated>
+
+		<published>2024-04-02T03:23:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259148#p259148</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259148#p259148"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259148#p259148"><![CDATA[
+Hi @ddabrahim,<br>Thanks a lot for sharing your thoughts! Your feedback is very helpful for me.<br>Sorry to know the app is not so reliable. I will have a look. If you can provide more details on how to reproduce the crash, <br>It will make it even easier.<br><br><br><blockquote class="uncited"><div>Hi. Just want to say I really love this project. As I don't have a lot of time to sit at my desktop recently, I find this project extremely useful to experiment on the go.<br><br>My only problem was that it is often crash when I try to capture user input and trigger the on-screen keyboard. Not sure if it was fixed in this release but I'm going to give it a try.<br><br>I think you should really consider to setup a proper homepage with screenshots and some introduction to people may not know what Love2D is. A desktop version would be also extremely useful to help complete beginners get started. I can see beginners often have no idea how to use Love2D. They expect to see a code editor, a tool in which they can write code and launch preview. Love2D Studio would be a perfect place to start for some people in my opinion even on desktop.</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Tue Apr 02, 2024 3:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-04-01T17:23:18+00:00</updated>
+
+		<published>2024-04-01T17:23:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259147#p259147</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259147#p259147"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259147#p259147"><![CDATA[
+Thanks for the update - the changes are nice! I did experience a similar unreliability when trying to edit a file - it crashed a few times. Nothing major, but worth highlighting.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Mon Apr 01, 2024 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ddabrahim]]></name></author>
+		<updated>2024-04-01T15:41:17+00:00</updated>
+
+		<published>2024-04-01T15:41:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259146#p259146</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259146#p259146"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259146#p259146"><![CDATA[
+Hi. Just want to say I really love this project. As I don't have a lot of time to sit at my desktop recently, I find this project extremely useful to experiment on the go.<br><br>My only problem was that it is often crash when I try to capture user input and trigger the on-screen keyboard. Not sure if it was fixed in this release but I'm going to give it a try.<br><br>I think you should really consider to setup a proper homepage with screenshots and some introduction to people may not know what Love2D is. A desktop version would be also extremely useful to help complete beginners get started. I can see beginners often have no idea how to use Love2D. They expect to see a code editor, a tool in which they can write code and launch preview. Love2D Studio would be a perfect place to start for some people in my opinion even on desktop.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=177312">ddabrahim</a> — Mon Apr 01, 2024 3:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-01T08:36:39+00:00</updated>
+
+		<published>2024-04-01T08:36:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259141#p259141</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259141#p259141"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259141#p259141"><![CDATA[
+Hi all,<br><br>A new version (1.43) is available to address some of your concerns.<br>- Now the “game play” in full screen mode;<br>- import should work now;<br>- the editor will remember the last file opened;<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Mon Apr 01, 2024 8:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-03-30T14:09:11+00:00</updated>
+
+		<published>2024-03-30T14:09:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259135#p259135</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259135#p259135"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259135#p259135"><![CDATA[
+Hi! Thanks for the kind note. <br><br>I see, thanks for elaborating on the SDL challenges. I suppose my point isn't as much "native landscape", but rather allow the love2d app to _render_ rotated, in landscape. Some games will render weird because the default canvas is portrait, and would work well if it thought it had the landscape orientation when initializing.<br><br>Just a thought.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Sat Mar 30, 2024 2:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-30T11:57:58+00:00</updated>
+
+		<published>2024-03-30T11:57:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259132#p259132</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259132#p259132"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259132#p259132"><![CDATA[
+Hi pjft,<br><br>I appreciate your feedback, and I am delighted to hear that this app is also helpful for you!<br><br>1) While it is technically feasible to launch a default program, my current concern lies in the potential issues that may arise with the program. For example, if an program crashes the tool, it could be challenging to handle... I am still figuring out how to effectively catch all errors thrown by Lua.<br><br>2) This feature will be included in the next version.<br><br>3) I agree that landscape mode would be beneficial for iPhone users. However, I have encountered some issues with unexpected behavior during orientation changes. Love2d is based on SDL, which operates differently from iOS's native UI frameworks. I have invested significant time in resolving this issue, but have not been successful yet. Once the problem is resolved, landscape mode will be enabled.<br><br>Thank you again for your support, and please stay tuned for updates.<br> <br><br><blockquote class="uncited"><div>Hi @marknote<br><br>First of all, thank you for putting this together! I just recently got into playing a bit with creating things on Lua, and indeed during the day I carry my tablet around but not my laptop, and it's easy to just troubleshoot things or make small adjustments as they come along. Thank you!<br><br>One of the things I am playing with is creating small apps for my kids, to also have them start feeling interested in Lua. They're using Scratch right now, but I want to start exposing them to a less visual programming language as well, and Lua seems to be a great next step.<br><br>This, then, leads me to three questions, as I install some of these apps on their tablets:<br>1) Is there a way to launch a default app when I open the studio? Right now it always opens the "No Game" screen, which I always have to close. It's almost as if it _is_ automatically launching something when it opens, but I can't figure out the expected path. I tried adding a main.lua file to the root, but the same happened. Can you allow for a default program to be launched when it opens? Say, if I create a folder named "Default" or something?<br>2) Is there a way to have the app run in complete full screen?<br>3) Last, I'd support the availability of the app on the iPhone if possible. I know that the experience isn't the same, but it's certainly doable for small tweaks. See the <a href="https://apps.apple.com/us/app/visual-code/id6444809156?platform=iphone" class="postlink">https://apps.apple.com/us/app/visual-co ... orm=iphone</a> Visual Studio Code app on the iPhone. We could code in portrait, and then run the apps in landscape. Right now they're stuck in portrait, which makes it hard to keep a consistent experience for the apps we're developing across desktop, tablet and phone. Any way to force the app to landscape?<br><br>Just a thought.<br><br>Thank you so much once again, and hope you have a great week!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Sat Mar 30, 2024 11:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Eric Matyas]]></name></author>
+		<updated>2024-03-26T20:56:38+00:00</updated>
+
+		<published>2024-03-26T20:56:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259119#p259119</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259119#p259119"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Free Music / SFX Resource for Your Games - Over 2500 Tracks]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259119#p259119"><![CDATA[
+Greetings Friends,<br><br>I've been super busy creating custom music for clients, but I did manage to upload a new MP3 track that you can freely use in your projects, just like my thousands of other tracks. It's on my Sci-Fi 12 page:<br><br>"ANCIENT ALIEN WORLDS"<br><a href="https://soundimage.org/sci-fi-12/" class="postlink">https://soundimage.org/sci-fi-12/</a><br><br>The Ogg version is available on Gumroad.<br><br>CUSTOM WORK<br>If anyone needs help with custom music, feel free to contact me...I'd love to help!  :-)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135528">Eric Matyas</a> — Tue Mar 26, 2024 8:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2024-03-25T16:18:51+00:00</updated>
+
+		<published>2024-03-25T16:18:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259116#p259116</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259116#p259116"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259116#p259116"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>I'm concerned about this condition in your code:<br><div class="codebox"><p>Code: </p><pre><code>        if py ~= lastY then</code></pre></div>Does that mean that polygons with vertical segments can't be used?</div></blockquote>From my tests, they can be used. For example, the polygon in the OP has some neighboring points with the same vertical coordinates (py == lastY), and the same horizontal coordinates.<br>In any case, after your rearranging of the terms in that comparison, it's good to know that even without that check for division-by-zero that I put there thinking it'd make it safe, the logic can still work.</div></blockquote>I made an embarrassing mistake. I thought having the same Y meant they were vertical <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"> As you have noted, it means they're horizontal.<br><br>Yeah, since it's checking the number of horizontal crossings, the left and right edges suffice; there's no need for horizontal edges.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Mon Mar 25, 2024 4:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Trystan]]></name></author>
+		<updated>2024-03-25T13:02:45+00:00</updated>
+
+		<published>2024-03-25T13:02:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259114#p259114</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259114#p259114"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Dithering with matrix]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259114#p259114"><![CDATA[
+I was thinking about dithing the other day and played around with the idea of error being pushed to the right and downwards through a maze (where the mazes passability allows it).<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24114&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24114" class="postimage" alt="CurveDither.png" /></a></dt></dl></div>The attached uses this for a few different wall layouts, "t" toggles showing the layout on the left picture:<br>F1 - All walls on (no error is passed so this is just quantizing each pixel to black and white based on the threshold)<br>F2 - All walls cleared, error is free to go down and right forever<br>F3 - Random walls<br>F4 - Walls generated by a maze algorithm (for both this and random "a" toggles animation)<br>F5 - Error is pushed along the path of a Hilbert Curve (starting in the bottom left)<br>F6 - Generates the Hilbert Curve but error is pushed down and right from the top left as with the other layouts.<br><br>It generates some fun results but nothing that to my eye looks any better than the faster methods above. There is room though for trying different curves/layouts, changing how you loop through the grid and where you push error to and maybe pushing the error further to spread it over more cells<br><br>The main code is here:<div class="codebox"><p>Code: </p><pre><code>-- https://en.wikipedia.org/wiki/Space-filling_curve-- https://en.wikipedia.org/wiki/Maze_generation_algorithm-- Disable output buffer so debug messages print in real timeio.stdout:setvbuf("no")function love.load()    bit = require "bit"    math.randomseed(os.time())    math.random(); math.random(); math.random()    love.window.setTitle("Space-filling curve Dithering")    love.graphics.setDefaultFilter("nearest", "nearest", 1)    imgData = love.image.newImageData("David.png")    origImg = love.graphics.newImage(imgData)    scale = 6    imgSize = imgData:getWidth()    love.window.setMode(imgSize * scale * 2, imgSize * scale)    threshold = 0.5 -- The threshold for seperating white and black pixels    drawGridToggle = false    animateDither = true    animationDelay = 20    timer = 0    currentCurve = setWallsZero    currentCurve()endfunction love.keypressed(key)    if key == "f1" then        currentCurve = setWallsZero        currentCurve()    end    if key == "f2" then        currentCurve = setWallsMax        currentCurve()    end    if key == "f3" then        currentCurve = setWallsRandom        currentCurve()    end    if key == "f4" then        currentCurve = setWallsBacktracker        currentCurve()    end    if key == "f5" then        currentCurve = setWallsHilbertFollow        currentCurve()    end    if key == "f6" then        currentCurve = setWallsHilbert        currentCurve()    end    if key == "t" then        drawGridToggle = not drawGridToggle    end    if key == "a" then        animateDither = not animateDither    end    if key == "escape" then        love.event.quit()    endendfunction resetCellGrid()    -- cellGrid will hold a number of allowed directions, 1 = up, 2 = right, 4 = down, 8 = left    -- 0 is unvisited    -- the second entry is the red from our picture, reset this each run as we mess with cellGrid when dithering    cellGrid = {}    for x = 0, imgSize - 1 do        cellGrid[x] = {}        for y = 0, imgSize - 1 do            cellGrid[x][y] = {0, imgData:getPixel(x, y)}        end    endendfunction setWallsZero()    resetCellGrid()    -- set no passability, essentialy threshold shading    for x = 0, imgSize - 1 do        for y = 0, imgSize - 1 do            cellGrid[x][y][1] = 0        end    end    if ditheredImg then ditheredImg:release() end    ditheredImg = applyDither()endfunction setWallsMax()    resetCellGrid()    -- set all passability, allowing error to travel forever    for x = 0, imgSize - 1 do        for y = 0, imgSize - 1 do            cellGrid[x][y][1] = 15            if x == imgSize - 1 then                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 13)            end            if y == imgSize - 1 then                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 11)            end        end    end    if ditheredImg then ditheredImg:release() end    ditheredImg = applyDither()endfunction setWallsRandom()    resetCellGrid()    -- set passability randomly, block off last row and column    for x = 0, imgSize - 1 do        for y = 0, imgSize - 1 do            cellGrid[x][y][1] = math.random(16)            if x == imgSize - 1 then                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 13)            end            if y == imgSize - 1 then                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 11)            end        end    end    if ditheredImg then ditheredImg:release() end    ditheredImg = applyDither()endfunction setWallsBacktracker()    resetCellGrid()    -- set passability with a recursive backtracker    local currX, currY = 0, 0    local neighbours, r, dir    local stack = {{currX, currY}}    while #stack &gt; 0 do        -- get neightbours        neighbours = getNeighbours(currX, currY)        if #neighbours == 0 then            -- we have no eligible neighbours, step back            table.remove(stack)            if #stack &gt; 0 then                currX, currY = stack[#stack][1], stack[#stack][2]            end        else            -- we have neighbours, get a random one            r = math.random(#neighbours)            dir = neighbours[r][3]            -- set our exit            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)            -- set new current            currX = neighbours[r][1]            currY = neighbours[r][2]            table.insert(stack, {currX, currY})            -- set our entry            if dir == 1 then                dir = 4            elseif dir == 2 then                dir = 8            elseif dir == 4 then                dir = 1            else                dir = 2            end            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)        end    end    if ditheredImg then ditheredImg:release() end    ditheredImg = applyDither()endfunction setWallsHilbert()    resetCellGrid()    if ditheredImg then ditheredImg:release() end    local hText = require "hilbert"    local dir = 2    local currX, currY = 0, 127    local char    for i = 1, #hText do        char = hText:sub(i, i)        if char == "-" then            -- turn left            dir = dir / 2            if dir &lt; 1 then dir = 8 end        elseif char == "+" then            -- turn right            dir = dir * 2            if dir &gt; 8 then dir = 1 end        end        --move forwards        cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)        col = cellGrid[currX][currY][2]        if dir == 1 then            currY = currY - 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 4)        elseif dir == 2 then            currX = currX + 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 8)        elseif dir == 4 then            currY = currY + 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 1)        else            currX = currX - 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 2)        end    end    if ditheredImg then ditheredImg:release() end    ditheredImg = applyDither()endfunction setWallsHilbertFollow()    resetCellGrid()    if ditheredImg then ditheredImg:release() end    local col, err    local newImgData = love.image.newImageData(imgSize, imgSize)    local hText = require "hilbert"    local dir = 2    local currX, currY = 0, 127    local char    for i = 1, #hText do        char = hText:sub(i, i)        if char == "-" then            -- turn left            dir = dir / 2            if dir &lt; 1 then dir = 8 end        elseif char == "+" then            -- turn right            dir = dir * 2            if dir &gt; 8 then dir = 1 end        end        --move forwards        cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)        col = cellGrid[currX][currY][2]        -- set cell and get error        if col &lt; threshold then            err = col            col = 0        else            err = col - 1            col = 1        end        -- draw pixel        newImgData:setPixel(currX, currY, col, col, col, 1)        if dir == 1 then            currY = currY - 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 4)        elseif dir == 2 then            currX = currX + 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 8)        elseif dir == 4 then            currY = currY + 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 1)        else            currX = currX - 1            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 2)        end        -- push error        cellGrid[currX][currY][2] = cellGrid[currX][currY][2] + err    end    ditheredImg = love.graphics.newImage(newImgData)endfunction getNeighbours(x, y)    local neighbours = {}    -- up    if y &gt; 0 then        if cellGrid[x][y - 1][1] == 0 then            table.insert(neighbours, {x, y - 1, 1})        end    end    -- right    if x &lt; imgSize - 1 then        if cellGrid[x + 1][y][1] == 0 then            table.insert(neighbours, {x + 1, y, 2})        end    end    -- down    if y &lt; imgSize - 1 then        if cellGrid[x][y + 1][1] == 0 then            table.insert(neighbours, {x, y + 1, 4})        end    end    -- left    if x &gt; 0 then        if cellGrid[x - 1][y][1] == 0 then            table.insert(neighbours, {x - 1, y, 8})        end    end    return neighboursendfunction applyDither()    local col, err, val    local newImgData = love.image.newImageData(imgSize, imgSize)    for x = 0, imgSize - 1 do        for y = 0, imgSize - 1 do            val = cellGrid[x][y][1]            col = cellGrid[x][y][2]            -- set cell and get error            if col &lt; threshold then                err = col                col = 0            else                err = col - 1                col = 1            end            -- get neighbours to pass error            -- both            if bit.band(val, 6) == 6 then                err = err / 2                cellGrid[x + 1][y][2] = cellGrid[x + 1][y][2] + err                cellGrid[x][y + 1][2] = cellGrid[x][y + 1][2] + err            -- right            elseif bit.band(val, 2) == 2 then                cellGrid[x + 1][y][2] = cellGrid[x + 1][y][2] + err            -- down            elseif bit.band(val, 4) == 4 then                cellGrid[x][y + 1][2] = cellGrid[x][y + 1][2] + err            end            -- set the image data            newImgData:setPixel(x, y, col, col, col, 1)        end    end    return love.graphics.newImage(newImgData)endfunction drawGrid()    -- draw grid, only need to draw right and down    local val    love.graphics.setLineWidth(1 / scale)    for x = 0, imgSize - 1 do        for y = 0, imgSize - 1 do            val = cellGrid[x][y][1]            -- check if we are blocked right            if bit.band(val, 2) == 0 then                love.graphics.line(x + 1, y, x + 1, y + 1)            end            -- check if we are blocked down            if bit.band(val, 4) == 0 then                love.graphics.line(x, y + 1, x + 1, y + 1)            end        end    endendfunction love.update(dt)    timer = timer + 1    if timer % animationDelay == 0 and animateDither then        currentCurve()    endendfunction love.draw()    local start = love.timer.getTime()    love.graphics.push()    love.graphics.scale(scale)    love.graphics.draw(origImg)    if drawGridToggle == true then        love.graphics.setColor(0.2, 0.4, 0.8)        drawGrid()        love.graphics.setColor(1, 1, 1)    end    love.graphics.draw(ditheredImg, imgSize, 0)    love.graphics.pop()    -- ui    love.graphics.print([[F1 - All walls blockedF2 - All walls openF3 - Random wallsF4 - Recursive backtracker mazeF5 - Hilbert Curve (following curve)F6 - Hilbert Curve (from top left)T - Toggle gridA - Toggle animation]], 5, 5)end</code></pre></div>The love file is attached which includes my test image and the export from a L-System program I was using to quickly generate the Hilbert curve (probably not the best way to do it but it was fast to implement with what I already had)<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24112">CurveDither.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=257841">Trystan</a> — Mon Mar 25, 2024 1:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RNavega]]></name></author>
+		<updated>2024-03-25T12:00:23+00:00</updated>
+
+		<published>2024-03-25T12:00:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259113#p259113</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259113#p259113"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259113#p259113"><![CDATA[
+<blockquote class="uncited"><div>I'm not too surprised. In LuaJIT, external function calls via standard Lua (as opposed to via FFI) either prevent compilation, or require trace stitching (meaning, switch to interpreter mode, run the function, switch back to compiled mode and resume), both of which are slow. I already got <a href="https://love2d.org/forums/viewtopic.php?p=230629#p23062" class="postlink">caught by that trap</a> with the transform functions when testing cam11.</div></blockquote>I didn't know that, thanks for explaining.<br><blockquote class="uncited"><div>I'm concerned about this condition in your code:<br><div class="codebox"><p>Code: </p><pre><code>        if py ~= lastY then</code></pre></div>Does that mean that polygons with vertical segments can't be used?</div></blockquote>From my tests, they can be used. For example, the polygon in the OP has some neighboring points with the same vertical coordinates (py == lastY), and the same horizontal coordinates.<br>In any case, after your rearranging of the terms in that comparison, it's good to know that even without that check for division-by-zero that I put there thinking it'd make it safe, the logic can still work.<br><br>I think the reason why W. Franklin's algorithm works while that check is in place is that it tests the previous and the next point, so if many colinear points are omitted, the geometry "silhouette" being tested ends up being the same.<br>That is, if the input points are these:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24109&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24109" class="postimage" alt="point-in-poly-02.png" /></a></dt></dl></div>The data after that function would be something like this:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24108&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24108" class="postimage" alt="point-in-poly-01.png" /></a></dt></dl></div>With redundant points omitted, but the deltas that are unique stored in the next points as that deltaX_div_deltaY.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Mon Mar 25, 2024 12:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2024-03-25T16:12:27+00:00</updated>
+
+		<published>2024-03-24T14:20:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259109#p259109</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259109#p259109"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259109#p259109"><![CDATA[
+<blockquote class="uncited"><div>Ehhh, here's something weird.<br>From my tests, that Lua-based method in the OP is slightly faster than the Box2D one. Point for LuaJIT I guess, it's probably optimizing that function amazingly. I honestly thought the C++ one would be faster.</div></blockquote>I'm not too surprised. In LuaJIT, external function calls via standard Lua (as opposed to via FFI) either prevent compilation, or require trace stitching (meaning, switch to interpreter mode, run the function, switch back to compiled mode and resume), both of which are slow. I already got <a href="https://love2d.org/forums/viewtopic.php?p=230629#p23062" class="postlink">caught by that trap</a> with the transform functions when testing cam11.<br><br>I'm concerned about this condition in your code:<br><div class="codebox"><p>Code: </p><pre><code>        if py ~= lastY then</code></pre></div>Does that mean that polygons with <del>vertical</del> <span style="text-decoration:underline">horizontal</span> segments can't be used?<br><br>It's likely that allowing the division by zero will be harmless and will make it work. Infinity will be properly propagated and the check for x &lt; infinity should return the expected result.<br><br>I think the test can be rewritten without divisions, though. If we unfold deltaX_div_deltaY as (lastX - px) / (lastY - py), then:<br><br>x &lt; (y - py) * (lastX - px) / (lastY - py) + px<br>is equivalent to<br>x - px &lt; (y - py) * (lastX - px) / (lastY - py)<br>which is equivalent to<br>(x - px) * (lastY - py) &lt; (y - py) * (lastX - px)<br><br>But beware the sign of lastY - py because the last equivalence only holds if it's positive.<br><br>Edit: In fact, that's pretty much what I did in my version.<br>Edit2: oops, not vertical but horizontal segments<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Mar 24, 2024 2:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RNavega]]></name></author>
+		<updated>2024-03-24T13:33:45+00:00</updated>
+
+		<published>2024-03-24T13:33:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259108#p259108</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259108#p259108"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259108#p259108"><![CDATA[
+Ehhh, here's something weird.<br>From my tests, that Lua-based method in the OP is slightly faster than the Box2D one. Point for LuaJIT I guess, it's probably optimizing that function amazingly. I honestly thought the C++ one would be faster.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24103&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24103" class="postimage" alt="point-in-polygon_benchmark.png" /></a></dt></dl></div>The code I'm using is this (to disable the testing, set DO_BENCHMARK in love.load() to false):<div class="codebox"><p>Code: </p><pre><code>io.stdout:setvbuf('no')local testPolylocal renderPolyslocal testShapelocal inside = falsefunction createPickablePolygon(points)    local poly = { }    local lastX = points[#points-1]    local lastY = points[#points]    for index = 1, #points-1, 2 do        local px = points[index]        local py = points[index+1]        if py ~= lastY then            local index = #poly            poly[index+1] = px            poly[index+2] = py            poly[index+3] = (lastX - px) / (lastY - py)        end        lastX = px        lastY = py    end    return polyendfunction isPointInPolygon(x, y, poly)    local lastPX = poly[#poly-2]    local lastPY = poly[#poly-1]    local inside = false    for index = 1, #poly, 3 do        local px = poly[index]        local py = poly[index+1]        local deltaX_div_deltaY = poly[index+2]        if ((py &gt; y) ~= (lastPY &gt; y)) and (x &lt; (y - py) * deltaX_div_deltaY + px) then            inside = not inside        end        lastPX = px        lastPY = py    end    return insideendfunction love.load()    local points = {}    local TOTAL_POINTS = 8    local angleStep = math.pi * 2.0 / TOTAL_POINTS    for x = 0, TOTAL_POINTS - 1 do        local index = x * 2 + 1        points[index]     = math.cos(x * angleStep) * 100.0 + 200.0        points[index + 1] = math.sin(x * angleStep) * 100.0 + 200.0    end    testPoly = createPickablePolygon(points)    renderPolys = love.math.triangulate(unpack(points))    testShape = love.physics.newPolygonShape(unpack(points))    -- Set to false to disable the benchmark.    local DO_BENCHMARK = true    if DO_BENCHMARK then        -- Sleep a bit to try to get the purest results.        love.timer.sleep(2.0)        local luaDelta = math.huge        local b2Delta = math.huge        for r = 1, 10 do            local start = love.timer.getTime()            for i = 1, 10000 do                inside = isPointInPolygon(210, 210, testPoly)            end            local tempDelta = love.timer.getTime() - start            if tempDelta &lt; luaDelta then luaDelta = tempDelta end        end        -- Get a local reference so it's slightly faster.        local testPoint = testShape.testPoint        for r = 1, 10 do            local start = love.timer.getTime()            for i = 1, 10000 do                inside = testPoint(testShape, 0, 0, 0, 210, 210)            end            local tempDelta = love.timer.getTime() - start            if tempDelta &lt; b2Delta then b2Delta = tempDelta end        end        error(string.format('Delta seconds (smaller is better):\nLua: %.8f\nBox2D: %.8f',                            luaDelta, b2Delta))    endendfunction love.mousemoved(x, y)    -- Lua-based method.    --inside = isPointInPolygon(x, y, testPoly)    -- Box2D-based method.    inside = testShape:testPoint(0, 0, 0, x, y)endfunction love.draw()    love.graphics.print('Hover the polygon with the mouse cursor. Press Esc to quit.', 10, 10)    if inside then        love.graphics.setColor(0.4, 0.65, 1.0)    else        love.graphics.setColor(0.2, 0.2, 0.6)    end    for index = 1, #renderPolys do        love.graphics.polygon('fill', renderPolys[index])    end    love.graphics.setColor(1.0, 1.0, 1.0)endfunction love.keypressed(key)    if key == 'escape' then love.event.quit() endend</code></pre></div>Considering that the Lua method supports more flexible polygons (convex, concave, self-intersecting and with more than 8 points), if this performance result is the same in other systems than mine, then that'd make it the preferable method in general.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Sun Mar 24, 2024 1:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2024-03-24T11:09:41+00:00</updated>
+
+		<published>2024-03-24T11:09:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259107#p259107</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259107#p259107"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Parabola functions in Lua]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259107#p259107"><![CDATA[
+The parabola is given by focus and directrix.<br>Finding the roots of parabola for given high y:<div class="codebox"><p>Code: </p><pre><code>function getFocusParabolaRoots (fx, fy, y) -- focus, horizontal line-- (directrix dirY is global)local h = fx -- x shiftlocal p = -(dirY-fy)/2 -- always negative for voronoilocal k = (fy - p) - y -- (fy-p) is vertex highlocal leftX = h - math.sqrt (-k*4*p)local rightX = h + math.sqrt (-k*4*p)return leftX, rightXend</code></pre></div>The parabola is given by focus and directrix.<br>Parabola curve is limited by points A (left) and B (right).<br>Finding control point C for quadratic Bezier curve for special case, where ay == by:<br>(based on the code of <a href="https://stackoverflow.com/a/78216720/12968803" class="postlink">Mike 'Pomax' Kamermans</a>)<div class="codebox"><p>Code: </p><pre><code>function getBezierControlPoint (fx, fy, ax, bx, dirY)local f = function (x)return (x*x-2*fx*x+fx*fx+fy*fy-dirY*dirY) / (2*(fy-dirY))endlocal function df(x)return (x-fx) / (fy-dirY)endif (fy == dirY) then return end -- not parabolalocal ay, by = f(ax), f(bx)if (ay == by) then -- special case: horizontal ABreturn fx, ay + 2*((fy + dirY) / 2-ay)elselocal ad = df(ax) -- tangent slope for Alocal dx = (bx-ax)/2return ax+dx, ay+ad*dxendend</code></pre></div>or just<div class="codebox"><p>Code: </p><pre><code>function getBezierControlPoint (fx, fy, ax, bx, dirY)local f = function (x) return (x*x-2*fx*x+fx*fx+fy*fy-dirY*dirY) / (2*(fy-dirY)) endlocal function df(x) return (x-fx) / (fy-dirY) endif (fy == dirY) then return end -- not parabolalocal ay, by = f(ax), f(bx)local ad, dx = df(ax), (bx-ax)/2return ax+dx, ay+ad*dxend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24106&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24106" class="postimage" alt="Animation (83).gif" /></a></dt></dl></div><div class="codebox"><p>Code: </p><pre><code>-- evaluate parabola for given focus and directrix, returns y-position for given x-position:local function evaluateParabola(fx, fy, x, dirY)    local numerator = fx*fx + fy*fy - dirY*dirY - x*(2*fx - x)    local denominator = 2*(fy - dirY)    return numerator / denominatorend</code></pre></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24107">voronoi-beachlines-01.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Sun Mar 24, 2024 11:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-24T08:41:06+00:00</updated>
+
+		<published>2024-03-24T08:41:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259106#p259106</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259106#p259106"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259106#p259106"><![CDATA[
+You can have a body with multiple chained polygons (fixtures) so you could test iterating over all of them. But yes, concave only, the whole Box2D model mostly depends on that assumption.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Mar 24, 2024 8:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RNavega]]></name></author>
+		<updated>2024-03-25T11:08:06+00:00</updated>
+
+		<published>2024-03-24T03:20:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259104#p259104</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259104#p259104"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259104#p259104"><![CDATA[
+<blockquote class="uncited"><div>Yes, this:<br><a href="https://love2d.org/wiki/Shape:testPoint" class="postlink">https://love2d.org/wiki/Shape:testPoint</a></div></blockquote>That's cool dusoft, nice tip. That will rely on the fast C++ Box2D implementation.<br>The testing code seems to be this:<br><a href="https://github.com/love2d/love/blob/main/src/libraries/box2d/collision/b2_polygon_shape.cpp#L250" class="postlink">https://github.com/love2d/love/blob/mai ... e.cpp#L250</a><br>They're using a facingness test based on the polygon normals: if the point in question is on the negative side of all polygon normals, then the point is inside the polygon. <br><br>The only downside to this method is that it only works on convex polygons, not concave. Also, the Löve wiki mentions that a polygon shape can have at most 8 points. Probably a Box2D restriction.<br>Considering that this physics method should be very fast, if your polygons fit in these criteria (convex + 8 points at most), then <del>that solution is the best choice.</del> <strong class="text-strong">Edit:</strong> actually the Lua method in the OP is still the fastest, check out this comment: <a href="https://love2d.org/forums/viewtopic.php?p=259108#p259108" class="postlink">viewtopic.php?p=259108#p259108</a><br><br>I was also thinking, for some tests where the shape is too complex for polygons, you could have it as a bitmap mask, like a big byte array. If you use a uint8_t array from LuaJIT, you can pack 8 points in a single byte (edit: at least 8 points, I don't think any platforms that Löve supports have bytes with less than 8 bits), leading to a very cost effective mask that is very fast to sample.<br>You'd use something like this on a point-and-click adventure game, so you'd able to paint in the clickable zones like in AGS.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Sun Mar 24, 2024 3:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-23T21:48:43+00:00</updated>
+
+		<published>2024-03-23T21:48:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259103#p259103</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259103#p259103"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259103#p259103"><![CDATA[
+Yes, this:<br><a href="https://love2d.org/wiki/Shape:testPoint" class="postlink">https://love2d.org/wiki/Shape:testPoint</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sat Mar 23, 2024 9:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[maneco2]]></name></author>
+		<updated>2024-03-23T18:01:38+00:00</updated>
+
+		<published>2024-03-23T18:01:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259101#p259101</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259101#p259101"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Fast 2D point-in-polygon test]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259101#p259101"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>-- By Pedro Gimeno, donated to the public domainfunction isPointInPolygon(x, y, poly)  local x1, y1, x2, y2  local len = #poly  x2, y2 = poly[len - 1], poly[len]  local wn = 0  for idx = 1, len, 2 do    x1, y1 = x2, y2    x2, y2 = poly[idx], poly[idx + 1]    if y1 &gt; y then      if (y2 &lt;= y) and (x1 - x) * (y2 - y) &lt; (x2 - x) * (y1 - y) then        wn = wn + 1      end    else      if (y2 &gt; y) and (x1 - x) * (y2 - y) &gt; (x2 - x) * (y1 - y) then        wn = wn - 1      end    end  end  return wn % 2 ~= 0 -- even/odd ruleend</code></pre></div>Second edit: fix a boundary condition</div></blockquote>I have this code bellow for check if have npc is inside polygon...work nice, but possible improve this code? performance?<div class="codebox"><p>Code: </p><pre><code>function InsideZone(x,y,poly)if (x ~= nil) and (y ~= nil) and (poly ~= nil) thenn = #poly;inside = false;p1x,p1y = poly[1].X, poly[1].Yp2x,p2y = (poly[n].X),(poly[n].Y)if y &gt; math.min(p1y,p2y) thenif y &lt;= math.max(p1y,p2y) thenif x &lt;= math.max(p1x,p2x) thenif p1y ~= p2y thenxinters = (y-p1y)*(p2x-p1x)/(p2y-p1y)+p1xend;if p1x == p2x or x &lt;= xinters theninside = not insideend;end;end;end;for i=1,n-1 dop2x,p2y = (poly[i+1].X),(poly[i+1].Y)if y &gt; math.min(p1y,p2y) thenif y &lt;= math.max(p1y,p2y) thenif x &lt;= math.max(p1x,p2x) thenif p1y ~= p2y thenxinters = (y-p1y)*(p2x-p1x)/(p2y-p1y)+p1xend;if p1x == p2x or x &lt;= xinters theninside = not insideend;end;end;end;p1x,p1y = p2x,p2yend;return inside;end;end;</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=217612">maneco2</a> — Sat Mar 23, 2024 6:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Eric Matyas]]></name></author>
+		<updated>2024-03-20T23:43:54+00:00</updated>
+
+		<published>2024-03-20T23:43:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259080#p259080</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259080#p259080"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Free Music / SFX Resource for Your Games - Over 2500 Tracks]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259080#p259080"><![CDATA[
+Greetings Everyone!<br><br>I have some brand new MP3 tracks to share. Free to use, as always, with attribution. They are:<br><br>On my Funny 8 page:<br><br>"THE PLASTERED PELICANS POLKA"<br><a href="https://soundimage.org/funny-8/" class="postlink">https://soundimage.org/funny-8/</a><br><br>And on my Chiptunes 5 page:<br><br>"PIXELTOWN R&amp;B"<br><a href="https://soundimage.org/chiptunes-5/" class="postlink">https://soundimage.org/chiptunes-5/</a><br><br>Please don't forget to check out my higher-fidelity Ogg music packs here:<br><br><a href="https://soundimage.org/ogg-music-packs-2/" class="postlink">https://soundimage.org/ogg-music-packs-2/</a><br><br>Enjoy...and keep creating awesome stuff!  :-)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135528">Eric Matyas</a> — Wed Mar 20, 2024 11:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-03-20T17:49:24+00:00</updated>
+
+		<published>2024-03-20T17:37:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259075#p259075</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259075#p259075"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259075#p259075"><![CDATA[
+Hi @marknote<br><br>First of all, thank you for putting this together! I just recently got into playing a bit with creating things on Lua, and indeed during the day I carry my tablet around but not my laptop, and it's easy to just troubleshoot things or make small adjustments as they come along. Thank you!<br><br>One of the things I am playing with is creating small apps for my kids, to also have them start feeling interested in Lua. They're using Scratch right now, but I want to start exposing them to a less visual programming language as well, and Lua seems to be a great next step.<br><br>This, then, leads me to three questions, as I install some of these apps on their tablets:<br>1) Is there a way to launch a default app when I open the studio? Right now it always opens the "No Game" screen, which I always have to close. It's almost as if it _is_ automatically launching something when it opens, but I can't figure out the expected path. I tried adding a main.lua file to the root, but the same happened. Can you allow for a default program to be launched when it opens? Say, if I create a folder named "Default" or something?<br>2) Is there a way to have the app run in complete full screen?<br>3) Last, I'd support the availability of the app on the iPhone if possible. I know that the experience isn't the same, but it's certainly doable for small tweaks. See the <a href="https://apps.apple.com/us/app/visual-code/id6444809156?platform=iphone" class="postlink">https://apps.apple.com/us/app/visual-co ... orm=iphone</a> Visual Studio Code app on the iPhone. We could code in portrait, and then run the apps in landscape. Right now they're stuck in portrait, which makes it hard to keep a consistent experience for the apps we're developing across desktop, tablet and phone. Any way to force the app to landscape?<br><br>Just a thought.<br><br>Thank you so much once again, and hope you have a great week!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Wed Mar 20, 2024 5:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-20T13:14:36+00:00</updated>
+
+		<published>2024-03-20T13:14:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259072#p259072</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259072#p259072"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Layouter - a simple UI grid library]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259072#p259072"><![CDATA[
+Fixed a bug that hindered horizontal layout.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Wed Mar 20, 2024 1:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-03-19T02:32:14+00:00</updated>
+
+		<published>2024-03-19T02:32:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259065#p259065</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259065#p259065"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259065#p259065"><![CDATA[
+Thanks for the prompt reply, @marknote.<br><br>For some reason I can't get any of the .love files to import from the top "+" import method <img alt="🤔" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f914.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Tue Mar 19, 2024 2:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-18T08:37:12+00:00</updated>
+
+		<published>2024-03-18T08:37:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259057#p259057</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259057#p259057"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259057#p259057"><![CDATA[
+Thanks for the feedback.<br>Looks open ".love" file from Files app does not work for some reason and I will figure it out<br>but clicking the right top "+" -&gt; Import still works.<br><blockquote class="uncited"><div>@marknote,<br><br>Does your newest release still allow importing of .love files? I don't seem to be able to import them anymore with the newest release. I can still workaround the issue by copying and pasting file from local device into the Love2D studio folder.<br><br>Thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Mon Mar 18, 2024 8:37 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
