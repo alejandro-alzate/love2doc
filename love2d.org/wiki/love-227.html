@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/love.graphics_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 17:33:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>love.graphics (Français) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"love.graphics_(Français)","wgTitle":"love.graphics (Français)","wgCurRevisionId":27696,"wgRevisionId":27696,"wgArticleId":839,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Modules (Français)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"love.graphics_(Français)","wgRelevantArticleId":839,"wgRequestId":"8b09a01b07b8f203231ca111","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="love.graphics (Français)" href="../w/index33c8.html?title=Special:ExportRDF/love.graphics_(Fran%C3%A7ais)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-love_graphics_Français rootpage-love_graphics_Français skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="love-227.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="../w/indexe79f.html?title=Talk:love.graphics_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/index63b1-2.html?title=love.graphics_(Fran%C3%A7ais)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/index975f.html?title=love.graphics_(Fran%C3%A7ais)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">love.graphics (Français)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>La fonction principale du module love.graphics est le dessin de lignes, formes, textes, <a href="Image.html" title="Image">Images</a> et autres objets <a href="Drawable.html" title="Drawable">Drawable</a> à l'écran. Ses autres fonctionnalités comprennent le chargement de fichiers externes (<a href="Image.html" title="Image">Images</a> et <a href="Font.html" title="Font">Fonts</a>) en mémoire, la création d'objets spécialisés (comme un <a href="ParticleSystem.html" title="ParticleSystem">ParticleSystems</a> ou  un <a href="Canvas.html" title="Canvas">Canvas</a>) et la gestion de l'écran.
+</p><p>Le système de coordonnées de LÖVE à pour origine le coin supérieur gauche de l'écran, à la position (0, 0). L'axe des abscisses x est horizontal, les valeurs augmentent vers la droite. L'axe des ordonnées y est vertical, les valeurs augmentent vers le bas.
+</p><p><a href="File_lovecoordsystem.html" class="image" title="The LÖVE coordinate system"><img alt="The LÖVE coordinate system" src="../w/images/f/f5/lovecoordsystem.png" width="430" height="190" /></a>
+</p><p>Dans la plupart des cas, les images ou les formes sont dessinées à partir de leur coin supérieur gauche (Voir image ci-dessus).
+</p><p>Beaucoup de fonctions sont utilisées pour manipuler le <i>système de coordonnées graphiques</i>, essentiel pour la façon dont les coordonnées sont disposées sur l'écran. On peut alors changer la position, mettre à l'échelle ou faire pivoter un objet.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Types"><span class="tocnumber">1</span> <span class="toctext">Types</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Fonctions"><span class="tocnumber">2</span> <span class="toctext">Fonctions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Trac.C3.A9"><span class="tocnumber">2.1</span> <span class="toctext">Tracé</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Cr.C3.A9ation_d.27objets"><span class="tocnumber">2.2</span> <span class="toctext">Création d'objets</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.C3.89tat_des_manipulations_graphiques"><span class="tocnumber">2.3</span> <span class="toctext">État des manipulations graphiques</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Syst.C3.A8me_de_coordonn.C3.A9es"><span class="tocnumber">2.4</span> <span class="toctext">Système de coordonnées</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Fen.C3.AAtre"><span class="tocnumber">2.5</span> <span class="toctext">Fenêtre</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#.C3.89num.C3.A9rations"><span class="tocnumber">3</span> <span class="toctext">Énumérations</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Voir_aussi"><span class="tocnumber">4</span> <span class="toctext">Voir aussi</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Autres_langues"><span class="tocnumber">5</span> <span class="toctext">Autres langues</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Types">Types</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Rendu d'image hors écran.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Drawable_(Fran%c3%a7ais).html" title="Drawable (Français)">Drawable (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Super classe pour toutes les choses qui peuvent être dessinées à l'écran.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit la forme de caractères qui peuvent être tracés à l'écran.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Framebuffer_(Fran%c3%a7ais).html" title="Framebuffer (Français)">Framebuffer (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Cible de rendu hors écran.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="../w/images/f/f4/Remove.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Image_(Fran%c3%a7ais).html" title="Image (Français)">Image (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">type d'image pouvant être dessiné.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Mesh_(Fran%c3%a7ais).html" title="Mesh (Français)">Mesh (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Un maillage (mesh) polygonal utilisé pour dessiner des formes texturées arbitraires.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="ParticleSystem_(Fran%c3%a7ais).html" title="ParticleSystem (Français)">ParticleSystem (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Utilisé pour créer des effets de particules, tels que du feu ou de la fumée.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="PixelEffect_(Fran%c3%a7ais).html" title="PixelEffect (Français)">PixelEffect (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Effet de shader sur les pixels.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="../w/images/f/f4/Remove.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Quad_(Fran%c3%a7ais).html" title="Quad (Français)">Quad (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Un quadrilatère avec des information de coordonnées de texture.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Shader_(Fran%c3%a7ais).html" title="Shader (Français)">Shader (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Shader effect.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="SpriteBatch_(Fran%c3%a7ais).html" title="SpriteBatch (Français)">SpriteBatch (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Stock des positions d'image dans un tampon, puis les trace en un seul appel.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Text_(Fran%c3%a7ais).html" title="Text (Français)">Text (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Texte pouvant être tracé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Texture_(Fran%c3%a7ais).html" title="Texture (Français)">Texture (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Super classe pour les objets pouvant être tracés (drawable) représentant une texture.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9-3.html" title="0.9.1">0.9.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="Video_(Fran%c3%a7ais).html" title="Video (Français)">Video (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Une vidéo pouvant être tracée.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span class="mw-headline" id="Fonctions">Fonctions</span></h2>
+<table class="notice" bgcolor="gold" style="border-style:solid;border-width:1px;-moz-border-radius:3px;border-radius:3px;" align="center" width="80%">
+<tbody><tr>
+<td width="1"><a href="File_O.html" class="image"><img alt="O.png" src="../w/images/0/09/O.png" width="64" height="64" /></a>
+</td>
+<td>La liste des fonctions n'est pas encore complétement traduite, voir la <a href="love-7.html" title="love.graphics">version en anglais</a> pour la liste complète.
+</td>
+<td width="1">&#160;
+</td></tr></tbody></table><p><br />
+</p><h3><span id="Tracé"></span><span class="mw-headline" id="Trac.C3.A9">Tracé</span></h3>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-241.html" title="love.graphics.arc (Français)">love.graphics.arc (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Dessine un arc.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-246.html" title="love.graphics.circle (Français)">love.graphics.circle (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Draws a circle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-251.html" title="love.graphics.clear (Français)">love.graphics.clear (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Nettoie l'écran ou le <a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas</a> actif dans la couleur spécifiée.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-254.html" title="love.graphics.discard (Français)">love.graphics.discard (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Annule (jette) le contenu de l'écran ou du <a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas</a> actif.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-148.html" title="love.graphics.draw (Français)">love.graphics.draw (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace des objets à l'écran.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-269.html" title="love.graphics.ellipse (Français)">love.graphics.ellipse (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace une ellipse.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-271.html" title="love.graphics.flushBatch (Français)">love.graphics.flushBatch (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Rend immédiatement toute macro (batch) de traçage automatique en attente.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-274.html" title="love.graphics.line (Français)">love.graphics.line (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace des lignes entre deux points.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-285.html" title="love.graphics.points (Français)">love.graphics.points (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace un ou plusieurs points.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-288.html" title="love.graphics.polygon (Français)">love.graphics.polygon (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace un polygone.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-296.html" title="love.graphics.present (Français)">love.graphics.present (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Affiche à l'écran le résultat des opérations de tracé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-156.html" title="love.graphics.print (Français)">love.graphics.print (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace du texte à l'écran. Si aucune <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font</a> n'est définie, une sera crée et définie (une seule fois) si nécessaire.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-204.html" title="love.graphics.rectangle (Français)">love.graphics.rectangle (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace un réctangle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-310.html" title="love.graphics.stencil (Français)">love.graphics.stencil (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Trace des formes géometriques comme un stencil.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h3><span id="Création_d'objets"></span><span class="mw-headline" id="Cr.C3.A9ation_d.27objets">Création d'objets</span></h3>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-263.html" title="love.graphics.newArrayImage (Français)">love.graphics.newArrayImage (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Creates a new <a href="TextureType_(Fran%c3%a7ais).html" title="TextureType (Français)">array</a> <a href="Image_(Fran%c3%a7ais).html" title="Image (Français)">Image (Français)</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-320.html" title="love.graphics.newCanvas (Français)">love.graphics.newCanvas (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée un nouveau <a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-324.html" title="love.graphics.newCubeImage (Français)">love.graphics.newCubeImage (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée une nouvelle <a href="Image_(Fran%c3%a7ais).html" title="Image (Français)">Image</a> <a href="TextureType.html" title="TextureType">cubemap</a> (carte de cube).</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-236.html" title="love.graphics.newFont (Français)">love.graphics.newFont (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée une nouvelle <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Fonte</a> depuis un fichier de fonte TrueType ou BMFont.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-331.html" title="love.graphics.newImage (Français)">love.graphics.newImage (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée une nouvelle <a href="Image_(Fran%c3%a7ais).html" title="Image (Français)">Image</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-336.html" title="love.graphics.newImageFont (Français)">love.graphics.newImageFont (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée une nouvelle <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Fonte</a> en chargeant une image <a href="ImageFontFormat_(Fran%c3%a7ais).html" title="ImageFontFormat (Français)">formatée spécifiquement</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.2-2.html" title="0.2.0">0.2.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-341.html" title="love.graphics.newMesh (Français)">love.graphics.newMesh (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Creates a new <a href="Mesh.html" title="Mesh">Mesh</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-193.html" title="love.graphics.newParticleSystem (Français)">love.graphics.newParticleSystem (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée un nouveau <a href="ParticleSystem_(Fran%c3%a7ais).html" title="ParticleSystem (Français)">ParticleSystem</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-347.html" title="love.graphics.newQuad (Français)">love.graphics.newQuad (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Créé un nouveau <a href="Quad_(Fran%c3%a7ais).html" title="Quad (Français)">Quad</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-363.html" title="love.graphics.newText (Français)">love.graphics.newText (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée un nouvel objet <a href="Text_(Fran%c3%a7ais).html" title="Text (Français)">Text</a> traçable.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-365.html" title="love.graphics.newVideo (Français)">love.graphics.newVideo (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Crée un nouvel objet <a href="Video_(Fran%c3%a7ais).html" title="Video (Français)">Video</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h3><span id="État_des_manipulations_graphiques"></span><span class="mw-headline" id=".C3.89tat_des_manipulations_graphiques">État des manipulations graphiques</span></h3>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-373.html" title="love.graphics.getBackgroundColor (Français)">love.graphics.getBackgroundColor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère la couleur de fond actuelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-379.html" title="love.graphics.getBlendMode (Français)">love.graphics.getBlendMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère le <a href="BlendMode_(Fran%c3%a7ais).html" title="BlendMode (Français)">BlendMode</a> (mode de mélange).</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-383.html" title="love.graphics.getCanvas (Français)">love.graphics.getCanvas (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Renvoie le <a href="Canvas.html" title="Canvas">Canvas</a> cible actuel.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-386.html" title="love.graphics.getColor (Français)">love.graphics.getColor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne la couleur actuelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-390.html" title="love.graphics.getColorMask (Français)">love.graphics.getColorMask (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the active color components used when drawing.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-393.html" title="love.graphics.getColorMode (Français)">love.graphics.getColorMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the color mode (which controls how images are affected by the current color).</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-397.html" title="love.graphics.getDefaultFilter (Français)">love.graphics.getDefaultFilter (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne les filtre de mise à l'échelle par défaut utilisés avec <a href="Image_(Fran%c3%a7ais).html" title="Image (Français)">Images</a>, <a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas</a>, et <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Fonts</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-402.html" title="love.graphics.getDepthMode (Français)">love.graphics.getDepthMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne le mode de test de profondeur actuel et si l'écriture dans le tampon de profondeur est activée.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-404.html" title="love.graphics.getFont (Français)">love.graphics.getFont (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne l'objet <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font</a> actuel.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-408.html" title="love.graphics.getFrontFaceWinding (Français)">love.graphics.getFrontFaceWinding (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets Est-ce que les triangles avec vecteurs ordonnés dans le sens horaire ou anti-horaire sont considérée comme ayant leurs faces vers l'avant.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-410.html" title="love.graphics.getLineJoin (Français)">love.graphics.getLineJoin (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère le style de jointure de ligne.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-416.html" title="love.graphics.getLineStyle (Français)">love.graphics.getLineStyle (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère le style de ligne.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-420.html" title="love.graphics.getLineWidth (Français)">love.graphics.getLineWidth (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère la largeur de ligne actuelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-424.html" title="love.graphics.getMeshCullMode (Français)">love.graphics.getMeshCullMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne si les triangles <a href="love.graphics-426.html" title="love.graphics.setFrontFaceWinding (Français)">vus de dos</a> dans un <a href="Mesh_(Fran%c3%a7ais).html" title="Mesh (Français)">maillage</a> sont éliminés.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-432.html" title="love.graphics.getPointSize (Français)">love.graphics.getPointSize (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the <a href="love.graphics-24.html" title="love.graphics.point">point</a> size.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-440.html" title="love.graphics.getScissor (Français)">love.graphics.getScissor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne le cade actuel de découpage.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-455.html" title="love.graphics.getStencilTest (Français)">love.graphics.getStencilTest (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retourne la configuration du test de stencil actuel.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-457.html" title="love.graphics.intersectScissor (Français)">love.graphics.intersectScissor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit le <a href="love.graphics-223.html" title="love.graphics.setScissor (Français)">découpage</a> (scissor) au rectangle créé par l'intersection du rectangle spécifié avec le découpage existant.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-459.html" title="love.graphics.isActive (Français)">love.graphics.isActive (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets whether the graphics module is able to be used.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-167.html" title="love.graphics.isGammaCorrect (Français)">love.graphics.isGammaCorrect (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Test si le rendu avec correction gamma est supporté et activé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-461.html" title="love.graphics.isSupported (Français)">love.graphics.isSupported (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Vérifie si certaines fonctions graphiques peuvent être utilisées.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-464.html" title="love.graphics.isWireframe (Français)">love.graphics.isWireframe (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets whether wireframe mode is used when drawing.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-467.html" title="love.graphics.reset (Français)">love.graphics.reset (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Réinitialise les réglages graphiques actuels.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-472.html" title="love.graphics.setBackgroundColor (Français)">love.graphics.setBackgroundColor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Règle la couleur du fond.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-477.html" title="love.graphics.setBlendMode (Français)">love.graphics.setBlendMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the blending mode.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-482.html" title="love.graphics.setCanvas (Français)">love.graphics.setCanvas (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Capture les opérations de tracé dans un <a href="Canvas.html" title="Canvas">Canvas</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-208.html" title="love.graphics.setColor (Français)">love.graphics.setColor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Règle la couleur utilisée pour le tracé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-486.html" title="love.graphics.setColorMask (Français)">love.graphics.setColorMask (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the color mask. Enables or disables specific color components when rendering.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-489.html" title="love.graphics.setColorMode (Français)">love.graphics.setColorMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit le mode de couleur (qui contrôle la façon dont les images sont affectées par la couleur actuelle).</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.2-2.html" title="0.2.0">0.2.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-493.html" title="love.graphics.setDefaultFilter (Français)">love.graphics.setDefaultFilter (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the default scaling filters used with <a href="Image.html" title="Image">Images</a>, <a href="Canvas.html" title="Canvas">Canvases</a>, and <a href="Font.html" title="Font">Fonts</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-498.html" title="love.graphics.setDepthMode (Français)">love.graphics.setDepthMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Configure le test de profondeur et les écritures dans le tampon de profondeur.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-499.html" title="love.graphics.setFont (Français)">love.graphics.setFont (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Défini une <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font</a> (fonte) déjà chargée comme fonte actuelle ou créé et charge une nouvelle depuis le fichier et la taille.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-426.html" title="love.graphics.setFrontFaceWinding (Français)">love.graphics.setFrontFaceWinding (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit si la face avant des triangles est sur ceux ayant des sommets ordonnés dans le sens horaires ou anti-horaire.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-509.html" title="love.graphics.setLineJoin (Français)">love.graphics.setLineJoin (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit le style de jointure des lignes.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-516.html" title="love.graphics.setLineStyle (Français)">love.graphics.setLineStyle (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Règle le style des lignes.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-214.html" title="love.graphics.setLineWidth (Français)">love.graphics.setLineWidth (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit la largeur de la ligne.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-219.html" title="love.graphics.setPointSize (Français)">love.graphics.setPointSize (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Règle la taille des <a href="love.graphics-285.html" title="love.graphics.points (Français)">points</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-223.html" title="love.graphics.setScissor (Français)">love.graphics.setScissor (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit ou désactive le découpage.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-534.html" title="love.graphics.setShader (Français)">love.graphics.setShader (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Routes drawing operations through a shader.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-539.html" title="love.graphics.setStencilTest (Français)">love.graphics.setStencilTest (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Configure ou désactive le test de stencil.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-540.html" title="love.graphics.setWireframe (Français)">love.graphics.setWireframe (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Définit si les lignes de contours en fil de fer seront utilisées lors du tracé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h3><span id="Système_de_coordonnées"></span><span class="mw-headline" id="Syst.C3.A8me_de_coordonn.C3.A9es">Système de coordonnées</span></h3>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-546.html" title="love.graphics.origin (Français)">love.graphics.origin (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Remet à zéro la transformation de coordonnées actuelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-453.html" title="love.graphics.pop (Français)">love.graphics.pop (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Dépile (pop) la transformation de coordonnées actuelle de la pile de transformation.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-450.html" title="love.graphics.push (Français)">love.graphics.push (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Copie et empile (push) la transformation de coordonnées actuelle dans la pile de transformation.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-551.html" title="love.graphics.rotate (Français)">love.graphics.rotate (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Pivote le système de coordonnées en deux dimensions.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-554.html" title="love.graphics.scale (Français)">love.graphics.scale (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Change l'échelle du système de coordonnées en deux dimensions.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-557.html" title="love.graphics.shear (Français)">love.graphics.shear (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Transvection du système de coordonnées.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-560.html" title="love.graphics.translate (Français)">love.graphics.translate (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Déplace le système de coordonnées en deux dimensions.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h3><span id="Fenêtre"></span><span class="mw-headline" id="Fen.C3.AAtre">Fenêtre</span></h3>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-571.html" title="love.graphics.getDPIScale (Français)">love.graphics.getDPIScale (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère le facteur d'échelle PPP de la fenêtre.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-585.html" title="love.graphics.getPixelDimensions (Français)">love.graphics.getPixelDimensions (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère la largeur et hauteur de la fenêtre, en pixels.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-587.html" title="love.graphics.getPixelHeight (Français)">love.graphics.getPixelHeight (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Récupère la hauteur de la fenêtre en pixels.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="love.graphics-589.html" title="love.graphics.getPixelWidth (Français)">love.graphics.getPixelWidth (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the width in pixels of the window.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span id="Énumérations"></span><span class="mw-headline" id=".C3.89num.C3.A9rations">Énumérations</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="AlignMode_(Fran%c3%a7ais).html" title="AlignMode (Français)">AlignMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Alignement du texte.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="ArcType_(Fran%c3%a7ais).html" title="ArcType (Français)">ArcType (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Différents types d'<a href="love.graphics-241.html" title="love.graphics.arc (Français)">arcs</a> pouvant être tracés.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-3.html" title="0.10.1">0.10.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="BlendAlphaMode_(Fran%c3%a7ais).html" title="BlendAlphaMode (Français)">BlendAlphaMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Les différentes façons dont le canal alpha affecte les mélanges de couleurs.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="BlendMode_(Fran%c3%a7ais).html" title="BlendMode (Français)">BlendMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Différentes méthodes de mixage de couleurs.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.2-2.html" title="0.2.0">0.2.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="CanvasFormat_(Fran%c3%a7ais).html" title="CanvasFormat (Français)">CanvasFormat (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Canvas texture formats.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="ColorMode_(Fran%c3%a7ais).html" title="ColorMode (Français)">ColorMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Contrôle la façon dont les images seront affectées par la couleur actuelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.2-2.html" title="0.2.0">0.2.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="../w/images/f/f4/Remove.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="CompareMode_(Fran%c3%a7ais).html" title="CompareMode (Français)">CompareMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Différents types de <a href="love.graphics-539.html" title="love.graphics.setStencilTest (Français)">test de stencil</a> par pixel et comparaisons de <a href="love.graphics-498.html" title="love.graphics.setDepthMode (Français)">test de profondeur</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="CullMode_(Fran%c3%a7ais).html" title="CullMode (Français)">CullMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Façon dont la géométrie des <a href="Mesh_(Fran%c3%a7ais).html" title="Mesh (Français)">Mesh</a> (maillages) est filtrée lors du rendu.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="DrawMode_(Fran%c3%a7ais).html" title="DrawMode (Français)">DrawMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Contrôle si les formes sont tracées par leur bordure ou remplies.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="FilterMode_(Fran%c3%a7ais).html" title="FilterMode (Français)">FilterMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Façon dont l'image est filtrée lors d'un changement d'échelle.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="GraphicsFeature_(Fran%c3%a7ais).html" title="GraphicsFeature (Français)">GraphicsFeature (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Fonctionnalités graphiques pouvant être vérifiées à l'aide de <a href="love.graphics-622.html" title="love.graphics.getSupported (Français)">love.graphics.getSupported</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="GraphicsLimit_(Fran%c3%a7ais).html" title="GraphicsLimit (Français)">GraphicsLimit (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Types de limites graphique, dépendantes du système.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9-3.html" title="0.9.1">0.9.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="IndexDataType_(Fran%c3%a7ais).html" title="IndexDataType (Français)">IndexDataType (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Type de donnée des cartes de vecteur.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="LineJoin_(Fran%c3%a7ais).html" title="LineJoin (Français)">LineJoin (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Style des jointures de ligne.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="LineStyle_(Fran%c3%a7ais).html" title="LineStyle (Français)">LineStyle (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Les styles dans lesquels les lignes sont tracées.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="MeshDrawMode_(Fran%c3%a7ais).html" title="MeshDrawMode (Français)">MeshDrawMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Façon dont les vecteurs d'un <a href="Mesh_(Fran%c3%a7ais).html" title="Mesh (Français)">Mesh</a> (maillage) sont tracés.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="MipmapMode_(Fran%c3%a7ais).html" title="MipmapMode (Français)">MipmapMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Contrôle si un <a href="Canvas_(Fran%c3%a7ais).html" title="Canvas (Français)">Canvas</a> comporte des mipmaps, et sans comportement dans ce cas.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="PixelFormat_(Fran%c3%a7ais).html" title="PixelFormat (Français)">PixelFormat (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Formats de pixels pour <a href="Texture_(Fran%c3%a7ais).html" title="Texture (Français)">Textures</a>, <a href="ImageData_(Fran%c3%a7ais).html" title="ImageData (Français)">ImageData</a>, et <a href="CompressedImageData_(Fran%c3%a7ais).html" title="CompressedImageData (Français)">CompressedImageData</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="SpriteBatchUsage_(Fran%c3%a7ais).html" title="SpriteBatchUsage (Français)">SpriteBatchUsage (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Indication d'usage pour les <a href="SpriteBatch_(Fran%c3%a7ais).html" title="SpriteBatch (Français)">macros de sprite</a> et <a href="Mesh_(Fran%c3%a7ais).html" title="Mesh (Français)">maillages</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="StackType_(Fran%c3%a7ais).html" title="StackType (Français)">StackType (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Types de piles d'état graphique utilisées avec <a href="love.graphics-450.html" title="love.graphics.push (Français)">love.graphics.push</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.9-2.html" title="0.9.2">0.9.2</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="StencilAction_(Fran%c3%a7ais).html" title="StencilAction (Français)">StencilAction (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">La façon dont la <a href="love.graphics-310.html" title="love.graphics.stencil (Français)">fonction stencil</a> modifie les valeurs de stencil des pixels qu'il touche.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="TextureType_(Fran%c3%a7ais).html" title="TextureType (Français)">TextureType (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Types de textures (2D, cubemap, etc.)</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="VertexAttributeStep_(Fran%c3%a7ais).html" title="VertexAttributeStep (Français)">VertexAttributeStep (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Fréquence à laquelle un ombrage de vecteur récupère les données des attributs de vecteurs depuis le maillage, lorsqu'il est tracé.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="VertexWinding_(Fran%c3%a7ais).html" title="VertexWinding (Français)">VertexWinding (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Vertex winding.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="../w/images/a/a7/Add.png" width="8" height="11" /> <a href="11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="WrapMode_(Fran%c3%a7ais).html" title="WrapMode (Français)">WrapMode (Français)</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">La façon dont une image boucle l'intérieur d'un large <a href="Quad_(Fran%c3%a7ais).html" title="Quad (Français)">Quad</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Voir_aussi">Voir aussi</span></h2>
+<ul><li><a href="love_(Fran%c3%a7ais).html" title="love (Français)">love (Français)</a></li></ul>
+<h2><span class="mw-headline" id="Autres_langues">Autres langues</span></h2>
+<div class="i18n">
+<p><a href="love-224.html?title=love.graphics_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="love-225.html" title="love.graphics (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="love-7.html" title="love.graphics">English</a>&#160;&#8211; 
+<a href="love-226.html" title="love.graphics (Español)">Español</a>&#160;&#8211;
+<a class="mw-selflink selflink">Français</a>&#160;&#8211;
+<a href="love-228.html" title="love.graphics (Indonesia)">Indonesia</a>&#160;&#8211;
+<a href="love-229.html" title="love.graphics (Italiano)">Italiano</a>&#160;&#8211;
+<a href="love-230.html?title=love.graphics_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="love-231.html?title=love.graphics_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="love-232.html?title=love.graphics_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="love-233.html?title=love.graphics_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="love-234.html" title="love.graphics (Português)">Português</a>&#160;&#8211;
+<a href="love-235.html" title="love.graphics (Română)">Română</a>&#160;&#8211;
+<a href="love-236.html?title=love.graphics_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="love-237.html?title=love.graphics_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="love-238.html?title=love.graphics_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="love-239.html?title=love.graphics_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="love-240.html" title="love.graphics (Česky)">Česky</a>&#160;&#8211;
+<a href="love-241.html?title=love.graphics_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="love-242.html?title=love.graphics_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="love-69.html" title="love.graphics (Русский)">Русский</a>&#160;&#8211;
+<a href="love-243.html?title=love.graphics_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="love-244.html?title=love.graphics_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="love-245.html?title=love.graphics_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="love-246.html?title=love.graphics_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="love-247.html" title="love.graphics (日本語)">日本語</a>&#160;&#8211;
+<a href="love-248.html?title=love.graphics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="love-249.html" title="love.graphics (简体中文)">简体中文</a>&#160;&#8211;
+<a href="love-250.html" title="love.graphics (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="love-251.html" title="love.graphics (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240406142035
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.203 seconds
+Real time usage: 0.284 seconds
+Preprocessor visited node count: 4458/1000000
+Preprocessor generated node count: 9457/1000000
+Post‐expand include size: 147761/2097152 bytes
+Template argument size: 18449/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  181.536      1 -total
+ 24.05%   43.651    116 Template:ListingFields
+  3.39%    6.160      1 Template:i18n
+  1.84%    3.345     28 Template:Lang
+  0.65%    1.188      7 Template:ListingIntro
+  0.60%    1.097      7 Template:ListingOutro
+  0.48%    0.865      1 Template:notice_(Français)
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:839-0!canonical and timestamp 20240406142034 and revision id 27696
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/index49bc.html?title=love.graphics_(Fran%c3%a7ais)&amp;oldid=27696">http://love2d.org/w/index.php?title=love.graphics_(Français)&amp;oldid=27696</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Modules_(Fran%c3%a7ais).html" title="Category:Modules (Français)">Modules (Français)</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/index6aa3-3.html?title=Special:UserLogin&amp;returnto=love.graphics+%28Fran%C3%A7ais%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/love-133.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/love-133.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/indexe6c5.html?title=love.graphics_(Fran%C3%A7ais)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index010b.html?title=love.graphics_(Fran%C3%A7ais)&amp;oldid=27696" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index95b9.html?title=love.graphics_(Fran%C3%A7ais)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_love-133.html" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 13 March 2022, at 11:14.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.203","walltime":"0.284","ppvisitednodes":{"value":4458,"limit":1000000},"ppgeneratednodes":{"value":9457,"limit":1000000},"postexpandincludesize":{"value":147761,"limit":2097152},"templateargumentsize":{"value":18449,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  181.536      1 -total"," 24.05%   43.651    116 Template:ListingFields","  3.39%    6.160      1 Template:i18n","  1.84%    3.345     28 Template:Lang","  0.65%    1.188      7 Template:ListingIntro","  0.60%    1.097      7 Template:ListingOutro","  0.48%    0.865      1 Template:notice_(Français)"]},"cachereport":{"timestamp":"20240406142035","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script></body>
+<!-- Mirrored from love2d.org/wiki/love.graphics_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 17:33:10 GMT -->
+</html>

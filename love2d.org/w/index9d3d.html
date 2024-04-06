@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Getting_Started_(Rom%c3%a2n%c4%83)&oldid=20078 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 17:33:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Getting Started (Română) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Getting_Started_(Română)","wgTitle":"Getting Started (Română)","wgCurRevisionId":20078,"wgRevisionId":20078,"wgArticleId":3627,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["LÖVE"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Getting_Started_(Română)","wgRelevantArticleId":3627,"wgRequestId":"438ecabce267e92bf210adf2","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Getting Started (Română)" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Getting_Started_(Rom%C3%A2n%C4%83)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Getting_Started_Română rootpage-Getting_Started_Română skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="http://love2d.org/wiki/Getting_Started_(Română)" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Talk:Getting_Started_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Getting Started (Română)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"><div class="mw-revision"><div id="mw-revision-info">Revision as of 08:16, 26 June 2017 by <a href="/w/index.php?title=User:Adrian-castravete&amp;action=edit&amp;redlink=1" class="new mw-userlink" title="User:Adrian-castravete (page does not exist)"><bdi>Adrian-castravete</bdi></a> <span class="mw-usertoollinks">(<a href="/w/index.php?title=User_talk:Adrian-castravete&amp;action=edit&amp;redlink=1" class="new mw-usertoollinks-talk" title="User talk:Adrian-castravete (page does not exist)">talk</a> | <a href="/wiki/Special:Contributions/Adrian-castravete" class="mw-usertoollinks-contribs" title="Special:Contributions/Adrian-castravete">contribs</a>)</span> <span class="comment">(Updated the translation to closely match the English counterpart.)</span></div><div id="mw-revision-nav">(<a href="/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;diff=prev&amp;oldid=20078" title="Getting Started (Română)">diff</a>) <a href="/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;direction=prev&amp;oldid=20078" title="Getting Started (Română)">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ob.C8.9Bine_L.C3.96VE"><span class="tocnumber">1</span> <span class="toctext">Obține LÖVE</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#S.C4.83_facem_un_joc.21"><span class="tocnumber">2</span> <span class="toctext">Să facem un joc!</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rularea_Jocurilor"><span class="tocnumber">3</span> <span class="toctext">Rularea Jocurilor</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Windows"><span class="tocnumber">3.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Linux"><span class="tocnumber">3.2</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Mac_OS_X"><span class="tocnumber">3.3</span> <span class="toctext">Mac OS X</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Android"><span class="tocnumber">3.4</span> <span class="toctext">Android</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#iOS"><span class="tocnumber">3.5</span> <span class="toctext">iOS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Pa.C8.99ii_urm.C4.83tori"><span class="tocnumber">4</span> <span class="toctext">Pașii următori</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Alte_limbi"><span class="tocnumber">5</span> <span class="toctext">Alte limbi</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Obține_LÖVE"></span><span class="mw-headline" id="Ob.C8.9Bine_L.C3.96VE">Obține LÖVE</span></h2>
+<p>Descarcă ultima versiune a frameworkului LÖVE de pe <a rel="nofollow" class="external text" href="http://love2d.org/">site</a> și instaleaz-o. Dacă ești pe Windows și nu vrei să instalezi, poți doar să descarci versiunea portabilă (o arhiva .zip) și să o extragi oriunde vrei.
+</p><p>Ca să afli ce versiune de LÖVE rulezi, scrie în terminal următoarea comandă:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>love --version
+</pre></div>
+<h2><span id="Să_facem_un_joc!"></span><span class="mw-headline" id="S.C4.83_facem_un_joc.21">Să facem un joc!</span></h2>
+<p>Pentru a face un joc minimalist, creează un folder oriunde și deschide editorul tău preferat de text. <a rel="nofollow" class="external text" href="http://sublimetext.com/">Sublime text</a> e destul de bun, având suport Lua și fiind valabil pe toate platformele. Crează un fișier și numește-l <i>main.lua</i>. Scrie următoarele linii de cod în acest fișier și salvează-l:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="Rularea_Jocurilor">Rularea Jocurilor</span></h2>
+<p>LÖVE poate rula jocurile în două moduri:
+</p>
+<ul><li>Dintr-un folder care conține un fișier <i>main.lua</i></li>
+<li>Dintr-un <a href="http://love2d.org/w/index.php?title=Fi%C8%99ier_Joc_L%C3%96VE&amp;action=edit&amp;redlink=1" class="new" title="Fișier Joc LÖVE (page does not exist)">Fișier Joc LÖVE</a> care are la primul nivel (root) fișierul <i>main.lua</i></li></ul>
+<p>Pentru crearea fișierelor .love vezi <a href="http://love2d.org/w/index.php?title=Distribuirea_Jocurilor&amp;action=edit&amp;redlink=1" class="new" title="Distribuirea Jocurilor (page does not exist)">Distribuirea Jocurilor</a>.
+</p>
+<hr />
+<h3><span class="mw-headline" id="Windows">Windows</span></h3>
+<p><a rel="nofollow" class="external text" href="http://studio.zerobrane.com/">ZeroBrane Studio</a>, <a href="http://love2d.org/wiki/Sublime_Text_2" class="mw-redirect" title="Sublime Text 2">Sublime Text 2</a>, <a href="http://love2d.org/wiki/Notepad++" title="Notepad++">Notepad++</a> și <a href="http://love2d.org/wiki/SciTE" title="SciTE">SciTE</a> iți permit să lansezi jocul direct din editor.
+</p><p>Altfel, cel mai ușor mod de a porni un joc este să tragi folderul jocului peste fișierul love.exe sau o scurtătură ce duce la acesta. Ține minte să tragi folderul care conține <code>main.lua</code>, nu <code>main.lua</code> însuși.
+</p><p>Mai poți și să lansezi jocul din linia de comandă:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="s2">&quot;C:\Program Files\LOVE\love.exe&quot;</span> <span class="s2">&quot;C:\jocuri\jocul-meu&quot;</span>
+<span class="s2">&quot;C:\Program Files\LOVE\love.exe&quot;</span> <span class="s2">&quot;C:\jocuri\joc-împachetat.love&quot;</span>
+</pre></div>
+<p>Poți crea o scurtătură care să facă asta; fă o simplă scurtătură la love.exe, clic dreapta pe ea și selectează „Proprietăți”(Properties), și apoi pune linia de comandă pe care o vrei în câmpul „Țintă”(Target) pentru această scurtătură.
+</p><p>Pe Windows, există o opțiune de linie de comandă care-ți permite să atașezi o consolă ferestrei, permițându-ți astfel să vezi rezultatele apelurilor <code>print</code> (echivalent cu setarea opțiunii <code>t.console=true</code> în <a href="http://love2d.org/wiki/conf.lua" class="mw-redirect" title="conf.lua">conf.lua</a>):
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="s2">&quot;C:\Program Files\LOVE\love.exe&quot;</span> --console
+</pre></div>
+<hr />
+<h3><span class="mw-headline" id="Linux">Linux</span></h3>
+<p>Pe linux poți folosi una dintre aceste comenzi:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>love /home/cale/spre/director-joc/
+love /home/cale/spre/joc-împachetat.love
+</pre></div>
+<p>Dacă ai instalat LÖVE la nivel de sistem, poți să dai de asemenea clic pe fișierele .love în managerul de fișiere.
+</p>
+<hr />
+<h3><span class="mw-headline" id="Mac_OS_X">Mac OS X</span></h3>
+<p>Pe Mac OS X, folderul cu <code>main.lua</code> sau fișierul .love pot fi trase deasupra pachetului aplicației love. De pe Terminal (linie de comandă), poți să rulezi un joc love și așa (presupunând ca este instalat în directorul Applications):
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>open -n -a love <span class="s2">&quot;~/cale/spre/joc&quot;</span>
+</pre></div>
+<p>Totuși, metoda de mai sus nu va afișa ce a scris programul pe terminal. Pentru a face asta, va trebui să execuți binarul love direct din folderul pachetului aplicației:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>/Applications/love.app/Contents/MacOS/love ~/cale/spre/joc
+</pre></div>
+<p>Poți seta un alias în sesiunea terminalului pentru a executa aplicația când folosești <code>love</code>
+</p>
+<pre>prin adăugarea unui alias în <code>~/.bash_profile</code>.
+</pre>
+<p>Deschide fișierul cu
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>open -a TextEdit ~/.bash_profile
+</pre></div>
+<p>S-ar putea să trebuiască să execuți
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>touch ~/.bash_profile
+</pre></div>
+<p>înainte, dacă fișierul nu există.
+</p><p>Apoi scrie următorul cod și salvează fișierul:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># alias către love</span>
+<span class="nb">alias</span> <span class="nv">love</span><span class="o">=</span><span class="s2">&quot;/Applications/love.app/Contents/MacOS/love&quot;</span>
+</pre></div>
+<p>Acum poți apela love din linia de comandă ca pe Linux și Windows:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>love ~/cale/spre/jocul_meu
+</pre></div>
+<hr />
+<h3><span class="mw-headline" id="Android">Android</span></h3>
+<p>Atât timp cât ai aplicația love instalată de pe playstore sau orice altă sursă, următoarele metode funcționează:
+</p>
+<ul><li>Metoda 1: Transferă directorul jocului pe /sdcard/lovegame unde main.lua se găsește la /sdcard/lovegame/main.lua. Apoi rulează aplicația.</li>
+<li>Metoda 2: Transferă un .love al jocului tău pe dispozitiv și dă clic(touch) pe el. Majoritatea exploratorilor vor rula jocul .love cu aplicația love. Dacă nu o fac, poți instala ES File Explorer care o va face. Dacă folosești Dropbox, și acesta poate fi folosit pentru a deschide fișierele .love.</li></ul>
+<hr />
+<h3><span class="mw-headline" id="iOS">iOS</span></h3>
+<p>Pentru a rula LÖVE pe iOS, trebuie mai întâi compilat și instalat. Pentru a face asta vei avea nevoie de Mac OS X, <a rel="nofollow" class="external text" href="https://developer.apple.com/xcode/">Xcode 7 sau mai nou</a>, și codul sursă pentru LÖVE pentru iOS de la <a rel="nofollow" class="external text" href="https://love2d.org/">pagina principală</a>.
+</p>
+<ul><li>Dacă directoarele <code>include</code> și <code>libraries</code> nu sunt prezente în directorul <code>love/platform/xcode/ios</code>, <a rel="nofollow" class="external text" href="https://bitbucket.org/rude/love/downloads/love-0.10.0-ios-libraries.zip">descarcă-le</a> și pune-le acolo. Acestea conțin dependințele bibliotecilor terțe folosite de LÖVE.</li></ul>
+<ul><li>Deschide proiectul Xcode care se găsește la <code>love/platform/xcode/love.xcodeproj</code> și selectează ținta <code>love-ios</code> în meniul derulant din partea superioară a ferestrei.</li></ul>
+<ul><li>E posibil să doriți să schimbați Configurația Procesului de Construire de la Debug(Depanare) la Release(Mediu Producție) pentru o performanță mai bună, prin deschiderea meniului „Edit Scheme...” din aceeași selecție derulantă.</li></ul>
+<ul><li>Alege ori un Simulator iOS ori dispozitivul tău iOS conectat în selecția derulantă din partea dreaptă a celei anterioare, și dă clic pe butonul Build-and-Run ▶︎ (Construiește și Rulează) din partea stângă, care va instala LÖVE pe dispozitivul țintă după ce îl compilează.</li></ul>
+<p>LÖVE pe iOS are inclusă o listă simplă cu jocurile care sunt instalate (până când <a href="http://love2d.org/wiki/Game_Distribution" title="Game Distribution">fuzionezi</a> un .love cu el pentru distribuție.)
+</p>
+<ul><li>Pentru a pune un fișier .love pe Simulatorul iOS după ce LÖVE a fost instalat, trage fișierul peste fereastra Simulatorului iOS cât timp este deschisă. LÖVE se va lansa dacă nu este deja deschis. Dacă un alt joc este activ este posibil să trebuiască să închideți LÖVE pentru a vedea jocul nou (apasă Shift-Command-H de două ori pentru a deschide meniul App Switcher de pe Simulatorul iOS.)</li></ul>
+<ul><li>Pentru a pune un fișier .love sau un director de joc pe dispozitivul tău iOS după ce LÖVE a fost instalat, poți să-l descarci cu Safari, sau să-l transferi pe calculatorul tău cu iTunes când dispozitivul tău este conectat: deschide iTunes, du-te la dispozitivul tău iOS care are LÖVE instalat, mergi la secțiunea 'Apps' și scrollează până găsești LÖVE, și adaugă fișierul .love sau directorul la secțiunea LÖVE's Documents.</li></ul>
+<p>Vezi pagina <a href="http://love2d.org/w/index.php?title=Distribuirea_Jocurilor&amp;action=edit&amp;redlink=1" class="new" title="Distribuirea Jocurilor (page does not exist)">Distribuirea Jocurilor</a> pentru a crea Jocuri LÖVE Fuzionate pentru iOS și distribuirea lor.
+</p>
+<h2><span id="Pașii_următori"></span><span class="mw-headline" id="Pa.C8.99ii_urm.C4.83tori">Pașii următori</span></h2>
+<ul><li><a href="http://love2d.org/w/index.php?title=Tutorial:Func%C8%9Bii_Callback&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Funcții Callback (page does not exist)">Tutorial:Funcții_Callback</a> te va îndruma spre structura de bază a unui joc scris în love.</li>
+<li><a href="http://love2d.org/w/index.php?title=Category:Tutoriale&amp;action=edit&amp;redlink=1" class="new" title="Category:Tutoriale (page does not exist)">Category:Tutoriale</a> unde vei găsi alte informații despre love</li></ul>
+<h2><span class="mw-headline" id="Alte_limbi">Alte limbi</span></h2>
+<div class="i18n">
+<p><a href="http://love2d.org/wiki/Getting_Started_(Dansk)" title="Getting Started (Dansk)">Dansk</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Deutsch)" title="Getting Started (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started" title="Getting Started">English</a>&#160;&#8211; 
+<a href="http://love2d.org/wiki/Getting_Started_(Español)" title="Getting Started (Español)">Español</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Français)" title="Getting Started (Français)">Français</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Italiano)" title="Getting Started (Italiano)">Italiano</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Magyar)" title="Getting Started (Magyar)">Magyar</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Nederlands)" title="Getting Started (Nederlands)">Nederlands</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Polski)" title="Getting Started (Polski)">Polski</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Português)" title="Getting Started (Português)">Português</a>&#160;&#8211;
+<a class="mw-selflink selflink">Română</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Slovenský)" title="Getting Started (Slovenský)">Slovenský</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Svenska)" title="Getting Started (Svenska)">Svenska</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Türkçe)" title="Getting Started (Türkçe)">Türkçe</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Русский)" title="Getting Started (Русский)">Русский</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Українська)" title="Getting Started (Українська)">Українська</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Getting_Started_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(日本語)" title="Getting Started (日本語)">日本語</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(正體中文)" title="Getting Started (正體中文)">正體中文</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(简体中文)" title="Getting Started (简体中文)">简体中文</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(Tiếng_Việt)" title="Getting Started (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Getting_Started_(한국어)" title="Getting Started (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="http://love2d.org/wiki/Help:i18n" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240406145520
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.036 seconds
+Real time usage: 1.083 seconds
+Preprocessor visited node count: 369/1000000
+Preprocessor generated node count: 839/1000000
+Post‐expand include size: 3347/2097152 bytes
+Template argument size: 1430/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2765/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.472      1 -total
+100.00%    6.472      1 Template:i18n
+ 50.18%    3.247     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:3627-0!canonical and timestamp 20240406145519 and revision id 20078
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%c3%a2n%c4%83)&amp;oldid=20078">http://love2d.org/w/index.php?title=Getting_Started_(Română)&amp;oldid=20078</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://love2d.org/wiki/Category:LÖVE" title="Category:LÖVE">LÖVE</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Getting+Started+%28Rom%C3%A2n%C4%83%29&amp;returntoquery=oldid%3D20078" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Getting_Started_(Română)" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Getting_Started_(Română)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;oldid=20078&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;oldid=20078" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Getting_Started_(Rom%C3%A2n%C4%83)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="http://love2d.org/wiki/Special:Browse/:Getting-5FStarted-5F(Română)" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 6 April 2024, at 15:36.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.036","walltime":"1.083","ppvisitednodes":{"value":369,"limit":1000000},"ppgeneratednodes":{"value":839,"limit":1000000},"postexpandincludesize":{"value":3347,"limit":2097152},"templateargumentsize":{"value":1430,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2765,"limit":5000000},"timingprofile":["100.00%    6.472      1 -total","100.00%    6.472      1 Template:i18n"," 50.18%    3.247     28 Template:Lang"]},"cachereport":{"timestamp":"20240406145520","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":47});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Getting_Started_(Rom%c3%a2n%c4%83)&oldid=20078 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 17:33:32 GMT -->
+</html>
