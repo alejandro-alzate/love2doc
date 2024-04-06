@@ -19,25 +19,25 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Config_Files_-28Deutsch-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:51:15+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Config_Files_-28Indonesia-29">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:51:30+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Config_Files_-28Deutsch-29">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Config_Files_-28Indonesia-29">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE"/>
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ACallbacks"/>
-		<rdfs:label>Config Files (Deutsch)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Config_Files_-28Deutsch-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Config_Files_-28Deutsch-29"/>
+		<rdfs:label>Config Files (Indonesia)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Config_Files_-28Indonesia-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Config_Files_-28Indonesia-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Konfigurationsdatei eines Spiels.</property:Description>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pengaturan konfigurasi permainan.</property:Description>
 		<property:Since rdf:resource="&wiki;000"/>
 		<property:Subcategory rdf:resource="&wiki;General"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-22T08:23:07Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457103.8493866</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Config Files (Deutsch)</swivt:wikiPageSortKey>
-		<property:parent rdf:resource="&wiki;love_-28Deutsch-29"/>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-10T05:21:03Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458218.7229514</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Config Files (Indonesia)</swivt:wikiPageSortKey>
+		<property:parent rdf:resource="&wiki;love_-28Indonesia-29"/>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALÖVE" />
