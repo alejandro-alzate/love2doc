@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -66,7 +66,7 @@
 </div>
 
 <h2><span id="Quads_および_SpriteBatch"></span><span class="mw-headline" id="Quads_.E3.81.8A.E3.82.88.E3.81.B3_SpriteBatch"><a href="Quad_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Quad (日本語)">Quads</a> および <a href="SpriteBatch_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="SpriteBatch (日本語)">SpriteBatch</a></span></h2>
-<p><a href="love.graphics-159.html" title="love.graphics.draw (日本語)">love.graphics.draw</a> メソッドは <a href="Quad_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Quad (日本語)">Quad</a> により指定された画像を部分的に描画することができます。 Quad が単一画像の異なる部分から描画される場合は、SpriteBatch の使用およびフレームごとに Quad を変更しないことでシステムをより効率的にすることができます。
+<p><a href="love.graphics-146.html" title="love.graphics.draw (日本語)">love.graphics.draw</a> メソッドは <a href="Quad_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Quad (日本語)">Quad</a> により指定された画像を部分的に描画することができます。 Quad が単一画像の異なる部分から描画される場合は、SpriteBatch の使用およびフレームごとに Quad を変更しないことでシステムをより効率的にすることができます。
 </p><p>SpriteBatch の作成時に、 Quad ("タイル") が扱う画像および Quad へ追加する最大数を指定する必要があります。この場合は、画面上で可視化されるタイルの最大数です。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">tilesetBatch</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newSpriteBatch</span><span class="p">(</span><span class="n">tilesetImage</span><span class="p">,</span> <span class="n">tilesDisplayWidth</span> <span class="o">*</span> <span class="n">tilesDisplayHeight</span><span class="p">)</span>
@@ -134,7 +134,7 @@
   <span class="n">tilesetBatch</span><span class="p">:</span><span class="n">flush</span><span class="p">()</span>
 <span class="kr">end</span>
 </pre></div>
-<p>最後に、 SpriteBatch を描画するためにそれを <code><a href="love.graphics-159.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> へ送信します。
+<p>最後に、 SpriteBatch を描画するためにそれを <code><a href="love.graphics-146.html" title="love.graphics.draw (日本語)">love.graphics.draw</a></code> へ送信します。
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">tilesetBatch</span><span class="p">)</span>
@@ -506,5 +506,5 @@ Retrieved from "<a dir="ltr" href="../w/indexd335.html?title=Tutorial:Efficient_
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.059","walltime":"1.050","ppvisitednodes":{"value":355,"limit":1000000},"ppgeneratednodes":{"value":823,"limit":1000000},"postexpandincludesize":{"value":4739,"limit":2097152},"templateargumentsize":{"value":2822,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":37290,"limit":5000000},"timingprofile":["100.00%    6.082      1 -total","100.00%    6.082      1 Template:i18n"," 54.09%    3.290     28 Template:Lang"]},"cachereport":{"timestamp":"20240405190227","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":41});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Efficient_Tile-based_Scrolling_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:25 GMT -->
 </html>

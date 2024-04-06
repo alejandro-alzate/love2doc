@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:24 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -51,7 +51,7 @@
 
 					<!-- start content -->
 					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Les fonctions <a href="Category_Callbacks_(Fran%c3%a7ais).html" title="Category:Callbacks (Français)">callback</a> (fonctions de rappel) sont appelées dans LÖVE par la fonction <a href="love-263.html" title="love.run (Français)">love.run</a> pour effectuer des tâches diverses et sont toutes facultatives. Toutefois, pour une expérience de jeu complète il faudra probablement en utiliser la quasi-totalité, il est donc intéressant de les connaître.
-</p><p>Une fonction de rappel, pour ceux qui sont nouveaux en programmation ou peu familier avec ce terme, est une fonction qui fonctionne en arrière en quelque sorte. Dans le cas d'une fonction classique comme <a href="love.graphics-160.html" title="love.graphics.draw (Français)">love.graphics.draw</a> ou math.floor, vous appelez cette fonction et LÖVE ou Lua effectue une tâche. Dans le cas d'une fonction de rappel (callback), au contraire, c'est vous qui développez la fonction et LÖVE qui l'appelle lorsque nécessaire. Cela permet de laisser votre code organisé et optimal. Par exemple, comme love.load ne sera appelé que lorsque le jeu est démarré pour la première fois (avant tout autre callback), c'est un endroit approprié pour placer le code qui charge le contenu du jeu et prépare également ses différents éléments.
+</p><p>Une fonction de rappel, pour ceux qui sont nouveaux en programmation ou peu familier avec ce terme, est une fonction qui fonctionne en arrière en quelque sorte. Dans le cas d'une fonction classique comme <a href="love.graphics-147.html" title="love.graphics.draw (Français)">love.graphics.draw</a> ou math.floor, vous appelez cette fonction et LÖVE ou Lua effectue une tâche. Dans le cas d'une fonction de rappel (callback), au contraire, c'est vous qui développez la fonction et LÖVE qui l'appelle lorsque nécessaire. Cela permet de laisser votre code organisé et optimal. Par exemple, comme love.load ne sera appelé que lorsque le jeu est démarré pour la première fois (avant tout autre callback), c'est un endroit approprié pour placer le code qui charge le contenu du jeu et prépare également ses différents éléments.
 </p>
 <div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
 <ul>
@@ -86,7 +86,7 @@
    <span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
-<p>Cette fonction est appelée en permanence et sera probablement l'endroit où la plupart de vos calculs seront effectués. 'dt' signifie «&#160;<a href="love.timer-10.html" title="love.timer.getDelta (Français)">delta temps</a>&#160;», c'est le nombre de secondes depuis la dernière fois que cette fonction a été appelée (qui est habituellement une petite valeur du type 0.025714). 
+<p>Cette fonction est appelée en permanence et sera probablement l'endroit où la plupart de vos calculs seront effectués. 'dt' signifie «&#160;<a href="love.timer-8.html" title="love.timer.getDelta (Français)">delta temps</a>&#160;», c'est le nombre de secondes depuis la dernière fois que cette fonction a été appelée (qui est habituellement une petite valeur du type 0.025714). 
 </p>
 <h2><span class="mw-headline" id="love.draw"><a href="love-266.html" title="love.draw (Français)">love.draw</a></span></h2>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
@@ -94,7 +94,7 @@
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cliquez et glissez le gâteau autour, ou utilisez les touches de direction&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
-<p><code><a href="love-266.html" title="love.draw (Français)">love.draw</a></code> est l'endroit pour tout ce qui concerne l'affichage («&#160;draw&#160;» signifie tracer) et si vous appelez l'un des <code><a href="love.graphics-160.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> en dehors de cette fonction elle n'aura pas d'effet. Cette fonction est aussi appelée en permanence, gardez donc à l'esprit que si vous modifiez la police/couleur/mode/etc à la fin de la fonction, alors cela aura un effet sur les éléments au début de la fonction. Par exemple&#160;: 
+<p><code><a href="love-266.html" title="love.draw (Français)">love.draw</a></code> est l'endroit pour tout ce qui concerne l'affichage («&#160;draw&#160;» signifie tracer) et si vous appelez l'un des <code><a href="love.graphics-147.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> en dehors de cette fonction elle n'aura pas d'effet. Cette fonction est aussi appelée en permanence, gardez donc à l'esprit que si vous modifiez la police/couleur/mode/etc à la fin de la fonction, alors cela aura un effet sur les éléments au début de la fonction. Par exemple&#160;: 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -363,5 +363,5 @@ Retrieved from "<a dir="ltr" href="../w/indexbeb0.html?title=Tutorial:Callback_F
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.042","walltime":"1.005","ppvisitednodes":{"value":429,"limit":1000000},"ppgeneratednodes":{"value":1127,"limit":1000000},"postexpandincludesize":{"value":4803,"limit":2097152},"templateargumentsize":{"value":2208,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10536,"limit":5000000},"timingprofile":["100.00%  595.420      1 -total","  0.97%    5.754      1 Template:i18n","  0.52%    3.099     28 Template:Lang","  0.44%    2.609      2 Template:newin_(Français)"]},"cachereport":{"timestamp":"20240405165934","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Callback_Functions_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:24 GMT -->
 </html>

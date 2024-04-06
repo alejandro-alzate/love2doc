@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 
-<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:25 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="UTF-8"/>
@@ -50,7 +50,7 @@
 										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
 
 					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>L'ajout et l'utilisation de fontes dans LÖVE n'est pas très compliqué, mais il faut garder à l'esprit qu'il faut définir la fonte avant de l'utiliser. Il n'y  pas de moyen de rendre un texte directement depuis un objet <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font</a> (fonte), cela doit toujours être fait via la fonction <code><a href="love.graphics-165.html" title="love.graphics.print (Français)">love.graphics.print</a></code> qui rendra le texte en fonction de la fonte actuelle.
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>L'ajout et l'utilisation de fontes dans LÖVE n'est pas très compliqué, mais il faut garder à l'esprit qu'il faut définir la fonte avant de l'utiliser. Il n'y  pas de moyen de rendre un texte directement depuis un objet <a href="Font_(Fran%c3%a7ais).html" title="Font (Français)">Font</a> (fonte), cela doit toujours être fait via la fonction <code><a href="love.graphics-152.html" title="love.graphics.print (Français)">love.graphics.print</a></code> qui rendra le texte en fonction de la fonte actuelle.
 </p><p>Il existe trois types de fontes dans LÖVE&#160;: 
 </p>
 <ul><li>La fonte par défaut (Bitstream Vera Sans)</li>
@@ -104,7 +104,7 @@
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setNewFont</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
 </pre></div>
 <h2><span class="mw-headline" id="Tracer_et_formater_le_texte">Tracer et formater le texte</span></h2>
-<p>Maintenant que vous avez votre magnifique nouvel objet Font, vous voulez l'utiliser. Pour tracer du texte, vous appelez simple la fonction <code><a href="love.graphics-165.html" title="love.graphics.print (Français)">love.graphics.print</a></code>&#160;:
+<p>Maintenant que vous avez votre magnifique nouvel objet Font, vous voulez l'utiliser. Pour tracer du texte, vous appelez simple la fonction <code><a href="love.graphics-152.html" title="love.graphics.print (Français)">love.graphics.print</a></code>&#160;:
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Voici un texte incroyable&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
@@ -117,7 +117,7 @@
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ceci est la premiere ligne</span><span class="se">\n</span><span class="s2">Ceci est la seconde.</span><span class="se">\n</span><span class="s2">(et troisieme)</span><span class="se">\n\n</span><span class="s2">cinquieme&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </pre></div>
-<p>Les paramètres '100' et '200' sont respectivement les coordonnées <i>x</i> et <i>y</i> du texte. Dans les versions de LÖVE antérieures à 0.6.0, <code><a href="love.graphics-160.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> était utilisé à la place pour tracer du texte.
+<p>Les paramètres '100' et '200' sont respectivement les coordonnées <i>x</i> et <i>y</i> du texte. Dans les versions de LÖVE antérieures à 0.6.0, <code><a href="love.graphics-147.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> était utilisé à la place pour tracer du texte.
 </p><p>LÖVE peut également tracer du texte avec césure de mot et alignement en utilisant la fonction plus complexe <code><a href="../w/index8248.html?title=love.graphics.printf_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" class="new" title="love.graphics.printf (Français) (page does not exist)">love.graphics.printf</a></code>&#160;: 
 </p>
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Une très longue phrase qui sera probablement cassée en plusieurs pièces par mon LÖVE.&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
@@ -316,5 +316,5 @@ Retrieved from "<a dir="ltr" href="../w/index8405.html?title=Tutorial:Fonts_and_
 		</div>
 		</div>
 		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.039","walltime":"1.207","ppvisitednodes":{"value":372,"limit":1000000},"ppgeneratednodes":{"value":867,"limit":1000000},"postexpandincludesize":{"value":3811,"limit":2097152},"templateargumentsize":{"value":1894,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6404,"limit":5000000},"timingprofile":["100.00%    5.468      1 -total","100.00%    5.468      1 Template:i18n"," 54.41%    2.975     28 Template:Lang"]},"cachereport":{"timestamp":"20240405210925","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":31});});</script></body>
-<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:58:56 GMT -->
+<!-- Mirrored from love2d.org/wiki/Tutorial:Fonts_and_Text_(Français) by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 02:06:25 GMT -->
 </html>
