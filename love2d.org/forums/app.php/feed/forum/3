@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/forum/3" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-06T14:24:28+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/forum/3</id>
+
+		<entry>
+		<author><name><![CDATA[edu]]></name></author>
+		<updated>2024-04-06T14:24:28+00:00</updated>
+
+		<published>2024-04-06T14:24:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259184#p259184</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259184#p259184"/>
+		<title type="html"><![CDATA[General • Lua]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259184#p259184"><![CDATA[
+sup guys, for some reason, my character image doesn't render on love 2d windown. My other project is working fine but, in this one,  it doesn't. can someone help me?<br><br>posX = 250<br>posY = 250<br>tam = 1<br>ori= 120<br>angulo = 0<br><br>love.graphics.toggleFullscreen = true<br>function love.load()<br>PlaImg = love.graphics.newImage("Imgs/char.png")<br>love.mouse.setVisible = false<br>end<br><br>function love.draw()<br>rot = angulo<br>love.graphics.draw(PlaImg, posX, posY, rot, tam, ori, ori)<br>end<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274308">edu</a> — Sat Apr 06, 2024 2:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-06T09:53:43+00:00</updated>
+
+		<published>2024-04-06T09:53:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259183#p259183</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259183#p259183"/>
+		<title type="html"><![CDATA[General • Re: LÖVE 11.5 released!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259183#p259183"><![CDATA[
+What system, provide details on how you launch it (graphical UI, from console etc.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sat Apr 06, 2024 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kev30]]></name></author>
+		<updated>2024-04-04T00:37:11+00:00</updated>
+
+		<published>2024-04-04T00:37:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259168#p259168</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259168#p259168"/>
+		<title type="html"><![CDATA[General • Re: LÖVE 11.5 released!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259168#p259168"><![CDATA[
+hello i am new(bie) i have dl love 11.5 and start him no problem here but when a want  start main.lua "hello world" text, i have this error: <br><br>Error<br><br>[love "boot.lua"]:328: No code to run<br>Your game might be packaged incorrectly.<br>Make sure main.lua is at the top level of the zip.<br><br><br>Traceback<br><br>[love "callbacks.lua"]:228: in function 'handler'<br>[C]: in function 'error'<br>[C]: in function 'xpcall'<br>[C]: in function 'xpcall'<br><br>i have also test whit a game ArnesBreakout_v23 and if i use folder (text) he don"t work (same error 328) but if a use file in .love he work<br><br>if you have a solution to my problem, will be fine <br>best regards<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274161">kev30</a> — Thu Apr 04, 2024 12:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[麻猫和黄猫]]></name></author>
+		<updated>2024-04-02T17:09:44+00:00</updated>
+
+		<published>2024-04-02T17:09:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259156#p259156</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259156#p259156"/>
+		<title type="html"><![CDATA[General • 菜鸟做的文字游戏 noob's game]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259156#p259156"><![CDATA[
+给中国同好：    <br>我刚开始学这东西，做的一个文字游戏，很垃圾，可以供批判观赏,找到圣经就算赢，如果可以的话给些学习建议或者单纯提意见,谢谢<br> hi i am noob from china , i made a text adventrue ,if you find a bible you just win in the game , i hope you guys could give me some suggest how can keep learning to build  a game or you are noob like me maybe can help or not , my english leval too low, pls dont mind it , thank you.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24123">test.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=232254">麻猫和黄猫</a> — Tue Apr 02, 2024 5:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Noba]]></name></author>
+		<updated>2024-04-02T14:27:13+00:00</updated>
+
+		<published>2024-04-02T14:27:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259155#p259155</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259155#p259155"/>
+		<title type="html"><![CDATA[General • Re: What exactly *is* LÖVE 2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259155#p259155"><![CDATA[
+<blockquote class="uncited"><div>It's more of a "framework". There is no built-in scene tree, game objects, draw ordering, GUI system, or anything like that.<br><br>There are some main lifecycle callbacks (load, update, draw, etc.) and input callbacks, and then various modules with functions to help you do what you want. See: <a href="https://love2d.org/wiki/love" class="postlink">https://love2d.org/wiki/love</a><br><br>It's definitely not a fantasy console like Picotron or Pico-8, there are no GUI tools/editors or specific workflow (but also there are no limitations with Löve).</div></blockquote>I know there's no GUIs or interfaces or anything, I more meant how it just gives you the basic functionality and you implement everything yourself. That's cool though, pretty much exactly what I was hoping for. Thanks.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274058">Noba</a> — Tue Apr 02, 2024 2:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ross]]></name></author>
+		<updated>2024-04-02T12:11:51+00:00</updated>
+
+		<published>2024-04-02T12:11:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259154#p259154</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259154#p259154"/>
+		<title type="html"><![CDATA[General • Re: What exactly *is* LÖVE 2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259154#p259154"><![CDATA[
+It's more of a "framework". There is no built-in scene tree, game objects, draw ordering, GUI system, or anything like that.<br><br>There are some main lifecycle callbacks (load, update, draw, etc.) and input callbacks, and then various modules with functions to help you do what you want. See: <a href="https://love2d.org/wiki/love" class="postlink">https://love2d.org/wiki/love</a><br><br>It's definitely not a fantasy console like Picotron or Pico-8, there are no GUI tools/editors or specific workflow (but also there are no limitations with Löve).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139962">Ross</a> — Tue Apr 02, 2024 12:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-02T11:10:26+00:00</updated>
+
+		<published>2024-04-02T11:10:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259153#p259153</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259153#p259153"/>
+		<title type="html"><![CDATA[General • Re: What exactly *is* LÖVE 2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259153#p259153"><![CDATA[
+It is whatever you want it to be.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Tue Apr 02, 2024 11:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Noba]]></name></author>
+		<updated>2024-04-02T10:40:45+00:00</updated>
+
+		<published>2024-04-02T10:40:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259152#p259152</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259152#p259152"/>
+		<title type="html"><![CDATA[General • What exactly *is* LÖVE 2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259152#p259152"><![CDATA[
+I see that it says an engine on the website and wiki, but to me that conjures up images of built in support for entities, scenes, collisions etc... Is Love like that, or is it more of a framework, giving you a main loop and options for rendering, playing audio and things, with the developer building up the game framework themselves?<br><br>I've been working on a game framework in Picotron, which works as I described above, but considering bringing it over to Love instead.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274058">Noba</a> — Tue Apr 02, 2024 10:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2024-03-29T19:14:25+00:00</updated>
+
+		<published>2024-03-29T19:14:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259130#p259130</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259130#p259130"/>
+		<title type="html"><![CDATA[General • Re: How can I learn Lua and Love2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259130#p259130"><![CDATA[
+<blockquote class="uncited"><div>Tho I have some difficulties guessing where to start, should I start by learning and mastering <strong class="text-strong">Lua </strong>first?</div></blockquote>Lua in 15 minutes:<br><a href="https://tylerneylon.com/a/learn-lua/" class="postlink">https://tylerneylon.com/a/learn-lua/</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Fri Mar 29, 2024 7:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[veethree]]></name></author>
+		<updated>2024-03-28T11:35:25+00:00</updated>
+
+		<published>2024-03-28T11:35:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259125#p259125</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259125#p259125"/>
+		<title type="html"><![CDATA[General • Re: Code Doodles!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259125#p259125"><![CDATA[
+ <strong>iframe</strong> <br><br>A simple genetic evolution simulation.<br><br>Each dot has a set of "genes" which are just a table of numbers that determine how the dots move and what color they are. They also affect a dots breeding range and some other stuff i forgot probably<br><br>When 2 dots get close to each other, And they're old and lucky enough, They have a chance of breeding and producing an offspring that will get random genes from each parent. There is also a chance of mutation so the gene pool retains some variation.<br><br>Overpopulation is also simulated. If a dot has too many other dots around it it will die faster.<br><br>They will also die faster due to loneliness if they have no friends around them<br><br>Over time they will form little racist communities based on their genes. Just like people.<br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24119">genes.love</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784">veethree</a> — Thu Mar 28, 2024 11:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-28T08:57:16+00:00</updated>
+
+		<published>2024-03-28T08:57:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259124#p259124</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259124#p259124"/>
+		<title type="html"><![CDATA[General • Re: How can I learn Lua and Love2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259124#p259124"><![CDATA[
+You can just learn LOVE and find things of Lua as you go. You will have to learn common things like table handling, loops etc.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Thu Mar 28, 2024 8:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-03-28T04:21:55+00:00</updated>
+
+		<published>2024-03-28T04:21:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259123#p259123</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259123#p259123"/>
+		<title type="html"><![CDATA[General • Re: How can I learn Lua and Love2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259123#p259123"><![CDATA[
+I learned Love 2D first and then the extra bits of lua was learned as needed<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Thu Mar 28, 2024 4:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-03-28T03:24:35+00:00</updated>
+
+		<published>2024-03-28T03:24:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259122#p259122</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259122#p259122"/>
+		<title type="html"><![CDATA[General • Re: How can I learn Lua and Love2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259122#p259122"><![CDATA[
+<a href="https://www.lua.org/pil/" class="postlink">https://www.lua.org/pil/</a><br>the free version may be 20 years old but still works. <br>Read the first 3 parts.<br><br>Löve hides away a lot for simplification.  The main loop for example, questionable if one can learn program flow that way.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Thu Mar 28, 2024 3:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[skullmangor]]></name></author>
+		<updated>2024-03-28T00:34:52+00:00</updated>
+
+		<published>2024-03-28T00:34:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259120#p259120</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259120#p259120"/>
+		<title type="html"><![CDATA[General • How can I learn Lua and Love2D?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259120#p259120"><![CDATA[
+<span style="font-size:150%;line-height:116%">Hello there!</span><br>I wanted to learn <strong class="text-strong">Love2D </strong>to make games, but I have a very small programming knowledge, which is why I also chose <strong class="text-strong">Love2D </strong>to learn better.<br><br>Tho I have some difficulties guessing where to start, should I start by learning and mastering <strong class="text-strong">Lua </strong>first??<br>Or should I learn <strong class="text-strong">Lua </strong>while learning <strong class="text-strong">Love2D</strong>? And can you guide me to good resources to learn from?<br><br>And I apologize if my question is a bit silly, I'm just really new to this.<br><em class="text-italics">With love, Gor &lt;3</em><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=272254">skullmangor</a> — Thu Mar 28, 2024 12:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-22T13:53:22+00:00</updated>
+
+		<published>2024-03-22T13:53:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259091#p259091</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259091#p259091"/>
+		<title type="html"><![CDATA[General • Re: love.draw - How to run contents of a table]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259091#p259091"><![CDATA[
+I mean what's the point of this anyway?<br><br>Isn't it easier just to require draw objects locally (if they are supposed to be separated) instead of having them in tables?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Fri Mar 22, 2024 1:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-03-22T04:44:42+00:00</updated>
+
+		<published>2024-03-22T04:44:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259086#p259086</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259086#p259086"/>
+		<title type="html"><![CDATA[General • Re: love.draw - How to run contents of a table]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259086#p259086"><![CDATA[
+Iterating with:<br>load(value)()<br>will work but you should really save the table contents as function instead strings.<br>t = {function() lg.setColor(1,0,0) end}<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Fri Mar 22, 2024 4:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[aeos]]></name></author>
+		<updated>2024-03-22T04:02:44+00:00</updated>
+
+		<published>2024-03-22T04:02:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259085#p259085</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259085#p259085"/>
+		<title type="html"><![CDATA[General • love.draw - How to run contents of a table]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259085#p259085"><![CDATA[
+I trying this execution:<br>setColor and rectangle loaded on a table, but on time of run in love.draw only do not execute nothing.<br>im using 11.5. if anyone help me on this.<br><br>example:<div class="codebox"><p>Code: </p><pre><code>&gt; t = {"lg.setColor(1,0,0)","lg.rectangle('fill', 0, 20, 20, 100)"}&gt;love.draw()&gt;    How to proceed???&gt;end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=219583">aeos</a> — Fri Mar 22, 2024 4:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-03-20T21:33:09+00:00</updated>
+
+		<published>2024-03-20T21:33:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259076#p259076</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259076#p259076"/>
+		<title type="html"><![CDATA[General • Re: what should i add to my game?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259076#p259076"><![CDATA[
+Screenshots<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Wed Mar 20, 2024 9:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-20T13:15:26+00:00</updated>
+
+		<published>2024-03-20T13:15:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259073#p259073</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259073#p259073"/>
+		<title type="html"><![CDATA[General • Re: what should i add to my game?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259073#p259073"><![CDATA[
+Maybe provide some basic info regarding your game and your roadmap.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Wed Mar 20, 2024 1:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ender]]></name></author>
+		<updated>2024-03-20T08:55:21+00:00</updated>
+
+		<published>2024-03-20T08:55:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259071#p259071</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259071#p259071"/>
+		<title type="html"><![CDATA[General • what should i add to my game?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259071#p259071"><![CDATA[
+<a href="https://github.com/EnderWizard391/game" class="postlink">https://github.com/EnderWizard391/game</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=262318">ender</a> — Wed Mar 20, 2024 8:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JohnMclaughlin]]></name></author>
+		<updated>2024-03-19T00:48:40+00:00</updated>
+
+		<published>2024-03-19T00:48:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259064#p259064</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259064#p259064"/>
+		<title type="html"><![CDATA[General • Re: Is Love2D really for me?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259064#p259064"><![CDATA[
+For me engines are too clunky to use. Too much time's spent on waiting when for example Unity scripts reload for several seconds. But it wouldn't bother me if some real problems didn't come out. I don't want to be a developer to fix some problems in engine's core. Eventually, I think I will be fixing NVidia drivers at the end if I'm not gonna stop doing it.<br><br>For example: I used Godot for a while and the first thing I stumbled upon is lack of proper physics interpolation. You have to overcome this issue using interpolation yourself. Most of the time you go back and forth with your nodes from _process to _physics_process and turn it on and off using another node when they're offscreen wasting CPU power or when a sprite needs to teleport. It'll never be stable until they fix it but I think it's a core issue so it's not gonna be easy to fix if it'll ever be fixed. If you have a monitor with 250hz and physics set to 60fps you gonna notice what I'm talking about. Somebody doesn't care at all about all those things. You can use smooth plugins but it's sort of a crutch. When you want to work with rigidbody you can't manipulate it directly therefore can't smooth it only if you apply interpolation between visuals(sprite or 3d material) that follow rigidbody again using another node for that. Only one little thing and it can demand so much attention.<br><br>I was quite surprised with LOVE and its stability maybe because I ate already too much s... with those engines. And threads are so easy to use and effective. LOVE uses Box2D as physics engine as far as I know without any jitter movements. I honestly can't believe that. Sometimes Godot has stutter movements in almost empty project for no reason every 10-20 seconds without using physics at all.<br><br>Don't forget to check your sanity regularly when you're working with game engines.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=266987">JohnMclaughlin</a> — Tue Mar 19, 2024 12:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RNavega]]></name></author>
+		<updated>2024-03-18T06:06:55+00:00</updated>
+
+		<published>2024-03-18T06:06:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259055#p259055</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259055#p259055"/>
+		<title type="html"><![CDATA[General • Re: Code Doodles!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259055#p259055"><![CDATA[
+<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24089&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24089" class="postimage" alt="roundedRectanglePreview.gif" /></a></dt></dl></div><br>Example of drawing a round-corner rectangle using a pixel shader.<br>While there's the rx,ry parameters of love.graphics.rectangle() that make a rounded rectangle using geometry, in this way it's done by fading the alpha of pixels outside of the rounded corners.<br><div class="codebox"><p>Code: </p><pre><code>io.stdout:setvbuf('no')local rect = {    x1 = 80.0,         y1 = 140.0,    x2 = 80.0 + 400.0, y2 = 140.0 + 160.0,    borderData = {        -- Width (px)        nil,        -- Height (px)        nil,        -- Initial corner radius (px)        50.0,        -- Initial border thickness (px)        12.0    }}local meshlocal shaderlocal PIXEL_SOURCE = [[uniform vec4 border_data;vec4 effect(vec4 color, Image tex, vec2 texture_coords, vec2 screen_coords){    // The default Löve shader code, unused:    //vec4 texcolor = Texel(tex, texture_coords);    //return texcolor * color;    // --------------------------------------------------------------    // The rounded rectangle &amp; border code:    const vec4 WHITE_COLOR = vec4(1.0);    vec2 local_pixel = texture_coords * border_data.xy;    vec2 center_pixel = border_data.xy / 2.0;    vec2 center_offset = abs(local_pixel - center_pixel);    vec2 corner_offset = center_offset - (center_pixel - border_data.z);    vec2 is_corner = step(0.0, corner_offset);    float corner_offset_length = length(corner_offset);    // This +0.5 constant seems to give the smoothest result.    float corner_antialias = corner_offset_length + 0.5 - border_data.z;    vec2 border_offset = center_offset - (center_pixel - border_data.w);    vec2 is_edge_border = step(0.0, border_offset);    float border_antialias = corner_offset_length + 0.5 - (border_data.z - border_data.w);    float is_corner_border = (border_antialias * is_corner.x * is_corner.y);    float border_factor = clamp(is_edge_border.x + is_edge_border.y + is_corner_border, 0.0, 1.0);    vec4 final_color = mix(color, WHITE_COLOR, border_factor);    final_color.a = 1.0 - (corner_antialias * is_corner.x * is_corner.y);    return final_color;}]]-- Cosmetic, used for dragging the corners.local draggedCorner = nillocal highlightedCorner = nillocal dragOffset = {0.0, 0.0}local cornerKeys = {{'x1', 'y1'}, {'x2', 'y1'}, {'x2', 'y2'}, {'x1', 'y2'}}function love.load()    mesh = love.graphics.newMesh(4, 'fan', 'static')    -- Default format: x, y, u, v, r, g, b, a.    -- Setting only x, y, u, v.    -- Creating the mesh sized at 1 x 1 px, to be scaled to its proper width &amp; height    -- using the 'sx' and 'sy' parameters of love.graphics.draw().    mesh:setVertices({        {0.0, 0.0, 0.0, 0.0},        {1.0, 0.0, 1.0, 0.0},        {1.0, 1.0, 1.0, 1.0},        {0.0, 1.0, 0.0, 1.0},    })    -- TODO: it's also possible to use a custom mesh format, and then setup the    -- "borderData" information per vertex, so that you can have many rounded    -- rectangles of different sizes and borders, all stored in the same mesh.    mesh:setVertexMap(1, 2, 3, 4)    shader = love.graphics.newShader(PIXEL_SOURCE)    love.keyboard.setKeyRepeat(true)endfunction love.draw()    love.graphics.setShader(shader)    love.graphics.setColor(0.5, 0.5, 0.5)    rect.borderData[1] = rect.x2 - rect.x1    rect.borderData[2] = rect.y2 - rect.y1    shader:send('border_data', rect.borderData)    love.graphics.draw(mesh, rect.x1, rect.y1, 0.0, rect.borderData[1], rect.borderData[2])    love.graphics.setShader()    if highlightedCorner then        local keys = cornerKeys[highlightedCorner]        love.graphics.setColor(0.0, 1.0, 1.0, 0.333)        local x = rect[keys[1]]        local y = rect[keys[2]]        local tolerance = rect.borderData[3] &gt; 32 and rect.borderData[3] or 32        if highlightedCorner == 2 or highlightedCorner == 3 then            x = x - tolerance        end        if highlightedCorner == 3 or highlightedCorner == 4 then            y = y - tolerance        end        love.graphics.rectangle('fill', x, y, tolerance, tolerance)    end    love.graphics.setColor(1.0, 1.0, 1.0)    local info = string.format('Drag the rectangle corners to resize it (%d x %d px).\n\n'                             ..'Press and hold Up / Down to resize the corner radius (%d px).\n\n'                             ..'Press and hold Left / Right to resize the border thickness (%d px).\n\n'                             ..'Press Esc to quit.',                               rect.x2 - rect.x1,                               rect.y2 - rect.y1,                               rect.borderData[3],                               rect.borderData[4])    love.graphics.print(info, 10, 10)endfunction love.keypressed(key)    if key == 'escape' then        love.event.quit()    elseif key == 'up' then        rect.borderData[3] = (rect.borderData[3] &gt; 0.0 and rect.borderData[3] - 1.0 or 0.0)    elseif key == 'down' then        local halfHeight = math.abs(rect.y2 - rect.y1) / 2.0        rect.borderData[3] = (rect.borderData[3] &lt; halfHeight and rect.borderData[3] + 1.0                              or halfHeight)    elseif key == 'left' then        rect.borderData[4] = (rect.borderData[4] &gt; 0.0 and rect.borderData[4] - 1.0 or 0.0)    elseif key == 'right' then        local halfHeight = math.abs(rect.y2 - rect.y1) / 2.0        rect.borderData[4] = (rect.borderData[4] &lt; halfHeight and rect.borderData[4] + 1.0                              or halfHeight)    endendfunction love.mousemoved(x, y, dx, dy)    if draggedCorner then        local keys = cornerKeys[draggedCorner]        rect[keys[1]] = dragOffset[1] + x        rect[keys[2]] = dragOffset[2] + y    else        highlightedCorner = findCorner(x, y)    endendfunction love.mousepressed(x, y, button)    local corner = findCorner(x, y)    if corner then        draggedCorner = corner        local keys = cornerKeys[corner]        dragOffset[1] = rect[keys[1]] - x        dragOffset[2] = rect[keys[2]] - y    endendfunction love.mousereleased(x, y)    draggedCorner = nil    highlightedCorner = findCorner(x, y)endfunction findCorner(x, y)    local tolerance = rect.borderData[3] &gt; 32 and rect.borderData[3] or 32    local leftEdge   = x &gt;= rect.x1 and x &lt;= rect.x1 + tolerance    local rightEdge  = x &gt;= rect.x2 - tolerance and x &lt;= rect.x2    local topEdge    = y &gt;= rect.y1 and y &lt;= rect.y1 + tolerance    local bottomEdge = y &gt;= rect.y2 - tolerance and y &lt;= rect.y2    if leftEdge and topEdge then        return 1    elseif rightEdge and topEdge then        return 2    elseif rightEdge and bottomEdge then        return 3    elseif leftEdge and bottomEdge then        return 4    end    return nilend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Mon Mar 18, 2024 6:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2024-03-18T00:57:10+00:00</updated>
+
+		<published>2024-03-18T00:57:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259052#p259052</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259052#p259052"/>
+		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259052#p259052"><![CDATA[
+<blockquote class="uncited"><div>That reasoning feels like the classic "works on my maschine" excuse.</div></blockquote>It's the exact opposite - making sure other people will get the same experience that you developed, instead of shrugging off differences or bugs as something that's not your responsibility to handle as the game's developer because details of the installation were decided by some third party (actually many many third parties usually, given how many distro package managers and package solutions there are).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Mar 18, 2024 12:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-03-18T00:54:39+00:00</updated>
+
+		<published>2024-03-18T00:54:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259051#p259051</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259051#p259051"/>
+		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259051#p259051"><![CDATA[
+That reasoning feels like the classic "works on my maschine" excuse.<br>And appimages feel like a step back to a time where we had no shared libs.<br>I now in the recent years shipping the entire thing has dramatically grown again, probably because everything grew so big and complicated and has tons of depends, so i get the reasoning.<br>But i dont like it. I dont do it. And out of stubbornness i refuse to use appimages.<br><br>Repo maintainers actually love adding stuff if they are pointed to it, so whenever something is missing ill just drop a message and its in my distros repo the next day with the version i need. <br>And if its not the right version, discovering bugs is a plus in my book.<br><br>Maybe i will think different about this when releasing comercial software tho.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Mon Mar 18, 2024 12:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2024-03-17T22:49:31+00:00</updated>
+
+		<published>2024-03-17T22:49:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259049#p259049</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259049#p259049"/>
+		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259049#p259049"><![CDATA[
+You may do as you wish. Personally as someone whose project is included in many different package managers that are maintained by many different people, I have more than enough first-hand experience to see how that system can break down with complex and long-lasting projects and ends up accumulating unique combinations of bugs over time. I like having consistent software, even when the goal of being bug free is never 100% achievable.<br><br>The most reliable way to provide a game is to provide the exact dependencies you've developed against, which means the entire dependency tree including dependencies of dependencies of dependencies needs to be the same. Which is what the appimage (packed or unpacked) is, to the best of its ability anyway. My examples illustrated situations where the dependency (love) may have the same version and it breaks because dependencies of dependencies (SDL or luajit in the examples) are different.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Mar 17, 2024 10:49 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
