@@ -150,7 +150,7 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
 }
 
 .site_logo {
-	background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/site_logo.svg");
+	background-image: url("images/site_logo.html");
 }
 
 /* Horizontal lists
@@ -573,7 +573,7 @@ fieldset.polls dd div {
 }
 
 .online {
-	background-image: url("https://love2d.org/forums/styles/prosilver/theme/en/icon_user_online.gif");
+	background-image: url("en/icon_user_online.html");
 }
 
 dd.profile-warnings {
@@ -680,7 +680,7 @@ Colours and backgrounds for buttons.css
 /* Icon images
 ---------------------------------------- */
 
-.contact-icon						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/icons_contact.png"); }
+.contact-icon						{ background-image: url("images/icons_contact.html"); }
 
 /* Profile & navigation icons */
 .pm-icon						{ background-position: 0 0; }
@@ -697,56 +697,56 @@ Colours and backgrounds for buttons.css
 .phpbb_yahoo-icon					{ background-position: -224px 0; }
 
 /* Forum icons & Topic icons */
-.global_read						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read.gif"); }
-.global_read_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_mine.gif"); }
-.global_read_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_locked.gif"); }
-.global_read_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_locked_mine.gif"); }
-.global_unread						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread.gif"); }
-.global_unread_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_mine.gif"); }
-.global_unread_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_locked.gif"); }
-.global_unread_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_locked_mine.gif"); }
+.global_read						{ background-image: url("images/announce_read.html"); }
+.global_read_mine					{ background-image: url("images/announce_read_mine.html"); }
+.global_read_locked					{ background-image: url("images/announce_read_locked.html"); }
+.global_read_locked_mine				{ background-image: url("images/announce_read_locked_mine.html"); }
+.global_unread						{ background-image: url("images/announce_unread.html"); }
+.global_unread_mine					{ background-image: url("images/announce_unread_mine.html"); }
+.global_unread_locked					{ background-image: url("images/announce_unread_locked.html"); }
+.global_unread_locked_mine				{ background-image: url("images/announce_unread_locked_mine.html"); }
 
-.announce_read						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read.gif"); }
-.announce_read_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_mine.gif"); }
-.announce_read_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_locked.gif"); }
-.announce_read_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_read_locked_mine.gif"); }
-.announce_unread					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread.gif"); }
-.announce_unread_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_mine.gif"); }
-.announce_unread_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_locked.gif"); }
-.announce_unread_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/announce_unread_locked_mine.gif"); }
+.announce_read						{ background-image: url("images/announce_read.html"); }
+.announce_read_mine					{ background-image: url("images/announce_read_mine.html"); }
+.announce_read_locked					{ background-image: url("images/announce_read_locked.html"); }
+.announce_read_locked_mine				{ background-image: url("images/announce_read_locked_mine.html"); }
+.announce_unread					{ background-image: url("images/announce_unread.html"); }
+.announce_unread_mine					{ background-image: url("images/announce_unread_mine.html"); }
+.announce_unread_locked					{ background-image: url("images/announce_unread_locked.html"); }
+.announce_unread_locked_mine				{ background-image: url("images/announce_unread_locked_mine.html"); }
 
-.forum_link						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_link.gif"); }
-.forum_read						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_read.gif"); }
-.forum_read_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_read_locked.gif"); }
-.forum_read_subforum					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_read_subforum.gif"); }
-.forum_unread						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_unread.gif"); }
-.forum_unread_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_unread_locked.gif"); }
-.forum_unread_subforum					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/forum_unread_subforum.gif"); }
+.forum_link						{ background-image: url("images/forum_link.html"); }
+.forum_read						{ background-image: url("images/forum_read.html"); }
+.forum_read_locked					{ background-image: url("images/forum_read_locked.html"); }
+.forum_read_subforum					{ background-image: url("images/forum_read_subforum.html"); }
+.forum_unread						{ background-image: url("images/forum_unread.html"); }
+.forum_unread_locked					{ background-image: url("images/forum_unread_locked.html"); }
+.forum_unread_subforum					{ background-image: url("images/forum_unread_subforum.html"); }
 
-.sticky_read						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_read.gif"); }
-.sticky_read_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_read_mine.gif"); }
-.sticky_read_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_read_locked.gif"); }
-.sticky_read_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_read_locked_mine.gif"); }
-.sticky_unread						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_unread.gif"); }
-.sticky_unread_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_unread_mine.gif"); }
-.sticky_unread_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_unread_locked.gif"); }
-.sticky_unread_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/sticky_unread_locked_mine.gif"); }
+.sticky_read						{ background-image: url("images/sticky_read.html"); }
+.sticky_read_mine					{ background-image: url("images/sticky_read_mine.html"); }
+.sticky_read_locked					{ background-image: url("images/sticky_read_locked.html"); }
+.sticky_read_locked_mine				{ background-image: url("images/sticky_read_locked_mine.html"); }
+.sticky_unread						{ background-image: url("images/sticky_unread.html"); }
+.sticky_unread_mine					{ background-image: url("images/sticky_unread_mine.html"); }
+.sticky_unread_locked					{ background-image: url("images/sticky_unread_locked.html"); }
+.sticky_unread_locked_mine				{ background-image: url("images/sticky_unread_locked_mine.html"); }
 
-.topic_moved						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_moved.gif"); }
+.topic_moved						{ background-image: url("images/topic_moved.html"); }
 .pm_read,
-.topic_read						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read.gif"); }
-.topic_read_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read_mine.gif"); }
-.topic_read_hot						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read_hot.gif"); }
-.topic_read_hot_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read_hot_mine.gif"); }
-.topic_read_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read_locked.gif"); }
-.topic_read_locked_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_read_locked_mine.gif"); }
+.topic_read						{ background-image: url("images/topic_read.html"); }
+.topic_read_mine					{ background-image: url("images/topic_read_mine.html"); }
+.topic_read_hot						{ background-image: url("images/topic_read_hot.html"); }
+.topic_read_hot_mine					{ background-image: url("images/topic_read_hot_mine.html"); }
+.topic_read_locked					{ background-image: url("images/topic_read_locked.html"); }
+.topic_read_locked_mine					{ background-image: url("images/topic_read_locked_mine.html"); }
 .pm_unread,
-.topic_unread						{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread.gif"); }
-.topic_unread_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread_mine.gif"); }
-.topic_unread_hot					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread_hot.gif"); }
-.topic_unread_hot_mine					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread_hot_mine.gif"); }
-.topic_unread_locked					{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread_locked.gif"); }
-.topic_unread_locked_mine				{ background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/topic_unread_locked_mine.gif"); }
+.topic_unread						{ background-image: url("images/topic_unread.html"); }
+.topic_unread_mine					{ background-image: url("images/topic_unread_mine.html"); }
+.topic_unread_hot					{ background-image: url("images/topic_unread_hot.html"); }
+.topic_unread_hot_mine					{ background-image: url("images/topic_unread_hot_mine.html"); }
+.topic_unread_locked					{ background-image: url("images/topic_unread_locked.html"); }
+.topic_unread_locked_mine				{ background-image: url("images/topic_unread_locked_mine.html"); }
 
 
 /*
@@ -1091,7 +1091,7 @@ input.disabled {
 
 .loading_indicator {
 	background-color: #000000;
-	background-image: url("https://love2d.org/forums/styles/prosilver/theme/images/loading.gif");
+	background-image: url("images/loading.html");
 }
 
 .dropdown-extended ul li {

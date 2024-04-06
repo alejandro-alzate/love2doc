@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=253834 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:10:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Dithering with matrix - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Dithering with matrix" href="app.php/feed/topic/94380.html">	
+	<link rel="canonical" href="viewtopic4214.html?t=94380">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="../forums">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp1621.html?mode=login&amp;redirect=viewtopic.php%3Fp%3D253834" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic4214.html?t=94380">Dithering with matrix</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting05b6-2.html?mode=reply&amp;t=94380" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic1982.html?t=94380&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="94380" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p253787" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile253787">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="avatar"><img class="avatar" src="download/file9697.html?avatar=145963_1610033749.png" width="76" height="24" alt="User avatar" /></a>														</div>
+								<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha82f.html?author_id=145963&amp;sr=posts">1171</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Feb 08, 2020 11:09 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content253787">
+
+					<h3 class="first">
+						<a href="viewtopica8ae.html?p=253787#p253787">Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf925.html?mode=quote&amp;p=253787" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica8ae.html?p=253787#p253787" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a></strong> &raquo; </span><time datetime="2023-03-08T09:33:36+00:00">Wed Mar 08, 2023 9:33 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hi all!<br>
+<br>
+Here is a small tool to make dithering with matrix 3x3:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- dithering with matrix 3x3 pixels
+local function dithering(data)
+	local width, height = data:getDimensions()
+	local canvasImageData = love.image.newImageData(width, height)
+	local matrix = {
+		{ 230, 51, 128 },
+		{ 25, 102, 179 },
+		{ 154,205, 77  },
+	}	
+
+	local sum = 0
+	for i = 1, 10 do
+		local v = 256/10 + (i-1)*256/10
+		print (v)
+		sum = sum + v
+	end
+	
+	for y = 0, height - 1 do
+		for x = 0, width - 1 do
+			local r, g, b, a = love.math.colorToBytes(data:getPixel(x, y))
+			local i, j = x%3+1, y%3+1
+			local matrixValue = matrix[j][i]
+			r = r &gt;= matrixValue and 1 or 0
+			g = g &gt;= matrixValue and 1 or 0
+			b = b &gt;= matrixValue and 1 or 0
+			canvasImageData:setPixel(x, y, r, g, b, a)
+		end
+	end
+	local canvas = love.graphics.newImage(canvasImageData)
+	return canvas
+end
+
+return dithering</code></pre></div>
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file5172.html?id=22132&amp;mode=view"><img src="download/file96fc.html?id=22132" class="postimage" alt="2023-03-08-dithering.png" /></a></dt>
+						<dd>2023-03-08-dithering.png (61.02 KiB) Viewed 6574 times</dd>
+		</dl>
+		
+		
+			</div></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/filebf7c.html?id=22131">dithering-01.love</a></dt>
+			<dd><em>License CC0</em></dd>			<dd>(143.89 KiB) Downloaded 193 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig253787" class="signature"><img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  in Lua we Löve<br>
+<img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/" class="postlink">Platformer Guide</a><br>
+ <img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="https://craftpix.net/freebies/" class="postlink">freebies</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p253788" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile253788">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist5ffb.html?mode=viewprofile&amp;u=134239" class="avatar"><img class="avatar" src="download/file7b79.html?avatar=134239_1693177596.png" width="90" height="63" alt="User avatar" /></a>														</div>
+								<a href="memberlist5ffb.html?mode=viewprofile&amp;u=134239" class="username">dusoft</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcheb8a.html?author_id=134239&amp;sr=posts">493</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 08, 2013 12:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Europe usually</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact dusoft">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact dusoft</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ambience.sk/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content253788">
+
+					<h3 >
+						<a href="viewtopicbb14.html?p=253788#p253788">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3ee3.html?mode=quote&amp;p=253788" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicbb14.html?p=253788#p253788" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5ffb.html?mode=viewprofile&amp;u=134239" class="username">dusoft</a></strong> &raquo; </span><time datetime="2023-03-08T11:11:32+00:00">Wed Mar 08, 2023 11:11 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Nice!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p253834" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile253834">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="avatar"><img class="avatar" src="download/file4f70.html?avatar=188439_1680563834.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha395.html?author_id=188439&amp;sr=posts">287</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 11, 2022 11:07 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content253834">
+
+					<h3 >
+						<a href="viewtopic49b6.html?p=253834#p253834">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5921.html?mode=quote&amp;p=253834" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic49b6.html?p=253834#p253834" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a></strong> &raquo; </span><time datetime="2023-03-10T22:58:47+00:00">Fri Mar 10, 2023 10:58 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Super cool, I love it!<br>
+<br>
+Small suggestion, there is the mapPixel function to do this more efficiently, I slightly rewrote the function for this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- dithering matrix 3x3
+
+local matrix = {
+	{ 230, 51, 128 },
+	{ 25, 102,  179 },
+	{ 154, 205, 77 },
+}
+
+local function dithering(data)
+
+	local clone = data:clone()
+
+	clone:mapPixel(function(x, y, r, g, b, a)
+		local matrixValue = matrix[(y%3)+1][(x%3)+1]
+		r = r*255 &gt;= matrixValue and 1 or 0
+		g = g*255 &gt;= matrixValue and 1 or 0
+		b = b*255 &gt;= matrixValue and 1 or 0
+		return r, g, b, a
+	end)
+
+	local image = love.graphics.newImage(clone)
+	clone:release()
+
+	return image
+
+end
+
+return dithering</code></pre></div>
+
+<br>
+<span style="text-decoration:underline">Edit</span>: I just made a small shader quickly, the effect is different but <strong class="text-strong">I love the rendering</strong>!
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern float matrix[9];
+
+vec4 effect(vec4 color, Image tex, vec2 texCoords, vec2 screenCoords) {
+
+    vec4 pixel = Texel(tex, texCoords);
+
+    int x = int(mod(screenCoords.x, 3.0));
+    int y = int(mod(screenCoords.y, 3.0));
+    float matrixValue = matrix[x+y*3]/255.0;
+
+    float r = step(matrixValue, pixel.r);
+    float g = step(matrixValue, pixel.g);
+    float b = step(matrixValue, pixel.b);
+
+    return vec4(r, g, b, pixel.a);
+
+}</code></pre></div>
+
+<img src="../imgmirrur/XfUFdHb.html" class="postimage" alt="Image"><br>
+<br>
+Here's how to have the same effect as the origin, you have to work on the coordinates of the texture <em class="text-italics">(uv*img_dimensions)</em> and not of the screen:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern float matrix[9];
+extern vec2 img_dim;
+
+vec4 effect(vec4 color, Image tex, vec2 texCoords, vec2 screenCoords) {
+
+    vec4 pixel = Texel(tex, texCoords);
+
+    int x = int(mod(texCoords.x*img_dim.x, 3.0));
+    int y = int(mod(texCoords.y*img_dim.y, 3.0));
+    float matrixValue = matrix[x+y*3]/255.0;
+
+    float r = step(matrixValue, pixel.r);
+    float g = step(matrixValue, pixel.g);
+    float b = step(matrixValue, pixel.b);
+
+    return vec4(r, g, b, pixel.a);
+
+}</code></pre></div>
+
+<img src="../imgmirrur/qTC7KnR.html" class="postimage" alt="Image"></div>
+
+			
+			
+									
+						
+							<div id="sig253834" class="signature">My avatar code for the curious <img class="smilies" src="images/smilies/ms-glad.html" width="16" height="16" alt=":D" title="Very Happy"> <a href="https://tinyurl.com/getMyAvatarCode" class="postlink">V1</a>, <a href="https://tinyurl.com/getMyAvatarCode-v2" class="postlink">V2</a>, <a href="https://tinyurl.com/getMyAvatarCode-v3" class="postlink">V3</a>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p254550" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile254550">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="avatar"><img class="avatar" src="download/file9697.html?avatar=145963_1610033749.png" width="76" height="24" alt="User avatar" /></a>														</div>
+								<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha82f.html?author_id=145963&amp;sr=posts">1171</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Feb 08, 2020 11:09 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content254550">
+
+					<h3 >
+						<a href="viewtopicc0f3.html?p=254550#p254550">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0814.html?mode=quote&amp;p=254550" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc0f3.html?p=254550#p254550" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a></strong> &raquo; </span><time datetime="2023-04-28T06:50:48+00:00">Fri Apr 28, 2023 6:50 am</time>
+			</p>
+			
+			
+			
+			<div class="content">The color dithering.<br>
+<br>
+1. Find 2 nearest palette colors (point 1 and point 2) in 3D space to the current pixel color:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function nearestColorIndex(r, g, b, palette)
+	local firstIndex = 1
+	local secondIndex = 1
+	local min1 = math.huge
+	local min2 = math.huge
+	for index, color in ipairs(palette) do
+		local dr = r - color[1]
+		local dg = g - color[2]
+		local db = b - color[3]
+		local value = dr*dr + dg*dg + db*db
+		if value &lt; min1 then
+			min2 = min1
+			min1 = value
+			secondIndex = firstIndex
+			firstIndex = index
+		elseif value &lt; min2 then
+			secondIndex = index
+			min2 = value
+		end
+	end
+	return firstIndex, secondIndex
+end</code></pre></div>
+
+2. Make the line between this two palette colors.<br>
+3. Project the current color point to this line and get the value t, that changes from 0 to 1 and represents x=x1+t*(x2-x1); y=y1+t*(y2-y1); z=z1+t*(z2-z1):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function projectPointOnLineSegment(aX, aY, aZ, bX, bY, bZ, cX, cY, cZ)
+    local dx, dy, dz = bX - aX, bY - aY, bZ - aZ
+    local len2 = (dx*dx + dy*dy + dz*dz)
+		if len2 == 0 then
+			return 0
+		end
+    local dot = (cX - aX)*dx + (cY - aY)*dy + (cZ - aZ)*dz
+    local t = dot / len2^0.5
+    return t
+end</code></pre></div>
+
+Use this t as comparing value to the matrix:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local ditherMatrix = {
+	{0, 7, 3},
+	{6, 5, 2},
+	{4, 1, 8}
+}</code></pre></div>
+4. Draw color 1 if the value is lower or color 2 if not.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- License CC0 (Creative Commons license) (c) darkfrei, 2023
+
+local imageName = 'lenna-512.png'
+--local imageName = 'ball.png'
+
+local palettes = {}
+local i = 0
+for line in love.filesystem.lines("palettes.txt") do
+	i = i + 1
+	local palette = loadstring ("return " .. line)()
+	table.insert (palettes, palette)
+end
+paletteID = 129
+
+palette = palettes[paletteID]
+
+local lennaPalette = {
+		{206/255,95/255,93/255},
+		{230/255,133/255,128/255},
+		{222/255,106/255,99/255},
+		{195/255,127/255,120/255},
+		{231/255,198/255,199/255},
+		{96/255,23/255,62/255},
+		{138/255,96/255,150/255},
+		{227/255,93/255,105/255},
+		{241/255,204/255,190/255},
+		{237/255,182/255,167/255},
+	}
+table.insert (palettes, lennaPalette)
+
+local nPal = {}
+for r = 0, 3 do
+	for g = 0, 3 do
+		for b = 0, 3 do
+			table.insert (nPal, {r/3, g/3, b/3})
+		end
+	end
+end
+palettes[128] = nPal
+
+nPal = {}
+for r = 0, 2 do
+	for g = 0, 2 do
+		for b = 0, 2 do
+			table.insert (nPal, {r/2, g/2, b/2})
+		end
+	end
+end
+palettes[130] = nPal
+palettes[131] = {{0,0,0}, {1,1,1}}
+palettes[132] = {{0,0,0}, {0.5,0.5,0.5}, {1,1,1}}
+palettes[133] = {{211/255, 219/255, 233/255}, {129/255, 154/255, 193/255}, {18/255,64/255, 138/255}, {153/255,123/255, 75/255}}
+
+paletteID = 124
+palette = palettes[paletteID]
+love.window.setTitle ('palette ' .. paletteID .. ' ('..#palette..' colors)')
+
+function nearestColorIndex(r, g, b, palette)
+	local firstIndex = 1
+	local secondIndex = 1
+	local min1 = math.huge
+	local min2 = math.huge
+	for index, color in ipairs(palette) do
+		local dr = r - color[1]
+		local dg = g - color[2]
+		local db = b - color[3]
+		local value = dr*dr + dg*dg + db*db
+		if value &lt; min1 then
+			min2 = min1
+			min1 = value
+			secondIndex = firstIndex
+			firstIndex = index
+		elseif value &lt; min2 then
+			secondIndex = index
+			min2 = value
+		end
+	end
+	return firstIndex, secondIndex
+end
+
+local ditherMatrix = {
+	{0, 7, 3},
+	{6, 5, 2},
+	{4, 1, 8}
+}
+
+function projectPointOnLineSegment(aX, aY, aZ, bX, bY, bZ, cX, cY, cZ)
+    local dx, dy, dz = bX - aX, bY - aY, bZ - aZ
+    local len2 = (dx*dx + dy*dy + dz*dz)
+		if len2 == 0 then
+			return 0
+		end
+    local dot = (cX - aX)*dx + (cY - aY)*dy + (cZ - aZ)*dz
+    local t = dot / len2^0.5
+    return t
+end
+
+function getValue (x, y)
+	local r, g, b = 0, 0, 0
+	if x &lt; imageData:getWidth() and y &lt; imageData:getHeight()
+	and x &gt; 0 and y &gt; 0 then
+		r, g, b = imageData:getPixel(x-1, y-1)
+	end
+	local firstIndex, secondIndex = nearestColorIndex(r, g, b, palette)
+	local first, second	= palette[firstIndex], palette[secondIndex]
+	local ditherValue = ditherMatrix[(y-1)%3+1][(x-1)%3+1]
+
+	local compareValue = -0.25+4.5*projectPointOnLineSegment(
+		first[1], first[2], first[3], 
+		second[1], second[2], second[3], 
+		r,g,b)
+
+	if firstIndex &lt; secondIndex  then
+		-- magic!
+		ditherValue = 4-(ditherValue -4)
+	end
+	
+	if (ditherValue &gt; compareValue) then
+		r, g, b = first[1], first[2], first[3]
+	else
+		r, g, b = second[1], second[2], second[3]
+	end
+
+	return r, g, b, ditherValue, compareValue
+end
+
+function dither3x3(path, palette)
+	imageData = love.image.newImageData(path)
+	local width, height = imageData:getDimensions()
+	for y = 1, height do
+		for x = 1, width do
+			local r, g, b = getValue (x, y)
+			imageData:setPixel(x-1, y-1, r,g,b)
+		end
+	end
+	return love.graphics.newImage(imageData)
+end
+
+function love.load()
+	Image = dither3x3(imageName, palette)
+	Image2 = love.graphics.newImage(imageName)
+	Width = Image2:getWidth()
+	love.window.setMode(Width*2, Image2:getHeight())
+end
+
+function love.draw()
+	love.graphics.setColor (1,1,1)
+	love.graphics.draw (Image2)
+	love.graphics.draw (Image, Width, 0)
+	love.graphics.print ('press SPACE to change palette')
+end
+
+function love.keypressed(key, scancode, isrepeat)
+	if key == "space" then
+		paletteID = paletteID + 1
+		if paletteID &gt; #palettes then paletteID = 1 end
+		
+		palette = palettes[paletteID]
+		love.window.setTitle ('palette ' .. paletteID .. ' ('..#palette..' colors)')
+		Image = dither3x3(imageName, palette)
+	elseif key == "escape" then
+		love.event.quit()
+	end
+end
+</code></pre></div></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file9d6d.html?id=23268&amp;mode=view"><img src="download/file5db4.html?id=23268" class="postimage" alt="2023-04-27T15_22_42-palette 133 (4 colors).png" /></a></dt>
+						<dd>2023-04-27T15_22_42-palette 133 (4 colors).png (307.68 KiB) Viewed 5594 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file5383.html?id=23267&amp;mode=view"><img src="download/file9e11.html?id=23267" class="postimage" alt="2023-04-28T08_38_55-palette 131 (2 colors).png" /></a></dt>
+						<dd>2023-04-28T08_38_55-palette 131 (2 colors).png (755.13 KiB) Viewed 5595 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filef89c.html?id=23266&amp;mode=view"><img src="download/file4280.html?id=23266" class="postimage" alt="palette-dithering-03.png" /></a></dt>
+						<dd>palette-dithering-03.png (781.82 KiB) Viewed 5596 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/file4413.html?id=23265">palette-dithering-03.love</a></dt>
+						<dd>(737.23 KiB) Downloaded 139 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig254550" class="signature"><img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  in Lua we Löve<br>
+<img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/" class="postlink">Platformer Guide</a><br>
+ <img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="https://craftpix.net/freebies/" class="postlink">freebies</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p254551" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile254551">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="avatar"><img class="avatar" src="download/file9697.html?avatar=145963_1610033749.png" width="76" height="24" alt="User avatar" /></a>														</div>
+								<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha82f.html?author_id=145963&amp;sr=posts">1171</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Feb 08, 2020 11:09 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content254551">
+
+					<h3 >
+						<a href="viewtopic1e54.html?p=254551#p254551">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf899.html?mode=quote&amp;p=254551" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1e54.html?p=254551#p254551" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a></strong> &raquo; </span><time datetime="2023-04-28T07:10:59+00:00">Fri Apr 28, 2023 7:10 am</time>
+			</p>
+			
+			
+			
+			<div class="content">The gradient can be much smooth:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function projectPointOnLineSegment(aX, aY, aZ, bX, bY, bZ, cX, cY, cZ)
+    local dx, dy, dz = bX - aX, bY - aY, bZ - aZ
+    local len2 = (dx*dx + dy*dy + dz*dz)
+		if len2 == 0 then
+			return 0
+		end
+    local dot = (cX - aX)*dx + (cY - aY)*dy + (cZ - aZ)*dz
+    local t = dot / len2^0.5
+		-- https://www.desmos.com/calculator/gnq3hm26t0
+--		t = 4*(t-0.5)^3 + 0.5
+		t = -8*(t-0.5)^4+0.5
+		if t &gt; 0.5 then
+			print (t)
+		end
+    return t
+end</code></pre></div></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filea1e0.html?id=23270&amp;mode=view"><img src="download/file0a5a.html?id=23270" class="postimage" alt="2023-04-28-palette 125 (4 colors).png" /></a></dt>
+						<dd>2023-04-28-palette 125 (4 colors).png (790.89 KiB) Viewed 5592 times</dd>
+		</dl>
+		
+		
+			</dd>
+											<dd>
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file71b0.html?id=23269&amp;mode=view"><img src="download/file88b3.html?id=23269" class="postimage" alt="2023-04-28-palette 152 (10 colors).png" /></a></dt>
+						<dd>2023-04-28-palette 152 (10 colors).png (819.68 KiB) Viewed 5592 times</dd>
+		</dl>
+		
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig254551" class="signature"><img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  in Lua we Löve<br>
+<img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/" class="postlink">Platformer Guide</a><br>
+ <img class="smilies" src="images/smilies/ms-awesome.html" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="https://craftpix.net/freebies/" class="postlink">freebies</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p254691" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile254691">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistfb8c.html?mode=viewprofile&amp;u=219420" class="username">tourgen</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search20b4.html?author_id=219420&amp;sr=posts">53</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Mar 18, 2023 12:45 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content254691">
+
+					<h3 >
+						<a href="viewtopic70e0.html?p=254691#p254691">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9544.html?mode=quote&amp;p=254691" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic70e0.html?p=254691#p254691" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistfb8c.html?mode=viewprofile&amp;u=219420" class="username">tourgen</a></strong> &raquo; </span><time datetime="2023-05-04T19:31:08+00:00">Thu May 04, 2023 7:31 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">great work! I'm probably going to use this.. or something similar. I want an CGA and EGA mode for my little text adventure. now it has some still gfx... AI generated</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p257604" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile257604">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist29ec.html?mode=viewprofile&amp;u=257786" class="username">nSun</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searched02.html?author_id=257786&amp;sr=posts">1</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Nov 21, 2023 1:22 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content257604">
+
+					<h3 >
+						<a href="viewtopic8fd1.html?p=257604#p257604">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8447.html?mode=quote&amp;p=257604" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8fd1.html?p=257604#p257604" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist29ec.html?mode=viewprofile&amp;u=257786" class="username">nSun</a></strong> &raquo; </span><time datetime="2023-11-21T14:15:15+00:00">Tue Nov 21, 2023 2:15 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm a beginner with Löve, and working on my first project (to test) based on this topic.<br>
+Particularly on <strong class="text-strong">Error-diffusion</strong> dithering algorithms:<br>
+Floyd–Steinberg, Jarvis, Judice &amp; Ninke, Stucki, Burkes, Sierra, Two-row Sierra, Sierra Lite, Atkinson...<br>
+<br>
+<a href="https://en.wikipedia.org/wiki/Dither#Algorithms" class="postlink">https://en.wikipedia.org/wiki/Dither#Algorithms</a><br>
+<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file133b.html?id=23770&amp;mode=view"><img src="download/filec5ad.html?id=23770" class="postimage" alt="love-dithering-tests.png" /></a></dt>
+						<dd>love-dithering-tests.png (37.29 KiB) Viewed 3318 times</dd>
+		</dl>
+		
+		
+			</div>
+
+<br>
+Just drop your file/picture in the window then keypress numpad :<br>
+0: Gray scale<br>
+1: Atkinson<br>
+2: Floyd-Steinberg<br>
+3: Jarvis, Judice, and Ninke Dithering<br>
+4: Stucki<br>
+5: Burkes<br>
+6: Sierra<br>
+7: Sierra 2 rows<br>
+8: Sierra Lite<br>
+9: none (original)<br>
+<br>
+I use a "sensitive" grayscale :
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local red, green, blue, alpha = self.data:getPixel( x, y )
+-- logical grayscale 
+-- color = (red + green + blue) /3
+-- sensitive grayscale 
+color = 0.3 * red + 0.59 * green + 0.11 * blue</code></pre></div>
+Because a "logical" gray scale produces a darker image. But to the eye, a 100% red appears darker than a 100% green.<br>
+<br>
+<br>
+I used a class that I had coded in PHP/CLI tool, excuse me if it's not clean...</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/file177d.html?id=23773">main.lua</a></dt>
+						<dd>(2.6 KiB) Downloaded 78 times</dd>
+		</dl>
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/file6003.html?id=23772">dithering.lua</a></dt>
+						<dd>(16.75 KiB) Downloaded 82 times</dd>
+		</dl>
+		
+			</dd>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/file1341.html?id=23771">classic.lua</a></dt>
+						<dd>(1.05 KiB) Downloaded 75 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p258842" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile258842">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3aff.html?mode=viewprofile&amp;u=257841" class="username">Trystan</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search08c5.html?author_id=257841&amp;sr=posts">14</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 24, 2023 9:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content258842">
+
+					<h3 >
+						<a href="viewtopic7894.html?p=258842#p258842">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5cfb.html?mode=quote&amp;p=258842" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7894.html?p=258842#p258842" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3aff.html?mode=viewprofile&amp;u=257841" class="username">Trystan</a></strong> &raquo; </span><time datetime="2024-02-27T09:59:48+00:00">Tue Feb 27, 2024 9:59 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I was playing around with Dithering the other day and thought I'd add my script here. It's nothing that hasn't been done (better) above but it was fun to create.<br>
+<br>
+There are a few different dithers and colour reduction methods you can do by changing the arguments of the dither function. My dither matrices are stored in a kind of unusual way, instead of being a proper matrix they're a table of tables with an xoffset, yoffset and then the proportion of error to be diffused to that position.<br>
+<br>
+I had used this originally to dither images for pico-8 that could then be loaded directly to vram from a string so there are a few lines commented out that create that string and print it to the console, I don't reccomend turning them on for a large image, they're very slow.<br>
+<br>
+Finally, depending on the size of the picture you're doing you will need to change the "scale" variable. I could have made it autoadjust but didn't really feel that was necessary for what I wanted it to do.<br>
+<br>
+Dithering to the pico-8 palette (Floyd-Steinberg)
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file0216.html?id=24037&amp;mode=view"><img src="download/filea9cb.html?id=24037" class="postimage" alt="Dither Pico8.png" /></a></dt>
+						<dd>Dither Pico8.png (102.93 KiB) Viewed 1321 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Dithering to 5 bit colour (4 values of red, 4 of green, 2 of blue) (Floyd-Steinberg)
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filebae8.html?id=24036&amp;mode=view"><img src="download/file8d94.html?id=24036" class="postimage" alt="Dither 442.png" /></a></dt>
+						<dd>Dither 442.png (88.02 KiB) Viewed 1321 times</dd>
+		</dl>
+		
+		
+			</div>
+
+The pico-8 code I was using to load an image was simply the below that replaces everything in vram with the contents of a string. Note, this string could be a lot shorter with some simple RLE but I was just wanting to see something on screen.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function _init()
+ imgstr="[paste string here]"
+ loadpic(imgstr)
+ palt(0,false)
+end
+
+function loadpic(imgstr)
+ for i=1,#imgstr,2 do
+  local n1=tonum(imgstr[i],0x1)
+  local n2=tonum(imgstr[i+1],0x1)
+  poke(0x6000+(i-1)/2,n2*16+n1)
+ end
+end
+
+function _update()
+
+end
+
+function _draw()
+
+end</code></pre></div>
+
+And this is the love2d file for doing the dithering:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- Disable output buffer so debug messages print in real time
+io.stdout:setvbuf("no")
+
+function love.load()
+    love.graphics.setDefaultFilter("nearest", "nearest", 1)
+    love.window.setMode(1536, 768)
+    love.window.setTitle("Error Diffusion Dithering")
+    scale = 6 -- scale to draw the result at
+    imgPath = "Images/Rainbow128.jpg" -- image to use
+
+    -- pico-8 palette for paletted quantizing
+    pal = {}
+    pal.Pico8 = {
+        {29/255, 43/255, 83/255},
+        {126/255, 37/255, 83/255},
+        {0/255, 135/255, 81/255},
+        {171/255, 82/255, 54/255},
+        {95/255, 87/255, 79/255},
+        {194/255, 195/255, 199/255},
+        {255/255, 241/255, 232/255},
+        {255/255, 0/255, 77/255},
+        {255/255, 163/255, 0/255},
+        {255/255, 236/255, 39/255},
+        {0/255, 228/255, 54/255},
+        {41/255, 173/255, 255/255},
+        {131/255, 118/255, 156/255},
+        {255/255, 119/255, 168/255},
+        {255/255, 204/255, 170/255},
+        {0/255, 0/255, 0/255},
+    }
+    palStr = ""
+
+    -- Setup dither matrices matrix, each is a table of {xoff, yoff, proportion of error to give}
+    dMat = {}
+    dMat.FloydSteinberg = {
+        { 1, 0, 7/16},
+        {-1, 1, 3/16},
+        { 0, 1, 5/16},
+        { 1, 1, 1/16},
+    }
+    dMat.Atkinson = {
+        { 1, 0, 1/8},
+        { 2, 0, 1/8},
+        {-1, 1, 1/8},
+        { 0, 1, 1/8},
+        { 1, 1, 1/8},
+        { 0, 2, 1/8},
+    }
+    dMat.JarvisJudiceNinke = {
+        { 1, 0, 7/48},
+        { 2, 0, 5/48},
+        {-2, 1, 3/48},
+        {-1, 1, 5/48},
+        { 0, 1, 7/48},
+        { 1, 1, 5/48},
+        { 2, 1, 3/48},
+        {-2, 2, 1/48},
+        {-1, 2, 3/48},
+        { 0, 2, 5/48},
+        { 1, 2, 3/48},
+        { 2, 2, 1/48},
+    }
+    dMat.None = {}
+
+    local originalData = love.image.newImageData(imgPath)
+    originalImg = love.graphics.newImage(originalData)
+    --transformedImg = dither(originalData, quantPalette, pal.Pico8, false, dMat.FloydSteinberg)
+    transformedImg = dither(originalData, quantReduce, {4, 4, 2}, false, dMat.FloydSteinberg)
+end
+
+function quantReduce(r, g, b, valuesPerColour)
+    local lr, lg, lb
+    if type(valuesPerColour) == "table" then
+        -- we have a table, set levels seperately
+        lr, lg, lb = valuesPerColour[1], valuesPerColour[2], valuesPerColour[3]
+    else
+        -- we have a number, set all the same
+        lr, lg, lb = valuesPerColour, valuesPerColour, valuesPerColour
+    end
+    r = math.floor(r * (lr - 0.5)) / (lr - 1)
+    g = math.floor(g * (lg - 0.5)) / (lg - 1)
+    b = math.floor(b * (lb - 0.5)) / (lb - 1)
+    return r, g, b
+end
+
+function quantPalette(r, g, b, pal)
+    local dist, bestInd, bestDist
+    bestDist = 1000
+    for i = 1, #pal do
+        dist = math.abs(r - pal[i][1]) + math.abs(g - pal[i][2]) + math.abs(b - pal[i][3])
+        if dist &lt; bestDist then
+            bestDist = dist
+            bestInd = i
+        end
+    end
+    -- uncomment to add the char to the palette string
+    -- palStr = palStr .. string.format("%x", bestInd % 16)
+    return pal[bestInd][1], pal[bestInd][2], pal[bestInd][3]
+end
+
+-- Dithers an imageData. 2nd argument is the quantization function (quantReduce to reduce colour bit depth and quantPalette to match to a palette). 
+-- quantArg is a number of values per colour for reduce (or a table of 3 like {8, 8, 4} for classic 8-bit reduction). 
+-- quantArg is a palette table of colours for the palette. Greyscale sets if the image should be turned greyscale first. ditherMatric sets the matric to use.
+function dither(data, quantFunc, quantArg, greyscale, ditherMatrix)
+    local r, g, b, er, eg, eb, val, tx, ty
+    local height = data:getHeight() - 1
+    local width = data:getWidth() - 1
+    -- loop through all pixels, with x as inner loop
+    for y = 0, height do
+        for x = 0, width do
+            -- get pixel
+            r, g, b = data:getPixel(x, y)
+            if greyscale then
+                -- make greyscale
+                val = (0.299 * r) + (0.587 * g) + (0.114 * b)
+                r = val; g = val; b = val
+            end
+            -- backup r, g, b for working out the error later
+            er, eg, eb = r, g, b
+            -- quantize
+            r, g, b = quantFunc(r, g, b, quantArg)
+            data:setPixel(x, y, r, g, b, 1)
+            -- get difference from original pixel (error)
+            er = er - r
+            eg = eg - g
+            eb = eb - b
+            -- pass error on to neighbours
+            for i = 1, #ditherMatrix do
+                tx = x + ditherMatrix[i][1]
+                ty = y + ditherMatrix[i][2]
+                -- check it's in bounds, we don't need to check ty &gt; 0 though, we never pass error up
+                if tx &gt; 0 and tx &lt; width and ty &lt; height then
+                    r, g, b = data:getPixel(tx, ty)
+                    r = r + (er * ditherMatrix[i][3])
+                    g = g + (eg * ditherMatrix[i][3])
+                    b = b + (eb * ditherMatrix[i][3])
+                    data:setPixel(tx, ty, r, g, b, 1)
+                end
+            end
+        end
+    end
+    -- uncomment to print the palette string to the console
+    -- print(palStr)
+    return love.graphics.newImage(data)
+end
+
+function love.draw()
+    -- draw original image
+    love.graphics.draw(originalImg, 0, 0, 0, scale, scale)
+    -- draw dithered image
+    love.graphics.draw(transformedImg, 768, 0, 0, scale, scale)
+end</code></pre></div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259114" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259114">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3aff.html?mode=viewprofile&amp;u=257841" class="username">Trystan</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search08c5.html?author_id=257841&amp;sr=posts">14</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 24, 2023 9:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259114">
+
+					<h3 >
+						<a href="viewtopic8d87.html?p=259114#p259114">Re: Dithering with matrix</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1982.html?mode=quote&amp;p=259114" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8d87.html?p=259114#p259114" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3aff.html?mode=viewprofile&amp;u=257841" class="username">Trystan</a></strong> &raquo; </span><time datetime="2024-03-25T13:02:45+00:00">Mon Mar 25, 2024 1:02 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I was thinking about dithing the other day and played around with the idea of error being pushed to the right and downwards through a maze (where the mazes passability allows it).<br>
+
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filed642.html?id=24114&amp;mode=view"><img src="download/file0406.html?id=24114" class="postimage" alt="CurveDither.png" /></a></dt>
+						<dd>CurveDither.png (325 KiB) Viewed 149 times</dd>
+		</dl>
+		
+		
+			</div>
+
+The attached uses this for a few different wall layouts, "t" toggles showing the layout on the left picture:<br>
+F1 - All walls on (no error is passed so this is just quantizing each pixel to black and white based on the threshold)<br>
+F2 - All walls cleared, error is free to go down and right forever<br>
+F3 - Random walls<br>
+F4 - Walls generated by a maze algorithm (for both this and random "a" toggles animation)<br>
+F5 - Error is pushed along the path of a Hilbert Curve (starting in the bottom left)<br>
+F6 - Generates the Hilbert Curve but error is pushed down and right from the top left as with the other layouts.<br>
+<br>
+It generates some fun results but nothing that to my eye looks any better than the faster methods above. There is room though for trying different curves/layouts, changing how you loop through the grid and where you push error to and maybe pushing the error further to spread it over more cells<br>
+<br>
+The main code is here:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- https://en.wikipedia.org/wiki/Space-filling_curve
+-- https://en.wikipedia.org/wiki/Maze_generation_algorithm
+
+-- Disable output buffer so debug messages print in real time
+io.stdout:setvbuf("no")
+
+function love.load()
+    bit = require "bit"
+    math.randomseed(os.time())
+    math.random(); math.random(); math.random()
+    love.window.setTitle("Space-filling curve Dithering")
+    love.graphics.setDefaultFilter("nearest", "nearest", 1)
+    imgData = love.image.newImageData("David.png")
+    origImg = love.graphics.newImage(imgData)
+    scale = 6
+    imgSize = imgData:getWidth()
+    love.window.setMode(imgSize * scale * 2, imgSize * scale)
+
+    threshold = 0.5 -- The threshold for seperating white and black pixels
+    drawGridToggle = false
+    animateDither = true
+    animationDelay = 20
+    timer = 0
+
+    currentCurve = setWallsZero
+    currentCurve()
+end
+
+function love.keypressed(key)
+    if key == "f1" then
+        currentCurve = setWallsZero
+        currentCurve()
+    end
+    if key == "f2" then
+        currentCurve = setWallsMax
+        currentCurve()
+    end
+    if key == "f3" then
+        currentCurve = setWallsRandom
+        currentCurve()
+    end
+    if key == "f4" then
+        currentCurve = setWallsBacktracker
+        currentCurve()
+    end
+    if key == "f5" then
+        currentCurve = setWallsHilbertFollow
+        currentCurve()
+    end
+    if key == "f6" then
+        currentCurve = setWallsHilbert
+        currentCurve()
+    end
+    if key == "t" then
+        drawGridToggle = not drawGridToggle
+    end
+    if key == "a" then
+        animateDither = not animateDither
+    end
+    if key == "escape" then
+        love.event.quit()
+    end
+end
+
+function resetCellGrid()
+    -- cellGrid will hold a number of allowed directions, 1 = up, 2 = right, 4 = down, 8 = left
+    -- 0 is unvisited
+    -- the second entry is the red from our picture, reset this each run as we mess with cellGrid when dithering
+    cellGrid = {}
+    for x = 0, imgSize - 1 do
+        cellGrid[x] = {}
+        for y = 0, imgSize - 1 do
+            cellGrid[x][y] = {0, imgData:getPixel(x, y)}
+        end
+    end
+end
+
+function setWallsZero()
+    resetCellGrid()
+    -- set no passability, essentialy threshold shading
+    for x = 0, imgSize - 1 do
+        for y = 0, imgSize - 1 do
+            cellGrid[x][y][1] = 0
+        end
+    end
+    if ditheredImg then ditheredImg:release() end
+    ditheredImg = applyDither()
+end
+
+function setWallsMax()
+    resetCellGrid()
+    -- set all passability, allowing error to travel forever
+    for x = 0, imgSize - 1 do
+        for y = 0, imgSize - 1 do
+            cellGrid[x][y][1] = 15
+            if x == imgSize - 1 then
+                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 13)
+            end
+            if y == imgSize - 1 then
+                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 11)
+            end
+        end
+    end
+    if ditheredImg then ditheredImg:release() end
+    ditheredImg = applyDither()
+end
+
+function setWallsRandom()
+    resetCellGrid()
+    -- set passability randomly, block off last row and column
+    for x = 0, imgSize - 1 do
+        for y = 0, imgSize - 1 do
+            cellGrid[x][y][1] = math.random(16)
+            if x == imgSize - 1 then
+                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 13)
+            end
+            if y == imgSize - 1 then
+                cellGrid[x][y][1] = bit.band(cellGrid[x][y][1], 11)
+            end
+        end
+    end
+    if ditheredImg then ditheredImg:release() end
+    ditheredImg = applyDither()
+end
+
+function setWallsBacktracker()
+    resetCellGrid()
+    -- set passability with a recursive backtracker
+    local currX, currY = 0, 0
+    local neighbours, r, dir
+    local stack = {{currX, currY}}
+    while #stack &gt; 0 do
+        -- get neightbours
+        neighbours = getNeighbours(currX, currY)
+        if #neighbours == 0 then
+            -- we have no eligible neighbours, step back
+            table.remove(stack)
+            if #stack &gt; 0 then
+                currX, currY = stack[#stack][1], stack[#stack][2]
+            end
+        else
+            -- we have neighbours, get a random one
+            r = math.random(#neighbours)
+            dir = neighbours[r][3]
+            -- set our exit
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)
+            -- set new current
+            currX = neighbours[r][1]
+            currY = neighbours[r][2]
+            table.insert(stack, {currX, currY})
+            -- set our entry
+            if dir == 1 then
+                dir = 4
+            elseif dir == 2 then
+                dir = 8
+            elseif dir == 4 then
+                dir = 1
+            else
+                dir = 2
+            end
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)
+        end
+    end
+    if ditheredImg then ditheredImg:release() end
+    ditheredImg = applyDither()
+end
+
+function setWallsHilbert()
+    resetCellGrid()
+    if ditheredImg then ditheredImg:release() end
+    local hText = require "hilbert"
+    local dir = 2
+    local currX, currY = 0, 127
+    local char
+    for i = 1, #hText do
+        char = hText:sub(i, i)
+        if char == "-" then
+            -- turn left
+            dir = dir / 2
+            if dir &lt; 1 then dir = 8 end
+        elseif char == "+" then
+            -- turn right
+            dir = dir * 2
+            if dir &gt; 8 then dir = 1 end
+        end
+        --move forwards
+        cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)
+        col = cellGrid[currX][currY][2]
+        if dir == 1 then
+            currY = currY - 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 4)
+        elseif dir == 2 then
+            currX = currX + 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 8)
+        elseif dir == 4 then
+            currY = currY + 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 1)
+        else
+            currX = currX - 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 2)
+        end
+    end
+    if ditheredImg then ditheredImg:release() end
+    ditheredImg = applyDither()
+end
+
+function setWallsHilbertFollow()
+    resetCellGrid()
+    if ditheredImg then ditheredImg:release() end
+    local col, err
+    local newImgData = love.image.newImageData(imgSize, imgSize)
+    local hText = require "hilbert"
+    local dir = 2
+    local currX, currY = 0, 127
+    local char
+    for i = 1, #hText do
+        char = hText:sub(i, i)
+        if char == "-" then
+            -- turn left
+            dir = dir / 2
+            if dir &lt; 1 then dir = 8 end
+        elseif char == "+" then
+            -- turn right
+            dir = dir * 2
+            if dir &gt; 8 then dir = 1 end
+        end
+        --move forwards
+        cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], dir)
+        col = cellGrid[currX][currY][2]
+        -- set cell and get error
+        if col &lt; threshold then
+            err = col
+            col = 0
+        else
+            err = col - 1
+            col = 1
+        end
+        -- draw pixel
+        newImgData:setPixel(currX, currY, col, col, col, 1)
+        if dir == 1 then
+            currY = currY - 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 4)
+        elseif dir == 2 then
+            currX = currX + 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 8)
+        elseif dir == 4 then
+            currY = currY + 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 1)
+        else
+            currX = currX - 1
+            cellGrid[currX][currY][1] = bit.bor(cellGrid[currX][currY][1], 2)
+        end
+        -- push error
+        cellGrid[currX][currY][2] = cellGrid[currX][currY][2] + err
+    end
+    ditheredImg = love.graphics.newImage(newImgData)
+end
+
+function getNeighbours(x, y)
+    local neighbours = {}
+    -- up
+    if y &gt; 0 then
+        if cellGrid[x][y - 1][1] == 0 then
+            table.insert(neighbours, {x, y - 1, 1})
+        end
+    end
+    -- right
+    if x &lt; imgSize - 1 then
+        if cellGrid[x + 1][y][1] == 0 then
+            table.insert(neighbours, {x + 1, y, 2})
+        end
+    end
+    -- down
+    if y &lt; imgSize - 1 then
+        if cellGrid[x][y + 1][1] == 0 then
+            table.insert(neighbours, {x, y + 1, 4})
+        end
+    end
+    -- left
+    if x &gt; 0 then
+        if cellGrid[x - 1][y][1] == 0 then
+            table.insert(neighbours, {x - 1, y, 8})
+        end
+    end
+    return neighbours
+end
+
+function applyDither()
+    local col, err, val
+    local newImgData = love.image.newImageData(imgSize, imgSize)
+    for x = 0, imgSize - 1 do
+        for y = 0, imgSize - 1 do
+            val = cellGrid[x][y][1]
+            col = cellGrid[x][y][2]
+            -- set cell and get error
+            if col &lt; threshold then
+                err = col
+                col = 0
+            else
+                err = col - 1
+                col = 1
+            end
+            -- get neighbours to pass error
+            -- both
+            if bit.band(val, 6) == 6 then
+                err = err / 2
+                cellGrid[x + 1][y][2] = cellGrid[x + 1][y][2] + err
+                cellGrid[x][y + 1][2] = cellGrid[x][y + 1][2] + err
+            -- right
+            elseif bit.band(val, 2) == 2 then
+                cellGrid[x + 1][y][2] = cellGrid[x + 1][y][2] + err
+            -- down
+            elseif bit.band(val, 4) == 4 then
+                cellGrid[x][y + 1][2] = cellGrid[x][y + 1][2] + err
+            end
+            -- set the image data
+            newImgData:setPixel(x, y, col, col, col, 1)
+        end
+    end
+    return love.graphics.newImage(newImgData)
+end
+
+function drawGrid()
+    -- draw grid, only need to draw right and down
+    local val
+    love.graphics.setLineWidth(1 / scale)
+    for x = 0, imgSize - 1 do
+        for y = 0, imgSize - 1 do
+            val = cellGrid[x][y][1]
+            -- check if we are blocked right
+            if bit.band(val, 2) == 0 then
+                love.graphics.line(x + 1, y, x + 1, y + 1)
+            end
+            -- check if we are blocked down
+            if bit.band(val, 4) == 0 then
+                love.graphics.line(x, y + 1, x + 1, y + 1)
+            end
+        end
+    end
+end
+
+function love.update(dt)
+    timer = timer + 1
+    if timer % animationDelay == 0 and animateDither then
+        currentCurve()
+    end
+end
+
+function love.draw()
+    local start = love.timer.getTime()
+
+    love.graphics.push()
+    love.graphics.scale(scale)
+    love.graphics.draw(origImg)
+    if drawGridToggle == true then
+        love.graphics.setColor(0.2, 0.4, 0.8)
+        drawGrid()
+        love.graphics.setColor(1, 1, 1)
+    end
+    love.graphics.draw(ditheredImg, imgSize, 0)
+
+    love.graphics.pop()
+    -- ui
+    love.graphics.print([[F1 - All walls blocked
+F2 - All walls open
+F3 - Random walls
+F4 - Recursive backtracker maze
+F5 - Hilbert Curve (following curve)
+F6 - Hilbert Curve (from top left)
+
+T - Toggle grid
+A - Toggle animation]], 5, 5)
+end</code></pre></div>
+
+The love file is attached which includes my test image and the export from a L-System program I was using to quickly generate the Hilbert curve (probably not the best way to do it but it was fast to implement with what I already had)</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.html" alt="" /> <a class="postlink" href="download/filef69b.html?id=24112">CurveDither.love</a></dt>
+						<dd>(29.28 KiB) Downloaded 3 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting05b6-2.html?mode=reply&amp;t=94380" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic1982.html?t=94380&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=94380">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Ahrefs [Bot]</span> and 3 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=253834 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:10:56 GMT -->
+</html>
