@@ -19,26 +19,26 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Arne-27s_SpaceTaxi">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:54:44+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/BuryMyHeart">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:55:33+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Arne-27s_SpaceTaxi">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/BuryMyHeart">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AGames"/>
-		<rdfs:label>Arne's SpaceTaxi</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Arne-27s_SpaceTaxi"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Arne-27s_SpaceTaxi"/>
+		<rdfs:label>BuryMyHeart</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/BuryMyHeart"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/BuryMyHeart"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3AArne_Schwettmann"/>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gravity-based space taxi game.</property:Description>
-		<property:Genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiplayer Gravity Lander</property:Genre>
-		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.10.2</property:LOVE_Version>
-		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arne's SpaceTaxi</property:Name>
-		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:ArnesSpaceTaxi_shot1.jpg</property:Screenshot>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-20T00:24:36Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457832.5170833</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arne's SpaceTaxi</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AWillurd"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A game where the goal is to figure out the goal of the game</property:Description>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.6.2</property:LOVE_Version>
+		<property:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BuryMyHeart</property:Name>
+		<property:Screenshot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File:BuryMyHeart-Screenshot.jpg</property:Screenshot>
+		<property:Status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Released</property:Status>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-06-19T17:42:10Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455367.2376157</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BuryMyHeart</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3AGames" />
@@ -47,10 +47,10 @@
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
 	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AAuthor" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADescription" />
-	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AGenre" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ALOVE_Version" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AName" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AScreenshot" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AStatus" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />

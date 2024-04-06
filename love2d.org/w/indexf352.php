@@ -19,55 +19,55 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/User-3ALukasz">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:56:22+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/User-3AGloryFish">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:56:28+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/User-3ALukasz">
-		<rdfs:label>User:Lukasz</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/User-3ALukasz"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/User-3ALukasz"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/User-3AGloryFish">
+		<rdfs:label>User:GloryFish</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/User-3AGloryFish"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/User-3AGloryFish"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-01-31T13:21:51Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455593.0568403</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lukasz</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-02-10T16:06:43Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2455603.171331</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GloryFish</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Dave_Gone_Apeshit">
-		<rdfs:label>Dave Gone Apeshit</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Dave_Gone_Apeshit"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Dave_Gone_Apeshit"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Desert_Loot">
+		<rdfs:label>Desert Loot</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Desert_Loot"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Desert_Loot"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ALukasz"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dave Gone Apeshit</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AGloryFish"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desert Loot</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Dave_Gone_Apeshit_-28日本語-29">
-		<rdfs:label>Dave Gone Apeshit (日本語)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Dave_Gone_Apeshit_-28日本語-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Dave_Gone_Apeshit_-28日本語-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Desert_Loot_-28日本語-29">
+		<rdfs:label>Desert Loot (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Desert_Loot_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Desert_Loot_-28日本語-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ALukasz"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dave Gone Apeshit (日本語)</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AGloryFish"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desert Loot (日本語)</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Paper_Evolution">
-		<rdfs:label>Paper Evolution</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Paper_Evolution"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Paper_Evolution"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Unrequited">
+		<rdfs:label>Unrequited</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Unrequited"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Unrequited"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ALukasz"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper Evolution</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AGloryFish"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unrequited</swivt:wikiPageSortKey>
 	</swivt:Subject>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Paper_Evolution_-28日本語-29">
-		<rdfs:label>Paper Evolution (日本語)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Paper_Evolution_-28日本語-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Paper_Evolution_-28日本語-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Unrequited_-28日本語-29">
+		<rdfs:label>Unrequited (日本語)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Unrequited_-28日本語-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Unrequited_-28日本語-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Author rdf:resource="&wiki;User-3ALukasz"/>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper Evolution (日本語)</swivt:wikiPageSortKey>
+		<property:Author rdf:resource="&wiki;User-3AGloryFish"/>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unrequited (日本語)</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AAuthor">
 		<rdfs:label>Author</rdfs:label>
