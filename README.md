@@ -15,4 +15,4 @@ git clone git@github.com:alejandro-alzate/love2doc.git
 Or just click that juicy green button named "Code" then in the underwhelming grey "Download ZIP" button.
 
 When contributing do **not** bother in editing README.md directly because is created dinamically by the `update_readme.lua` script
-Being run monthly
+Being run every now and then
