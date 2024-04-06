@@ -19,17 +19,17 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AAudio_-28Deutsch-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-05T23:23:23+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AFonts_and_Text_-28Français-29">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T04:14:46+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3AAudio_-28Deutsch-29">
-		<rdfs:label>Tutorial:Audio (Deutsch)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AAudio_-28Deutsch-29"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3AAudio_-28Deutsch-29"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Tutorial-3AFonts_and_Text_-28Français-29">
+		<rdfs:label>Tutorial:Fonts and Text (Français)</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/Tutorial-3AFonts_and_Text_-28Français-29"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/Tutorial-3AFonts_and_Text_-28Français-29"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio (Deutsch)</swivt:wikiPageSortKey>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fonts and Text (Français)</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
