@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics&oldid=23633 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:11:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:Physics - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Physics","wgTitle":"Physics","wgCurRevisionId":23633,"wgRevisionId":23633,"wgArticleId":525,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Physics","wgRelevantArticleId":525,"wgRequestId":"de4f349ea095cf687825400b","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Physics" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Tutorial:Physics&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Physics rootpage-Tutorial_Physics skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="http://love2d.org/wiki/Tutorial:Physics">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Tutorial_talk:Physics&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:Physics</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"><div class="mw-revision"><div id="mw-revision-info">Revision as of 12:19, 25 September 2019 by <a href="/w/index.php?title=User:Rucikir&amp;action=edit&amp;redlink=1" class="new mw-userlink" title="User:Rucikir (page does not exist)"><bdi>Rucikir</bdi></a> <span class="mw-usertoollinks">(<a href="/w/index.php?title=User_talk:Rucikir&amp;action=edit&amp;redlink=1" class="new mw-usertoollinks-talk" title="User talk:Rucikir (page does not exist)">talk</a> | <a href="/wiki/Special:Contributions/Rucikir" class="mw-usertoollinks-contribs" title="Special:Contributions/Rucikir">contribs</a>)</span> <span class="comment">(<a href="#The_main.lua">→</a>‎<span dir="auto"><span class="autocomment">The main.lua: </span> ... preferably without introducing bugs</span>)</span></div><div id="mw-revision-nav">(<a href="/w/index.php?title=Tutorial:Physics&amp;diff=prev&amp;oldid=23633" title="Tutorial:Physics">diff</a>) <a href="/w/index.php?title=Tutorial:Physics&amp;direction=prev&amp;oldid=23633" title="Tutorial:Physics">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>In this example we will create a red ball that rolls around on a green ground.
+</p><p>The finished example is at the end of this page. All of these functions may be placed in one file: main.lua
+</p><p>We'll start in the <a href="http://love2d.org/wiki/love.load" title="love.load">love.load</a>() function.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#love.load.28.29"><span class="tocnumber">1</span> <span class="toctext">love.load()</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#love.update.28.29"><span class="tocnumber">2</span> <span class="toctext">love.update()</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#love.draw.28.29"><span class="tocnumber">3</span> <span class="toctext">love.draw()</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#The_main.lua"><span class="tocnumber">4</span> <span class="toctext">The main.lua</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Other_languages"><span class="tocnumber">5</span> <span class="toctext">Other languages</span></a></li>
+</ul>
+</div>
+
+<h3><span id="love.load()"></span><span class="mw-headline" id="love.load.28.29">love.load()</span></h3>
+<p>First we need to set up a <a href="http://love2d.org/wiki/love.physics.newWorld" title="love.physics.newWorld">world</a> for the physics bodies to exist in.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">setMeter</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="c1">--the height of a meter our worlds will be 64px</span>
+  <span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="o">*</span><span class="mi">64</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">--create a world for the bodies to exist in with horizontal gravity of 0 and vertical gravity of 9.81</span>
+</pre></div>
+<p>Now that a <a href="http://love2d.org/wiki/love.physics.newWorld" title="love.physics.newWorld">world</a> has been created, we can add <a href="http://love2d.org/wiki/Body" title="Body">bodies</a>, <a href="http://love2d.org/wiki/Shape" title="Shape">shapes</a>, and <a href="http://love2d.org/wiki/Fixture" title="Fixture">fixture</a> to it.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>   <span class="n">objects</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- table to hold all our physical objects</span>
+  
+  <span class="c1">--let&#39;s create the ground</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">-</span><span class="mi">50</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1">--remember, the shape (the rectangle we create next) anchors to the body from its center, so we have to move it to (650/2, 650-50/2)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="c1">--make a rectangle with a width of 650 and a height of 50</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">--attach shape to body</span>
+  
+  <span class="c1">--let&#39;s create a ball</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span> <span class="c1">--place the body in the center of the world and make it dynamic, so it can move around</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newCircleShape</span><span class="p">(</span> <span class="mi">20</span><span class="p">)</span> <span class="c1">--the ball&#39;s shape has a radius of 20</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">-- Attach fixture to body and give it a density of 1.</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">fixture</span><span class="p">:</span><span class="n">setRestitution</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span> <span class="c1">--let the ball bounce</span>
+
+  <span class="c1">--let&#39;s create a couple blocks to play around with</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">-- A higher density gives it more mass.</span>
+
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<p>Now to wrap up the <a href="http://love2d.org/wiki/love.load" title="love.load">love.load</a>() function, let's set up the screen size and background color.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>  <span class="c1">--initial graphics setup</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mf">0.41</span><span class="p">,</span> <span class="mf">0.53</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)</span> <span class="c1">--set the background color to a nice blue</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">setMode</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">650</span><span class="p">)</span> <span class="c1">--set the window dimensions to 650 by 650 with no fullscreen, vsync on, and no antialiasing</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Okay, that's enough for the initial set up of the physics engine.
+Now we need to edit the <a href="http://love2d.org/wiki/love.update" title="love.update">love.update</a>() function. 
+</p>
+<h3><span id="love.update()"></span><span class="mw-headline" id="love.update.28.29">love.update()</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+  <span class="n">world</span><span class="p">:</span><span class="n">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="c1">--this puts the world into motion</span>
+  
+  <span class="c1">--here we are going to create some keyboard events</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span> <span class="kr">then</span> <span class="c1">--press the right arrow key to push the ball to the right</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span> <span class="kr">then</span> <span class="c1">--press the left arrow key to push the ball to the left</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span> <span class="c1">--press the up arrow key to set the ball in the air</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">setPosition</span><span class="p">(</span><span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">setLinearVelocity</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">--we must set the velocity to zero to prevent a potentially large velocity generated by the change in position</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Now that the world is updating, we can draw the ground and ball.
+</p>
+<h3><span id="love.draw()"></span><span class="mw-headline" id="love.draw.28.29">love.draw()</span></h3>
+<p>First, the ground.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.28</span><span class="p">,</span> <span class="mf">0.63</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span> <span class="c1">-- set the drawing color to green for the ground</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span> <span class="c1">-- draw a &quot;filled in&quot; polygon using the ground&#39;s coordinates</span>
+</pre></div>
+<p>And finally, we can draw the circle that represents the ball and the blocks.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span> <span class="c1">--set the drawing color to red for the ball</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getX</span><span class="p">(),</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getY</span><span class="p">(),</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getRadius</span><span class="p">())</span>
+
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">)</span> <span class="c1">-- set the drawing color to grey for the blocks</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+<span class="kr">end</span>
+</pre></div>
+<p>There you have it! Put this file in a <a href="http://love2d.org/wiki/zip" title="zip">zip file</a>, rename it to physics.love (or whatever), run it. And you'll have a ball rolling around in a lush green environment like I promised.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="http://love2d.org/wiki/File:Tutorial-PhysicsBall.jpg" class="image"><img alt="" src="http://love2d.org/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/300px-Tutorial-PhysicsBall.jpg" width="300" height="309" class="thumbimage" srcset="/w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/450px-Tutorial-PhysicsBall.jpg 1.5x, /w/images/thumb/8/8d/Tutorial-PhysicsBall.jpg/600px-Tutorial-PhysicsBall.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="http://love2d.org/wiki/File:Tutorial-PhysicsBall.jpg" class="internal" title="Enlarge"></a></div>Screenshot of the mostly finished product.</div></div></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="The_main.lua">The main.lua</span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+  <span class="c1">-- the height of a meter our worlds will be 64px</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">setMeter</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+  <span class="c1">-- create a world for the bodies to exist in with horizontal gravity</span>
+  <span class="c1">-- of 0 and vertical gravity of 9.81</span>
+  <span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">9.81</span><span class="o">*</span><span class="mi">64</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+
+  <span class="n">objects</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- table to hold all our physical objects</span>
+
+  <span class="c1">-- let&#39;s create the ground</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1">-- remember, the shape (the rectangle we create next) anchors to the</span>
+  <span class="c1">-- body from its center, so we have to move it to (650/2, 650-50/2)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">-</span><span class="mi">50</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+  <span class="c1">-- make a rectangle with a width of 650 and a height of 50</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+  <span class="c1">-- attach shape to body</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span><span class="p">,</span>
+                                                   <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span>
+
+  <span class="c1">-- let&#39;s create a ball</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="c1">-- place the body in the center of the world and make it dynamic, so</span>
+  <span class="c1">-- it can move around</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+  <span class="c1">-- the ball&#39;s shape has a radius of 20</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newCircleShape</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+  <span class="c1">-- Attach fixture to body and give it a density of 1.</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">,</span>
+                                                 <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">fixture</span><span class="p">:</span><span class="n">setRestitution</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span> <span class="c1">-- let the ball bounce</span>
+
+  <span class="c1">-- let&#39;s create a couple blocks to play around with</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+  <span class="c1">-- A higher density gives it more mass.</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span><span class="p">,</span>
+                                                   <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+  <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">fixture</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">,</span>
+                                                   <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+  <span class="c1">-- initial graphics setup</span>
+  <span class="c1">-- set the background color to a nice blue</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mf">0.41</span><span class="p">,</span> <span class="mf">0.53</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">setMode</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">650</span><span class="p">)</span> <span class="c1">-- set the window dimensions to 650 by 650</span>
+<span class="kr">end</span>
+
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+  <span class="n">world</span><span class="p">:</span><span class="n">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="c1">-- this puts the world into motion</span>
+
+  <span class="c1">-- here we are going to create some keyboard events</span>
+  <span class="c1">-- press the right arrow key to push the ball to the right</span>
+  <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span> <span class="kr">then</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="c1">-- press the left arrow key to push the ball to the left</span>
+  <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span> <span class="kr">then</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="c1">-- press the up arrow key to set the ball in the air</span>
+  <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">setPosition</span><span class="p">(</span><span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">650</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1">-- we must set the velocity to zero to prevent a potentially large</span>
+    <span class="c1">-- velocity generated by the change in position</span>
+    <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">setLinearVelocity</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+  <span class="c1">-- set the drawing color to green for the ground</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.28</span><span class="p">,</span> <span class="mf">0.63</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+  <span class="c1">-- draw a &quot;filled in&quot; polygon using the ground&#39;s coordinates</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span>
+                           <span class="n">objects</span><span class="p">.</span><span class="n">ground</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+
+  <span class="c1">-- set the drawing color to red for the ball</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getX</span><span class="p">(),</span>
+                       <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getY</span><span class="p">(),</span> <span class="n">objects</span><span class="p">.</span><span class="n">ball</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getRadius</span><span class="p">())</span>
+
+  <span class="c1">-- set the drawing color to grey for the blocks</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">)</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span>
+                           <span class="n">objects</span><span class="p">.</span><span class="n">block1</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+  <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">,</span> <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">body</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span>
+                           <span class="n">objects</span><span class="p">.</span><span class="n">block2</span><span class="p">.</span><span class="n">shape</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Other_languages">Other languages</span></h2>
+<div class="i18n">
+<p><a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a class="mw-selflink selflink">English</a>&#160;&#8211; 
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(Français)" title="Tutorial:Physics (Français)">Français</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(Česky)" title="Tutorial:Physics (Česky)">Česky</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(Русский)" title="Tutorial:Physics (Русский)">Русский</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(日本語)" title="Tutorial:Physics (日本語)">日本語</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(简体中文)" title="Tutorial:Physics (简体中文)">简体中文</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/Tutorial:Physics_(Tiếng_Việt)" title="Tutorial:Physics (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=Tutorial:Physics_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Physics (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="http://love2d.org/wiki/Help:i18n" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240405054942
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.052 seconds
+Real time usage: 0.740 seconds
+Preprocessor visited node count: 320/1000000
+Preprocessor generated node count: 755/1000000
+Post‐expand include size: 3405/2097152 bytes
+Template argument size: 1488/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 37531/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.805      1 -total
+100.00%    5.805      1 Template:i18n
+ 52.78%    3.064     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:525-0!canonical and timestamp 20240405054941 and revision id 23633
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;oldid=23633">http://love2d.org/w/index.php?title=Tutorial:Physics&amp;oldid=23633</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://love2d.org/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Tutorial%3APhysics&amp;returntoquery=oldid%3D23633" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Tutorial:Physics" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Tutorial:Physics" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;oldid=23633&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;oldid=23633" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Tutorial:Physics&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 25 September 2019, at 12:19.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.052","walltime":"0.740","ppvisitednodes":{"value":320,"limit":1000000},"ppgeneratednodes":{"value":755,"limit":1000000},"postexpandincludesize":{"value":3405,"limit":2097152},"templateargumentsize":{"value":1488,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":37531,"limit":5000000},"timingprofile":["100.00%    5.805      1 -total","100.00%    5.805      1 Template:i18n"," 52.78%    3.064     28 Template:Lang"]},"cachereport":{"timestamp":"20240405054942","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":34});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Physics&oldid=23633 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 01:11:15 GMT -->
+</html>
