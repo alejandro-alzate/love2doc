@@ -19,23 +19,23 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:04:35+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T19:06:09+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.hasDeprecationOutput">
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.setDeprecationOutput">
 		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3AFunctions"/>
-		<rdfs:label>love.hasDeprecationOutput</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.hasDeprecationOutput"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/love.hasDeprecationOutput"/>
+		<rdfs:label>love.setDeprecationOutput</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.setDeprecationOutput"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/love.setDeprecationOutput"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gets whether LÖVE displays warnings when using deprecated functionality.</property:Description>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sets whether LÖVE displays warnings when using deprecated functionality.</property:Description>
 		<property:PrettySince rdf:resource="&wiki;11.0"/>
 		<property:Since rdf:resource="&wiki;110"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T22:27:57Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2459290.4360764</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.hasDeprecationOutput</swivt:wikiPageSortKey>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-22T14:00:20Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458475.0835648</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.setDeprecationOutput</swivt:wikiPageSortKey>
 		<property:parent rdf:resource="&wiki;love"/>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
