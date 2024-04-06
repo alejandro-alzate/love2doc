@@ -19,36 +19,34 @@
 	xmlns:category="&category;"
 	xmlns:property="&property;">
 
-	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/love.keyreleased">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T00:18:40+00:00</swivt:creationDate>
+	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/bump.lua">
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-06T07:16:19+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
-	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/love.keyreleased">
-		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ACallbacks"/>
-		<rdfs:label>love.keyreleased</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/love.keyreleased"/>
-		<swivt:page rdf:resource="http://love2d.org/wiki/love.keyreleased"/>
+	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/bump.lua">
+		<rdf:type rdf:resource="http://love2d.org/wiki/Special:URIResolver/Category-3ALibraries"/>
+		<rdfs:label>bump.lua</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://love2d.org/wiki/Special:ExportRDF/bump.lua"/>
+		<swivt:page rdf:resource="http://love2d.org/wiki/bump.lua"/>
 		<swivt:wikiNamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swivt:wikiNamespace>
 		<swivt:wikiPageContentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</swivt:wikiPageContentLanguage>
-		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Callback function triggered when a keyboard key is released.</property:Description>
-		<property:Since rdf:resource="&wiki;000"/>
-		<property:Subcategory rdf:resource="&wiki;Keyboard"/>
-		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-12T04:45:59Z</swivt:wikiPageModificationDate>
-		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2458860.6985995</property:Modification_date-23aux>
-		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love.keyreleased</swivt:wikiPageSortKey>
-		<property:parent rdf:resource="&wiki;love"/>
+		<property:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimal collision detection lib.</property:Description>
+		<property:Keyword rdf:resource="&wiki;Physics"/>
+		<property:LOVE_Version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</property:LOVE_Version>
+		<swivt:wikiPageModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-27T19:24:10Z</swivt:wikiPageModificationDate>
+		<property:Modification_date-23aux rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2457475.3084491</property:Modification_date-23aux>
+		<swivt:wikiPageSortKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bump.lua</swivt:wikiPageSortKey>
 	</swivt:Subject>
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#creationDate" />
-	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ACallbacks" />
+	<owl:Class rdf:about="http://love2d.org/wiki/Special:URIResolver/Category-3ALibraries" />
 	<owl:ObjectProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#page" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiNamespace" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageContentLanguage" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ADescription" />
-	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ASince" />
-	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ASubcategory" />
+	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AKeyword" />
+	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3ALOVE_Version" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate" />
 	<owl:DatatypeProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3AModification_date-23aux" />
 	<owl:DatatypeProperty rdf:about="http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey" />
-	<owl:ObjectProperty rdf:about="http://love2d.org/wiki/Special:URIResolver/Property-3Aparent" />
 	<!-- Created by Semantic MediaWiki, https://www.semantic-mediawiki.org/ -->
 </rdf:RDF>
