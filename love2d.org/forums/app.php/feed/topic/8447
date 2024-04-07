@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/8447" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-09-28T04:17:24+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/8447</id>
+
+		<entry>
+		<author><name><![CDATA[MrBoring]]></name></author>
+		<updated>2013-03-10T12:26:58+00:00</updated>
+
+		<published>2013-03-10T12:26:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=88356#p88356</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=88356#p88356"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=88356#p88356"><![CDATA[
+sorry for necro. but your video is very helpful for newbie like me! i like your voice too. please make more tutorial video <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=99258">MrBoring</a> — Sun Mar 10, 2013 12:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mogex]]></name></author>
+		<updated>2012-12-09T19:15:39+00:00</updated>
+
+		<published>2012-12-09T19:15:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=71819#p71819</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=71819#p71819"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=71819#p71819"><![CDATA[
+Profiled.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=79276">Mogex</a> — Sun Dec 09, 2012 7:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[n30]]></name></author>
+		<updated>2012-05-24T15:56:37+00:00</updated>
+
+		<published>2012-05-24T15:56:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=57518#p57518</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=57518#p57518"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=57518#p57518"><![CDATA[
+mediafire link not working!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=51166">n30</a> — Thu May 24, 2012 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Reef]]></name></author>
+		<updated>2012-03-16T18:55:51+00:00</updated>
+
+		<published>2012-03-16T18:55:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=52025#p52025</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=52025#p52025"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=52025#p52025"><![CDATA[
+I skipped around through the video and it seems like just what I need to finally get started with LÖVE. I'm eager to watch the new version with all the suggested changes. <br><br>Thanks for taking the time to make this!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=36559">Reef</a> — Fri Mar 16, 2012 6:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[trubblegum]]></name></author>
+		<updated>2012-03-16T17:49:05+00:00</updated>
+
+		<published>2012-03-16T17:49:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=52022#p52022</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=52022#p52022"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=52022#p52022"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Could someone please explain to me why this is a good practice?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"></div></blockquote>Because when you use table.remove, it removes the index and then goes through the entire table to move each entry after the removal point up one. Not only is it slow, but if you are running through the table in a for loop, you end up shifting all the table entry indexes and confuse the crap out of the for.<br><br>By marking them for deletion and removing them in a separate loop you avoid conflicts and slowdown.<br><br>My method is to create an empty "removal table" at the start of the update loop (Anywhere before your update loop) then while running through your table, for instance a bullet table, you A) mark the bullet as "dead" and B) add an entry to the "removal table" with that bullets index, then after you're done, you run through the "removal table" removing all items from the bullet table with that index.</div></blockquote>Unless you are doing table.remove() break, which is a lot quicker and easier if you only have to remove once.<br>And since no-one is going to notice a split-second delay between hitting and dying .. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-surprise.png" width="16" height="16" alt=":o" title="Surprised"> did I just say that out loud?<br><br><br>Nice tutorial .. you have a good voice for it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=33290">trubblegum</a> — Fri Mar 16, 2012 5:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-03-16T17:42:04+00:00</updated>
+
+		<published>2012-03-16T17:42:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=52020#p52020</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=52020#p52020"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=52020#p52020"><![CDATA[
+<blockquote class="uncited"><div>This is awesome!  Thanks so much for making this.<br><br>Highly subjective and not-very-useful critique time, woo!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> </div></blockquote>Thank you Santos, I'm glad you liked it.<br><blockquote class="uncited"><div>I saw "Ogg" and assumed it was audio. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"> Perhaps renaming it "Ogg video" or something might help people who didn't read the first post very well. Like me. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> Thanks for providing 7z links, it's a great format.</div></blockquote>I was originally going to title them "Ogv",but changed my mind as the wikipedia page referenced them as the "Ogg container format".<br><br>What if I used "Theora/Ogg video" ?<br><blockquote class="uncited"><div>I think that the text could be more readable. Is it possible to make the resolution 720 or 1080? Maybe changing the colours a bit to increase the contrast of the text would help too.</div></blockquote>I agree, and I had a lot of production issues. Pitivi seems to really like jpeg compression for some reason, so the quality goes right down the shitter. I need to get a better workflow. The ogv on the site is actually 720 x 576, but for the next version, I will concentrate on getting a better output size.<br><blockquote class="uncited"><div>Syntax highlighting would be amazing if you could find some plugin or something to do it for you. You could probably get away with increasing the font size too. Also using anything but Courier would benefit readability/aesthetics in my highly subjective opinion. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></div></blockquote>I was using google docs for this, so it didn't offer much highlighting. Maybe I can copy paste code from codepad.org or something. I like this idea very much.<br><br>As for courier, I hate it too, but it was the only real monospace font google docs would allow. Next revision: no google docs.<br><blockquote class="uncited"><div>Could "main.lua:love.load()" etc. be mistaken for Lua syntax? Probably not. Just putting that out there. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></div></blockquote>I agree with you, even though main.lua is a filename. I think I will use an em dash (—) instead of :<br><blockquote class="uncited"><div>Enemies don't move completely off screen before they disappear.</div></blockquote>You're right. will have to update the code for that.<br><blockquote class="uncited"><div><blockquote class="uncited"><div>Last thing (for now) is your use of table.remove in an ipairs loop.</div></blockquote>Mark for destruction, then remove later.</div></blockquote><blockquote class="uncited"><div><blockquote class="uncited"><div>Could someone please explain to me why this is a good practice?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"></div></blockquote>Because when you use table.remove, it removes the index and then goes through the entire table to move each entry after the removal point up one. Not only is it slow, but if you are running through the table in a for loop, you end up shifting all the table entry indexes and confuse the crap out of the for.<br><br>By marking them for deletion and removing them in a separate loop you avoid conflicts and slowdown.<br><br>My method is to create an empty "removal table" at the start of the update loop (Anywhere before your update loop) then while running through your table, for instance a bullet table, you A) mark the bullet as "dead" and B) add an entry to the "removal table" with that bullets index, then after you're done, you run through the "removal table" removing all items from the bullet table with that index.</div></blockquote>Thanks Jasoco!<br><img src="http://www.myfacewhen.com/images/147.jpg" class="postimage" alt="Image"><br><br>Thank you very much Santos, your critique was neither subjective or "not-very-useful".<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Fri Mar 16, 2012 5:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Santos]]></name></author>
+		<updated>2012-03-16T09:33:13+00:00</updated>
+
+		<published>2012-03-16T09:33:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51995#p51995</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51995#p51995"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51995#p51995"><![CDATA[
+Ah, I see! Thank you! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3835">Santos</a> — Fri Mar 16, 2012 9:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2012-03-16T07:21:55+00:00</updated>
+
+		<published>2012-03-16T07:21:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51987#p51987</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51987#p51987"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51987#p51987"><![CDATA[
+<blockquote class="uncited"><div>Could someone please explain to me why this is a good practice?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"></div></blockquote>Because when you use table.remove, it removes the index and then goes through the entire table to move each entry after the removal point up one. Not only is it slow, but if you are running through the table in a for loop, you end up shifting all the table entry indexes and confuse the crap out of the for.<br><br>By marking them for deletion and removing them in a separate loop you avoid conflicts and slowdown.<br><br>My method is to create an empty "removal table" at the start of the update loop (Anywhere before your update loop) then while running through your table, for instance a bullet table, you A) mark the bullet as "dead" and B) add an entry to the "removal table" with that bullets index, then after you're done, you run through the "removal table" removing all items from the bullet table with that index.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Mar 16, 2012 7:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Santos]]></name></author>
+		<updated>2012-03-16T07:05:31+00:00</updated>
+
+		<published>2012-03-16T07:05:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51986#p51986</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51986#p51986"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51986#p51986"><![CDATA[
+This is awesome!  Thanks so much for making this.<br><br>Highly subjective and not-very-useful critique time, woo!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br><br>I saw "Ogg" and assumed it was audio. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"> Perhaps renaming it "Ogg video" or something might help people who didn't read the first post very well. Like me. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> Thanks for providing 7z links, it's a great format.<br><br>I think that the text could be more readable. Is it possible to make the resolution 720 or 1080? Maybe changing the colours a bit to increase the contrast of the text would help too. Syntax highlighting would be amazing if you could find some plugin or something to do it for you. You could probably get away with increasing the font size too. Also using anything but Courier would benefit readability/aesthetics in my highly subjective opinion. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><br>Could "main.lua:love.load()" etc. be mistaken for Lua syntax? Probably not. Just putting that out there. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><br>Enemies don't move completely off screen before they disappear.<br><blockquote class="uncited"><div><blockquote class="uncited"><div>Last thing (for now) is your use of table.remove in an ipairs loop.</div></blockquote>Mark for destruction, then remove later.</div></blockquote>Could someone please explain to me why this is a good practice?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3835">Santos</a> — Fri Mar 16, 2012 7:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-03-15T19:42:37+00:00</updated>
+
+		<published>2012-03-15T19:42:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51956#p51956</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51956#p51956"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51956#p51956"><![CDATA[
+<blockquote class="uncited"><div>That is, after all, the official pronunciation. ("Love")</div></blockquote>Thanks for the clarification.<blockquote class="uncited"><div>EDIT: Btw, you do know that setColor accepts tables too (they have to use numerical indices though, iirc).</div></blockquote>News to me! Totally going into rev 2<blockquote class="uncited"><div>EDIT2: The update function gets called once, and exactly once for every drawn frame. (Though this isn't necessary, it's the case now, and always has been.)</div></blockquote>I will make sure to say this properly, cheers.<blockquote class="uncited"><div>EDIT3: Isn't it cleaner if you use the state either as the state table itself (so state = splash instead of state = "splash"), or use state as a table index (so states[state] or even _G[state])?</div></blockquote>Lovely idea, will make it happen.<blockquote class="uncited"><div>EDIT4: Why imgs["background"] instead of imgs.background?</div></blockquote><div class="codebox"><p>Code: </p><pre><code>[~]$ luaLua 5.1.4  Copyright (C) 1994-2008 Lua.org, PUC-Rio&gt; imgs = {}&gt; imgs["background"] = "test"&gt; print(imgs.background)test</code></pre></div>Awesomeness...<br><blockquote class="uncited"><div>Also, game.load isn't needed in love.load, and </div></blockquote>No need to init it twice, good point.<br><blockquote class="uncited"><div>enemy_rate-0.01*enemy_rate = 0.99*enemy_rate.</div></blockquote>That's a good line, much clearer.<br><blockquote class="uncited"><div>Last thing (for now) is your use of table.remove in an ipairs loop.</div></blockquote>Mark for destruction, then remove later.<br><blockquote class="uncited"><div>EDIT5: What about doing l.g.draw(stuff, x*scale, y*scale) instead of storing the x and y scaled?</div></blockquote>Might be clearer, i'll see what I can do.<br><blockquote class="uncited"><div>EDIT6: What's with all the magic numbers? If 12 is half of the player size, why not use player_size/2?</div></blockquote>Yep, this is something that threw me off too as I was recording it. Intended to fix this.<br><blockquote class="uncited"><div>EDIT7: One of the slides is titled "game.lua:splash.draw", that should be splash.lua, of course.</div></blockquote>Yay, typos!<br><br>But seriously, thanks Bartbes. Will have lots of fun stuff for v2.0<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Thu Mar 15, 2012 7:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-03-15T17:12:05+00:00</updated>
+
+		<published>2012-03-15T17:12:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51942#p51942</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51942#p51942"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51942#p51942"><![CDATA[
+That is, after all, the official pronunciation. ("Love")<br><br>EDIT: Btw, you do know that setColor accepts tables too (they have to use numerical indices though, iirc).<br>EDIT2: The update function gets called once, and exactly once for every drawn frame. (Though this isn't necessary, it's the case now, and always has been.)<br>EDIT3: Isn't it cleaner if you use the state either as the state table itself (so state = splash instead of state = "splash"), or use state as a table index (so states[state] or even _G[state])?<br>EDIT4: Why imgs["background"] instead of imgs.background? Also, game.load isn't needed in love.load, and enemy_rate-0.01*enemy_rate = 0.99*enemy_rate. Last thing (for now) is your use of table.remove in an ipairs loop.<br>EDIT5: What about doing l.g.draw(stuff, x*scale, y*scale) instead of storing the x and y scaled?<br>EDIT6: What's with all the magic numbers? If 12 is half of the player size, why not use player_size/2?<br>EDIT7: One of the slides is titled "game.lua:splash.draw", that should be splash.lua, of course.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Thu Mar 15, 2012 5:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-15T16:54:06+00:00</updated>
+
+		<published>2012-03-15T16:54:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51938#p51938</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51938#p51938"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51938#p51938"><![CDATA[
+I pronounce it L-<a href="http://www.rockpapershotgun.com/2008/05/18/strafe-left-the-formative-years-30/" class="postlink">orc-wearing-a-helmet-made-of-testicles</a>-ve.<br><br>No, seriously, I just pronounce it like the un-umlauted word.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Mar 15, 2012 4:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2012-03-15T16:37:20+00:00</updated>
+
+		<published>2012-03-15T16:37:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51936#p51936</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51936#p51936"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51936#p51936"><![CDATA[
+Personally, I say loeve. But that part doesn't matter as much.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Thu Mar 15, 2012 4:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-03-15T15:23:46+00:00</updated>
+
+		<published>2012-03-15T15:23:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51929#p51929</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51929#p51929"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love2d Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51929#p51929"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>...but it's called "LÖVE", not "Love2D"</div></blockquote>I'm using a reference that people will be able to recognize. This is after all, love2d.org.</div></blockquote>And Steam's website is called steampowered.com, but that doesn't mean it's called "Steampowered".</div></blockquote>Fair enough. I will change it in every instance I can.<br><br>Should I be pronouncing it as loeve, considering there's an umlaut? (German enunciation)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Thu Mar 15, 2012 3:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2012-03-15T10:40:34+00:00</updated>
+
+		<published>2012-03-15T10:40:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51918#p51918</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51918#p51918"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love2d Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51918#p51918"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>...but it's called "LÖVE", not "Love2D"</div></blockquote>I'm using a reference that people will be able to recognize. This is after all, love2d.org.</div></blockquote>And Steam's website is called steampowered.com, but that doesn't mean it's called "Steampowered".<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Thu Mar 15, 2012 10:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-03-15T04:36:46+00:00</updated>
+
+		<published>2012-03-15T04:36:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51894#p51894</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51894#p51894"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51894#p51894"><![CDATA[
+<blockquote class="uncited"><div>I'm about 20 minutes in and thought I'd post my thoughts so far. In love.load:<div class="codebox"><p>Code: </p><pre><code>  for _,v in ipairs(img_fn) do    imgs[v]=love.graphics.newImage("assets/"..v..".gif")  end    -- Set filter to nearest  for _,v in pairs(imgs) do    v:setFilter("nearest","nearest")  end</code></pre></div> why not just do:<div class="codebox"><p>Code: </p><pre><code>  for _,v in ipairs(img_fn) do    imgs[v]=love.graphics.newImage("assets/"..v..".gif")    imgs[v]:setFilter("nearest","nearest")  end</code></pre></div>In love.draw:<div class="codebox"><p>Code: </p><pre><code>  -- Set color  love.graphics.setColor(bgcolor.r,bgcolor.g,bgcolor.b)  -- Draw rectangle for background  love.graphics.rectangle("fill",    0,0 ,love.graphics.getWidth(),love.graphics.getHeight())  -- Return the color back to normal.  love.graphics.setColor(255,255,255)</code></pre></div>why not just do this in love.load?<div class="codebox"><p>Code: </p><pre><code>love.graphics.setBackgroundColor(bgcolor.r,bgcolor.g,bgcolor.b)</code></pre></div>And, last but not least:<br>You always put draw and then update. I feel like this is misleading, update always gets called before draw (<a href="https://love2d.org/wiki/love.run" class="postlink">source</a>). It may not sound like an important distinction, but it'd be better to introduce people to the right way first, rather than having them come across very subtle anomalies down the road.</div></blockquote><br>Every point you make is perfectly valid. At all of these points in the screen cast, I noticed exactly all of these issues, but I'd like to take them head on anyway:<br><br>For the v:setFilter:<br>I was doing that for a sense of clarity, if only to keep things a little clearer, but looking back, it makes more sense to just put them in the same loop. A Lua programmer is going to be asking the exact same thing, and it needs to be changed.<br><br>For the setBackgroundColor:<br>One of the things that was on my "list" of things to explain, was the love.graphics.rectangle, and I thought it might be nice to just draw a rectangle for that and skip the background color. In the next revision, I think I will use the setBackgroundColor, and then maybe the love.graphics.rectangle for a backdrop for the interface text.<br><br>As for the love.draw before the love.update, I noticed myself stumbling at multiple times on just this fact, and when i redo this, I plan on reversing the order in every instance.<br><br>One issue I had with the code, in retrospect, was the fact that I keep switching between 160*scale, 144*scale and love.graphics.getWidth(), love.graphics.getHeight() respectively. In the next version, I plan on using the love.graphics.get[Width|Height]() once, and then the [160|144]*scale for the rest. Do you feel as a viewer the switching confusing? Should I stick to the getWidth(), or keep using the scale variable?<br><br>Thanks tentus!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Thu Mar 15, 2012 4:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2012-03-15T01:33:41+00:00</updated>
+
+		<published>2012-03-15T01:33:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51889#p51889</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51889#p51889"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51889#p51889"><![CDATA[
+I'm about 20 minutes in and thought I'd post my thoughts so far. In love.load:<div class="codebox"><p>Code: </p><pre><code>  for _,v in ipairs(img_fn) do    imgs[v]=love.graphics.newImage("assets/"..v..".gif")  end    -- Set filter to nearest  for _,v in pairs(imgs) do    v:setFilter("nearest","nearest")  end</code></pre></div> why not just do:<div class="codebox"><p>Code: </p><pre><code>  for _,v in ipairs(img_fn) do    imgs[v]=love.graphics.newImage("assets/"..v..".gif")    imgs[v]:setFilter("nearest","nearest")  end</code></pre></div>In love.draw:<div class="codebox"><p>Code: </p><pre><code>  -- Set color  love.graphics.setColor(bgcolor.r,bgcolor.g,bgcolor.b)  -- Draw rectangle for background  love.graphics.rectangle("fill",    0,0 ,love.graphics.getWidth(),love.graphics.getHeight())  -- Return the color back to normal.  love.graphics.setColor(255,255,255)</code></pre></div>why not just do this in love.load?<div class="codebox"><p>Code: </p><pre><code>love.graphics.setBackgroundColor(bgcolor.r,bgcolor.g,bgcolor.b)</code></pre></div>And, last but not least:<br>You always put draw and then update. I feel like this is misleading, update always gets called before draw (<a href="https://love2d.org/wiki/love.run" class="postlink">source</a>). It may not sound like an important distinction, but it'd be better to introduce people to the right way first, rather than having them come across very subtle anomalies down the road.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Thu Mar 15, 2012 1:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-03-14T23:44:26+00:00</updated>
+
+		<published>2012-03-14T23:44:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51878#p51878</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51878#p51878"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love2d Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51878#p51878"><![CDATA[
+<blockquote class="uncited"><div>...but it's called "LÖVE", not "Love2D"</div></blockquote>I'm using a reference that people will be able to recognize. This is after all, love2d.org. Where would you suggest changing it?<br><blockquote class="uncited"><div>Very nice intermediate level tutorial. Liked the screencast approach. I will try it for sure when I ready for do my first action game. Thank you.<br><br>EDITED: About your hud info. It's annoying the way you print it. Since the lenght of Score and Bullet info is always changing (and so the print position) is hard to read that info. Would be more wise (for our eyes) separate the print of two vars.</div></blockquote>I'll keep that in mind for 2.0, thank you. I was more worried about having the enemies not being as visible in the game.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Wed Mar 14, 2012 11:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2012-03-14T23:37:49+00:00</updated>
+
+		<published>2012-03-14T23:37:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51874#p51874</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51874#p51874"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love2d Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51874#p51874"><![CDATA[
+...but it's called "LÖVE", not "Love2D"<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Wed Mar 14, 2012 11:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[coffee]]></name></author>
+		<updated>2012-03-14T23:18:42+00:00</updated>
+
+		<published>2012-03-14T23:18:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51865#p51865</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51865#p51865"/>
+		<title type="html"><![CDATA[Re: [Video Tutorial] Love2d Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51865#p51865"><![CDATA[
+Very nice intermediate level tutorial. Liked the screencast approach. I will try it for sure when I ready for do my first action game. Thank you.<br><br>EDITED: About your hud info. It's annoying the way you print it. Since the lenght of Score and Bullet info is always changing (and so the print position) is hard to read that info. Would be more wise (for our eyes) separate the print of two vars.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3988">coffee</a> — Wed Mar 14, 2012 11:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2016-09-28T04:17:24+00:00</updated>
+
+		<published>2012-03-14T22:54:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51862#p51862</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51862#p51862"/>
+		<title type="html"><![CDATA[[Video Tutorial] Love Tutorial ~45min]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51862#p51862"><![CDATA[
+<img src="http://cupm.net/public/love2dtutorial/8b.png" class="postimage" alt="Image"><br><br>Over the past week, I came up with the idea to make a tutorial that would be able to encompass most of the basics of love for people who are new to Love, but not necessarily new to Lua.<br><br>You can download/watch the tutorial here: <a href="http://50.116.63.25/public/lovetutorial/" class="postlink">http://50.116.63.25/public/lovetutorial/</a><br><br><em class="text-italics">Yes, I totally jacked the colors from the love2d.org homepage.</em><br><br>The tutorial goes through 8 sections where in each section the game comes closer and closer to being complete. The idea is that a new <strong class="text-strong">lover</strong> would be able to follow along, learn love, and get a game as a result.<br><br>I highly suggest either:<ol style="list-style-type:u"><li>Downloading the OGV for good picture quality</li><li>Running the Love2dTutorial.pdf while watching the vimeo video.</li></ol>I would like to mention that the OGV is going to have better quality and it's much smaller than mp4.<br><br>The "Assets &amp; code" contains:<ul><li>assets.zip - the game assets</li><li>code.zip - the game code with assets for each section</li><li>Love2dTutorial.pdf - The slides in pdf form</li><li>screenshots.zip - The screenshots from the slides in png form.</li></ul>I hope that whenever anyone asks, "is there a good love tutorial?" that perhaps you might give them a link to this resource.<br><br>Anyway, this was a long and complicated process, but nevertheless, I am open to critique, if I ever re-write this into a version two.<br><br>edit: corrections and more<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Wed Mar 14, 2012 10:54 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

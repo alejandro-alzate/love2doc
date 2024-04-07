@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3733" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2024-01-14T17:24:54+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3733</id>
+
+		<entry>
+		<author><name><![CDATA[Popolon]]></name></author>
+		<updated>2024-01-14T17:24:54+00:00</updated>
+
+		<published>2024-01-14T17:24:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=258362#p258362</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=258362#p258362"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=258362#p258362"><![CDATA[
+I made a tutorial about how to mix vertex and fragment (pixel) shader on very simple example. That was hard to found any, and I was limited to fragment shaders until last months due to that. Hope it could help.<br><br>A relatively complete  explanation is here: <a href="https://framagit.org/popolon/love_shaders/-/blob/main/demo_vertex_fragments_01.md" class="postlink">https://framagit.org/popolon/love_shade ... ents_01.md</a><br>And the associated example here: <a href="https://framagit.org/popolon/love_shaders/-/blob/main/demo_vertex_fragments_01/main.lua" class="postlink">https://framagit.org/popolon/love_shade ... 1/main.lua</a><br><br>In attachement, the packaged .love of the example.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=23887">demo_vertex_fragements_01.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138560">Popolon</a> — Sun Jan 14, 2024 5:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2023-01-21T21:15:03+00:00</updated>
+
+		<published>2023-01-21T21:15:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=252932#p252932</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=252932#p252932"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=252932#p252932"><![CDATA[
+Small flame effect in "pure code", which I adapted from <a href="https://www.shadertoy.com/view/MdKfDh" class="postlink">here</a> and modified slightly so that it runs better (because the original was ramming to death and was glitched on Löve2d)<br><div class="codebox"><p>Code: </p><pre><code>#define fireMovement    vec2(0.01, 0.2) // SPEED &amp; DIRECTION#define normalStrength  10.0            // INTENSITY OF FIREextern float time;float rand(vec2 co) {    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);}vec2 hash( vec2 p ) {    p = vec2( dot(p,vec2(127.1,311.7)),            dot(p,vec2(269.5,183.3)) );    return -1.0 + 2.0*fract(sin(p)*43758.5453123);}float noise( in vec2 p ) {    const float K1 = 0.366025404; // (sqrt(3)-1)/2;    const float K2 = 0.211324865; // (3-sqrt(3))/6;    vec2 i = floor(p + (p.x+p.y)*K1);    vec2 a = p - i + (i.x+i.y)*K2;    vec2 o = step(a.yx,a.xy);        vec2 b = a - o + K2;    vec2 c = a - 1.0 + 2.0*K2;    vec3 h = max( 0.5-vec3(dot(a,a), dot(b,b), dot(c,c) ), 0.0 );    vec3 n = h*h*h*h*vec3( dot(a,hash(i+0.0)), dot(b,hash(i+o)), dot(c,hash(i+1.0)));    return dot( n, vec3(70.0) );}float fbm ( in vec2 p ) {    float f = 0.0;    mat2 m = mat2( 1.6,  1.2, -1.2,  1.6 );    f  = 0.5000*noise(p); p = m*p;    f += 0.2500*noise(p); p = m*p;    f += 0.1250*noise(p); p = m*p;    f += 0.0625*noise(p); p = m*p;    f = 0.5 + 0.5 * f;    return f;}vec4 effect(vec4 color, Image tex, vec2 texCoords, vec2 screenCoords) {    vec2 uv = texCoords;    vec2 uvT = (uv * vec2(1.0, 0.5)) + time * fireMovement;    float n = pow(fbm(8.0 * uvT), 1.0);            float gradient = pow(1.0 - (1.0 - uv.y), 2.0) * normalStrength;    float finalNoise = n * gradient;        vec3 pixel = finalNoise * vec3(2.*n, 2.*n*n*n, n*n*n*n);    return vec4(pixel, 1.);}</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=22299&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=22299" class="postimage" alt="FJwD5PG.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=21975">FIRE.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Sat Jan 21, 2023 9:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[glitchapp]]></name></author>
+		<updated>2022-03-15T11:36:50+00:00</updated>
+
+		<published>2022-03-15T11:36:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=247057#p247057</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=247057#p247057"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=247057#p247057"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>oh amazing, I want to learn that! till now I'm just using external shaders and I don't dare to try to do it myself because all that math looks like a magic spell to me. Do you know any good resources or tutorials to attempt doing such nice shaders?</div></blockquote>I only get the coordinates of the point and change color depending on it. sinus, cosinus and their friend exponential (that is like a combination of both) are the base to create model of so much things on universe ^ ^. I made an easy to understand interactive tutorial <a href="https://tic80.com/play?cart=1739" class="postlink">https://tic80.com/play?cart=1739</a> in Lua too with TIC-80 (a fantasy console). I think both LÖVE and TIC-80 are complementary tools, with same language but different goals. cos &amp; sin and e (and so ln)  are some of the really convenient math tool, but you can also make nice effect without it, everything depend on reading the doc, let try several things with tool you learn and let your own imagination go as wild as possible.</div></blockquote>thank you! that's an amazing piece of software! I think many teachers would find it very useful! thanks for sharing, it's time to relearn some math if I want to make my own shaders, I think it worth the effort.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=182764">glitchapp</a> — Tue Mar 15, 2022 11:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Popolon]]></name></author>
+		<updated>2022-03-12T20:57:31+00:00</updated>
+
+		<published>2022-03-12T20:57:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=247018#p247018</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=247018#p247018"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=247018#p247018"><![CDATA[
+<blockquote class="uncited"><div>oh amazing, I want to learn that! till now I'm just using external shaders and I don't dare to try to do it myself because all that math looks like a magic spell to me. Do you know any good resources or tutorials to attempt doing such nice shaders?</div></blockquote>I only get the coordinates of the point and change color depending on it. sinus, cosinus and their friend exponential (that is like a combination of both) are the base to create model of so much things on universe ^ ^. I made an easy to understand interactive tutorial <a href="https://tic80.com/play?cart=1739" class="postlink">https://tic80.com/play?cart=1739</a> in Lua too with TIC-80 (a fantasy console). I think both LÖVE and TIC-80 are complementary tools, with same language but different goals. cos &amp; sin and e (and so ln)  are some of the really convenient math tool, but you can also make nice effect without it, everything depend on reading the doc, let try several things with tool you learn and let your own imagination go as wild as possible.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138560">Popolon</a> — Sat Mar 12, 2022 8:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GVovkiv]]></name></author>
+		<updated>2022-03-12T09:59:42+00:00</updated>
+
+		<published>2022-03-12T09:59:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=247017#p247017</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=247017#p247017"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=247017#p247017"><![CDATA[
+<blockquote class="uncited"><div>oh amazing, I want to learn that! till now I'm just using external shaders and I don't dare to try to do it myself because all that math looks like a magic spell to me. Do you know any good resources or tutorials to attempt doing such nice shaders?</div></blockquote>learn match (since there so much ways to create cool effects using only sine, cosine, etc)<br>have good imagination<br>learn c (C The Programming Language book is nice for that, since GLSL (is what love use for shaders, <a href="https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language" class="postlink">https://www.khronos.org/opengl/wiki/Ope ... g_Language</a>) is C-styled language)<br>use examples from <a href="https://www.shadertoy.com/" class="postlink">https://www.shadertoy.com/</a> to learn how other people do stuff with shaders<br>and, don't forget learn about <a href="https://love2d.org/wiki/Shader" class="postlink">https://love2d.org/wiki/Shader</a> how love works with shaders, since there slight differences<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=169762">GVovkiv</a> — Sat Mar 12, 2022 9:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[glitchapp]]></name></author>
+		<updated>2022-03-12T05:09:05+00:00</updated>
+
+		<published>2022-03-12T05:09:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=247016#p247016</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=247016#p247016"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=247016#p247016"><![CDATA[
+oh amazing, I want to learn that! till now I'm just using external shaders and I don't dare to try to do it myself because all that math looks like a magic spell to me. Do you know any good resources or tutorials to attempt doing such nice shaders?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=182764">glitchapp</a> — Sat Mar 12, 2022 5:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Popolon]]></name></author>
+		<updated>2022-03-12T01:12:24+00:00</updated>
+
+		<published>2022-03-12T01:12:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=247014#p247014</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=247014#p247014"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=247014#p247014"><![CDATA[
+Some first tries with shaders.<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=20977&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=20977" class="postimage" alt="demo01_screenshot.png" /></a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=20978">demo01.love</a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138560">Popolon</a> — Sat Mar 12, 2022 1:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pke1029]]></name></author>
+		<updated>2020-02-01T19:16:58+00:00</updated>
+
+		<published>2020-02-01T19:16:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=231891#p231891</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=231891#p231891"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=231891#p231891"><![CDATA[
+My first shader! The Mandelbrot set and Julia set.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=17922&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=17922" class="postimage" alt="1580583395.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=17915">mandelbrot.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141996">pke1029</a> — Sat Feb 01, 2020 7:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2019-12-22T22:08:16+00:00</updated>
+
+		<published>2019-12-22T22:08:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=231277#p231277</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=231277#p231277"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=231277#p231277"><![CDATA[
+Just another simple Shader.<br>Splits a colored image into separate R,G,B images.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=17847">split.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sun Dec 22, 2019 10:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-12-22T21:10:14+00:00</updated>
+
+		<published>2019-12-22T21:10:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=231276#p231276</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=231276#p231276"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=231276#p231276"><![CDATA[
+Try this: <a href="https://love2d.org/forums/viewtopic.php?p=191675#p191675" class="postlink">https://love2d.org/forums/viewtopic.php ... 75#p191675</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Dec 22, 2019 9:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[YounYokel]]></name></author>
+		<updated>2019-12-22T14:56:09+00:00</updated>
+
+		<published>2019-12-22T14:56:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=231273#p231273</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=231273#p231273"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=231273#p231273"><![CDATA[
+Do anyone have a simple invert colors shader?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143668">YounYokel</a> — Sun Dec 22, 2019 2:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[aoi_saboten]]></name></author>
+		<updated>2019-10-02T18:13:47+00:00</updated>
+
+		<published>2019-10-02T18:13:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=229869#p229869</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=229869#p229869"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=229869#p229869"><![CDATA[
+Hello guys.<br><br>Can you look to that CRT-shader used here --&gt; <a href="https://github.com/Akylzhan/CRT-shader" class="postlink">https://github.com/Akylzhan/CRT-shader</a><br><br>Is it possible to make that effect much better? I am worried about color palette since it is very colorful and about display boundaries, can I make it smoother?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143650">aoi_saboten</a> — Wed Oct 02, 2019 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[trabitboy]]></name></author>
+		<updated>2019-09-16T16:13:02+00:00</updated>
+
+		<published>2019-09-16T16:13:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=229501#p229501</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=229501#p229501"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=229501#p229501"><![CDATA[
+Here is my example inspired from Sasha264 ,<br>but offset calculation is not correct in my case .<br>( getting pretty close )<br><br>EDIT: corrected, was not offseting on tex coords but cvs coords<br><div class="codebox"><p>Code: </p><pre><code>--this shader substracts alpha of the eraser brush--offset calculation still incorrectfunction love.load()offset={}offset.x=400.0offset.y=400.0circle=love.graphics.newImage('circle.png')cvs1=love.graphics.newCanvas(640,480)love.graphics.setCanvas(cvs1)--first canvas is filled with redmodlove.graphics.clear(1.0,0.0,0.0,1.0)--the canvas holding the real image datacurcvs=cvs1cvs2=love.graphics.newCanvas(640,480)love.graphics.setCanvas(cvs2)love.graphics.clear(0.0,0.0,0.0,0.0)backcvs=cvs2 -- the back buffer the frag shader will render tolove.graphics.setCanvas()local pixelcode=[[//second is the eraserextern Image second;extern float cvsw;extern float brshw;extern float cvsh;extern float brshh;extern float offx;//pixelsextern float offy;//pixelsvec4 effect(vec4 color,Image texture,vec2 tc,vec2 sc){float pxw=1.0 / brshw;float pxh=1.0/brshh;vec4 texturePixel=Texel(texture,tc);float tcx = tc.x*cvsw/brshw-offx*pxw;if (tcx&gt;1.0 || tcx&lt;0.0 ){return texturePixel;}float tcy = tc.y*cvsh/brshh-offy*pxh;if (tcy&gt;1.0 || tcy&lt;0.0){return texturePixel;}vec2 rtc=vec2(tcx,tcy);vec4 secondPixel=Texel(second,rtc);vec4 ret=texturePixel ;ret.a=ret.a-secondPixel.a;return ret;}]]shader=love.graphics.newShader(pixelcode)shader:send("second",circle)shader:send("cvsw",640.0)shader:send("brshw",64.0)shader:send("cvsh",480.0)shader:send("brshh",64.0)shader:send("offx",offset.x)shader:send("offy",offset.y)--test erase from curcvs to backcvslove.graphics.setCanvas(backcvs)love.graphics.setShader(shader)love.graphics.draw(curcvs)love.graphics.setShader()love.graphics.setCanvas()endfunction love.draw()love.graphics.draw(backcvs)love.graphics.print('eraser shader test')end</code></pre></div><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=17650">love2dshadertests.zip</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142343">trabitboy</a> — Mon Sep 16, 2019 4:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[trabitboy]]></name></author>
+		<updated>2019-09-13T00:48:27+00:00</updated>
+
+		<published>2019-09-13T00:48:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=229464#p229464</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=229464#p229464"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=229464#p229464"><![CDATA[
+well thanks Sasha264, that is very helpful  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142343">trabitboy</a> — Fri Sep 13, 2019 12:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sasha264]]></name></author>
+		<updated>2019-09-12T10:18:39+00:00</updated>
+
+		<published>2019-09-12T10:18:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=229440#p229440</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=229440#p229440"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=229440#p229440"><![CDATA[
+<strong class="text-strong">trabitboy</strong>,<br>Hi!  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br><br>To pass 2 or more images (canvases, textures) to the shader you can declare they inside shader code using <strong class="text-strong">extern</strong> directive.<br>And after that but before using this shader you need to send this texture to a shader using <strong class="text-strong">shader:send(...)</strong> method <a href="https://love2d.org/wiki/Shader:send" class="postlink">https://love2d.org/wiki/Shader:send</a><br><br>Note, that you can ignore "default" texture from the second argument from effect(...) function at all and use only yours named textures, declared using <strong class="text-strong">extern Image [name]</strong>  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sunglass.png" width="16" height="14" alt=":cool:" title="Cool"> <br><br>Here is some possible "erasing" shader (but I don't know exact details so it can be adjusted):<br><div class="codebox"><p>Code: </p><pre><code>local shader-- call once per program runfunction InitShader()local pixelcode = [[extern vec2 shift;extern Image eraser;vec4 effect(vec4 color, Image texture, vec2 tc, vec2 sc){vec4 texturePixel = Texel(texture, tc);vec4 eraserPixel = Texel(texture, tc + shift);texturePixel.a = texturePixel.a * (1.0f - eraserPixel.a);return texturePixel;}]]shader = love.graphics.newShader(pixelcode)end-- call once for change eraser texturefunction SetEraserTexture(eraser)shader:send("eraser", eraser)end-- call every time you want to move eraser, i.e. every framefunction SetEraserShift(shift)shader:send("shift", shift)end</code></pre></div>BTW, I suppose for this question a separate thread will be more appropriate  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135618">Sasha264</a> — Thu Sep 12, 2019 10:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[trabitboy]]></name></author>
+		<updated>2019-09-11T21:54:52+00:00</updated>
+
+		<published>2019-09-11T21:54:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=229423#p229423</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=229423#p229423"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=229423#p229423"><![CDATA[
+Hi!<br><br>I am currently porting a paint tool to love2d because:<br>lua is awesome and<br>love2d is awesome and supports shaders<br><br>I am looking for an example of a love 2d shader with 2 textures as input;<br>scenario:<br>I want to erase using the gpu,<br>meaning I want to have painting canvas and an eraser texture as an input, blitting to another canvas as output .<br><br>I climbed back this thread quite far but I could find no multiple inputs shader ?<br><br>Thanks for any help !<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142343">trabitboy</a> — Wed Sep 11, 2019 9:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[wazoowazoo]]></name></author>
+		<updated>2018-11-07T12:07:33+00:00</updated>
+
+		<published>2018-11-07T12:07:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=224030#p224030</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=224030#p224030"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=224030#p224030"><![CDATA[
+I have created another shader, this time a fractal. Left mouse button is to place a fractal, backspace to reset graphics, return (enter) to reset frames, space to pause/unpause and scrolling makes it evolve faster or slower. I hope you will have fun playing around with it ! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=16850">Fractal.love</a></dt></dl></div><br>Here's a preview:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=16851&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=16851" class="postimage" alt="Fractal.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138812">wazoowazoo</a> — Wed Nov 07, 2018 12:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[wazoowazoo]]></name></author>
+		<updated>2018-10-30T13:13:09+00:00</updated>
+
+		<published>2018-10-30T13:13:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=223866#p223866</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=223866#p223866"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=223866#p223866"><![CDATA[
+I have created a basic water shader, hope you will like it.<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=16827">water.love</a></dt></dl></div>I am currently working on reflection.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138812">wazoowazoo</a> — Tue Oct 30, 2018 1:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[girng]]></name></author>
+		<updated>2018-09-07T19:31:46+00:00</updated>
+
+		<published>2018-09-07T19:31:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222940#p222940</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222940#p222940"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222940#p222940"><![CDATA[
+I have a shader that works in Godot, can I still use it in love2d?<br><br>It basically just creates an outline around a sprite (of a certain color)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140721">girng</a> — Fri Sep 07, 2018 7:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2018-09-05T09:37:00+00:00</updated>
+
+		<published>2018-09-05T09:37:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222895#p222895</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222895#p222895"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222895#p222895"><![CDATA[
+<blockquote class="uncited"><div>Should Tri be <a href="https://static.nixo.la/i/1536138544.png" class="postlink">this</a>?</div></blockquote>Nope, more like this:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=16628&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=16628" class="postimage" alt="like_this.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Wed Sep 05, 2018 9:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2018-09-05T09:09:26+00:00</updated>
+
+		<published>2018-09-05T09:09:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222894#p222894</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222894#p222894"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222894#p222894"><![CDATA[
+Should Tri be <a href="https://static.nixo.la/i/1536138544.png" class="postlink">this</a>?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Wed Sep 05, 2018 9:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2018-09-03T23:48:08+00:00</updated>
+
+		<published>2018-09-03T23:48:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222859#p222859</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222859#p222859"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222859#p222859"><![CDATA[
+Ops! Old version now updated to 11.1<br>Best<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=16619">newTri.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Mon Sep 03, 2018 11:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2018-09-04T00:05:15+00:00</updated>
+
+		<published>2018-09-03T22:15:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222858#p222858</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222858#p222858"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222858#p222858"><![CDATA[
+<blockquote class="uncited"><div>The mysteries of shaders. Don't have a clue as to how this shader works!</div></blockquote>Got this error for that; running 11.1:<br><div class="codebox"><p>Code: </p><pre><code>Error: Cannot link shader program object:Fragment info-------------0(52) : warning C7533: global variable gl_FragColor is deprecated after version 1200(44) : error C5121: multiple bindings to output semantic "COL0"stack traceback:        [string "boot.lua"]:637: in function &lt;[string "boot.lua"]:633&gt;        [C]: in function 'newShader'        tri.lua:60: in main chunk        [C]: in function 'require'        main.lua:2: in main chunk        [C]: in function 'require'        [string "boot.lua"]:475: in function &lt;[string "boot.lua"]:311&gt;        [C]: in function 'xpcall'        [string "boot.lua"]:645: in function &lt;[string "boot.lua"]:639&gt;        [C]: in function 'xpcall'</code></pre></div>The Head one is awesome though, although it runs with 15 fps here <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br><br>Edit: Thanks for the new version!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Mon Sep 03, 2018 10:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2018-09-03T21:03:07+00:00</updated>
+
+		<published>2018-09-03T21:03:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=222856#p222856</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=222856#p222856"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=222856#p222856"><![CDATA[
+Doesn't seem to be too much interest in this topic.<br>I'm still amazed at what people can do with them.<br><br>(ESC to exit)<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=16618">head.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Mon Sep 03, 2018 9:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2018-03-23T02:08:09+00:00</updated>
+
+		<published>2018-03-23T02:08:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=219416#p219416</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=219416#p219416"/>
+		<title type="html"><![CDATA[Re: Share a Shader!]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=219416#p219416"><![CDATA[
+The mysteries of shaders. Don't have a clue as to how this shader works!<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=16099">tri.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Fri Mar 23, 2018 2:08 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

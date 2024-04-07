@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 22:44:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:PhysicsCollisionCallbacks (Русский) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:PhysicsCollisionCallbacks_(Русский)","wgTitle":"PhysicsCollisionCallbacks (Русский)","wgCurRevisionId":13456,"wgRevisionId":13456,"wgArticleId":3608,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:PhysicsCollisionCallbacks_(Русский)","wgRelevantArticleId":3608,"wgRequestId":"52f52e8bd38e8d6ab22c21b0","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load8edb.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<link rel="stylesheet" href="load9f67.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<script async="" src="load0045.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;printable=1&amp;skin=love"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,follow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:PhysicsCollisionCallbacks (Русский)" href="index098f.php?title=Special:ExportRDF/Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_PhysicsCollisionCallbacks_Русский rootpage-Tutorial_PhysicsCollisionCallbacks_Русский skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="../wiki/Tutorial_talk_PhysicsCollisionCallbacks_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html?title=Tutorial_talk:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="indexce76.html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index0114.html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:PhysicsCollisionCallbacks (Русский)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.D0.9F.D1.80.D0.B5.D0.B4.D0.B8.D1.81.D0.BB.D0.BE.D0.B2.D0.B8.D0.B5"><span class="tocnumber">1</span> <span class="toctext">Предисловие</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.D0.A0.D1.83.D0.BA.D0.BE.D0.B2.D0.BE.D0.B4.D1.81.D1.82.D0.B2.D0.BE"><span class="tocnumber">2</span> <span class="toctext">Руководство</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_main.lua"><span class="tocnumber">2.1</span> <span class="toctext">Создание main.lua</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0_.D0.BC.D0.B8.D1.80.D0.B0"><span class="tocnumber">2.2</span> <span class="toctext">Настройка мира</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#World_Callbacks"><span class="tocnumber">2.3</span> <span class="toctext">World Callbacks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#.D0.97.D0.B0.D0.B2.D0.B5.D1.80.D1.88.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">3</span> <span class="toctext">Завершение</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#.D0.A1.D0.BA.D1.80.D0.B8.D0.BD.D1.88.D0.BE.D1.82.D1.8B"><span class="tocnumber">3.1</span> <span class="toctext">Скриншоты</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#main.lua"><span class="tocnumber">3.2</span> <span class="toctext">main.lua</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#.D0.94.D1.80.D1.83.D0.B3.D0.B8.D0.B5_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B8"><span class="tocnumber">4</span> <span class="toctext">Другие языки</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Предисловие"></span><span class="mw-headline" id=".D0.9F.D1.80.D0.B5.D0.B4.D0.B8.D1.81.D0.BB.D0.BE.D0.B2.D0.B8.D0.B5">Предисловие</span></h2>
+<p>Если у вас слабое представление о <a href="../wiki/love-13.html" title="love.physics">love.physics</a>, вам нужно сначала ознакомиться с вводным руководством <a href="../wiki/Tutorial_Physics_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Tutorial:Physics (Русский)">по использованию физики</a>.
+</p><p>В этом руководстве мы создадим столкновение между двумя объектами, которое вызывается определенной callback-функцией (колбеком), заданной в <a href="../wiki/World_setCallbacks.html" title="World:setCallbacks">World:setCallbacks</a>.
+</p><p><br />
+</p>
+<h2><span id="Руководство"></span><span class="mw-headline" id=".D0.A0.D1.83.D0.BA.D0.BE.D0.B2.D0.BE.D0.B4.D1.81.D1.82.D0.B2.D0.BE">Руководство</span></h2>
+<h3><span id="Создание_main.lua"></span><span class="mw-headline" id=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_main.lua">Создание main.lua</span></h3>
+<p>Начнем с создания main.lua с тремя функциями: <a href="../wiki/love-21.html" title="love.load">love.load</a>, <a href="../wiki/love-22.html" title="love.update">love.update</a>, and <a href="../wiki/love-23.html" title="love.draw">love.draw</a>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+	
+<span class="kr">end</span>
+</pre></div>
+<h3><span id="Настройка_мира"></span><span class="mw-headline" id=".D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0_.D0.BC.D0.B8.D1.80.D0.B0">Настройка мира</span></h3>
+<p>Сейчас, когда фреймворк уже настроен, настроим <a href="../wiki/World.html" title="World">физический мир</a> в <a href="../wiki/love-21.html" title="love.load">love.load</a> с <a href="../wiki/love.physics-21.html" title="love.physics.newWorld">newWorld</a>.
+Мы также будем использовать <a href="../wiki/World_update.html" title="World:update">World:update</a>.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+	<span class="c1">-- Помещаем новый &quot;мир&quot; в переменную &quot;world&quot;</span>
+	<span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>  <span class="c1">-- Гравитация установлена равной 0 по оси X и 200 по оси Y</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+	<span class="c1">-- Никогда не забывайте обновлять мир каждый кадр</span>
+	<span class="n">world</span><span class="p">:</span><span class="n">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Теперь нам нужно создать мяс и землю. Чтобы это сделать нам потребуются  <a href="../wiki/love.physics-3.html" title="love.physics.newBody">newBody</a>, <a href="../wiki/love.physics-5.html" title="love.physics.newCircleShape">newCircleShape</a> и <a href="../wiki/love.physics-16.html" title="love.physics.newRectangleShape">newRectangleShape</a>.  Тела к формам мы будем прикреплять с поощью <a href="../wiki/love.physics-8.html" title="love.physics.newFixture">newFixture</a>.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+    <span class="p">...</span> <span class="c1">-- не пишите это, это просто обозначение, в какой функции, в каком месте должен быть этот код</span>
+
+    <span class="n">ball</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>  <span class="c1">-- устанавливаем x,y координаты (400,200) и позволяем двигаться и задевать другие объекты (&quot;dynamic&quot;)</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">setMass</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                                        <span class="c1">-- делаем довольно легким</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newCircleShape</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>                  <span class="c1">-- устанвливаем радиус 50</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">,</span> <span class="n">ball</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>          <span class="c1">-- прикрепляем тело к форме</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setRestitution</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>                                <span class="c1">-- делаем упругим</span>
+	<span class="n">ball</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setUserData</span><span class="p">(</span><span class="s2">&quot;Ball&quot;</span><span class="p">)</span>                                <span class="c1">-- устанавливаем имя, которое будем использовать для достпуа к объекту позже</span>
+	  
+	<span class="n">static</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="n">static</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;static&quot;</span><span class="p">)</span> <span class="c1">-- &quot;static&quot; делает объект неподвижным</span>
+	<span class="n">static</span><span class="p">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>         <span class="c1">-- устанавливаем размер 200,50 (x,y)</span>
+	<span class="n">static</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">static</span><span class="p">.</span><span class="n">b</span><span class="p">,</span> <span class="n">static</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>
+	<span class="n">static</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setUserData</span><span class="p">(</span><span class="s2">&quot;Block&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Объекты уже созданы, но вы все еще не видите их. Давайте нарисуем их.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getX</span><span class="p">(),</span><span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getY</span><span class="p">(),</span> <span class="n">ball</span><span class="p">.</span><span class="n">s</span><span class="p">:</span><span class="n">getRadius</span><span class="p">(),</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">static</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span><span class="n">static</span><span class="p">.</span><span class="n">s</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Теперь мы можем увидеть мяч, падающий вниз на прямоугольник
+</p>
+<h3><span class="mw-headline" id="World_Callbacks">World Callbacks</span></h3>
+<p>Но что если нам нужно больше информации о сталкновении этих объектов? Теперь мы будем использовать <a href="../wiki/World_setCallbacks.html" title="World:setCallbacks">World:setCallbacks</a> для дальнейшего анализа их столкновений.
+</p><p>Первое, что мы сделаем, это установим колбеки для нашего мира с <a href="../wiki/World_setCallbacks.html" title="World:setCallbacks">World:setCallbacks</a>.
+Есть четыре колбека для столкновения: beginContact, endContact, preSolve и postSolve.
+</p>
+<dl><dd><b>beginContact</b> вызывается когда две привязки (fixtures) начинают перекрывать друг друга (два объекта сталкиваются).</dd>
+<dd><b>endContact</b> вызывается когда две привязки (fixtures) перестаются перекрывать друг друга (два объекта разъединяются).</dd>
+<dd><b>preSolve</b> вызывается непосредственно перед завершение кадра для текущего столкновения</dd>
+<dd><b>postSolve</b> вызывается непосредственно после завершения кадра для текущего столкновения</dd></dl>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+    <span class="p">...</span>  <span class="c1">-- добавить к остальному love.load</span>
+
+    <span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="c1">-- Названия этих колбеков могут быть такими, как вы захотите:</span>
+        <span class="n">world</span><span class="p">:</span><span class="n">setCallbacks</span><span class="p">(</span><span class="n">beginContact</span><span class="p">,</span> <span class="n">endContact</span><span class="p">,</span> <span class="n">preSolve</span><span class="p">,</span> <span class="n">postSolve</span><span class="p">)</span>
+
+    <span class="n">text</span>       <span class="o">=</span> <span class="s2">&quot;&quot;</span>   <span class="c1">-- мы будем испольовать позже эту переменную для размещения информации на экране</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">-- мы будем использовать это, чтобы сохранить состояние неоднократных вызовов колбека</span>
+</pre></div>
+<p>Теперь объявим эти функции.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">beginContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+	
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">endContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+	
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">preSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+	
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">postSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+	
+<span class="kr">end</span>
+</pre></div>
+<p>Эти функции происходят каждрый раз, когда происходит какое-то из действий при столкновении. Они принимают две привязки (fixtures) и объект столкновения (collision object). Эти параметры так же могут быть названы как вам захочется. В этом руководстве мы назовем их a, b и coll.
+</p>
+<ul><li><b>a</b> - первая <a href="../wiki/Fixture.html" title="Fixture"> привязкка (fixture)</a> в столкновении (привязка от первого объекта между его телом и формой).</li>
+<li><b>b</b> - вторая привязка в столкновении.</li>
+<li><b>coll</b> - создаваемый <a href="../wiki/Contact.html" title="Contact">контакт-объект (контакт)</a>.</li></ul>
+<p>Допустим, мы хотим напечатать информацию на экран каждый раз, когда колбек вызван. Нам всего лишь нужно изменить переменную <b>text</b>, которую мы добавили в love.load() ранее, добавляя строку каждый раз, когда происходит столкновение.  Нам также нужно немного кода, чтобы поддерживать вывод (лог) чистым. 
+</p><p>Список функций, которые вы можете использовать с контактами может быть найден на странице <a href="../wiki/Contact.html" title="Contact">Contact</a>.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+    <span class="p">...</span> <span class="c1">-- добавить к остальному love.update</span>
+
+    <span class="kr">if</span> <span class="nb">string.len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">768</span> <span class="kr">then</span>    <span class="c1">-- очистка, когда &#39;text&#39; становится слишком длинным</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> 
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="p">...</span> <span class="c1">-- добавить к остальному love.draw</span>
+
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">beginContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">coll</span><span class="p">:</span><span class="n">getNormal</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; colliding with &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; with a vector normal of: &quot;</span><span class="o">..</span><span class="n">x</span><span class="o">..</span><span class="s2">&quot;, &quot;</span><span class="o">..</span><span class="n">y</span>
+<span class="kr">end</span>
+
+
+<span class="kr">function</span> <span class="nf">endContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">-- сбрасываем, когда они перестают соприкасаться</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; uncolliding with &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">preSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">persisting</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>    <span class="c1">-- только говорит, когда они впервые начинают касаться</span>
+        <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; touching &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span>
+    <span class="kr">elseif</span> <span class="n">persisting</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="kr">then</span>    <span class="c1">-- затем просто начинается вести отсчет</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">persisting</span>
+    <span class="kr">end</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="n">persisting</span> <span class="o">+</span> <span class="mi">1</span>    <span class="c1">-- отслеживает как много обновлений они соприкасались</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">postSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+<span class="c1">-- мы не будем ничего делать с этой функцией</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Теперь вы знаете как использовать колбеки физического мира (world callbacks)!
+</p><p>Чтобы лучше понять как мир себя ведет и видеть когда колбеки вызываются, добавим элементы управления, позволяющие подкидывать, толкать мяч:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+    <span class="n">world</span><span class="p">:</span><span class="n">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+
+    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> 
+    <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5000</span><span class="p">)</span>
+    <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="kr">end</span>
+
+    <span class="kr">if</span> <span class="nb">string.len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">768</span> <span class="kr">then</span>    <span class="c1">-- очищаем когда &#39;text&#39; станет слишком длинным</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> 
+    <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p>
+<h2><span id="Завершение"></span><span class="mw-headline" id=".D0.97.D0.B0.D0.B2.D0.B5.D1.80.D1.88.D0.B5.D0.BD.D0.B8.D0.B5">Завершение</span></h2>
+<h3><span id="Скриншоты"></span><span class="mw-headline" id=".D0.A1.D0.BA.D1.80.D0.B8.D0.BD.D1.88.D0.BE.D1.82.D1.8B">Скриншоты</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="../wiki/File_Box2d-love-physics-callbacks-demo.html" class="image"><img alt="" src="images/thumb/9/97/Box2d-love-physics-callbacks-demo.png/400px-Box2d-love-physics-callbacks-demo.png" width="400" height="320" class="thumbimage" srcset="/w/images/thumb/9/97/Box2d-love-physics-callbacks-demo.png/600px-Box2d-love-physics-callbacks-demo.png 1.5x, /w/images/thumb/9/97/Box2d-love-physics-callbacks-demo.png/800px-Box2d-love-physics-callbacks-demo.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../wiki/File_Box2d-love-physics-callbacks-demo.html" class="internal" title="Enlarge"></a></div>Скриншот результата.</div></div></div>
+<h3><span class="mw-headline" id="main.lua">main.lua</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+    <span class="n">world</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newWorld</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="n">world</span><span class="p">:</span><span class="n">setCallbacks</span><span class="p">(</span><span class="n">beginContact</span><span class="p">,</span> <span class="n">endContact</span><span class="p">,</span> <span class="n">preSolve</span><span class="p">,</span> <span class="n">postSolve</span><span class="p">)</span>
+
+    <span class="n">ball</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">setMass</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newCircleShape</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">,</span> <span class="n">ball</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setRestitution</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>    <span class="c1">-- делаем упругим</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setUserData</span><span class="p">(</span><span class="s2">&quot;Ball&quot;</span><span class="p">)</span>
+    <span class="n">static</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">static</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newBody</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;static&quot;</span><span class="p">)</span>
+        <span class="n">static</span><span class="p">.</span><span class="n">s</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newRectangleShape</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+        <span class="n">static</span><span class="p">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">physics</span><span class="p">.</span><span class="n">newFixture</span><span class="p">(</span><span class="n">static</span><span class="p">.</span><span class="n">b</span><span class="p">,</span> <span class="n">static</span><span class="p">.</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">static</span><span class="p">.</span><span class="n">f</span><span class="p">:</span><span class="n">setUserData</span><span class="p">(</span><span class="s2">&quot;Block&quot;</span><span class="p">)</span>
+
+    <span class="n">text</span>       <span class="o">=</span> <span class="s2">&quot;&quot;</span>   <span class="c1">-- будем использовать эту переменную для вывода на экран</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">-- будем использовать, чтобы сохранить состояние неоднократных вызовов колбека</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+    <span class="n">world</span><span class="p">:</span><span class="n">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+
+    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5000</span><span class="p">)</span>
+    <span class="kr">elseif</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">applyForce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="kr">end</span>
+
+    <span class="kr">if</span> <span class="nb">string.len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">768</span> <span class="kr">then</span>    <span class="c1">-- очищаем &#39;text&#39; становится слишком длинным</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getX</span><span class="p">(),</span><span class="n">ball</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getY</span><span class="p">(),</span> <span class="n">ball</span><span class="p">.</span><span class="n">s</span><span class="p">:</span><span class="n">getRadius</span><span class="p">(),</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">polygon</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">static</span><span class="p">.</span><span class="n">b</span><span class="p">:</span><span class="n">getWorldPoints</span><span class="p">(</span><span class="n">static</span><span class="p">.</span><span class="n">s</span><span class="p">:</span><span class="n">getPoints</span><span class="p">()))</span>
+
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">beginContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">coll</span><span class="p">:</span><span class="n">getNormal</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; colliding with &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; with a vector normal of: &quot;</span><span class="o">..</span><span class="n">x</span><span class="o">..</span><span class="s2">&quot;, &quot;</span><span class="o">..</span><span class="n">y</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">endContact</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; uncolliding with &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">preSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">persisting</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>    <span class="c1">-- только говорит, когда они впервые начинают касаться</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">..</span><span class="n">a</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span><span class="o">..</span><span class="s2">&quot; touching &quot;</span><span class="o">..</span><span class="n">b</span><span class="p">:</span><span class="n">getUserData</span><span class="p">()</span>
+    <span class="kr">elseif</span> <span class="n">persisting</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="kr">then</span>    <span class="c1">-- затем просто начинается вести отсчет</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">..</span><span class="s2">&quot; &quot;</span><span class="o">..</span><span class="n">persisting</span>
+    <span class="kr">end</span>
+    <span class="n">persisting</span> <span class="o">=</span> <span class="n">persisting</span> <span class="o">+</span> <span class="mi">1</span>    <span class="c1">-- отслеживает как много обновлений они соприкасались</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">postSolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">coll</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span id="Другие_языки"></span><span class="mw-headline" id=".D0.94.D1.80.D1.83.D0.B3.D0.B8.D0.B5_.D1.8F.D0.B7.D1.8B.D0.BA.D0.B8">Другие языки</span></h2>
+<div class="i18n">
+<p><a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Dansk).html?title=Tutorial:PhysicsCollisionCallbacks_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Deutsch).html?title=Tutorial:PhysicsCollisionCallbacks_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks.html" title="Tutorial:PhysicsCollisionCallbacks">English</a>&#160;&#8211; 
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Espa%c3%b1ol).html?title=Tutorial:PhysicsCollisionCallbacks_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Fran%c3%a7ais).html?title=Tutorial:PhysicsCollisionCallbacks_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Français) (page does not exist)">Français</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Indonesia).html?title=Tutorial:PhysicsCollisionCallbacks_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Italiano).html?title=Tutorial:PhysicsCollisionCallbacks_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Lietuvi%c5%a1kai).html?title=Tutorial:PhysicsCollisionCallbacks_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Magyar).html?title=Tutorial:PhysicsCollisionCallbacks_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Nederlands).html?title=Tutorial:PhysicsCollisionCallbacks_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Polski).html?title=Tutorial:PhysicsCollisionCallbacks_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Portugu%c3%aas).html?title=Tutorial:PhysicsCollisionCallbacks_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Rom%c3%a2n%c4%83).html?title=Tutorial:PhysicsCollisionCallbacks_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Slovensk%c3%bd).html?title=Tutorial:PhysicsCollisionCallbacks_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Suomi).html?title=Tutorial:PhysicsCollisionCallbacks_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Svenska).html?title=Tutorial:PhysicsCollisionCallbacks_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(T%c3%bcrk%c3%a7e).html?title=Tutorial:PhysicsCollisionCallbacks_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%c4%8cesky).html?title=Tutorial:PhysicsCollisionCallbacks_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Tutorial:PhysicsCollisionCallbacks_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a class="mw-selflink selflink">Русский</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Tutorial:PhysicsCollisionCallbacks_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Tutorial:PhysicsCollisionCallbacks_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:PhysicsCollisionCallbacks (日本語)">日本語</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html?title=Tutorial:PhysicsCollisionCallbacks_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html" title="Tutorial:PhysicsCollisionCallbacks (简体中文)">简体中文</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html?title=Tutorial:PhysicsCollisionCallbacks_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="../wiki/Tutorial_PhysicsCollisionCallbacks_(%ed%95%9c%ea%b5%ad%ec%96%b4).html?title=Tutorial:PhysicsCollisionCallbacks_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:PhysicsCollisionCallbacks (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="../wiki/Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240406174018
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.056 seconds
+Real time usage: 0.938 seconds
+Preprocessor visited node count: 360/1000000
+Preprocessor generated node count: 827/1000000
+Post‐expand include size: 4449/2097152 bytes
+Template argument size: 2532/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 35552/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.838      1 -total
+100.00%    5.838      1 Template:i18n
+ 52.87%    3.087     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:3608-0!canonical and timestamp 20240406174017 and revision id 13456
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexc5f4.html?title=Tutorial:PhysicsCollisionCallbacks_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9)&amp;oldid=13456">http://love2d.org/w/index.php?title=Tutorial:PhysicsCollisionCallbacks_(Русский)&amp;oldid=13456</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../wiki/Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../wiki/Category_Tutorials.html" title="Category:Tutorials">Tutorials</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index540f.html?title=Special:UserLogin&amp;returnto=Tutorial%3APhysicsCollisionCallbacks+%28%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%29&amp;returntoquery=printable%3Dyes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../wiki/Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="../wiki/love.html">love</a></li>
+											<li id="n-love.audio"><a href="../wiki/love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="../wiki/love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="../wiki/love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="../wiki/love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="../wiki/love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="../wiki/love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="../wiki/love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="../wiki/love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="../wiki/love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="../wiki/love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="../wiki/love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="../wiki/love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="../wiki/love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="../wiki/love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="../wiki/love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="../wiki/love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="../wiki/love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="../wiki/love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="../wiki/love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="../wiki/lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="../wiki/socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="../wiki/utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="../wiki/Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="../wiki/Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="../wiki/Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="../wiki/Special_WhatLinksHere/Tutorial_PhysicsCollisionCallbacks_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="../wiki/Special_RecentChangesLinked/Tutorial_PhysicsCollisionCallbacks_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="../wiki/Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-permalink"><a href="indexee49.html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;oldid=13456" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index00b6.html?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 26 April 2014, at 15:44.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="../wiki/LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="../wiki/LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="../wiki/LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.056","walltime":"0.938","ppvisitednodes":{"value":360,"limit":1000000},"ppgeneratednodes":{"value":827,"limit":1000000},"postexpandincludesize":{"value":4449,"limit":2097152},"templateargumentsize":{"value":2532,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":35552,"limit":5000000},"timingprofile":["100.00%    5.838      1 -total","100.00%    5.838      1 Template:i18n"," 52.87%    3.087     28 Template:Lang"]},"cachereport":{"timestamp":"20240406174018","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":36});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:PhysicsCollisionCallbacks_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 22:44:45 GMT -->
+</html>

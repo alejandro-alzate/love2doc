@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/83569" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2017-02-22T13:26:38+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/83569</id>
+
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2017-02-22T13:26:38+00:00</updated>
+
+		<published>2017-02-22T13:26:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209918#p209918</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209918#p209918"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209918#p209918"><![CDATA[
+Yeah, the propagate is a good idea and I think I'll probably implement it in ScreenManager (I hold a fork and have contributed to rm-code repository)<br><br>Currently ScreenManager goes upward for drawing, downwards for some input and only to the top of the stack on the rest, so It's really unpredictable where it will go next<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Wed Feb 22, 2017 1:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[s-ol]]></name></author>
+		<updated>2017-02-22T12:36:04+00:00</updated>
+
+		<published>2017-02-22T12:36:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209913#p209913</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209913#p209913"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209913#p209913"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>i have my own on github too but I think you really dont need it.</div></blockquote>The thing I like about your solution is the ability to propagate some callbacks upward (drawing) and others downward (input). I'm not sure how the others handle that. If you don't have a lot of layers of stuff, though, maybe just a floating pause menu or something, you don't really even need a stack, you can just have your pause state hold a reference to the game state and have it draw your game state before it draws itself. If you don't need a stack, you probably don't really need a library either. Should be easy enough to have something like "game.activeState" and set that to whatever state instance you want.</div></blockquote>Yeah, with a stack a library is starting to make sense. I think most libraries are not meant to handle multiple states at once, even on a stack (which is why i called st8 'double stacked'), but afaik jasocos does. His explanations of what he did sort of inspired st8.lua, and I bet he had the problem of up/down ordering too.<br><br>a different way to solve it that I somehow only just realized would be to do it with a node-style callback argument:<br><div class="codebox"><p>Code: </p><pre><code>OverlayingMenu:update(propagate, dt)  -- update menu   propagate(0.1 * dt) -- slow down underlying stateendOverlayingMenu:draw(propagate)  propagate() -- draw underlying state first  -- draw menuendOverlayingMenu:keypressed(propagate, key)  if key == "up" then   ...  else    propagate(key) -- pass remaining keys on  endend</code></pre></div> a benefit is that you can do things before and after, and operate on the results of the functions too:<br><div class="codebox"><p>Code: </p><pre><code>OverlayingMenu:draw(propagate)  lg.setCanvas(canvas)  propagate() -- lower state needs to care for the current canvas of course  lg.setCanvas()  lg.setColor(255, 255, 255, 100)  lg.draw(canvas)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135654">s-ol</a> — Wed Feb 22, 2017 12:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[airstruck]]></name></author>
+		<updated>2017-02-22T08:33:40+00:00</updated>
+
+		<published>2017-02-22T08:33:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209906#p209906</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209906#p209906"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209906#p209906"><![CDATA[
+<blockquote class="uncited"><div>i have my own on github too but I think you really dont need it.</div></blockquote>The thing I like about your solution is the ability to propagate some callbacks upward (drawing) and others downward (input). I'm not sure how the others handle that. If you don't have a lot of layers of stuff, though, maybe just a floating pause menu or something, you don't really even need a stack, you can just have your pause state hold a reference to the game state and have it draw your game state before it draws itself. If you don't need a stack, you probably don't really need a library either. Should be easy enough to have something like "game.activeState" and set that to whatever state instance you want.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136704">airstruck</a> — Wed Feb 22, 2017 8:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2017-02-22T02:56:37+00:00</updated>
+
+		<published>2017-02-22T02:56:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209891#p209891</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209891#p209891"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209891#p209891"><![CDATA[
+The main benefit of ScreenManager and Hump states or other state systems is the stack and how you can easily push, pop and switch, having more than one active state and so on... But yeah implementing your own should be fairly simple<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Wed Feb 22, 2017 2:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[s-ol]]></name></author>
+		<updated>2017-02-22T01:18:42+00:00</updated>
+
+		<published>2017-02-22T01:18:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209885#p209885</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209885#p209885"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209885#p209885"><![CDATA[
+<blockquote class="uncited"><div>I should recommend <a href="https://github.com/rm-code/Screen%20manager" class="postlink">ScreenManager</a></div></blockquote>link is broken, it's supposed to be: <a href="https://github.com/rm-code/screenmanager" class="postlink">https://github.com/rm-code/screenmanager</a><br><br>also, you can use any of the many state managing libraries, but you really dont even need to (i have my own on github too but I think you really dont need it).<br>What zorg did for hump is basically how you do it, but a very simple solution for doing it without would be this:<br><br>main.lua:<div class="codebox"><p>Code: </p><pre><code>STATE = require "menu" -- start with this statefunction load_state(new_state)  if STATE.exit then STATE.exit() end  STATE = new_state  if STATE.enter then STATE.enter() endendfunction love.draw()  if STATE.draw then STATE.draw() endendfunction love.update(dt)  if STATE.update then STATE.update(dt) endendfunction love.keypressed(...)  if STATE.keypressed then STATE.keypressed(...) endend-- etc</code></pre></div>menu.lua<div class="codebox"><p>Code: </p><pre><code>local selected_menu_entrymenu_entries = { "start", "leave" }return {  enter = function ()    selected_menu_entry = 0  end,   keypressed = function (key)    if key == "up" then      selected_menu_entry = selected_menu_entry - 1    elseif key == "down"      selected_menu_entry = selected_menu_entry + 1    else      if menu_entries[selected_menu_entry] == "start" then        load_state(require "game")      end    end  end,  draw = function ()    love.graphics.print(menu_entries[selected_menu_entry])  end}</code></pre></div>game.lua:<div class="codebox"><p>Code: </p><pre><code>return {  draw = function()    -- draw game...  end,  update = function (dt)    -- update game...  end,  ...}</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135654">s-ol</a> — Wed Feb 22, 2017 1:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2017-02-22T02:43:10+00:00</updated>
+
+		<published>2017-02-22T00:22:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209880#p209880</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209880#p209880"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209880#p209880"><![CDATA[
+I should recommend <a href="https://github.com/rm-code/ScreenManager" class="postlink">ScreenManager</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Wed Feb 22, 2017 12:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-02-21T22:15:03+00:00</updated>
+
+		<published>2017-02-21T22:15:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209872#p209872</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209872#p209872"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209872#p209872"><![CDATA[
+Let me just modify the first example on the page linked above for you:<div class="codebox"><p>Code: </p><pre><code>-- game.lualocal Gamestate = require "hump.gamestate"local game = {}function game:enter()    Entities.clear()    -- setup entities hereendfunction game:update(dt)    Entities.update(dt)endfunction game:draw()    Entities.draw()endreturn game------------------------------------------------------------------- menu.lualocal Gamestate = require "hump.gamestate"local gamelocal menu = {}function menu:init()    game = require "game"endfunction menu:draw()    love.graphics.print("Press Enter to continue", 10, 10)endfunction menu:keyreleased(key, code)    if key == 'return' then        Gamestate.switch(game)    endendreturn menu------------------------------------------------------------------- main.lualocal Gamestate = require "hump.gamestate"local menu, gamefunction love.load()    menu = require "menu"    game = require "game" -- This is only needed because of the registerEvents call below; if you're doing stuff manually, then this can be avoided here.    Gamestate.registerEvents()    Gamestate.switch(menu)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Tue Feb 21, 2017 10:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[erol]]></name></author>
+		<updated>2017-02-21T21:07:56+00:00</updated>
+
+		<published>2017-02-21T21:07:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209869#p209869</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209869#p209869"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209869#p209869"><![CDATA[
+Any links to an example?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138925">erol</a> — Tue Feb 21, 2017 9:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-02-21T21:05:57+00:00</updated>
+
+		<published>2017-02-21T21:05:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209868#p209868</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209868#p209868"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209868#p209868"><![CDATA[
+Sure you can.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Tue Feb 21, 2017 9:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[erol]]></name></author>
+		<updated>2017-02-21T20:51:40+00:00</updated>
+
+		<published>2017-02-21T20:51:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209866#p209866</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209866#p209866"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209866#p209866"><![CDATA[
+Thanks for the answer. Can I create different files for each state by using hump?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138925">erol</a> — Tue Feb 21, 2017 8:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[joedono]]></name></author>
+		<updated>2017-02-21T20:29:17+00:00</updated>
+
+		<published>2017-02-21T20:29:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209865#p209865</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209865#p209865"/>
+		<title type="html"><![CDATA[Re: Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209865#p209865"><![CDATA[
+Not familiar with Phaser, but this sounds like what you're looking for: <a href="http://hump.readthedocs.io/en/latest/gamestate.html" class="postlink">http://hump.readthedocs.io/en/latest/gamestate.html</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=98180">joedono</a> — Tue Feb 21, 2017 8:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[erol]]></name></author>
+		<updated>2017-02-21T19:00:54+00:00</updated>
+
+		<published>2017-02-21T19:00:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209856#p209856</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209856#p209856"/>
+		<title type="html"><![CDATA[Separate state files]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209856#p209856"><![CDATA[
+Is it possible to create game projects with separate files for each states with each having their own callback functions like phaser game engine?<br><br>Thanks.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138925">erol</a> — Tue Feb 21, 2017 7:00 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

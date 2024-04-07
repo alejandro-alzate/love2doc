@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP-TheClient&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 22:43:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>View source for Tutorial:Networking with UDP-TheClient - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Networking_with_UDP-TheClient","wgTitle":"Networking with UDP-TheClient","wgCurRevisionId":8982,"wgRevisionId":0,"wgArticleId":1954,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Networking_with_UDP-TheClient","wgRelevantArticleId":1954,"wgRequestId":"d19887fa9a8fa68463904ba9","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.edit.collapsibleFooter","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Networking with UDP-TheClient" href="http://love2d.org/w/index.php?title=Special:ExportRDF/Tutorial:Networking_with_UDP-TheClient&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Networking_with_UDP-TheClient rootpage-Tutorial_Networking_with_UDP-TheClient skin-love action-edit"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="http://love2d.org/wiki/Tutorial:Networking_with_UDP-TheClient">Tutorial</a></li>
+				<li id="ca-talk"><a href="http://love2d.org/wiki/Tutorial_talk:Networking_with_UDP-TheClient" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource" class="selected"><a href="http://love2d.org/w/index.php?title=Tutorial:Networking_with_UDP-TheClient&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=Tutorial:Networking_with_UDP-TheClient&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">View source for Tutorial:Networking with UDP-TheClient</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub">← <a href="/wiki/Tutorial:Networking_with_UDP-TheClient" title="Tutorial:Networking with UDP-TheClient">Tutorial:Networking with UDP-TheClient</a></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text"><p>You do not have permission to edit this page, for the following reason:
+</p>
+<div class="permissions-errors">
+<p>The action you have requested is limited to users in the group: <a href="http://love2d.org/wiki/LOVE:Users" title="LOVE:Users">Users</a>.
+</p>
+</div>
+<hr />
+<p>You can view and copy the source of this page.
+</p><textarea readonly="" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" class="mw-editfont-monospace" lang="en" dir="ltr" name="wpTextbox1">The complete source for the UDP client
+&lt;source lang=lua>
+
+-- to start with, we need to require the 'socket' lib (which is compiled
+-- into love). socket provides low-level networking features.
+local socket = require "socket"
+
+-- the address and port of the server
+local address, port = "localhost", 12345
+
+local entity -- entity is what we'll be controlling
+local updaterate = 0.1 -- how long to wait, in seconds, before requesting an update
+
+local world = {} -- the empty world-state
+local t
+
+-- love.load, hopefully you are familiar with it from the callbacks tutorial
+function love.load()
+
+	-- first up, we need a udp socket, from which we'll do all
+	-- out networking.
+	udp = socket.udp()
+	
+	-- normally socket reads block until they have data, or a
+	-- certain amout of time passes.
+	-- that doesn't suit us, so we tell it not to do that by setting the 
+	-- 'timeout' to zero
+	udp:settimeout(0)
+	
+	-- unlike the server, we'll just be talking to the one machine, 
+	-- so we'll "connect" this socket to the server's address and port
+	-- using setpeername.
+	--
+	-- [NOTE: UDP is actually connectionless, this is purely a convenience
+	-- provided by the socket library, it doesn't actually change the 
+	--'bits on the wire', and in-fact we can change / remove this at any time.]
+	udp:setpeername(address, port)
+	
+	-- seed the random number generator, so we don't just get the
+	-- same numbers each time.
+	math.randomseed(os.time()) 
+	
+	-- entity will be what we'll be controlling, for the sake of this
+	-- tutorial its just a number, but it'll do.
+	-- we'll just use random to give us a reasonably unique identity for little effort.
+	--
+	-- [NOTE: random isn't actually a very good way of doing this, but the
+	-- "correct" ways are beyond the scope of this article. the *simplest* 
+	-- is just an auto-count, they get a *lot* more fancy from there on in]
+	
+	entity = tostring(math.random(99999))
+
+	-- Here we do our first bit of actual networking:
+	-- we set up a string containing the data we want to send (using 'string.format')
+	-- and then send it using 'udp.send'. since we used 'setpeername' earlier
+	-- we don't even have to specify where to send it.
+	--
+	-- thats...it, really. the rest of this is just putting this context and practical use.
+	local dg = string.format("%s %s %d %d", entity, 'at', 320, 240)
+	udp:send(dg) -- the magic line in question.
+	
+	-- t is just a variable we use to help us with the update rate in love.update.
+	t = 0 -- (re)set t to 0
+end
+
+-- love.update, hopefully you are familiar with it from the callbacks tutorial
+function love.update(deltatime)
+
+	t = t + deltatime -- increase t by the deltatime
+	
+	-- its *very easy* to completely saturate a network connection if you
+	-- aren't careful with the packets we send (or request!), we hedge
+	-- our chances by limiting how often we send (and request) updates.
+	-- 
+	-- for the record, ten times a second is considered good for most normal
+	-- games (including many MMOs), and you shouldn't ever really need more 
+	-- than 30 updates a second, even for fast-paced games.
+	if t > updaterate then
+		-- we could send updates for every little move, but we consolidate
+		-- the last update-worth here into a single packet, drastically reducing
+		-- our bandwidth use.
+		local x, y = 0, 0
+		if love.keyboard.isDown('up') then 	y=y-(20*t) end
+		if love.keyboard.isDown('down') then 	y=y+(20*t) end
+		if love.keyboard.isDown('left') then 	x=x-(20*t) end
+		if love.keyboard.isDown('right') then 	x=x+(20*t) end
+
+
+		-- again, we prepare a packet *payload* using string.format, 
+		-- then send it on its way with udp:send
+		-- this one is the move update mentioned above
+		local dg = string.format("%s %s %f %f", entity, 'move', x, y)
+		udp:send(dg)	
+
+		-- and again! this is a require that the server send us an update for
+		--  the world state
+		--
+		-- [NOTE: in most designs you don't request world-state updates, you
+		-- just get them sent to you periodically. theres various reasons for
+		-- this, but theres one *BIG* one you will have to solemnly take note
+		-- of: 'anti-griefing'. World-updates are probably one of biggest things
+		-- the average game-server will pump out on a regular basis, and greifing
+		-- with forged update requests would be simple effective. so they just
+		-- don't support update requests, instead giving them out when they feel
+		-- its appropriate]
+		local dg = string.format("%s %s $", entity, 'update')
+		udp:send(dg)
+
+		t=t-updaterate -- set t for the next round
+	end
+
+	
+	-- there could well be more than one message waiting for us, so we'll
+	-- loop until we run out!
+	repeat
+		-- and here is something new, the much anticipated other end of udp:send!
+		-- receive return a waiting packet (or nil, and an error message).
+		-- data is a string, the payload of the far-end's send. we can deal with it
+		-- the same ways we could deal with any other string in lua (needless to 
+		-- say, getting familiar with lua's string handling functions is a must.
+		data, msg = udp:receive()
+
+		if data then -- you remember, right? that all values in lua evaluate as true, save nil and false?
+	
+			-- match is our freind here, its part of string.*, and data is
+			-- (or should be!) a string. that funky set of characters bares some 
+			-- explanation, though.
+			-- (need summary of patterns, and link to section 5.4.1)
+			ent, cmd, parms = data:match("^(%S*) (%S*) (.*)")
+			if cmd == 'at' then
+				-- more patterns, this time with sets, and more length selectors!
+				local x, y = parms:match("^(%-?[%d.e]*) (%-?[%d.e]*)$")
+				assert(x and y) -- validation is better, but asserts will serve.
+			
+				-- don't forget, even if you matched a "number", the result is still a string!
+				-- thankfully conversion is easy in lua.
+				x, y = tonumber(x), tonumber(y)
+				-- and finally we stash it away
+				world[ent] = {x=x, y=y}
+			else
+				-- this case shouldn't trigger often, but its always a good idea
+				-- to check (and log!) any unexpected messages and events.
+				-- it can help you find bugs in your code...or people trying to hack the server.
+				-- never forget, you can not trust the client!
+				print("unrecognised command:", cmd)
+			end
+		
+		-- if data was nil, then msg will contain a short description of the
+		-- problem (which are also error id...).
+		-- the most common will be 'timeout', since we settimeout() to zero,
+		-- anytime there isn't data *waiting* for us, it'll timeout.
+		--
+		-- but we should check to see if its a *different* error, and act accordingly.
+		-- in this case we don't even try to save ourselves, we just error out.
+		elseif msg ~= 'timeout' then 
+			error("Network error: "..tostring(msg))
+		end
+	until not data 
+
+end
+
+-- love.draw, hopefully you are familiar with it from the callbacks tutorial
+function love.draw()
+	-- pretty simple, we just loop over the world table, and print the
+	-- name (key) of everything in their, at its own stored co-ords.
+	for k, v in pairs(world) do
+		love.graphics.print(k, v.x, v.y)
+	end
+end
+
+-- And thats the end of the udp client example.
+&lt;/source>
+</textarea><div class="templatesUsed"></div><p id="mw-returnto">Return to <a href="http://love2d.org/wiki/Tutorial:Networking_with_UDP-TheClient" title="Tutorial:Networking with UDP-TheClient">Tutorial:Networking with UDP-TheClient</a>.</p>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/wiki/Tutorial:Networking_with_UDP-TheClient">http://love2d.org/wiki/Tutorial:Networking_with_UDP-TheClient</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=Tutorial%3ANetworking+with+UDP-TheClient&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/Tutorial:Networking_with_UDP-TheClient" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/Tutorial:Networking_with_UDP-TheClient" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=Tutorial:Networking_with_UDP-TheClient&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":31});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Networking_with_UDP-TheClient&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 22:43:02 GMT -->
+</html>
