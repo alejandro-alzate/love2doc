@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2982" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2023-04-22T08:28:56+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2982</id>
+
+		<entry>
+		<author><name><![CDATA[Andlac028]]></name></author>
+		<updated>2023-04-22T08:28:56+00:00</updated>
+
+		<published>2023-04-22T08:28:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=254465#p254465</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=254465#p254465"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=254465#p254465"><![CDATA[
+Please post this to new thread (in support and development subforum). This post is discussion about posting rules.<br><br>You can also use code tags:<br><br>[code]your code here[/code]<br><br>to pretty print your code in post and make it more readeable.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141490">Andlac028</a> — Sat Apr 22, 2023 8:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Franator]]></name></author>
+		<updated>2023-04-21T02:56:38+00:00</updated>
+
+		<published>2023-04-21T02:56:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=254458#p254458</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=254458#p254458"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=254458#p254458"><![CDATA[
+I am just learning to use Love2D. I’m trying to figure out how to make my player fire bullets and take the enemies. Could someone please advise me? <br><br>My main.lua code so far is below:<br>push = require 'push'<br><br>WINDOW_WIDTH = 600<br>WINDOW_HEIGHT = 500<br><br>VIRTUAL_WIDTH = 485<br>VIRTUAL_HEIGHT = 404<br><br>local backgroundScroll = 0<br>local midgroundScroll = 0<br>local groundScroll = 0<br><br>local enemyFrames = {}<br>local enemyframeWidth = 40<br>local frameHeight = 72<br>local totalNumberofFrames = 4<br>local currentFrame = 1<br>local desiredDelayBetweenFrameChanges = 0.3<br>local timePassedSinceLastFrameChange = 0<br><br>local playerFrames = {}<br>local playerframeWidth = 40 <br>local frameHeight = 72<br>local totalNumberofFrames = 4<br>local currentFrame = 1<br>local desiredDelayBetweenFrameChanges = 0.3<br>local timePassedSinceLastFrameChange = 0<br><br>local enemy1Frames = {}<br>local enemy1frameWidth = 43<br>local frameHeight = 72<br>local totalNumberofFrames = 4<br>local currentFrame = 1<br>local desiredDelayBetweenFrameChanges = 0.3<br>local timePassedSinceLastFrameChange = 0<br><br>local enemy2Frames = {}<br>local enemy2frameWidth = 41.6<br>local frameHeight = 72<br>local totalNumberofFrames = 4<br>local currentFrame = 1<br>local desiredDelayBetweenFrameChanges = 0.3<br>local timePassedSinceLastFrameChange = 0<br><br>local BACKGROUND_SCROLL_SPEED = 5<br>local MIDGROUND_SCROLL_SPEED = 30<br>local GROUND_SCROLL_SPEED = 45<br><br>local MIDGROUND_LOOPING_POINT = 710<br>local BACKGROUND_LOOPING_POINT = 700<br><br>function love.load() <br>    love.window.setTitle('Zombie Attack')<br>    love.graphics.setDefaultFilter('nearest', 'nearest')<br>    midground = love.graphics.newImage("sprites/midground.png")<br>    background = love.graphics.newImage("sprites/background.png")<br>    ground = love.graphics.newImage("sprites/ground.png")<br><br>    sounds = {}<br>    sounds.bg = love.audio.newSource("sounds/background.mp3", "stream")<br>    sounds.reload = love.audio.newSource("sounds/reload.mp3", "static")<br>    sounds.shooting = love.audio.newSource("sounds/shooting.mp3", <br>"static"<br>)<br>    sounds.zombies = love.audio.newSource("sounds/zombiesound.mp3", <br>"static"<br>)<br><br>    sounds.bg:play()<br>    sounds.zombies:setLooping(true)<br>    sounds.zombies:play()<br><br>    logo = love.graphics.newImage("sprites/ZAlogo.png")<br><br>    player = {} <br>    player = love.graphics.newImage("sprites/player.png")<br>    playerx = 40<br>    playery = 300<br><br>    shots = {}<br>    shots = love.graphics.newImage("sprites/shots.png")<br><br>    enemy = {}<br>    enemy = love.graphics.newImage("sprites/Zombie1.png")<br>    enemyx = 430<br>    enemyy = 300<br><br>    enemy1 = {}<br>    enemy1 = love.graphics.newImage("sprites/Zombie2.png")<br>    enemy1x = 430<br>    enemy1y = 310<br><br>    enemy2 = {}<br>    enemy2 = love.graphics.newImage("sprites/Zombie3.png")<br>    enemy2x = 430<br>    enemy2y = 294<br><br><br>    for frame = 1, totalNumberofFrames do<br>        enemyFrames[frame] = love.graphics.newQuad((frame - 1) * enemyframeWidth, 0, enemyframeWidth, frameHeight,<br>        enemy:getDimensions())<br>    end<br><br>    for frame = 1, totalNumberofFrames do<br>        enemy1Frames[frame] = love.graphics.newQuad((frame - 1) * enemy1frameWidth, 0, enemy1frameWidth, frameHeight,<br>        enemy1:getDimensions())<br>    end<br><br>    for frame = 1, totalNumberofFrames do<br>        enemy2Frames[frame] = love.graphics.newQuad((frame - 1) * enemy2frameWidth, 0, enemy2frameWidth, frameHeight,<br>        enemy2:getDimensions())<br>    end<br><br>    for frame = 1, totalNumberofFrames do<br>        playerFrames[frame] = love.graphics.newQuad((frame - 1) * playerframeWidth, 0, playerframeWidth, frameHeight,<br>        player:getDimensions())<br>    end<br><br>    push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {<br>        vsync = true,<br>        fullscreen = false,<br>        resizable = false<br>    })<br>end<br><br>function love.keypressed(key)<br><br>    if key == "space" then<br>        sounds.shooting:play()<br>    end<br><br>    if key == "space" then<br>        sounds.shooting:play()<br>    end<br><br>    if key == "r" then<br>        sounds.reload:play()<br>    end<br><br>end<br>  <br><br>function love.update(dt)<br><br>    backgroundScroll = (backgroundScroll + BACKGROUND_SCROLL_SPEED * dt) <br>        % BACKGROUND_LOOPING_POINT<br><br>    midgroundScroll = (midgroundScroll + MIDGROUND_SCROLL_SPEED * dt) <br>        % MIDGROUND_LOOPING_POINT<br><br>    groundScroll = (groundScroll + GROUND_SCROLL_SPEED * dt) <br>        % WINDOW_WIDTH <br><br>    timePassedSinceLastFrameChange = timePassedSinceLastFrameChange + dt<br><br>    if timePassedSinceLastFrameChange &gt; desiredDelayBetweenFrameChanges then<br>        timePassedSinceLastFrameChange = timePassedSinceLastFrameChange - desiredDelayBetweenFrameChanges<br>        currentFrame = currentFrame % totalNumberofFrames + 1<br>    end<br><br>    enemyx = (enemyx- 0.5) % WINDOW_WIDTH<br>    enemy1x = (enemy1x - 0.4) % WINDOW_WIDTH<br>    enemy2x = (enemy2x - 0.3) % WINDOW_WIDTH<br><br>end<br><br>function love.draw()<br><br>    push:start()<br><br>    love.graphics.draw(background, -backgroundScroll, 0)<br>    <br>    love.graphics.draw(midground, -midgroundScroll, 0)<br><br>    love.graphics.draw(ground, -groundScroll, 0)<br><br>    love.graphics.draw(enemy2, enemy2Frames[currentFrame], enemy2x, enemy2y)<br><br>    love.graphics.draw(enemy, enemyFrames[currentFrame], enemyx, enemyy)<br><br>    love.graphics.draw(enemy1, enemy1Frames[currentFrame], enemy1x, enemy1y)<br><br>    love.graphics.draw(player, playerFrames[currentFrame], playerx, playery)<br><br>    love.graphics.draw(logo, -250, -340)<br><br>    love.graphics.draw(shots, 0, 170)<br><br>    push:finish()<br><br>end<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=228402">Franator</a> — Fri Apr 21, 2023 2:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2022-07-10T08:39:12+00:00</updated>
+
+		<published>2022-07-10T08:39:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=249447#p249447</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=249447#p249447"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=249447#p249447"><![CDATA[
+<blockquote class="uncited"><div><img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"></div></blockquote>So happy they could poop themselves<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Sun Jul 10, 2022 8:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[onil_cupp13]]></name></author>
+		<updated>2022-06-11T00:26:05+00:00</updated>
+
+		<published>2022-06-11T00:26:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=248536#p248536</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=248536#p248536"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=248536#p248536"><![CDATA[
+<img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=195952">onil_cupp13</a> — Sat Jun 11, 2022 12:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milon]]></name></author>
+		<updated>2021-04-13T13:10:13+00:00</updated>
+
+		<published>2021-04-13T13:10:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=240073#p240073</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=240073#p240073"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=240073#p240073"><![CDATA[
+<blockquote class="uncited"><div>Hi. I'm new to love 2d, however my app just keeps showing no games. Is there anyone that can guide me through. Please</div></blockquote>Love2D isn't a game itself.  It's framework for games.  You still have to supply the .love game file.  Once you have that, don't run Love2D itself - run the .love instead.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139789">milon</a> — Tue Apr 13, 2021 1:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2021-04-04T23:34:36+00:00</updated>
+
+		<published>2021-04-04T23:34:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=239795#p239795</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=239795#p239795"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=239795#p239795"><![CDATA[
+<blockquote class="uncited"><div>Hi. I'm new to love 2d, however my app just keeps showing no games. Is there anyone that can guide me through. Please</div></blockquote>You still here? I just noticed this like now  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultrahappy.png" width="16" height="16" alt=":ultrahappy:" title="Ultrahappy"> .<br> You asked for help with a no game screen. If it's on android then the main.lua file isn't in directory lovegame. You didn't get help immediately because you posted it here. Should have made a topic then asked. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Sun Apr 04, 2021 11:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Raaidah]]></name></author>
+		<updated>2021-02-08T12:19:13+00:00</updated>
+
+		<published>2021-02-08T12:19:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=238423#p238423</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=238423#p238423"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=238423#p238423"><![CDATA[
+Hi. I'm new to love 2d, however my app just keeps showing no games. Is there anyone that can guide me through. Please<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170950">Raaidah</a> — Mon Feb 08, 2021 12:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rick]]></name></author>
+		<updated>2020-06-19T06:55:00+00:00</updated>
+
+		<published>2020-06-19T06:55:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=234368#p234368</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=234368#p234368"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=234368#p234368"><![CDATA[
+I approve this message<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=151719">rick</a> — Fri Jun 19, 2020 6:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thechubbymonkey]]></name></author>
+		<updated>2015-02-22T18:13:37+00:00</updated>
+
+		<published>2015-02-22T18:13:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=180690#p180690</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=180690#p180690"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=180690#p180690"><![CDATA[
+Great rules! This will keep the forums nice and clean.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136355">thechubbymonkey</a> — Sun Feb 22, 2015 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gavolot]]></name></author>
+		<updated>2014-02-20T08:06:43+00:00</updated>
+
+		<published>2014-02-20T08:06:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=163188#p163188</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=163188#p163188"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=163188#p163188"><![CDATA[
+I like your Love2D engine very much. I'm even making the project on it. I think that I will done it soon. But I doesn't like your file system. Of course, such desision like "\AppData\oaming\Love" can be enouth for games. However, this system is not good for programms, or even for small level editors at all(Yeah, I understand that I can solve that somehow), but this is too uncomfortably. Sorry for mistakes, but I still learning english.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134702">Gavolot</a> — Thu Feb 20, 2014 8:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Punkroku]]></name></author>
+		<updated>2013-09-08T14:13:41+00:00</updated>
+
+		<published>2013-09-08T14:13:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=131723#p131723</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=131723#p131723"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=131723#p131723"><![CDATA[
+++Karma is that a joke??? or is there a way to do that...<br><br>PS&gt; I was offended by microshafts's paperclip... this must be as useful as tweezers when you need to go to the bathroom.<br><br>I am a firm believer that Microsoft Windows should be renamed tinyFlaccid Backdoors... It is apparent that it fails penetration testing...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133508">Punkroku</a> — Sun Sep 08, 2013 2:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Paul Routine]]></name></author>
+		<updated>2013-02-24T20:29:58+00:00</updated>
+
+		<published>2013-02-24T20:29:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=82914#p82914</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=82914#p82914"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=82914#p82914"><![CDATA[
+<blockquote class="uncited"><div>Sorry about that. We have a huge problem with spam in these forums (450 spam posts in the last 24 hours alone!), so all first-time posters are required to have their posts approved by a moderator. Naturally, under such a deluge of spam, real posts are sometimes accidentally disapproved. But now that you have an approved post, it won't happen again.</div></blockquote>Well, I just thought that I was breaking any rules or something xD<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=95523">Paul Routine</a> — Sun Feb 24, 2013 8:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2013-02-24T20:26:23+00:00</updated>
+
+		<published>2013-02-24T20:26:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=82911#p82911</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=82911#p82911"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=82911#p82911"><![CDATA[
+Sorry about that. We have a huge problem with spam in these forums (450 spam posts in the last 24 hours alone!), so all first-time posters are required to have their posts approved by a moderator. Naturally, under such a deluge of spam, real posts are sometimes accidentally disapproved. But now that you have an approved post, it won't happen again.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sun Feb 24, 2013 8:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Paul Routine]]></name></author>
+		<updated>2013-02-24T19:07:38+00:00</updated>
+
+		<published>2013-02-24T19:07:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=82890#p82890</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=82890#p82890"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=82890#p82890"><![CDATA[
+Well, I have did all of this topic. Okay, I do not attach my .love files, but I did it because it was unnecessary. Now, someone can explain me this?:<br><blockquote class="uncited"><div>Hello Paul Routine,<br><br>You are receiving this notification because your topic "How can I write<br>correctly in other languages?" at "LÖVE" was disapproved by a moderator or<br>administrator.<br><br>The following reason was given for the disapproval:<br><br>The reported message has the only purpose to advertise for a website or<br>another product.</div></blockquote>This is the mail that admins sent to me. WTF? I didn't put ANY url or say nothing about any website!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=95523">Paul Routine</a> — Sun Feb 24, 2013 7:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2013-01-28T05:26:36+00:00</updated>
+
+		<published>2013-01-28T05:26:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=75974#p75974</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=75974#p75974"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=75974#p75974"><![CDATA[
+I rather read through a 10-line test case than through the 500-line project <strong class="text-strong">if</strong> the problem shows up in both.<br><br>It seems it has to be pointed out to most first posters to show their code anyway. Stickies need to be more in-your-face. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Mon Jan 28, 2013 5:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lafolie]]></name></author>
+		<updated>2013-01-28T01:44:12+00:00</updated>
+
+		<published>2013-01-28T01:44:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=75949#p75949</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=75949#p75949"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=75949#p75949"><![CDATA[
+<blockquote class="uncited"><div>Here's one:<br><br>If you don't want to post your code, post a small demo that shows us the problem.</div></blockquote>That doesn't help though. In fact, that would only serve to frustrate those that wish to help and those who require help, since they would likely be posting endlessly trying to describe the problem (often in an ill-informed manner) and becoming infuriated by the lack of response.<br><br>This issue is covered in the first post. If you need assistance, give us code. If you're unwilling to do so, then reconsider or solve the problem yourself. There are several reasons stated as to why you should share your code, and I'm sure there's a whole bunch of articles on the subject of open source software <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>It all comes down to the fact that this is a coding community that concerns itself with (lua/LÖVE) code. If your code doesn't work, and you refuse to show it to us, how do you expect us to help?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2311">Lafolie</a> — Mon Jan 28, 2013 1:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nsmurf]]></name></author>
+		<updated>2012-11-12T20:12:49+00:00</updated>
+
+		<published>2012-11-12T20:12:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70163#p70163</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70163#p70163"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70163#p70163"><![CDATA[
+Here's one:<br><br>If you don't want to post your code, post a small demo that shows us the problem.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57522">Nsmurf</a> — Mon Nov 12, 2012 8:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lafolie]]></name></author>
+		<updated>2012-11-12T17:23:23+00:00</updated>
+
+		<published>2012-11-12T17:23:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70136#p70136</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70136#p70136"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70136#p70136"><![CDATA[
+I have culled the karma portion, lest it never be restored.<br><br>Edit: I tried, but ended up leaving it in because the [size] tags are acting strangely. So very strangely. In fact, the [/size] tags are geting printed when I preview the post.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2311">Lafolie</a> — Mon Nov 12, 2012 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Przemator]]></name></author>
+		<updated>2012-11-05T20:49:00+00:00</updated>
+
+		<published>2012-11-05T20:49:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69651#p69651</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69651#p69651"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69651#p69651"><![CDATA[
+<blockquote class="uncited"><div>Karma broke when the forum was updated recently, it wasn't removed intentionally as far as I know.</div></blockquote>Too bad, I came here very recently, was only able to give 1 karma point. I think it's a great way to motivate people to help others. It's the least we can to reward them.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=68020">Przemator</a> — Mon Nov 05, 2012 8:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2012-10-29T02:35:47+00:00</updated>
+
+		<published>2012-10-29T02:35:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69062#p69062</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69062#p69062"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69062#p69062"><![CDATA[
+Karma broke when the forum was updated recently, it wasn't removed intentionally as far as I know.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Oct 29, 2012 2:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nsmurf]]></name></author>
+		<updated>2012-10-29T02:31:31+00:00</updated>
+
+		<published>2012-10-29T02:31:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69061#p69061</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69061#p69061"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69061#p69061"><![CDATA[
+Has it been removed?<br><blockquote class="uncited"><div>Karma functions powered by Karma MOD © 2007, 2009 m157y </div></blockquote>If it has, someone should take that out.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57522">Nsmurf</a> — Mon Oct 29, 2012 2:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2012-10-29T01:59:09+00:00</updated>
+
+		<published>2012-10-29T01:59:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69060#p69060</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69060#p69060"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69060#p69060"><![CDATA[
+Karma's been removed hasn't it? If so, the rule about it should probably be taken out.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Mon Oct 29, 2012 1:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-10-28T15:59:10+00:00</updated>
+
+		<published>2012-10-28T15:59:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=68999#p68999</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=68999#p68999"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=68999#p68999"><![CDATA[
+Please don't quote spam, report it instead. (The triangular exclamation mark thingy next to the quote button.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Oct 28, 2012 3:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nsmurf]]></name></author>
+		<updated>2012-10-27T15:37:43+00:00</updated>
+
+		<published>2012-10-27T15:37:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=68922#p68922</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=68922#p68922"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=68922#p68922"><![CDATA[
+<blockquote class="uncited"><div>possible spam?</div></blockquote>Possibly add something about reporting spam with the "Report" button?  (Or am I mistaken, and we are not supposed to do that?)<br><br>And yes, that is spam.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57522">Nsmurf</a> — Sat Oct 27, 2012 3:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rokit boy]]></name></author>
+		<updated>2012-10-27T14:55:08+00:00</updated>
+
+		<published>2012-10-27T14:55:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=68917#p68917</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=68917#p68917"/>
+		<title type="html"><![CDATA[Re: REQUESTING HELP - Posting Rules]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=68917#p68917"><![CDATA[
+<blockquote class="uncited"><div>Exactly what I want.<br>&lt;redacted&gt;</div></blockquote>possible spam?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=25074">rokit boy</a> — Sat Oct 27, 2012 2:55 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
