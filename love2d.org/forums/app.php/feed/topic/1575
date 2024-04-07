@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1575" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2023-01-28T02:47:32+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1575</id>
+
+		<entry>
+		<author><name><![CDATA[RNavega]]></name></author>
+		<updated>2023-01-28T02:47:32+00:00</updated>
+
+		<published>2023-01-28T02:47:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=253067#p253067</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=253067#p253067"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=253067#p253067"><![CDATA[
+<blockquote class="uncited"><div>Sorry the necroposting, but someone pointed me to this thread when i ask a similar question.<br><br>Really hope someone update the autocompletion files to latest LÖVE versions.</div></blockquote>If I were in your position I'd consider this a cool side project to do. You can learn a lot from doing this.<br><br>You have the old syntax file for Löve 0.8.0, right, that one from the forum attachment: <a href="https://love2d.org/forums/viewtopic.php?p=55240#p55240" class="postlink">viewtopic.php?p=55240#p55240</a><br>From that file you know what syntax things need to have (as well as from the files for <a href="https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/PowerEditor/installer/APIs/lua.xml" class="postlink">the other languages that come bundled with Notepad++</a>).<br><br>So now you need to grab the data with which to rebuild that XML file.  <br>I think the simplest way of doing that is (gently) scraping the Löve wiki. See this for example, it's a navigatable search of Category:Functions, with every single function listed in the wiki (note that the links that end with parentheses are translated pages): <a href="https://love2d.org/w/index.php?title=Special:Ask&amp;limit=500&amp;offset=0&amp;q=%5B%5BCategory%3AFunctions%5D%5D&amp;p=mainlabel%3D%2Fformat%3Dtemplate%2Fheaders%3Dhide%2Ftemplate%3DListingFields%2Fintrotemplate%3DListingIntro%2Foutrotemplate%3DListingOutro&amp;po=%3FDescription%0A%3FPrettySince%0A%3FPrettyRemoved%0A%3FPrettyDeprecated%0A&amp;sort=&amp;order=asc&amp;eq=no#search" class="postlink">https://love2d.org/w/index.php?title=Sp ... =no#search</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Sat Jan 28, 2023 2:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GVovkiv]]></name></author>
+		<updated>2023-01-26T07:15:29+00:00</updated>
+
+		<published>2023-01-26T07:15:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=253042#p253042</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=253042#p253042"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=253042#p253042"><![CDATA[
+<blockquote class="uncited"><div>I think you should use vs code instead of notepad++<br>(Just a suggestion)</div></blockquote>Or give a try to Zerobrane Studio, if still not<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=169762">GVovkiv</a> — Thu Jan 26, 2023 7:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zalander]]></name></author>
+		<updated>2023-01-26T05:53:29+00:00</updated>
+
+		<published>2023-01-26T05:53:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=253038#p253038</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=253038#p253038"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=253038#p253038"><![CDATA[
+I think you should use vs code instead of notepad++<br>(Just a suggestion)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=212244">zalander</a> — Thu Jan 26, 2023 5:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vico]]></name></author>
+		<updated>2023-01-23T14:46:27+00:00</updated>
+
+		<published>2023-01-23T14:46:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=252986#p252986</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=252986#p252986"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=252986#p252986"><![CDATA[
+Sorry the necroposting, but someone pointed me to this thread when i ask a similar question.<br><br>Really hope someone update the autocompletion files to latest LÖVE versions.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139626">vico</a> — Mon Jan 23, 2023 2:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TheMeq]]></name></author>
+		<updated>2015-10-07T13:59:03+00:00</updated>
+
+		<published>2015-10-07T13:59:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=190017#p190017</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=190017#p190017"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=190017#p190017"><![CDATA[
+Please can someone update this for 0.9+ ? <br><br>Thanks <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3616">TheMeq</a> — Wed Oct 07, 2015 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ranguna259]]></name></author>
+		<updated>2013-06-19T12:15:22+00:00</updated>
+
+		<published>2013-06-19T12:15:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=108345#p108345</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=108345#p108345"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=108345#p108345"><![CDATA[
+NM, did it.<br>Here are the links, it has Lua 5.1 and LÖVE 2D 0.8.0:<br><a href="https://mega.co.nz/#!1xp1lQJD!RdozDVXHLs7ogSgTBmYcwzSmrgFAETLfz7xedDcQfcM" class="postlink">https://mega.co.nz/#!1xp1lQJD!RdozDVXHL ... 7xedDcQfcM</a><br><br>And here's the highlight .xml for notepad++ with both LÖVE and Lua (modded by me):<br><a href="https://mega.co.nz/#!pgBRzBoT!NcZ9dn3hASO-zi8r7mZ_bEVUiaBujxB21tgUKMMlrNQ" class="postlink">https://mega.co.nz/#!pgBRzBoT!NcZ9dn3hA ... tgUKMMlrNQ</a><br><br>(Got the original LÖVE highlight from here <a href="https://love2d.org/forums/viewtopic.php?f=3&amp;t=10029" class="postlink">viewtopic.php?f=3&amp;t=10029</a> )<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123960">Ranguna259</a> — Wed Jun 19, 2013 12:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ranguna259]]></name></author>
+		<updated>2013-06-18T23:02:28+00:00</updated>
+
+		<published>2013-06-18T23:02:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=108255#p108255</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=108255#p108255"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=108255#p108255"><![CDATA[
+Heres an .xml with the lua stuff:<br><a href="http://www.retroaffect.com/uploads/LuaLangFile.zip" class="postlink">http://www.retroaffect.com/uploads/LuaLangFile.zip</a><br><br>got from:<br><a href="http://www.retroaffect.com/blog/190/" class="postlink">http://www.retroaffect.com/blog/190/</a><br><br>Please merge 'em together if you can.<br><br>Sorry if I did something wrong, I'm new to this forum.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123960">Ranguna259</a> — Tue Jun 18, 2013 11:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[allmytubedownloader]]></name></author>
+		<updated>2012-05-03T02:27:02+00:00</updated>
+
+		<published>2012-05-03T02:27:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55872#p55872</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55872#p55872"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55872#p55872"><![CDATA[
+Wow! Thank you very much. a little surprise. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48392">allmytubedownloader</a> — Thu May 03, 2012 2:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mikaldinho95]]></name></author>
+		<updated>2012-04-24T15:48:36+00:00</updated>
+
+		<published>2012-04-24T15:48:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55280#p55280</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55280#p55280"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55280#p55280"><![CDATA[
+Thanks Doctor Beard <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47300">mikaldinho95</a> — Tue Apr 24, 2012 3:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Doctor Beard]]></name></author>
+		<updated>2012-04-23T23:32:20+00:00</updated>
+
+		<published>2012-04-23T23:32:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55240#p55240</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55240#p55240"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55240#p55240"><![CDATA[
+No idea if anybody else did it before, but here's the 0.7.2 one updated to 0.8.0.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=4518">lua.xml</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47434">Doctor Beard</a> — Mon Apr 23, 2012 11:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[veethree]]></name></author>
+		<updated>2012-04-10T16:26:46+00:00</updated>
+
+		<published>2012-04-10T16:26:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=54100#p54100</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=54100#p54100"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=54100#p54100"><![CDATA[
+Any chance of this being updated to 0.8.0 in the near future?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784">veethree</a> — Tue Apr 10, 2012 4:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack5500]]></name></author>
+		<updated>2012-02-25T22:55:26+00:00</updated>
+
+		<published>2012-02-25T22:55:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=50260#p50260</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=50260#p50260"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=50260#p50260"><![CDATA[
+Added that to the wiki<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13156">Jack5500</a> — Sat Feb 25, 2012 10:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[robbythedude]]></name></author>
+		<updated>2012-02-23T16:31:12+00:00</updated>
+
+		<published>2012-02-23T16:31:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=50060#p50060</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=50060#p50060"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=50060#p50060"><![CDATA[
+To the OP, THANK YOU!<br><blockquote class="uncited"><div>Here's a lua.xml that has been updated for LÖVE 0.7.2. I don't personally use Notepad++, so I'm not sure if it works or not.</div></blockquote>Thanks for the Update! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>NotePad++(+)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32700">robbythedude</a> — Thu Feb 23, 2012 4:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[legendman3]]></name></author>
+		<updated>2012-02-02T02:01:00+00:00</updated>
+
+		<published>2012-02-02T02:01:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48537#p48537</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48537#p48537"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48537#p48537"><![CDATA[
+<blockquote class="uncited"><div>Here's a lua.xml that has been updated for LÖVE 0.7.2. I don't personally use Notepad++, so I'm not sure if it works or not.</div></blockquote>Thanks i thought i would have to do this myself!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=26226">legendman3</a> — Thu Feb 02, 2012 2:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2011-07-21T23:12:00+00:00</updated>
+
+		<published>2011-07-21T23:12:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34014#p34014</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34014#p34014"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34014#p34014"><![CDATA[
+<blockquote class="uncited"><div>Here's a lua.xml that has been updated for LÖVE 0.7.2. I don't personally use Notepad++, so I'm not sure if it works or not.</div></blockquote>It does. Thanks!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Thu Jul 21, 2011 11:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2011-07-21T22:55:10+00:00</updated>
+
+		<published>2011-07-21T22:55:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34011#p34011</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34011#p34011"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34011#p34011"><![CDATA[
+Here's a lua.xml that has been updated for LÖVE 0.7.2. I don't personally use Notepad++, so I'm not sure if it works or not.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2817">lua.xml</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Thu Jul 21, 2011 10:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-04T11:21:20+00:00</updated>
+
+		<published>2010-11-04T11:21:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21604#p21604</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21604#p21604"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21604#p21604"><![CDATA[
+Thank you guys for putting this together, I actually just yesterday set this up and it's been a huge help. Now all I have to do in Notepad++ is press shift + ctrl + b and wazam, instant Love action! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br><br>(You VC users will recognize the keybind. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">)<br><br>Ninwa<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Thu Nov 04, 2010 11:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hide]]></name></author>
+		<updated>2010-10-30T09:16:19+00:00</updated>
+
+		<published>2010-10-30T09:16:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21393#p21393</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21393#p21393"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21393#p21393"><![CDATA[
+Thank you this is awesome !<br>I've added a <a href="http://love2d.org/wiki/Notepad%2B%2B" class="postlink">Notepad++ page</a> on the wiki with how to run love code and a link to here.<br><br>Now is there a way to highlight these LOVE functions in notepad++ ?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=884">hide</a> — Sat Oct 30, 2010 9:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dbest]]></name></author>
+		<updated>2010-06-21T06:11:58+00:00</updated>
+
+		<published>2010-06-21T06:11:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16478#p16478</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16478#p16478"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16478#p16478"><![CDATA[
+Just joined and I like this already. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>I have been using NPP for my normal routine work and this plugin makes it lovely.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1242">dbest</a> — Mon Jun 21, 2010 6:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Angrycrow]]></name></author>
+		<updated>2010-06-11T19:50:47+00:00</updated>
+
+		<published>2010-06-11T19:50:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16007#p16007</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16007#p16007"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16007#p16007"><![CDATA[
+This is the best! I was up all night looking for this! Thank you so much!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=458">Angrycrow</a> — Fri Jun 11, 2010 7:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GreatHeroRift]]></name></author>
+		<updated>2010-06-01T15:56:51+00:00</updated>
+
+		<published>2010-06-01T15:56:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15641#p15641</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15641#p15641"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15641#p15641"><![CDATA[
+I went ahead and updated the top post with the re-uploaded file. :]<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1162">GreatHeroRift</a> — Tue Jun 01, 2010 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2010-05-30T04:09:42+00:00</updated>
+
+		<published>2010-05-30T04:09:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15583#p15583</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15583#p15583"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15583#p15583"><![CDATA[
+Thanks for making this.<br><br>It also looks like the board ate the attachment. Anyone have a copy?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Sun May 30, 2010 4:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[oleyb]]></name></author>
+		<updated>2010-05-12T23:14:29+00:00</updated>
+
+		<published>2010-05-12T23:14:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15438#p15438</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15438#p15438"/>
+		<title type="html"><![CDATA[Re: Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15438#p15438"><![CDATA[
+This is great, thanks!  This is super helpful for someone just starting out with LÖVE.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1172">oleyb</a> — Wed May 12, 2010 11:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GreatHeroRift]]></name></author>
+		<updated>2010-06-01T15:55:56+00:00</updated>
+
+		<published>2010-05-11T14:42:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15418#p15418</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15418#p15418"/>
+		<title type="html"><![CDATA[Notepad++ Auto-Complete Config for LÖVE 0.6.2]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15418#p15418"><![CDATA[
+I just recently discovered LÖVE, and I love it. But there was one thing that was bugging me: wouldn't it be great if Auto-Complete in Notepad++ worked with LÖVE's API?<br><br>Well, now it can!<br><br>Instructions:<br>- Download the lua.xml and place it in your Notepad++/plugins/APIs/ directory.<br>- In Notepad++, go to Settings &gt; Preferences in the menu.<br>- Select the Backup/Auto-Completion tab.<br>- Make sure "Enable auto-completion on each input" is checked.<br>- Set it to "Function completion."<br>- And check "Function parameters hint on input."<br><br>And...bam! Auto-Completion for LÖVE API functions in Notepad++. Of course, it's no Visual Studio Intellisense, but it's a lot nicer than having to look up and/or remember all the function names/parameters/return types.<br><br>NOTES:<br>- This file was made for LÖVE 0.6.2, and will need to be updated if/when any API changes are made.<br>- It only works for the main love.* API functions (like love.graphics.checkMode()), not the prototype functions on objects (like source:isLooping(), etc). If someone can think of a good way to do those, let me know and I'll gladly add them in.<br>- This lua.xml only includes the LÖVE API functions, not the Lua API functions. If someone knows of a lua.xml out there that has all the Lua API functions with parameters, I'll merge them in with this one.<br><br>Anyhow, enjoy! Let me know if you have any tips/problems/suggestions/etc/etc.<br><br>EDIT: Updating the file with a fix for functions that have no return value. They should now properly generate function parameter hints, like all the other functions.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1583">lua.xml</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1162">GreatHeroRift</a> — Tue May 11, 2010 2:42 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

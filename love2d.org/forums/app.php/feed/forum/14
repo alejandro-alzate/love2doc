@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/forum/14" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-07T13:59:05+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/forum/14</id>
+
+		<entry>
+		<author><name><![CDATA[gurenberg]]></name></author>
+		<updated>2024-04-07T13:59:05+00:00</updated>
+
+		<published>2024-04-07T13:59:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259192#p259192</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259192#p259192"/>
+		<title type="html"><![CDATA[Games and Creations • Refractor - Devlog]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259192#p259192"><![CDATA[
+Hello everyone <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><br>After lurking the forums for long, I'm finally making a game.<br><br><img src="https://img.itch.zone/aW1hZ2UvMjYyMzg4OC8xNTYzMjk2MS5wbmc=/347x500/KI9Wj9.png" class="postimage" alt="Image"><br>(Screenshot) My attempt to make 'teal' color<br><br>Refractor is about combining special devices - let's call them Nodes<br>to "sculpt" any color out of pure white.<br>You can send a Node's output to another Node by linking them with a Cable.<br>A Node shall usually transform input colors into a new output color:<br>with the right combination you can make any color.<br>The game will feature a Color-dex of known colors like Red, Teal and so on;<br>to complete the game all of the colors need to be discovered.<br><br>Current version's features<br><br><strong class="text-strong">List of Nodes</strong><br>Emitter: outputs pure white to infinite Nodes<br>Screen: can display one color input<br>Refractor: outputs one of the RGB channels of a single input color<br>Attenuator: dimms the input color<br>Combiner: outputs the <strong class="text-strong">normalized</strong> sum of inputs<br><br><strong class="text-strong">How to play</strong><br>A: Adds a Emitter<br>S: Adds a Screen<br>D: Adds a Refractor<br>F: Adds a Attenuator<br>G: Adds a Combiner<br>CTRL+Left Mouse Buttton: Switch channel of Refractor/Adjust Attenuator's opacity<br>ALT+Left Mouse Buttton: Deletes a Node<br><br>To link two Nodes move the cursor over the are below the first, a circle will show up.<br>Hold left mouse' button and drag the Cable over the area above the second Node,<br>when a circle appears release the mouse: done!<br>You can remove a Cable by dragging it away from the second Node or by clicking<br>the 'X' in the middle of the Cable.<br><br><strong class="text-strong">Libraries used</strong><br><a href="https://github.com/rxi/classic" class="postlink">classic for OOP</a><br><a href="https://github.com/gvx/bitser" class="postlink">bitser for serialization</a><br><a href="https://github.com/a327ex/boipushy" class="postlink">boipushy for input</a><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24129">refractor_0dev.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=265164">gurenberg</a> — Sun Apr 07, 2024 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-04-07T01:36:39+00:00</updated>
+
+		<published>2024-04-07T01:36:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259190#p259190</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259190#p259190"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259190#p259190"><![CDATA[
+- your title has "unicorn blood sacrfice" (not mad crawl)<br>- instructions on first screen is v helpful<br>- messages appear at the top AND the bottom. V confusing. Suggest you drop the one at the bottom and just fill the log at the top.<br>- graphics is awesome<br>- the 'confused' effect where keys become random is a great mechanic<br>- I can see friends and enemies through walls when I 'display' tags. Intentional?<br>- equipping things is a bit unintuitive. I got it after clicking around a bit.<br>- suggest the heart beat is turned off when health is 100%<br>- using a wand of flames requires no less than four mouse clicks. At least the 2nd click can be removed.<br>- i realised there was no line of sight with the wand until after I'd committed to an attack. I couldn't see a way to cancel the attack. (suggest right-click to cancel wand).<br>- I got stuck on some stairs and had to quit the game. That sames stairs worked on at least 3 previous occasions (I went up/down a few times) but then got stuck the 4th time. Screen shot for what it's worth.<br><br>I think the game is really engaging. Much more improved once I realised I had to follow my party. I even stopped my other background game to focus on this one.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I wanted to explore more and see what else I can pick up and whack something on the head with my club.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>I played the exe version (not that that matters).<dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24128&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24128" class="postimage" alt="Untitled.jpg" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sun Apr 07, 2024 1:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-06T22:56:58+00:00</updated>
+
+		<published>2024-04-06T22:56:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259186#p259186</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259186#p259186"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259186#p259186"><![CDATA[
+I got an error, but the artwork and design is AWESOME! It is a little hard to understand what is going on. I know this is an alpha build mainly for testing, but if you're going to release it, then I think it should have instructions and make the more important text easier to see.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Sat Apr 06, 2024 10:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-04-04T10:53:46+00:00</updated>
+
+		<published>2024-04-04T10:53:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259172#p259172</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259172#p259172"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259172#p259172"><![CDATA[
+I try to publish a simple bullet point list of things I fixed and things I know I didn't fix (known issues) so my fan base will know what to expect with each download.  You can see how very simple this can be on my itch.io page (dev log) available in my signature.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Thu Apr 04, 2024 10:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2024-04-03T16:57:52+00:00</updated>
+
+		<published>2024-04-03T16:57:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259163#p259163</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259163#p259163"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259163#p259163"><![CDATA[
+<blockquote class="uncited"><div>Since you said 'please' I'll give this another shot when I return from vacation next week. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Thank you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"><br><blockquote class="uncited"><div>Any release notes for this update?</div></blockquote>Ermmm...there's a readme.txt in the windows zip? (Love2d can still run exe files as love files I believe). I don't really know how to make release note <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">. I ... Tried to fix the problems addressed above (though I don't think all, such as lighting).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Wed Apr 03, 2024 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-04-03T13:30:54+00:00</updated>
+
+		<published>2024-04-03T13:30:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259162#p259162</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259162#p259162"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259162#p259162"><![CDATA[
+Since you said 'please' I'll give this another shot when I return from vacation next week. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Any release notes for this update?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Wed Apr 03, 2024 1:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2024-04-03T02:06:55+00:00</updated>
+
+		<published>2024-04-03T02:06:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259157#p259157</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259157#p259157"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259157#p259157"><![CDATA[
+New Update: <a href="https://hmmmgames.itch.io/madcrawl" class="postlink">https://hmmmgames.itch.io/madcrawl</a><br>(Sorry, I tried but uploading the love file here isn't working for my &gt;30MB file <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry">)<br><br>Please, can you (yes YOU) help and playtest it. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><br>I really need the feedback.<br><br>Though I came on a weekday. That's my bad. I'll prompt again on Saturday.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Wed Apr 03, 2024 2:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hydrogen Maniac]]></name></author>
+		<updated>2024-04-01T15:22:38+00:00</updated>
+
+		<published>2024-04-01T15:22:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259145#p259145</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259145#p259145"/>
+		<title type="html"><![CDATA[Games and Creations • SPELL TOWER - First-Person Deckbuilding Dungeon Crawler]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259145#p259145"><![CDATA[
+<span style="font-size:150%;line-height:116%">Hey all, I made a new game!</span><br><br><img src="https://i.imgur.com/gK0MQgT.png" class="postimage" alt="Image"><br><br>It's a deckbuilder and a turnbased dungeon crawler roguelite made for this years' <a href="https://itch.io/jam/dcjam2024" class="postlink">Dungeon Crawler Jam</a>. it came out pretty great but I still have plenty of ideas of things I want to add/change in a future post jam version but until then feel free to suggest changes or additions you'd want and I might incorporate them!<br><br><img src="https://i.imgur.com/M4Tl3vQ.png" class="postimage" alt="Image"><br><br>As always this was made using good-old <a href="https://love2d.org/forums/viewtopic.php?t=86350" class="postlink">G3D</a><br><br><span style="font-size:200%;line-height:116%"><strong class="text-strong">DOWNLOAD: <a href="https://youdoyoubuddy.itch.io/spell-tower" class="postlink">https://youdoyoubuddy.itch.io/spell-tower</a></strong></span><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137328">Hydrogen Maniac</a> — Mon Apr 01, 2024 3:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2024-03-29T18:53:22+00:00</updated>
+
+		<published>2024-03-29T18:53:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259129#p259129</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259129#p259129"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Particle collisions (with cache)]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259129#p259129"><![CDATA[
+<blockquote class="uncited"><div>hi,i am from china , your game its the only one  i can understand in this fourm, its very helpul ,i must say thanks to you</div></blockquote>Thanks! I am learning how to code and I've made alot of small programs: <a href="https://github.com/darkfrei/love2d-lua-tests" class="postlink">https://github.com/darkfrei/love2d-lua-tests</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Fri Mar 29, 2024 6:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marclurr]]></name></author>
+		<updated>2024-03-29T16:36:57+00:00</updated>
+
+		<published>2024-03-29T16:36:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259128#p259128</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259128#p259128"/>
+		<title type="html"><![CDATA[Games and Creations • Re: DEMO on STEAM: Andy Blast Vs The Forces of Evil]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259128#p259128"><![CDATA[
+Can't see a demo on the Steam page, just says coming soon.<br><br>Edit: Actually it's available to download on the desktop Steam client, I was trying on my Steam Deck last night. It's quite fun if a bit unforgiving. The controls aren't really my cup of tea, would be nice to be able to configure the layout and also support a controller. The menus seemed to accept controller input mostly fine (stopped working when I launched in fullscreen) but the game only seemed to allow keyboard input. Looking forward to seeing the finished product!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=191591">marclurr</a> — Fri Mar 29, 2024 4:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4KbShort]]></name></author>
+		<updated>2024-03-29T12:15:14+00:00</updated>
+
+		<published>2024-03-29T12:15:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259127#p259127</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259127#p259127"/>
+		<title type="html"><![CDATA[Games and Creations • Re: DEMO on STEAM: Andy Blast Vs The Forces of Evil]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259127#p259127"><![CDATA[
+@borr<br><br>The first level is 1-1 with Dangerous Dave so that area is there as well. A little differently designed, but it's there. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=151060">4KbShort</a> — Fri Mar 29, 2024 12:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[麻猫和黄猫]]></name></author>
+		<updated>2024-03-28T16:54:36+00:00</updated>
+
+		<published>2024-03-28T16:54:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259126#p259126</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259126#p259126"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Particle collisions (with cache)]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259126#p259126"><![CDATA[
+hi,i am from china , your game its the only one  i can understand in this fourm, its very helpul ,i must say thanks to you<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=232254">麻猫和黄猫</a> — Thu Mar 28, 2024 4:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TurboYeti]]></name></author>
+		<updated>2024-03-28T02:01:29+00:00</updated>
+
+		<published>2024-03-28T02:01:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259121#p259121</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259121#p259121"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Simple Solitaire]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259121#p259121"><![CDATA[
+<blockquote class="uncited"><div>Hey there! For me the game works really well. Thank you for that! I played it today the whole time in my Browser. I would like to port it on my handheld. Can you give me a permission for that?</div></blockquote>Hey, thanks for playing the game! I'm glad you like it! I think I'd want some more details before I give permission for that. If you want to send me a PM, we can chat more about it there.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183994">TurboYeti</a> — Thu Mar 28, 2024 2:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bobble68]]></name></author>
+		<updated>2024-03-26T13:28:23+00:00</updated>
+
+		<published>2024-03-26T13:28:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259117#p259117</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259117#p259117"/>
+		<title type="html"><![CDATA[Games and Creations • In the Heavens - Demo 0.1.12]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259117#p259117"><![CDATA[
+Hello! I'm back with another update, though this might be the last one for a while till I finish my assignments.<br><br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24116&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24116" class="postimage" alt="Untitled.png" /></a></dt></dl></div><ul><li>New ambient lighting and shadows - caves are now dark!</li><li>Partial controller support - the game should now work properly with controllers and show prompts for x-box controllers.</li><li>New squeeze mechanic - slide through small spaces by getting your scales wet![</li><li>Direction Stones now start generating particles during dialogue/list]<br><br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24118&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24118" class="postimage" alt="Untitled2.png" /></a></dt></dl></div>I'm starting to wind up for developing the rest of the game in earnest now, so you'll probably see more new mechanics in the next updates!​</li></ul><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24115">In the Heavens 0-1-12.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Tue Mar 26, 2024 1:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Todespreis]]></name></author>
+		<updated>2024-03-25T15:34:30+00:00</updated>
+
+		<published>2024-03-25T15:34:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259115#p259115</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259115#p259115"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Simple Solitaire]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259115#p259115"><![CDATA[
+Hey there! For me the game works really well. Thank you for that! I played it today the whole time in my Browser. I would like to port it on my handheld. Can you give me a permission for that?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=220233">Todespreis</a> — Mon Mar 25, 2024 3:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TurboYeti]]></name></author>
+		<updated>2024-03-25T00:20:30+00:00</updated>
+
+		<published>2024-03-25T00:20:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259112#p259112</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259112#p259112"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Simple Solitaire]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259112#p259112"><![CDATA[
+<blockquote class="uncited"><div>You should use the Os cursor for this, the lag is annoying.<br>Odd style choice for the red cards, i find it unpleasent to see the card red instead the heart.<br>Else it plays solid.</div></blockquote>I wanted the cursor to be in the same style as the game and I tried using love.mouse.newCursor but I just couldn't get it to look good. When I tried the image-based cursor I didn't notice much lag, so I went with that. Good to know though, for future games I could add a setting to toggle on/off the hardware cursor.<br><br>Thanks for checking it out!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183994">TurboYeti</a> — Mon Mar 25, 2024 12:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-03-24T21:58:35+00:00</updated>
+
+		<published>2024-03-24T21:58:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259111#p259111</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259111#p259111"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Simple Solitaire]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259111#p259111"><![CDATA[
+You should use the Os cursor for this, the lag is annoying.<br>Odd style choice for the red cards, i find it unpleasent to see the card red instead the heart.<br>Else it plays solid.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Sun Mar 24, 2024 9:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TurboYeti]]></name></author>
+		<updated>2024-03-24T21:24:43+00:00</updated>
+
+		<published>2024-03-24T21:24:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259110#p259110</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259110#p259110"/>
+		<title type="html"><![CDATA[Games and Creations • Simple Solitaire]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259110#p259110"><![CDATA[
+<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24104&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24104" class="postimage" alt="Screenshot20.png" /></a></dt></dl></div> <br>Hey guys, I recently released my second love2d game! It's called Simple Solitaire and it's a pixel art Klondike Solitaire game that has a light and dark theme and keeps track of a bunch of stats. I wanted to make a simple game to get some experience working with mouse controls, lovejs, and to keep practicing the skill of finishing games <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br><br>Thanks for checking out my game! I'd love to hear any feedback and your best times and fewest moves <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Play and/or download it here: <a href="https://turboyeti.itch.io/simple-solitaire" class="postlink">https://turboyeti.itch.io/simple-solitaire</a><br> ​ <div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24105&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24105" class="postimage" alt="Screenshot24.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183994">TurboYeti</a> — Sun Mar 24, 2024 9:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ShoesForClues]]></name></author>
+		<updated>2024-03-20T22:48:03+00:00</updated>
+
+		<published>2024-03-20T22:48:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259077#p259077</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259077#p259077"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259077#p259077"><![CDATA[
+<blockquote class="uncited"><div>I'm thinking either 1st person or 3rd person RPG dungeon crawler with this physics engine for combat and world movement.</div></blockquote>An RPG dungeon crawler would be pretty awesome! If you do plan on making it, make sure to use the version from my GitHub since that's the one being constantly updated.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141470">ShoesForClues</a> — Wed Mar 20, 2024 10:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-03-19T02:38:35+00:00</updated>
+
+		<published>2024-03-19T02:38:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259066#p259066</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259066#p259066"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259066#p259066"><![CDATA[
+I'm thinking either 1st person or 3rd person RPG dungeon crawler with this physics engine for combat and world movement.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Tue Mar 19, 2024 2:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ShoesForClues]]></name></author>
+		<updated>2024-03-18T19:29:57+00:00</updated>
+
+		<published>2024-03-18T19:29:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259061#p259061</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259061#p259061"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259061#p259061"><![CDATA[
+<blockquote class="uncited"><div>I know I want to use this in a future project - I just can't think what for at the moment!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Haha same here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141470">ShoesForClues</a> — Mon Mar 18, 2024 7:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-03-18T09:43:19+00:00</updated>
+
+		<published>2024-03-18T09:43:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259058#p259058</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259058#p259058"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259058#p259058"><![CDATA[
+I know I want to use this in a future project - I just can't think what for at the moment!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Mon Mar 18, 2024 9:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ShoesForClues]]></name></author>
+		<updated>2024-03-18T02:49:37+00:00</updated>
+
+		<published>2024-03-18T02:49:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259054#p259054</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259054#p259054"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259054#p259054"><![CDATA[
+Just updated it with the source at the top. Please credit me if you plan to use the code, thanks! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141470">ShoesForClues</a> — Mon Mar 18, 2024 2:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ShoesForClues]]></name></author>
+		<updated>2024-03-18T04:23:44+00:00</updated>
+
+		<published>2024-03-17T19:27:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259046#p259046</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259046#p259046"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259046#p259046"><![CDATA[
+<blockquote class="uncited"><div>You came up with your own algorithm? That's pretty impressive.</div></blockquote>Yup! The first iteration actually used GJK and EPA but I was having a hard time trying to figure out how to produce a contact manifold from it. <br><br>I eventually found a source that instead uses clipping to compute the contact manifolds but it assumed I already had the separation normal and distance (either from EPA or SAT). <a href="https://dyn4j.org/2011/11/contact-points-using-clipping/" class="postlink">https://dyn4j.org/2011/11/contact-point ... -clipping/</a><br><br>I wanted a way to compute everything using only the clipping volume: collision detection, contact manifold, separation normal and separation distance. I eventually realized this was indeed possible.<br><br>First, collision detection can be done by checking if there are any remaining vertexes from the clipping. If everything is discarded it means there were no overlapping vertexes and therefor no collision.<br><br>Second, to get an approximate contact point I calculate the centroid of the clipping volume. As mentioned in that source I found.<br><br>Third, the separation normal can be obtained by getting the average normal of the overlapping faces from the clipped volume and using their surface area as the bias. Here is a 2D example of what I mean:<br><br><img src="https://i.imgur.com/bwyzUAg.png" class="postimage" alt="Image"><br><br>Last, once I have the separation normal, I can use that to find the furthest vertex along that direction and treat it as a plane. Then I find the furthest opposing vertex and calculate the distance from the plane via dot product. This gives me the separation distance.<br><br>And voila! All of this can be done using just the clipping volume. No need for GJK/EPA or SAT <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141470">ShoesForClues</a> — Sun Mar 17, 2024 7:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[CapitalEx]]></name></author>
+		<updated>2024-03-17T18:50:00+00:00</updated>
+
+		<published>2024-03-17T18:50:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259045#p259045</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259045#p259045"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259045#p259045"><![CDATA[
+You came up with your own algorithm? That's pretty impressive.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136854">CapitalEx</a> — Sun Mar 17, 2024 6:50 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

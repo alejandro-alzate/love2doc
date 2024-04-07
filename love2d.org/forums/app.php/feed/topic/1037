@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1037" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2014-02-27T15:05:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1037</id>
+
+		<entry>
+		<author><name><![CDATA[Elvis666]]></name></author>
+		<updated>2014-02-27T15:05:46+00:00</updated>
+
+		<published>2014-02-27T15:05:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=163704#p163704</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=163704#p163704"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=163704#p163704"><![CDATA[
+Hi all,<br><br>I'm having problems running a Love program from SciTE.<br>I've added the commands to my lua.properties file:<div class="codebox"><p>Code: </p><pre><code># compatible with LuaBinaries for Lua 5.1; will work on both platforms.command.compile.*."C:\Lua\luac.exe" -o "$(FileName).luc" "$(FileNameExt)"# Lövecommand.go.main.lua="C:\Lua\love\love.exe" "$(FileDir)"# Lua 5.1#command.go.*.lua="C:\Lua\lua.exe" "$(FileNameExt)"# Lua 4.0#command.go.*.lua=Lua-4.0.exe -c -f "$(FileNameExt)"</code></pre></div>When I press F5, I seem to get the right command in the output window:<div class="codebox"><p>Code: </p><pre><code>"C:\Lua\love\love.exe" "C:\***path***\TD"</code></pre></div>However, the love-window does not open and I need to terminate the run through SciTE.<br>I'm quite certain the command is correct. When I paste it in a cmd-window, love does open, running my program.<br>(To exclude any programming errors on my part, I've been testing this with the hello world example from the wiki.)<br><br><br>Also, how would I change the lua.properties file to run Love when I press F5 on a main.lua file, but standard lua when I press F5 on any other *.lua file?<br>If I uncomment the <em class="text-italics">"#command.go.*.lua="C:\Lua\lua.exe" "$(FileNameExt)"</em>-line I get an error when trying to run (love) main.lua file<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134735">Elvis666</a> — Thu Feb 27, 2014 3:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-10T23:08:27+00:00</updated>
+
+		<published>2014-01-10T23:08:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160549#p160549</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160549#p160549"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160549#p160549"><![CDATA[
+Very interesting. The plot thickens or is it the "mud gets deeper"?<br>I never run SciTE using the 'Run Program button' - always F5 ... so, not the answer.<br>There seems to be little interest in using SciTE with Love 0.9.<br>I was hoping that someone had encountered this problem and fixed it.<br>I would update to a newer version of SciTE but my configuration files don't see to be compatible with the newer version and the 'properties' files are not intuitive to the unwashed.<br>It's not a biggy, just an annoyance.<br>Maybe I'll just learn (I doubt) to live with it. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> <br>Thank you for taking a look at my setup.<br>Best!<br>Edit: Think (hope) I've found the problem (maybe).<br>As usual, using the monkey keyboard approach, I found that changing <div class="codebox"><p>Code: </p><pre><code>command.go.subsystem.*.lexe=1</code></pre></div>to<div class="codebox"><p>Code: </p><pre><code>command.go.subsystem.*.lexe=2</code></pre></div>the problem seems to go away.<br>Really don't know what a .lexe file is (so probably screwup something else.)<br>My problem, not of concern for this forum.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Fri Jan 10, 2014 11:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2014-01-10T21:55:49+00:00</updated>
+
+		<published>2014-01-10T21:55:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160546#p160546</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160546#p160546"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160546#p160546"><![CDATA[
+First your SciTE version did not run at all on my system because of a missing lua DLL. So I downloaded one from here: <br><a href="http://sourceforge.net/projects/luabinaries/files/5.1.4/Windows%20Libraries/lua5_1_4_Win32_dll6_lib.zip/download" class="postlink">http://sourceforge.net/projects/luabina ... p/download</a><br><br>Unfortunately, after that everything worked smoothly. I tried intentionally causing errors but the conf.lua file never opened, despite the fact that it was very much present. I also searched through the SciTE config files but there was no reference to conf.lua in any form. I was ready to give up but then I did something I usually never do. I tried to start my LÖVE program with the "Run Program" button as opposed to simply pressing F5..<br><br>..suddenly SciTE decided to open a random file after an error. Not conf.lua but html.properties (a file I had previously opened). It seems there is a bug in your setup which can lead to SciTE opening a previously opened file in case of an error despite the fact that the file is unrelated to the error in question. It is likely that the bug hides somewhere in the SciTE .lua scripts, not in the .properties files. Unfortunately, I have zero experience with those scripts and I do not have the time to investigate and fix the problem there. <br><br>However, as I said there seems to be an easy workaround: always run your programs by pressing F5, not by pressing the Run Program button. Another thing which seemed to suppress the issue in my case was simply closing all open files and restarting SciTE. I only opened main.lua and pressed the button - and this time things worked as expected.<br> <br>Hope that helps<br><br>P.S.: I prefer my own color scheme and setup but yours is not bad at all. I could work with it. <img alt=":thumbsup:" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Fri Jan 10, 2014 9:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-10T19:30:49+00:00</updated>
+
+		<published>2014-01-10T19:30:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160539#p160539</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160539#p160539"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160539#p160539"><![CDATA[
+Here's my messed up SciTE.<br>Everything else works great except for the opening of a conf.lua file when error occurs.<br>Sure that you wont like my colors.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ysosrs.png" width="16" height="16" alt=":joker:" title="Joker"> <br>Really appreciate your help.<br>Best.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=9087">SciTE_Ref.zip</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Fri Jan 10, 2014 7:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2014-01-10T17:33:36+00:00</updated>
+
+		<published>2014-01-10T17:33:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160536#p160536</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160536#p160536"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160536#p160536"><![CDATA[
+<blockquote class="uncited"><div>Glad to see that my obnoxious posts have not deterred  you from further adventures with SciTE.</div></blockquote>I make these configs for myself,  whether other people like them or not is of no real importance to me.  I just upload them because they <em class="text-italics">may</em> be useful for someone else too, but as I said that is not the motivation behind them.<br><blockquote class="uncited"><div>I still can't figure out why, with my configuration files, if I get an error and a conf file exists, SciTE opens the conf.lua file.<br>No other files opened on error if a conf file absent.  Any suggestions?</div></blockquote>I have no idea what is going on there, sounds very strange. Upload your version of SciTE, the whole package, executable, DLLs, all config files, etc. then I will take a look at it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Fri Jan 10, 2014 5:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-10T15:48:26+00:00</updated>
+
+		<published>2014-01-10T15:48:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160528#p160528</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160528#p160528"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160528#p160528"><![CDATA[
+Glad to see that my obnoxious posts have not deterred  you from further adventures with SciTE.<br>Screen color are much better.<br>Just a few suggestions (easily ignored):<br>1. Remind people that they will have to edit the lua.properties file to have the correct path to their love.exe.<br>2. Add ability of SciTE to re-open with the files you were working in the last session instead of a blank screen.<br>3. Use a default screen height less than 900 (not everyone can handle such a large screen.)<br>4. Point out that error messages aren't displayed in SciTE's output window (which isn't displayed and can only be toggled.)<br><br>I still can't figure out why, with my configuration files, if I get an error and a conf file exists, SciTE opens the conf.lua file.<br>No other files opened on error if a conf file absent.  Any suggestions?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Fri Jan 10, 2014 3:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2014-01-10T11:08:29+00:00</updated>
+
+		<published>2014-01-10T11:08:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160513#p160513</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160513#p160513"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160513#p160513"><![CDATA[
+<span style="font-size:200%;line-height:116%">Hexenhammer's Preconfigured SciTE for Windows </span><br><br>Changes is in this release:<br><br>= Nightshade theme<br>- fixed goto label color<br>- operators are now bold<br>- changed the selection colors, contrast was too low<br>- darker background, again to achieve higher contrast<br><br>= Ocean theme<br>- fixed goto label color<br><br>= Qbasic theme<br>- new theme: if you feel retro or simply hate source code highlighting<br><br>For those who have never used my version before, important differences to the stock SciTE config are:<br>- Monospace font by default (Microsoft Consolas - you must install it if you do not already have it)<br>- More visible cursor<br>- Line numbers<br>- Edge column (to enforce &lt; 80 characters)<br><br>Here are updated screenshots:<br><br><span style="font-size:150%;line-height:116%">Nightshade color scheme</span><br><img src="http://i41.tinypic.com/zvy4w4.jpg" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%">Ocean color scheme</span><br><img src="http://i39.tinypic.com/2wncv9i.png" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%">Qbasic color scheme</span><br><img src="http://i42.tinypic.com/w0l7hw.png" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%">Download link:</span><br><a href="http://www.mediafire.com/download/9e4ah2ek8iwj45i/SciTe-Funpack.zip" class="postlink">http://www.mediafire.com/download/9e4ah ... unpack.zip</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Fri Jan 10, 2014 11:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-02T20:45:42+00:00</updated>
+
+		<published>2014-01-02T20:45:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159953#p159953</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159953#p159953"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159953#p159953"><![CDATA[
+SciTE really is complex!<br>I got everything I really wanted until I got a error in a Love script which had a conf.lua file.<br>I got the appropriate error message in the Love window and SciTE's output window.<br>When I exited from the Love, SciTE opened the conf file.<br>Anyone have a clue as to why this is happening (no error in the conf file) and how to prevent (really annoying).<br>No problems with Love 0.9 files without conf files.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Thu Jan 02, 2014 8:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2014-01-02T20:36:24+00:00</updated>
+
+		<published>2014-01-02T20:36:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159950#p159950</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159950#p159950"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159950#p159950"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>, not usable with wlua files ...</div></blockquote></div></blockquote>.wlua is the extension for wxLua files.<br>FYI, <a href="http://wxLua.sourceforge.net/" class="postlink">WxWlua</a> is a Lua wrapper around WxWidgets GUI library.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Thu Jan 02, 2014 8:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-02T14:53:50+00:00</updated>
+
+		<published>2014-01-02T14:53:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159934#p159934</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159934#p159934"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159934#p159934"><![CDATA[
+<blockquote class="uncited"><div>I think the default colors are terrible  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">  I do not get how people can stare at a white background for long, hurts my eyes. Well, people are different.</div></blockquote>I agree. I use a black background. On my computer, for some reason, the text in your color scheme is barely readable.<br><br>FYI, wlua files are those used with straight Lua on Windows.  My limited understanding of SciTE properties makes it difficult for me to add this feature to your properties files -  my problem.<br><br>I'm hesitant at uploading my properties files because I really don't know what I'm doing. There a mess and might screw up other peoples systems. <br><br>I really do appreciate your input as it got me to at least to look at the SciTE properties files and got me able to work with Love 0.9.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Thu Jan 02, 2014 2:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2014-01-02T13:15:16+00:00</updated>
+
+		<published>2014-01-02T13:15:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159929#p159929</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159929#p159929"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159929#p159929"><![CDATA[
+<blockquote class="uncited"><div>Terrible colors</div></blockquote>I think the default colors are terrible  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">  I do not get how people can stare at a white background for long, hurts my eyes. Well, people are different.<br><blockquote class="uncited"><div>, no Love function highlighting</div></blockquote>Of course not. Stock SciTE does not have that either. I do not like highting library APIs. Highlighting becomes meaningless when too much is highlighted if you ask me.<br><blockquote class="uncited"><div>, not usable with wlua files ...</div></blockquote>What does that even mean? What is a wlua file and how would you "use" it? I did not change anything there.<br><blockquote class="uncited"><div>After several hours of frustration and many missteps I got version 1.75 to use my colors, start up displaying files I was working on,  permit displaying the console window when active in the Love script, and show print values in the SciTE output window.</div></blockquote>Great, maybe you should follow my example and upload it. Seems to be what Grubby needs..<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Thu Jan 02, 2014 1:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2014-01-02T00:34:25+00:00</updated>
+
+		<published>2014-01-02T00:34:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159895#p159895</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159895#p159895"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159895#p159895"><![CDATA[
+Hi Gruggy or is it Grumpy?<br><br>Don't despair. SciTE does work with Love 0.9 and 0.8.<br><br>I gave up on Hexenhammer's version. Too many things to change to get where I wanted to go. Terrible colors, no Love function highlighting, not usable with wlua files ...<br><br>Couldn't get SciTE version 3.37 to use version 1.75 ".properties" files. Just enough things different for me to figure out at this time.<br><br>After several hours of frustration and many missteps I got version 1.75 to use my colors, start up displaying files I was working on,  permit displaying the console window when active in the Love script, and show print values in the SciTE output window.<br><br>Yes, Love 0.9 does require some changes. I really don't know why and I really just fumbled around with the properties files until they gave up and gave me what I wanted.<br> <br>Have fun!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Thu Jan 02, 2014 12:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Grubby]]></name></author>
+		<updated>2013-12-31T05:49:45+00:00</updated>
+
+		<published>2013-12-31T05:49:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159796#p159796</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159796#p159796"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159796#p159796"><![CDATA[
+Well, is this the attempt to reign in the loose ScITe threads not working so well with love2d_090 on windows?<br><br>From what I can see thus far, whats said in THIS thread pretty much matches what I said here:<br><br><a href="https://love2d.org/forums/viewtopic.php?f=4&amp;t=76703&amp;sid=196570cd54fe6736844246cbdbddc8bc#p159051" class="postlink">viewtopic.php?f=4&amp;t=76703&amp;sid=196570cd5 ... bc#p159051</a><br><br>Looks like no one knows why this is (or those that do are trying to punish). Not even the DEVs have chimed in. Change the guts of SciTE? Really, ya think? I get the same results with the SciTE that came with LUA for windows (1.75). Same thing with SciTe 3.37. The editor didn't change. Something in the build of love2d_090 did. In contest to 080, I never had a problem. The output from lua was always visible in the SciTE output window. Now it seems its bufferd in some way. &lt;-- I can prove that. Don't bother to say something on my windows system changed. Love2d090 did. Revert back to 080, and things are good again. Oh yes, using SVN its easy to flip flop from one version of my simulation to another. The difference is clearly and always love2d_090.<br><br>Something is up with all this... Right?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=120709">Grubby</a> — Tue Dec 31, 2013 5:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2013-12-27T15:16:27+00:00</updated>
+
+		<published>2013-12-27T15:16:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159547#p159547</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159547#p159547"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159547#p159547"><![CDATA[
+Thanks to Hexenhammer &amp; Poorenglish, I'm almost back in business.<br>Adding either command.go.subsystem.main.lua=1 or command.go.subsystem.main.lua=2 allows me to have a console window. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><br> <br>Still don't get print output going to SciTE's output window - just error messages.  Use to be able to scroll through the print output after running the Love vis F5. (Really don't know how all this stuff got messed up going to Love 0.9 )<br><br>Would like to use Hexenhammer's custom SciTE (really like how easy it is to distinguish between '.' and ',') but find  the color contrast between light gray background and faint foreground unreadable on my limited laptop. (Also not setup to allow me to edit my .wlua files.)<br>Really need to figure out how to change the guts of SciTE. Too bad there isn't a tut.<br>Thank's all!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Fri Dec 27, 2013 3:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[poorenglish]]></name></author>
+		<updated>2013-12-27T13:07:53+00:00</updated>
+
+		<published>2013-12-27T13:07:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159537#p159537</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159537#p159537"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159537#p159537"><![CDATA[
+Set command.go.subsystem.main.lua=1<br>the output windows will available<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=704">poorenglish</a> — Fri Dec 27, 2013 1:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2013-12-27T09:50:08+00:00</updated>
+
+		<published>2013-12-27T09:50:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159520#p159520</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159520#p159520"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159520#p159520"><![CDATA[
+<blockquote class="uncited"><div>setting t.console = true in conf.lua.</div></blockquote>This worked for me. Do you use my customized configuration or the stock configuration? If you use the stock configuration you need to add this..<br><blockquote class="uncited"><div>command.go.subsystem.main.lua=2</div></blockquote>..to the end of your lua.properties file. <br><blockquote class="uncited"><div>unning Lua from SciTE via F5 does provide output to SciTE's output window. Lov 8e does also but sadly, Love 9 doesn't????</div></blockquote>I have never used the SciTE output window, in fact it is turned off in my config so I cannot help there.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Fri Dec 27, 2013 9:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[poorenglish]]></name></author>
+		<updated>2013-12-27T08:45:59+00:00</updated>
+
+		<published>2013-12-27T08:45:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159518#p159518</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159518#p159518"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159518#p159518"><![CDATA[
+I am also worried this,THIS IS NOTHING IN THE OUTPUT WINDOW.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=704">poorenglish</a> — Fri Dec 27, 2013 8:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2013-12-26T17:15:36+00:00</updated>
+
+		<published>2013-12-26T17:15:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=159462#p159462</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=159462#p159462"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=159462#p159462"><![CDATA[
+Did an incredibly stupid thing - I let Malware do a complete system scan. <br>It bricked my computer - wouldn't boot up. <br>Let Windows 7 fix itself which resulted in Love9 being removed - Love folder empty?<br>Re-downloaded Love 0.9 and everything seemed OK.<br>Discovered that from SciTE, I could run Love using F5 but now can't get a console window using either love._openConsole() or by setting t.console = true in conf.lua.<br><br>If I drag&amp;drop love directory on a short-cut to Love 0.9 the console appears.<br><br>So, something got screwed up in SciTE.<br><br>I only use a console for debugging and since using  Love 0.9 I don't get any output to SciTE output window, I really would be nice to get  love._openConsole() working again without having to drag&amp;drop.<br><br>SciTE remains a black box for me so would greatly appreciate a little help.<br><br>Edit: Additional info - running Lua from SciTE via F5 does provide output to SciTE's output window. Lov 8e  does also but sadly, Love 9 doesn't????<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Thu Dec 26, 2013 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2013-12-18T05:17:41+00:00</updated>
+
+		<published>2013-12-18T05:17:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=158818#p158818</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=158818#p158818"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=158818#p158818"><![CDATA[
+<span style="font-size:200%;line-height:116%">Hexenhammer's Preconfigured SciTE for Windows </span><br><br>To celebrate the release of LÖVE 0.9.0 here is a new version of my preconfigured SciTE package for Windows. Changes since last version:<br>- Updated to SciTE 3.3.7<br>- Default monospace font is now Microsoft Consolas, you must install this font if you don't have it already<br>- Fixed the issue with LÖVE 0.9.0 not running. In fact if you installed LÖVE in its default location (Program Files) everything should now work out of the box i.e. open "main.lua", press F5 to run<br>- Both color scheme variants are now stuffed into one .zip archive to simplify things<br><br>For those who have never used my version before other important differences to the stock SciTE config are:<br>- Monospace font by default<br>- More visible cursor<br>- Line numbers<br>- Edge column (to enforce &lt; 80 characters)<br><br>Here are updated screenshots:<br><br><span style="font-size:150%;line-height:116%">Ocean color scheme</span><br><img src="http://i40.tinypic.com/e8amf5.png" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%">Nightshade color scheme</span><br><img src="http://i43.tinypic.com/2up8jz8.png" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%">Download link:</span><br><a href="http://www.mediafire.com/download/4brrc5n2sbesle9/SciTe-337-Customized.zip" class="postlink">http://www.mediafire.com/download/4brrc ... omized.zip</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Wed Dec 18, 2013 5:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2013-11-23T20:48:59+00:00</updated>
+
+		<published>2013-11-23T20:48:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=156988#p156988</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=156988#p156988"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=156988#p156988"><![CDATA[
+I am very much of the opinion this is your editor's fault, since if it were to act as an actual terminal, your output wouldn't be buffered (fully buffered, anyway).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Nov 23, 2013 8:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carotinho]]></name></author>
+		<updated>2013-11-22T21:14:42+00:00</updated>
+
+		<published>2013-11-22T21:14:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=156901#p156901</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=156901#p156901"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=156901#p156901"><![CDATA[
+Hi.<br><br>Yes, that did the trick. In fact I noticed that the output was somehow buffered. Very nice:) Should it be put in the wiki?<br><br>Thanks,<br><br>Carotinho<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134277">Carotinho</a> — Fri Nov 22, 2013 9:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[riidom]]></name></author>
+		<updated>2013-11-20T01:33:47+00:00</updated>
+
+		<published>2013-11-20T01:33:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=156653#p156653</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=156653#p156653"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=156653#p156653"><![CDATA[
+Hello,<br>try<div class="codebox"><p>Code: </p><pre><code>io.stdout:setvbuf("no")</code></pre></div>at beginning of your code. I found this related to a differend IDE, but maybe it works in scite too.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124036">riidom</a> — Wed Nov 20, 2013 1:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Carotinho]]></name></author>
+		<updated>2013-11-17T17:42:07+00:00</updated>
+
+		<published>2013-11-17T17:42:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=156507#p156507</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=156507#p156507"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=156507#p156507"><![CDATA[
+Hi.<br><br>I'm new here, first message <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-neko.png" width="16" height="16" alt=":neko:" title="Neko"> <br>I'm using Scite, too, but I've got this minor annoyance. When I run Löve, I'd like to see the standard output - such as that's coming from lua print() - in real time in the output pane. Right now I can only see it at the end of the execution: when I close the Löve program, the output pane is updated.<br>Is there a way to have the output pane updated in real time? I saw there's a message from someone else with this same question in the forums, but nobody answered, so I thought I could get better luck posting it here.<br><br>Thanks in advance,<br><br>Carotinho<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134277">Carotinho</a> — Sun Nov 17, 2013 5:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2013-12-18T05:18:47+00:00</updated>
+
+		<published>2013-09-15T23:10:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=136863#p136863</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=136863#p136863"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=136863#p136863"><![CDATA[
+Updated my customized SciTE to the newest version and made minor configuration changes. Keywords are no longer in bold and the fold margin background color was changed. I also made an additional color theme because I wanted a change. <br>The new theme is called Nightshade and is based on IntelliJ's Dracula theme.<br><br><strong class="text-strong">Previews:<br></strong><br><br><span style="font-size:150%;line-height:116%">Nightshade</span><br>(Screenshot removed)<br><br><span style="font-size:150%;line-height:116%">Ocean</span><br>(Screenshot removed)<br><br><strong class="text-strong">Download links</strong><br>Nightshade: <a href="http://www.mediafire.com/download/v72zhd3dd2sl3mg/SciTe-Nightshade.zip" class="postlink">http://www.mediafire.com/download/v72zh ... tshade.zip</a><br>Ocean: <a href="http://www.mediafire.com/download/3gz2gb0obr7j7kh/SciTE-Ocean.zip" class="postlink">http://www.mediafire.com/download/3gz2g ... -Ocean.zip</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Sun Sep 15, 2013 11:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hexenhammer]]></name></author>
+		<updated>2013-12-18T05:18:30+00:00</updated>
+
+		<published>2013-05-28T03:50:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=104076#p104076</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=104076#p104076"/>
+		<title type="html"><![CDATA[Re: Using SciTE with LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=104076#p104076"><![CDATA[
+<blockquote class="uncited"><div>Personally I love SciTE. However, the editor is only as good as its configuration. This configuration is of course a matter of personal preference but configuring SciTE is not that simple. You have to manually edit the config files and for that you first need to understand what all that stuff in there actually means. Normal for *nix programmers, not exactly welcoming to the typical Windows user.<br><br>So I uploaded my pre-configured SciTE for Windows people (like myself), the most noticeable feature being its color scheme. The color scheme is a variant of Solarized. I call it "Ocean" and find it incredibly soothing. Here is a screenshot:<br><br>(Screenshot removed)<br><br>Here is the download link: <a href="http://www.mediafire.com/?8sjprzfkbj8srkb" class="postlink">http://www.mediafire.com/?8sjprzfkbj8srkb</a></div></blockquote>I have updated my SciTE package to the newest version of SciTE (3.3.2). Except for that there are only two minor configuration changes. All files are now displayed in monospace by default (doesn't affect Lua coding, *.lua files were already displayed in monospace by default) and "Find in files" now defaults to "*.lua"<br><br>New download link: <a href="http://www.mediafire.com/download/vsyvjaxym4jek5y/wscite332.zip" class="postlink">http://www.mediafire.com/download/vsyvj ... ite332.zip</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=93070">Hexenhammer</a> — Tue May 28, 2013 3:50 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

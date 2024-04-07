@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/95374" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-03T07:02:44+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/95374</id>
+
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-03T07:02:44+00:00</updated>
+
+		<published>2024-04-03T07:02:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259158#p259158</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259158#p259158"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259158#p259158"><![CDATA[
+Hi @SugarRayLua,<br>Thanks for the feedback! Nice to know the issue is gone <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><blockquote class="uncited"><div>@marknote,<br><br>New release fixed the issue with importing .love files, thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Wed Apr 03, 2024 7:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-04-02T05:18:27+00:00</updated>
+
+		<published>2024-04-02T05:18:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259150#p259150</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259150#p259150"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259150#p259150"><![CDATA[
+@marknote,<br><br>New release fixed the issue with importing .love files, thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Tue Apr 02, 2024 5:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-02T03:27:39+00:00</updated>
+
+		<published>2024-04-02T03:27:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259149#p259149</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259149#p259149"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259149#p259149"><![CDATA[
+Hi @pjft,<br><br>Thanks for the feedback! Sorry to know the editor sometimes crashes. I am using a tree sitter based parser to parse the code for syntax highlighting.<br>I did meet some crash caused by the parser before, but very rarely recently. I will keep an eye on this issue. <br>Thanks<br><blockquote class="uncited"><div>Thanks for the update - the changes are nice! I did experience a similar unreliability when trying to edit a file - it crashed a few times. Nothing major, but worth highlighting.<br><br>Thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Tue Apr 02, 2024 3:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-02T03:23:10+00:00</updated>
+
+		<published>2024-04-02T03:23:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259148#p259148</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259148#p259148"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259148#p259148"><![CDATA[
+Hi @ddabrahim,<br>Thanks a lot for sharing your thoughts! Your feedback is very helpful for me.<br>Sorry to know the app is not so reliable. I will have a look. If you can provide more details on how to reproduce the crash, <br>It will make it even easier.<br><br><br><blockquote class="uncited"><div>Hi. Just want to say I really love this project. As I don't have a lot of time to sit at my desktop recently, I find this project extremely useful to experiment on the go.<br><br>My only problem was that it is often crash when I try to capture user input and trigger the on-screen keyboard. Not sure if it was fixed in this release but I'm going to give it a try.<br><br>I think you should really consider to setup a proper homepage with screenshots and some introduction to people may not know what Love2D is. A desktop version would be also extremely useful to help complete beginners get started. I can see beginners often have no idea how to use Love2D. They expect to see a code editor, a tool in which they can write code and launch preview. Love2D Studio would be a perfect place to start for some people in my opinion even on desktop.</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Tue Apr 02, 2024 3:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-04-01T17:23:18+00:00</updated>
+
+		<published>2024-04-01T17:23:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259147#p259147</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259147#p259147"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259147#p259147"><![CDATA[
+Thanks for the update - the changes are nice! I did experience a similar unreliability when trying to edit a file - it crashed a few times. Nothing major, but worth highlighting.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Mon Apr 01, 2024 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ddabrahim]]></name></author>
+		<updated>2024-04-01T15:41:17+00:00</updated>
+
+		<published>2024-04-01T15:41:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259146#p259146</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259146#p259146"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259146#p259146"><![CDATA[
+Hi. Just want to say I really love this project. As I don't have a lot of time to sit at my desktop recently, I find this project extremely useful to experiment on the go.<br><br>My only problem was that it is often crash when I try to capture user input and trigger the on-screen keyboard. Not sure if it was fixed in this release but I'm going to give it a try.<br><br>I think you should really consider to setup a proper homepage with screenshots and some introduction to people may not know what Love2D is. A desktop version would be also extremely useful to help complete beginners get started. I can see beginners often have no idea how to use Love2D. They expect to see a code editor, a tool in which they can write code and launch preview. Love2D Studio would be a perfect place to start for some people in my opinion even on desktop.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=177312">ddabrahim</a> — Mon Apr 01, 2024 3:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-04-01T08:36:39+00:00</updated>
+
+		<published>2024-04-01T08:36:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259141#p259141</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259141#p259141"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259141#p259141"><![CDATA[
+Hi all,<br><br>A new version (1.43) is available to address some of your concerns.<br>- Now the “game play” in full screen mode;<br>- import should work now;<br>- the editor will remember the last file opened;<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Mon Apr 01, 2024 8:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-03-30T14:09:11+00:00</updated>
+
+		<published>2024-03-30T14:09:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259135#p259135</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259135#p259135"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259135#p259135"><![CDATA[
+Hi! Thanks for the kind note. <br><br>I see, thanks for elaborating on the SDL challenges. I suppose my point isn't as much "native landscape", but rather allow the love2d app to _render_ rotated, in landscape. Some games will render weird because the default canvas is portrait, and would work well if it thought it had the landscape orientation when initializing.<br><br>Just a thought.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Sat Mar 30, 2024 2:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-30T11:57:58+00:00</updated>
+
+		<published>2024-03-30T11:57:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259132#p259132</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259132#p259132"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259132#p259132"><![CDATA[
+Hi pjft,<br><br>I appreciate your feedback, and I am delighted to hear that this app is also helpful for you!<br><br>1) While it is technically feasible to launch a default program, my current concern lies in the potential issues that may arise with the program. For example, if an program crashes the tool, it could be challenging to handle... I am still figuring out how to effectively catch all errors thrown by Lua.<br><br>2) This feature will be included in the next version.<br><br>3) I agree that landscape mode would be beneficial for iPhone users. However, I have encountered some issues with unexpected behavior during orientation changes. Love2d is based on SDL, which operates differently from iOS's native UI frameworks. I have invested significant time in resolving this issue, but have not been successful yet. Once the problem is resolved, landscape mode will be enabled.<br><br>Thank you again for your support, and please stay tuned for updates.<br> <br><br><blockquote class="uncited"><div>Hi @marknote<br><br>First of all, thank you for putting this together! I just recently got into playing a bit with creating things on Lua, and indeed during the day I carry my tablet around but not my laptop, and it's easy to just troubleshoot things or make small adjustments as they come along. Thank you!<br><br>One of the things I am playing with is creating small apps for my kids, to also have them start feeling interested in Lua. They're using Scratch right now, but I want to start exposing them to a less visual programming language as well, and Lua seems to be a great next step.<br><br>This, then, leads me to three questions, as I install some of these apps on their tablets:<br>1) Is there a way to launch a default app when I open the studio? Right now it always opens the "No Game" screen, which I always have to close. It's almost as if it _is_ automatically launching something when it opens, but I can't figure out the expected path. I tried adding a main.lua file to the root, but the same happened. Can you allow for a default program to be launched when it opens? Say, if I create a folder named "Default" or something?<br>2) Is there a way to have the app run in complete full screen?<br>3) Last, I'd support the availability of the app on the iPhone if possible. I know that the experience isn't the same, but it's certainly doable for small tweaks. See the <a href="https://apps.apple.com/us/app/visual-code/id6444809156?platform=iphone" class="postlink">https://apps.apple.com/us/app/visual-co ... orm=iphone</a> Visual Studio Code app on the iPhone. We could code in portrait, and then run the apps in landscape. Right now they're stuck in portrait, which makes it hard to keep a consistent experience for the apps we're developing across desktop, tablet and phone. Any way to force the app to landscape?<br><br>Just a thought.<br><br>Thank you so much once again, and hope you have a great week!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Sat Mar 30, 2024 11:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pjft]]></name></author>
+		<updated>2024-03-20T17:49:24+00:00</updated>
+
+		<published>2024-03-20T17:37:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259075#p259075</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259075#p259075"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259075#p259075"><![CDATA[
+Hi @marknote<br><br>First of all, thank you for putting this together! I just recently got into playing a bit with creating things on Lua, and indeed during the day I carry my tablet around but not my laptop, and it's easy to just troubleshoot things or make small adjustments as they come along. Thank you!<br><br>One of the things I am playing with is creating small apps for my kids, to also have them start feeling interested in Lua. They're using Scratch right now, but I want to start exposing them to a less visual programming language as well, and Lua seems to be a great next step.<br><br>This, then, leads me to three questions, as I install some of these apps on their tablets:<br>1) Is there a way to launch a default app when I open the studio? Right now it always opens the "No Game" screen, which I always have to close. It's almost as if it _is_ automatically launching something when it opens, but I can't figure out the expected path. I tried adding a main.lua file to the root, but the same happened. Can you allow for a default program to be launched when it opens? Say, if I create a folder named "Default" or something?<br>2) Is there a way to have the app run in complete full screen?<br>3) Last, I'd support the availability of the app on the iPhone if possible. I know that the experience isn't the same, but it's certainly doable for small tweaks. See the <a href="https://apps.apple.com/us/app/visual-code/id6444809156?platform=iphone" class="postlink">https://apps.apple.com/us/app/visual-co ... orm=iphone</a> Visual Studio Code app on the iPhone. We could code in portrait, and then run the apps in landscape. Right now they're stuck in portrait, which makes it hard to keep a consistent experience for the apps we're developing across desktop, tablet and phone. Any way to force the app to landscape?<br><br>Just a thought.<br><br>Thank you so much once again, and hope you have a great week!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=270800">pjft</a> — Wed Mar 20, 2024 5:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-03-19T02:32:14+00:00</updated>
+
+		<published>2024-03-19T02:32:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259065#p259065</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259065#p259065"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259065#p259065"><![CDATA[
+Thanks for the prompt reply, @marknote.<br><br>For some reason I can't get any of the .love files to import from the top "+" import method <img alt="🤔" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f914.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Tue Mar 19, 2024 2:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-18T08:37:12+00:00</updated>
+
+		<published>2024-03-18T08:37:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259057#p259057</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259057#p259057"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259057#p259057"><![CDATA[
+Thanks for the feedback.<br>Looks open ".love" file from Files app does not work for some reason and I will figure it out<br>but clicking the right top "+" -&gt; Import still works.<br><blockquote class="uncited"><div>@marknote,<br><br>Does your newest release still allow importing of .love files? I don't seem to be able to import them anymore with the newest release. I can still workaround the issue by copying and pasting file from local device into the Love2D studio folder.<br><br>Thanks!</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Mon Mar 18, 2024 8:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-03-17T22:59:35+00:00</updated>
+
+		<published>2024-03-17T22:59:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259050#p259050</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259050#p259050"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259050#p259050"><![CDATA[
+@marknote,<br><br>Does your newest release still allow importing of .love files? I don't seem to be able to import them anymore with the newest release. I can still workaround the issue by copying and pasting file from local device into the Love2D studio folder.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Sun Mar 17, 2024 10:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-15T22:57:13+00:00</updated>
+
+		<published>2024-03-15T22:57:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259025#p259025</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259025#p259025"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259025#p259025"><![CDATA[
+Haha, so you can code any time any where <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><blockquote class="uncited"><div><blockquote class="uncited"><div>As previously stated, I discovered that Lua is a very user-friendly programming language for my son, and love2d is a great framework.<br>My son's only computer is an iPad, and Love2d Studio makes the pairing perfect <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></div></blockquote>Thanks, what a paradigm shift (programming on a tablet/mobile phone), indeed.</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Fri Mar 15, 2024 10:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-15T19:48:58+00:00</updated>
+
+		<published>2024-03-15T19:48:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259023#p259023</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259023#p259023"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259023#p259023"><![CDATA[
+<blockquote class="uncited"><div>As previously stated, I discovered that Lua is a very user-friendly programming language for my son, and love2d is a great framework.<br>My son's only computer is an iPad, and Love2d Studio makes the pairing perfect <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></div></blockquote>Thanks, what a paradigm shift (programming on a tablet/mobile phone), indeed.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Fri Mar 15, 2024 7:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-15T12:41:14+00:00</updated>
+
+		<published>2024-03-15T12:41:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259019#p259019</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259019#p259019"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259019#p259019"><![CDATA[
+As previously stated, I discovered that Lua is a very user-friendly programming language for my son, and love2d is a great framework.<br>My son's only computer is an iPad, and Love2d Studio makes the pairing perfect <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><blockquote class="uncited"><div>Hey guys, I am curious about the target users of this app.<br><br>Can you (if you are willing) provide some info on why do you prefer coding on a mobile phone vs laptop/desktop?<br>Is it because you use mobile phone primarily or you don't have access to a laptop?<br>Is it for doing last-minute changes to a mobile app?<br>Is it for a different reason?<br><br>Just my curiosity, thanks.</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Fri Mar 15, 2024 12:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-15T12:24:01+00:00</updated>
+
+		<published>2024-03-15T12:24:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259018#p259018</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259018#p259018"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259018#p259018"><![CDATA[
+@SugarRayLua<br>Thank you so much for the feedback! As always, extremely helpful! I'll take some time to digest.<br><blockquote class="uncited"><div>@marknote-- nice update, thanks! It looks even more professional now <img alt="👍" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"><img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><br><br>Strengths:<br>Nice to have such a full screen display when running Love project (and then ability to close the screen easily and see code underneath)<br>Cleaner and more traditional IDE-like coding display of the file folders and the actual code<br>Nice to have a search feature and the added bonus of that search feature being global and allowing searches across all the files!<br><br>Suggestions for improvements:<br>Update the help part of the app (still seems to have instructions for operating app before the GUI change)<br>Unclear what the little blue button with the heart beat/wave tracing does on the top of the screen<br>Would be nice if the search feature not only located the block of code with the search term but actually highlighted that search term in the<br>   Code like many other IDEs do<br>Would still be nice to have an option to have folders default to opening up the main.lua files in the folders (so that can quickly run the   <br>   project without having to search through sometimes a multitude of files in large projects) <br><br>Minor wording suggestions: <br>Advertisement on the App Store and Love2D Studio Website: instead of "Code, debug and test great games all from your lovely devices", would suggest something like:<br>  "Code and debug Love2D games-- all on your mobile device"<br><br>Initial Love2D Studio start screen: instead of "Code the great", would suggest something like the phrase above or a shorter phrase like:<br>  "Code great games"<br><br>Fyi <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"></div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Fri Mar 15, 2024 12:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-15T12:14:37+00:00</updated>
+
+		<published>2024-03-15T12:14:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259017#p259017</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259017#p259017"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259017#p259017"><![CDATA[
+Thanks for your insight!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Fri Mar 15, 2024 12:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-03-15T12:04:34+00:00</updated>
+
+		<published>2024-03-15T12:04:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259015#p259015</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259015#p259015"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259015#p259015"><![CDATA[
+Hi, @dusoft.<br><br>For me, I'm a mobile worker/work commuter and am not allowed to install personal apps like Love2D on my work computer. Thus, the only computer I have access to for personal uses during the week is my mobile device, and thus, by necessity, primarily code on my mobile devices. Mobile devices also make it easy to code almost anywhere.<br><br>Fyi <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Fri Mar 15, 2024 12:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-03-15T07:03:28+00:00</updated>
+
+		<published>2024-03-15T07:03:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259011#p259011</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259011#p259011"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259011#p259011"><![CDATA[
+Hey guys, I am curious about the target users of this app.<br><br>Can you (if you are willing) provide some info on why do you prefer coding on a mobile phone vs laptop/desktop?<br>Is it because you use mobile phone primarily or you don't have access to a laptop?<br>Is it for doing last-minute changes to a mobile app?<br>Is it for a different reason?<br><br>Just my curiosity, thanks.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Fri Mar 15, 2024 7:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-03-15T01:48:01+00:00</updated>
+
+		<published>2024-03-15T01:48:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259009#p259009</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259009#p259009"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259009#p259009"><![CDATA[
+@marknote-- nice update, thanks! It looks even more professional now <img alt="👍" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"><img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><br><br>Strengths:<br>Nice to have such a full screen display when running Love project (and then ability to close the screen easily and see code underneath)<br>Cleaner and more traditional IDE-like coding display of the file folders and the actual code<br>Nice to have a search feature and the added bonus of that search feature being global and allowing searches across all the files!<br><br>Suggestions for improvements:<br>Update the help part of the app (still seems to have instructions for operating app before the GUI change)<br>Unclear what the little blue button with the heart beat/wave tracing does on the top of the screen<br>Would be nice if the search feature not only located the block of code with the search term but actually highlighted that search term in the<br>   Code like many other IDEs do<br>Would still be nice to have an option to have folders default to opening up the main.lua files in the folders (so that can quickly run the   <br>   project without having to search through sometimes a multitude of files in large projects) <br><br>Minor wording suggestions: <br>Advertisement on the App Store and Love2D Studio Website: instead of "Code, debug and test great games all from your lovely devices", would suggest something like:<br>  "Code and debug Love2D games-- all on your mobile device"<br><br>Initial Love2D Studio start screen: instead of "Code the great", would suggest something like the phrase above or a shorter phrase like:<br>  "Code great games"<br><br>Fyi <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Fri Mar 15, 2024 1:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-03-14T22:35:53+00:00</updated>
+
+		<published>2024-03-14T22:35:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259006#p259006</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259006#p259006"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259006#p259006"><![CDATA[
+Hello,<br><br>Introducing V1.4 – featuring a revamped UI and new code search functionality for a streamlined experience. Your feedback is welcome.<br><br>Best regards,<br><br><img src="https://love2d.org/forums/download/file.php?mode=view&amp;id=24081" class="postimage" alt="Image"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24081&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24081" class="postimage" alt="love2d-studio.gif" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Thu Mar 14, 2024 10:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-02-27T03:43:13+00:00</updated>
+
+		<published>2024-02-27T03:43:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=258839#p258839</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=258839#p258839"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=258839#p258839"><![CDATA[
+Thanks! <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Tue Feb 27, 2024 3:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[marknote]]></name></author>
+		<updated>2024-02-25T11:33:14+00:00</updated>
+
+		<published>2024-02-25T11:33:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=258827#p258827</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=258827#p258827"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=258827#p258827"><![CDATA[
+HI @SugarRayLua<br>Thanks for the feedback and nice to know you find it useful.<br>I will prioritize the search feature.<br><blockquote class="uncited"><div>I find now that I'm using Love2D more and more as my go to Love2D app on iOS due to its IDE features (e.g. ability to quickly edit and run files). Because of that, one additional thing that would be helpful is if Love2D Studio had a "search" feature to use when testing/debugging files.<br><br>Fyi <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"></div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258095">marknote</a> — Sun Feb 25, 2024 11:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SugarRayLua]]></name></author>
+		<updated>2024-02-09T16:07:47+00:00</updated>
+
+		<published>2024-02-09T16:07:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=258666#p258666</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=258666#p258666"/>
+		<title type="html"><![CDATA[Re: Love2D Studio: A free tool to code and test fantastic games on iPad/iPhone]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=258666#p258666"><![CDATA[
+I find now that I'm using Love2D more and more as my go to Love2D app on iOS due to its IDE features (e.g. ability to quickly edit and run files). Because of that, one additional thing that would be helpful is if Love2D Studio had a "search" feature to use when testing/debugging files.<br><br>Fyi <img alt="😊" class="emoji smilies" draggable="false" src="//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60a.svg"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210592">SugarRayLua</a> — Fri Feb 09, 2024 4:07 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

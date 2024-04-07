@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1433" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2010-07-02T21:19:47+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1433</id>
+
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-07-02T20:17:26+00:00</updated>
+
+		<published>2010-07-02T20:17:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16972#p16972</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16972#p16972"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16972#p16972"><![CDATA[
+Split the topic, look for it in general.<br><br>EDIT: And phpbb messed up.. well, half of the discussion is there.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Jul 02, 2010 8:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-07-02T16:51:01+00:00</updated>
+
+		<published>2010-07-02T16:51:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16969#p16969</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16969#p16969"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16969#p16969"><![CDATA[
+That too.<br><br>Question is, how can one test for that?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Jul 02, 2010 4:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Benamas]]></name></author>
+		<updated>2010-07-02T12:26:42+00:00</updated>
+
+		<published>2010-07-02T12:26:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16953#p16953</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16953#p16953"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16953#p16953"><![CDATA[
+<blockquote class="uncited"><div>It's quite unfortunate how many of the demos that come at least with the Windows version of LÖVE use npot2 images. That kind of thing could give someone a bad first impression, you know...</div></blockquote>YES THIS EXACTLY, HAPPENED TO ME<br><br>I have a new PC now so it's moot but it was very mysterious and confusing at first<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1115">Benamas</a> — Fri Jul 02, 2010 12:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pekka]]></name></author>
+		<updated>2010-07-02T11:21:06+00:00</updated>
+
+		<published>2010-07-02T11:21:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16949#p16949</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16949#p16949"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16949#p16949"><![CDATA[
+Besides having a limited graphics card, you might also suffer from limited driver support. You might want to check that your drivers are up to date. I've seen with my own very eyes ( <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-o_O.png" width="16" height="16" alt=":shock:" title="Shocked"> ) how a slightly older graphics card wouldn't make npot images show properly with the default drivers, but with certain effort you could install a newer set of drivers that did allow them. (As to why the card manufacturers would do this, I have no idea. Perhaps they like DirectX too much?)<br><br>There are a lot of programs that allow you to query your card + OS combo's support for various OpenGL features. I've used GLEW myself. It is really a library, but it comes with a couple of command line tools you can download[1] that just print a whole lot of stuff, but the useful thing is the supported OpenGL version at the beginning. If it's lower than what your card's specs promise, this is probably because of outdated drivers.<br><br>(Linux users of course have the <strong class="text-strong">glxinfo</strong> command too.)<br><br>It's quite unfortunate how many of the demos that come at least with the Windows version of LÖVE use npot2 images. That kind of thing could give someone a bad first impression, you know...<br><br>[1] <a href="http://glew.sourceforge.net/" class="postlink">http://glew.sourceforge.net/</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=865">pekka</a> — Fri Jul 02, 2010 11:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-07-02T06:14:11+00:00</updated>
+
+		<published>2010-07-02T06:14:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16943#p16943</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16943#p16943"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16943#p16943"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Oh, cool!  Maybe I'll use this instead of telling my graphics artist to make everything po2.</div></blockquote>Watch out if you ever use Image:getWidth() etc.</div></blockquote>You always have to watch out with those when using padding of any kind. If I knew of an elegant solution, I make unlove to would store the original size somewhere and make getWidth() etc. return the original.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Jul 02, 2010 6:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-07-02T06:04:32+00:00</updated>
+
+		<published>2010-07-02T06:04:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16942#p16942</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16942#p16942"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16942#p16942"><![CDATA[
+It's better to make your art with this in mind then hack stuff in afterwards.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Jul 02, 2010 6:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2010-07-02T03:59:51+00:00</updated>
+
+		<published>2010-07-02T03:59:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16940#p16940</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16940#p16940"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16940#p16940"><![CDATA[
+<blockquote class="uncited"><div>Oh, cool!  Maybe I'll use this instead of telling my graphics artist to make everything po2.</div></blockquote>Watch out if you ever use Image:getWidth() etc.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Fri Jul 02, 2010 3:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-07-02T03:25:25+00:00</updated>
+
+		<published>2010-07-02T03:25:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16938#p16938</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16938#p16938"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16938#p16938"><![CDATA[
+Oh, cool!  Maybe I'll use this instead of telling my graphics artist to make everything po2.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Fri Jul 02, 2010 3:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2010-07-02T02:00:52+00:00</updated>
+
+		<published>2010-07-02T02:00:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16931#p16931</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16931#p16931"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16931#p16931"><![CDATA[
+It's not so much crappy computer as it is unfortunate video card. Don't blame the computer. Some can't handle images that are 2048 pixels wide. You got something for that? <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Jul 02, 2010 2:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rikkit]]></name></author>
+		<updated>2010-07-02T01:08:30+00:00</updated>
+
+		<published>2010-07-02T01:08:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16926#p16926</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16926#p16926"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16926#p16926"><![CDATA[
+<blockquote class="uncited"><div>I don't quite understand, what does padding do?</div></blockquote>As far as I can gather, it adds transparent extra bits to the image so that it is "po2."<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1258">rikkit</a> — Fri Jul 02, 2010 1:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-07-02T00:07:40+00:00</updated>
+
+		<published>2010-07-02T00:07:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16923#p16923</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16923#p16923"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16923#p16923"><![CDATA[
+I don't quite understand, what does padding do?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Fri Jul 02, 2010 12:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-07-01T20:55:27+00:00</updated>
+
+		<published>2010-07-01T20:55:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16922#p16922</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16922#p16922"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16922#p16922"><![CDATA[
+Reuploaded for the greater good.<div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1652">unlove.sh.txt</a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Jul 01, 2010 8:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Geti]]></name></author>
+		<updated>2010-03-26T10:35:00+00:00</updated>
+
+		<published>2010-03-26T10:35:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14223#p14223</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14223#p14223"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14223#p14223"><![CDATA[
+This is handy. Of course, coders should put padding in regardless.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=731">Geti</a> — Fri Mar 26, 2010 10:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zachwlewis]]></name></author>
+		<updated>2010-03-24T18:43:56+00:00</updated>
+
+		<published>2010-03-24T18:43:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14182#p14182</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14182#p14182"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14182#p14182"><![CDATA[
+That makes sense. Just never seen that shorthand before. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1057">zachwlewis</a> — Wed Mar 24, 2010 6:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-03-24T18:43:16+00:00</updated>
+
+		<published>2010-03-24T18:43:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14181#p14181</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14181#p14181"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14181#p14181"><![CDATA[
+<blockquote class="uncited"><div>What is "po2"?</div></blockquote>It is short for power of 2 (2^N). Old graphic cards or drivers have problems handling images not of such a width or height. It can be solved by padding the image.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Mar 24, 2010 6:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zachwlewis]]></name></author>
+		<updated>2010-03-24T18:26:24+00:00</updated>
+
+		<published>2010-03-24T18:26:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14180#p14180</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14180#p14180"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14180#p14180"><![CDATA[
+What is "po2"?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1057">zachwlewis</a> — Wed Mar 24, 2010 6:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-03-20T19:22:06+00:00</updated>
+
+		<published>2010-03-20T19:22:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14046#p14046</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14046#p14046"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14046#p14046"><![CDATA[
+I made a mistake. But I fixed it.<div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1372">unlove.sh.txt</a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sat Mar 20, 2010 7:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2010-03-19T12:22:46+00:00</updated>
+
+		<published>2010-03-19T12:22:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13961#p13961</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13961#p13961"/>
+		<title type="html"><![CDATA[Re: So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13961#p13961"><![CDATA[
+<em class="text-italics">Pillows</em><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Fri Mar 19, 2010 12:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-07-02T21:19:47+00:00</updated>
+
+		<published>2010-03-19T11:53:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13960#p13960</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13960#p13960"/>
+		<title type="html"><![CDATA[So you have a crappy computer]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13960#p13960"><![CDATA[
+<strong class="text-strong">Latest at <a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=1433#p16922" class="postlink">viewtopic.php?f=5&amp;t=1433#p16922</a></strong><br><strong class="text-strong">So you have a crappy computer</strong> and you can't have images that are not po2. Most games on the forum will need padding. <strong class="text-strong">If you use Linux</strong>, you're in luck.<br>I've written a shell script that takes a .love, unpacks it, and does the usual padding.lua magic usually done by hand.<div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1350">unlove.sh.txt</a></dt></dl></div>It requires<ul><li>bash</li><li>zenity</li><li>unzip</li><li>echo</li><li>sed</li><li>mv</li></ul>... so it should run out of the box for most people.<br><br>For maximum sweetness you can make your favourite filebrowser unlove .loves automatically.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Mar 19, 2010 11:53 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
