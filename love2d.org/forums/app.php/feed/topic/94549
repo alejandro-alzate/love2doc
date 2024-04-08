@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/94549" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-05-07T00:04:44+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/94549</id>
+
+		<entry>
+		<author><name><![CDATA[knorke]]></name></author>
+		<updated>2023-05-07T00:04:44+00:00</updated>
+
+		<published>2023-05-07T00:04:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254724#p254724</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254724#p254724"/>
+		<title type="html"><![CDATA[Re: A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254724#p254724"><![CDATA[
+no, how can it be ground if it says "waterlevel"?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-unplzd.png" width="16" height="16" alt=":|" title="Neutral"> <br><br>That floating box is pretty neat!<br>It is funnier with box.body:setFixedRotation(false) <br>That way you can fall off if the box starts to tilt.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1290">knorke</a> — Sun May 07, 2023 12:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2023-05-06T19:45:57+00:00</updated>
+
+		<published>2023-05-06T19:45:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254722#p254722</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254722#p254722"/>
+		<title type="html"><![CDATA[Re: A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254722#p254722"><![CDATA[
+<blockquote class="uncited"><div>water physics at home:<div class="codebox"><p>Code: </p><pre><code>object.y = object.y + gravityif object.y &lt; waterlevel and object.canFloat then object.y = waterlevel end</code></pre></div></div></blockquote>That's just a ground. Boring.<br><br>The attached is more fun.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=23302">BuoyantPlatform.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sat May 06, 2023 7:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2023-05-06T05:44:08+00:00</updated>
+
+		<published>2023-05-06T05:44:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254712#p254712</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254712#p254712"/>
+		<title type="html"><![CDATA[Re: A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254712#p254712"><![CDATA[
+Sine wave ripples on top of water area that do nothing whatsoever = water physics too <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sat May 06, 2023 5:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[knorke]]></name></author>
+		<updated>2023-05-06T00:11:01+00:00</updated>
+
+		<published>2023-05-06T00:11:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254711#p254711</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254711#p254711"/>
+		<title type="html"><![CDATA[Re: A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254711#p254711"><![CDATA[
+-Can we have water physics?<br>-No, we have water physics at home.<br><br>water physics at home:<div class="codebox"><p>Code: </p><pre><code>object.y = object.y + gravityif object.y &lt; waterlevel and object.canFloat then object.y = waterlevel end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1290">knorke</a> — Sat May 06, 2023 12:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hugues Ross]]></name></author>
+		<updated>2023-05-05T19:08:19+00:00</updated>
+
+		<published>2023-05-05T19:08:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254708#p254708</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254708#p254708"/>
+		<title type="html"><![CDATA[Re: A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254708#p254708"><![CDATA[
+Sometimes the best of times come from the worst of ideas <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-megagrin.png" width="16" height="16" alt=":megagrin:" title="Mega Grin"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183383">Hugues Ross</a> — Fri May 05, 2023 7:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bobble68]]></name></author>
+		<updated>2023-05-05T18:26:03+00:00</updated>
+
+		<published>2023-05-05T18:26:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254706#p254706</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254706#p254706"/>
+		<title type="html"><![CDATA[A very bad idea]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254706#p254706"><![CDATA[
+<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=23294&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=23294" class="postimage" alt="water.png" /></a></dt></dl></div>See you in support and development<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Fri May 05, 2023 6:26 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/93746" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2022-09-15T16:13:11+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/93746</id>
+
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-09-15T16:13:11+00:00</updated>
+
+		<published>2022-09-15T16:13:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250719#p250719</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250719#p250719"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250719#p250719"><![CDATA[
+Indeed, sorry for leaving that information out - I thought it would not be immediately relevant for someone who is learning about shaders.<br><br>Typical desktop OpenGL drivers don't have any problem compiling a shader that includes an integer where a float is expected, because automatic type casting is part of the language specification. However, OpenGL ES (mostly used in mobile phones) does not support automatic type casting, and the shader will fail to compile in devices that lack that extension, which is most mobile phones.<br><br>I believe that on regular GL (not GLES), using 10 instead of 10.0 will work just fine in this case, because one of the types in the division is a float, so the other operand is automatically cast to float and then everything works as expected (yep, tried, it works for me). In GLES you will get an error instead (tried by setting the environment variable LOVE_GRAPHICS_USE_OPENGLES=1).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Sep 15, 2022 4:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milon]]></name></author>
+		<updated>2022-09-15T15:04:01+00:00</updated>
+
+		<published>2022-09-15T15:04:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250715#p250715</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250715#p250715"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250715#p250715"><![CDATA[
+<blockquote class="uncited"><div>10.0 is the number of pixels to displace the texture, at the cusp of the sine wave. It needs to be divided by imgSize.x in order to get a normalized coordinate from 0.0 to 1.0, because these are the units used by texPos and by the Texel function.</div></blockquote>One other thing to note: Shaders are very picky about number type.  In shader code, 10 and 10.0 are NOT the same thing.  10 is an integer and therefore the shader will attempt to perform integer math.  10.0 is a floating point number and the shader will use floating point math operations instead.  If this is new information to you, you can read up more on that in several places such as <a href="https://stackoverflow.com/questions/4806944/what-is-the-difference-between-the-float-and-integer-data-type-when-the-size-is" class="postlink">Stack Overflow</a>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139789">milon</a> — Thu Sep 15, 2022 3:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-09-15T11:58:23+00:00</updated>
+
+		<published>2022-09-15T11:58:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250712#p250712</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250712#p250712"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250712#p250712"><![CDATA[
+Here's the same idea but without the adjustments to make it fit, which is clearer and easier to understand:<div class="codebox"><p>Code: </p><pre><code>local image, sineShader, phase, WIN_W, WIN_Hfunction love.load()  image = {}  image.texture = love.graphics.newImage('image.png')  image.texture:setWrap("clampzero", "clampzero")  WIN_W, WIN_H = love.graphics.getDimensions()  image.w, image.h = image.texture:getDimensions()  image.x = (WIN_W-image.w) / 2  image.y = (WIN_H-image.h) / 2  sineShader = love.graphics.newShader[[    uniform vec2 imgSize;    uniform float phase;    vec4 effect(vec4 colour, Image tex, vec2 texPos, vec2 scrPos)    {      vec2 samplePos;      samplePos.x = texPos.x - (10.0 / imgSize.x) * sin(phase + 0.05*imgSize.y*texPos.y);      samplePos.y = texPos.y;      vec4 sample = Texel(tex, samplePos);      return sample * colour;    }  ]]  sineShader:send('imgSize', {image.w, image.h})  phase = 0endfunction love.update(dt)  phase = phase + 5 * dtendfunction love.draw()  love.graphics.setShader(sineShader)  sineShader:send("phase", phase)  love.graphics.draw(image.texture, image.x, image.y)  love.graphics.setShader()  love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)end</code></pre></div>If you run it, you'll notice that it goes out of the image frame while waving; that's the reason for the other version, although this one is easier to understand. A simpler fix than the adjustments in the previous version would be to make the image bigger, so that it includes enough margin for waving without going out of the frame.<br><br>Note the following:<br><ul><li>10.0 is the number of pixels to displace the texture, at the cusp of the sine wave. It needs to be divided by imgSize.x in order to get a normalized coordinate from 0.0 to 1.0, because these are the units used by texPos and by the Texel function.</li><li>Since texPos.y is normalized, in order to match your function I had to multiply it by the texture height (imgSize.y) to obtain the position in pixels, which is what you were using for the angle of the sine.</li><li>In the `return sample * colour;` line, `colour` is there just to allow for tinting; if you don't want to allow tinting you can just return `sample`.</li><li>`extern` is a deprecated alias for `uniform`. Not sure why it was deprecated, but it's much clearer what it does if you change `uniform` to `extern`: it's used for the external variables that are passed via <a href="/wiki/Shader:send">Shader:send</a>.</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Sep 15, 2022 11:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milon]]></name></author>
+		<updated>2022-09-14T15:26:03+00:00</updated>
+
+		<published>2022-09-14T15:26:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250691#p250691</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250691#p250691"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250691#p250691"><![CDATA[
+<blockquote class="uncited"><div>I'm especially trying to learn, I didn't expect so much <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"></div></blockquote>Yup, awesome people here!  I lӧve this community for that reason.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139789">milon</a> — Wed Sep 14, 2022 3:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2022-09-14T12:51:58+00:00</updated>
+
+		<published>2022-09-14T12:51:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250685#p250685</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250685#p250685"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250685#p250685"><![CDATA[
+Thanks a lot ! I had just started to read docs to do it and publish it here, I'm going to try to understand your codes to know how to reproduce it myself. I'm especially trying to learn, I didn't expect so much <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Wed Sep 14, 2022 12:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-09-14T12:36:54+00:00</updated>
+
+		<published>2022-09-14T12:36:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250684#p250684</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250684#p250684"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250684#p250684"><![CDATA[
+This is basically the same as pgimeno's solution, but I spent time writing it so I'm posting it anyway. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-unplzd.png" width="16" height="16" alt=":|" title="Neutral"><br><div class="codebox"><p>Code: </p><pre><code>local WAVE_AMPLITUDE = 10  -- pixelslocal WAVE_LENGTH    = 100 -- pixelslocal WAVE_INTERVAL  = 1.5 -- secondslocal image = love.graphics.newImage("image.png")image:setWrap("clampzero") -- Don't repeat edge pixels.local shader = love.graphics.newShader[[uniform float waveAmplitude;uniform float waveLength;uniform float wavePhase;uniform float padding;uniform float scale;#define TAU 6.283185307179586 // 2*pivec4 effect(vec4 loveColor, Image tex, vec2 texUv, vec2 screenPos) {texUv.x  = texUv.x * scale - padding; // Undo :ScaleImage and :ScalePosition.texUv.x += waveAmplitude * sin((texUv.y / waveLength + wavePhase) * TAU); // Add wave.vec4 pixel = Texel(tex, texUv);pixel.a    = max(pixel.a, .5); // DEBUG: Show the bounds of the rendered rectangle.return pixel * loveColor;}]]function love.draw()local ww, wh = love.graphics.getDimensions()local iw, ih = image:getDimensions()local wavePhase = love.timer.getTime() / WAVE_INTERVALlocal padding   = WAVE_AMPLITUDE -- Not adding padding would result in the texture getting cut off. Try setting this to 0!local scale     = 1 + 2*padding/iwshader:send("waveAmplitude", WAVE_AMPLITUDE/iw) -- Remember: Shaders use normalized texture coordinates.shader:send("waveLength", WAVE_LENGTH/ih)shader:send("wavePhase", wavePhase)shader:send("padding", padding/iw)shader:send("scale", scale)local x = (ww - iw*scale) / 2 -- :ScalePositionlocal y = (wh - ih      ) / 2love.graphics.clear(.3, .3, .3)love.graphics.setShader(shader)love.graphics.draw(image, x,y, 0, scale,1) -- :ScaleImageend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Wed Sep 14, 2022 12:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-09-14T12:58:20+00:00</updated>
+
+		<published>2022-09-14T12:23:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250682#p250682</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250682#p250682"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250682#p250682"><![CDATA[
+Indeed. Shaders work pixel by pixel and they can do what you're trying to accomplish very quickly.<br><br>Note that for shaders, you need to think in terms of how each pixel needs to be rendered, rather than in terms of where to draw each pixel. It's similar but the difference is important. In this case, it means that you have to sample each pixel from a position that is distorted by a sine wave for it to render in the right place. You may also need to draw a bigger area than that covered by the image, because the horizontal distortion makes some pixels go out of the image's rectangle, and if you want to draw these, you need the drawn objects to cover them (note: you can't use love.graphics.rectangle because that one doesn't have proper UVs).<br><br>Remember also that the texture coordinates received by the shader are normalized, that is, they range from 0 for the left side of the leftmost pixel, to 1 for the right side of the rightmost pixel, and same vertically. The shader doesn't know about texture size; if you need it, you have to pass it as a uniform.<br><br>Adjusting the scale properly was a bit tricky, but here's exactly the same effect as yours, implemented as a shader:<br><div class="codebox"><p>Code: </p><pre><code>local image, sineShader, phase, WIN_W, WIN_Hfunction love.load()  image = {}  image.texture = love.graphics.newImage('image.png')  image.texture:setWrap("clampzero", "clampzero")  WIN_W, WIN_H = love.graphics.getDimensions()  image.w, image.h = image.texture:getDimensions()  image.x = (WIN_W-image.w) / 2  image.y = (WIN_H-image.h) / 2  sineShader = love.graphics.newShader[[    uniform vec2 imgSize;    uniform float phase;    vec4 effect(vec4 colour, Image tex, vec2 texPos, vec2 scrPos)    {      vec2 samplePos;      samplePos.x = texPos.x * ((imgSize.x + 20.0) / imgSize.x);      float sinScale = 10.0 / imgSize.x;      samplePos.x -= sinScale * (1.0 + sin(phase + 0.05*imgSize.y*texPos.y));      samplePos.y = texPos.y;      vec4 sample = Texel(tex, samplePos);      return sample * colour;    }  ]]  sineShader:send('imgSize', {image.w, image.h})  phase = 0endfunction love.update(dt)  phase = phase + 5 * dtendfunction love.draw()  love.graphics.setShader(sineShader)  sineShader:send("phase", phase)  love.graphics.draw(image.texture, image.x - 10, image.y, 0,    (image.w + 20)/image.w, 1)  love.graphics.setShader()  love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)end</code></pre></div>Edit: Note how I subtracted the sine rather than adding it; had I not done that, the effect wouldn't match yours. That's because of what I mentioned about writing it in terms of what each pixel needs to contain, rather than where to render each pixel.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Sep 14, 2022 12:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-09-14T10:51:12+00:00</updated>
+
+		<published>2022-09-14T10:51:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250680#p250680</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250680#p250680"/>
+		<title type="html"><![CDATA[Re: fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250680#p250680"><![CDATA[
+This is exactly what the GPU and <a href="/wiki/love.graphics.newShader">shaders</a> are for.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Wed Sep 14, 2022 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2022-09-14T10:12:19+00:00</updated>
+
+		<published>2022-09-14T10:12:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250679#p250679</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250679#p250679"/>
+		<title type="html"><![CDATA[fast pixel by pixel rendering or better way ?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250679#p250679"><![CDATA[
+Hello everyone !<br><br>To be brief, I'm trying to render an image distorted by a sinusoid but I realize that it's really slow (obviously since it's displayed pixel by pixel). So I looked for a way to render it "directly in a texture" and display it (much like in "pure SDL") but I couldn't find an equivalent in love. I tried other techniques with canvas but they were totally flawed...<br><br>Here is a mini code that I wrote as a demo, if someone can direct me to a more suitable solution.<br><br>I'm running around 30 FPS at home with this example.<br><div class="codebox"><p>Code: </p><pre><code>local WIN_W, WIN_Hlocal image = {}local phasefunction love.load()    local imageData = love.image.newImageData("image.png")    WIN_W, WIN_H = love.graphics.getDimensions()    image.w, image.h = imageData:getDimensions()    image.x = (WIN_W-image.w) / 2    image.y = (WIN_H-image.h) / 2    image.pixels = {}    for x = 0, image.w - 1 do        for y = 0, image.h - 1 do            local r, g, b, a = imageData:getPixel(x, y)            image.pixels[y * image.w + x] = {r, g, b, a}        end    end    phase = 0endfunction love.update(dt)    phase = phase + 5 * dtendfunction love.draw()    love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)    -- Draw distorted image --    for x = 0, image.w - 1 do        for y = 0, image.h - 1 do            local x_sin = 10 * math.sin(y * .05 + phase)            love.graphics.setColor(                image.pixels[y * image.w + x]            )            love.graphics.points(                image.x + x + x_sin,                image.y + y            )        end    end    love.graphics.setColor(1,1,1)end</code></pre></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=21519">Sinusoidal-Image-Distortion.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Wed Sep 14, 2022 10:12 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

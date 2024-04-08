@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/forum/10" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2013-12-13T12:22:10+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/forum/10</id>
+
+		<entry>
+		<author><name><![CDATA[BozoDel]]></name></author>
+		<updated>2013-12-13T12:22:10+00:00</updated>
+
+		<published>2013-12-13T12:22:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158376#p158376</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158376#p158376"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158376#p158376"><![CDATA[
+Hm, got it! So SDL can only partially replace OpenGL. Thanks, slime!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134213">BozoDel</a> — Fri Dec 13, 2013 12:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2013-12-12T21:51:05+00:00</updated>
+
+		<published>2013-12-12T21:51:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158330#p158330</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158330#p158330"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158330#p158330"><![CDATA[
+Yeah, it means either their GPU can't use programmable pixel shaders at the level of complexity LÖVE requires, or the driver they're using for their GPU doesn't support it.<br><br>If the GPU's hardware has support for DirectX 9.0c, then as long as the drivers have equivalent support for OpenGL, it can use LÖVE's shaders/pixeleffects.<br>This includes any ATI/AMD and nvidia GPU released since around 2004, and Intel GPUs released since around 2007. Unfortunately a lot of very low-end laptops/netbooks shipped with ancient Intel GPUs until fairly recently.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Thu Dec 12, 2013 9:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BozoDel]]></name></author>
+		<updated>2013-12-12T21:45:27+00:00</updated>
+
+		<published>2013-12-12T21:45:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158329#p158329</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158329#p158329"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158329#p158329"><![CDATA[
+Hm, ok then. But in <a href="http://blogs.love2d.org/content/using-noise-pixel-effects" class="postlink">this post about pixel effects</a>, people in the comments section talk about how they don't work on older computers, even though most of LÖVE does. Would that mean that they have an older or simpler implementation of OpenGL?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134213">BozoDel</a> — Thu Dec 12, 2013 9:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2013-12-12T21:36:56+00:00</updated>
+
+		<published>2013-12-12T21:36:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158327#p158327</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158327#p158327"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158327#p158327"><![CDATA[
+<blockquote class="uncited"><div>So let's suppose my computer has a very very old graphics card, with no OpenGL support. Standard LÖVE won't work AT ALL for me?</div></blockquote>If your desktop/laptop computer doesn't have a graphics card which supports OpenGL (raspberry pi aside - which does support OpenGL ES 2), it wouldn't be powerful enough to run basically anything made in the past 13 years. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Thu Dec 12, 2013 9:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BozoDel]]></name></author>
+		<updated>2013-12-12T21:25:08+00:00</updated>
+
+		<published>2013-12-12T21:25:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158326#p158326</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158326#p158326"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158326#p158326"><![CDATA[
+<blockquote class="uncited"><div>Basically all of love.graphics uses OpenGL in order to achieve hardware-accelerated rendering.</div></blockquote>So let's suppose my computer has a very very old graphics card, with no OpenGL support. Standard LÖVE won't work AT ALL for me?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134213">BozoDel</a> — Thu Dec 12, 2013 9:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2013-12-11T19:12:58+00:00</updated>
+
+		<published>2013-12-11T19:12:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158242#p158242</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158242#p158242"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158242#p158242"><![CDATA[
+Basically all of love.graphics uses OpenGL in order to achieve hardware-accelerated rendering.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Wed Dec 11, 2013 7:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BozoDel]]></name></author>
+		<updated>2013-12-11T17:43:57+00:00</updated>
+
+		<published>2013-12-11T17:43:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158234#p158234</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158234#p158234"/>
+		<title type="html"><![CDATA[nLÖVE • Why do we need nLove?]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158234#p158234"><![CDATA[
+LÖVE uses OpenGL, and some devices don't have that, ok. But I've read stuff like, if you want your game to run on a GPUless laptop, you just have to disable stuff like spritebatches and shaders.<br><br>If that were the case, then nLove would be pretty useless, so I must be missing something. How necessary is OpenGL for LÖVE, and what OpenGL features does nLove replaces with SDL?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134213">BozoDel</a> — Wed Dec 11, 2013 5:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-06-17T15:21:38+00:00</updated>
+
+		<published>2013-06-17T15:21:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=108057#p108057</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=108057#p108057"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Getting it into 'vanilla' love.]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=108057#p108057"><![CDATA[
+So this is not "getting rid of OpenGL and pals", it's more like "have backup dudes in case OpenGL and pals fail". Well, this should be pretty great, but I'm not entirely sure how well it will work on ARM devices which are known for lousy floating-point math performance, AFAIK modern ARM processors handle floats about two times slower than integers, as opposed to modern x86's 1:1 performance ratio.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Mon Jun 17, 2013 3:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2013-04-19T12:18:28+00:00</updated>
+
+		<published>2013-04-19T12:18:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101141#p101141</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101141#p101141"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Help, I'm nLove with WinCE...]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101141#p101141"><![CDATA[
+No, it's not stable, probably not worth building anymore. I have built it on ARM and MIPSel though.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Apr 19, 2013 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ThisGoDisco]]></name></author>
+		<updated>2013-04-19T10:20:35+00:00</updated>
+
+		<published>2013-04-19T10:20:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101133#p101133</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101133#p101133"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Help, I'm nLove with WinCE...]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101133#p101133"><![CDATA[
+So yeah, nLove. Is the code base stable? Has anyone tried to compile it for a weird OS/processor architecture?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=114012">ThisGoDisco</a> — Fri Apr 19, 2013 10:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2013-04-17T11:18:52+00:00</updated>
+
+		<published>2013-04-17T11:18:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101035#p101035</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101035#p101035"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Help, I'm nLove with WinCE...]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101035#p101035"><![CDATA[
+Well, this one is less general than the other one. If you're only asking specifically about nLÖVE then keep this one and remove the other one. Otherwise, do the opposite.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Wed Apr 17, 2013 11:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ThisGoDisco]]></name></author>
+		<updated>2013-04-17T09:11:34+00:00</updated>
+
+		<published>2013-04-17T09:11:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101029#p101029</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101029#p101029"/>
+		<title type="html"><![CDATA[nLÖVE • Re: Help, I'm nLove with WinCE...]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101029#p101029"><![CDATA[
+Any mods reading this, sorry for double posting here and S&amp;D, didn't read the "mods must approve thread" after I created this one, and ended up create nearly the same thing in there.<br><br>Don't know which one should be deleted? Can you merge threads...? Anyways.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=114012">ThisGoDisco</a> — Wed Apr 17, 2013 9:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ThisGoDisco]]></name></author>
+		<updated>2013-04-16T23:15:29+00:00</updated>
+
+		<published>2013-04-16T23:15:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101010#p101010</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101010#p101010"/>
+		<title type="html"><![CDATA[nLÖVE • Help, I'm nLove with WinCE...]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101010#p101010"><![CDATA[
+Hey peeps, I'm sorta kinda new here... I've been lurking around for a bit, I'm actually working on a small game with a person on the forums.<br><br>Anyhoo, I've had a crazy idea for a prototype project I'd like to attempt for work... what I'm wondering is how have people done with porting to Love to other strange platforms...? the one I'm looking at is WinCE with an ARM processor.<br><br>I'd really appreciate some feedback on the feasibility of this, thanks!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=114012">ThisGoDisco</a> — Tue Apr 16, 2013 11:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DumpOnIt]]></name></author>
+		<updated>2013-01-30T06:02:16+00:00</updated>
+
+		<published>2013-01-30T06:02:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=76347#p76347</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=76347#p76347"/>
+		<title type="html"><![CDATA[nLÖVE • Dingoo love.filesystem problem]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=76347#p76347"><![CDATA[
+Hello! I just got my Dingoo A320 working with Open Dinugux recently, and I'm working on a game that writes text to a file. It works on the computer fine, but when I try it on the Dingoo using love.filesystem.write, it says: Could not set write directory. Is there a way to make it work, I'm dying to make some sweet handheld games! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br><strong class="text-strong">Edit:</strong> I lied a bit-- I'm not having a problem with a game, but I'm making a little text editor for the Dingoo that uses a fun input scheme! I attached the download, you can use it my adding a link to nlove.dge with the parameters /games/lovemaking/ and setting the icon to the icon.png in the lovemaking folder! Test it on the computer by using love 7.0.0 and changing the settings.lua file to use the "PC" control scheme!<br><br><strong class="text-strong">Screenies:</strong><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22831&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22831" class="postimage" alt="o9pEmX4.png" /></a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22832&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22832" class="postimage" alt="12oaWlD.png" /></a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22833&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22833" class="postimage" alt="qAO1D7l.png" /></a></dt></dl></div><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=6810">lovemaker.zip</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45089">DumpOnIt</a> — Wed Jan 30, 2013 6:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninjaspeed222]]></name></author>
+		<updated>2013-01-28T14:47:00+00:00</updated>
+
+		<published>2013-01-28T14:47:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=76042#p76042</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=76042#p76042"/>
+		<title type="html"><![CDATA[nLÖVE • Re: LoveSnake]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=76042#p76042"><![CDATA[
+I think I'll gonna try this one. Hopefully it would be great to explore new discoveries.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=86915">ninjaspeed222</a> — Mon Jan 28, 2013 2:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zeeshan]]></name></author>
+		<updated>2012-12-13T08:36:18+00:00</updated>
+
+		<published>2012-12-13T08:36:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=72007#p72007</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=72007#p72007"/>
+		<title type="html"><![CDATA[nLÖVE • Re: SpriteBatch emulator]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=72007#p72007"><![CDATA[
+If you are mixing 3D rendering with 2D objects using SpriteBatch, you may notice that your 3D graphics no longer draw correctly after you have rendered sprites. This is because the SpriteBatch changes several device states to values that may not be appropriate for drawing in 3D.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=73901">zeeshan</a> — Thu Dec 13, 2012 8:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[farox]]></name></author>
+		<updated>2012-10-02T21:17:15+00:00</updated>
+
+		<published>2012-10-02T21:17:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=67048#p67048</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=67048#p67048"/>
+		<title type="html"><![CDATA[nLÖVE • Re: GP2X F200]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=67048#p67048"><![CDATA[
+my sources are here <a href="http://dl.openhandhelds.org/cgi-bin/gp2x.cgi?0,0,0,0,46,2878" class="postlink">http://dl.openhandhelds.org/cgi-bin/gp2 ... ,0,46,2878</a><br>Note that i build it using Codeblocks (a CB project is included in the package) if you want to use Makefile you have to adapt yourself..sorry<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=68276">farox</a> — Tue Oct 02, 2012 9:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2012-10-02T14:08:21+00:00</updated>
+
+		<published>2012-10-02T14:08:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=67025#p67025</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=67025#p67025"/>
+		<title type="html"><![CDATA[nLÖVE • Re: GP2X F200]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=67025#p67025"><![CDATA[
+Oh thanks this would work maybe I can make some progress in it do you still have the code of this version?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Tue Oct 02, 2012 2:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[farox]]></name></author>
+		<updated>2012-10-01T17:26:02+00:00</updated>
+
+		<published>2012-10-01T17:26:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=66950#p66950</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=66950#p66950"/>
+		<title type="html"><![CDATA[nLÖVE • Re: GP2X F200]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=66950#p66950"><![CDATA[
+I ported to GP2X (tested on my F200 with open2x firmware) some times ago a 0.70 version. <br>Is based on the Caanoo version by SIENCE.<br>Is very slow but usable...almost to test the demos included in the package.<br>Look here to download <a href="http://dl.openhandhelds.org/cgi-bin/gp2x.cgi?0,0,0,0,14,2875" class="postlink">http://dl.openhandhelds.org/cgi-bin/gp2 ... ,0,14,2875</a> <br>now i have a Pandora and i have lost interest on GP2X, so don't know if i'll build more versions for this...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=68276">farox</a> — Mon Oct 01, 2012 5:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2012-09-30T23:58:50+00:00</updated>
+
+		<published>2012-09-30T23:58:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=66906#p66906</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=66906#p66906"/>
+		<title type="html"><![CDATA[nLÖVE • GP2X F200]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=66906#p66906"><![CDATA[
+Is the GP2X supported or just the Caanoo?<br><br>NOTE GP2X is the predecesor of GP2X Wiz the predecesor of the Caanoo<br><br>Also.. is there any documentation of the LOVE version used and which things can be used?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Sep 30, 2012 11:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[a_greed]]></name></author>
+		<updated>2012-09-12T18:00:11+00:00</updated>
+
+		<published>2012-09-12T18:00:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=65456#p65456</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=65456#p65456"/>
+		<title type="html"><![CDATA[nLÖVE • Re: LoveSweeper for Dingoo]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=65456#p65456"><![CDATA[
+Actually its just butchered version for A320 (small field, no mouse), actual version at <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=10599" class="postlink">viewtopic.php?f=5&amp;t=10599</a> .<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32698">a_greed</a> — Wed Sep 12, 2012 6:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[humtum]]></name></author>
+		<updated>2012-09-11T23:45:31+00:00</updated>
+
+		<published>2012-09-11T23:45:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=65399#p65399</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=65399#p65399"/>
+		<title type="html"><![CDATA[nLÖVE • Re: CodeCopy new nLove &amp; Love2D Game]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=65399#p65399"><![CDATA[
+Actually the game play is really good! Is the good old kart game style, but more tatical and less luck. Why is that? Because you already know what itens you are getting of the “boxes” and you can keep up to 3 itens, so you can collect just the desired ones and plan better how to use them. Besides that, if you can forget the strange game thematic that never tries to explain why your cars have super power, the game is just fine.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53633">humtum</a> — Tue Sep 11, 2012 11:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2012-09-10T07:19:04+00:00</updated>
+
+		<published>2012-09-10T07:19:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=65213#p65213</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=65213#p65213"/>
+		<title type="html"><![CDATA[nLÖVE • Re: LoveSweeper for Dingoo]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=65213#p65213"><![CDATA[
+Why is this is nLÖVE? Also, not being able to see your mouse makes the game quite difficult <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Mon Sep 10, 2012 7:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[a_greed]]></name></author>
+		<updated>2012-08-21T21:47:58+00:00</updated>
+
+		<published>2012-08-21T21:47:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63784#p63784</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63784#p63784"/>
+		<title type="html"><![CDATA[nLÖVE • LoveSweeper for Dingoo]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63784#p63784"><![CDATA[
+Just Minesweeper clone<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=5435">lovesweeper-dingoo.love</a></dt></dl></div><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=5437&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=5437" class="postimage" alt="sc.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32698">a_greed</a> — Tue Aug 21, 2012 9:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[LuaWeaver]]></name></author>
+		<updated>2012-08-15T23:12:27+00:00</updated>
+
+		<published>2012-08-15T23:12:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63363#p63363</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63363#p63363"/>
+		<title type="html"><![CDATA[nLÖVE • Re: nDöts - Döts optimized for nLÖVE]]></title>
+
+					<category term="nLÖVE" scheme="https://love2d.org/forums/viewforum.php?f=10" label="nLÖVE"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63363#p63363"><![CDATA[
+<blockquote class="uncited"><div>It may give you a more accurate blur, but nobody will notice because it's blurred.</div></blockquote> <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2073">LuaWeaver</a> — Wed Aug 15, 2012 11:12 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

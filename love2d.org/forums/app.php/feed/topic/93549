@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/93549" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2022-07-18T15:44:58+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/93549</id>
+
+		<entry>
+		<author><name><![CDATA[Xugro]]></name></author>
+		<updated>2022-07-18T15:44:58+00:00</updated>
+
+		<published>2022-07-18T15:44:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249587#p249587</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249587#p249587"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249587#p249587"><![CDATA[
+<blockquote class="uncited"><div>I notice not all segments 'move' - either a bug or your algorithm keeps moving the same three points because that reaches success the fastest?</div></blockquote>I think this is a limitation of growing a convex shape point by point. If you have a few points on a line (or nearly on a line) it is very hard to move those points.<br><br>My algorithms just amplifies this problem by choosing a random point to move to. The chance of moving on of the points on those lines is very small. And so it will move the same points over and over.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1492">Xugro</a> — Mon Jul 18, 2022 3:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2022-07-18T04:23:13+00:00</updated>
+
+		<published>2022-07-18T04:23:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249583#p249583</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249583#p249583"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249583#p249583"><![CDATA[
+<blockquote class="uncited"><div>Just a small nitpick:<blockquote class="uncited"><div>Just keep in the green, cyan or magenta areas.</div></blockquote>You cannot move point A into the magenta area, because this would decrease the overall area of the polygon which is against togFoxs first point:</div></blockquote>You are right,  green area makes area bigger, the magenta area makes is tinier, the line through the point A and parallel to the magenta line don't change the polygon area.<br><br>So you can take any random point from the triangle and it will be often near the this not drawn line.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Mon Jul 18, 2022 4:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-07-18T08:48:47+00:00</updated>
+
+		<published>2022-07-18T00:44:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249578#p249578</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249578#p249578"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249578#p249578"><![CDATA[
+<blockquote class="uncited"><div>Is this possible? With 8 segments surely there will always be one option?</div></blockquote>Well, the minimum shape where that is outright impossible that I can think of has 9 vertices, but I assumed the playfield to be limited, and then yes, it will eventually happen. Maybe that assumption was wrong, but you've been talking about integer coordinates which suggests that.<br><br><del>With 8 vertices there's a shape where you can move just 1 vertex, and once the corner of the playfield is reached, there are no moves. It's also pretty boring, as the game then consists of moving that vertex towards the corner as slowly as possible.</del><br><br>Edit: I was wrong, sorry.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Mon Jul 18, 2022 12:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-07-18T00:10:37+00:00</updated>
+
+		<published>2022-07-18T00:10:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249577#p249577</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249577#p249577"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249577#p249577"><![CDATA[
+<blockquote class="uncited"><div>You can just use brute force. This will work within a few attempts (most of the time). I attached a simple example.</div></blockquote>Nice one. A lot of hypothesising on Discord but this addresses all the criteria.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I notice not all segments 'move' - either a bug or your algorithm keeps moving the same three points because that reaches success the fastest?<br><br>Edit: I see you used a physics object to calculate mass. Very sneaky.  I approve.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><blockquote class="uncited"><div>There are some shapes for which no moves that extend the area and keep the shape convex are possible. What do you plan to do in that case?</div></blockquote>Is this possible? With 8 segments surely there will always be one option?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Mon Jul 18, 2022 12:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-07-18T00:04:34+00:00</updated>
+
+		<published>2022-07-18T00:04:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249576#p249576</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249576#p249576"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249576#p249576"><![CDATA[
+There are some shapes for which no moves that extend the area and keep the shape convex are possible. What do you plan to do in that case?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Mon Jul 18, 2022 12:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xugro]]></name></author>
+		<updated>2022-07-17T17:56:22+00:00</updated>
+
+		<published>2022-07-17T17:56:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249572#p249572</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249572#p249572"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249572#p249572"><![CDATA[
+You can just use brute force. This will work within a few attempts (most of the time). I attached a simple example.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=21317">random_polygon.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1492">Xugro</a> — Sun Jul 17, 2022 5:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-07-17T17:50:55+00:00</updated>
+
+		<published>2022-07-17T17:50:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249571#p249571</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249571#p249571"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249571#p249571"><![CDATA[
+Not the player. The algorithm needs to choose a point and then move that line 'outwards' without breaking the rules.<br><br>My first problem: deciding which points can legally be moved (the four corners can'tbe moved first)<br><br>Then: with a point that can be moved legally, know which direction is a legal move.<br><br>I suspect solving step 1 will solve step 2.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sun Jul 17, 2022 5:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xugro]]></name></author>
+		<updated>2022-07-17T15:21:52+00:00</updated>
+
+		<published>2022-07-17T15:21:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249566#p249566</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249566#p249566"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249566#p249566"><![CDATA[
+Just a small nitpick:<blockquote class="uncited"><div>Just keep in the green, cyan or magenta areas.</div></blockquote>You cannot move point A into the magenta area, because this would decrease the overall area of the polygon which is against togFoxs first point:<blockquote class="uncited"><div><ul><li>Starting with the square, each time the player receives a reward, two segments (or one 'point') are moved so that the shape gets larger, i.e. the inside area increases.</li></ul></div></blockquote>Edit:<blockquote class="uncited"><div>How would I avoid choosing a corner at the very start and fail instantly? Should I try, fail, then choose another point at random and repeat? It's a 50/50 shot so not a terrible approach.</div></blockquote>Should the point to move be chosen by the player or randomly?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1492">Xugro</a> — Sun Jul 17, 2022 3:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-07-17T12:56:13+00:00</updated>
+
+		<published>2022-07-17T12:56:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249564#p249564</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249564#p249564"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249564#p249564"><![CDATA[
+Thanks.<br><br>How would I avoid choosing a corner at the very start and fail instantly? Should I try, fail, then choose another point at random and repeat? It's a 50/50 shot so not a terrible approach.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sun Jul 17, 2022 12:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2022-07-17T12:21:15+00:00</updated>
+
+		<published>2022-07-17T12:21:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249562#p249562</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249562#p249562"/>
+		<title type="html"><![CDATA[Re: Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249562#p249562"><![CDATA[
+<blockquote class="uncited"><div>What algorithm can I use to move a point in a direction such that it remains convex?</div></blockquote>Just keep in the green, cyan or magenta areas.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=21314&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=21314" class="postimage" alt="2022-07-17T14_13_20-Window.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Sun Jul 17, 2022 12:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-07-17T10:56:38+00:00</updated>
+
+		<published>2022-07-17T10:56:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249561#p249561</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249561#p249561"/>
+		<title type="html"><![CDATA[Coding challenge: convex shapes]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249561#p249561"><![CDATA[
+At the start of the game I create a shape that has 8 segments and forms a perfect square:<br><br><img src="https://i.postimg.cc/6QqvdPbK/image.png" class="postimage" alt="Image"><br><br>Love2D requires this to be convex (Box2d):<br><em class="text-italics"><br>Creates a new PolygonShape.<br>This shape can have 8 vertices at most, and must form a convex shape. </em><br><br>As the game proceeds and the player is rewarded, the shape grows by moving one 'point' "outwards", but it must do so without breaking the "convex" rule:<br><br><img src="https://i.postimg.cc/6QxQQmsz/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/C53349sQ/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/bNHPTN40/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/d35BsCLm/image.png" class="postimage" alt="Image"><br><br><img src="https://i.postimg.cc/FsDrvHGr/image.png" class="postimage" alt="Image"><br><br>The shape can get quite large and quite complex as the player keeps winning and getting rewarded. Over time, the size of the shape starts to work against the player and that is one of the mechanics of the game.  <br><br>Here is the challenge:<br><br>Assuming a 'point' is the end of one segment and the start of the next segment:<br><ul><li>Starting with the square, each time the player receives a reward, two segments (or one 'point') are moved so that the shape gets larger, i.e. the inside area increases.</li><li>The shape must always be convex</li><li>The 8 'points' of the convex can move according to whatever rules you invent (i.e. along axis or random or whatever)</li> <li>Any point can be moved according to described rules</li><li>Assume moving a 'point' is by an arbitrary distance (unless it matters) but for simplicity, assume whole numbers of pixels</li><li>You can assume that moving the end of one segment means moving the start of the segment it joins</li><li>Bonus points if the shape formed is irregular i.e. not a perfect square or rectangle.</li></ul>What algorithm can I use to move a point in a direction such that it remains convex?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sun Jul 17, 2022 10:56 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

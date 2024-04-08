@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/94463" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-04-17T02:52:58+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/94463</id>
+
+		<entry>
+		<author><name><![CDATA[knorke]]></name></author>
+		<updated>2023-04-17T02:52:58+00:00</updated>
+
+		<published>2023-04-17T02:52:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254394#p254394</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254394#p254394"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254394#p254394"><![CDATA[
+I am impressed by how quickly you figured out a solution and posted functional examples.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1290">knorke</a> — Mon Apr 17, 2023 2:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-16T15:35:48+00:00</updated>
+
+		<published>2023-04-16T15:35:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254390#p254390</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254390#p254390"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254390#p254390"><![CDATA[
+<blockquote class="uncited"><div>Bézier curves can be split at any point. I think that feature could help here to make two adjacent tile borders match.<br><br>You can also use the derivative of a Bézier curve to get a binormal, and from that, a normal, so that tiles at curves are perpendicular to the border.</div></blockquote>You are right, but my code was for any line, for example perfect circle, made of any amount of segments.<br><br>There is the ready code (ALOT of code optimization possible):<br><a href="https://github.com/darkfrei/love2d-lua-tests/tree/main/ladder-roads" class="postlink">https://github.com/darkfrei/love2d-lua- ... dder-roads</a><div class="codebox"><p>Code: </p><pre><code>-- ladder-roads-- license cc0, darkfrei 2023TrackLine = -- bezier-roads, 11 pieces{{0, 400, 10, 400}, -- line{10, 400, 123, 400, 203, 282}, -- bezier{203, 282, 279, 169, 452, 172}, -- bezier{452, 172, 518, 173, 569, 234}, -- bezier{569, 234, 625, 302}, -- line{625, 302, 664, 348, 639, 422}, -- bezier{639, 422, 610, 508, 472, 495}, -- bezier{472, 495, 407, 489, 359, 429}, -- bezier}CellLength = 80CellWidth = 30function insertPair (list, x, y)table.insert (list, x)table.insert (list, y)end-- restore bezier:Line = {} -- the line as list of position pairsfor iRoad = 1, #TrackLine dolocal road = TrackLine[iRoad]if #road &gt; 4 then -- bezierlocal bezierObj = love.math.newBezierCurve (road)local amount = 32for t = 0, amount-1 do -- don't add last pointlocal x, y = bezierObj:evaluate (t/amount)table.insert (Line, x)table.insert (Line, y)endelsefor i = 1, #road-3, 2 do -- don't add last pointtable.insert (Line, road[i])table.insert (Line, road[i+1])endendendlocal function get_points_along_line (line, gap)-- from https://github.com/darkfrei/love2d-lua-tests/blob/main/railway-track/railways.lua#L88local points = {}local tangents = {}local rest = 0--local rest = gap/2 -- rest is gap to start point on this sectionlocal x1, y1, x2, y2, dx, dy = line[1],line[2]for i=3, #line-1, 2 dox2, y2 = line[i],line[i+1]dx, dy = x2-x1, y2-y1local sector_length = (dx*dx+dy*dy)^0.5if sector_length &gt; rest then-- rest is always shorter than gap; sector is shorter than rest (or gap)dx, dy = dx/sector_length, dy/sector_lengthwhile sector_length &gt; rest dolocal x, y = x1+rest*dx, y1+rest*dytable.insert (points, x)table.insert (points, y)table.insert (tangents, dx)table.insert (tangents, dy)rest = rest + gapendelse -- no point in this distanceend-- the tail for the next rest = rest-sector_lengthx1, y1 = x2, y2endreturn points, tangentsendlocal lineLength = 0local x1, y1 = Line[1], Line[2]for i = 3, #Line-1, 2 dolocal x2, y2 = Line[i], Line[i+1]lineLength = lineLength + math.sqrt((x2-x1)^2 + (y2-y1)^2)x1, y1 = x2, y2endCellLength = lineLength / math.floor(lineLength/CellLength +0.5)print ('middle cells count:', math.floor(lineLength/CellLength +0.5))print ('CellLength:', CellLength)--addequidistant pointsEquidistantPoints, Tangents = get_points_along_line (Line, CellLength/2)-- cells as roundCells = {}function cubicBezier(x1, y1, angle1, x2, y2, angle2, curve) -- not tested--print (x1, y1, angle1, x2, y2, angle2)curve = curve or {}local dx1, dy1 = math.cos (angle1), math.sin (angle1)--print (dx1, dy1)local dx2, dy2 = math.cos (angle2), math.sin (angle2)--local dx1, dy1 = math.sin (angle1), math.cos (angle1)--local dx2, dy2 = math.sin (angle2), math.cos (angle2)local dist = math.sqrt((x2-x1)^2+(y2-y1)^2)/3local px1, py1 = x1+dist*dx1, y1+dist*dy1--print (px1, py1)local px2, py2 = x2-dist*dx2, y2-dist*dy2local amount = 3for n = 0, amount-1do -- not the last pointlocal t = n/amountlocal a, b, c, d = (1-t)^3, 3*t*(1-t)^2, 3*t^2*(1-t), t^3local x = a*x1+b*px1+c*px2+d*x2local y = a*y1+b*py1+c*py2+d*y2table.insert(curve, x)table.insert(curve, y)endreturn curveendfunction createCell (typ, x, y, dx, dy, angle, CellWidth, amount)if typ == 'left' then-- left lane has transitions to cell above or to right (middle lane):local cell = {x=x+CellWidth*dy, y=y-CellWidth*dx, dx=dx, dy=dy, angle=angle,left = nil, right = amount+3, next = amount+4}return cellelseif typ == 'right' thenlocal cell = {x=x-CellWidth*dy, y=y+CellWidth*dx, dx=dx, dy=dy, angle=angle,left = amount+2, right = nil, next = amount+4}return cellelse -- middlelocal cell = {x=x, y=y, dx=dx, dy=dy, angle=angle,left = amount+2, right = amount+3, next = amount+4}return cellendendBorderA = {} -- lineBorderB = {}BorderC = {}BorderD = {}Sprits = {} -- list of lineslocal angleOld-- iterate all equidistance points:for indexEP = 1, #EquidistantPoints-1, 2 do-- positionlocal x, y = EquidistantPoints[indexEP], EquidistantPoints[indexEP+1]-- tangentlocal dx, dy = Tangents[indexEP], Tangents[indexEP+1]local angle = math.atan2(dy, dx)angleOld = angleOld or angleif ((indexEP-1)/2)%2 == 1 thenlocal leftCell = createCell ('left', x, y, dx, dy, angle, CellWidth, #Cells)table.insert (Cells, leftCell)local rightCell = createCell ('right', x, y, dx, dy, angle, CellWidth, #Cells)table.insert (Cells, rightCell)elselocal cell = createCell ('middle', x, y, dx, dy, angle, CellWidth, #Cells)table.insert (Cells, cell)endlocal x2, y2 = EquidistantPoints[indexEP+2], EquidistantPoints[indexEP+3]local dx2, dy2 = Tangents[indexEP+2], Tangents[indexEP+3]if not dy2 thendx2, dy2 = dx, dylocal pointAx, pointAy = x+1.5*CellWidth*dy, y-1.5*CellWidth*dxlocal pointBx, pointBy = x+0.5*CellWidth*dy, y-0.5*CellWidth*dxlocal pointCx, pointCy = x-0.5*CellWidth*dy, y+0.5*CellWidth*dxlocal pointDx, pointDy = x-1.5*CellWidth*dy, y+1.5*CellWidth*dxtable.insert (BorderA, pointAx)table.insert (BorderA, pointAy)table.insert (BorderB, pointBx)table.insert (BorderB, pointBy)table.insert (BorderC, pointCx)table.insert (BorderC, pointCy)table.insert (BorderD, pointDx)table.insert (BorderD, pointDy)if ((indexEP-1)/2)%2 == 1 then-- oddtable.insert (Sprits, {pointBx,  pointBy, pointCx,  pointCy})else-- eventable.insert (Sprits, {pointAx, pointAy, pointBx, pointBy})table.insert (Sprits, {pointCx, pointCy, pointDx, pointDy})endelselocal nextAngle = math.atan2(dy2, dx2)local pointAx,  pointAy =  x +1.5*CellWidth*dy,  y -1.5*CellWidth*dxlocal pointA2x, pointA2y = x2+1.5*CellWidth*dy2, y2-1.5*CellWidth*dx2local pointBx,  pointBy =  x +0.5*CellWidth*dy,  y -0.5*CellWidth*dxlocal pointB2x, pointB2y = x2+0.5*CellWidth*dy2, y2-0.5*CellWidth*dx2local pointCx,  pointCy =  x -0.5*CellWidth*dy,  y +0.5*CellWidth*dxlocal pointC2x, pointC2y = x2-0.5*CellWidth*dy2, y2+0.5*CellWidth*dx2local pointDx,  pointDy =  x -1.5*CellWidth*dy,  y +1.5*CellWidth*dxlocal pointD2x, pointD2y = x2-1.5*CellWidth*dy2, y2+1.5*CellWidth*dx2cubicBezier(pointAx, pointAy, angle, pointA2x, pointA2y, nextAngle, BorderA)cubicBezier(pointBx, pointBy, angle, pointB2x, pointB2y, nextAngle, BorderB)cubicBezier(pointCx, pointCy, angle, pointC2x, pointC2y, nextAngle, BorderC)cubicBezier(pointDx, pointDy, angle, pointD2x, pointD2y, nextAngle, BorderD)if ((indexEP-1)/2)%2 == 1 then-- oddtable.insert (Sprits, {pointBx,  pointBy, pointCx,  pointCy})else-- eventable.insert (Sprits, {pointAx, pointAy, pointBx, pointBy})table.insert (Sprits, {pointCx, pointCy, pointDx, pointDy})endendangleOld = angleendfor iCell, cell in ipairs (Cells) dolocal nextCell = Cells[cell.next]if nextCell thenlocal x1, y1 = cell.x, cell.ylocal x2, y2 = nextCell.x, nextCell.ylocal line = {x1, y1, x2, y2}cell.nextLine = lineendlocal rightCell = Cells[cell.right]if rightCell thenlocal x1, y1 = cell.x, cell.ylocal x2, y2 = rightCell.x, rightCell.ylocal line = {x1, y1, x2, y2}cell.rightLine = lineendlocal leftCell = Cells[cell.left]if leftCell thenlocal x1, y1 = cell.x, cell.ylocal x2, y2 = leftCell.x, leftCell.ylocal line = {x1, y1, x2, y2}cell.leftLine = lineendendfunction drawRotatedRectangle(mode, x, y, w, h, angle)love.graphics.push()love.graphics.translate(x, y)love.graphics.rotate(angle)love.graphics.rectangle(mode, -w/2, -h/2, w, h)love.graphics.pop()endfunction love.draw ()love.graphics.setLineWidth (1)love.graphics.setColor (0.25,0.25, 0.25)love.graphics.line (Line)for i = 1, #EquidistantPoints-1, 2 dolove.graphics.circle ('line', EquidistantPoints[i], EquidistantPoints[i+1], 3)end--[[for iCell, cell in ipairs (Cells) dolove.graphics.setLineWidth (2)love.graphics.setColor (0.5,0.5,0)love.graphics.circle ('line', cell.x, cell.y, 4)love.graphics.setColor (1,1,1)drawRotatedRectangle( 'line', cell.x, cell.y, CellLength, CellWidth, cell.angle)love.graphics.setLineWidth (1)if cell.nextLine thenlove.graphics.setColor (1,1,0,0.75)love.graphics.line (cell.nextLine)endif cell.rightLine thenlove.graphics.setColor (0,1,0,0.75)love.graphics.line (cell.rightLine)endif cell.leftLine thenlove.graphics.setColor (1,0,0,0.75)love.graphics.line (cell.leftLine)endend]]love.graphics.setLineWidth (4)love.graphics.setColor (1,1,1)love.graphics.line (BorderA)love.graphics.line (BorderB)love.graphics.line (BorderC)love.graphics.line (BorderD)for i, line in ipairs (Sprits) dolove.graphics.line (line)endend</code></pre></div>Examples with 180 pixels, 80 pixels and 20 pixels middle cells lengths (they are adjusted to the whole track):<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22271&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22271" class="postimage" alt="2023-04-16T17_36_46-Untitled.png" /></a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22269&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22269" class="postimage" alt="2023-04-16T17_31_37-Untitled.png" /></a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22270&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22270" class="postimage" alt="2023-04-16T17_31_47-Untitled.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Sun Apr 16, 2023 3:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2023-04-11T17:36:35+00:00</updated>
+
+		<published>2023-04-11T17:36:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254322#p254322</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254322#p254322"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254322#p254322"><![CDATA[
+Bézier curves can be split at any point. I think that feature could help here to make two adjacent tile borders match.<br><br>You can also use the derivative of a Bézier curve to get a binormal, and from that, a normal, so that tiles at curves are perpendicular to the border.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Apr 11, 2023 5:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-11T07:38:48+00:00</updated>
+
+		<published>2023-04-11T07:38:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254309#p254309</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254309#p254309"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254309#p254309"><![CDATA[
+Next: Make the function where you can add/remove cells and rearrange the connections between them. <br>Use the union of cells to make long cells:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22259&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22259" class="postimage" alt="image-2023-04-06.png" /></a></dt></dl></div>And than just make this points (actually we have x, y position and the angle in this point), where you have cell corners without intersections.<br><br>Polygons ABFB'A'E, CDHD'C'G, FGC'G'F'B' and the next points the same way.<br>You can also use two points and two tangents in this points to make smooth lines with bezier.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22261&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22261" class="postimage" alt="image-2023-04-11.png" /></a></dt></dl></div><div class="codebox"><p>Code: </p><pre><code>function cubicBezier(px0, py0, angle0, px3, py3, angle3, curve) -- not tested-- tangent:  local tx0, ty0 = math.cos(angle0), math.sin(angle0)  local tx3, ty3 = math.cos(angle3), math.sin(angle3)    local controlDist = math.sqrt((px3 - px0)^2 + (py3 - py0)^2)/3  local px1, py1 = px0 + controlDist  * tx0, py0 + controlDist  * ty0  local px2, py2 = px3 - controlDist  * tx3, py3 - controlDist  * ty3    curve = curve or {}  local amount = 8  for n = 0, amount-1  do -- not the last point  local t = n/amount  local a, b, c, d = (1-t)^3, 3*t*(1-t)^2, 3*t^2*(1-t), t^3local x = a*px0+b*px1+c*px2+d*px3local y = a*py0+b*py1+c*py2+d*py3 table.insert(curve, x)table.insert(curve, y)  end  return curveend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Tue Apr 11, 2023 7:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-10T18:27:23+00:00</updated>
+
+		<published>2023-04-10T18:27:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254293#p254293</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254293#p254293"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254293#p254293"><![CDATA[
+And if we have position and angle, just draw here rotated rectangle: <br><div class="codebox"><p>Code: </p><pre><code>function drawRotatedRectangle(mode, x, y, w, h, angle)love.graphics.push()love.graphics.translate(x, y)love.graphics.rotate(angle)love.graphics.rectangle(mode, -w/2, -h/2, w, h)love.graphics.pop()endfunction love.draw ()love.graphics.setColor (0.25,0.25, 0.25)love.graphics.line (Line)--for i = 1, #EquidistantPoints-1, 2 do--love.graphics.circle ('line', EquidistantPoints[i], EquidistantPoints[i+1], 3)--endlove.graphics.setColor (1,1,1)for iCell, cell in ipairs (Cells) do--love.graphics.circle ('line', cell.x, cell.y, 4)drawRotatedRectangle( 'line', cell.x, cell.y, 30, 10, cell.angle)endend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22257&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22257" class="postimage" alt="Screenshot 2023-04-10 201837.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22258">ladder-roads-04.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Mon Apr 10, 2023 6:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-10T17:15:48+00:00</updated>
+
+		<published>2023-04-10T17:15:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254290#p254290</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254290#p254290"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254290#p254290"><![CDATA[
+The next step: take every second equidistant point and make here the cell; other second must be a pair of cells, but with normal shift as x + k*dy, y - k*dx (dx and dy is a tangent in the point).<div class="codebox"><p>Code: </p><pre><code>-- ladder-roads-- license cc0, darkfrei 2023TrackLine = -- bezier-roads, 11 pieces{{0, 400, 10, 400}, -- line{10, 400, 123, 400, 203, 282}, -- bezier{203, 282, 279, 169, 452, 172}, -- bezier{452, 172, 518, 173, 569, 234}, -- bezier{569, 234, 625, 302}, -- line{625, 302, 664, 348, 639, 422}, -- bezier{639, 422, 610, 508, 472, 495}, -- bezier{472, 495, 407, 489, 359, 429}, -- bezier{359, 429, 306, 363, 189, 422}, -- bezier{189, 422, 136, 449, 73, 448}, -- bezier{73, 448, 4, 447}, -- line}-- restore bezier:Line = {} -- the line as list of position pairsfor iRoad = 1, #TrackLine dolocal road = TrackLine[iRoad]if #road &gt; 4 then -- bezierlocal bezierObj = love.math.newBezierCurve (road)local amount = 32for t = 0, amount-1 do -- don't add last pointlocal x, y = bezierObj:evaluate (t/amount)table.insert (Line, x)table.insert (Line, y)endelsefor i = 1, #road-3, 2 do -- don't add last pointtable.insert (Line, road[i])table.insert (Line, road[i+1])endendendlocal function get_points_along_line (line, gap)-- from https://github.com/darkfrei/love2d-lua-tests/blob/main/railway-track/railways.lua#L88local points = {}local tangents = {}local rest = gap/2 -- rest is gap to start point on this sectionlocal x1, y1, x2, y2, dx, dy = line[1],line[2]for i=3, #line-1, 2 dox2, y2 = line[i],line[i+1]dx, dy = x2-x1, y2-y1local sector_length = (dx*dx+dy*dy)^0.5if sector_length &gt; rest then-- rest is always shorter than gap; sector is shorter than rest (or gap)dx, dy = dx/sector_length, dy/sector_lengthwhile sector_length &gt; rest dolocal x, y = x1+rest*dx, y1+rest*dytable.insert (points, x)table.insert (points, y)table.insert (tangents, dx)table.insert (tangents, dy)rest = rest + gapendelse -- no point in this distanceend-- the tail for the next rest = rest-sector_lengthx1, y1 = x2, y2endreturn points, tangentsend--add  equidistant pointsEquidistantPoints, Tangents = get_points_along_line (Line, 15)-- cells as roundCells = {}for i = 1, #EquidistantPoints-1, 2 do-- positionlocal x, y = EquidistantPoints[i], EquidistantPoints[i+1]-- tangentlocal dx, dy = Tangents[i], Tangents[i+1]if ((i-1)/2)%2 == 0 then-- side pair of celllocal leftCell = {x=x+10*dy, y=y-10*dx, dx=dx, dy=dy, left = #Cells+2, right = #Cells+3, next = #Cells+4}table.insert (Cells, leftCell)local rightCell = {x=x-10*dy, y=y+10*dx, dx=dx, dy=dy, left = #Cells+2, right = #Cells+3, next = #Cells+4}table.insert (Cells, rightCell)else-- middle celllocal cell = {x=x, y=y, dx=dx, dy=dy, left = #Cells+2, right = #Cells+3, next = #Cells+4}table.insert (Cells, cell)endendfunction love.draw ()love.graphics.setColor (0.25,0.25, 0.25)love.graphics.line (Line)--for i = 1, #EquidistantPoints-1, 2 do--love.graphics.circle ('line', EquidistantPoints[i], EquidistantPoints[i+1], 3)--endlove.graphics.setColor (1,1,1)for iCell, cell in ipairs (Cells) dolove.graphics.circle ('line', cell.x, cell.y, 4)endend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22256&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22256" class="postimage" alt="Screenshot 2023-04-10 191213.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22255">ladder-roads-03.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Mon Apr 10, 2023 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-10T16:44:39+00:00</updated>
+
+		<published>2023-04-10T16:44:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254289#p254289</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254289#p254289"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254289#p254289"><![CDATA[
+<blockquote class="uncited"><div>That last example is looking closer to the top screenshot. I'll try to adapt that. Thanks!</div></blockquote>You are need to use both of them: as source of lines and as a way to move connect them together:<div class="codebox"><p>Code: </p><pre><code>-- ladder-roads-- license cc0, darkfrei 2023TrackLine = -- bezier-roads, 11 pieces{{0, 400, 10, 400}, -- line{10, 400, 123, 400, 203, 282}, -- bezier{203, 282, 279, 169, 452, 172}, -- bezier{452, 172, 518, 173, 569, 234}, -- bezier{569, 234, 625, 302}, -- line{625, 302, 664, 348, 639, 422}, -- bezier{639, 422, 610, 508, 472, 495}, -- bezier{472, 495, 407, 489, 359, 429}, -- bezier{359, 429, 306, 363, 189, 422}, -- bezier{189, 422, 136, 449, 73, 448}, -- bezier{73, 448, 4, 447}, -- line}-- restore bezier:Line = {} -- the line as list of position pairsfor iRoad = 1, #TrackLine dolocal road = TrackLine[iRoad]if #road &gt; 4 then -- bezierlocal bezierObj = love.math.newBezierCurve (road)local amount = 32for t = 0, amount-1 do -- don't add last pointlocal x, y = bezierObj:evaluate (t/amount)table.insert (Line, x)table.insert (Line, y)endelsefor i = 1, #road-3, 2 do -- don't add last pointtable.insert (Line, road[i])table.insert (Line, road[i+1])endendendlocal function get_points_along_line (line, gap)-- from https://github.com/darkfrei/love2d-lua-tests/blob/main/railway-track/railways.lua#L88local points = {}local tangents = {}local rest = gap/2 -- rest is gap to start point on this sectionlocal x1, y1, x2, y2, dx, dy = line[1],line[2]for i=3, #line-1, 2 dox2, y2 = line[i],line[i+1]dx, dy = x2-x1, y2-y1local sector_length = (dx*dx+dy*dy)^0.5if sector_length &gt; rest then-- rest is always shorter than gap; sector is shorter than rest (or gap)dx, dy = dx/sector_length, dy/sector_lengthwhile sector_length &gt; rest dolocal x, y = x1+rest*dx, y1+rest*dytable.insert (points, x)table.insert (points, y)table.insert (tangents, dx)table.insert (tangents, dy)rest = rest + gapendelse -- no point in this distanceend-- the tail for the next rest = rest-sector_lengthx1, y1 = x2, y2endreturn points, tangentsend--add  equidistant pointsEquidistantPoints, Tangents = get_points_along_line (Line, 15)function love.draw ()love.graphics.line (Line)for i = 1, #EquidistantPoints-1, 2 dolove.graphics.circle ('line', EquidistantPoints[i], EquidistantPoints[i+1], 3)endend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22252&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22252" class="postimage" alt="Screenshot 2023-04-10 184423.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22254">ladder-roads-02.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Mon Apr 10, 2023 4:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2023-04-10T00:08:10+00:00</updated>
+
+		<published>2023-04-10T00:08:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254277#p254277</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254277#p254277"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254277#p254277"><![CDATA[
+That last example is looking closer to the top screenshot. I'll try to adapt that. Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Mon Apr 10, 2023 12:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-09T14:15:38+00:00</updated>
+
+		<published>2023-04-09T14:15:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254264#p254264</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254264#p254264"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254264#p254264"><![CDATA[
+The next example for other side of model:<br><br>You have a trach with lanes, the each lane has cells, that can be connected to other cells on other lanes.<div class="codebox"><p>Code: </p><pre><code>-- ladder-roads-- license cc0, darkfrei 2023Lanes = {}function createLines (length, amount)local lane2 = {}for i = 1, amount dolocal cell = {length = length, right=true, left=true} if love.math.random (3) == 1 thencell.right = falseendif love.math.random (3) == 1 thencell.left = falseendtable.insert (lane2, cell)endlocal lane1 = {}local cell1 = {length = length/2, right=false, left=false} table.insert (lane1, cell1)local lane3 = {}local cell3 = {length = length/2, right=false, left=false} table.insert (lane3, cell3)for i = 2, amount dolocal cell1 = {length = length, right=true, left=false} table.insert (lane1, cell1)local cell3 = {length = length, right=false, left=true} table.insert (lane3, cell3)endcell1 = {length = length/2, right=false, left=false} table.insert (lane1, cell1)cell3 = {length = length/2, right=false, left=false} table.insert (lane3, cell3)print (#lane1, #lane2, #lane3)Lanes[1] = lane1Lanes[2] = lane2Lanes[3] = lane3local y0 = 100local dy = 40local h = dyfor iLane = 1, #Lanes dolocal lane = Lanes[iLane]local x0 = 0for iCell = 1, #lane dolocal cell = lane[iCell]cell.iLane = iLanecell.iCell = iCelllocal x = x0local y = y0 + dy*(iLane-1)local w = cell.lengthcell.x=x -- x,y,w,h as rectanglecell.y=ycell.w=wcell.h=hcell.cx = x + w/2 -- middlecell.cy = y + h/2x0 = x0 + wendend-- transitionsfor iLane = 1, #Lanes dolocal lane = Lanes[iLane]for iCell = 1, #lane dolocal cell = lane[iCell]if cell.right thenlocal rightIndex = iCell + (iLane+1)%2local rightCell = Lanes[iLane+1][rightIndex]cell.rightIndex = rightIndexcell.rightTransition = {cell.cx, cell.cy, rightCell.cx, rightCell.cy}endif cell.left thenlocal leftIndex = iCell + (iLane+1)%2local leftCell = Lanes[iLane-1][leftIndex]cell.leftIndex = leftIndexcell.leftTransition = {cell.cx, cell.cy, leftCell.cx, leftCell.cy}endendendendfunction love.load ()createLines (60, 12)endfunction drawArrow (x1, y1, x2, y2)local dx = x2-x1local dy = y2-y1--local length = (dx*dx+dy*dy)^0.5love.graphics.line (x1, y1, x2, y2)love.graphics.line (x1+dx/2-dy/8, y1+dy/2+dx/8, x2, y2)love.graphics.line (x1+dx/2+dy/8, y1+dy/2-dx/8, x2, y2)endtable.unpack = table.unpack or unpackfunction isOn (mx, my, x, y, w, h)return mx &gt; x and mx &lt; x+w and my&gt;y and my&lt;y+hendfunction drawCell (cell)-- borderlove.graphics.rectangle ('line', cell.x, cell.y, cell.w, cell.h)-- arrowlove.graphics.line (cell.cx-cell.w/4, cell.cy, cell.cx, cell.cy)drawArrow (cell.cx, cell.cy, cell.cx+cell.w/2, cell.cy)-- transitionif cell.rightTransition thenlocal x1, y1, x2, y2 = table.unpack (cell.rightTransition)drawArrow (x1, y1, x1+(x2-x1)/2, y1+(y2-y1)/2)endif cell.leftTransition thenlocal x1, y1, x2, y2 = table.unpack (cell.leftTransition)drawArrow (x1, y1, x1+(x2-x1)/2, y1+(y2-y1)/2)endendfunction love.draw ()local mx, my = love.mouse.getPosition ()local hoveredCelllove.graphics.setColor (1,1,0)love.graphics.setLineWidth (0.5)for iLane, lane in ipairs (Lanes) dofor iCell, cell in ipairs (lane) doif isOn (mx, my, cell.x, cell.y, cell.w, cell.h) thenhoveredCell = cell enddrawCell (cell)endendif hoveredCell thenlove.graphics.setColor (1,1,1)love.graphics.setLineWidth (2)drawCell (hoveredCell)-- next cells as greenlove.graphics.setColor (0,1,0)local nextCell = Lanes[hoveredCell.iLane][hoveredCell.iCell+1]if nextCell thendrawCell (nextCell)endif hoveredCell.right thenlocal rightCell = Lanes[hoveredCell.iLane+1][hoveredCell.rightIndex]drawCell (rightCell)endif hoveredCell.left thenlocal leftCell = Lanes[hoveredCell.iLane-1][hoveredCell.leftIndex]drawCell (leftCell)endendend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22249&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22249" class="postimage" alt="Screenshot 2023-04-09 160951.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22248">ladder-roads-01.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Sun Apr 09, 2023 2:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-09T06:55:14+00:00</updated>
+
+		<published>2023-04-09T06:55:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254259#p254259</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254259#p254259"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254259#p254259"><![CDATA[
+Updated version, press Ctrl+C to copy the track:<br><div class="codebox"><p>Code: </p><pre><code>-- bezier-roads, 15 pieces{{0, 400, 10, 400}, -- line{10, 400, 92, 400}, -- line{92, 400, 133, 400, 163, 360}, -- bezier{163, 360, 186, 330, 186, 288}, -- bezier{186, 288, 186, 140}, -- line{186, 140, 186, 103, 231, 82}, -- bezier{231, 82, 264, 67, 302, 71}, -- bezier{302, 71, 634, 106}, -- line{634, 106, 667, 109, 690, 140}, -- bezier{690, 140, 714, 173, 716, 217}, -- bezier{716, 217, 726, 446}, -- line{726, 446, 728, 496, 667, 526}, -- bezier{667, 526, 616, 551, 561, 488}, -- bezier{561, 488, 531, 453, 474, 456}, -- bezier{474, 456, 15, 480}, -- line}</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22246&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22246" class="postimage" alt="Screenshot 2023-04-09 085300.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22247">bezier-roads-02.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Sun Apr 09, 2023 6:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2023-04-07T23:20:48+00:00</updated>
+
+		<published>2023-04-07T23:20:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254230#p254230</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254230#p254230"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254230#p254230"><![CDATA[
+Thanks for the code! I can export the table with a few lines of code.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Fri Apr 07, 2023 11:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-07T15:48:13+00:00</updated>
+
+		<published>2023-04-07T15:48:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254228#p254228</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254228#p254228"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254228#p254228"><![CDATA[
+Small level editor, but without export, sorry.<br>Maybe need some optimizations.<br><div class="codebox"><p>Code: </p><pre><code>-- bezier-roads-- License cc0, darkfrei 2023Active = {x=0, y=400, angle = 0, --type = "straight"xEnd = 0,yEnd = 0,line= {},}Track = {}----------------------------------------------------------------------------- special functions ------------------------------------------------------------------------function nearestPointToRay(mx, my, startX, startY, angle)  local dx = mx - startX  local dy = my - startY  local s = math.sin(angle)  local c = math.cos(angle)  local rotatedX = dx * c + dy * s  local rotatedY = dx * s - dy * c  local t = math.max(rotatedX, 0)  return startX + t * c, startY + t * sendfunction addStraightRoad (length)local x1, y1 = Active.x, Active.ylocal angle = Active.anglelocal x2 = x1 + length*math.cos(angle)local y2 = y1 + length*math.sin(angle)local line = {x1, y1, x2, y2}--local line = Active.line local road = {line=line}table.insert (Track, road)-- new positionActive.x, Active.y = x2, y2--State.updateLines ()endfunction addCurveRoad ()local road = {line=Active.line}table.insert (Track, road)Active.x, Active.y = Active.xEnd, Active.yEndActive.angle = Active.nextAngleendfunction getIntersection(startX, startY, startAngle, endX, endY)local tangentX, tangentY = math.cos(startAngle), math.sin(startAngle)local midX, midY = (startX + endX) / 2, (startY + endY) / 2local rayAngle = math.atan2(midY - startY, midX - startX)local rayX, rayY = math.cos(rayAngle), math.sin(rayAngle)local t = ((midX - startX) * tangentX + (midY - startY) * tangentY) / (tangentX * rayX + tangentY * rayY)return startX + t * tangentX, startY + t * tangentYend----------------------------------------------------------------------------- state machine ----------------------------------------------------------------------------States = {straight = {name = "straight"},curve = {name = "curve"},}State = States.straight--State = States.curvefunction States.straight.updateLines ()local mx, my = love.mouse.getPosition ()local x, y = Active.x, Active.ylocal angle = Active.anglelocal xEnd = x + 1000*math.cos(angle)local yEnd = y + 1000*math.sin(angle)-- ray to far point:Active.controlPoints = {x, y, xEnd, yEnd}xEnd, yEnd = nearestPointToRay(mx, my, x, y, angle)Active.xEnd, Active.yEnd = xEnd, yEndActive.line = {x, y, xEnd, yEnd}endfunction States.straight.mousemoved (mx, my, dx, dy)States.straight.updateLines (mx, my)endfunction States.straight.mousepressed (mx, my)if Active.xEnd thenlocal dx = Active.xEnd - Active.xlocal dy = Active.yEnd - Active.ylocal length = (dx*dx+dy*dy)^0.5if length &gt; 10 thenaddStraightRoad (length)State = States.curveState.updateLines ()endendendfunction States.curve.updateLines ()local x, y = Active.x, Active.ylocal startAngle = Active.angle--local xEnd, yEnd = mx, mylocal mx, my = love.mouse.getPosition()local controlX, controlY = getIntersection(x, y, startAngle, mx, my)local endAngle = math.atan2(my - controlY, mx - controlX)local controlPoints = {x, y, controlX, controlY, mx, my}local bezierCurve = love.math.newBezierCurve( controlPoints )local line = bezierCurve:render()Active.line = lineActive.controlPoints = controlPointsActive.nextAngle = endAngleActive.xMiddle, Active.yMiddle = controlX, controlYActive.xEnd, Active.yEnd = mx, myendfunction States.curve.mousemoved (mx, my, dx, dy)States.curve.updateLines ()endfunction States.curve.mousepressed (mx, my)if Active.xEnd thenlocal dx = Active.xEnd - Active.xlocal dy = Active.yEnd - Active.ylocal length = (dx*dx+dy*dy)^0.5if length &gt; 10 thenaddCurveRoad ()State.updateLines ()endendendfunction love.load ()addStraightRoad (10)State.updateLines ()endfunction love.draw ()love.graphics.setLineWidth (2)love.graphics.setColor (0.5,0.5,0)if Active.controlPoints thenlove.graphics.line (Active.controlPoints)endlove.graphics.setColor (1,1,1)if #Active.line &gt; 2 thenlove.graphics.line (Active.line)endlove.graphics.setLineWidth (3)love.graphics.setColor (1,1,1)for i, road in ipairs (Track) doif road.line thenlove.graphics.line (road.line)love.graphics.circle ('line', road.line[1], road.line[2], 1)endendlove.graphics.circle ('line', Active.x, Active.y, 1)if Active.xEnd thenlove.graphics.circle ('line', Active.xEnd, Active.yEnd, 4)endlove.graphics.setColor (1,1,1)love.graphics.print ('State: '..State.name,0,0)love.graphics.print ('Press SPACE to change state',0,14)love.graphics.print ('Click mouse to add the point',0,28)love.graphics.print ('Press Esc to exit',0,42)endfunction love.mousemoved (mx, my, dx, dy)State.mousemoved (mx, my, dx, dy)endfunction love.mousepressed (mx, my)State.mousepressed (mx, my)endfunction save ()endfunction love.keypressed (key, scancode, isrepeat)if key == "escape" thensave ()love.event.quit()elseif key == "space" thenif State.name == "straight" thenState = States.curveelseState = States.straightendState.updateLines ()elseendend</code></pre></div><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22243&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22243" class="postimage" alt="Screenshot 2023-04-07 174251.png" /></a></dt></dl></div><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=22242">bezier-roads-01.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Fri Apr 07, 2023 3:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2023-04-06T17:58:51+00:00</updated>
+
+		<published>2023-04-06T17:58:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254217#p254217</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254217#p254217"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254217#p254217"><![CDATA[
+I see the trach as an object, that contains:<br>First: piece lengths as relative values&gt;<br>line1 = {30, 40, 40,30}<br>line2 = {20, 40, 40, 40}<br>line3 = {10, 40, 40, 50}<br>where numbers are length of track pieces,<br><br>second: the array of bezier lines,<br><br>third: three arrays of transitions:<br>lane1 = {{right}, {right}, {right}, {right}}<br>lane2 = {{right, left}, {right}, {left}, {right, left}}<br>lane3 = {{left}, {left}, {left}, {left}}<br>(the strait direction is always enabled).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Thu Apr 06, 2023 5:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2023-04-06T13:53:13+00:00</updated>
+
+		<published>2023-04-06T13:53:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254216#p254216</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254216#p254216"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254216#p254216"><![CDATA[
+And I would recommend some path finding such as this (although it might be overkill for this purpose):<br><a href="https://github.com/Yonaba/Jumper" class="postlink">https://github.com/Yonaba/Jumper</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Thu Apr 06, 2023 1:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2023-04-06T13:46:12+00:00</updated>
+
+		<published>2023-04-06T13:46:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254215#p254215</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254215#p254215"/>
+		<title type="html"><![CDATA[Re: How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254215#p254215"><![CDATA[
+Wouldn't this work with a standard grid map?<br><br>E.g. center "rectangle"/lane would be shorter being closer to the center point with outer lane longer by a couple of corner squares. Offsets are more tricky, but if you would use squares, then you could just have some squares merged to create a longer position (e.g. standard square = position, extended double square position, extended triple square position).<br><br>EDIT: I see that you want to have just different lengths in corners? If that's so, then disregard my example.<dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=22241&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=22241" class="postimage" alt="1.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Thu Apr 06, 2023 1:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2023-04-06T13:11:39+00:00</updated>
+
+		<published>2023-04-06T13:11:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254214#p254214</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254214#p254214"/>
+		<title type="html"><![CDATA[How would you store/model this map?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254214#p254214"><![CDATA[
+I'd like to try to recreate a classic board game - Formula D. A key game mechanic on the board game is learning how to position your token (car) so you get the fast inside lane on corners. This leads to interesting game play but complex maps. Here is an example:<br><br><img src="https://i.postimg.cc/BQqDbkVG/image.png" class="postimage" alt="Image"><br><br>You can see there are multiple lanes and you can move between lanes, the lanes are offset, and when you get to the corners there are restrictions on how and where you can change lanes. <br><br>I'd use a large image to draw the board/road/cells but how would I map all the possible moves from one 'cell' to the next? Do I simply number/label each cell behind the scenes and hand code each cell's permissible neighbor into a large table? In most cases, each cell has 2 or 3 permissible neighbors.<br><br>For drawing tokens, I guess each cell would have an x/y to mark the centre of the cell and then an orientation (radians). Any token sitting on any given cell could then be drawn on the screen in the right location with the correct facing.<br><br>Now that I've typed it out - it doesn't seem that hard. I guess large tracks = a lot of hand coding but for prototyping and play-testing I could start with small tracks.<br><br>Would you do this the same way?<br><br><em class="text-italics">For those that have played the classic board game, I hope to add a lot of meta to each car and driver. Finishing races = experience = upgrades and better performances etc. I could even go cyber-punk and put forward/rear facing weapons (more meta). Drivers retire over time meaning you need new drivers so the meta is always changing. Coding bots is always a challenge. I might make a basic machine-learning algorithm so they can teach themselves to drive. I've done that before and may do that again.<br><br>Thanks for reading!</em><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Thu Apr 06, 2023 1:11 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

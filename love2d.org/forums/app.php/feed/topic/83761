@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/83761" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2019-09-05T14:40:24+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/83761</id>
+
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-09-05T14:40:24+00:00</updated>
+
+		<published>2019-09-05T14:40:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=229325#p229325</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=229325#p229325"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=229325#p229325"><![CDATA[
+Please follow the wiki carefully <a href="https://bitbucket.org/brbl/love2d-admob-android/wiki/Instruction" class="postlink">https://bitbucket.org/brbl/love2d-admob ... nstruction</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Thu Sep 05, 2019 2:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Donut-Dezz]]></name></author>
+		<updated>2019-09-04T17:34:27+00:00</updated>
+
+		<published>2019-09-04T17:34:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=229307#p229307</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=229307#p229307"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=229307#p229307"><![CDATA[
+WHO KNOW HOW TO FIX THIS<br><br><br>Execution failed for task ':love:generateJsonModelDebug'.<br>&gt; Build command failed.<br>  Error while executing process C:\Users\owner\Desktop\bio1712-love2d-admob-android-00646218a593\android-ndk-r17c\ndk-build.cmd with arguments {NDK_PROJECT_PATH=null APP_BUILD_SCRIPT=C:\Users\owner\Desktop\bio1712-love2d-admob-android-00646218a593\love\src\jni\Android.mk NDK_APPLICATION_MK=C:\Users\owner\Desktop\bio1712-love2d-admob-android-00646218a593\love\src\jni\Application.mk APP_ABI=arm64-v8a NDK_ALL_ABIS=arm64-v8a NDK_DEBUG=1 APP_PLATFORM=android-14 NDK_OUT=C:/Users/owner/Desktop/bio1712-love2d-admob-android-00646218a593/love/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT=C:\Users\owner\Desktop\bio1712-love2d-admob-android-00646218a593\love\build\intermediates\ndkBuild\debug\lib -j4 APP_SHORT_COMMANDS=false LOCAL_SHORT_COMMANDS=false -B -n}<br>  Android NDK: ERROR:C:/Users/owner/Desktop/bio1712-love2d-admob-android-00646218a593/love/src/jni/LuaJIT-2.1/Android.mk:luajit: LOCAL_SRC_FILES points to a missing file<br>  Android NDK: Check that C:/Users/owner/Desktop/bio1712-love2d-admob-android-00646218a593/love/src/jni/LuaJIT-2.1/android/arm64-v8a/libluajit.a exists  or that its path is correct<br>  process_begin: CreateProcess(NULL, "", ...) failed.<br>  C:/Users/owner/Desktop/bio1712-love2d-admob-android-00646218a593/android-ndk-r17c/build//../build/core/prebuilt-library.mk:45: *** Android NDK: Aborting    .  Stop.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142956">Donut-Dezz</a> — Wed Sep 04, 2019 5:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-06T03:54:18+00:00</updated>
+
+		<published>2017-04-06T03:54:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211451#p211451</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211451#p211451"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211451#p211451"><![CDATA[
+<blockquote class="uncited"><div>WORKED LIKE A CHARM! THANK YOU GUYS!<br><br>It wasn't even difficult, my main problem was getting the right link, like i said, i'm new to a lot of this stuff, github, command lines and etc.<br><br>I think that a guide to get the most recent version is something that would be well received. For a newbie it gets confusing what repository is the right one (since the wikis are kind of merged too).<br><br>And in the wiki you say that downloading a .zip of the repo it's the easiest path, and I only found the .zips in the "Tags" tab, and I thought that the 1.10-0alpha was the most recent one... there was my problem.<br><br>Good work on the code master both, and thank you for the support yetneverdone!</div></blockquote>No Problem! Glad I could be of help <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> Good luck with your work <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Thu Apr 06, 2017 3:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-04-05T17:28:57+00:00</updated>
+
+		<published>2017-04-05T17:28:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211436#p211436</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211436#p211436"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211436#p211436"><![CDATA[
+<blockquote class="uncited"><div>WORKED LIKE A CHARM! THANK YOU GUYS!<br><br>It wasn't even difficult, my main problem was getting the right link, like i said, i'm new to a lot of this stuff, github, command lines and etc.<br><br>I think that a guide to get the most recent version is something that would be well received. For a newbie it gets confusing what repository is the right one (since the wikis are kind of merged too).<br><br>And in the wiki you say that downloading a .zip of the repo it's the easiest path, and I only found the .zips in the "Tags" tab, and I thought that the 1.10-0alpha was the most recent one... there was my problem.<br><br>Good work on the code master both, and thank you for the support yetneverdone!</div></blockquote>Awesome! Glad to help. Im also currently implementing the admob so im also in the situation.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Apr 05, 2017 5:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-04-05T17:23:58+00:00</updated>
+
+		<published>2017-04-05T17:23:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211434#p211434</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211434#p211434"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211434#p211434"><![CDATA[
+WORKED LIKE A CHARM! THANK YOU GUYS!<br><br>It wasn't even difficult, my main problem was getting the right link, like i said, i'm new to a lot of this stuff, github, command lines and etc.<br><br>I think that a guide to get the most recent version is something that would be well received. For a newbie it gets confusing what repository is the right one (since the wikis are kind of merged too).<br><br>And in the wiki you say that downloading a .zip of the repo it's the easiest path, and I only found the .zips in the "Tags" tab, and I thought that the 1.10-0alpha was the most recent one... there was my problem.<br><br>Good work on the code master both, and thank you for the support yetneverdone!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Wed Apr 05, 2017 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-04-05T17:21:44+00:00</updated>
+
+		<published>2017-04-05T17:21:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211433#p211433</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211433#p211433"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211433#p211433"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Did you tried using the current version of the repo? The 0.10.0-alpha and below versions of the repo doesn't have the admob functions implemented. Try this link.</div></blockquote>I thought that the versions that I tried were the most recent, I'm new to git too. I'm gonna try with the link you gave me too.<br><blockquote class="uncited"><div>As a last resort and If you really want it to make it work, I could make the build for you in my machine.<br>Out of curiosity and judging by your username... do you speak spanish?</div></blockquote>I'm gonna discuss this option with my boss if my last build don't work, thank you very much for the offer!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>And I am Brazilian and speak portuguese, but I know that we sound very similar to you haha<br><blockquote class="uncited"><div>Don't give up. We are here to help you. It is worth it when you finally did it</div></blockquote>I'm not giving up yet. Yesterday I was feeling a little bit frustrated when I posted that, but the friendly attitude that I'm receveing in this forum is surely giving me the will to make this work and study more the Love engine and the Lua language (oh, and the Lua was made here in Brazil, nice isn't?)<br><br>Again, thank you all! I'm gonna try the build once more now!</div></blockquote><br>Ofcourse. We are the most loving forum and community haha.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Apr 05, 2017 5:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-04-05T16:34:27+00:00</updated>
+
+		<published>2017-04-05T16:34:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211432#p211432</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211432#p211432"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211432#p211432"><![CDATA[
+<blockquote class="uncited"><div>Did you tried using the current version of the repo? The 0.10.0-alpha and below versions of the repo doesn't have the admob functions implemented. Try this link.</div></blockquote>I thought that the versions that I tried were the most recent, I'm new to git too. I'm gonna try with the link you gave me too.<br><blockquote class="uncited"><div>As a last resort and If you really want it to make it work, I could make the build for you in my machine.<br>Out of curiosity and judging by your username... do you speak spanish?</div></blockquote>I'm gonna discuss this option with my boss if my last build don't work, thank you very much for the offer!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>And I am Brazilian and speak portuguese, but I know that we sound very similar to you haha<br><blockquote class="uncited"><div>Don't give up. We are here to help you. It is worth it when you finally did it</div></blockquote>I'm not giving up yet. Yesterday I was feeling a little bit frustrated when I posted that, but the friendly attitude that I'm receveing in this forum is surely giving me the will to make this work and study more the Love engine and the Lua language (oh, and the Lua was made here in Brazil, nice isn't?)<br><br>Again, thank you all! I'm gonna try the build once more now!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Wed Apr 05, 2017 4:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-04-05T02:27:33+00:00</updated>
+
+		<published>2017-04-05T02:27:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211409#p211409</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211409#p211409"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211409#p211409"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Ok, so the problem is that you're using the normal/vanilla version of LÖVE by using Martin's repo, you have to use mine (npinochet's) to use the AdMobs functions. So just rebuild your game with npinochet's repo and it should work.</div></blockquote>Made builds with 0.10.0-alpha, 0.9.2a and 0.9.2 versions of npinochet's repo. I'm getting the same error message...<br><br>One funny thing is that with this repository, the game accepts touchs to jump the "intro" to the game, but once it gets to the main menu, the touches stops working (all buttons became useless, but in PC they work normal)<br><br>I'm almost giving up, AdMobs don't even return that much money. The thing is that my boss asked me to do this task, and I wanted to deliver, but I thinks this is beyond my programming skills, it juts won't work! But I appreciate all the help you guys gave me.</div></blockquote>Don't give up. We are here to help you. It is worth it when you finally did it<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Apr 05, 2017 2:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-05T01:41:12+00:00</updated>
+
+		<published>2017-04-05T01:41:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211408#p211408</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211408#p211408"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211408#p211408"><![CDATA[
+<blockquote class="uncited"><div>Made builds with 0.10.0-alpha, 0.9.2a and 0.9.2 versions of npinochet's repo. I'm getting the same error message...<br><br>One funny thing is that with this repository, the game accepts touchs to jump the "intro" to the game, but once it gets to the main menu, the touches stops working (all buttons became useless, but in PC they work normal)<br><br>I'm almost giving up, AdMobs don't even return that much money. The thing is that my boss asked me to do this task, and I wanted to deliver, but I thinks this is beyond my programming skills, it juts won't work! But I appreciate all the help you guys gave me.</div></blockquote>Did you tried using the current version of the repo? The 0.10.0-alpha and below versions of the repo doesn't have the admob functions implemented. Try <a href="https://bitbucket.org/npinochet/love-android-sdl2/get/9899905ea985.zip" class="postlink">this link</a>.<br>As a last resort and If you really want it to make it work, I could make the build for you in my machine.<br>Out of curiosity and judging by your username... do you speak spanish?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Wed Apr 05, 2017 1:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-04-04T19:25:26+00:00</updated>
+
+		<published>2017-04-04T19:25:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211395#p211395</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211395#p211395"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211395#p211395"><![CDATA[
+<blockquote class="uncited"><div>Ok, so the problem is that you're using the normal/vanilla version of LÖVE by using Martin's repo, you have to use mine (npinochet's) to use the AdMobs functions. So just rebuild your game with npinochet's repo and it should work.</div></blockquote>Made builds with 0.10.0-alpha, 0.9.2a and 0.9.2 versions of npinochet's repo. I'm getting the same error message...<br><br>One funny thing is that with this repository, the game accepts touchs to jump the "intro" to the game, but once it gets to the main menu, the touches stops working (all buttons became useless, but in PC they work normal)<br><br>I'm almost giving up, AdMobs don't even return that much money. The thing is that my boss asked me to do this task, and I wanted to deliver, but I thinks this is beyond my programming skills, it juts won't work! But I appreciate all the help you guys gave me.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Tue Apr 04, 2017 7:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-04-04T06:52:38+00:00</updated>
+
+		<published>2017-04-04T06:52:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211379#p211379</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211379#p211379"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211379#p211379"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Ok so first, there's no need to modify GameActivity and there's also no need to add the google play library since it's already on the lib path on my repo, you just have to follow the instructions on the wiki on how to build the apk, so basically just follow the steps from here: [Windows, macOS, Linux] which can be resumed in 1) install dependencies 2) clone repo 3) run ndk-build 4) run ant. After all of that is working you can follow this instructions [link] to package you game with the apk.<br><br>If you have any problem with those steps, let me know <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Also I remember to check the OS for android before calling the love.system.*ads/google functions to avoid errors when running the game on desktop:</div></blockquote>Ok, I restarted all the process.<br>Made damn sure that all dependencies where correctly installed and accessible by the system.<br>Java - 1.8.0_121<br>Cordova - 6.5.0<br>Ant - 1.10.1<br>NDK - (downgraded to r9d)<br>SDK - (downgraded to 4.4.2, but didn't delete the newer ones)<br>SDK Build-Tools Rev 19.1 (again, didn't deleted the newer ones)<br><br><br>Downloaded the repo (the Martin Felis one, I suppose it's to ignore the npinochet one?) in .zip, the 0.10.2 version.<br><br>Made the ndk-build, then made the ant debug deploy. <br>Put my game.love in the assets folder, put own ad in the configurations and made a check for the OS and deployed the game again.<br><br>I got the same error reported in my first post: attempt to call method 'createBanner' (a nil value).<br><br>(Oh, and building is not the problem, without these functions the game works normally)<br><br> Any suggestions?</div></blockquote><br>Mine works fine. No need to downgrade ndk, you can use the latest version. Yes, you need to use the other repo, not the martin.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Tue Apr 04, 2017 6:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-04T02:25:47+00:00</updated>
+
+		<published>2017-04-04T02:25:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211375#p211375</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211375#p211375"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211375#p211375"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Ok so first, there's no need to modify GameActivity and there's also no need to add the google play library since it's already on the lib path on my repo, you just have to follow the instructions on the wiki on how to build the apk, so basically just follow the steps from here: [Windows, macOS, Linux] which can be resumed in 1) install dependencies 2) clone repo 3) run ndk-build 4) run ant. After all of that is working you can follow this instructions [link] to package you game with the apk.<br><br>If you have any problem with those steps, let me know <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Also I remember to check the OS for android before calling the love.system.*ads/google functions to avoid errors when running the game on desktop:</div></blockquote>Ok, I restarted all the process.<br>Made damn sure that all dependencies where correctly installed and accessible by the system.<br>Java - 1.8.0_121<br>Cordova - 6.5.0<br>Ant - 1.10.1<br>NDK - (downgraded to r9d)<br>SDK - (downgraded to 4.4.2, but didn't delete the newer ones)<br>SDK Build-Tools Rev 19.1 (again, didn't deleted the newer ones)<br><br><br><span style="text-decoration:underline">Downloaded the repo (the Martin Felis one, I suppose it's to ignore the npinochet one?) in .zip, the 0.10.2 version.</span><br><br>Made the ndk-build, then made the ant debug deploy. <br>Put my game.love in the assets folder, put own ad in the configurations and made a check for the OS and deployed the game again.<br><br>I got the same error reported in my first post: attempt to call method 'createBanner' (a nil value).<br><br>(Oh, and building is not the problem, without these functions the game works normally)<br><br> Any suggestions?</div></blockquote>Ok, so the problem is that you're using the normal/vanilla version of LÖVE by using Martin's repo, you have to use mine (npinochet's) to use the AdMobs functions. So just rebuild your game with npinochet's repo and it should work.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Tue Apr 04, 2017 2:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-04-03T19:55:19+00:00</updated>
+
+		<published>2017-04-03T19:55:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211363#p211363</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211363#p211363"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211363#p211363"><![CDATA[
+<blockquote class="uncited"><div>Ok so first, there's no need to modify GameActivity and there's also no need to add the google play library since it's already on the lib path on my repo, you just have to follow the instructions on the wiki on how to build the apk, so basically just follow the steps from here: [Windows, macOS, Linux] which can be resumed in 1) install dependencies 2) clone repo 3) run ndk-build 4) run ant. After all of that is working you can follow this instructions [link] to package you game with the apk.<br><br>If you have any problem with those steps, let me know <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Also I remember to check the OS for android before calling the love.system.*ads/google functions to avoid errors when running the game on desktop:</div></blockquote>Ok, I restarted all the process.<br>Made damn sure that all dependencies where correctly installed and accessible by the system.<br>Java - 1.8.0_121<br>Cordova - 6.5.0<br>Ant - 1.10.1<br>NDK - (downgraded to r9d)<br>SDK - (downgraded to 4.4.2, but didn't delete the newer ones)<br>SDK Build-Tools Rev 19.1 (again, didn't deleted the newer ones)<br><br><br>Downloaded the repo (the Martin Felis one, I suppose it's to ignore the npinochet one?) in .zip, the 0.10.2 version.<br><br>Made the ndk-build, then made the ant debug deploy. <br>Put my game.love in the assets folder, put own ad in the configurations and made a check for the OS and deployed the game again.<br><br>I got the same error reported in my first post: attempt to call method 'createBanner' (a nil value).<br><br>(Oh, and building is not the problem, without these functions the game works normally)<br><br> Any suggestions?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Mon Apr 03, 2017 7:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-01T04:25:10+00:00</updated>
+
+		<published>2017-04-01T04:25:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211294#p211294</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211294#p211294"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211294#p211294"><![CDATA[
+<blockquote class="uncited"><div>Oh, sorry for the misunderstanding! <br><br>Well, the person who passed me this task already had ported the game with the Martin Felis repository. I made my own builds with his and yours repository, and tested in a Android device and it runned normally.<br><br>It's these new love.system functions that I can't use for the life of me. <br><br>When you say that adding the google play library is not anymore necessary, the changes to the GameActivity still need to be made? Because with these changes, the project can only be build sucessfully after including "google.gms.ad.* " (or something like this) in the beggining of the class.<br><br>Could you tell me some steps so that your new functions can be acessed by my code? I think this is the main problem...</div></blockquote>Ok so first, there's no need to modify GameActivity and there's also no need to add the google play library since it's already on the lib path on my repo, you just have to follow the instruccions on the wiki on how to build the apk, so basically just follow the steps from here: [<a href="https://bitbucket.org/MartinFelis/love-android-sdl2/wiki/Building_L%C3%96VE_for_Android_-_Windows" class="postlink">Windows</a>, <a href="https://bitbucket.org/MartinFelis/love-android-sdl2/wiki/Building_L%C3%96VE_for_Android_-_Mac_OS_X" class="postlink">macOS</a>, <a href="https://bitbucket.org/MartinFelis/love-android-sdl2/wiki/Building_L%C3%96VE_for_Android_-_Linux" class="postlink">Linux</a>] which can be resumed in 1) install dependencies 2) clone repo 3) run ndk-build 4) run ant. After all of that is working you can follow this instruccions [<a href="https://bitbucket.org/MartinFelis/love-android-sdl2/wiki/Game_Packaging" class="postlink">link</a>] to package you game with the apk.<br><br>If you have any problem with those steps, let me know <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Also I remember to check the OS for android before calling the love.system.*ads/google functions to avoid errors when running the game on desktop:<div class="codebox"><p>Code: </p><pre><code>function love.load()if love.system.getOS() == "Android" thenlove.system.createBanner("ca-app-pub-9796530573307706/1938301675", "bottom", "SMART_BANNER")love.system.showBanner()endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Sat Apr 01, 2017 4:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-03-31T17:59:28+00:00</updated>
+
+		<published>2017-03-31T17:59:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211284#p211284</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211284#p211284"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211284#p211284"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>Hi! I'm the creator of the AdMob port. First to be clear, I'm not Martin Felis, I just forked (cloned) his repository and added the AdMob functions on top of it. It looks like you're having problems building your game with my repository, which is odd, cause it's the same process as martin's repository. You can PM me with your errors and I will try to help you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote> <br><br>Say, wouldnt it be more helpful if you would also help OP in this thread? So future askers would refer to this thread. <br>I also would like to implement admob since im currently porting my game to android. So a clear and updated instruction would be helpful.</div></blockquote>Sure I can do that <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Awesome then.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Mar 31, 2017 5:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-03-31T16:18:20+00:00</updated>
+
+		<published>2017-03-31T16:18:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211282#p211282</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211282#p211282"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211282#p211282"><![CDATA[
+Oh, sorry for the misunderstanding! <br><br>Well, the person who passed me this task already had ported the game with the Martin Felis repository. I made my own builds with his and yours repository, and tested in a Android device and it runned normally.<br><br>It's these new love.system functions that I can't use for the life of me. <br><br>When you say that adding the google play library is not anymore necessary, the changes to the GameActivity still need to be made? Because with these changes, the project can only be build sucessfully after including "google.gms.ad.* " (or something like this) in the beggining of the class.<br><br>Could you tell me some steps so that your new functions can be acessed by my code? I think this is the main problem...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Fri Mar 31, 2017 4:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-03-31T15:56:34+00:00</updated>
+
+		<published>2017-03-31T15:56:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211281#p211281</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211281#p211281"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211281#p211281"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hi! I'm the creator of the AdMob port. First to be clear, I'm not Martin Felis, I just forked (cloned) his repository and added the AdMob functions on top of it. It looks like you're having problems building your game with my repository, which is odd, cause it's the same process as martin's repository. You can PM me with your errors and I will try to help you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote> <br><br>Say, wouldnt it be more helpful if you would also help OP in this thread? So future askers would refer to this thread. <br>I also would like to implement admob since im currently porting my game to android. So a clear and updated instruction would be helpful.</div></blockquote>Sure I can do that <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Fri Mar 31, 2017 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-03-31T07:03:05+00:00</updated>
+
+		<published>2017-03-31T07:03:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211262#p211262</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211262#p211262"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211262#p211262"><![CDATA[
+<blockquote class="uncited"><div>Hi! I'm the creator of the AdMob port. First to be clear, I'm not Martin Felis, I just forked (cloned) his repository and added the AdMob functions on top of it. It looks like you're having problems building your game with my repository, which is odd, cause it's the same process as martin's repository. You can PM me with your errors and I will try to help you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote> <br><br>Say, wouldnt it be more helpful if you would also help OP in this thread? So future askers would refer to this thread. <br>I also would like to implement admob since im currently porting my game to android. So a clear and updated instruction would be helpful.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Mar 31, 2017 7:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-03-31T02:41:23+00:00</updated>
+
+		<published>2017-03-31T02:41:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211256#p211256</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211256#p211256"/>
+		<title type="html"><![CDATA[Re: Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211256#p211256"><![CDATA[
+Hi! I'm the creator of the AdMob port. First to be clear, I'm not Martin Felis, I just forked (cloned) his repository and added the AdMob functions on top of it. It looks like you're having problems building your game with my repository, which is odd, cause it's the same process as martin's repository. You can PM me with your errors and I will try to help you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Fri Mar 31, 2017 2:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phfranqueira]]></name></author>
+		<updated>2017-03-30T18:47:37+00:00</updated>
+
+		<published>2017-03-30T18:47:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211252#p211252</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211252#p211252"/>
+		<title type="html"><![CDATA[Help in creating banner with Martin Felis android port]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211252#p211252"><![CDATA[
+I am a beginner  in LÖVE development, English is not my first language and this is my first post in this forum... so HELLO!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br><br>Well, I was designated with the task of implementing an AdMob banner ad in a game made with LÖVE, already ported to Android using the Martin Felis port, but the older version:<br><br><a href="https://bitbucket.org/MartinFelis/love-android-sdl2/overview" class="postlink">https://bitbucket.org/MartinFelis/love- ... 2/overview</a><br><br>I tried a lot of things, without success. Then I stumbled with a more recent forum topic, where Martin (master both) says that adding google play services library is not needed anymore. To show ads, is just necessary to call the functions he created, like "love.system.showBanner()". In this topic, he links to a new bitbucket url with, I think, a more recent version of the port:<br><br><a href="https://bitbucket.org/npinochet/love-android-sdl2/overview" class="postlink">https://bitbucket.org/npinochet/love-an ... 2/overview</a><br><br>Well... I tried a number of things to make this banner appear:<br>&gt;I tried adding google play lib in the older port, the one that already had the game that i need to implement the banner with;<br>&gt;I tried porting the game to the nem port, the one in the npinochet repository, that doesn't need the google play library, but the game couldn't generate a build<br>&gt;At last, i tried adding the library in this new port that doesn't require it, and it finally generated a build. BUT<br><br>The main error that i keep getting, the dead-end in all these alternatives I tried, is that the game doesn't recognize the new functions Martin created, createBanner() and showBanner().<br><br>The message error I get is the following:<br><br><img src="https://image.ibb.co/nCDqMF/ss.jpg" class="postimage" alt="Image"><br><br>In these last days I already learned about Ant apache, NDK, adding libraries without gradle or IDE and using adb debugger to track errors. But now i hit this dead end, and I don't know what to try anymore.<br><br>Any help? (I tried to PM Martin, but I couldn't)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139043">phfranqueira</a> — Thu Mar 30, 2017 6:47 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

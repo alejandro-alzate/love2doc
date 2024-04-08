@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84594" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2018-06-09T09:17:54+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84594</id>
+
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2018-06-09T09:17:54+00:00</updated>
+
+		<published>2018-06-09T09:17:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221392#p221392</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221392#p221392"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221392#p221392"><![CDATA[
+I tried playing it from 0.10.2 so it doesn't seem related to love.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Sat Jun 09, 2018 9:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2018-06-09T08:03:32+00:00</updated>
+
+		<published>2018-06-09T08:03:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221388#p221388</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221388#p221388"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221388#p221388"><![CDATA[
+Maybe. But I don't use SQL. Howewer, I use openSSH server, but my account is locked my unbreakable password... So, I found maps' copies in another directory. But for some reason my game still does not works normally in LOVE 11.0<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Sat Jun 09, 2018 8:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2018-06-09T07:31:50+00:00</updated>
+
+		<published>2018-06-09T07:31:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221387#p221387</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221387#p221387"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221387#p221387"><![CDATA[
+I got the same error as pgimeno. <br>Maybe someone got rid of the maps via SQL injection? (if you even use SQL)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Sat Jun 09, 2018 7:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2018-06-09T03:02:43+00:00</updated>
+
+		<published>2018-06-09T03:02:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221383#p221383</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221383#p221383"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221383#p221383"><![CDATA[
+It seems somehow ALL maps disappeared!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Sat Jun 09, 2018 3:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2018-06-08T23:56:13+00:00</updated>
+
+		<published>2018-06-08T23:56:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221380#p221380</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221380#p221380"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221380#p221380"><![CDATA[
+Thank you! It crashes when I select Host a game.<br><div class="codebox"><p>Code: </p><pre><code>core/init.lua:79: FATAL ERROR!main.lua:341: bad argument #1 to 'unpack' (table expected, got nil)stack traceback:[C]: in function 'error'core/init.lua:79: in function 'res'core/init.lua:107: in function &lt;core/init.lua:87&gt;[C]: in function 'xpcall'[string "boot.lua"]:569: in function &lt;[string "boot.lua"]:564&gt;</code></pre></div>(I had to hack into it a bit in order to obtain the backtrace in the console so I could paste it)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Fri Jun 08, 2018 11:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2018-06-08T00:10:30+00:00</updated>
+
+		<published>2018-06-08T00:10:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221346#p221346</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221346#p221346"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221346#p221346"><![CDATA[
+There is an update! I optimized the network and improved graphics! Check the first post.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> <br><blockquote class="uncited"><div>"File has been removed due to inactivity" <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"></div></blockquote>You can try downloading it from the first post.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Fri Jun 08, 2018 12:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2018-03-20T13:06:35+00:00</updated>
+
+		<published>2018-03-20T13:06:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219376#p219376</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219376#p219376"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219376#p219376"><![CDATA[
+"File has been removed due to inactivity" <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Mar 20, 2018 1:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2017-11-26T08:08:19+00:00</updated>
+
+		<published>2017-11-26T06:14:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216797#p216797</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216797#p216797"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216797#p216797"><![CDATA[
+I'm going to make this game very very small. Then I'll upload this game here.<blockquote class="uncited"><div>So the questions then are,<br>1. Does löve's forums block file download from unregistered accounts, and<br>2. Can one upload a 75 Megabyte attachment here.</div></blockquote>This forum doesn't block downloads from unregistered users<blockquote class="uncited"><div>Wow you really choose the worst file hosters around, I forgot I downloaded this thing since I download with 12kb from that website.<br><br>Anyways, I played it. And the programmer side of me is impressed. I mean, this is basically multiplayer, and runs fine. No bugs other than the graphics side stuff. <br>It ... uh.. just needs polishing... like ... a lot. There's some noticable tile bleeding when it zooms out (I can see through the borders of the tile). And the graphics are just ... programmer art. Get some stuff from opengameart and make it more pleasant for the eyes <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>Good luck.</div></blockquote>Thank you!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Sun Nov 26, 2017 6:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2017-11-26T00:03:17+00:00</updated>
+
+		<published>2017-11-26T00:03:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216796#p216796</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216796#p216796"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216796#p216796"><![CDATA[
+The actual game is 35 MB. The download is 75MB because it includes an apk file as well. I can upload the .love file here (or on a website with a direct link) if you want.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun Nov 26, 2017 12:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2017-11-25T20:54:13+00:00</updated>
+
+		<published>2017-11-25T20:54:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216795#p216795</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216795#p216795"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216795#p216795"><![CDATA[
+1. It doesn't block<br>2. 110mb not possible, 40 mb possible, so I'm not sure it does.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Sat Nov 25, 2017 8:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-11-25T20:05:20+00:00</updated>
+
+		<published>2017-11-25T20:05:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216793#p216793</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216793#p216793"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216793#p216793"><![CDATA[
+So the questions then are,<br>1. Does löve's forums block file download from unregistered accounts, and<br>2. Can one upload a 75 Megabyte attachment here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sat Nov 25, 2017 8:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2017-11-25T18:12:26+00:00</updated>
+
+		<published>2017-11-25T18:12:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216791#p216791</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216791#p216791"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216791#p216791"><![CDATA[
+Maybe he wants to share it with others, and thinks the forum will block his link for unregistered users.<br>At least I know a major russian forum cs.rin.ru does this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Sat Nov 25, 2017 6:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-11-25T18:07:14+00:00</updated>
+
+		<published>2017-11-25T18:07:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216789#p216789</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216789#p216789"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216789#p216789"><![CDATA[
+Can anyone explain to me why the hell is uploading data to a file hoster is in any way BETTER than uploading it as an attachment HERE?<br>Especially when you yourself said that you didn't want to waste traffic? you basically did, twice already.<br>Edit: Excuse my salt levels, but still.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sat Nov 25, 2017 6:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2017-11-25T16:20:25+00:00</updated>
+
+		<published>2017-11-25T16:20:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216787#p216787</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216787#p216787"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216787#p216787"><![CDATA[
+Wow you really choose the worst file hosters around, I forgot I downloaded this thing since I download with 12kb from that website.<br><br>Anyways, I played it. And the programmer side of me is impressed. I mean, this is basically multiplayer, and runs fine. No bugs other than the graphics side stuff. <br>It ... uh.. just needs polishing... like ... a lot. There's some noticable tile bleeding when it zooms out (I can see through the borders of the tile). And the graphics are just ... programmer art. Get some stuff from opengameart and make it more pleasant for the eyes <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>Good luck.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Sat Nov 25, 2017 4:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2017-11-25T04:52:53+00:00</updated>
+
+		<published>2017-11-25T04:52:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216778#p216778</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216778#p216778"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216778#p216778"><![CDATA[
+<blockquote class="uncited"><div>No, you're wrong. You do need a TAS-IX account. Even after I go through the captcha and press Скачатъ it shows a message about not being a TAS-IX member. Same thing for the direct link. Try logging out of your account and you will see the same.  <br>In the future, you can upload .love files directly in the forum.</div></blockquote>But there's no any account system.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"><br>Oh. Sorry. filebox.uz really blocks non-Tas-Ix users (If your Internet provider isn't in Tas-IX, you're non-Tas-IX user) . Now I will try dump.uz<br><a href="https://dump.uz/fc94c5ce813be3f4814b16dcf6ab06e5" class="postlink">https://dump.uz/fc94c5ce813be3f4814b16dcf6ab06e5</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Sat Nov 25, 2017 4:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-11-24T10:02:19+00:00</updated>
+
+		<published>2017-11-24T10:02:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216760#p216760</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216760#p216760"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216760#p216760"><![CDATA[
+Besides, you spent exactly 35 megabytes of traffic uploading it to that site than if you had just uploaded it here... though to be honest, i'm not sure whether this forum has a filesize limit or not...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Nov 24, 2017 10:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2017-11-24T08:31:29+00:00</updated>
+
+		<published>2017-11-24T08:31:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216759#p216759</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216759#p216759"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216759#p216759"><![CDATA[
+No, you're wrong. You do need a TAS-IX account. Even after I go through the captcha and press Скачатъ it shows a message about not being a TAS-IX member. Same thing for the direct link. Try logging out of your account and you will see the same.  <br>In the future, you can upload .love files directly in the forum.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Fri Nov 24, 2017 8:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2017-11-24T04:20:15+00:00</updated>
+
+		<published>2017-11-24T04:20:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216755#p216755</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216755#p216755"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216755#p216755"><![CDATA[
+I'm afraid to spend 35 megabytes of traffic. You don't need Tas-Ix account. The site thinks you're robot <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> . Try click on button below "Я не робот" text. This is captcha. And then press "Скачать" button.<br>Or you can try this direct link:<br><a href="http://filebox.uz/d/430f632e09aca5c36bfa9dcbeb8945d14a96a66f/CarWar.love" class="postlink">http://filebox.uz/d/430f632e09aca5c36bf ... arWar.love</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Fri Nov 24, 2017 4:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Pebsie]]></name></author>
+		<updated>2017-11-19T15:56:21+00:00</updated>
+
+		<published>2017-11-19T15:56:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216661#p216661</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216661#p216661"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216661#p216661"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>I don't know what to click <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".</div></blockquote>You need account on TAS-IX for download this <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Would you be able to upload a .love file as an attachment to the OP instead? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134253">Pebsie</a> — Sun Nov 19, 2017 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bludburn]]></name></author>
+		<updated>2017-11-19T13:44:34+00:00</updated>
+
+		<published>2017-11-19T13:44:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216658#p216658</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216658#p216658"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216658#p216658"><![CDATA[
+<blockquote class="uncited"><div>I don't know what to click <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".</div></blockquote>You need account on TAS-IX for download this <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139479">bludburn</a> — Sun Nov 19, 2017 1:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-11-18T16:15:44+00:00</updated>
+
+		<published>2017-11-18T16:15:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216644#p216644</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216644#p216644"/>
+		<title type="html"><![CDATA[Re: CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216644#p216644"><![CDATA[
+I don't know what to click <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Sat Nov 18, 2017 4:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TC1061]]></name></author>
+		<updated>2018-06-08T00:18:51+00:00</updated>
+
+		<published>2017-11-18T05:55:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216641#p216641</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216641#p216641"/>
+		<title type="html"><![CDATA[CarWar]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216641#p216641"><![CDATA[
+This is my first playable game. Enjoy!<br>P. S. Thanks to Azhukar<br>P. P. S. The game become smaller. I uploaded it here instead of uploading it to any file hoster.<br>P. P. P. S. Update! New graphics and new music!<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=16378">CarWar.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139550">TC1061</a> — Sat Nov 18, 2017 5:55 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

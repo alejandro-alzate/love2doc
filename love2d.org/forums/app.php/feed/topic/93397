@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/93397" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2022-09-07T08:13:14+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/93397</id>
+
+		<entry>
+		<author><name><![CDATA[glitchapp]]></name></author>
+		<updated>2022-09-07T08:13:14+00:00</updated>
+
+		<published>2022-09-07T08:13:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250574#p250574</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250574#p250574"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250574#p250574"><![CDATA[
+<blockquote class="uncited"><div>Then why are you stating to use box2d?<br>Anyway for tiles, i tried writing a tutorial for that a while back:pathfinding.love</div></blockquote>Finally an easy library that I think I could use on my stealth game prototype, just in case anyone want to test the game (and / or help with the implementation): <a href="https://codeberg.org/glitchapp/stealthgame" class="postlink">https://codeberg.org/glitchapp/stealthgame</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=182764">glitchapp</a> — Wed Sep 07, 2022 8:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Evanzap]]></name></author>
+		<updated>2022-07-07T00:12:47+00:00</updated>
+
+		<published>2022-07-07T00:12:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249373#p249373</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249373#p249373"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249373#p249373"><![CDATA[
+<blockquote class="uncited"><div>Then why are you stating to use box2d?<br>Anyway for tiles, i tried writing a tutorial for that a while back:pathfinding.love</div></blockquote>i'm using sti and a script to convert objects into colliders, it's quick and easy<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=198759">Evanzap</a> — Thu Jul 07, 2022 12:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2022-07-06T23:35:35+00:00</updated>
+
+		<published>2022-07-06T23:35:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249372#p249372</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249372#p249372"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249372#p249372"><![CDATA[
+Then why are you stating to use box2d?<br>Anyway for tiles, i tried writing a tutorial for that a while back:<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=21277">pathfinding.love</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Jul 06, 2022 11:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Evanzap]]></name></author>
+		<updated>2022-07-06T23:20:06+00:00</updated>
+
+		<published>2022-07-06T23:20:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249371#p249371</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249371#p249371"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249371#p249371"><![CDATA[
+<blockquote class="uncited"><div>The problem is that box2d isnt really nice for pathfinding.<br>If you use tiles or a hexagon map pathfinding is just a couple of easy lines. That is because collision is easy there too, we just have to touch tiles till we find the target and then traverse back.<br><br>But on  free movable objects you can not go around and touch every way possible, that would be an infinitive work.<br>I other words, that is a complicated task. There are however solutions on this forum for it.</div></blockquote>I use tiles, there are no curves or anything<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=198759">Evanzap</a> — Wed Jul 06, 2022 11:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2022-07-06T07:09:09+00:00</updated>
+
+		<published>2022-07-06T07:09:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249353#p249353</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249353#p249353"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249353#p249353"><![CDATA[
+Nice text about pathfinding and optimization:<br><a href="https://factorio.com/blog/post/fff-317" class="postlink">https://factorio.com/blog/post/fff-317</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Wed Jul 06, 2022 7:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MrFariator]]></name></author>
+		<updated>2022-07-05T19:16:30+00:00</updated>
+
+		<published>2022-07-05T19:16:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249341#p249341</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249341#p249341"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249341#p249341"><![CDATA[
+You say you want to accomplish this without nodes, but as BrotSagtMist says, pathfinding is easier to do on those nodes. If you can split the map so that it forms a grid, you can use that grid as the basis for the path finding over larger distances. Once the actor is close enough to its goal, you can ignore the grid, and use some other methods, if so desired.<br><br>In the end, how to approach this will ultimately depend on how your maps are structured.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138465">MrFariator</a> — Tue Jul 05, 2022 7:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2022-07-05T17:37:44+00:00</updated>
+
+		<published>2022-07-05T17:37:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249335#p249335</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249335#p249335"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249335#p249335"><![CDATA[
+The problem is that box2d isnt really nice for pathfinding.<br>If you use tiles or a hexagon map pathfinding is just a couple of easy lines. That is because collision is easy there too, we just have to touch tiles till we find the target and then traverse back.<br><br>But on  free movable objects you can not go around and touch every way possible, that would be an infinitive work.<br>I other words, that is a complicated task. There are however solutions on this forum for it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Tue Jul 05, 2022 5:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Evanzap]]></name></author>
+		<updated>2022-07-05T17:07:08+00:00</updated>
+
+		<published>2022-07-05T17:07:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249333#p249333</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249333#p249333"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249333#p249333"><![CDATA[
+<blockquote class="uncited"><div>Spawn agent<br>Find a path<br>Move along path<br><br>Which bit does your question relate to?</div></blockquote>I guess find a path and move along path<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=198759">Evanzap</a> — Tue Jul 05, 2022 5:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-07-05T05:44:13+00:00</updated>
+
+		<published>2022-07-05T05:44:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249287#p249287</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249287#p249287"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249287#p249287"><![CDATA[
+Spawn agent<br>Find a path<br>Move along path<br><br>Which bit does your question relate to?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Tue Jul 05, 2022 5:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[darkfrei]]></name></author>
+		<updated>2022-07-05T05:36:59+00:00</updated>
+
+		<published>2022-07-05T05:36:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249285#p249285</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249285#p249285"/>
+		<title type="html"><![CDATA[Re: How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249285#p249285"><![CDATA[
+Simple way: don't do that, for example don't check the collision or don't use the pathfinding, just wait until the player will be on the straight line to this agent.<br><br>For other situations you can use the astar <a href="https://en.wikipedia.org/wiki/A*_search_algorithm" class="postlink">https://en.wikipedia.org/wiki/A*_search_algorithm</a> or any other the pathfinding solutions.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145963">darkfrei</a> — Tue Jul 05, 2022 5:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Evanzap]]></name></author>
+		<updated>2022-07-04T16:54:14+00:00</updated>
+
+		<published>2022-07-04T16:54:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=249222#p249222</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=249222#p249222"/>
+		<title type="html"><![CDATA[How to make an ai that goes to a specific point]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=249222#p249222"><![CDATA[
+Hello! How would I go about making a function that spawns in an ai that can path find and then take that route to the location. The collision method I use is box2d. If there is a way that i could do this without messing with node things that would be great!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=198759">Evanzap</a> — Mon Jul 04, 2022 4:54 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

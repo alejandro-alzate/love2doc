@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1308" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2010-11-14T13:35:21+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1308</id>
+
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-11-14T13:35:21+00:00</updated>
+
+		<published>2010-11-14T13:35:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22368#p22368</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22368#p22368"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22368#p22368"><![CDATA[
+Please excuse me, I was being daft. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-uhm.png" width="16" height="16" alt=":roll:" title="Rolling Eyes"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Nov 14, 2010 1:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-11-14T12:52:37+00:00</updated>
+
+		<published>2010-11-14T12:52:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22366#p22366</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22366#p22366"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22366#p22366"><![CDATA[
+<blockquote class="uncited"><div>(devs: it's not in the changelog yet, right?)</div></blockquote>Yes it is.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sun Nov 14, 2010 12:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-11-14T12:47:21+00:00</updated>
+
+		<published>2010-11-14T12:47:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22365#p22365</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22365#p22365"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22365#p22365"><![CDATA[
+<blockquote class="uncited"><div>Oh! Didn't know that. Must have been changed in a very recent build.</div></blockquote>It was committed a week ago, so any build since that time has the change. (devs: it's not in the changelog yet, right?)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Nov 14, 2010 12:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[qubodup]]></name></author>
+		<updated>2010-11-14T11:25:27+00:00</updated>
+
+		<published>2010-11-14T11:25:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22361#p22361</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22361#p22361"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22361#p22361"><![CDATA[
+The file from the first post segfaults<br><br>LOVE 0.7.0 (Game Slave)<br><br>Arch Linux 32bit / love-beta 0.7.0-1<br><br>Asus EeePC 1000H<br><div class="codebox"><p>Code: </p><pre><code>[Thread debugging using libthread_db enabled][New Thread 0xb6fc0b70 (LWP 8829)]Program received signal SIGSEGV, Segmentation fault.0x080d7f4f in ?? ()(gdb) bt#0  0x080d7f4f in ?? ()#1  0x080df7b3 in ?? ()#2  0x080d357b in ?? ()#3  0xb7cbfe18 in ?? () from /usr/lib/liblua.so#4  0xb7cc9e62 in ?? () from /usr/lib/liblua.so#5  0xb7cc02c8 in ?? () from /usr/lib/liblua.so#6  0xb7cbad41 in ?? () from /usr/lib/liblua.so#7  0xb7cbf607 in ?? () from /usr/lib/liblua.so#8  0xb7cc045c in ?? () from /usr/lib/liblua.so#9  0xb7cbc08b in lua_pcall () from /usr/lib/liblua.so#10 0xb7cccd0a in ?? () from /usr/lib/liblua.so#11 0xb7cbfe18 in ?? () from /usr/lib/liblua.so#12 0xb7cc9e62 in ?? () from /usr/lib/liblua.so#13 0xb7cc02c8 in ?? () from /usr/lib/liblua.so#14 0xb7cbc005 in lua_call () from /usr/lib/liblua.so#15 0x08054060 in ?? ()#16 0xb78bac76 in __libc_start_main () from /lib/libc.so.6#17 0x0804f001 in ?? ()</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83">qubodup</a> — Sun Nov 14, 2010 11:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-11-14T10:51:23+00:00</updated>
+
+		<published>2010-11-14T10:51:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22359#p22359</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22359#p22359"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22359#p22359"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>There was no "Benchmarker" directory in ~/.love (running 0.7.0)</div></blockquote>Wasn't the save dir on Linux moved to ~/.local/share/love recently? Depends on the build you use of course.</div></blockquote>Oh! Didn't know that. Must have been changed in a very recent build.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Sun Nov 14, 2010 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-11-14T10:43:23+00:00</updated>
+
+		<published>2010-11-14T10:43:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22358#p22358</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22358#p22358"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22358#p22358"><![CDATA[
+<blockquote class="uncited"><div>There was no "Benchmarker" directory in ~/.love (running 0.7.0)</div></blockquote>Wasn't the save dir on Linux moved to ~/.local/share/love recently? Depends on the build you use of course.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Nov 14, 2010 10:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-11-14T10:39:58+00:00</updated>
+
+		<published>2010-11-14T10:39:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22357#p22357</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22357#p22357"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22357#p22357"><![CDATA[
+It didn't save the benchmark file for me. There was no "Benchmarker" directory in ~/.love (running 0.7.0)<br><br>Either way, here are my results:<div class="codebox"><p>Code: </p><pre><code>Text    FPS: 58    OPS: 198000Animation    FPS: 55    OPS:2330500Empty    FPS: 125    OPS:0Image    FPS: 79    OPS:2048000Primitive    FPS: 40    OPS:3680000Mandlebrot    FPS: 1    OPS:1536000</code></pre></div>OS: Ubuntu 10.10 32-bit<br>CPU: i5 650 @ 3.20gHz<br>Ram: 4 GB<br>GPU: Nvidia Geforce GTX 460<br>Desktop resolution: 1920x1080<br><br>Test results were generated with Compiz running.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Sun Nov 14, 2010 10:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[arquivista]]></name></author>
+		<updated>2010-11-14T10:35:51+00:00</updated>
+
+		<published>2010-11-14T10:35:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22355#p22355</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22355#p22355"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22355#p22355"><![CDATA[
+Do OSX sucks with Love or I have a crappy hardware?<br><ul><li>OSX 10.6.5<br>2.93 Intel Core 2 Duo<br>4 GB DDR3<br>NVIDIA GT120 (256MB) - 1920x1200</li></ul><div class="codebox"><p>Code: </p><pre><code>Text    FPS: 14    OPS:198000Animation    FPS: 15    OPS:2330500Empty    FPS: 90    OPS:0Image    FPS: 20    OPS:2048000Primitive    FPS: 28    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1267">arquivista</a> — Sun Nov 14, 2010 10:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ryne]]></name></author>
+		<updated>2010-11-14T09:21:39+00:00</updated>
+
+		<published>2010-11-14T09:21:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22350#p22350</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22350#p22350"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22350#p22350"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------11/14/10 05:47:04------ ----------------------------------------------------------  Text    FPS: 57    OPS:198000Animation    FPS: 59    OPS:2330500Empty    FPS: 326    OPS:0Image    FPS: 71    OPS:2048000Primitive    FPS: 76    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div>Operating System: W7 Professional 32Bit<br>Processor: Intel Core i3 530 2.8GHZ<br>Video Card: BFG 9800GTX+<br>Ram: 2GB DDR3 1333MHZ<br><br>I think the Mandelbrot test should be removed since it hit's a high-score of "1" on every system, it seem irrelevant. Awesome none the less!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=932">Ryne</a> — Sun Nov 14, 2010 9:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-14T09:20:49+00:00</updated>
+
+		<published>2010-11-14T09:20:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22349#p22349</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22349#p22349"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22349#p22349"><![CDATA[
+Love 7.0<br><br>System Specs:<br><br>3.2 GHz Quadcore<br>Nvidia GTX 465<br>4 GB RAM<br><div class="codebox"><p>Code: </p><pre><code>Text    FPS: 40    OPS:198000Animation    FPS: 66    OPS:2330500Empty    FPS: 281    OPS:0Image    FPS: 74    OPS:2048000Primitive    FPS: 52    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Sun Nov 14, 2010 9:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zac352]]></name></author>
+		<updated>2010-11-13T23:09:06+00:00</updated>
+
+		<published>2010-11-13T23:09:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22303#p22303</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22303#p22303"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22303#p22303"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------11/13/10 18:07:00------ ----------------------------------------------------------  Text    FPS: 37    OPS:198000Animation    FPS: 3    OPS:2330500Empty    FPS: 61    OPS:0Image    FPS: 4    OPS:2048000Primitive    FPS: 10    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div>After the image test, the window became an unresponsive white screen. o_o<br><br>Processor: Intel Pentium 4 @ 1700 MHz<br>Video Card: NVIDIA GeForce2 MX/MX 400, 32 MB<br>RAM: 1024 MB<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1415">zac352</a> — Sat Nov 13, 2010 11:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Maggots]]></name></author>
+		<updated>2010-07-01T13:47:59+00:00</updated>
+
+		<published>2010-07-01T13:47:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16911#p16911</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16911#p16911"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16911#p16911"><![CDATA[
+Text<br>FPS: 38<br>OPS: 198000<br><br>Animation<br>FPS: 21<br>OPS: 2330500<br><br>Empty<br>FPS: 216<br>OPS: 0<br><br>Image<br>FPS: 30<br>OPS: 2048000<br><br>Primitive<br>FPS: 32<br>OPS: 3680000<br><br>Mandelbrot<br>FPS: 1<br>OPS: 1536000<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1138">Maggots</a> — Thu Jul 01, 2010 1:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Benamas]]></name></author>
+		<updated>2010-06-30T22:31:49+00:00</updated>
+
+		<published>2010-06-30T22:31:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16903#p16903</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16903#p16903"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16903#p16903"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------06/30/10 18:28:03------ ----------------------------------------------------------  Text       FPS: 127  OPS:198000Animation  FPS: 41   OPS:2330500Empty      FPS: 277  OPS:0Image      FPS: 80   OPS:2048000Primitive  FPS: 119  OPS:3680000Mandelbrot FPS: 1    OPS:1536000</code></pre></div>Windows XP SP3<br>CPU: AMD Phenom II X4 965 (3.4ghz, quad core)<br>RAM: 4gb DDR3<br>GPU: GeForce 9800 GT<br><br>EDIT: holy tits i've got some of the best benchmarks around, and this thing was cheap<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1115">Benamas</a> — Wed Jun 30, 2010 10:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rikkit]]></name></author>
+		<updated>2010-06-28T02:50:02+00:00</updated>
+
+		<published>2010-06-28T02:50:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=16843#p16843</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=16843#p16843"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=16843#p16843"><![CDATA[
+Text<br>  FPS: 37<br>  OPS: 198000<br>Animation<br>  FPS: 16<br>  OPS: 2330500<br>Empty<br>  FPS: 226<br>  OPS 0<br>Image<br>  FPS: 17<br>  OPS: 2048000<br>Primitive<br>  FPS: 59<br>  OPS: 368000<br>Mandelbrot<br>  FPS: 1<br>  OPS: 1536000<br><br>Run on a laptop (with less than ideal ventilation)<br>-Windows 7 x64<br>-Intel Core 2 Duo P8400 2x 2.27GHz<br>-4GB DDR2<br>-nVidia 9600M GT 512MB<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1258">rikkit</a> — Mon Jun 28, 2010 2:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2010-06-06T18:57:56+00:00</updated>
+
+		<published>2010-06-06T18:57:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15771#p15771</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15771#p15771"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15771#p15771"><![CDATA[
+Win 7 x64<br>AMD 2.6Ghz 5200 X2<br>2gb DDR2 400mhz<br>ATI 5770 HD<div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------06/06/10 14:51:43------ ----------------------------------------------------------  Text    FPS: 29    OPS:198000Animation    FPS: 29    OPS:2330500Empty    FPS: 152    OPS:0Image    FPS: 32    OPS:2048000Primitive    FPS: 23    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Sun Jun 06, 2010 6:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[The Burrito]]></name></author>
+		<updated>2010-06-06T18:46:36+00:00</updated>
+
+		<published>2010-06-06T18:46:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15770#p15770</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15770#p15770"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15770#p15770"><![CDATA[
+Pretty cool, I'd like to see one that did maybe a few other tests and then gave an over all "score". I'm also sortof curious, apart from non-po2 issues, has anyone ever really had trouble running any löve games? everything I've tried runs fine on my netbook as long as it fits on the screen.<br><div class="codebox"><p>Code: </p><pre><code>Win 7 x64AMD 3.0Ghz X44gb DDR 1333Nvidia 9800 gtxText: 97Animation: 76Empty: 172Image: 83Primitive: 91Mandelbrot: 1</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=702">The Burrito</a> — Sun Jun 06, 2010 6:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[schme16]]></name></author>
+		<updated>2010-06-06T02:11:07+00:00</updated>
+
+		<published>2010-06-06T02:11:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15758#p15758</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15758#p15758"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15758#p15758"><![CDATA[
+It can now be found at  <a href="http://www.lovearcade.org/?content=projects&amp;id=3" class="postlink">The Love Arcade - Auto-benchmarker</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=184">schme16</a> — Sun Jun 06, 2010 2:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2010-06-05T23:21:02+00:00</updated>
+
+		<published>2010-06-05T23:21:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15756#p15756</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15756#p15756"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15756#p15756"><![CDATA[
+Please re-upload  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-neko.png" width="16" height="16" alt=":neko:" title="Neko"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Sat Jun 05, 2010 11:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zachwlewis]]></name></author>
+		<updated>2010-03-24T18:52:29+00:00</updated>
+
+		<published>2010-03-24T18:52:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14183#p14183</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14183#p14183"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14183#p14183"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>Windows XP x64Intel Core2 Quad @2.83GHz4.00GB RAMNVIDIA GeForce 9800 GTX/9800 GTX+----------------------------------------------------------            ------03/24/10 13:50:21------ ----------------------------------------------------------  Text    FPS: 94    OPS:198000Animation    FPS: 54    OPS:2330500Empty    FPS: 342    OPS:0Image    FPS: 60    OPS:2048000Primitive    FPS: 88    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div>Mandelbrot is a miserly old bastard. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1057">zachwlewis</a> — Wed Mar 24, 2010 6:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[farvardin]]></name></author>
+		<updated>2010-03-21T08:01:18+00:00</updated>
+
+		<published>2010-03-21T08:01:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14059#p14059</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14059#p14059"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14059#p14059"><![CDATA[
+In case it wasn't obvious, the autobenchmarker will save the resulting file to:<br>~/.love/AutoBenchmarker.love/resultsReadable.txt on Linux<br><br>My CPU is: AMD Athlon(tm) 64 X2 Dual Core Processor 3800+ <br>My GPU is: GeForce 8600 GS<br>and I have 2 Gb RAM.<br>(running <a href="http://www.archlinux.org/" class="postlink">Archlinux</a>)<br><blockquote class="uncited"><div>----------------------------------------------------------<br>            ------Sun Mar 21 08:28:50 2010------ <br>----------------------------------------------------------  <br>Text<br>    FPS: 59<br>    OPS:198000<br>Animation<br>    FPS: 10<br>    OPS:2330500<br>Empty<br>    FPS: 294<br>    OPS:0<br>Image<br>    FPS: 12<br>    OPS:2048000<br>Primitive<br>    FPS: 41<br>    OPS:3680000<br>Mandelbrot<br>    FPS: 1<br>    OPS:1536000</div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=87">farvardin</a> — Sun Mar 21, 2010 8:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-03-17T11:20:31+00:00</updated>
+
+		<published>2010-03-17T11:20:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13892#p13892</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13892#p13892"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13892#p13892"><![CDATA[
+My hugely powerful laptop.<br>CPU: Intel Core 2 Duo 2.26gHz<br>RAM: 2gb<br>"GPU": Intel Mobile 4 series chipset<br>OS: Ubuntu 9.10 with Compiz running <br><div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------Wed Mar 17 12:06:50 2010------ ----------------------------------------------------------  Text    FPS: 7    OPS:198000Animation    FPS: 4    OPS:2330500Empty    FPS: 36    OPS:0Image    FPS: 5    OPS:2048000Primitive    FPS: 6    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div>Same laptop, but with Compiz disabled.<br><div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------Wed Mar 17 12:19:31 2010------ ----------------------------------------------------------  Text    FPS: 7    OPS:198000Animation    FPS: 5    OPS:2330500Empty    FPS: 40    OPS:0Image    FPS: 6    OPS:2048000Primitive    FPS: 7    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Wed Mar 17, 2010 11:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[willurd]]></name></author>
+		<updated>2010-03-17T09:40:20+00:00</updated>
+
+		<published>2010-03-17T09:40:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13889#p13889</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13889#p13889"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13889#p13889"><![CDATA[
+Made using benchmark2.love<br><div class="codebox"><p>Code: </p><pre><code>text         24.71 FPS    9785.33 OPSimage         7.46 FPS   30552.91 OPSanimation     3.87 FPS   18016.79 OPSprimitive    35.43 FPS  260747.30 OPSempty       165.48 FPS          0 OPSmandelbrot    0.06 FPS   19173.79 OPS</code></pre></div>MacBook Pro (2007)<br>2.33 GHz Intel Core 2 Duo<br>2 GB 667 MHz DDR2 SDRAM<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1018">willurd</a> — Wed Mar 17, 2010 9:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[schme16]]></name></author>
+		<updated>2010-03-07T02:37:40+00:00</updated>
+
+		<published>2010-03-07T02:37:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13550#p13550</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13550#p13550"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13550#p13550"><![CDATA[
+Man I'm happy that my hour or so of coding is being used, here's mine:<blockquote class="uncited"><div>----------------------------------------------------------<br>            ------07/03/10 12:32:05------ <br>----------------------------------------------------------  <br>Text<br>    FPS: 47<br>    OPS:198000<br>Animation<br>    FPS: 14<br>    OPS:2330500<br>Empty<br>    FPS: 291<br>    OPS:0<br>Image<br>    FPS: 22<br>    OPS:2048000<br>Primitive<br>    FPS: 57<br>    OPS:3680000<br>Mandelbrot<br>    FPS: 1<br>    OPS:1536000</div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=184">schme16</a> — Sun Mar 07, 2010 2:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Voker57]]></name></author>
+		<updated>2010-03-06T16:57:10+00:00</updated>
+
+		<published>2010-03-06T16:57:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13544#p13544</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13544#p13544"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13544#p13544"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>----------------------------------------------------------            ------Sat Mar  6 19:54:35 2010------ ----------------------------------------------------------  Text    FPS: 89    OPS:198000Animation    FPS: 38    OPS:2330500Empty    FPS: 386    OPS:0Image    FPS: 54    OPS:2048000Primitive    FPS: 55    OPS:3680000Mandelbrot    FPS: 1    OPS:1536000</code></pre></div>Linux Pentium(R) Dual-Core  CPU      E5200  @ 2.50GHz<br>2 GB RAM<br>GeForce GTS250 1GB<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=208">Voker57</a> — Sat Mar 06, 2010 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kalle2990]]></name></author>
+		<updated>2010-03-06T16:36:37+00:00</updated>
+
+		<published>2010-03-06T16:36:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=13541#p13541</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=13541#p13541"/>
+		<title type="html"><![CDATA[Re: Benchmark]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=13541#p13541"><![CDATA[
+<blockquote class="uncited"><div>----------------------------------------------------------<br>            ------03/06/10 17:33:20------ <br>----------------------------------------------------------  <br>Text<br>    FPS: 65<br>    OPS:198000<br>Animation<br>    FPS: 18<br>    OPS:2330500<br>Empty<br>    FPS: 245<br>    OPS:0<br>Image<br>    FPS: 21<br>    OPS:2048000<br>Primitive<br>    FPS: 56<br>    OPS:3680000<br>Mandelbrot<br>    FPS: 1<br>    OPS:1536000</div></blockquote>Windows Vista SP 2 32-bit<br>AMD Phenom 9650 Quad-Core Processor 2.30 GHz<br>4.00 GB RAM<br>Nvidia Geforce GT120 1 GB<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=690">kalle2990</a> — Sat Mar 06, 2010 4:36 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

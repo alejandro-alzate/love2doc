@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84226" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-01-30T02:05:26+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84226</id>
+
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2023-01-30T02:05:26+00:00</updated>
+
+		<published>2023-01-30T02:05:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253098#p253098</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253098#p253098"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253098#p253098"><![CDATA[
+Sorry for the late response, busy during weekends.<br><blockquote class="uncited"><div>Edit: If you can point me to a point, I have just finished rewriting all the methods for 'AdActivty.java' I still have to test everything one by one but I receive a compilation error (which I was able to circumvent at the moment) which is: Cannot fit requested classes in a single dex file (#methods: 76477 &gt; 65536)</div></blockquote>this happened to me as well if i remember correctly, but on the original no-admob love-android build. It happened when packaging/including large assets (a lot of videos) in the .love file.<br><blockquote class="uncited"><div>In short I wanted to know if for you it was acceptable to activate the MultiDex or if there were other solutions?</div></blockquote>Im not an expert when it comes to android dev but so far with what i've read, activating multidex is okay and perhaps necessary. So go for it. Or maybe if possible, make it optional? Like toggle using it with a single boolean flag in the .properties file?<br><blockquote class="uncited"><div>Porting finished! While waiting for the pull request to be accepted (or not) on the flamendless repository if you want to publish a game on Android with Löve2d and the latest version of Admob you can go here.</div></blockquote>Awesome! Will check this as soon as possible. Thank you<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Mon Jan 30, 2023 2:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2023-01-29T00:33:43+00:00</updated>
+
+		<published>2023-01-29T00:33:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253072#p253072</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253072#p253072"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253072#p253072"><![CDATA[
+Porting finished! While waiting for the pull request to be accepted (or not) on the <a href="https://github.com/flamendless/love-android-extensions" class="postlink">flamendless repository</a> if you want to publish a game on Android with Löve2d and the latest version of Admob you can go <a href="https://github.com/Bigfoot71/love-android-extensions" class="postlink">here</a>.<br><br><em class="text-italics">Don't abuse the ads please, don't spoil the good atmosphere of Löve2d</em> <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Sun Jan 29, 2023 12:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2023-01-27T11:55:18+00:00</updated>
+
+		<published>2023-01-27T11:55:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253062#p253062</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253062#p253062"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253062#p253062"><![CDATA[
+<blockquote class="uncited"><div>You can fork the project and create a branch for your changes (optional) and then create a pull request. I can deal with the resolution of the conflicts. Also that is a way for me to learn more about this project <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> Thank you</div></blockquote>Ok I'll do it when I'm done but I hope it's doable for you, it's a lot of tinkering I do knowing that I do everything on VSCodium because Android Studio freezes every two seconds on my PC...<br><br><span style="text-decoration:underline">Edit</span>: If you can point me to a point, I have just finished rewriting all the methods for 'AdActivty.java' I still have to test everything one by one but I receive a compilation error (which I was able to circumvent at the moment) which is: <em class="text-italics">Cannot fit requested classes in a single dex file (#methods: 76477 &gt; 65536)</em><br><br>I guess it's completely due to the fact that with the passage to 21.4.0 of Admob a lot of new methods are used, so I reduced the number of imports linked with Admob as much as possible but still the same number too many methods... (Surely thanks to Proguard who already optimized this, even I'm not quite sure, I must admit that I did very little Java before that and I never programmed directly for Android)<br><br>In short I wanted to know if for you it was acceptable to activate the MultiDex or if there were other solutions?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Fri Jan 27, 2023 11:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2023-01-27T08:37:38+00:00</updated>
+
+		<published>2023-01-27T08:37:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253058#p253058</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253058#p253058"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253058#p253058"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Big update for the repo! I've updated the module to not take on the love namespace and made it more modular.<br>You can easily use it like <div class="codebox"><p>Code: </p><pre><code>local admob = require("admob")</code></pre></div>.<br>There's now more setup in the user's lua/love side like providing your own <strong class="text-strong">love.run</strong> but i.<br>For more info see: <a href="https://github.com/flamendless/love-android-extensions" class="postlink">https://github.com/flamendless/love-android-extensions</a></div></blockquote>Hi, I would like to know if you plan to update your repository? Personally I am already working to update your work on the 21.4.0 version of admob (because the current one which is supported will come to an end) but in addition to being tedious to do it on my hardware it would be complicated for me now make a pull request on your repository from the work i've done in view of all the changes i've made to it over time, that's why i'd love to hear your opinion on it and if you're counting maintain it.</div></blockquote>You can fork the project and create a branch for your changes (optional) and then create a pull request. I can deal with the resolution of the conflicts. Also that is a way for me to learn more about this project <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> Thank you<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Jan 27, 2023 8:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bigfoot71]]></name></author>
+		<updated>2023-01-27T00:05:00+00:00</updated>
+
+		<published>2023-01-27T00:05:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253053#p253053</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253053#p253053"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253053#p253053"><![CDATA[
+<blockquote class="uncited"><div>Big update for the repo! I've updated the module to not take on the love namespace and made it more modular.<br>You can easily use it like <div class="codebox"><p>Code: </p><pre><code>local admob = require("admob")</code></pre></div>.<br>There's now more setup in the user's lua/love side like providing your own <strong class="text-strong">love.run</strong> but i.<br>For more info see: <a href="https://github.com/flamendless/love-android-extensions" class="postlink">https://github.com/flamendless/love-android-extensions</a></div></blockquote>Hi, I would like to know if you plan to update your repository? Personally I am already working to update your work on the 21.4.0 version of admob (because the current one which is supported will come to an end) but in addition to being tedious to do it on my hardware it would be complicated for me now make a pull request on your repository from the work i've done in view of all the changes i've made to it over time, that's why i'd love to hear your opinion on it and if you're counting maintain it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=188439">Bigfoot71</a> — Fri Jan 27, 2023 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2021-10-21T02:00:29+00:00</updated>
+
+		<published>2021-10-21T02:00:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244340#p244340</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244340#p244340"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244340#p244340"><![CDATA[
+Big update for the repo! I've updated the module to not take on the love namespace and made it more modular.<br>You can easily use it like <div class="codebox"><p>Code: </p><pre><code>local admob = require("admob")</code></pre></div>.<br>There's now more setup in the user's lua/love side like providing your own <strong class="text-strong">love.run</strong> but i.<br>For more info see: <a href="https://github.com/flamendless/love-android-extensions" class="postlink">https://github.com/flamendless/love-android-extensions</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Thu Oct 21, 2021 2:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2021-10-16T12:39:54+00:00</updated>
+
+		<published>2021-10-16T12:39:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244233#p244233</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244233#p244233"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244233#p244233"><![CDATA[
+Update for <a href="https://github.com/flamendless/love-android-admob" class="postlink">https://github.com/flamendless/love-android-admob</a>:<br><br>All needed data like app name, orientation, publisher ID, ad ID, and potentially more can now be stored in a single file <strong class="text-strong">config.gradle</strong> to avoid going through many files for configurations. This will also allow to easily switch from projects to projects as you need at least only two files to edit instead of the previous 5+ files. <br><br>See README for more info<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Oct 16, 2021 12:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2021-10-14T11:45:31+00:00</updated>
+
+		<published>2021-10-14T11:45:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244183#p244183</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244183#p244183"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244183#p244183"><![CDATA[
+Really nice. To bad I quit my dreams of An Android admob game <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Thu Oct 14, 2021 11:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2021-10-17T11:14:46+00:00</updated>
+
+		<published>2021-10-14T03:01:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244167#p244167</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244167#p244167"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244167#p244167"><![CDATA[
+Hi everyone. Managed to get this updated to the latest love (11.3 as of now). <br><br>Please check out: <a href="https://github.com/flamendless/love-android-admob" class="postlink">https://github.com/flamendless/love-android-admob</a><br><br>NOTE that as of now:<br>* <del>the consent manager is still updated since I have to upgrade to User Messaging Platform as the previous one has been deprecated by Google.</del><br><del>* Interstitial and RewardedAd crashes the app at runtime.</del> this is now fixed<br><br>I'll fix the issues and update it soon.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Thu Oct 14, 2021 3:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2021-10-13T06:28:21+00:00</updated>
+
+		<published>2021-10-13T06:28:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244136#p244136</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244136#p244136"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244136#p244136"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hey bio1712!<br><br>As I'm sort of lazy with programming, I tend to program a lot for some time and then just quit for a while. I had a new design idea and wanted to start programming. I thought I got the library and Love 11.3 safeArea working last time with your help, but it turns out it wasn't actually quite the case. It was just by luck that it fit the safe area perfectly, and height and safeAreaHeight is the exactly same thing when it comes to programming with the current setup. In my current files, line 98 is uncommented. I am not sure which one it is in the version that I actually have installed on my phone. Anyways, the safe area doesn't work, and if I understand correctly, it has been fixed to work in the development version of 11.3. So, my point is, do you have any plans to update this amazing project to the development release? I know it's probably not as stable, but at least the issue seems to be fixed? and 11.4 is probably quite far away from today. I don't mean to pressure you by any means to update the project if you're not willing to, but I just decided to ask, as the latest development version seems to be working. If you decide to update, I am of course willing to help, but I am not very good with Android projects in general, so I don't know would I be able to do much. Anyways, I just thought I would ask, as this project updated to the development version before 11.4 is released would be amazing.<br><br>-Santeri</div></blockquote><br>Hi!<br>Today I tried to update the Library to <a href="https://github.com/love2d/love-android" class="postlink">this</a> release, however it didn't fix the problem. <br><br>Therefore, this issue is probably caused by something in AdActivity.java.<br>However, I've added these two lines<div class="codebox"><p>Code: </p><pre><code>getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);</code></pre></div>and with them the behaviour seems to be similar to the original release.<br><br>I've uploaded the new GameActivity.java to the Bitbucket repository.<br><br><a href="https://drive.google.com/open?id=1CAsyA0gXaOkG50hqwquGrMwX7f5J9MY-" class="postlink">Here</a> is the library updated to the Github release.<br>I think it needs a little bit of testing, before uploading it to Bitbucket.<br><br>Let me know!</div></blockquote>link to the google drive is not working, it's showing 404<br><br>EDIT<br>Im starting to update this to work with the latest love-android lib. Link is <a href="https://github.com/flamendless/love-android/tree/admob" class="postlink">https://github.com/flamendless/love-android/tree/admob</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Oct 13, 2021 6:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Amanda-Fl]]></name></author>
+		<updated>2021-07-10T17:54:53+00:00</updated>
+
+		<published>2021-07-10T17:54:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=242104#p242104</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=242104#p242104"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=242104#p242104"><![CDATA[
+Hi there,<br><br>First off, thanks for doing this!<br><br>I am having difficulty implementing it though. Doing the test Gradle build from the command-line, the build is failing with a Java.lang.nullPointerException when going through the love section. No expansion on that error is given, even with a full Gradle scan.<br><br>Any thoughts?<br><br>I have loaded the project up on Android Studio, so I can generate a .aab from there for Google Play Console. The same error shows there as well.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179462">Amanda-Fl</a> — Sat Jul 10, 2021 5:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[uriid1]]></name></author>
+		<updated>2021-05-08T20:35:21+00:00</updated>
+
+		<published>2021-05-08T20:35:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=240734#p240734</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=240734#p240734"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=240734#p240734"><![CDATA[
+Hello everybody. For some reason I am getting the error:<br><img src="https://love2d.org/imgmirrur/RctPysn.jpg" class="postimage" alt="Image"><br><br>I have already compiled github.com/love2d/love-android<br>and successfully. My game started up and work. I did everything according to instructions.<br><br>I tried the same with different Ndk 16.1.4479499, 19.2.5345600, 21.1.6352462, 21.3.6528147, 22.1.7171670<br><br>But it did not help.<br>I also tried to play with the settings and did the  signed apk.<br><br>My phone is 10 android.<br><br>Oddly enough, apk is 3.0mb in size.<br><br>UPD: I did everything from the beginning and I succeeded.<br>I don't know what the mistake was.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=169731">uriid1</a> — Sat May 08, 2021 8:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Gunroar:Cannon()]]></name></author>
+		<updated>2021-02-08T01:10:51+00:00</updated>
+
+		<published>2021-02-08T01:10:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238418#p238418</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238418#p238418"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238418#p238418"><![CDATA[
+Err.... When I try the download link for bitbucket it says "link has no power here", pls help? How do I fix this?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=167496">Gunroar:Cannon()</a> — Mon Feb 08, 2021 1:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[jadius93]]></name></author>
+		<updated>2020-06-01T13:55:21+00:00</updated>
+
+		<published>2020-06-01T13:55:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=234054#p234054</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=234054#p234054"/>
+		<title type="html"><![CDATA[Re: [0.10.2] AdMob support for Android!]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=234054#p234054"><![CDATA[
+<blockquote class="uncited"><div><br>Hey, ive forked your repo and added my instruction/guide in the wiki here: <a href="https://bitbucket.org/brbl/love2d-admob-android/wiki/Instruction" class="postlink">https://bitbucket.org/brbl/love2d-admob ... nstruction</a><br>IDK how to PR that, please have a look at it before i make any more updates<br></div></blockquote>Hi, <br><br>The guide is really clear and easy to follow. Great job to all who have contributed to this, and thanks a lot for sharing your wisdom!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-megagrin.png" width="16" height="16" alt=":megagrin:" title="Mega Grin"> <br><br>I am an amateur programmer (if I can even call myself that) and I am facing some problems with the gradlew build. I guess it is something to do with the Java/Gradle version compatibility, but I can't seem to find a right answer.<br><br>I get the following error when running gradlew build:<div class="codebox"><p>Code: </p><pre><code>FAILURE: Build failed with an exception.* What went wrong:Could not determine java version from '14.0.1'.* Try:Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.* Get more help at https://help.gradle.org</code></pre></div>I have installed the latest JDK version (SE14) and the latest Gradle version (6.4.1). I even tried an older version of Gradle (6.0) but also no luck getting it work. I unfortunately cannot download an older version of JDK to try it out without creating an Oracle account, which I would like to somehow avoid..<br><br>Any help would be greatly appreciated! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Cheers!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=149886">jadius93</a> — Mon Jun 01, 2020 1:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-05-03T19:50:18+00:00</updated>
+
+		<published>2020-05-03T19:50:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233460#p233460</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233460#p233460"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233460#p233460"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hey bio1712!<br><br>As I'm sort of lazy with programming, I tend to program a lot for some time and then just quit for a while. I had a new design idea and wanted to start programming. I thought I got the library and Love 11.3 safeArea working last time with your help, but it turns out it wasn't actually quite the case. It was just by luck that it fit the safe area perfectly, and height and safeAreaHeight is the exactly same thing when it comes to programming with the current setup. In my current files, line 98 is uncommented. I am not sure which one it is in the version that I actually have installed on my phone. Anyways, the safe area doesn't work, and if I understand correctly, it has been fixed to work in the development version of 11.3. So, my point is, do you have any plans to update this amazing project to the development release? I know it's probably not as stable, but at least the issue seems to be fixed? and 11.4 is probably quite far away from today. I don't mean to pressure you by any means to update the project if you're not willing to, but I just decided to ask, as the latest development version seems to be working. If you decide to update, I am of course willing to help, but I am not very good with Android projects in general, so I don't know would I be able to do much. Anyways, I just thought I would ask, as this project updated to the development version before 11.4 is released would be amazing.<br><br>-Santeri</div></blockquote><br>Hi!<br>Today I tried to update the Library to <a href="https://github.com/love2d/love-android" class="postlink">this</a> release, however it didn't fix the problem. <br><br>Therefore, this issue is probably caused by something in AdActivity.java.<br>However, I've added these two lines<div class="codebox"><p>Code: </p><pre><code>getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);</code></pre></div>and with them the behaviour seems to be similar to the original release.<br><br>I've uploaded the new GameActivity.java to the Bitbucket repository.<br><br><a href="https://drive.google.com/open?id=1CAsyA0gXaOkG50hqwquGrMwX7f5J9MY-" class="postlink">Here</a> is the library updated to the Github release.<br>I think it needs a little bit of testing, before uploading it to Bitbucket.<br><br>Let me know!</div></blockquote>Hi!<br><br>I'm glad you decided to go with the update. After few problems in the beginning, like Android NDK not accepting a space in my external HDD's name and changing the gradlew file to use the correct UNIX line-endings instead of the Windows ones, it built just fine.<br><br>When starting my in-progress app with this new build, I immediately noticed that the navigation bar had a transparent background instead of the black one that the previous version had. I actually aimed for the transparent version, but never got it working before so I stuck with the black background. The safe area works well with the notch in my phone, although I noticed a one pixel difference in the actual location of the notch and the safe area. It could be just a bug with the physical display, as with this replacement display it has a weird bug where sometimes when starting the device, a row of pixels is mirrored from the right side to the very left. Super weird. I will attach a screenshot, even though it will not obviously show the notch. The red bar in the screenshot is drawn where the notch starts, as I intended for testing purposes. The text in the top left corner which has two values represents the screen height and safe area height after dpi scale. Previously it was not working, now it is with this new build. The text is a bit too low, but I am sure it's only the font, as the text even higher than that is drawn at 0,0 and still a bit too low, and the rectangle is displayed correctly in its intended position (Minus the one pixel difference).<br><br>I disabled the ads for testing, as I was going to change the banner type later on. However, I enabled the default banner just to see if the safe area would still work, and sure enough it does, but at the same time I realized that the software navigation lays on top of the ad. Could that be a problem for Google? And why are the buttons and the title bar actually transparent? I tweaked the settings on the previous project, but there is no way those settings would have made it over to the updated version, as I never combined the folders or anything? I will look into the theme settings just a bit more to see if they have any impact on the navigation and title bar being transparent, and if making the background black will make the ad move above the navigation.<br><br>In conclusion, I would like to hear your opinion on the software buttons displaying on top of the ad banner, and if that's something to worry about? Also, before publishing, you should probably change the UNIX gradlew file to have UNIX line-endings, as they apparently got changed when you saved the file on your Windows workstation. Other than that, you have definitely made great progress, and it's great to be able to use this library.<br><br>PS: I actually tested where the safe area ends, and while the navigation bar has a transparent background, it is included in the safe area, as I expected. I will test the black background on the navigation bar later on. Also, about the one pixel difference in the notch location and the safe area Y (safe area is one pixel too up). When I draw the rectangle to reach all the way to the very end of the safe area, it ends just one pixel shy. So, it get's the safe area height correctly, but the starting point is just a bit off. I tried to restart my device but it made no difference. I don't know whether it's the device or the code, I will test the safe area functionality with other devices with notches that I can get my hands on.<br><br>PS 2: I just realized that I actually don't know if the safe area is one pixel off or a few, I just sort of assumed it was one pixel. This info probably didn't matter, just wanted to throw it in.<br><br>Sorry for the long text and thank you for the amazing work you have done with the library,<br><br>Santeri<dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=18142&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=18142" class="postimage" alt="Screenshot_20200503-220442.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Sun May 03, 2020 7:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bio1712]]></name></author>
+		<updated>2020-04-25T13:49:39+00:00</updated>
+
+		<published>2020-04-25T13:49:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233293#p233293</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233293#p233293"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233293#p233293"><![CDATA[
+<blockquote class="uncited"><div>Hey bio1712!<br><br>As I'm sort of lazy with programming, I tend to program a lot for some time and then just quit for a while. I had a new design idea and wanted to start programming. I thought I got the library and Love 11.3 safeArea working last time with your help, but it turns out it wasn't actually quite the case. It was just by luck that it fit the safe area perfectly, and height and safeAreaHeight is the exactly same thing when it comes to programming with the current setup. In my current files, line 98 is uncommented. I am not sure which one it is in the version that I actually have installed on my phone. Anyways, the safe area doesn't work, and if I understand correctly, it has been fixed to work in the development version of 11.3. So, my point is, do you have any plans to update this amazing project to the development release? I know it's probably not as stable, but at least the issue seems to be fixed? and 11.4 is probably quite far away from today. I don't mean to pressure you by any means to update the project if you're not willing to, but I just decided to ask, as the latest development version seems to be working. If you decide to update, I am of course willing to help, but I am not very good with Android projects in general, so I don't know would I be able to do much. Anyways, I just thought I would ask, as this project updated to the development version before 11.4 is released would be amazing.<br><br>-Santeri</div></blockquote><br>Hi!<br>Today I tried to update the Library to <a href="https://github.com/love2d/love-android" class="postlink">this</a> release, however it didn't fix the problem. <br><br>Therefore, this issue is probably caused by something in AdActivity.java.<br>However, I've added these two lines<div class="codebox"><p>Code: </p><pre><code>getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);</code></pre></div>and with them the behaviour seems to be similar to the original release.<br><br>I've uploaded the new GameActivity.java to the Bitbucket repository.<br><br><a href="https://drive.google.com/open?id=1CAsyA0gXaOkG50hqwquGrMwX7f5J9MY-" class="postlink">Here</a> is the library updated to the Github release.<br>I think it needs a little bit of testing, before uploading it to Bitbucket.<br><br>Let me know!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136963">bio1712</a> — Sat Apr 25, 2020 1:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-04-24T12:28:11+00:00</updated>
+
+		<published>2020-04-24T12:28:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233268#p233268</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233268#p233268"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233268#p233268"><![CDATA[
+Hey bio1712!<br><br>As I'm sort of lazy with programming, I tend to program a lot for some time and then just quit for a while. I had a new design idea and wanted to start programming. I thought I got the library and Love 11.3 safeArea working last time with your help, but it turns out it wasn't actually quite the case. It was just by luck that it fit the safe area perfectly, and height and safeAreaHeight is the exactly same thing when it comes to programming with the current setup. In my current files, line 98 is uncommented. I am not sure which one it is in the version that I actually have installed on my phone. Anyways, the safe area doesn't work, and if I understand correctly, it has been fixed to work in the development version of 11.3. So, my point is, do you have any plans to update this amazing project to the development release? I know it's probably not as stable, but at least the issue seems to be fixed? and 11.4 is probably quite far away from today. I don't mean to pressure you by any means to update the project if you're not willing to, but I just decided to ask, as the latest development version seems to be working. If you decide to update, I am of course willing to help, but I am not very good with Android projects in general, so I don't know would I be able to do much. Anyways, I just thought I would ask, as this project updated to the development version before 11.4 is released would be amazing.<br><br>-Santeri<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Fri Apr 24, 2020 12:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bio1712]]></name></author>
+		<updated>2020-03-03T09:26:24+00:00</updated>
+
+		<published>2020-03-03T09:26:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232456#p232456</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232456#p232456"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232456#p232456"><![CDATA[
+<blockquote class="uncited"><div>"Uncomment to unhide status bar". I uncommented, and now the status bar is hidden... wtf... I was just going to play around with the themes in AndroidManifest, I got the status bar visible that way, but I couldn't edit it in any way.. I have no idea what's going on inside on these apps. This is getting frusturating. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></div></blockquote>If you uncomment line 98 of GameActivity and those lines of SDLActivity you restore the original LÖVE behaviour, therefore you should definitely see the status bar.<br><blockquote class="uncited"><div>I got it perfected. I just have to remember in the future not to dive straight to the unknown, or at least do some research if things don't go as planned. It's all about picking a theme then editing it in two separate files, that way I got the icon-only status bar. Thank you again for the help!</div></blockquote>I'm glad you did it  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136963">bio1712</a> — Tue Mar 03, 2020 9:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-03-02T18:24:50+00:00</updated>
+
+		<published>2020-03-02T18:24:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232441#p232441</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232441#p232441"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232441#p232441"><![CDATA[
+I got it perfected. I just have to remember in the future not to dive straight to the unknown, or at least do some research if things don't go as planned. It's all about picking a theme then editing it in two separate files, that way I got the icon-only status bar. Thank you again for the help!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Mon Mar 02, 2020 6:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-03-02T15:34:13+00:00</updated>
+
+		<published>2020-03-02T15:34:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232438#p232438</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232438#p232438"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232438#p232438"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>I'd like to get the status bar transparent on top of the app, but I'll have to look into that a bit more. Cheers.</div></blockquote>Try to open SDLActivity.java and edit lines 276-279.</div></blockquote>"Uncomment to unhide status bar". I uncommented, and now the status bar is hidden... wtf... I was just going to play around with the themes in AndroidManifest, I got the status bar visible that way, but I couldn't edit it in any way.. I have no idea what's going on inside on these apps. This is getting frusturating. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Mon Mar 02, 2020 3:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bio1712]]></name></author>
+		<updated>2020-03-02T14:29:09+00:00</updated>
+
+		<published>2020-03-02T14:29:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232437#p232437</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232437#p232437"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232437#p232437"><![CDATA[
+<blockquote class="uncited"><div>I'd like to get the status bar transparent on top of the app, but I'll have to look into that a bit more. Cheers.</div></blockquote>Try to open SDLActivity.java and edit lines 276-279.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136963">bio1712</a> — Mon Mar 02, 2020 2:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-03-02T14:20:07+00:00</updated>
+
+		<published>2020-03-02T14:20:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232436#p232436</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232436#p232436"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232436#p232436"><![CDATA[
+<strong class="text-strong">Surprisingly</strong>, it was just a "me" problem, the way I had always done portrait was to edit AndroidManifest from landscape to portrait. Apparently that's not the real way... I don't even know how that had previously worked? Surely, I had tried apps without fullscreen on my phone before... Anyways, all good, except that I'd like to get the status bar transparent on top of the app, but I'll have to look into that a bit more. Cheers.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Mon Mar 02, 2020 2:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-03-02T13:46:47+00:00</updated>
+
+		<published>2020-03-02T13:46:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232435#p232435</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232435#p232435"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232435#p232435"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><br>I don't think LÖVE has ever done that, not even in 11.2 or previous. I think love.window.getSafeArea is intended mainly for fullscreen use, or maybe for more unusual cutouts in the screen, or other obstacles that are closer to the middle of the screen, that maybe get filled up even without fullscreen (?)</div></blockquote>On iOS, the notch is filled even without fullscreen mode.<br><blockquote class="uncited"><div>Hey again! Just one more thing, portrait mode doesn't seem to work without having fullscreen enabled, or am I missing something?</div></blockquote>What do you mean?<br>I have apps in portrait which don't use fullscreen and work fine (<a href="https://play.google.com/store/apps/details?id=com.bio.timeBar" class="postlink">https://play.google.com/store/apps/deta ... io.timeBar</a>)<br><blockquote class="uncited"><div>I don't know if this also has something to do with line 98?</div></blockquote>May be, but I don't think so.</div></blockquote>I don't know what's going on. I downloaded your Time Bar app to see what the non-fullscreen is like there. It's so different. When I make apps non-fullscreen, notch isn't filled + status bar is visible + Android 10 navigation bar is visible, and in fullscreen (when I get it to work), notch is filled, status bar is not visible, android navigation disappers (sometimes it stays until I re-enter the app).<dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=17964&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=17964" class="postimage" alt="Screenshot_20200302-154104.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Mon Mar 02, 2020 1:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bio1712]]></name></author>
+		<updated>2020-03-02T13:05:55+00:00</updated>
+
+		<published>2020-03-02T13:05:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232433#p232433</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232433#p232433"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232433#p232433"><![CDATA[
+<blockquote class="uncited"><div><br>I don't think LÖVE has ever done that, not even in 11.2 or previous. I think love.window.getSafeArea is intended mainly for fullscreen use, or maybe for more unusual cutouts in the screen, or other obstacles that are closer to the middle of the screen, that maybe get filled up even without fullscreen (?)</div></blockquote>On iOS, the notch is filled even without fullscreen mode.<br><blockquote class="uncited"><div>Hey again! Just one more thing, portrait mode doesn't seem to work without having fullscreen enabled, or am I missing something?</div></blockquote>What do you mean?<br>I have apps in portrait which don't use fullscreen and work fine (<a href="https://play.google.com/store/apps/details?id=com.bio.timeBar" class="postlink">https://play.google.com/store/apps/deta ... io.timeBar</a>)<br><blockquote class="uncited"><div>I don't know if this also has something to do with line 98?</div></blockquote>May be, but I don't think so.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136963">bio1712</a> — Mon Mar 02, 2020 1:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KallioSanteri]]></name></author>
+		<updated>2020-03-02T12:50:43+00:00</updated>
+
+		<published>2020-03-02T12:50:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232432#p232432</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232432#p232432"/>
+		<title type="html"><![CDATA[Re: [11.3] AdMob support for Android + EU Consent]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232432#p232432"><![CDATA[
+Yeah, it seems like the only option on how to get the app to portrait mode if you're not using fullscreen is to launch in fullscreen mode and then later in the code change it out of fullscreen. I don't know if this also has something to do with line 98?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145567">KallioSanteri</a> — Mon Mar 02, 2020 12:50 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/82166" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2017-08-23T04:16:19+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/82166</id>
+
+		<entry>
+		<author><name><![CDATA[uederson]]></name></author>
+		<updated>2017-08-23T04:16:19+00:00</updated>
+
+		<published>2017-08-23T04:16:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214767#p214767</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214767#p214767"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214767#p214767"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hi!<br>How are you guys?<br>This is really great! Thank you so much for share this with us!<br>I tried my lua code and worked fine using your love version, but sadly, when I build my own app, it is giving me an error when I try to run the app on Android.<br>Pls check attached picture.<br>Can someone pls point me what is wrong? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>See this: <a href="https://love2d.org/wiki/Game_Distribution#Android" class="postlink">https://love2d.org/wiki/Game_Distribution#Android</a> .<br>[EDIT]<br>How you is brazilian i'm go write portuguese.<br>Se estiver tentando construir pelo projeto do npinochet, o fork do love-android, tente:<br>1) Atualmente só o NDK r14 ou - funciona.<br>2) Configurar as variáveis ANDROID_NDK, ANDROID_SDK, and ANDROID_HOME com os caminhos do NDK, SDK e SDK respectivamente.<br>3) Só funciona com sdk tools antigos que ainda suportem ant (25.2-)<br>4) O diretório assets que conterá o game.love deve ficar no diretório raiz do projeto que é aonde o AndroidManifest.xml fica.<br>5) ndk-build -j4 para compilar a primeira vez os pacotes c/c++ (é o que falta no seu aparentemete)<br>6) Depois é só 'ant release' para o apk (é gerado em bin).<br>[ENGLISH]<br>If you are trying to build by npinochet project, try:<br>1) Currently only the NDK r14 or - works.<br>2) Configure the variables ANDROID_NDK, ANDROID_SDK, and ANDROID_HOME with the NDK, SDK and SDK paths respectively.<br>3) Only works with older sdk tools that still support ant (25.2-)<br>4) The assets directory that will contain the game.love should be the root directory of the project that where contains the AndroidManifest.xml.<br>5) Do 'ndk-build -j4' to compile the first time packages c / c ++ (this is what is missing apparently)<br>6) Then it is only do 'ant release' for generate apk (it will stay in bin).</div></blockquote>Thank you so much, friend!<br>I will check it as soon as possible!<br><br>Cheers<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137946">uederson</a> — Wed Aug 23, 2017 4:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[greboide]]></name></author>
+		<updated>2017-08-19T17:32:54+00:00</updated>
+
+		<published>2017-08-19T17:32:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214708#p214708</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214708#p214708"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214708#p214708"><![CDATA[
+nice, i was able to run it by placing it on app/src/main/assets folder that i created, thank you!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139372">greboide</a> — Sat Aug 19, 2017 5:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-08-11T17:36:13+00:00</updated>
+
+		<published>2017-08-11T17:36:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214541#p214541</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214541#p214541"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214541#p214541"><![CDATA[
+<blockquote class="uncited"><div>Hi, how can i package my game with it? Ive tried adding a game.love on assets/ dir on project root but it didnt work, any idea someone?</div></blockquote>That's odd, it should have worked, are you sure the folder is called "assets" and that the .love is called "game"? I don't think I can help you more than that. If it's still not working, it must be a problem from the repository and there's not much I can do to help you with that.<br><br>On a side note, I encorage people to start using the new <a href="https://www.love2d.org/forums/viewtopic.php?f=5&amp;t=84226" class="postlink">AdMob repo by bio1712</a> since it's more up to date with the changes to the official LÖVE's android repository and has reward videos supported. Mine is way behind schedule and has some problems that has been fixed in the offical LÖVE's repo.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Fri Aug 11, 2017 5:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[greboide]]></name></author>
+		<updated>2017-08-11T10:30:54+00:00</updated>
+
+		<published>2017-08-11T10:30:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214529#p214529</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214529#p214529"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214529#p214529"><![CDATA[
+Hi, how can i package my game with it? Ive tried adding a game.love on assets/ dir on project root but it didnt work, any idea someone?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139372">greboide</a> — Fri Aug 11, 2017 10:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dartrix]]></name></author>
+		<updated>2017-07-25T20:34:29+00:00</updated>
+
+		<published>2017-07-25T20:34:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214081#p214081</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214081#p214081"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214081#p214081"><![CDATA[
+Hi, im trying to use this but ad just doesnt show up, heres the adb logcat<br><div class="codebox"><p>Code: </p><pre><code>D/GameActivity(23114): Calling CreateBannerD/GameActivity(23114): Calling showBannerD/GameActivity(23114): Banner Created. ID: ca-app-pub-6342794025381749/5328371971D/GameActivity(23114): Banner Showing</code></pre></div>It says "Banner Showing" but is not.<br>my code is like this <div class="codebox"><p>Code: </p><pre><code>if love.system.getOS() == "Android" thenlove.system.createBanner("ca-app-pub-6342794025381749/5328371971", "bottom", "BANNER")love.system.showBanner()end</code></pre></div>EDIT:Solved, i just needed to add to androidmanifest.xml<div class="codebox"><p>Code: </p><pre><code>&lt;uses-permission android:name="android.permission.INTERNET"/&gt;&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt; </code></pre></div> and <div class="codebox"><p>Code: </p><pre><code>&lt;!-- This meta-data tag is required for google play game services. --&gt;      &lt;meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/app_id"/&gt;      &lt;meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/&gt;      &lt;!--Include the AdActivity configChanges and theme. --&gt;      &lt;activity android:name="com.google.android.gms.ads.AdActivity"        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"        android:theme="@android:style/Theme.Translucent"/&gt;</code></pre></div> in the \app\src\main  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-ultrahappy.png" width="16" height="16" alt=":ultrahappy:" title="Ultrahappy"><br><br>EDIT2: ads only shows with 2g/3g/lte, but not with wifi<br><br>EDIT3: i added this and it started working ¯\_(ツ)_/¯<div class="codebox"><p>Code: </p><pre><code>&lt;uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/&gt;</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139361">dartrix</a> — Tue Jul 25, 2017 8:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Мэтю]]></name></author>
+		<updated>2017-07-24T23:33:13+00:00</updated>
+
+		<published>2017-07-24T23:33:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214073#p214073</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214073#p214073"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214073#p214073"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hello there. I managed to pack my apk and install it on my cellphone. But I don't know why, my banner won't appears anywhere. Does it generate a log file somewhere so I can see what's going on?</div></blockquote>Make sure you use the proper ad unit id.<br>Also, in my experience, it doesnt quickly appear</div></blockquote>Sure thing. I managed to settle things down btw. I made a mistake about my id and the ad block id, lul. Also managed to see that "log" I was talking about, using adb logcat. Nothing a nice search could'nt do. Thanks anyway c:<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134499">Мэтю</a> — Mon Jul 24, 2017 11:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-07-24T09:53:42+00:00</updated>
+
+		<published>2017-07-24T09:53:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214060#p214060</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214060#p214060"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214060#p214060"><![CDATA[
+<blockquote class="uncited"><div>Hello there. I managed to pack my apk and install it on my cellphone. But I don't know why, my banner won't appears anywhere. Does it generate a log file somewhere so I can see what's going on?</div></blockquote>Make sure you use the proper ad unit id.<br>Also, in my experience, it doesnt quickly appear<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Mon Jul 24, 2017 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Мэтю]]></name></author>
+		<updated>2017-07-21T18:34:33+00:00</updated>
+
+		<published>2017-07-21T18:34:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214006#p214006</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214006#p214006"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214006#p214006"><![CDATA[
+Hello there. I managed to pack my apk and install it on my cellphone. But I don't know why, my banner won't appears anywhere. Does it generate a log file somewhere so I can see what's going on?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134499">Мэтю</a> — Fri Jul 21, 2017 6:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[NickRock]]></name></author>
+		<updated>2017-07-05T13:21:29+00:00</updated>
+
+		<published>2017-07-05T13:21:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213742#p213742</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213742#p213742"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213742#p213742"><![CDATA[
+I ran into a similar problem, (I have NDK r14) The app was compiled fine but when I installed the apk on my phone it crashes before even being able to open. I can't figure out what's wrong if anyone is willing to help me out that'd be great! Thanks<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136095">NickRock</a> — Wed Jul 05, 2017 1:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[wison27]]></name></author>
+		<updated>2017-06-23T00:55:41+00:00</updated>
+
+		<published>2017-06-23T00:55:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213485#p213485</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213485#p213485"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213485#p213485"><![CDATA[
+<blockquote class="uncited"><div>Hi!<br>How are you guys?<br>This is really great! Thank you so much for share this with us!<br>I tried my lua code and worked fine using your love version, but sadly, when I build my own app, it is giving me an error when I try to run the app on Android.<br>Pls check attached picture.<br>Can someone pls point me what is wrong? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>See this: <a href="https://love2d.org/wiki/Game_Distribution#Android" class="postlink">https://love2d.org/wiki/Game_Distribution#Android</a> .<br>[EDIT]<br>How you is brazilian i'm go write portuguese.<br>Se estiver tentando construir pelo projeto do npinochet, o fork do love-android, tente:<br>1) Atualmente só o NDK r14 ou - funciona.<br>2) Configurar as variáveis ANDROID_NDK, ANDROID_SDK, and ANDROID_HOME com os caminhos do NDK, SDK e SDK respectivamente.<br>3) Só funciona com sdk tools antigos que ainda suportem ant (25.2-)<br>4) O diretório assets que conterá o game.love deve ficar no diretório raiz do projeto que é aonde o AndroidManifest.xml fica.<br>5) ndk-build -j4 para compilar a primeira vez os pacotes c/c++ (é o que falta no seu aparentemete)<br>6) Depois é só 'ant release' para o apk (é gerado em bin).<br>[ENGLISH]<br>If you are trying to build by npinochet project, try:<br>1) Currently only the NDK r14 or - works.<br>2) Configure the variables ANDROID_NDK, ANDROID_SDK, and ANDROID_HOME with the NDK, SDK and SDK paths respectively.<br>3) Only works with older sdk tools that still support ant (25.2-)<br>4) The assets directory that will contain the game.love should be the root directory of the project that where contains the AndroidManifest.xml.<br>5) Do 'ndk-build -j4' to compile the first time packages c / c ++ (this is what is missing apparently)<br>6) Then it is only do 'ant release' for generate apk (it will stay in bin).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139290">wison27</a> — Fri Jun 23, 2017 12:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[uederson]]></name></author>
+		<updated>2017-06-21T19:42:46+00:00</updated>
+
+		<published>2017-06-21T19:42:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213466#p213466</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213466#p213466"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213466#p213466"><![CDATA[
+Hi!<br>How are you guys?<br>This is really great! Thank you so much for share this with us!<br>I tried my lua code and worked fine using your love version, but sadly, when I build my own app, it is giving me an error when I try to run the app on Android.<br>Pls check attached picture.<br>Can someone pls point me what is wrong? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15234&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15234" class="postimage" alt="Screenshot_2017-06-21-16-24-14.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137946">uederson</a> — Wed Jun 21, 2017 7:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-06-09T13:27:19+00:00</updated>
+
+		<published>2017-06-09T13:27:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213116#p213116</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213116#p213116"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213116#p213116"><![CDATA[
+<blockquote class="uncited"><div>I have a question,do i need to download other sdk api level for building my apk? For example, i want my apk to support android gingerbread up to latest, do i need all sdk api? Or not?</div></blockquote>As far as I know, the most recent sdk's have all the previous api levels implemented in them, so you can just specify the api levels you want in your manifest, <a href="https://bitbucket.org/npinochet/love-android-sdl2/src/8b6dfed0c6361a8a5f84f96cbe9185142d6be480/AndroidManifest.xml?at=master&amp;fileviewer=file-view-default#AndroidManifest.xml-81" class="postlink">like here</a>.<br>For more info, look at this page: <a href="https://developer.android.com/guide/topics/manifest/uses-sdk-element.html" class="postlink">Link.</a><br>Hope it helps <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>EDIT: On <a href="https://stackoverflow.com/questions/24490844/does-new-android-api-includes-all-previous-version-api" class="postlink">further investigation</a>, It might just have to do with the API calls and functions you use on your application, kind of like how love's API changes with each new version, which makes sense <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Fri Jun 09, 2017 1:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-06-09T10:28:33+00:00</updated>
+
+		<published>2017-06-09T10:28:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213111#p213111</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213111#p213111"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213111#p213111"><![CDATA[
+I have a question,do i need to download other sdk api level for building my apk? For example, i want my apk to support android gingerbread up to latest, do i need all sdk api? Or not?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Jun 09, 2017 10:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-06-06T03:41:30+00:00</updated>
+
+		<published>2017-06-06T03:41:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213007#p213007</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213007#p213007"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213007#p213007"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div><br>It's one of the things that I want to add to the port, but I just haven't found the time to implement it. The project has a lot of thing I would like to change: add firebase support, change the API to be more love like, somehow make it more modular and easier to install and use, but life is in the way and this has become low on my priorities. I don't know when I will update this project, but it's going to be a long time before I can.</div></blockquote>I really want to help. Im well familiar with java. But idk where to start and how to implement that android stuffs to love which, in its source is written in c. Maybe a little guide?</div></blockquote>Sure, basically what I did was follow what bio1712 did in <a href="https://www.love2d.org/forums/viewtopic.php?f=11&amp;t=81224%20I" class="postlink">this post</a> and kept adding more admob funtions and exposing them as love.system functions, it's not that complicated, but it needs a lot of testing. Ask me anything if you're having trouble <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Wow. I know cpp but not that advance, idk whats happening in post haha. Well, i would really study it.<br>Wish me luck<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Tue Jun 06, 2017 3:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-06-05T20:05:25+00:00</updated>
+
+		<published>2017-06-05T20:05:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213001#p213001</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213001#p213001"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213001#p213001"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>Is it possible to add video rewards?</div></blockquote>It's one of the things that I want to add to the port, but I just haven't found the time to implement it. The project has a lot of thing I would like to change: add firebase support, change the API to be more love like, somehow make it more modular and easier to install and use, but life is in the way and this has become low on my priorities. I don't know when I will update this project, but it's going to be a long time before I can.</div></blockquote>I really want to help. Im well familiar with java. But idk where to start and how to implement that android stuffs to love which, in its source is written in c. Maybe a little guide?</div></blockquote>Sure, basically what I did was follow what bio1712 did in <a href="https://www.love2d.org/forums/viewtopic.php?f=11&amp;t=81224%20I" class="postlink">this post</a> and kept adding more admob funtions and exposing them as love.system functions, it's not that complicated, but it needs a lot of testing. Ask me anything if you're having trouble <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Mon Jun 05, 2017 8:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-06-04T10:02:17+00:00</updated>
+
+		<published>2017-06-04T10:02:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212970#p212970</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212970#p212970"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212970#p212970"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Is it possible to add video rewards?</div></blockquote>It's one of the things that I want to add to the port, but I just haven't found the time to implement it. The project has a lot of thing I would like to change: add firebase support, change the API to be more love like, somehow make it more modular and easier to install and use, but life is in the way and this has become low on my priorities. I don't know when I will update this project, but it's going to be a long time before I can.</div></blockquote>I really want to help. Im well familiar with java. But idk where to start and how to implement that android stuffs to love which, in its source is written in c. Maybe a little guide?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sun Jun 04, 2017 10:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TheHistoricApple]]></name></author>
+		<updated>2017-06-03T23:53:53+00:00</updated>
+
+		<published>2017-06-03T23:53:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212959#p212959</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212959#p212959"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212959#p212959"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Is it possible to add video rewards?</div></blockquote>It's one of the things that I want to add to the port, but I just haven't found the time to implement it. The project has a lot of thing I would like to change: add firebase support, change the API to be more love like, somehow make it more modular and easier to install and use, but life is in the way and this has become low on my priorities. I don't know when I will update this project, but it's going to be a long time before I can.</div></blockquote><br>No worries. Understandable.<br><br>Thanks for all the work you've put into this so far!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138787">TheHistoricApple</a> — Sat Jun 03, 2017 11:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-06-03T23:51:08+00:00</updated>
+
+		<published>2017-06-03T23:51:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212958#p212958</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212958#p212958"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212958#p212958"><![CDATA[
+<blockquote class="uncited"><div>Is it possible to add video rewards?</div></blockquote>It's one of the things that I want to add to the port, but I just haven't found the time to implement it. The project has a lot of thing I would like to change: add firebase support, change the API to be more love like, somehow make it more modular and easier to install and use, but life is in the way and this has become low on my priorities. I don't know when I will update this project, but it's going to be a long time before I can.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Sat Jun 03, 2017 11:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-06-03T08:29:42+00:00</updated>
+
+		<published>2017-06-03T08:29:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212939#p212939</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212939#p212939"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212939#p212939"><![CDATA[
+<blockquote class="uncited"><div>Is it possible to add video rewards?</div></blockquote>I think not. Ask the developer of the port to add those. Or maybe, if you're good at java and android sdk, you can implement that code into lua and commit it to the repo<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Jun 03, 2017 8:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TheHistoricApple]]></name></author>
+		<updated>2017-06-03T08:08:25+00:00</updated>
+
+		<published>2017-06-03T08:08:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212938#p212938</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212938#p212938"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212938#p212938"><![CDATA[
+Is it possible to add video rewards?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138787">TheHistoricApple</a> — Sat Jun 03, 2017 8:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TheHistoricApple]]></name></author>
+		<updated>2017-05-28T09:46:05+00:00</updated>
+
+		<published>2017-05-28T09:46:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212785#p212785</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212785#p212785"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212785#p212785"><![CDATA[
+So, im really confused on how this works, i've downloaded everything.<br><br>Do i put my game.love folder in the repo you gave us, then run 'ant debug' through command prompt. doing so results in<br><div class="codebox"><p>Code: </p><pre><code>BUILD FAILEDC:\loveandroid\build.xml:91: Cannot find C:\Users\Jma227\AppData\Local\Android\Sdk\tools\ant\build.xml imported from C:\loveandroid\build.xmlTotal time: 0 seconds</code></pre></div>edit: i got it to build, however when i run the apk it says the love.system.createBanner() function does not exist?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138787">TheHistoricApple</a> — Sun May 28, 2017 9:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-27T01:14:42+00:00</updated>
+
+		<published>2017-04-27T01:14:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212044#p212044</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212044#p212044"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212044#p212044"><![CDATA[
+<blockquote class="uncited"><div>Heya! I'm new at Game Development, so maybe my lack of abilities made me miss this, but does this allows me to save directly on Google Play cloud?<br><br>I know Google Play have a Cloud system for saving games (so you can change your device without worriyng). I was planning to make a game with collectables, and it'd be really crucial to have a way to save games that way</div></blockquote>In it's current state, this port doesn't have the ability to save to the cloud yet, maybe in the future...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Thu Apr 27, 2017 1:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Slumberjack]]></name></author>
+		<updated>2017-04-25T16:33:24+00:00</updated>
+
+		<published>2017-04-25T16:33:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=212010#p212010</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=212010#p212010"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=212010#p212010"><![CDATA[
+Heya! I'm new at Game Development, so maybe my lack of abilities made me miss this, but does this allows me to save directly on Google Play cloud?<br><br>I know Google Play have a Cloud system for saving games (so you can change your device without worriyng). I was planning to make a game with collectables, and it'd be really crucial to have a way to save games that way<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139123">Slumberjack</a> — Tue Apr 25, 2017 4:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2017-04-12T01:12:44+00:00</updated>
+
+		<published>2017-04-12T01:12:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211611#p211611</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211611#p211611"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211611#p211611"><![CDATA[
+<blockquote class="uncited"><div>Any plan to ask the love2d devs to merge your additional love.system functions to the main code? I think it would make sense for debugging.<br><br>Also, will you add any other form of ads? Or maybe I want to know the future plans for the amazing repo</div></blockquote>I don't think my love.system api is polished enough to be added to the main code, maybe one day...<br>I plan to add support for admob reward videos and the rest of the google play game services functions, and maybe after all that, Firebase, but first I have to find time for implementing all that <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br><blockquote class="uncited"><div>Where can i look up the added functions in the source code? Why is there no love.system.isBannerLoaded()?</div></blockquote>You can see all the commits I have made to the original repo <a href="https://bitbucket.org/npinochet/love-android-sdl2/branches/compare/npinochet/love-android-sdl2:master%0DMartinFelis/love-android-sdl2:master#commits" class="postlink">here</a>, and you can see the implementations of the new functions in love-android-sdl2/src/org/love2d/android/GameActivity.java.<br>I didn't saw the need to implement a love.system.isBannerLoaded function, but I can see it's uses, I could implement a love.system.isBanner[Loaded/Showing] over the weekend.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Wed Apr 12, 2017 1:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-04-11T08:33:43+00:00</updated>
+
+		<published>2017-04-11T08:33:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211581#p211581</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211581#p211581"/>
+		<title type="html"><![CDATA[Re: [Android] Admob and Google Play Game Services Support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211581#p211581"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>So that applies to the interstitial right? Firebase is like the analytics for admob.</div></blockquote>Yep, that applies to interstitials too.</div></blockquote>Where can i look up the added functions in the source code? Why is there no love.system.isBannerLoaded()?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Tue Apr 11, 2017 8:33 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

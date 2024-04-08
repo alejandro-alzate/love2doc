@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/8487" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-08-14T12:34:30+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/8487</id>
+
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2016-08-14T12:34:30+00:00</updated>
+
+		<published>2016-08-14T12:34:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202064#p202064</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202064#p202064"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202064#p202064"><![CDATA[
+not-yet-implemented (incomplete list) <br>* love 0.8 api (currently webplayer is mostly for 0.7, to test some 0.8 stuff add to index.html : &lt;body onload="Love_Enable_Experimental_080(); ...&gt;<br>* spritebatch,framebuf<br>* love.physics/box2d  (started usign Box2dWeb)<br>* font truetype/ttf loading (rasterizer), pixelfonts should work  (except a few special cases in text formatting/wrapping)<br>* network/luasocket<br>* love.thread<br>* love.sound sounddata/decoder stuff. audio itself should work, but is troublesome in some browsers, notably firefox (html5 audio)<br>* love.timer.sleep : not possible in js, would lead to browser hang in most browsers<br>* love.imagedata (load-from-file + imgdata.paste + graphics.newImage(imgdata) works, but not decoding, etc)<br>* love.filesystem stuff (some of it already works, but only if "localstorage" is available in the browser, stored in cookies or sth)<br>* debug.stacktrace and useful stacktraces on error in general (i recommend testing in native love first and if the problem is webplayer only litter the code with lots of print("pos01") to narrow it down)<br>* complex string matching pattern, especially balanced braces (e.g. xml parsers, see below)<br>* screensize wrong (-1,-1) during love.load : love.graphics.getWidth()/getHeight()<br>* raw sound/audio editing : love.sound.newSoundData etc<br><br>known issues : <br>* audio : music formats .xm and .mod not supported by browsers usually<br>* 404 warning in webconsole when using "require somemodule", you can safely ignore this, this is just the only way javascript can do a file-exists check for the module loading behavior of require<br>* (TODO) workaround for 404 : call LoveFileList('filelist.txt') in index.html body onload to enable love.filesystem.enumerate<br>* images have to be listed in index.html onLoad call for preloading, otherwise .width/.height access can return 0, and it's not possible in chrome+firefox to pause running code without changing code-structure to callback<br>* ticket/issue at lua.js github : <a href="https://github.com/mherkender/lua.js/issues/5" class="postlink">https://github.com/mherkender/lua.js/issues/5</a><br>* parser bug : clouds demo : parse error in keypressed :  &gt;&gt; love.filesystem.load("main.lua")() &lt;&lt; (already fixed for some generic cases) workaround : &gt;&gt; (love.filesystem.load("main.lua"))() &lt;&lt;<br>* parser NotImplemented : string.format("%d",5),debug.backtrace,coroutines,...<br>* firefox(11) is known to have issues with sound: lag,delay..   chrome (18.0.1025.151) works better for me on ubuntu 11.04 (2012-04)<br>* doesn't work with file:// url for some reason. so you need to upload stuff to a webserver to try, php and similar isn't needed.<br>* when changing lua files, be sure to clear browser cache to see your changes, pressing f5 is not enough since it doesn't refresh dynamically loaded files like the .lua ones<br>* lua string patterns aren't fully convertible to javascript regexp, so while most string patterns should work, more complex ones (like xml parsers) might fail<br>** if you need this for maploading or similar i'd recommend working around that by serialize the loaded table as .lua file<br>* functions not allowed as table key<br>* table with key-type=obj tends to slow down if inserted/deleted a lot every frame, usage of js:splice in lua-parser might be bad? further testing needed, example devmania2012veh pre 2012-10-12<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Sun Aug 14, 2016 12:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[CanadianGamer]]></name></author>
+		<updated>2016-08-12T01:28:47+00:00</updated>
+
+		<published>2016-08-12T01:28:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=201982#p201982</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=201982#p201982"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=201982#p201982"><![CDATA[
+Sorry If this has been already answered but what parts of the api don't work?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136774">CanadianGamer</a> — Fri Aug 12, 2016 1:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alberto_lara]]></name></author>
+		<updated>2016-04-23T16:20:09+00:00</updated>
+
+		<published>2016-04-23T16:20:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197938#p197938</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197938#p197938"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197938#p197938"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hi, is this project still getting support? It doesn't look like <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"></div></blockquote>Doesn't look like it. If you want to target the web, use Love.js, which is under active development.</div></blockquote>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134207">alberto_lara</a> — Sat Apr 23, 2016 4:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2016-04-04T10:38:25+00:00</updated>
+
+		<published>2016-04-04T10:38:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197188#p197188</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197188#p197188"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197188#p197188"><![CDATA[
+<blockquote class="uncited"><div>Hi, is this project still getting support? It doesn't look like <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"></div></blockquote>Doesn't look like it. If you want to target the web, use Love.js, which is under active development.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Mon Apr 04, 2016 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alberto_lara]]></name></author>
+		<updated>2016-04-04T03:15:42+00:00</updated>
+
+		<published>2016-04-04T03:14:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197168#p197168</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197168#p197168"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197168#p197168"><![CDATA[
+Hi, is this project still getting support? It doesn't look like <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134207">alberto_lara</a> — Mon Apr 04, 2016 3:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2016-03-17T12:34:48+00:00</updated>
+
+		<published>2016-03-17T12:34:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=196408#p196408</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=196408#p196408"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=196408#p196408"><![CDATA[
+Sure. Here is the link to <a href="https://github.com/TannerRogalsky/love.js" class="postlink">https://github.com/TannerRogalsky/love.js</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Mar 17, 2016 12:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2016-03-10T10:48:42+00:00</updated>
+
+		<published>2016-03-10T10:48:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=196126#p196126</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=196126#p196126"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=196126#p196126"><![CDATA[
+Wouldn't love.js be a better and more modern Löve-to-web tool to use? I think this one is pretty outdated.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Thu Mar 10, 2016 10:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Hodor88]]></name></author>
+		<updated>2016-03-10T09:53:33+00:00</updated>
+
+		<published>2016-03-10T09:53:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=196124#p196124</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=196124#p196124"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=196124#p196124"><![CDATA[
+Having some issues with webplayer:<br><div class="codebox"><p>Code: </p><pre><code>error during love.update(0.08) : Error: attempt to index field 'random' in a nil value : Error: attempt to index field 'random' in a nil value at lua_tableget (http://www.onelostpixel.de/wp-content/games/love/js/lua-parser.js:1593:11) at lua_tablegetcall (http://www.onelostpixel.de/wp-content/games/love/js/lua-parser.js:1303:14) at eval (eval at lua_load (http://www.onelostpixel.de/wp-content/games/love/js/lua-parser.js:35:21), :262:50) at lua_rawcall (http://www.onelostpixel.de/wp-content/games/love/js/lua-parser.js:1289:17) at lua_call (http://www.onelostpixel.de/wp-content/games/love/js/lua-parser.js:1320:12) at call_love_callback_guarded (http://www.onelostpixel.de/wp-content/games/love/js/main.js:307:10) at call_love_update (http://www.onelostpixel.de/wp-content/games/love/js/main.js:366:46) at MainStep (http://www.onelostpixel.de/wp-content/games/love/js/main.js:418:3) at MainRunAfterPreloadFinished (http://www.onelostpixel.de/wp-content/games/love/js/main.js:547:2) at PreLoadImageFinishOne (http://www.onelostpixel.de/wp-content/games/love/js/main.js:487:2)</code></pre></div><br>Isn't is possible to use random?<br><br>Here is the Code:<br><div class="codebox"><p>Code: </p><pre><code>--debug = true;--local utf8 = require("utf8")OBJ_Player = {x = love.graphics:getWidth()/2, y = love.graphics:getHeight()-100, speed = 150, img = nil,img_idle = nil, img_up = nil, img_down = nil, img_left = nil, img_right = nil, isAlive = false, health = 100  }-- Objekt VorlagenPrefab_Enemy = {x = 200, y = 0, speed = 40, img = nil, health = 100, score = 10}Prefab_Bullet = { damage = 35, speed = 500, img = nil }Prefab_EnemyBullet = { damage = 15, speed = 300, img = nil }Prefab_AstroidBig = { img = nil, speed = 25, health = 500, angle = 1, score = 15}Prefab_AstroidSmall = { img = nil, speed = 72, health = 50, angle = 1, score = 5 }-- Game Einstellungenscore = 0alreadyPlayed = false;playerName = "";byteoffset = nil;-- TimerscanShoot = truecanShootTimerMax = 0.1 canShootTimer = canShootTimerMaxcanSpawn = true;canSpawnTimerMax = 3canSpawnTimer = canSpawnTimerMaxStarcanSpawn = true;StarcanSpawnTimerMax = 2StarcanSpawnTimer = StarcanSpawnTimerMaxEnemycanShoot = trueEnemycanShootTimerMax = 1.2EnemycanShootTimer = EnemycanShootTimerMaxstarBG_img = nilSmallAstroidcanSpawn = true;SmallAstroidcanSpawnTimerMax = 3SmallAstroidcanSpawnTimer = SmallAstroidcanSpawnTimerMaxBigAstroidcanSpawn = true;BigAstroidcanSpawnTimerMax = 6BigAstroidcanSpawnTimer = BigAstroidcanSpawnTimerMax-- Listenbullets = {}enemies = {}enemybullets = {}stars = {}astroids_small = {}astroids_big = {}function love.load(arg)OBJ_Player.img = love.graphics.newImage('plane.png')OBJ_Player.img_idle = love.graphics.newImage('plane.png')OBJ_Player.img_up = love.graphics.newImage('player_up.png')OBJ_Player.img_down = love.graphics.newImage('player_down.png')OBJ_Player.img_left = love.graphics.newImage('player_left.png')OBJ_Player.img_right = love.graphics.newImage('player_right.png')Prefab_AstroidBig.img = love.graphics.newImage('asteroid_big.png')Prefab_AstroidSmall.img = love.graphics.newImage('asteroid_small.png')Prefab_Bullet.img = love.graphics.newImage('bullet.png')Prefab_EnemyBullet.img = love.graphics.newImage('enemybullet.png')Prefab_Enemy.img = love.graphics.newImage('enemyShip01.png');starBG_img = love.graphics.newImage('star.png');endfunction love.draw(dt)if OBJ_Player.isAlive then-- Sterne hintergrundfor i, star in ipairs(stars) dolove.graphics.draw(star.img, star.x, star.y)end-- Asteroidenfor i, astroid in ipairs(astroids_small) dolove.graphics.draw(astroid.img, astroid.x, astroid.y, astroid.angle,1,1, astroid.img:getWidth()/2, astroid.img:getHeight()/2)endfor i, astroid in ipairs(astroids_big) dolove.graphics.draw(astroid.img, astroid.x, astroid.y, astroid.angle,1,1, astroid.img:getWidth()/2, astroid.img:getHeight()/2)end-- Spielerlove.graphics.draw(OBJ_Player.img, OBJ_Player.x, OBJ_Player.y)love.graphics.print("Pilot: ".. playerName, 15, 15)love.graphics.print("Score: ".. tostring(score), 15, love.graphics:getHeight()-20)love.graphics.print("Shield: ".. tostring(OBJ_Player.health), love.graphics:getWidth()- 80, love.graphics:getHeight()-20)-- Spieler Schüssefor i, bullet in ipairs(bullets) dolove.graphics.draw(bullet.img, bullet.x, bullet.y)end-- Feindlicher Laserfor i, bullet in ipairs(enemybullets) dolove.graphics.draw(bullet.img, bullet.x, bullet.y)end-- Feindefor i, enemy in ipairs(enemies) dolove.graphics.draw(enemy.img, enemy.x, enemy.y)endelseif alreadyPlayed thenlove.graphics.print("Your Score: ".. tostring(score), love.graphics:getWidth()/2-30, love.graphics:getHeight()/2-30)love.graphics.print("Press 'R' to restart", love.graphics:getWidth()/2-50, love.graphics:getHeight()/2-10)love.graphics.print("www.onelostpixel.de", 15, love.graphics:getHeight()-20)-- TODO: Interstial Anzeigen!elselove.graphics.print("Enter your Name and Press Enter to Start:", love.graphics:getWidth()/2-50, love.graphics:getHeight()/2-10)love.graphics.print("Name: "..playerName, love.graphics:getWidth()/2-25, love.graphics:getHeight()/2+10)love.graphics.print("www.onelostpixel.de", 15, love.graphics:getHeight()-20)endendendfunction CheckPlayerAlive()-- Ist Spieler verstorben?if OBJ_Player.health &lt;= 0 then--local file = love.filesystem.newFile("highscore.lua", love.file_write)    --love.filesystem.open(file)    --love.filesystem.write(file, playerName..":"..score)    --love.filesystem.close(file)OBJ_Player.isAlive = false;alreadyPlayed = true;endendfunction PlayerReset() bullets = {}enemies = {}enemybullets = {}astroids_small = {}astroids_big = {}-- reset timerscanShootTimer = canShootTimerMaxcreateEnemyTimer = createEnemyTimerMax-- move player back to default positionOBJ_Player.x = love.graphics:getWidth()/2OBJ_Player.y = love.graphics:getHeight()-100OBJ_Player.health = 100-- Random initial starsstars = {}for i=1, 100 doOBJ_Star = { x = love.math.random(1, love.graphics:getWidth()-1), y = love.math.random(1, love.graphics:getHeight()-1), img = starBG_img, speed = 12 }table.insert(stars, OBJ_Star)end-- reset our game statescore = 0OBJ_Player.isAlive = trueendfunction love.textinput(t)--byteoffset = utf8.offset(playerName, -1)playerName = playerName..t;--byteoffset = utf8.offset(playerName, -1)end-- Updatingfunction love.update(dt)CheckPlayerAlive()if not OBJ_Player.isAlive and not alreadyPlayed then--love.keyboard.setTextInput(true);if love.keyboard.isDown("backspace") then--playerName = string.sub(playerName, 1, byteoffset - 1)endif love.keyboard.isDown("kpenter") or love.keyboard.isDown("return") thenPlayerReset();--love.keyboard.setTextInput(false);endendif alreadyPlayed and not OBJ_Player.isAlive and love.keyboard.isDown('r') thenPlayerReset();endif love.keyboard.isDown('escape') thenlove.event.push('quit')endif love.keyboard.isDown('left','a') thenif OBJ_Player.x &gt; 0 thenOBJ_Player.img = OBJ_Player.img_left;OBJ_Player.x = OBJ_Player.x - (OBJ_Player.speed*dt)endelseif love.keyboard.isDown('right','d') thenif OBJ_Player.x &lt; love.graphics.getWidth()-100 thenOBJ_Player.img = OBJ_Player.img_right;OBJ_Player.x = OBJ_Player.x + (OBJ_Player.speed*dt)endelseif love.keyboard.isDown('up', 'w') thenif OBJ_Player.y &gt; love.graphics:getHeight()/2 thenOBJ_Player.img = OBJ_Player.img_up;OBJ_Player.y = OBJ_Player.y - (OBJ_Player.speed*dt)endelseif love.keyboard.isDown('down', 's') thenif OBJ_Player.y &lt; love.graphics:getHeight()-100 thenOBJ_Player.img = OBJ_Player.img_down;OBJ_Player.y = OBJ_Player.y + (OBJ_Player.speed*dt)endelseOBJ_Player.img = OBJ_Player.img_idle;endcanShootTimer = canShootTimer - (1 * dt)if canShootTimer &lt; 0 then  canShoot = trueendif love.keyboard.isDown(' ', 'rctrl', 'lctrl', 'ctrl') and canShoot thenOBJ_Bullet = { x = OBJ_Player.x + (OBJ_Player.img:getWidth()/2),    y = OBJ_Player.y,    img = Prefab_Bullet.img,    damage = Prefab_Bullet.damage,    speed = Prefab_Bullet.speed  } table.insert(bullets, OBJ_Bullet)canShoot = falsecanShootTimer = canShootTimerMaxfor i, bullet in ipairs(bullets) do  love.graphics.draw(bullet.img, bullet.x, bullet.y)endendfor i, bullet in ipairs(bullets) dobullet.y = bullet.y - (bullet.speed * dt)  if bullet.y &lt; 0 then -- remove bullets when they pass off the screentable.remove(bullets, i)endendcanSpawnTimer = canSpawnTimer - (1 * dt)if canSpawnTimer &lt; 0 then  canSpawn = trueendif canSpawn thenOBJ_Enemy = { x = love.math.random(50, love.graphics:getWidth()-100), y = 0, img = Prefab_Enemy.img, damage = Prefab_Enemy.damage, speed = Prefab_Enemy.speed, health = Prefab_Enemy.health, score = Prefab_Enemy.score }table.insert(enemies, OBJ_Enemy)canSpawn = falsecanSpawnTimer = canSpawnTimerMaxendStarcanSpawnTimer = StarcanSpawnTimer - (1 * dt)if StarcanSpawnTimer &lt; 0 then  StarcanSpawn = trueendif StarcanSpawn thenOBJ_Star = { x = love.math.random(50, love.graphics:getWidth()-100), y = 0, img = starBG_img, speed = 12 }table.insert(stars, OBJ_Star)StarcanSpawn = falseStarcanSpawnTimer = StarcanSpawnTimerMaxendfor i, star in ipairs(stars) dostar.y = star.y + (star.speed * dt)if star.y &gt; love.graphics:getHeight() thentable.remove(stars, i)endendfor i, enemy in ipairs(enemies) doenemy.y = enemy.y + (enemy.speed * dt)-- Kollision prüfen ob Feind getroffen wurdefor j, bullet in ipairs(bullets) doif CheckCollision(enemy.x, enemy.y, enemy.img:getWidth(), enemy.img:getHeight(), bullet.x, bullet.y, bullet.img:getWidth(), bullet.img:getHeight()) thenenemy.health = enemy.health - bullet.damageif enemy.health &lt;= 0 thenscore = score + enemy.scoretable.remove(enemies, i)endtable.remove(bullets, j)endendEnemycanShootTimer = EnemycanShootTimer - (1 * dt)if EnemycanShootTimer &lt; 0 then   EnemycanShoot = trueendif EnemycanShoot thenOBJ_EnemyBullet = { x = enemy.x + (enemy.img:getWidth()/2), y = enemy.y, img = Prefab_EnemyBullet.img, damage = Prefab_EnemyBullet.damage, speed = Prefab_EnemyBullet.speed    }   table.insert(enemybullets, OBJ_EnemyBullet)EnemycanShoot = falseEnemycanShootTimer = EnemycanShootTimerMaxend  if enemy.y &gt; love.graphics:getHeight() then -- remove enemy when they pass off the screentable.remove(enemies, i)end-- Kollision prüfen ob feindl. Raumschiff mit Spieler kollidiertif CheckCollision(enemy.x, enemy.y, enemy.img:getWidth(), enemy.img:getHeight(), OBJ_Player.x, OBJ_Player.y, OBJ_Player.img:getWidth(), OBJ_Player.img:getHeight()) and OBJ_Player.isAlive thentable.remove(enemies, i)OBJ_Player.isAlive = false;alreadyPlayed = true;endendfor i, bullet in ipairs(enemybullets) doif CheckCollision(OBJ_Player.x, OBJ_Player.y, OBJ_Player.img:getWidth(), OBJ_Player.img:getHeight(), bullet.x, bullet.y, bullet.img:getWidth(), bullet.img:getHeight()) thenOBJ_Player.health = OBJ_Player.health - bullet.damage;table.remove(enemybullets, i)endbullet.y = bullet.y + (bullet.speed * dt)  if bullet.y &gt; love.graphics:getHeight() then -- remove bullets when they pass off the screentable.remove(enemybullets, i)endendSmallAstroidcanSpawnTimer = SmallAstroidcanSpawnTimer - (1 * dt)if SmallAstroidcanSpawnTimer &lt; 0 then  SmallAstroidcanSpawn = trueendif SmallAstroidcanSpawn thenOBJ_SAstroid = { x = love.math.random(50, love.graphics:getWidth()-100), y = 0, img = Prefab_AstroidSmall.img, speed = Prefab_AstroidSmall.speed, health = Prefab_AstroidSmall.health, angle = Prefab_AstroidSmall.angle, score = Prefab_AstroidSmall.score }table.insert(astroids_small, OBJ_SAstroid)SmallAstroidcanSpawn = falseSmallAstroidcanSpawnTimer = SmallAstroidcanSpawnTimerMaxendfor i, astroid in ipairs(astroids_small) doastroid.y = astroid.y + (astroid.speed * dt)astroid.angle = astroid.angle + dt * math.pi/6astroid.angle = astroid.angle % (6*math.pi)for j, bullet in ipairs(bullets) doif CheckCollision(astroid.x, astroid.y, astroid.img:getWidth(), astroid.img:getHeight(), bullet.x, bullet.y, bullet.img:getWidth(), bullet.img:getHeight()) thenastroid.health = astroid.health - bullet.damageif astroid.health &lt;= 0 thenscore = score + astroid.scoretable.remove(astroids_small, i)endtable.remove(bullets, j)endendif astroid.y &gt; love.graphics:getHeight() thentable.remove(astroids_small, i)endendBigAstroidcanSpawnTimer = BigAstroidcanSpawnTimer - (1 * dt)if BigAstroidcanSpawnTimer &lt; 0 then  BigAstroidcanSpawn = trueendif BigAstroidcanSpawn thenOBJ_SAstroid = { x = love.math.random(50, love.graphics:getWidth()-100), y = 0, img = Prefab_AstroidBig.img, speed = Prefab_AstroidBig.speed, health = Prefab_AstroidBig.health, angle = Prefab_AstroidBig.angle, score = Prefab_AstroidBig.score }table.insert(astroids_big, OBJ_SAstroid)BigAstroidcanSpawn = falseBigAstroidcanSpawnTimer = BigAstroidcanSpawnTimerMaxendfor i, astroid in ipairs(astroids_big) doastroid.y = astroid.y + (astroid.speed * dt)astroid.angle = astroid.angle + dt * math.pi/20astroid.angle = astroid.angle % (20*math.pi)for j, bullet in ipairs(bullets) doif CheckCollision(astroid.x, astroid.y, astroid.img:getWidth(), astroid.img:getHeight(), bullet.x, bullet.y, bullet.img:getWidth(), bullet.img:getHeight()) thenastroid.health = astroid.health - bullet.damageif astroid.health &lt;= 0 thenscore = score + astroid.scorefor i=1, love.math.random(5)+1 doif love.math.random(1) == 1 thenposx = astroid.x + love.math.random(35)elseposx = astroid.x - love.math.random(35)endif love.math.random(1) == 1 thenposy = astroid.y + love.math.random(35)elseposy = astroid.y - love.math.random(35)endOBJ_SAstroid = { x = posx,  y = posy,  img = Prefab_AstroidSmall.img,  speed = Prefab_AstroidSmall.speed,  health = Prefab_AstroidSmall.health, angle = Prefab_AstroidSmall.angle, score = Prefab_AstroidSmall.score}table.insert(astroids_small, OBJ_SAstroid)endtable.remove(astroids_big, i)endtable.remove(bullets, j)endendif astroid.y &gt; love.graphics:getHeight() thentable.remove(astroids_big, i)endendendfunction CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)  return x1 &lt; x2+w2 and         x2 &lt; x1+w1 and         y1 &lt; y2+h2 and         y2 &lt; y1+h1end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137654">Hodor88</a> — Thu Mar 10, 2016 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2014-11-24T12:34:26+00:00</updated>
+
+		<published>2014-11-24T12:34:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=176552#p176552</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=176552#p176552"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=176552#p176552"><![CDATA[
+SiENcE, thank you for the links. I tried looking into love-webplayer but it seems like the API is outdated. As I couldn't help with Javascript nor web languages, I will look into punchdrunk for sure.<br><br>Have a nice day !<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Mon Nov 24, 2014 12:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-11-23T22:20:07+00:00</updated>
+
+		<published>2014-11-23T22:20:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=176530#p176530</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=176530#p176530"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=176530#p176530"><![CDATA[
+Here is my working testlink for love-webplayer.<br><a href="http://sience.schattenkind.net/love2d/" class="postlink">http://sience.schattenkind.net/love2d/</a><br><br><br>You have two choices.<br><br>older, on hold<br><a href="https://github.com/ghoulsblade/love-webplayer" class="postlink">https://github.com/ghoulsblade/love-webplayer</a><br><br>newer project, on hold?<br><a href="https://github.com/TannerRogalsky/punchdrunk" class="postlink">https://github.com/TannerRogalsky/punchdrunk</a><br><br>You should support punchdrunk if you want a working webport of löve.<br><br>cheers<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sun Nov 23, 2014 10:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2014-11-23T00:07:42+00:00</updated>
+
+		<published>2014-11-23T00:07:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=176500#p176500</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=176500#p176500"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=176500#p176500"><![CDATA[
+Is this still supported ? If not, is there any way to get a working Löve2D web port ? That'd be so useful, especially for jams.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Sun Nov 23, 2014 12:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[get52]]></name></author>
+		<updated>2014-10-06T19:32:15+00:00</updated>
+
+		<published>2014-10-06T19:32:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=174652#p174652</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=174652#p174652"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=174652#p174652"><![CDATA[
+<blockquote class="uncited"><div>cloudsdemo : <a href="http://ghoulsblade.schattenkind.net/love-webplayer/" class="postlink">http://ghoulsblade.schattenkind.net/love-webplayer/</a></div></blockquote>link is kill<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133977">get52</a> — Mon Oct 06, 2014 7:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[IndieLöver]]></name></author>
+		<updated>2014-09-24T21:48:16+00:00</updated>
+
+		<published>2014-09-24T21:48:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=174144#p174144</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=174144#p174144"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=174144#p174144"><![CDATA[
+Few questions here (my apologies if they were already answered, too lazy to read all the text  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-ehem.png" width="16" height="16" alt=":ehem:" title="Ehem ..."> )<br><br>1.Any chance to get this by the next Ludum Dare (at december)?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br>2.Are the web versions of games coded with Lua as well?<br>3.Amazing work, keep it up! (not really a question)  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=122656">IndieLöver</a> — Wed Sep 24, 2014 9:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hyouko]]></name></author>
+		<updated>2014-09-06T00:47:56+00:00</updated>
+
+		<published>2014-09-06T00:47:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=173406#p173406</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=173406#p173406"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=173406#p173406"><![CDATA[
+<blockquote class="uncited"><div>I think ghoulsblade put this webplayer on hold. Because most basic features of love are working.<br><br>Read the Readme to know what works and what not.<br><a href="https://github.com/ghoulsblade/love-webplayer" class="postlink">https://github.com/ghoulsblade/love-webplayer</a><br><br>@SalteMishel<br>What you get:<blockquote class="uncited"><div>error during shader int:ReferenceError:gShaderCode_Fragment is not defined</div></blockquote>It means Shaders/Fragment Shaders are not yet implemented (not defined)! So you need to remove that from your game to make it work with love-webplayer.</div></blockquote>I got that same error at first, and I'm pretty sure it actually has nothing to do with shaders being implemented.  That happens when you attempt to run the HTML file locally straight in your browser,  because the Javascript makes an Ajax request at some point that assumes it's talking to a webserver.<br><br>Some quick notes from my testing so far that might be helpful to folks in the future looking to test their game in the webserver:<br><ul><li> If you want to test locally, install an HTTP server - Apache will do.  From there, go into the config file (conf/httpd.conf) and set DocumentRoot to wherever your lua-webplayer stuff lives, set that directory to be accessible, and start Appache running (bin/httpd.exe on  Windows).  You can check your stuff by pointing your browser at 127.0.0.1:8080 (or 80 if that's what you set the port to)</li><li> The thing that will most immediately foul up attempts to run a more recent Love project are width/height in the conf.lua file.  Change those from t.window.width to t.screen.width and t.window.height to t.screen.height.</li><li> Other stuff I've observed that explicitly fouls up the webplayer includes joysticks and attempting to get the width / height of the screen.</li><li> Fonts don't work (from what I've seen so far).  Won't crash, but it won't render your text either.</li><li> Math functions (math.random(), trig functions, etc.) and complex logic appear to be much slower.  Maybe avoid them?</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135065">hyouko</a> — Sat Sep 06, 2014 12:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BluBillz]]></name></author>
+		<updated>2014-05-25T13:25:35+00:00</updated>
+
+		<published>2014-05-25T13:25:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=168461#p168461</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=168461#p168461"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=168461#p168461"><![CDATA[
+I am still confused on how to setup everything to get it completely working on your browser. How exactly do you get a server up and running for you to try this on? and how do you even setup where to put all the files at?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134203">BluBillz</a> — Sun May 25, 2014 1:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[qwook]]></name></author>
+		<updated>2014-01-28T10:19:33+00:00</updated>
+
+		<published>2014-01-28T10:19:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161732#p161732</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161732#p161732"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161732#p161732"><![CDATA[
+I've been working on porting lua pattern matching into javascript pattern matching, but I'm not that well versed in regex.<br><br>It works most of the time, but I'm hoping to see if anyone else is interested at looking at it and fixing it up a bit:<div class="codebox"><p>Code: </p><pre><code>var m_c = {    "p": "[!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\\]^_`{|}~]",    "a": "[A-Za-z]",    "l": "[a-z]",    "u": "[A-Z]",    "s": "[\\f\\v\\n\\r\\t ]",    "c": "[\\0\\v\\n\\r\\t]",    "d": "[0-9]",    "w": "[0-9a-zA-Z]",    "x": "[0-9a-fA-F]"}function matchclass(s) {    return m_c[s]}function LRegExEmptyCaps(lregex) {    var arrs = []    lregex = lregex.replace(/(%*)\((.*?)\)/gm, function (match, esc, paren) {        if (esc.length % 2 == 0) {            if (paren.length == 0) {                arrs.push(true)            } else {                arrs.push(false)            }        }        return match    })    return arrs}function LRegEx(lregex, opt) {    lregex = lregex.replace(/(%*)([{}\\])/gm, function (match, esc, toesc) {        if (esc.length % 2 == 0) {            return esc + "\\" + toesc        } else {            return match        }    })    lregex = lregex.replace(/(%*)-/gm, function (match, esc) {        if (esc.length % 2 == 0) {            return esc + "*?"        } else {            return "-"        }    })    // lregex = lregex.replace(/%([^bpaluscdw])/gm, "\\$1")    lregex = lregex.replace(/%(.|\n)(.?)(.?)/gm, function(match, p1, p2, p3) {        if (p1 == "b") {            var p2_esc = p2.replace(/([\[\].\\{}\^?!|])/gm, "\\\\$1")            var p3_esc = p3.replace(/([\[\].\\{}\^?!|])/gm, "\\\\$1")            return p2_esc + "(?:(?:[^" + p2 + p3 + "]+)|(?:[^" + p2 + p3 + "]*\\{[^" + p2 + p3 + "]*\\}[^" + p2 + p3 + "]*)+)" + p3_esc        }        var tail = p2 + p3        if (p2.length == 1 &amp;&amp; p3.length == 1) {            if (p2 == "%") {                var set = matchclass(p3)                if (set != undefined) {                    tail = set                } else {                    tail = "\\" + p3                }            }        }        var set = matchclass(p1)        if (set != undefined) {            return set + tail        } else {            return "\\" + p1 + tail        }    })    return new RegExp( lregex, opt || "gm" )}function string_find(str, pattern, start) {    var jspattern = LRegEx(pattern, "m")    var emptyCaps = LRegExEmptyCaps(pattern)    var offset = 0    if (typeof start != undefined &amp;&amp; start != null) {        offset = start - 1        str = str.substring(offset)    }    var match = jspattern.exec(str)    if (match != null) {        var res = [offset + match.index+1, offset + match.index+match[0].length]        str.replace(LRegEx(pattern), function() {            var curmatches = Array.prototype.slice.call(arguments, 1, arguments.length-2)            // matches ()            var index = arguments[arguments.length-2]            for (var i in curmatches) {                var match = curmatches[i]                if (emptyCaps[i]) {                    curmatches[i] = index + 2                }                index += match.length            }            // end matches ()            res = res.concat(curmatches)            return arguments[0]        })        return res    } else        return []}function string_match(str, pattern, start) {    return string_find(str, pattern, start).splice(2)}function string_gmatch(str, pattern) {    var matches = []    var emptyCaps = LRegExEmptyCaps(pattern)    str.replace(LRegEx(pattern), function() {        var curmatches        if (arguments.length == 3) {            curmatches = [arguments[0]]        } else {            curmatches = Array.prototype.slice.call(arguments, 1, arguments.length-2)        }        // matches ()        var index = arguments[arguments.length-2]        for (var i in curmatches) {            var match = curmatches[i]            if (emptyCaps[i]) {                curmatches[i] = index + 2            }            index += match.length        }        // end matches ()        matches.push(curmatches)        return arguments[0]    })    // we'd return a pairs(matches) for the user to iterate through    return matches}function string_gsub() {    // todo: this is the hardest to implement}// string.find("Hello Lua user", "Lua") -- this is luaconsole.log(string_find("Hello Lua user", "Lua", 4)) // expected: 7, 9console.log(string_find("Hello Lua user", "Banana")) // expected: nilconsole.log(string_find("Hello Lua user", "%w+")) // expected: 1, 5console.log(string_find("Hello Lua user", "(Lua) (user)()")) // expected: 7, 14, 'Lua', 'user'console.log(string_match("Hello Lua user", "(Lua) (user)")) // expected: 'Lua', 'user'console.log(string_gmatch("Hello Lua user test", "(.-) ()")) // expected 'Hello', 'Lua' and 'user', 'test'</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134374">qwook</a> — Tue Jan 28, 2014 10:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-01-22T11:28:28+00:00</updated>
+
+		<published>2014-01-22T11:28:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161336#p161336</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161336#p161336"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161336#p161336"><![CDATA[
+This was only for testing the love-webplayer. Never meant for players to play your game.<br><br>As i said...it's a modified version. Yours does not run out of the box. I'm not going to update it. If you feel better I delete yours.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Wed Jan 22, 2014 11:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[YellowAfterlife]]></name></author>
+		<updated>2014-01-22T05:53:35+00:00</updated>
+
+		<published>2014-01-22T05:53:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161331#p161331</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161331#p161331"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161331#p161331"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>here are some additional love2d-webplayer samples.<br><br><a href="http://sience.schattenkind.net/love2d/" class="postlink">http://sience.schattenkind.net/love2d/</a><br><br>cheers</div></blockquote>Hey, I've been linked to your site section few times, and noticed that you are hosting an old version of <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=8421" class="postlink">my platformer engine</a> among other things.<br>Could you...<br>* Update it to current version (one looks and plays much better)<br>* Insert some sort of traceback link to topic so if someone were to think of using engine they would get a most recent one.<br><br>Of webplayer overall, this looks quite and quite interesting.<br>HTML5 performance rules remain though - one has to optimize things to have them working at full speed.</div></blockquote>Shure i can update it. But i need todo a lot of changes, because not everything is supported yet. I drop a link to your game but i will remove it anyway ... this is only for testing the webplayer ;-).</div></blockquote>I find it interesting that two years later it's still that outdated version that is up on page. Not like it really matters. Not like things were done right.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=26377">YellowAfterlife</a> — Wed Jan 22, 2014 5:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2013-12-09T11:51:11+00:00</updated>
+
+		<published>2013-12-09T11:51:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158098#p158098</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158098#p158098"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158098#p158098"><![CDATA[
+I think ghoulsblade put this webplayer on hold. Because most basic features of love are working.<br><br>Read the Readme to know what works and what not.<br><a href="https://github.com/ghoulsblade/love-webplayer" class="postlink">https://github.com/ghoulsblade/love-webplayer</a><br><br>@SalteMishel<br>What you get:<blockquote class="uncited"><div>error during shader int:ReferenceError:gShaderCode_Fragment is not defined</div></blockquote>It means Shaders/Fragment Shaders are not yet implemented (not defined)! So you need to remove that from your game to make it work with love-webplayer.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Mon Dec 09, 2013 11:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ranguna259]]></name></author>
+		<updated>2013-11-23T11:11:21+00:00</updated>
+
+		<published>2013-11-23T11:11:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156946#p156946</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156946#p156946"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156946#p156946"><![CDATA[
+OP could you please post your progress on the first post, progress list is one of the most important things to write on a post (right next to a description of the app, and screenshots) but apparently it's something that lovers don't usually do, so could you please write something like which modules work, which don't and which you are working on ?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123960">Ranguna259</a> — Sat Nov 23, 2013 11:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SalteMishel]]></name></author>
+		<updated>2013-11-23T09:19:40+00:00</updated>
+
+		<published>2013-11-23T09:19:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156941#p156941</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156941#p156941"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156941#p156941"><![CDATA[
+Hmm...I get this error, I copied the js, css, and main index into my game folder, change the js file directory to js/... , css directory to style.css  and changed the image to the right directories. did I miss anything?<br>error during shader int:ReferenceError:gShaderCode_Fragment is not defined<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=35601">SalteMishel</a> — Sat Nov 23, 2013 9:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Volgoza]]></name></author>
+		<updated>2013-11-19T15:07:39+00:00</updated>
+
+		<published>2013-11-19T15:07:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156626#p156626</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156626#p156626"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156626#p156626"><![CDATA[
+Hello!<br><br>See please at my site. I can't understand whats wrong with this webGL. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><br><a href="http://lazysquid.bl.ee/index.php" class="postlink">http://lazysquid.bl.ee/index.php</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=56243">Volgoza</a> — Tue Nov 19, 2013 3:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kjell Granlund]]></name></author>
+		<updated>2013-01-23T02:42:25+00:00</updated>
+
+		<published>2013-01-23T02:42:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=74990#p74990</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=74990#p74990"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=74990#p74990"><![CDATA[
+<blockquote class="uncited"><div>It is a shame that Android doesn't have or support WebGL.</div></blockquote>After some searching I found that firefox on android supports it. Use that browser. It works. I just tested it on my android. Freaking awesome! Now I must use this in my game!!!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83613">Kjell Granlund</a> — Wed Jan 23, 2013 2:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2013-01-17T12:35:36+00:00</updated>
+
+		<published>2013-01-17T12:35:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=74186#p74186</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=74186#p74186"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=74186#p74186"><![CDATA[
+<blockquote class="uncited"><div>Ok this looks really cool, and I'd love to use this for the new miniLD.<br>How do I get it to work? Should I just put the js folder and the index.html inside the game's folder? (That's how I understand it from the first page)<br>Is there any way I can test if it works locally (in my browser but running from the computer) before uploading it somewhere? <br><br>Thanks <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>You have to specify all images in the index.html . Just look at a sample.<br><br>Samples:<br><a href="http://sience.schattenkind.net/love2d/" class="postlink">http://sience.schattenkind.net/love2d/</a><br><br>This mini-webserver works.<br><a href="http://www.jibble.org/miniwebserver/" class="postlink">http://www.jibble.org/miniwebserver/</a><br><br>just run it: java -jar SimpleWebServer.jar<br><br>cheers<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Jan 17, 2013 12:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Linuus]]></name></author>
+		<updated>2013-01-13T18:53:51+00:00</updated>
+
+		<published>2013-01-13T18:53:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=73850#p73850</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=73850#p73850"/>
+		<title type="html"><![CDATA[Re: Love2D WebPlayer (WebGL)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=73850#p73850"><![CDATA[
+Ok this looks really cool, and I'd love to use this for the new miniLD.<br>How do I get it to work? Should I just put the js folder and the index.html inside the game's folder? (That's how I understand it from the first page)<br>Is there any way I can test if it works locally (in my browser but running from the computer) before uploading it somewhere? <br><br>Thanks <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82656">Linuus</a> — Sun Jan 13, 2013 6:53 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
