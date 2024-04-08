@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1280" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-09-03T03:42:28+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1280</id>
+
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-09-03T03:42:28+00:00</updated>
+
+		<published>2011-09-03T03:42:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=36266#p36266</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=36266#p36266"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=36266#p36266"><![CDATA[
+Wow that's really cool.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sat Sep 03, 2011 3:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-09-03T03:22:00+00:00</updated>
+
+		<published>2011-09-03T03:22:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=36265#p36265</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=36265#p36265"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=36265#p36265"><![CDATA[
+I'm trying to make the game make the player uncomfortable in a variety of ways, many of which are very subtle. For instance, when moving left or right, the camera will tilt almost imperceptibly - only a few degrees - but just enough to make up and down not perfectly line up (promoting a feeling of disorientation). As another example, <a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/underlife%20stars.avi" class="postlink">the stars in the background move in an almost-realistic-but-not-quite manner</a>* which combines parallax and point-centered camera panning, which I've designed to mess with the way humans subconsciously process depth and movement visual cues (the same cues which, for example, makes parallax scrolling give the impression of depth).<br><br>*The effect was exaggerated for the video as a demonstration - in the game proper, you can't move so fast, fly, or zoom the camera so far out.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sat Sep 03, 2011 3:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-20T06:11:20+00:00</updated>
+
+		<published>2011-08-20T06:11:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35853#p35853</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35853#p35853"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35853#p35853"><![CDATA[
+Been working on it. Lots of improvements, but most notably, the game now saves itself when quitting and loads when starting; a rough draft of the Entropy is in place; and I rewrote the terrain generator - it produces spheres of terrain of any size. I can add more spheres at any time, and place them with offsets. Also, I finally got around to changing the background stars from a lame static image to detailed, independently-drawn (and pulsating) images.<br><br><a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/love%202011-08-19%2022-51-09-72.png" class="postlink">A big, big map.</a><br><a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/love%202011-08-20%2000-57-03-01.png" class="postlink">A map with several blobs of terrain.</a><br><a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/love%202011-08-20%2000-57-04-33.png" class="postlink">The same map as the second pic, but with lighting enabled.</a><br><br>EDIT) Here's the <a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/intro.avi" class="postlink">mini-intro</a> that's shown when starting/resuming a game (.avi, 1.15 megs, Xvid codec). Finally nailed how to make it run at a playable rate when doing that! And also to show the stars, though that was kind of a cheat...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sat Aug 20, 2011 6:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xkeeper]]></name></author>
+		<updated>2011-08-18T00:14:23+00:00</updated>
+
+		<published>2011-08-18T00:14:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35799#p35799</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35799#p35799"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35799#p35799"><![CDATA[
+You could pull a Tetrisphere and just handle wrapping around, but then it wouldn't really be "endless".<br><br>(Tetrisphere, for those not in the know, presented a game grid as a sphere but it was actually just a portion of a square playfield mapped onto it.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1353">Xkeeper</a> — Thu Aug 18, 2011 12:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-17T17:14:06+00:00</updated>
+
+		<published>2011-08-17T17:14:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35790#p35790</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35790#p35790"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35790#p35790"><![CDATA[
+I like your "throw people for a loop" ideas. The character animation in the video was from the old, Box2D-using version of Underlife. Since then, I've completely rewritten the game, and now it uses my own physics (no more tilting and odd movement) and will have a different (better) animation system. Here's the placeholder I'm using right now (warning: 5 meg .gif incoming):<br><br><img src="http://dl.dropbox.com/u/3713769/web/Love/Underlife/love%202011-08-17%2012-00-13-39.gif" class="postimage" alt="Image"><br><br>Anyway, the main issue I have with making it circular is that I don't get how I could set up the game grid, and how to handle the different geometries of different rings. Maybe this picture will make it clearer:<br><br><img src="http://dl.dropbox.com/u/3713769/temp/gridcircle.png" class="postimage" alt="Image"><br><br>See how the tiles from each ring have a different shape, and there's a different number of them required per ring? Nothing lines up...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Aug 17, 2011 5:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xkeeper]]></name></author>
+		<updated>2011-08-17T09:12:41+00:00</updated>
+
+		<published>2011-08-17T09:12:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35773#p35773</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35773#p35773"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35773#p35773"><![CDATA[
+I like the spacey blue rune stuff more than a cavern. The fact that there's an empty nothingness out in the void helps, too.<br><br><br>If you wanted to really throw people for a loop, you could keep player-edited chunks in memory when they were scrolled offscreen and corrupt them, or (my favorite) occasionally pull a random edited chunk, corrupt it a bit, and recycle it in a new chunk (blended into the surroundings). That way, some familiarity is kept, but it isn't quite the same.<br><br><br>E: I also want this pretty bad. The character animation is quite bad, though, even if it is an early version; the severity of the tilt dynamics (and low jumping range...) seem to be pretty odd.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1353">Xkeeper</a> — Wed Aug 17, 2011 9:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-08-17T07:11:07+00:00</updated>
+
+		<published>2011-08-17T07:11:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35768#p35768</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35768#p35768"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35768#p35768"><![CDATA[
+Well, topographically with a tile world the most "real" approximation I can think of to a sphere it would be a pacman-like map.<br><br>This is, a normal rectangular map, but when you go near the boundaries, it starts over from the other side. If you walk enough to the left, at some point you start seeying the right side of the map, and if you continue, you are on the right. And the same with left, up &amp; down.<br><br>For gravity, here're my thoughts.<br><ul><li>You could just assume that the perspective is "top down" (the camera looks down, and it sees the character's head all the time). And gravity goes in the same direction.</li><li>Any axis-aligned direction (up, left, right) would also work with tiles.You could make it go down, and maybe allow the player to change it as a game mechanic.</li><li>"radial", non-axix-aligned gravity doesn't match tile-based stuff. You could try it if you used a polygon-based world.</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Aug 17, 2011 7:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-17T02:15:54+00:00</updated>
+
+		<published>2011-08-17T02:15:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35760#p35760</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35760#p35760"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35760#p35760"><![CDATA[
+Don't worry about it. I appreciate the effort. Don't be afraid to offer ideas, since even if they don't pan out, you never know what useful tangents they'll produce.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Aug 17, 2011 2:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SoggyWaffles]]></name></author>
+		<updated>2011-08-17T02:05:59+00:00</updated>
+
+		<published>2011-08-17T02:05:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35759#p35759</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35759#p35759"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35759#p35759"><![CDATA[
+yeah, sorry. like i said the more i thought it out the less useful it became... I just wanted to be helpful..... that'll learn me!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1737">SoggyWaffles</a> — Wed Aug 17, 2011 2:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-17T01:32:31+00:00</updated>
+
+		<published>2011-08-17T01:32:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35755#p35755</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35755#p35755"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35755#p35755"><![CDATA[
+I don't get how that would help. This game is a 2D sidescroller. You don't walk on a 2-dimensional surface, you move back/forward and up/down. Once you dig down into the star, a grid would break down badly.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Aug 17, 2011 1:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ljdp]]></name></author>
+		<updated>2011-08-17T01:16:53+00:00</updated>
+
+		<published>2011-08-17T01:16:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35754#p35754</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35754#p35754"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35754#p35754"><![CDATA[
+Take a piece of paper and roll it up, you have a cylinder. But it is still a 2D surface. So you could travel in any direction on your 2D platformer and you'll eventually wrap around to the other side.<br><br>edit: lol you posted while i was typing this message, but yeah ditto what he said ^<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=282">ljdp</a> — Wed Aug 17, 2011 1:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SoggyWaffles]]></name></author>
+		<updated>2011-08-17T01:13:51+00:00</updated>
+
+		<published>2011-08-17T01:13:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35753#p35753</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35753#p35753"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35753#p35753"><![CDATA[
+After some more thought, i don't think it would work out anyway. But here is an example, if you take a cylinder and parametrize it you basically "unroll" it into a rectangle, so any given point on the surface of the cylinder can be found on that parametrized rectangle. Same thing is true with a sphere. Consider a rectangular map to the a globe.  Which brings me to my point of not really working. Antarctica doesn't line up with the Arctic when you stack to maps together. East and west will work perfectly, but not north and south. Too bad i didn't think that much sooner. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1737">SoggyWaffles</a> — Wed Aug 17, 2011 1:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-17T00:59:24+00:00</updated>
+
+		<published>2011-08-17T00:59:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35751#p35751</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35751#p35751"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35751#p35751"><![CDATA[
+You're not hogging my thread. ... But I'm afraid I still don't know what you're talking about.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Aug 17, 2011 12:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SoggyWaffles]]></name></author>
+		<updated>2011-08-17T00:50:30+00:00</updated>
+
+		<published>2011-08-17T00:50:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35750#p35750</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35750#p35750"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35750#p35750"><![CDATA[
+When you parametrize a 3D surface (an surface of any 3D function) you can take that surface and flatten it out into a rectangular 2D surface (technically a plane) with in a giving domain. I wish i could draw a picture! Oh, took me a bit, but google produced a result. Its not the best, but its a start. <a href="http://www.math.oregonstate.edu/home/programs/undergrad/CalculusQuestStudyGuides/vcalc/parsurf/parsurf.html" class="postlink">http://www.math.oregonstate.edu/home/pr ... rsurf.html</a><br>But if you have a idea on how you're going to be doing things, don't let me get in the way, and I don't want to end up hogging/hijacking your thread.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1737">SoggyWaffles</a> — Wed Aug 17, 2011 12:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-16T22:53:35+00:00</updated>
+
+		<published>2011-08-16T22:53:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35737#p35737</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35737#p35737"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35737#p35737"><![CDATA[
+I probably won't favor flat, easily-walkable surfaces, but this is intentional: The game is about building the map. In fact, its most important mechanics kick into play when you do. So by avoiding natural walkable paths, I encourage building, which will increase the effects of said mechanics. That being said, my current terrain algorithm often puts out flat areas six or seven tiles long, and I've seen it make flat floors over a dozen tiles long.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Tue Aug 16, 2011 10:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-08-16T22:48:40+00:00</updated>
+
+		<published>2011-08-16T22:48:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35736#p35736</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35736#p35736"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35736#p35736"><![CDATA[
+I definitively prefer stars/islands/planets to "continuous caverns". I don't particularly mind if gravity simply goes "down". It's a game, not the universe.<br><br>I also like being able to walk straight from time to time (I really hope you include some walkable surfaces of more than 3 tiles before you have to jump/fall/whatever).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Aug 16, 2011 10:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-16T22:48:14+00:00</updated>
+
+		<published>2011-08-16T22:48:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35735#p35735</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35735#p35735"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35735#p35735"><![CDATA[
+I'm afraid I don't understand what you're saying. How would I build a spherical surface with square tiles? And what would you do about the fact that as you go outward, each ring of tiles will require more tiles to fill it than those under it?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Tue Aug 16, 2011 10:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SoggyWaffles]]></name></author>
+		<updated>2011-08-16T22:26:17+00:00</updated>
+
+		<published>2011-08-16T22:26:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35734#p35734</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35734#p35734"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35734#p35734"><![CDATA[
+I've been thinking about this some. You <em class="text-italics">could</em> create a map that was the surface of a sphere and have it loop back on its self fairly easily. If you made a terrain generator (noise maybe?) to populate the surface of a sphere and store those values in spherical coordinates (where your radius will be a constant), then set up a parametrized function. You can extract the surface of the sphere onto a rectangle (array and then a framebuffer?) and then loop it. You won't get the orientation of the map to change, but you can potential loop back to where you started and you will get seamless edges. And if the initial map is large enough give the impression of an infinite space.<br><br>I only know the math to get you from the sphere to a 2D rectangle, populating sphere is up to someone else.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1737">SoggyWaffles</a> — Tue Aug 16, 2011 10:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-14T02:45:11+00:00</updated>
+
+		<published>2011-08-14T02:45:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35638#p35638</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35638#p35638"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35638#p35638"><![CDATA[
+By "empty star", I mean, a large, spherical, cavernous shape. Like in <a href="http://dl.dropbox.com/u/3713769/web/Love/Underlife/UnderlifeBeta.png" class="postlink">this picture</a>. You're inside it, not on the surface. While I do like the idea of central gravity (and therefore, as you said, walking around it ends up where you started), unfortunately, that kind of geometry isn't conducive to square tile-based environments.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sun Aug 14, 2011 2:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-08-14T01:55:12+00:00</updated>
+
+		<published>2011-08-14T01:55:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35637#p35637</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35637#p35637"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35637#p35637"><![CDATA[
+Maybe like a Dyson Sphere. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Aug 14, 2011 1:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SoggyWaffles]]></name></author>
+		<updated>2011-08-14T01:34:40+00:00</updated>
+
+		<published>2011-08-14T01:34:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35636#p35636</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35636#p35636"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35636#p35636"><![CDATA[
+How do you mean empty star? Like a giant orb where you work around the outside so you can end back up (eventually) to where you started? That would be a little disheartening, working to find an exit or some such thing to just to find your starting point again, but upsidedown.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1737">SoggyWaffles</a> — Sun Aug 14, 2011 1:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-13T22:39:37+00:00</updated>
+
+		<published>2011-08-13T22:39:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35634#p35634</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35634#p35634"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35634#p35634"><![CDATA[
+I've tackled some of the more subtle visual effects, and worked out the very beginning of a character animation system. Right now it just uses a static pose for each animation, but seeing as how that's over a dozen poses, it looks way better than before.<br><br>EDIT) Also, physics accumulator. Totally FPS-independent now.<br><br><img src="http://dl.dropbox.com/u/3713769/web/Love/Underlife/pulsar.gif" class="postimage" alt="Image"><br><br>I'm having trouble deciding what I want the environment to be. I have two designs, each of which have their own benefits, and would have pervasive changes to the game:<br>- Infinite underground caverns: The original Underlife plan called for (practically) infinite terrain. There'd be no edge, no matter how far you went horizontally, nor any bottom or surface, no matter how far vertically you went. You could wander forever, but there'd be no way out.<br>- Hollow star in space: I made this design as a placeholder until I could make the infinite map system, however, it really grew on me. I think it'd give an even greater feeling of isolation than the caverns would. The only problem is, it'd either need to be very large, or else there'd have to be multiple stars (and some way to switch between them), to ensure there was enough gameplay.<br><br>Any thoughts?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sat Aug 13, 2011 10:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-10T12:15:34+00:00</updated>
+
+		<published>2011-08-10T12:15:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35397#p35397</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35397#p35397"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35397#p35397"><![CDATA[
+Basically, I calculate shadows instead of light - I can only darken areas. So if I do multiple passes, then each light's shadows cover each other up. I figured that I could get around this by having a screen-covering framebuffer for each light, then stacking them with additive blend mode, then placing the composite on top of the world with subtractive blend mode.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Aug 10, 2011 12:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-08-09T23:40:32+00:00</updated>
+
+		<published>2011-08-09T23:40:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35377#p35377</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35377#p35377"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35377#p35377"><![CDATA[
+<blockquote class="uncited"><div>My main problem with the plan I had in mind isn't the framebuffers themselves, but rather, having to use one framebuffer of at least 1024x1024 per light. I haven't tested it, but I'm afraid that multiple big framebuffers would eat performance.</div></blockquote>Why do you need one framebuffer per light?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Aug 09, 2011 11:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-08-09T23:06:58+00:00</updated>
+
+		<published>2011-08-09T23:06:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35375#p35375</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35375#p35375"/>
+		<title type="html"><![CDATA[Re: Underlife (WIP)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35375#p35375"><![CDATA[
+My main problem with the plan I had in mind isn't the framebuffers themselves, but rather, having to use one framebuffer of at least 1024x1024 per light. I haven't tested it, but I'm afraid that multiple big framebuffers would eat performance.<br><br>Also, I've improved my physics system a tiny bit, and pretty much finished the movement system in two monster coding sessions. The player can now stand, walk, run, mantle, crouch, crawl, jump, hang from cliffs, dangle from ledges, pull himself over cliffs/ledges, kick off of cliffs, drop from cliffs/ledges, crawl down cliffs/ledges (safely, like one does in Spelunky), and fall. And it all works with digital or analogue control. It will be a lot more impressive when I have /animations/ for all this... But my idea for skeletal keyframe-based animation (inspired by 3D games, but I guess Flash works like this) will have to wait.<br><br>I think my next goal will be to recreate tile manipulation and the Entropy. And I still need to decide if I want to stay with the "star in space" environment, or change to "infinite underground caverns".<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Tue Aug 09, 2011 11:06 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

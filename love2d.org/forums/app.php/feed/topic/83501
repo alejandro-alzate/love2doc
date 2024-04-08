@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/83501" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2017-02-15T01:20:27+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/83501</id>
+
+		<entry>
+		<author><name><![CDATA[lukems]]></name></author>
+		<updated>2017-02-14T12:53:42+00:00</updated>
+
+		<published>2017-02-14T12:53:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209515#p209515</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209515#p209515"/>
+		<title type="html"><![CDATA[Re: [lib] LuaNameGen - random name generator]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209515#p209515"><![CDATA[
+<strong class="text-strong">LuaNameGen 1.1.0</strong>:<br><br>Added books, potions and towns name sets:<ul><li> towns.cfg is a copy of Mingos and Jice town name sets for libtcod's namegen;</li><li> books.cfg and potions.cfg were based on common roguelike names for unidentified items.</li></ul><strong class="text-strong">LuaNameGen 1.0.1</strong>:<br><ul><li> Fixed a critical error that prevented the data files (.cfg, .index) from being loaded at all while calling the library from outside of its own directory;</li><li> (doc stuff) Made a generator to provide sphinx-like basic literalinclude function (github doesn't support it).</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138835">lukems</a> — Tue Feb 14, 2017 12:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ikroth]]></name></author>
+		<updated>2017-02-11T19:58:28+00:00</updated>
+
+		<published>2017-02-11T19:58:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209385#p209385</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209385#p209385"/>
+		<title type="html"><![CDATA[Re: [lib] LuaNameGen 1.0.0]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209385#p209385"><![CDATA[
+Wow, this looks pretty awesome! Perfect timing too, I was just starting to write a CFG parser last night but I didn't have a good way to generate names yet. This looks like a perfect fit.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=127310">Ikroth</a> — Sat Feb 11, 2017 7:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lukems]]></name></author>
+		<updated>2017-02-15T01:20:27+00:00</updated>
+
+		<published>2017-02-11T19:29:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209382#p209382</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209382#p209382"/>
+		<title type="html"><![CDATA[[lib] LuaNameGen - random name generator]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209382#p209382"><![CDATA[
+<img src="https://img.shields.io/badge/License-MIT-green.svg" class="postimage" alt="Image"><br><br><strong class="text-strong">Current version: 1.1.0</strong><br><br><strong class="text-strong">LuaNameGen</strong> (Lua Name Generator) is a random name generator for RPGs, Roguelikes and other game genres that makes use of procedural content. It can be used for character, item, place names, etc. (it all depends on the syllable sets you use, and you can create your own).<br><br>It has no dependencies (but uses 'inspect', if available, and only on debug mode), supports libtcod's existing .cfg syllable sets, provides additional (15) custom syllable groups that you can use for complex sets and comes with lots of racial name sets (listed below).<br><br>Check it on <a href="https://github.com/LukeMS/lua-namegen" class="postlink">github</a> and read its documentation.<br>If something is not working as expected or is poorly documented let me know and I'll try to fix/improve it.<br><br><span style="font-size:150%;line-height:116%">PROJECT GOALS</span><br><br>The project goals are (green means done, red not yet):<ul><li> <strong class="text-strong"><span style="color:#004000">provide what libtcod's namegen already does, but in Lua</span></strong>;</li><li> <strong class="text-strong"><span style="color:#004000">name sets for many races (see below)</span></strong>;</li><li> <strong class="text-strong"><span style="color:#004000">unidentified potion names</span></strong>;</li><li> <strong class="text-strong"><span style="color:#004000">unidentified book names</span></strong>;</li><li> <strong class="text-strong"><span style="color:#004000">town names</span></strong>;</li><li> <span style="color:#BF0000">inns and shop names</span></li><li> <span style="color:#BF0000">ethnic'ish/gibberish speech for unknown languages: a way for races to speak, when the player doesn't know that language, using a vocabulary formed from the syllables of that given race/language. Focus here will be on language-like looks, not semantics, just to provide some flavor to games.</span></li> <li> improve it as needed/desired/requested (sounds easier to do with LuaNameGen/Lua then libtcod's namegen/ANSI C <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"> )</li></ul><span style="font-size:150%;line-height:116%">BASIC USAGE</span><br><div class="codebox"><p>Code: </p><pre><code>local namegen = require("namegen")local name = namegen.generate("dwarf male")  --  Dolinlocal surname = namegen.generate("dwarf surname")  --  Steelcutter</code></pre></div><span style="font-size:150%;line-height:116%">SUPPORTED RACES/NAMES</span><br><br>My personal goal is to have an easy-to-use-and-modify generator with appropriate name sets for all <a href="https://sites.google.com/site/pathfinderogc/home" class="postlink">PFSRD</a> races (considering only the core books and a generic campaign setting).<br>Current support for each of those races is shown below (green means done, red not yet, stroked race names don't have a name pattern at all):<br><ul><li> <strong class="text-strong"><span style="color:#004000">Dwarf</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Elf</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Gnome</span></strong></li><li><del>Half-Elf</del> (human/elf)</li><li><del>Half-Orc</del> (human/orc)</li><li> <strong class="text-strong"><span style="color:#004000">Halfling</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Human</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Aasimar</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Catfolk</span></strong></li><li><del>Dhampir</del> (human)</li><li> <strong class="text-strong"><span style="color:#004000">Drow</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Fetchling</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Goblin</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Hobgoblin</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Ifrit</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Kobold</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Orc</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Oread</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Ratfolk</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Sylph</span></strong></li><li> <strong class="text-strong"><span style="color:#004000">Tengu</span></strong></li><li> <span style="color:#BF0000">Tiefling</span></li><li> <span style="color:#BF0000">Undine</span></li><li> <span style="color:#BF0000">Changelings</span></li><li> <span style="color:#BF0000">Duergar</span></li><li> <span style="color:#BF0000">Gillmen</span></li><li> <span style="color:#BF0000">Grippli</span></li><li> <span style="color:#BF0000">Kitsune</span></li><li> <span style="color:#BF0000">Merfolk</span></li><li> <span style="color:#BF0000">Nagaji</span></li><li> <span style="color:#BF0000">Samsarans</span></li><li> <span style="color:#BF0000">Strix</span></li><li> <span style="color:#BF0000">Suli</span></li><li> <span style="color:#BF0000">Svirfneblin</span></li><li> <span style="color:#BF0000">Vanara</span></li><li> <span style="color:#BF0000">Vishkanya</span></li><li> <span style="color:#BF0000">Wayangs</span></li></ul><span style="font-size:150%;line-height:116%">NAME EXAMPLES</span><br><br><a href="https://github.com/LukeMS/lua-namegen#example-of-generated-names" class="postlink">Example of generated names (for each of the currently available sets)</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138835">lukems</a> — Sat Feb 11, 2017 7:29 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

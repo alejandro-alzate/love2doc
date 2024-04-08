@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/82797" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2017-11-07T16:07:53+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/82797</id>
+
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2017-11-07T16:07:53+00:00</updated>
+
+		<published>2017-11-07T16:07:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202895#p202895</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202895#p202895"/>
+		<title type="html"><![CDATA[Re: LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202895#p202895"><![CDATA[
+Hi there and thanks for sharing your code. I do have a question regarding it. Instead of parsing the table, why not just use loadstring() to bring a table into lua again?<br><br>Also, a suggestion if you do use this method, would be to (if already saved) look for meta info for each table when loading it back into lua.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Tue Nov 07, 2017 4:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rok]]></name></author>
+		<updated>2016-08-27T19:53:51+00:00</updated>
+
+		<published>2016-08-27T19:53:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202782#p202782</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202782#p202782"/>
+		<title type="html"><![CDATA[Re: LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202782#p202782"><![CDATA[
+For <strong class="text-strong">table.concat</strong> you insert all the strings you'd like to combine in a table and do one concatenation at the end instead of many in between using <strong class="text-strong">..</strong><br><br>It is a BIG performance booster in case you do lots of string merging. I've tried both in a compression algorithm and using <strong class="text-strong">table.concat</strong> it was a lot faster.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136090">rok</a> — Sat Aug 27, 2016 7:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RamiLego4Game]]></name></author>
+		<updated>2016-08-27T14:56:35+00:00</updated>
+
+		<published>2016-08-27T14:54:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202764#p202764</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202764#p202764"/>
+		<title type="html"><![CDATA[Re: LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202764#p202764"><![CDATA[
+New release V1.0.1 2016/08/27, All credit goes for ivan in this update.<br><br>Changelog:<br>1. Fixed a problem in LuaTable.isArray that causes arrays with gaps to encode as normal table.<br>2. Improved LuaTable.encode_string to use string.format instead of multiline string.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135216">RamiLego4Game</a> — Sat Aug 27, 2016 2:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RamiLego4Game]]></name></author>
+		<updated>2016-08-27T14:52:21+00:00</updated>
+
+		<published>2016-08-27T14:52:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202763#p202763</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202763#p202763"/>
+		<title type="html"><![CDATA[Re: LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202763#p202763"><![CDATA[
+<blockquote class="uncited"><div>In order to handle "gaps" in numerically indexed tables, it might be better to write:<div class="codebox"><p>Code: </p><pre><code>function LuaTable.isArray(table)  local n = 0  for _ in pairs(table) do    n = n + 1  end  return #table == nend</code></pre></div>Also, it's probably safer to write:<div class="codebox"><p>Code: </p><pre><code>function LuaTable.encode_string(sz)  return string.format("%q", sz)end</code></pre></div></div></blockquote>Good points, thanks for help  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  I'll add them soon !<br><blockquote class="uncited"><div>Also, table.concat can be used instead of ".." in order to avoid a lot intermediate strings.</div></blockquote>I didn't get it..<br><blockquote class="uncited"><div>tostring works for nil, boolean and number too so that code could be simplified.</div></blockquote>I already know, But I want to give the library the ability to add more variables types (And make it possible to customize encoders for some variable types).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135216">RamiLego4Game</a> — Sat Aug 27, 2016 2:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ivan]]></name></author>
+		<updated>2016-08-26T20:33:44+00:00</updated>
+
+		<published>2016-08-26T20:33:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202714#p202714</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202714#p202714"/>
+		<title type="html"><![CDATA[Re: LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202714#p202714"><![CDATA[
+Hello there, and welcome to Love2D!<br>I think there may be a few parts in the lib that could be improved.<br><br>In order to handle "gaps" in numerically indexed tables, it might be better to write:<div class="codebox"><p>Code: </p><pre><code>function LuaTable.isArray(table)  local n = 0  for _ in pairs(table) do    n = n + 1  end  return #table == nend</code></pre></div>Also, it's probably safer to write:<div class="codebox"><p>Code: </p><pre><code>function LuaTable.encode_string(sz)  return string.format("%q", sz)end</code></pre></div>Also, table.concat can be used instead of ".." in order to avoid a lot intermediate strings.<br>tostring works for nil, boolean and number too so that code could be simplified.<br><br>It's a good effort but need a little bit of work, good luck!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=69">ivan</a> — Fri Aug 26, 2016 8:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RamiLego4Game]]></name></author>
+		<updated>2016-08-26T19:48:02+00:00</updated>
+
+		<published>2016-08-26T19:48:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202713#p202713</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202713#p202713"/>
+		<title type="html"><![CDATA[LuaTable A small library to convert tables back to lua code]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202713#p202713"><![CDATA[
+I have made small library for my game Robotics2D that converts tables to Lua code that can be saved, and Now I released it to public with MIT Licensing.<br><br>Since it uses Lua to save the data, It's able to save functions ! by dumping them, But they won't be readable, only loadable, unless if you decompile them.<br>And moreover you can do some hand written tables with smart data generation..<br>The bad thing that it's less secure (you are running code) .., So load the files using this Library to sandbox the files.<br><br>Gist: <a href="https://gist.github.com/RamiLego4Game/f656f5c1a118f77c3b7a08f4c65efaaf" class="postlink">https://gist.github.com/RamiLego4Game/f ... f4c65efaaf</a> (Give me a star <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> )<br><br>*The documentation is included with the gist<br>*The library can work with luajit alone<br><br>Feel free to give feedback  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135216">RamiLego4Game</a> — Fri Aug 26, 2016 7:48 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

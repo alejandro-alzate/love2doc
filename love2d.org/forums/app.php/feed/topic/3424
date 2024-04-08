@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3424" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2013-09-12T01:04:13+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3424</id>
+
+		<entry>
+		<author><name><![CDATA[posfan12]]></name></author>
+		<updated>2013-09-12T01:04:13+00:00</updated>
+
+		<published>2013-09-12T01:04:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=134583#p134583</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=134583#p134583"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=134583#p134583"><![CDATA[
+OK, thanks. I got it working.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134011">posfan12</a> — Thu Sep 12, 2013 1:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2013-09-11T17:39:50+00:00</updated>
+
+		<published>2013-09-11T17:39:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=134477#p134477</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=134477#p134477"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=134477#p134477"><![CDATA[
+I should note that the function I pasted has a period of 65536 because the internal state is clamped to 16 bits. I guess you could increase that by throwing more stuff like the mul16 function at it, but this already involves quite a lot of calculations and it would get rather slow. The function works best if you pass seeds below 65536 as higher numbers just get clamped to 16-bits anyway.<br><br>I don't quite get what srandom is supposed to do and how it fits into your scripts.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Wed Sep 11, 2013 5:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[posfan12]]></name></author>
+		<updated>2013-09-11T12:57:20+00:00</updated>
+
+		<published>2013-09-11T12:57:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=134404#p134404</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=134404#p134404"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=134404#p134404"><![CDATA[
+This one works! No duplicate values after 10000 iterations.<br><br>I just need to figure out how to rewrite all my scripts. Currently I just pass the seeds to whatever functions need them. For instance,<br><div class="codebox"><p>Code: </p><pre><code>local my_seed_1 = {977322}function srandom(seedobj, fVal1, fVal2)seedobj[1] = mod(seedobj[1] * 1103515245 + 12345, 4294967296)local temp_rand = seedobj[1] / (4294967296 - 1)if (fVal2) thenreturn floor(fVal1 + 0.5 + temp_rand * (fVal2 - fVal1))elseif (fVal1) thenreturn floor(temp_rand * fVal1) + 1elsereturn temp_randendendprint(srandom(my_seed_1))</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134011">posfan12</a> — Wed Sep 11, 2013 12:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2013-09-10T18:50:32+00:00</updated>
+
+		<published>2013-09-10T18:50:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133941#p133941</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133941#p133941"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133941#p133941"><![CDATA[
+Didn't expect that. You can rewrite it a bit to get the same results with single precision.<br><div class="codebox"><p>Code: </p><pre><code>function mul16(a, b)local a_lo, b_lo = mod(a, 2^8), mod(b, 2^8)local a_hi, b_hi = a - a_lo, b - b_loreturn mod(a_lo * b_lo + mod(a_lo * b_hi, 2^16) + mod(a_hi * b_lo, 2^16) + mod(a_hi * b_hi, 2^16), 2^16)endfunction lcg(s, r)local temp = {}function temp:random(a, b)local y = mod(mul16(self.a, self.x) + self.c, self.m)self.x = yif not a thenreturn y / 65536elseif not b thenif a == 0 thenreturn yelsereturn 1 + mod(y, a)endelsereturn a + mod(y, b - a + 1)endendfunction temp:randomseed(s)if not s thens = seed()endself.x = mod(s, 2147483648)end-- 'Numerical Recipes' parameterstemp.a = 26125temp.c = 62303temp.m = 65536temp:randomseed(s)return tempend</code></pre></div>No guarantees on the statistical properties! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Tue Sep 10, 2013 6:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[posfan12]]></name></author>
+		<updated>2013-09-10T16:55:18+00:00</updated>
+
+		<published>2013-09-10T16:55:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133875#p133875</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133875#p133875"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133875#p133875"><![CDATA[
+I ran TestLuaNumberFormat() and got "Feels like single-precision floating-point number".<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134011">posfan12</a> — Tue Sep 10, 2013 4:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2013-09-10T11:10:36+00:00</updated>
+
+		<published>2013-09-10T11:10:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133653#p133653</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133653#p133653"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133653#p133653"><![CDATA[
+It is not surprising that your script prints the same line three times. You create a new generator every time with the same seed and that will obviously return the same number. Save the table and call random on that a few times.<br><div class="codebox"><p>Code: </p><pre><code>local gen = lcg(0)print("wutwut =" .. gen:random())print("wutwut =" .. gen:random())print("wutwut =" .. gen:random())</code></pre></div>If you're already aware of that, you might want to check if Homeworld 2 was compiled with a Lua that uses single-precision floating-point numbers. If so, calculations that go over 2^24 will not get the results you want. Here's a function that tests for some formats.<br><div class="codebox"><p>Code: </p><pre><code>function TestLuaNumberFormat()local dbl = 2 ^ 53local flt = 2 ^ 24local int32 = 1073741823 * 2 + 1local uint32 = 1073741823 * 4 + 3local int64 = (1073741823 * 131072 + 131071) * 65536 + 65535local uint64 = (1073741823 * 131072 + 131071) * 131072 + 131071local fmtif dbl ~= dbl - 1 and dbl == dbl + 1 thenfmt = "double-precision floating-point number"elseif flt ~= flt - 1 and flt == flt + 1 thenfmt = "single-precision floating-point number"elseif int32 &gt; 0 and int32 + 1 &lt; 0 thenfmt = "signed 32-bit integer"elseif uint32 &gt; 0 and uint32 + 1 == 0 and uint32 + 2 == 1 thenfmt = "unsigned 32-bit integer"elseif int64 &gt; 0 and int64 + 1 &lt; 0 thenfmt = "signed 64-bit integer"elseif uint64 &gt; 0 and uint64 + 1 == 0 and uint64 + 2 == 1 thenfmt = "unsigned 64-bit integer"endif fmt thenprint("Feels like " .. fmt .. ".")elseprint("Unkown format.")endend</code></pre></div>Edit: Looking at it again, Lua 4.0 does not provide an easy way to change it to single precision. Unless they modified it, it's probably double precision.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Tue Sep 10, 2013 11:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[posfan12]]></name></author>
+		<updated>2013-09-10T03:18:30+00:00</updated>
+
+		<published>2013-09-10T03:18:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133154#p133154</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133154#p133154"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133154#p133154"><![CDATA[
+I'm working on a game called Homeworld 2 which was released in 2003 and uses Lua 4.0.<br><br>I had another person test my script and it worked OK in Lua 4.0.1, so I am SOL I guess unless someone has a better suggestion... <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134011">posfan12</a> — Tue Sep 10, 2013 3:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2013-09-10T19:06:59+00:00</updated>
+
+		<published>2013-09-10T03:10:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133136#p133136</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133136#p133136"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133136#p133136"><![CDATA[
+<blockquote class="uncited"><div>Actually, Lua does have a setmetatable function: <a href="http://www.lua.org/pil/13.html" class="postlink">http://www.lua.org/pil/13.html</a></div></blockquote>metatables got added in Lua 5.0. I'm not sure why anyone would use Lua 4.0 though... Lua 5.0 was released a decade ago. Lua 5.1 seven years ago, and Lua 5.2 two years ago (and unfortunately the online version of PiL is still the first edition, for Lua 5.0.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Sep 10, 2013 3:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[davisdude]]></name></author>
+		<updated>2013-09-10T02:10:28+00:00</updated>
+
+		<published>2013-09-10T02:10:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=133067#p133067</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=133067#p133067"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=133067#p133067"><![CDATA[
+Actually, Lua does have a setmetatable function: <a href="http://www.lua.org/pil/13.html" class="postlink">http://www.lua.org/pil/13.html</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=115573">davisdude</a> — Tue Sep 10, 2013 2:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[posfan12]]></name></author>
+		<updated>2013-09-09T21:31:35+00:00</updated>
+
+		<published>2013-09-09T21:31:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=132926#p132926</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=132926#p132926"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=132926#p132926"><![CDATA[
+I'm trying to use these scripts in Lua 4.0. Here's my attempt of doing the translation. Lua 4 doesn't have a "setmetatable" function, so I made a guess at what to do in my case.<br><div class="codebox"><p>Code: </p><pre><code>function lcg(s, r)local temp = {}function temp:random(a, b)local y = mod(self.a * self.x + self.c, self.m)self.x = yif not a thenreturn y / 65536elseif not b thenif a == 0 thenreturn yelsereturn 1 + mod(y, a)endelsereturn a + mod(y, b - a + 1)endendfunction temp:randomseed(s)if not s thens = seed()endself.x = mod(s, 2147483648)endif r then--from Numerical Recipesif r == 'nr' thentemp.a = 1664525temp.c = 1013904223temp.m = 65536--from MVCelseif r == 'mvc' thentemp.a = 214013temp.c = 2531011temp.m = 65536end--from Ansi Celsetemp.a = 1103515245temp.c = 12345temp.m = 65536endtemp:randomseed(s)return tempendprint("wutwut =" .. lcg(0):random())print("wutwut =" .. lcg(0):random())print("wutwut =" .. lcg(0):random())</code></pre></div>Anyway, the problem is that the script is outputting the same decimal value every time I run it. Is this because I am using the script improperly? What is the proper way of using the script? Thanks!!<br><br><br>Mike<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134011">posfan12</a> — Mon Sep 09, 2013 9:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[CarSoccerRobots]]></name></author>
+		<updated>2012-01-03T17:34:04+00:00</updated>
+
+		<published>2012-01-03T17:34:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=45295#p45295</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=45295#p45295"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=45295#p45295"><![CDATA[
+linux-man, thank you for this library!<br><br>We're using it in an upcoming project and it is really quite spiffy for our simple needs. It's the first PRNG implementation in pure Lua we found which doesn't require additional bitwise operation libraries.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=20529">CarSoccerRobots</a> — Tue Jan 03, 2012 5:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2011-08-22T20:30:58+00:00</updated>
+
+		<published>2011-08-22T20:30:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35914#p35914</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35914#p35914"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35914#p35914"><![CDATA[
+Yes, it's probably the Lua number type. Lua uses by default a double precision floating-point number and AGen seems to be using a Lua built with single precision floating-point numbers. 32-bit integers loose precision because 32-bit floats only have 22 bits for the significand.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Mon Aug 22, 2011 8:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[genericdave]]></name></author>
+		<updated>2011-08-21T23:55:44+00:00</updated>
+
+		<published>2011-08-21T23:55:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35888#p35888</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35888#p35888"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35888#p35888"><![CDATA[
+Alright, I figured out what the problem was.  It works just fine in the .love file you posted.  Before, however, I was using a non-love lua interpreter (specifically, AGen).  I guess the way that different interpreters deal with variable sizes can cause different results.  Love seems to play nicely with the lib on all systems, but certain interpreter environments totally break things.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=823">genericdave</a> — Sun Aug 21, 2011 11:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2011-08-14T21:57:56+00:00</updated>
+
+		<published>2011-08-14T21:57:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35668#p35668</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35668#p35668"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35668#p35668"><![CDATA[
+Many thanks for your report. I now had a little time for testing and found that twister code was broken. To correct it I needed to round all the calculations to 31 bits. I guess the code is now an "adapted Mersenne Twister" and maybe the randomness sucks now (but I don't really think that).<br>I updated the lib with a new test and added a love test file.<br>I don't have a Mac right now, but the results are the same on Linux 32/64 and Windows XP. Can't imagine how they can be broken on Mac. Can you please test again?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sun Aug 14, 2011 9:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[genericdave]]></name></author>
+		<updated>2011-08-09T00:39:24+00:00</updated>
+
+		<published>2011-08-09T00:39:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=35322#p35322</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=35322#p35322"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=35322#p35322"><![CDATA[
+It seems to be completely broken on osx.  Here's my output from your example:<br><div class="codebox"><p>Code: </p><pre><code>6 3 4 101 5 5 16 7 9 11 9 7 16 9 5 41 3 3 16 1 5 101 3 9 106 9 9 11 3 1 30380119302.22129e+090507266073.00238e+09041944333.83448e+090</code></pre></div>Totally different from your results and not random in the slightest.  I ran into a similar problem when attempting to make my own random number generator.  The variables end up being too big at one point and lua sometimes rounds them off.  Ideally, a decent generator should be part of Love itself.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=823">genericdave</a> — Tue Aug 09, 2011 12:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2011-07-30T18:46:55+00:00</updated>
+
+		<published>2011-07-30T18:46:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34681#p34681</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34681#p34681"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34681#p34681"><![CDATA[
+I'm using mwc and quite happy with the results. It's fast enough for casual use. Beside, from what I saw, mwc is as good as math.random() on linux and way better than the Mac implementation (I wonder why).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sat Jul 30, 2011 6:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-07-29T15:28:33+00:00</updated>
+
+		<published>2011-07-29T15:28:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34644#p34644</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34644#p34644"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34644#p34644"><![CDATA[
+You could probably get a (relatively) wicked fast RNG using LuaJIT and its FFI.<br><br><br><span style="font-size:50%;line-height:116%">problem, bartbes?</span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Fri Jul 29, 2011 3:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bmelts]]></name></author>
+		<updated>2011-07-29T15:20:46+00:00</updated>
+
+		<published>2011-07-29T15:20:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34643#p34643</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34643#p34643"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34643#p34643"><![CDATA[
+Yeah, math.random's results are platform-dependent, even with identical seeds. The distribution is, too - some implementations of math.random() are better at generating a pseudorandom distribution of numbers than others.<br><br>On the other hand, it is <em class="text-italics">faster</em> than a pure Lua implementation, because the function it calls is part of the C standard library. As you can see from linux-man's benchmarks, some algorithms are slower than others, but all of them are slower than they would be in C/asm form.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=317">bmelts</a> — Fri Jul 29, 2011 3:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-07-29T13:01:13+00:00</updated>
+
+		<published>2011-07-29T13:01:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34638#p34638</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34638#p34638"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34638#p34638"><![CDATA[
+If I've understood it correctly, math.random returns different values with the same seed depending on the platform (mac, at least). This might be inconvenient if you want the exact same results in all platforms; But I might be mistaken.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Jul 29, 2011 1:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2011-07-29T12:20:29+00:00</updated>
+
+		<published>2011-07-29T12:20:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34636#p34636</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34636#p34636"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34636#p34636"><![CDATA[
+What are the benefits in comparison to math.random()?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Fri Jul 29, 2011 12:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2011-07-28T22:27:58+00:00</updated>
+
+		<published>2011-07-28T22:27:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34622#p34622</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34622#p34622"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34622#p34622"><![CDATA[
+I hope so...<br>Updated again to correct a bug in mwc:randomseed. I was not reseting a variable parameter.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu Jul 28, 2011 10:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2011-07-28T20:25:28+00:00</updated>
+
+		<published>2011-07-28T20:25:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34617#p34617</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34617#p34617"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34617#p34617"><![CDATA[
+Using this library and a common seed will produce the same results on all systems right?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Thu Jul 28, 2011 8:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Boolsheet]]></name></author>
+		<updated>2011-07-28T02:18:38+00:00</updated>
+
+		<published>2011-07-28T02:18:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34582#p34582</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34582#p34582"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34582#p34582"><![CDATA[
+<blockquote class="uncited"><div>It's closer to 2.5 times faster than the 6 times you propose, but I'm running out of ideas.</div></blockquote>To be honest, I didn't try to optimize your code. I timed another implementation and compared.<br><strong class="text-strong">If</strong> you're going for speed, then try to avoid calls to c functions like math.floor whenever possible. By computing 'a % 2' you already know if you have to floor or not. Just subtract 1 before you divide by 2 in that case.<br>Stuff like that. If it's really worth the effort is another question. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1720">Boolsheet</a> — Thu Jul 28, 2011 2:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2011-07-28T10:24:23+00:00</updated>
+
+		<published>2011-07-28T01:27:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34576#p34576</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34576#p34576"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34576#p34576"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>To get 100000 pseudo-randoms it takes 0,4 s with LCG and 22 s with Twister.</div></blockquote>You should be able to make the mersenne twister at least 6 times faster by only using arithmetic and logic operations for the bitwise operations (Has its few restrictions, but works for unsigned 32-bit values). The modulo operator '%' is usually faster than the math.mod function.<br>It's still much slower compared to the other generators in Lua 5.14, but the native bitwise functions in 5.2 could bring it very close.</div></blockquote>Thanks a lot for the % tip: less 5 seconds! Then I dropped bit.lua code, defined local functions and did my own bitwise operators.<br>Right now I have the following times for getting 100000 random numbers:<br>math.random()     0.02 s<br>lcg:random()        0.04 s<br>mwc:random()      0.05 s<br>twister:random()   7.50 s<br>It's closer to 3 times faster than the 6 times you propose, but I'm running out of ideas.<br>Uploaded v 0.3<br>Edit: Thanks again. Twister time dropped 2 s.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu Jul 28, 2011 1:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-07-27T19:27:41+00:00</updated>
+
+		<published>2011-07-27T19:27:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=34552#p34552</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=34552#p34552"/>
+		<title type="html"><![CDATA[Re: RandomLua Library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=34552#p34552"><![CDATA[
+<blockquote class="uncited"><div>Mmm, randomness. I approve. But why is the Mersenne Twister algorithm slow? I've read that it's rather fast, all considered.</div></blockquote>I haven't touched the stuff in a few months, but if I remember right, it is almost entirely due to having to use ghetto bit operations since our version of Lua doesn't natively support them.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Wed Jul 27, 2011 7:27 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

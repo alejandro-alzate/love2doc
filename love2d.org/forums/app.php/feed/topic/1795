@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/1795" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-01-02T13:03:19+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/1795</id>
+
+		<entry>
+		<author><name><![CDATA[noahnadai]]></name></author>
+		<updated>2021-01-02T13:03:19+00:00</updated>
+
+		<published>2021-01-02T13:03:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=237705#p237705</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=237705#p237705"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=237705#p237705"><![CDATA[
+Hi,<br>I'm having trouble using (and understanding) the <strong class="text-strong">lockWindow()</strong> function in the hump camera.<br>How can i set it up to define the boarders of a level? Something like this. Ignore the values though.<br>This code just causes the screen to jutter and shake like there's an earthquake.<br><div class="codebox"><p>Code: </p><pre><code>function scene:update(dt)    local dx, dy = player.x - camera.x, player.y - camera.y    camera:move(dx/2, dy/2)    camera:lockWindow(1000,0,2000,4000,0,0)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=152144">noahnadai</a> — Sat Jan 02, 2021 1:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[benreed]]></name></author>
+		<updated>2016-10-21T19:08:08+00:00</updated>
+
+		<published>2016-10-21T19:08:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204838#p204838</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204838#p204838"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204838#p204838"><![CDATA[
+<strong class="text-strong">EDIT: Figured it out. Googled "love2d quit game from menu", blundered into the doc page for love.event.quit(), tested it, does exactly what I wanted. Sorry for taking up your time, Positive07, and thank you very much for your help.</strong><br><br>To answer more specifically about what I want, all I want is to give one of the main menu choices the power to quit the game in the same way a window quit (clicking the "X") would. Right now this is the only part of the game<br>I want to have this power; in other states, I expect the user to close the window instead.<br><br>I refactored my code a bit while I was waiting on a reply, but I still can't figure out how to implement my menu quit properly.<br><br>Here's what changed:<br>I dumped all the menu state code that used to be in main.lua into its own file (r_menustate.lua; I finally learned what I was doing wrong with "require" and the gamestate table).<div class="codebox"><p>Code: </p><pre><code>local Gamestate = require("gamestate")local Menu        = require("r_menustate")function love.quit()  print("love.quit(): Bye!")endfunction love.load()  Gamestate.registerEvents()  Gamestate.switch(Menu)end</code></pre></div>But while my code is now much neater, that, of course, doesn't solve my problem. If I write a menu:quit() function, the statements inside the body execute, but love.quit() is never called.<br><br>Here's the relevant r_menustate.lua code now:<br><div class="codebox"><p>Code: </p><pre><code>-- r_menustate.luafunction menu:gamepadpressed(joystick, button)  -- cursor movement code  if joystick:isGamepadDown("a") then    menu:switchState(cursor.index)  end  endfunction menu:switchState(index)  if index == 3 then    print("You selected : " .. options[index].label)  elseif index == 5 then    menu:quit()  endendfunction menu:quit()  -- calling this function with empty body does not result in love.quit() being called;  --   the statements inside the body are executed, but love.quit() never happens at the   --   endend</code></pre></div>Do I need to send more information up to main.lua with an event or something to result in a single, explicit call to love.quit()? I still don't get what I'm doing or not doing to not get the love.quit() call I want.<br><br>EDIT: I also tried explicitly passing all the callback names to registerEvents() that I wanted my menu state to handle, but the behavior is still the same. <br><div class="codebox"><p>Code: </p><pre><code>-- main.lualocal Gamestate = require("gamestate")local Menu      = require("r_menustate")function love.load()  Gamestate.registerEvents{'draw', 'update', 'gamepadpressed', 'quit'}  Gamestate.switch(Menu)end--function love.quit()   --print("love.quit(): Bye!")--end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138521">benreed</a> — Fri Oct 21, 2016 7:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-10-21T18:13:45+00:00</updated>
+
+		<published>2016-10-21T18:13:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204837#p204837</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204837#p204837"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204837#p204837"><![CDATA[
+You shouldn't have a problem defining love.quit in your main.lua, HUMP is intelligent and will call it even if you do registerEvents, note that if you redefine the love.quit in other point HUMP will lose control over it.<br><br>That means that if your love.quit function is defined in a file that is required after HUMP registers then you'll probably override HUMP's love.quit.<br><br>Note that if you are using love.quit once throughout your program and don't want specific per-gamestate love.quits then taking control over love.quit (that is redefining love.quit after HUMP registerEvents) shouldn't pose a problem to you.<br><br>PS: You have to pass at least "update" in the callbacks table not just "draw", so {"update", "draw"} should at least do something. This is just a thought, I haven't tested.<br><br>Also if what you want is cancel the quit event then return true from menu:quit(). Otherwise I don't really get your problem<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Fri Oct 21, 2016 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[benreed]]></name></author>
+		<updated>2016-10-21T16:03:40+00:00</updated>
+
+		<published>2016-10-21T16:03:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204831#p204831</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204831#p204831"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204831#p204831"><![CDATA[
+Quick question:<br><br>I want one of my menu state callbacks to call love.quit(). Since I called registerEvents() with no arguments in love.load(), I know that I've remapped the default LOVE callback, and now I'll have to define a new way of getting that behavior. My first naiive thoughts were these:<br><br>(1) Define an empty function body for menu:quit() and love.quit() will get called in the background. If I had paid more attention when I was skimming the contents of gamestate.lua, I would have realized this wasn't going to happen. So naturally I pressed my button and all I got was my print statement in the console, and I realized I had more work/reading to do.<br><br>(2) Call love.quit() explicitly inside menu:quit(). As you can expect, the resulting segfault (IDK what else it could be, the behavior smacked of unintentional recursion while re/deallocating memory to me) was moderately spectacular.<br><br>So what's the RIGHT way to make a user-defined callback in a HUMP gamestate call love.quit()? I read further in the docs and realized (as I was drafting this post) that you could pass a table argument to registerEvents() and remap only certain callbacks. I feel like that's part of the solution, but I'm not sure how to make it work yet. I passed in a table with only 'draw' to see how it worked, and all that happened was that it looks like my menu:draw() was never called (I put a print statement in there to be sure). <br><br>I have moderate programming experience in a bunch of different languages, but this is my first time working with Lua for more than 30 minutes (only just finished part 1 of Programming in Lua, still alt-tabbing between it and various LOVE library docs), so I'm still wrapping my brain around all of Lua's features &amp; their uses. My programming experience is mostly rooted in Java, C++, Python, and a bit of C, so adapting to the way Lua does things is taking me a bit of adjustment. Any help you can give -- or any further reading you can assign -- is greatly appreciated.<br><br>Here's the relevant code snippets:<br><div class="codebox"><p>Code: </p><pre><code>-- main.lua (still learning how to properly use "require" with my face)function menu:gamepadpressed(joystick, button)  -- code to move cursor up and down in the menu    -- Act on menu selection if confirmation button is pressed  if joystick:isGamepadDown("a") then    menu:switchState(cursor.index)  endendfunction menu:switchState(index)  if index == 3 then    print("You selected : " .. options[index].label)  elseif index == 5 then    --menu:quit()  endendfunction menu:quit()  print("Quittin' time")end</code></pre></div><div class="codebox"><p>Code: </p><pre><code>-- main.lua, very bottom of the codefunction love.load()  Gamestate.registerEvents()  Gamestate.switch(menu)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138521">benreed</a> — Fri Oct 21, 2016 4:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-10-16T01:17:54+00:00</updated>
+
+		<published>2016-10-16T01:17:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204660#p204660</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204660#p204660"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204660#p204660"><![CDATA[
+Have you tried [wiki]love.graphics.setScissors[/wiki]?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Oct 16, 2016 1:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zireael]]></name></author>
+		<updated>2016-10-15T17:58:19+00:00</updated>
+
+		<published>2016-10-15T17:58:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204641#p204641</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204641#p204641"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204641#p204641"><![CDATA[
+I'm using HUMP camera but am running into problems avoiding scrolling under the HUD. My current code only works for a certain map size. I would like to have a viewport - so that nothing can ever go under the HUD on the left or the planned HUD on the bottom. I understand there is a way to do viewports in HUMP, but I'm not certain how to do it?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138380">Zireael</a> — Sat Oct 15, 2016 5:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack Dandy]]></name></author>
+		<updated>2016-10-08T16:31:03+00:00</updated>
+
+		<published>2016-10-08T16:31:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204394#p204394</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204394#p204394"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204394#p204394"><![CDATA[
+Whoops. I forgot to put 'Timer_enemyturn:update(dt)' in love.update.<br>Thanks   <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-nyu.png" width="16" height="16" alt=":nyu:" title="Nyu"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135624">Jack Dandy</a> — Sat Oct 08, 2016 4:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MadByte]]></name></author>
+		<updated>2016-10-08T16:05:03+00:00</updated>
+
+		<published>2016-10-08T16:05:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204392#p204392</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204392#p204392"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204392#p204392"><![CDATA[
+You should provide a code example for that, otherwise I just can guess what might be wrong. <br>Make sure that you're updating the timer in your update callback.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=116409">MadByte</a> — Sat Oct 08, 2016 4:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack Dandy]]></name></author>
+		<updated>2016-10-08T15:59:56+00:00</updated>
+
+		<published>2016-10-08T15:59:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204391#p204391</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204391#p204391"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204391#p204391"><![CDATA[
+Hey, I have a question about the Hump.timer's "every" function.<br><br>Let's say I have this piece of code:<br><div class="codebox"><p>Code: </p><pre><code>if key == 's' then    Timer_enemyturn:every(1, gamefuncs.activateAI())  end</code></pre></div>But, when I push 's', it only activates the enemy's AI once. How come? I thought it should make the enemy's AI activate every second.<br><br>I even checked it, and when I replaced the "activateAI" function with a simple print-to-console function, it only called it once.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135624">Jack Dandy</a> — Sat Oct 08, 2016 3:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Viomi]]></name></author>
+		<updated>2016-06-16T10:24:47+00:00</updated>
+
+		<published>2016-06-16T10:24:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=199656#p199656</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=199656#p199656"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=199656#p199656"><![CDATA[
+<blockquote class="uncited"><div>Button:clickedOn is defined with ":" but has self in the arguments. Remove the "self" from there, I guess</div></blockquote>Oh, woops.<br><br>That was rather stupid of me.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-o_O.png" width="16" height="16" alt=":shock:" title="Shocked"> <br><br>Removed self from the arguments, and called it with start:clickedOn instead of start.clickedOn.<br><br>Thanks Nixola  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137623">Viomi</a> — Thu Jun 16, 2016 10:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2016-06-16T09:16:18+00:00</updated>
+
+		<published>2016-06-16T09:16:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=199649#p199649</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=199649#p199649"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=199649#p199649"><![CDATA[
+Button:clickedOn is defined with ":" but has self in the arguments. Remove the "self" from there, I guess<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Thu Jun 16, 2016 9:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Viomi]]></name></author>
+		<updated>2016-06-16T04:24:47+00:00</updated>
+
+		<published>2016-06-16T04:24:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=199645#p199645</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=199645#p199645"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=199645#p199645"><![CDATA[
+I've come here for help with HUMP because I'm thoroughly confused as to what I'm doing wrong.<br><br>Example code:<div class="codebox"><p>Code: </p><pre><code>Button = Class{}function Button:init(x, y, width, height)self.x = xself.y = yself.width = widthself.height = heightendfunction Button:clickedOn(self, x, y)if (x &gt;= self.x) and (x &lt;= self.x + self.width) and (y &gt;= self.y) and (y &lt;= self.y + self.height) thenreturn trueelsereturn falseendendlocal mainmenu = {}local game = {}function love.load()Gamestate.registerEvents()Gamestate.switch(mainmenu)endfunction mainmenu:init()start = Button('fill', 10, 10, 50, 50)endfunction mainmenu:mousereleased(x, y, button, istouch)if button == 1 thenif start.clickedOn(x, y) thenGamestate.switch(game)endendend</code></pre></div>Gives me an error from clickedOn:<br>'Error: attempt to index local 'self' (a nil value)<br><br>What have I done wrong this time?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137623">Viomi</a> — Thu Jun 16, 2016 4:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kibita]]></name></author>
+		<updated>2016-05-01T03:25:15+00:00</updated>
+
+		<published>2016-05-01T03:25:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=198203#p198203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=198203#p198203"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=198203#p198203"><![CDATA[
+<blockquote class="uncited"><div>The actual problem with the origin script is that you start a tween that takes 14 seconds (7 in + 7 out), but only wait one second before starting a new tween. In hump, tweens can overlay each other. So after two seconds, you have two tweens at the same time, after three seconds there are three, etc.</div></blockquote>Yes! I discovered this doing some test in a test project. Thank you.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137368">Kibita</a> — Sun May 01, 2016 3:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2016-04-30T09:16:33+00:00</updated>
+
+		<published>2016-04-30T09:16:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=198158#p198158</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=198158#p198158"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=198158#p198158"><![CDATA[
+<blockquote class="uncited"><div>Actually, I created the Timer.script() inside the Obstacle.new() method, so it should run one time, I guess.</div></blockquote>Sorry for answering so late, but better late than never:<br><br>The actual problem with the origin script<div class="codebox"><p>Code: </p><pre><code>obstacleTimer.script(function(wait)    while true do        obstacleTimer.tween(7, self, {distFromMid = 100}, "in-linear", function()            obstacleTimer.tween(7, self, {distFromMid = 400}, "in-linear") -- const.gameWidth / 2        end) -- self.radius        wait(1)    endend)</code></pre></div>is that you start a tween that takes 14 seconds (7 in + 7 out), but only wait one second before starting a new tween. In hump, tweens can overlay each other. So after two seconds, you have two tweens at the same time, after three seconds there are three, etc.<br>Waiting 14 seconds should work. Better yet, Timer.script() gets rid of the callback style:<div class="codebox"><p>Code: </p><pre><code>obstacleTimer.script(function(wait)    while true do        obstacleTimer.tween(7, self, {distFromMid = 100}, "in-linear")        wait(7)        obstacleTimer.tween(7, self, {distFromMid = 400}, "in-linear")        wait(7)    endend)</code></pre></div><blockquote class="uncited"><div>When i put that coord as the coords for the sprite, it doesnt spawns where it needs to. I tried every permutation of coordinate change but i cant get the sprite to render at the Tiled object coordinate. The sprite is positioned at the proper position when i manually put the coords as  708, 1602.</div></blockquote>Can you upload a (minimal) .love so I can have a look at the problem?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Sat Apr 30, 2016 9:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rishavs]]></name></author>
+		<updated>2016-04-25T08:27:57+00:00</updated>
+
+		<published>2016-04-25T08:27:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197992#p197992</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197992#p197992"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197992#p197992"><![CDATA[
+<blockquote class="uncited"><div>I didn't go too deep into you code, but you shouldn't need to transform the coordinates for drawing; just draw the sprite at object.x, object.y.<br><br>camera:worldCoords() is only needed to figure out where some point on the screen (between 0,0 and width/height of the window) is in the game world. It is used, for example, to figure out where the mouse pointer points to in the game world.<br><br>Conversly, camera:cameraCoords() maps a point in the game world to coordinate in the game window.</div></blockquote>Hi Vrld<br><br>strangely its not working out for me.<br>I want to render a sprite at the coordinates coming from Tiled map object.<br>The object has coords of 320, 2880.<br><br>When i put that coord as the coords for the sprite, it doesnt spawns where it needs to. I tried every permutation of coordinate change but i cant get the sprite to render at the Tiled object coordinate. The sprite is positioned at the proper position when i manually put the coords as  708, 1602.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=727">Rishavs</a> — Mon Apr 25, 2016 8:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kibita]]></name></author>
+		<updated>2016-04-24T22:55:28+00:00</updated>
+
+		<published>2016-04-24T22:55:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197982#p197982</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197982#p197982"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197982#p197982"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>I dont know what's going on with my Timer, it should make my obstacles doing a smooth oscillation in the X axis, but they go crazy, oscillating very fast gradually.</div></blockquote>Looks like you execute Timer.script every frame (if you don't, please post the whole file). You need to call it only once, which defines the script. The script is updated every time you call Timer.update().</div></blockquote>Actually, I created the Timer.script() inside the Obstacle.new() method, so it should run one time, I guess. But I "solved" the problem doing this:<div class="codebox"><p>Code: </p><pre><code>local function updateTweenScript(obj)    if obj.type == "oscillator-x" then        obstacleTimer.tween(10, obj, {distFromMid = obj.radius}, "in-linear", function()            obstacleTimer.tween(10, obj, {distFromMid = const.gameWidth / 2}, "in-linear", function()                updateTweenScript(obj)            end)        end)    endend</code></pre></div>The function call itself.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137368">Kibita</a> — Sun Apr 24, 2016 10:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2016-04-24T15:13:40+00:00</updated>
+
+		<published>2016-04-24T15:13:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197978#p197978</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197978#p197978"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197978#p197978"><![CDATA[
+<blockquote class="uncited"><div>I need some help with camera coordinates.</div></blockquote>I didn't go too deep into you code, but you shouldn't need to transform the coordinates for drawing; just draw the sprite at object.x, object.y.<br><br>camera:worldCoords() is only needed to figure out where some point on the screen (between 0,0 and width/height of the window) is in the game world. It is used, for example, to figure out where the mouse pointer points to in the game world.<br><br>Conversly, camera:cameraCoords() maps a point in the game world to coordinate in the game window.<br><br><blockquote class="uncited"><div>I dont know what's going on with my Timer, it should make my obstacles doing a smooth oscillation in the X axis, but they go crazy, oscillating very fast gradually.</div></blockquote>Looks like you execute Timer.script every frame (if you don't, please post the whole file). You need to call it only once, which defines the script. The script is updated every time you call Timer.update().<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Sun Apr 24, 2016 3:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kibita]]></name></author>
+		<updated>2016-04-23T23:22:20+00:00</updated>
+
+		<published>2016-04-23T23:22:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197963#p197963</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197963#p197963"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197963#p197963"><![CDATA[
+I dont know what's going on with my Timer, it should make my obstacles doing a smooth oscillation in the X axis, but they go crazy, oscillating very fast gradually. That's the code:<br><div class="codebox"><p>Code: </p><pre><code>    if self.type == "oscillator-x" then        obstacleTimer.script(function(wait)            while true do                obstacleTimer.tween(7, self, {distFromMid = 100}, "in-linear", function()                    obstacleTimer.tween(7, self, {distFromMid = 400}, "in-linear") -- const.gameWidth / 2                end) -- self.radius                wait(1)            end        end)    end</code></pre></div>Should I post more code, or the entire .lua file?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137368">Kibita</a> — Sat Apr 23, 2016 11:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rishavs]]></name></author>
+		<updated>2016-04-22T09:07:07+00:00</updated>
+
+		<published>2016-04-22T09:07:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197910#p197910</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197910#p197910"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197910#p197910"><![CDATA[
+Hi<br><br>I need some help with camera coordinates.<br><br>I am using Hump for the camera and STI for the tilemap.<br><br>In Tiled I have added a object called startPoint (where i want my sprite to spawn). The x,y value that i get from Tiled is 320, 2880.<br><br>I am simply unable to use this value to spawn the spite. It always spawns somewhere else. I tried using self.cam:worldCoords but the value is again different from what I expected. Manually i can see I need to place the sprite at 708, 1602<br>Can someone please help me here? Is there a problem with using hump.Camera and STI together?<br><br>I am essentially doing this;<div class="codebox"><p>Code: </p><pre><code>for k, object in pairs(self.map.objects) do        if object.name == "startPoint" then            startPointX, startPointY = self.cam:worldCoords(object.x, object.y)            print("startpoint", object.x, object.y)        elseif object.name == "endPoint" then            endPointX, endPointY = self.cam:cameraCoords(object.x, object.y)--            print("endpoint", object.x, object.y)        end    end</code></pre></div>and I am drawing the spite like this;<div class="codebox"><p>Code: </p><pre><code>    self.map:draw()    love.graphics.draw(img,  startPointX, startPointY, 0, 1, 1, imgWidth / 2, imgHeight / 2)</code></pre></div>My code is at;<br><a href="https://github.com/rishavs/RoguishLove" class="postlink">https://github.com/rishavs/RoguishLove</a><br>The relevant code is in the _state_Game.lua file around lines 61 and 117.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=727">Rishavs</a> — Fri Apr 22, 2016 9:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2016-04-17T18:14:28+00:00</updated>
+
+		<published>2016-04-17T18:14:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197697#p197697</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197697#p197697"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197697#p197697"><![CDATA[
+<a href="http://hump.readthedocs.org/en/latest/timer.html#Timer.script" class="postlink">Timer.script</a> is great for things like this. For example:<div class="codebox"><p>Code: </p><pre><code>Timer.script(function(wait)  local time_passed = 0  while true do -- replace with terminating condition    for i = 1,getNumberOfEnemies(time_passed) do        spawnEnemy()    end        local time_to_wait = getWaitTime(time_passed)    wait(time_to_wait)    time_passed = time_passed + time_to_wait  endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Sun Apr 17, 2016 6:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2016-04-17T17:27:13+00:00</updated>
+
+		<published>2016-04-17T17:27:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197691#p197691</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197691#p197691"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197691#p197691"><![CDATA[
+Yes, I intended to spawn increasingly more enemies in a sort-of random time interval. This was the way I came up with (if you replace print with spawn, adjust time intervals to taste).<br>Is there a better way to do something like that?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sun Apr 17, 2016 5:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2016-04-17T17:00:06+00:00</updated>
+
+		<published>2016-04-17T17:00:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197686#p197686</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197686#p197686"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197686#p197686"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>tmpt.every(ti, print("Timer: "..ti))</code></pre></div> will not work, because print("Timer: "..ti) is not a function. The correct usage would be<div class="codebox"><p>Code: </p><pre><code>tmpt.every(ti, function() print("Timer: "..ti) end)</code></pre></div>In any case, here is what you are doing right now:<ul><li>Every second, add a Timer instance, for which:<ul><li>Every two (three, four, ...) seconds, print the text "Timer: {number}" to the console</li></ul></li></ul>After one second, you will have one timer to add timers, and one timer that prints every two seconds. After two seconds, you will have one timer that adds timers and two timers that print to the console every two and three seconds. After three seconds, you will have one timer that adds timers and three timers that print to the console every two, three and four seconds, etc.<br><br>Is that what you intended to do?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Sun Apr 17, 2016 5:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2016-04-15T12:46:29+00:00</updated>
+
+		<published>2016-04-15T12:46:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197591#p197591</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197591#p197591"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197591#p197591"><![CDATA[
+Hi there.<br><br>I tried to create timed level progression using hump.timer but all I get is crashes. Any idea what's wrong?<br><div class="codebox"><p>Code: </p><pre><code>Timer = require("lib/hump.timer")function love.load()love.graphics.setColor(0,0,0)love.graphics.setBackgroundColor(255,255,255)TIMERS = {}TI = 1Timer.every(TI, function() addTimer(TI); TI = TI + 1 end)  endfunction love.update(dt)Timer.update(dt)for k,v in pairs(TIMERS) doTIMERS[k].update(dt)endendfunction love.draw()endfunction addTimer(ti)local tmpt = Timer.new()tmpt.every(ti, print("Timer: "..ti))table.insert(TIMERS, ti, tmpt)end</code></pre></div><div class="codebox"><p>Code: </p><pre><code>Timer: 1Error: lib/hump/timer.lua:62: attempt to call upvalue 'func' (a nil value)stack traceback:lib/hump/timer.lua:62: in function 'after'lib/hump/timer.lua:44: in function 'update'main.lua:15: in function 'update'[string "boot.lua"]:463: in function &lt;[string "boot.lua"]:435&gt;[C]: in function 'xpcall'</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Fri Apr 15, 2016 12:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alundaio]]></name></author>
+		<updated>2016-03-03T07:27:49+00:00</updated>
+
+		<published>2016-03-03T07:27:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=195889#p195889</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=195889#p195889"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=195889#p195889"><![CDATA[
+Ah, I see what I was doing wrong after looking at your example. This is the solution that worked in my case:<div class="codebox"><p>Code: </p><pre><code>local wvw, wvh = windowWidth/(2*cam.scale), windowHeight/(2*cam.scale)cam.x = math.clamp(cam.x,0+wvw,1024-wvw)cam.y = math.clamp(cam.y,0+wvh,map.height*64-wvh)</code></pre></div>Thanks for the help, cheers.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137618">alundaio</a> — Thu Mar 03, 2016 7:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ivan]]></name></author>
+		<updated>2016-03-02T11:22:18+00:00</updated>
+
+		<published>2016-03-02T11:22:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=195858#p195858</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=195858#p195858"/>
+		<title type="html"><![CDATA[Re: HUMP - yet another set of helpers]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=195858#p195858"><![CDATA[
+Hey Akundaio, the math behind it would be fairly simple.<br>You want to contain one rectangle (the camera's viewport) inside another rectangle (bounds of the map).<br>The easiest approach is to transform the camera rect in world coords.<br>Assuming the center of the camera is in world coords:<div class="codebox"><p>Code: </p><pre><code>local s = 1/camera.zoom -- zoom or scale of the cameralocal vw, wh = camera.w, camera.h -- dimensions of the viewport (in screen coords)local wvw, wvh = vw*s, vh*s -- dimensions of the viewport (in world coords)</code></pre></div>Next you clamp the transformed viewport rect to the map bounds:<div class="codebox"><p>Code: </p><pre><code>camera.x = math.max(camera.x, map.left + wvw)camera.x = math.min(camera.x, map.right - wvw)camera.y = math.max(camera.y, map.top + wvh)camera.y = math.min(camera.y, map.bottom - wvh)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=69">ivan</a> — Wed Mar 02, 2016 11:22 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

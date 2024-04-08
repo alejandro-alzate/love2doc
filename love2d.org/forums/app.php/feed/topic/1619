@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1619" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2013-07-07T13:10:05+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1619</id>
+
+		<entry>
+		<author><name><![CDATA[SneakySnake]]></name></author>
+		<updated>2013-07-07T13:10:05+00:00</updated>
+
+		<published>2013-07-07T13:10:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=110868#p110868</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=110868#p110868"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=110868#p110868"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Error<br><br>main.lua:1: module 'menu.lua' not found:<br>no file "main/lua.lua" in LOVE game directories.<br>...</div></blockquote></div></blockquote>This game is old. It was made for an older version of LÖVE/Lua. It won't work with 0.8.0.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=120638">SneakySnake</a> — Sun Jul 07, 2013 1:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bunny365]]></name></author>
+		<updated>2013-07-06T20:28:04+00:00</updated>
+
+		<published>2013-07-06T20:28:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=110808#p110808</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=110808#p110808"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=110808#p110808"><![CDATA[
+<blockquote class="uncited"><div>Error<br><br>main.lua:1: module 'menu.lua' not found:<br>no file "main/lua.lua" in LOVE game directories.<br><br>no extension "menu.lua" in LOVE paths.<br><br>no field package.preload['menu.lua']<br>no file '.\menu\lua.lua'<br>no file 'C:\Program Files (x86)\LOVE\lua\menu\lua.lua'<br>no file 'C:\Program Files (x86)\LOVE\lua\menu\lua\init.lua'<br>no file 'C:\Program Files (x86)\LOVE\menu\lua.lua'<br>no file 'C:\Program Files (x86)\LOVE\menu\lua\init.lua'<br>no file 'C:\Program Files (x86)\Lua\5.1\lua\menu\lua.luac'<br>no file '.\menu\lua.dll'<br>no file 'C:\Program Files (x86)\LOVE\menu\lua.dll'<br>no file 'C:\Program Files (x86)\LOVE\loadall.dll'<br>no file '.\menu.dll'<br>no file 'C:\Program Files (x86)\LOVE\menu.dll'<br>no file 'C:\Program Files (x86)\LOVE\loadall.dll'<br><br><br>Traceback<br><br>[C]: in function 'require'<br>main.lua:1: in main chunk<br>[C]: in function 'require'<br>[C]: in function 'xpcall'</div></blockquote>I typed I type that all correctly. System details:<br>LÖVE version: 0.8.0 for Windows (64-bit)<br>Computer OS: Windows 8<br>Processor: Intel(R) Celeron(R) CPU B830 @ 1.80GHz  1.80 GHz<br>Installed memory (RAM): 4.00 GB (3.89 GB usable)<br>System type: 64-bit Operating System, x64-based processor<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=125842">bunny365</a> — Sat Jul 06, 2013 8:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lolfacey]]></name></author>
+		<updated>2011-09-05T17:15:44+00:00</updated>
+
+		<published>2011-09-05T17:15:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=36364#p36364</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=36364#p36364"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=36364#p36364"><![CDATA[
+EDIT: The newer source code is working Thanks!<br><br>When ever i try to run it i just get:<br>Error<br>game.lua:38: incorrect number of parameters<br><br><br>Traceback<br><br>[C]: in function 'new world'<br>game.lua:38: in function 'newWorlds'<br>game.lua:14: in function 'init'<br>subclass/class.lua:41 in function 'new'<br>menu.lua:55: in function 'process'<br>menu.lua:73: in function "keypressed'<br>main.lua:44: in function 'keypressed'<br>[C]: in function 'xpcall'<br><br><br>Any help?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3632">lolfacey</a> — Mon Sep 05, 2011 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[budm]]></name></author>
+		<updated>2011-08-26T16:45:03+00:00</updated>
+
+		<published>2011-08-26T16:45:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=36019#p36019</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=36019#p36019"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=36019#p36019"><![CDATA[
+thanks mate ill take a look at what youve done.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1468">budm</a> — Fri Aug 26, 2011 4:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ikarus]]></name></author>
+		<updated>2011-08-26T16:41:26+00:00</updated>
+
+		<published>2011-08-26T16:41:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=36018#p36018</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=36018#p36018"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=36018#p36018"><![CDATA[
+Hey learning the engine and fixed the simple newWorld errors in this so it works in 7.2 now ^-^<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2983">mario-7.2.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3583">ikarus</a> — Fri Aug 26, 2011 4:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jordan4762]]></name></author>
+		<updated>2010-10-14T22:27:12+00:00</updated>
+
+		<published>2010-10-14T22:27:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=20504#p20504</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=20504#p20504"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=20504#p20504"><![CDATA[
+Source Code Please?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1536">Jordan4762</a> — Thu Oct 14, 2010 10:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[budm]]></name></author>
+		<updated>2010-09-30T14:29:48+00:00</updated>
+
+		<published>2010-09-30T14:29:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=19754#p19754</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=19754#p19754"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=19754#p19754"><![CDATA[
+sorry not sharing im actually helping him now with coding and fixing bugs so you'd have to ask him if we should release the current state, my current build is buggy anyways we are working dedicatedly<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1468">budm</a> — Thu Sep 30, 2010 2:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ricardobeat]]></name></author>
+		<updated>2010-09-29T10:42:46+00:00</updated>
+
+		<published>2010-09-29T10:42:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=19672#p19672</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=19672#p19672"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=19672#p19672"><![CDATA[
+Care to share your improved version? <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1489">ricardobeat</a> — Wed Sep 29, 2010 10:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[partymetroid]]></name></author>
+		<updated>2010-09-26T00:20:24+00:00</updated>
+
+		<published>2010-09-26T00:20:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=19521#p19521</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=19521#p19521"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=19521#p19521"><![CDATA[
+Hey, Deecodeuh's been tied up with life stuff recently, and he's probably accidentally forgotten about this thread.  I'll remind him about it the next time I see him online. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=975">partymetroid</a> — Sun Sep 26, 2010 12:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[budm]]></name></author>
+		<updated>2010-09-23T02:36:48+00:00</updated>
+
+		<published>2010-09-23T02:36:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=19430#p19430</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=19430#p19430"/>
+		<title type="html"><![CDATA[Room for one more?]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=19430#p19430"><![CDATA[
+i was also wondering if the team still needed help from coders...<br><br> i have been tweaking your code for about 24 hours and i have co op functioning pretty well, i have (almost) finished distinguishing mario from luigi in co op, i have also began work on designing a second level along with the efforts to create a Name of the Game on the Main Menu, and implementing a command to make it full screen from pressing the F key, i have lowered his speed and jump to a more accurate one compared to NES, update/downgraded the graphics to have mario and luigi from the same game graphics, and began to plot to implement the death screen from NES, the black one that with the lives left and the click to continue.<br><br>I was just informing you of this, please let me know what i can do, and if you dont need me, i would like to have your teams ok to release this to this site, when i feel i have put proper amounts of effort and work into it.<br><br>Let me know, <br>budm<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1468">budm</a> — Thu Sep 23, 2010 2:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-08-18T21:57:46+00:00</updated>
+
+		<published>2010-08-18T21:57:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=18653#p18653</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=18653#p18653"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=18653#p18653"><![CDATA[
+Totally forgot about this project, I still need to download the source again!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Wed Aug 18, 2010 9:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[wyliek]]></name></author>
+		<updated>2010-08-18T16:25:34+00:00</updated>
+
+		<published>2010-08-18T16:25:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=18635#p18635</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=18635#p18635"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=18635#p18635"><![CDATA[
+Still looking for contributors?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1392">wyliek</a> — Wed Aug 18, 2010 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-06-11T17:40:50+00:00</updated>
+
+		<published>2010-06-11T17:40:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15995#p15995</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15995#p15995"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15995#p15995"><![CDATA[
+It appears.  Good guesswork!  I'll see you on the Wave, then.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Fri Jun 11, 2010 5:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Deecodeuh]]></name></author>
+		<updated>2010-06-11T17:05:04+00:00</updated>
+
+		<published>2010-06-11T17:05:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15994#p15994</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15994#p15994"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15994#p15994"><![CDATA[
+I just took your email address and put @googlewave.com at the end of it. It seems to have worked?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=822">Deecodeuh</a> — Fri Jun 11, 2010 5:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-06-11T04:38:58+00:00</updated>
+
+		<published>2010-06-11T04:38:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15961#p15961</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15961#p15961"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15961#p15961"><![CDATA[
+Shouldn't you first have my Wave account name?<br><br>I forgot what it was and will check tomorrow (I may need a reminder).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Fri Jun 11, 2010 4:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Deecodeuh]]></name></author>
+		<updated>2010-06-11T04:22:45+00:00</updated>
+
+		<published>2010-06-11T04:22:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15959#p15959</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15959#p15959"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15959#p15959"><![CDATA[
+<blockquote class="uncited"><div>I'll do some coding if you give me a to-do list.</div></blockquote>Cool, I'll put you in the google wave.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=822">Deecodeuh</a> — Fri Jun 11, 2010 4:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-06-09T18:35:07+00:00</updated>
+
+		<published>2010-06-09T18:35:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15902#p15902</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15902#p15902"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15902#p15902"><![CDATA[
+I'll do some coding if you give me a to-do list.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Wed Jun 09, 2010 6:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Chucknorrisaurrus]]></name></author>
+		<updated>2010-06-09T06:35:00+00:00</updated>
+
+		<published>2010-06-09T06:35:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15883#p15883</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15883#p15883"/>
+		<title type="html"><![CDATA[Re: Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15883#p15883"><![CDATA[
+Wow, that's awesome! I wish I could help out, but I'm still learning the language. Still, nice! Only word of advice I can think of is to make the jumping smaller, Mario sorta goes flying when you jump.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1220">Chucknorrisaurrus</a> — Wed Jun 09, 2010 6:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Deecodeuh]]></name></author>
+		<updated>2011-05-13T14:13:24+00:00</updated>
+
+		<published>2010-06-09T05:11:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15881#p15881</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15881#p15881"/>
+		<title type="html"><![CDATA[Lovely Mario Brothers - Still Alive]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15881#p15881"><![CDATA[
+Hey, development is still underway for Lovely Mario Brothers.<br>I haven't posted an update in a long time, but this is what I have.<br><br>I'm still looking for people who would like to join this project.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1602">mario (2).love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=822">Deecodeuh</a> — Wed Jun 09, 2010 5:11 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

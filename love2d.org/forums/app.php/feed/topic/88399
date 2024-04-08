@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/88399" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-10-28T18:45:56+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/88399</id>
+
+		<entry>
+		<author><name><![CDATA[Imagic]]></name></author>
+		<updated>2020-10-28T18:45:56+00:00</updated>
+
+		<published>2020-10-28T18:45:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=236583#p236583</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=236583#p236583"/>
+		<title type="html"><![CDATA[Re: ELScheduler - scheduler/timer library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=236583#p236583"><![CDATA[
+Major bug fix: more <a href="https://github.com/ImagicTheCat/ELScheduler/issues/3" class="postlink">here</a>, fixed in 1.1.<br><br>This bug can result in out-of-order trigger of timers.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143604">Imagic</a> — Wed Oct 28, 2020 6:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Imagic]]></name></author>
+		<updated>2020-03-01T16:22:59+00:00</updated>
+
+		<published>2020-03-01T16:22:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232407#p232407</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232407#p232407"/>
+		<title type="html"><![CDATA[ELScheduler - scheduler/timer library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232407#p232407"><![CDATA[
+Embeddable Lua Scheduler is a pure Lua library to manage timers.<br><br>It's embeddable for game loops and features the creation of timers.<br><br>It is implemented with a binary heap to manage timers, for performances; this results in a complexity of ~O(log₂n) for each trigger (or removal) and O(1) otherwise.<br><br>I personally use a scheduler as a layer on top of the LÖVE application time functions; the whole game can be slowed/accelerated/paused from the scheduler input and time is consistent for a single frame.<br><br>Project and documentation: <a href="https://github.com/ImagicTheCat/ELScheduler" class="postlink">https://github.com/ImagicTheCat/ELScheduler</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143604">Imagic</a> — Sun Mar 01, 2020 4:22 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

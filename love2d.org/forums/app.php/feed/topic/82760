@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/82760" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-09-13T01:54:38+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/82760</id>
+
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2016-09-13T01:54:38+00:00</updated>
+
+		<published>2016-09-13T01:54:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203566#p203566</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203566#p203566"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203566#p203566"><![CDATA[
+What you're looking for is a general sqlite tutorial. Try this place for starters. <a href="http://www.tutorialspoint.com/sqlite/" class="postlink">http://www.tutorialspoint.com/sqlite/</a><br><br>Also, when documentation is not available, you just browse the source code.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Tue Sep 13, 2016 1:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[PiFace]]></name></author>
+		<updated>2016-09-12T19:48:58+00:00</updated>
+
+		<published>2016-09-12T19:48:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203553#p203553</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203553#p203553"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203553#p203553"><![CDATA[
+So... I've just found this thread and this library, but I don't understand how to access data from an offline database file. I have a db with 2 tables and ~100 entries each (~3k entries in the future, these initial 100 are for testing purposes) and I need to know what should I write into the code, even for simples tests (like printing one of the records inside the .db file). the example given on github only shows how to create tables, but not how to read them. Could anyone help?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138384">PiFace</a> — Mon Sep 12, 2016 7:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-29T06:52:16+00:00</updated>
+
+		<published>2016-08-29T06:52:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202898#p202898</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202898#p202898"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202898#p202898"><![CDATA[
+Aren't you quite petulant yourself? Not accepting other opinions, deleting your post, laughing at others with memes, double posting.<br><br>I suggested not bundling both libraries (.so and .dll) in a single lua files since you never need both of them, I suggested using the builtin file options provided by [manual]io[/manual] and [wiki]love.filesystem[/wiki], I told you that a library that has the same size as LÖVE is somewhat big, I told you I didn't see much use on using databases in LÖVE (it may be useful in general Lua and specially OpenResty), I told you that most of the time people bundle dll and so files for distribution so making a library just for this may not be that useful.<br><br>None of this is non-constructive, it is negative, but I think you can use this well, improving your library so that it only boundles the dll or so file but not both, not sure how, using [manual]io[/manual] and [wiki]love.filesystem[/wiki] instead of base64 string, reducing the size of the library minimizing, gzipping or something (LÖVE provides [wiki]love.math.compress[/wiki]), you could post your library in other forums that target Lua in general and OpenResty, see how your library works with other platforms appart from LÖVE since this isn't probably your main market...<br><br>Also if you want people to be nice to you be nice to them, as I said the meme or whatever was unnecessary, I was pointing out that the library is heavy, it can not even be looked at in GitHub because of the size, it has the same size as LÖVE, I'm not short of HDD space, but I haven't seen libraries this heavy here in the forums, even games tend to be way smaller than that... That is the reason I pointed it out, plus this library will generate a new 2MB file in the user disk so it actually consumes 4MB...<br><br>Pointing out that double posting is bad is also constructive feedback, you MUST read the <a href="https://love2d.org/forums/viewtopic.php?f=3&amp;t=64151" class="postlink">forum rules</a> before posting, so I was pointing it out<br><br>Well whatever if you think my criticism is bad or non-constructive is your problem, but you are damaging your reputation by deleting your post, you are destroying the little user base you may have for this library and you are being totally non-constructive with your attitude.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Aug 29, 2016 6:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-29T05:23:50+00:00</updated>
+
+		<published>2016-08-29T05:23:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202894#p202894</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202894#p202894"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202894#p202894"><![CDATA[
+If you mean "<strong class="text-strong"><em class="text-italics">criticism</em></strong>", it's a bit more complicated than that and I'd rather not go into it; however, your attitude is a good example of what I mean by negativity. Being a musician and an artist, I respond well to both negative and positive criticism so long as it's constructive. That being said. non-constructive criticism is of no use to me and even less so when it is presented in a petulant manner from a stance of nescience. I'll speak no more on the issue, think and say whatever else you please.<br><br>For anyone seeking updates, please refer to the github page. Thanks again, folks.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Mon Aug 29, 2016 5:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-28T22:32:21+00:00</updated>
+
+		<published>2016-08-28T22:32:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202849#p202849</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202849#p202849"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202849#p202849"><![CDATA[
+So basically you can't take any critics? Okay...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Aug 28, 2016 10:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-28T20:34:36+00:00</updated>
+
+		<published>2016-08-28T20:34:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202840#p202840</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202840#p202840"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202840#p202840"><![CDATA[
+The original content is still on my github, I'm just not posting updates to the module here any longer due to the negativity of some members and staff in this community. Feel free to communicate with me on github about the projects. Also, they are still listed in the libraries page on the main love2d website for new users.<br><br>Any other libraries I post in the future will also be posted here <a href="https://love2d.org/wiki/Category:Libraries" class="postlink">https://love2d.org/wiki/Category:Libraries</a> but not here on the forums. Thanks for your understanding.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sun Aug 28, 2016 8:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack5500]]></name></author>
+		<updated>2016-08-26T13:58:44+00:00</updated>
+
+		<published>2016-08-26T13:58:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202687#p202687</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202687#p202687"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202687#p202687"><![CDATA[
+Here is a backup fork: <a href="https://github.com/JanWerder/SQLite3-for-Lua" class="postlink">https://github.com/JanWerder/SQLite3-for-Lua</a><br><br>Original Content:<br><br><img src="https://s3.postimg.io/t9lp15vbn/Data_Information_256.png" class="postimage" alt="Image"><br><br>What Does This Library Do?<br>It provides a very simple means of accessing SQLite3 databases in lua.<br>It is designed to automate most of the process needed to use the SQLite3 libraries provided by josefnpat. All that's required of you, the programmer, is to provide a path to the script directory.<br><br>Note: If you're using LOVE (which you probably are since you're on the LOVE forums <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">), the path is already provided for you. So all you need to do is drop the plugin into your project and require it per the simple instructions on the Github.<br><br>How Do I Determine the Operating System That's Being Used?<br>You don't need to, the SQLite3 script does all that for you and selects the appropriate dll/so file to use for that OS.<br><br>Which Dll/so File Do I Use?<br>As stated above, SQLite3 takes care of making that determination so there's no need for you to have to sort through files trying to decide which one to use.<br><br>Do I Need to Move Dll/so Files?<br>Nope! This script will run SLQite3 from it's location. No need to move or copy anything.<br><br>I Thought External Libraries Had To Be In The LOVE Program Folder<br>By adding the correct path to the package.cpath variable, the SQLite3 script is able to use external libraries from any location.<br><br>Github Page (Download and Instructions)<br><a href="https://github.com/CentauriSoldier/SQLite3-for-Lua" class="postlink">https://github.com/CentauriSoldier/SQLite3-for-Lua</a><br><br>Test Results<br>Windows 32 bit: Untested<br>Windows 64 bit: Tested and Working<br>Linux 32 bit: Untested<br>Linux 64 bit: Tested and Working<br>Mac 32 bit: Untested<br>Mac 64 bit: Untested<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13156">Jack5500</a> — Fri Aug 26, 2016 1:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2016-08-26T06:54:49+00:00</updated>
+
+		<published>2016-08-26T06:54:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202670#p202670</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202670#p202670"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202670#p202670"><![CDATA[
+"<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=13733&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=13733" class="postimage" alt="67408461.jpg" /></a></dt></dl></div>"<br><span style="font-size:125%;line-height:116%">Stop trolling.</span> <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-near-monobrow.png" width="16" height="16" alt=":brows:" title="Eyebrows"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Aug 26, 2016 6:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2016-08-26T06:43:23+00:00</updated>
+
+		<published>2016-08-26T06:43:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202669#p202669</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202669#p202669"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202669#p202669"><![CDATA[
+<blockquote class="uncited"><div>We should maybe delete him? Just a suggestion</div></blockquote>Or maybe delete you.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Fri Aug 26, 2016 6:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-26T01:11:52+00:00</updated>
+
+		<published>2016-08-26T01:11:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202654#p202654</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202654#p202654"/>
+		<title type="html"><![CDATA[Re: Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202654#p202654"><![CDATA[
+We should maybe delete him? Just a suggestion<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Fri Aug 26, 2016 1:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2016-08-25T09:59:20+00:00</updated>
+
+		<published>2016-08-25T09:59:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202615#p202615</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202615#p202615"/>
+		<title type="html"><![CDATA[Don't delete your threads bro]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202615#p202615"><![CDATA[
+I hate when people delete their threads. Yes the library may not be useful but don't delete the content. It could have been useful for someone.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Thu Aug 25, 2016 9:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[s-ol]]></name></author>
+		<updated>2016-08-22T01:59:25+00:00</updated>
+
+		<published>2016-08-22T01:59:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202439#p202439</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202439#p202439"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202439#p202439"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>If you say "I'm gonna fix this issue like this" and then post "I fixed the issue like this", that looks like the same thing to me so it's double posting</div></blockquote>I see, well in that case you may want to go look up the definition of double-post in order to alleviate your confusion.</div></blockquote>Or maybe you should:<br><a href="http://tvtropes.org/pmwiki/pmwiki.php/Main/DoublePost" class="postlink">http://tvtropes.org/pmwiki/pmwiki.php/Main/DoublePost</a><br><a href="http://www.urbandictionary.com/define.php?term=Double%20Post" class="postlink">http://www.urbandictionary.com/define.p ... ble%20Post</a><br><br>It really depends on the definition, your post can be seen as either.<br>In my personal opinion posting twice, regardless of content, only makes sense if you need to bump the thread for a good reason.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135654">s-ol</a> — Mon Aug 22, 2016 1:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-22T01:28:24+00:00</updated>
+
+		<published>2016-08-22T01:28:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202437#p202437</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202437#p202437"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202437#p202437"><![CDATA[
+Well I hope you can prove me wrong, I still thing this library doesn't offer that many benefits, and I don't see much use in it anyway, but who knows, good luck!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Aug 22, 2016 1:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-22T01:17:26+00:00</updated>
+
+		<published>2016-08-22T01:17:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202435#p202435</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202435#p202435"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202435#p202435"><![CDATA[
+<blockquote class="uncited"><div>If you say "I'm gonna fix this issue like this" and then post "I fixed the issue like this", that looks like the same thing to me so it's double posting</div></blockquote>I see, well in that case you may want to go look up the definition of double-post in order to alleviate your confusion.<br><blockquote class="uncited"><div>Your library has almost the same size as LÖVE zip package for Windows, so it is way too much, for most little projects.</div></blockquote><img src="https://cdn.meme.am/instances/500x/71244014.jpg" class="postimage" alt="Image"><br><br>When designing a project, who says, "Well, I want to include images, music and plugins but, darn it, that would make my project bigger than the LOVE zip distribution file. Oh well, shucks, I give up, so much for my game idea. If only there were places on the internet where a person could host a project larger than a few megabytes."?<br><br>Your fixation on file size is not only irrelevant but ignores the obvious benefits gained by expending a couple megabytes of storage in exchange for the convenience of automatic cross-platform support.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Mon Aug 22, 2016 1:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-22T01:18:08+00:00</updated>
+
+		<published>2016-08-22T01:14:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202433#p202433</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202433#p202433"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202433#p202433"><![CDATA[
+Thanks for the well-thought-out tips, slime <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<br><br>As it turns out, you're right, LOVE does do all those things but this plugin is meant for Lua, not just LOVE so I had to come up with my own way of getting that info. I would have much rather used LOVE though lol, since it makes it so easy.<br><br>As far mac 32bit, that's not supported by this plugin either, technically, since the file is not present specifically for mac 32bit (but rather 32/64 combined). It's included as an option because of the automated table search function and has no real bearing on the plugin itself. Summed up, there is only one file included in this plugin for mac and it supports both 32 and 64 bit architecture.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Mon Aug 22, 2016 1:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-22T01:09:57+00:00</updated>
+
+		<published>2016-08-22T01:09:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202432#p202432</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202432#p202432"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202432#p202432"><![CDATA[
+If you say "I'm gonna fix this issue like this" and then post "I fixed the issue like this", that looks like the same thing to me so it's double posting<br><br>Your library has almost the same size as LÖVE zip package for Windows, so it is way too much, for most little projects.<br><br>Packaging a dll or a so file in two different packages is trivial, that would be needed anyway since you can't just distribute .love files to end users<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Aug 22, 2016 1:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2016-08-22T01:10:12+00:00</updated>
+
+		<published>2016-08-22T01:07:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202431#p202431</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202431#p202431"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202431#p202431"><![CDATA[
+A few tips:<br><ul><li>[wiki]love.filesystem.newFileData[/wiki] can decode a base64-encoded string for you.</li><li>You can use [wiki]love.system.getOS[/wiki] to determine the operating system at runtime, instead of using io.popen.</li><li>If LuaJIT is being used (LOVE uses it by default, so it's safe to rely on it), you can use <a href="http://luajit.org/ext_jit.html" class="postlink">jit.arch</a> to determine the current architecture (x86, x64, arm, arm64).</li><li>You can use [wiki]love.filesystem.write[/wiki] to write a string/bytes or a Data object directly to a file in the game's save directory, instead of using io.open. I highly recommend using love.filesystem functionality in place of the io library. You can also use [wiki]love.filesystem.exists[/wiki].</li><li>LOVE doesn't (and will not in future versions) provide 32 bit Mac downloads, so you can drop support for that. All Macs that run macOS 10.7 - love's current minimum required macOS version - will have a 64 bit operating system and will run a 64 bit version of LOVE.</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Aug 22, 2016 1:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-22T00:35:22+00:00</updated>
+
+		<published>2016-08-22T00:35:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202428#p202428</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202428#p202428"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202428#p202428"><![CDATA[
+<blockquote class="uncited"><div>Don't double post, you can edit your posts...</div></blockquote>I didn't double post. The update having its own post was intentional. A double-post is when there are two separate posts with identical content.<br><blockquote class="uncited"><div>...also it doesn't really solve the issue, 2MB of memory consumed by a string is not something I would want in my program...</div></blockquote>It really does solve the problem since the 2MB memory consumption occurs for about 1 second only.<br><blockquote class="uncited"><div>I don't need so files in Windows and I don't need dllls in Linux or Mac OSX, also encoding in base64 means that each byte is stored in a byte and a half, taking 50% more space in the package...</div></blockquote>Thirty years ago, you would have had a valid point but at this stage, with modern storage being what it is, you're just splitting hairs: 2MB for a file is negligible. The original libraries are listed in the first post if all you want is one, specific library file.<br><br>As stated in the title, this is a "simple" system, designed to be simple for the user. It is setup using only one line of code and works across multiple platforms. That means no copying files manually from one place to the next or trying to figure out how to include file <em class="text-italics">A</em> or file <em class="text-italics">B</em> in their project for cross-platform support. This is a plug-and-play system designed specifically for simplicity and compatibility, <strong class="text-strong">not</strong> for hoarding HDD space to the maximum possible extent. If you can't find the 2MB on your HDD to spare, then this is not the plugin for you.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Mon Aug 22, 2016 12:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-22T00:09:48+00:00</updated>
+
+		<published>2016-08-22T00:09:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202425#p202425</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202425#p202425"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202425#p202425"><![CDATA[
+Don't double post, you can edit your posts, also it doesn't really solve the issue, 2MB of memory consumed by a string is not something I would want in my program, as I said there are better ways to ship a binary library, installers and zip packages are really common you know? Also this means that I would be shipping a dll and so files to each platforms instead of the specific library I need for that specific platform, I don't need so files in Windows and I don't need dllls in Linux or Mac OSX, also encoding in base64 means that each byte is stored in a byte and a half, taking 50% more space in the package... Really I don't think this method is nice, I prefere the raw dlls and so files<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Aug 22, 2016 12:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-21T23:10:56+00:00</updated>
+
+		<published>2016-08-21T23:10:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202422#p202422</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202422#p202422"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202422#p202422"><![CDATA[
+All Library data is now removed after library file as been written to prevent unnecessary data retention in memory.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sun Aug 21, 2016 11:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-21T23:18:50+00:00</updated>
+
+		<published>2016-08-21T23:07:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202421#p202421</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202421#p202421"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202421#p202421"><![CDATA[
+Thanks for the feedback, Positive07. I see your point about the extra memory. Although I would venture to say that using less than 2mb of memory is trivial; however, due to the fact that such consumption seems to be a concern (and out of acknowledgement of good programming practices <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">), I will nullify the data after loading to prevent retention of unnecessary data.<br><br>Thanks for the tip <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy">.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sun Aug 21, 2016 11:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-08-21T23:03:58+00:00</updated>
+
+		<published>2016-08-21T23:03:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202420#p202420</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202420#p202420"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202420#p202420"><![CDATA[
+Saving a dll in a Lua string? Mmm sorry but I dislike the idea entirely, what's the problem with shipping dlls and so files as files? You wouldn't need to base64 encode nor decode it, you wouldn't have to load all those string into memory, you could load chunks as you copy them and discard them once they are not needed. Really I wouldn't use this, I prefere to make a zip file with the dll itself and make each user download the package for their system. Even then I don't see SQLite3 as being super useful for games being such a big dependecy anf databases not being commonly used for most games<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Aug 21, 2016 11:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-21T22:32:15+00:00</updated>
+
+		<published>2016-08-21T22:32:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202419#p202419</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202419#p202419"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202419#p202419"><![CDATA[
+Removed the need for the library files and removed the files themselves.<br>The source directory is no longer required, SQLite3 now needs only the path to a writeable directory.<br><br>SQLite3 is configured to work for LOVE right out of the box: just require("myplugins.sqlite3") and go!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sun Aug 21, 2016 10:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-21T07:39:40+00:00</updated>
+
+		<published>2016-08-21T07:39:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202399#p202399</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202399#p202399"/>
+		<title type="html"><![CDATA[Re: SQLite3 for Lua - A Simple Database System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202399#p202399"><![CDATA[
+<del>Updated to automatically write the appropriate dll/so file to the calling directory when the program is archived (.love) or compiled (.exe).</del><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sun Aug 21, 2016 7:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Centauri Soldier]]></name></author>
+		<updated>2016-08-22T02:32:42+00:00</updated>
+
+		<published>2016-08-20T00:36:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202352#p202352</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202352#p202352"/>
+		<title type="html"><![CDATA[Content Redacted. Please Delete Thread.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202352#p202352"><![CDATA[
+Content Redacted.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=50702">Centauri Soldier</a> — Sat Aug 20, 2016 12:36 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

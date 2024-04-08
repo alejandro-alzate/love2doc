@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/76929" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2014-01-09T14:54:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/76929</id>
+
+		<entry>
+		<author><name><![CDATA[Rickton]]></name></author>
+		<updated>2014-01-09T14:54:46+00:00</updated>
+
+		<published>2014-01-09T14:54:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160446#p160446</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160446#p160446"/>
+		<title type="html"><![CDATA[Re: Astray - dungeon generation library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160446#p160446"><![CDATA[
+Pretty cool. I might have to use this.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=104751">Rickton</a> — Thu Jan 09, 2014 2:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pauljessup]]></name></author>
+		<updated>2014-01-09T14:38:20+00:00</updated>
+
+		<published>2014-01-09T14:38:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160444#p160444</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160444#p160444"/>
+		<title type="html"><![CDATA[Re: Astray - dungeon generation library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160444#p160444"><![CDATA[
+zlib/png license? Cool. I might include this with the tile based map editor/library I'm working on for generating dungeons, if that's cool w/ you<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=125453">pauljessup</a> — Thu Jan 09, 2014 2:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-01-09T08:14:01+00:00</updated>
+
+		<published>2014-01-09T08:14:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160429#p160429</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160429#p160429"/>
+		<title type="html"><![CDATA[Re: Astray - dungeon generation library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160429#p160429"><![CDATA[
+Yeah sure, why not <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">. I appreciate any help to get this lib better and better.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Jan 09, 2014 8:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2014-01-09T00:06:16+00:00</updated>
+
+		<published>2014-01-09T00:06:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160407#p160407</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160407#p160407"/>
+		<title type="html"><![CDATA[Re: Astray - dungeon generation library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160407#p160407"><![CDATA[
+I saw you create this on github: This is super cool.<br><br>So much love for zlib/libpng &lt;3<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Thu Jan 09, 2014 12:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-01-09T08:23:14+00:00</updated>
+
+		<published>2014-01-08T21:42:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=160399#p160399</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=160399#p160399"/>
+		<title type="html"><![CDATA[Astray - dungeon generation library]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=160399#p160399"><![CDATA[
+<strong class="text-strong">Astray</strong> is a lua based maze, room and dungeon generation library for dungeon crawlers and rougelike video games.<br><br><a href="https://github.com/SiENcE/astray" class="postlink">https://github.com/SiENcE/astray</a><br><br>I thought it would be nice to give something back to this LÖVELY Community!<br><br><strong class="text-strong">Note:</strong> The library work in cells. Each cell has four sides. You can expand this cells to tiles for tilebased games using the CellToTiles function. This doubles the size of the dungeon. But there is one annoying thing. The tiled dungeon is doubled+1 in size. Also the rooms are doubled+1 in size and the expanded array starts from 0 (which is no good in lua). So, a bit of work is still todo <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<br><br><strong class="text-strong">Problems:</strong> If you choose extreme values (like a small dungeon with oversized rooms) doors are misplaced. This needs some additional verification.<br><br>Suggestions, comments, bugreports, enhancements and games are welcome!<br><br>cheers<br><br>step 1: inital maze generation<br><img src="http://i43.tinypic.com/2uelo9x.png" class="postimage" alt="Image"><br><br>step 2: sparsing<br><img src="http://i43.tinypic.com/291c7k3.png" class="postimage" alt="Image"><br><br>step 3: dead end removal<br><img src="http://i40.tinypic.com/2z6gxz5.png" class="postimage" alt="Image"><br><br>step 4: create rooms<br><img src="http://i43.tinypic.com/11979g0.png" class="postimage" alt="Image"><br><br>step 5: create doors<br><img src="http://i40.tinypic.com/5lyrlv.png" class="postimage" alt="Image"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Wed Jan 08, 2014 9:42 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

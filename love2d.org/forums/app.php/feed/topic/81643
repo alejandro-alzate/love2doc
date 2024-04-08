@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/81643" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-01-21T12:47:08+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/81643</id>
+
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2016-01-21T12:47:08+00:00</updated>
+
+		<published>2016-01-21T12:47:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193824#p193824</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193824#p193824"/>
+		<title type="html"><![CDATA[Re: [Library] Kuey Encoding/Decoding]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193824#p193824"><![CDATA[
+I'm interested in cryptography, so I couldn't pass this opportunity up to figure out what this lib did. So I figured I'd decipher the code, and the easiest way to do that is by rewriting it. Turns out, the actual "encoding" is really simple:<div class="codebox"><p>Code: </p><pre><code>local rekuey = {}local function encode_char(plainc, keyc, i, j)plainc, keyc = plainc:byte(i), keyc:byte(j)return string.char((plainc + keyc)%255)endlocal function decode_char(encc, keyc, i, j)encc, keyc = encc:byte(i), keyc:byte(j)return string.char((encc - keyc)%255)endlocal function code(input, key, f)local output = {}for i = 1, #input dolocal j = (i-1) % #key + 1output[i] = f(input, key, i, j)endreturn table.concat(output)endfunction rekuey.encode(plain, key)return code(plain, key, encode_char)endfunction rekuey.decode(enc, key)return code(enc, key, decode_char)endreturn rekuey</code></pre></div>As you can guess, this doesn't really have any nice properties, it means the key can be broken character-by-character, it's probably vulnerable to known-plaintext etc. It basically comes down to a substitution cipher.<br><br>As for speed, I measured the performance, both of kuey and "rekuey", it took my code about a second to do 200,000 decryption attempts (original code took about 1.5 seconds).<br><div class="codebox"><p>Code: </p><pre><code>package.preload.love = package.loadlib("/usr/lib/liblove.so", "luaopen_love")require "love"require "love.timer"local kuey = require "kuey"local rekuey = require "rekuey"local iterations = 200000local encoded = rekuey.encode("Love is life!", "love2d")local function time(lib)local startTime = love.timer.getTime()local found = falsefor i = 1, iterations doif lib.decode(encoded, tostring(i)) == "Love is life!" thenfound = trueendendlocal endTime = love.timer.getTime()print(("Found solution: %s\nTime taken: %f"):format(found, endTime-startTime))endtime(kuey)time(rekuey)</code></pre></div>In short, if you're hoping to do something serious with this cipher: don't. If it's just some simple obfuscation that you don't mind getting beaten (which may be as simple as reading the decryption code...), then sure, go ahead and use it.<br><br>EDIT: Using luajit's ffi to get faster string-&gt;byte-&gt;string conversions I can easily get it up to 1,000,000 decodes per second.<br><br>EDIT2: I should probably add a disclaimer, because this might sound harsh. This is a fun way to get going with cryptography yourself, and perhaps you could use this as feedback to make something better, like making sure the results depend on the characters before it, or something of the sort. This post mostly served because I was interested in what your cipher is doing, and to warn people to not rely on it for serious encryption purposes. If your goal is to just hide some save data from casual users, go ahead.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Thu Jan 21, 2016 12:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Featzen]]></name></author>
+		<updated>2016-01-21T02:43:18+00:00</updated>
+
+		<published>2016-01-21T02:43:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193811#p193811</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193811#p193811"/>
+		<title type="html"><![CDATA[Re: [Library] Kuey Encoding/Decoding]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193811#p193811"><![CDATA[
+LoL, i made this post and forgot to post the lib, posting.<br>hahahaha<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136803">Featzen</a> — Thu Jan 21, 2016 2:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[master both]]></name></author>
+		<updated>2016-01-21T02:37:03+00:00</updated>
+
+		<published>2016-01-21T02:37:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193809#p193809</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193809#p193809"/>
+		<title type="html"><![CDATA[Re: [Library] Kuey Encoding/Decoding]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193809#p193809"><![CDATA[
+Great library! I could really use this. Can I see the source code?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=4340">master both</a> — Thu Jan 21, 2016 2:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Featzen]]></name></author>
+		<updated>2016-01-21T02:44:05+00:00</updated>
+
+		<published>2016-01-21T02:02:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193808#p193808</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193808#p193808"/>
+		<title type="html"><![CDATA[[Library] Kuey Encoding/Decoding]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193808#p193808"><![CDATA[
+I made this small module for fun, and decided to post here. I don't know the algorithm, but works, haha.<br><br>Example:<div class="codebox"><p>Code: </p><pre><code>Kuey = require("Kuey")local Encoded = Kuey.encode("Love is life!", "love2d") -- Encode the string with "love2d" as keyprint(Encoded)                                   -- Show the encoded stringprint(Kuey.decode(Encoded, "anykey"))            -- Try to show a decoded string with any keyprint(Kuey.decode(Encoded, "love2d"))            -- Show the decoded string with the correct key</code></pre></div>Output:<div class="codebox"><p>Code: </p><pre><code>©Ìý╩R═▀ÅÔ╬ÿ╔ìWps_ýT~!ic3P,Love is life!</code></pre></div>Available functions:<div class="codebox"><p>Code: </p><pre><code>Kuey.encode(string, key) -- Return a stringKuey.decode(string, key) -- Return a stringKuey.encodeFile(filename, key[, outputname]) -- Return a string and write a file if outputname is defined.Kuey.decodeFile(filename, key[, outputname]) -- Return a string and write a file if outputname is defined.</code></pre></div>I think this is all, I hope you enjoy.<br>(Sorry my bad english)<br><div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=12660">Kuey.lua</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136803">Featzen</a> — Thu Jan 21, 2016 2:02 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

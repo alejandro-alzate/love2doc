@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84626" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-12-02T17:08:13+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84626</id>
+
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2021-12-02T17:08:13+00:00</updated>
+
+		<published>2021-12-02T17:08:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=245142#p245142</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=245142#p245142"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=245142#p245142"><![CDATA[
+Yeah it was originally written in vanilla Lua and later rewritten in moonscript and renamed. The Lua code in the repo is there for convenience so you don't have to compile it yourself.<br><br>I've changed the link in the OP, thanks for the hint.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Thu Dec 02, 2021 5:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yal2du]]></name></author>
+		<updated>2021-12-02T17:02:46+00:00</updated>
+
+		<published>2021-12-02T17:02:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=245141#p245141</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=245141#p245141"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=245141#p245141"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Is this library still available (somewhere)?  The url github.com/megagrump/blob goes to 404.</div></blockquote><a href="https://github.com/megagrump/moonblob" class="postlink">https://github.com/megagrump/moonblob</a> ?</div></blockquote>Yes, thanks. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed">   I presumed it was moonscript but the lua source is there as well.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183045">yal2du</a> — Thu Dec 02, 2021 5:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GVovkiv]]></name></author>
+		<updated>2021-12-02T16:48:22+00:00</updated>
+
+		<published>2021-12-02T16:48:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=245140#p245140</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=245140#p245140"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=245140#p245140"><![CDATA[
+<blockquote class="uncited"><div>Is this library still available (somewhere)?  The url github.com/megagrump/blob goes to 404.</div></blockquote><a href="https://github.com/megagrump/moonblob" class="postlink">https://github.com/megagrump/moonblob</a> ?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=169762">GVovkiv</a> — Thu Dec 02, 2021 4:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yal2du]]></name></author>
+		<updated>2021-12-02T16:37:44+00:00</updated>
+
+		<published>2021-12-02T16:37:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=245139#p245139</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=245139#p245139"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=245139#p245139"><![CDATA[
+Is this library still available (somewhere)?  The url github.com/megagrump/blob goes to 404.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=183045">yal2du</a> — Thu Dec 02, 2021 4:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xii]]></name></author>
+		<updated>2021-02-13T20:47:51+00:00</updated>
+
+		<published>2021-02-13T20:47:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238545#p238545</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238545#p238545"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238545#p238545"><![CDATA[
+Awesome! And beautiful! Look at how simple and succint this is thanks to your diligent efforts:<br><div class="codebox"><p>Code: </p><pre><code>local ffi = require("ffi")local writer, reader = require("BlobWriter"), require("BlobReader")function define_struct(name, memberstr)ffi.cdef("#pragma pack(1)\ntypedef struct{"..memberstr.."}"..name..";")local meta ={__index ={__typename = name,}}return ffi.metatype(ffi.typeof(name), meta)endactual = define_struct("test",[[uint8_t one;uint8_t oneb;uint8_t onec;uint16_t two;uint32_t four;uint64_t eight;]])local data = {}data.foo = {1, 2, 3, 4}data.bar = actual()local blob = writer()blob:write(data)assert(love.filesystem.write("test", blob:tostring()))</code></pre></div>Don't forget to bump your copyright up to 2021 <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-nyu.png" width="16" height="16" alt=":nyu:" title="Nyu"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155128">Xii</a> — Sat Feb 13, 2021 8:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2021-02-13T16:40:29+00:00</updated>
+
+		<published>2021-02-13T16:40:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238542#p238542</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238542#p238542"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238542#p238542"><![CDATA[
+<blockquote class="uncited"><div>So for plain old data structs, just need __typename ?</div></blockquote>Adding a __typename is sufficient for all data that is not a pointer and does not contain pointers. For stuff with pointers you need custom __serialize and __deserialize functions to write/reconstruct the data manually. Otherwise only the pointer's addresses would be serialized.<br><blockquote class="uncited"><div>As I were experimenting with this before, I noticed that ffi.sizeof() returns a <em class="text-italics">padded</em> size for my test struct. Will that be an issue?</div></blockquote>It can be an issue if the serialized data needs to be portable between different architectures and machine word sizes. In cases where portability is required, using #pragma pack() in the cdef call makes sure consistent padding is applied.<br><br>The bug you've encountered is now fixed. I forgot to add a test case for cdata in hash tables and <em class="text-italics">of course</em> there was a small mistake in that code.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Feb 13, 2021 4:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xii]]></name></author>
+		<updated>2021-02-13T16:09:44+00:00</updated>
+
+		<published>2021-02-13T16:09:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238540#p238540</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238540#p238540"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238540#p238540"><![CDATA[
+<blockquote class="uncited"><div>Error<br><br>BlobWriter.lua:141: bad argument #2 to 'copy' (cannot convert 'table' to 'const void *')<br><br>Traceback<br><br>[C]: in function 'copy'<br>BlobWriter.lua:141: in function 'string'<br>BlobWriter.lua:156: in function '_writeTaggedPair'<br>BlobWriter.lua:323: in function 'write'<br>main.lua:31: in function 'load'<br>[C]: in function 'xpcall'<br>[C]: in function 'xpcall'</div></blockquote><div class="codebox"><p>Code: </p><pre><code>local ffi = require("ffi")local writer, reader = require("BlobWriter"), require("BlobReader")ffi.cdef[[typedef struct{uint8_t one;uint16_t two;uint32_t four;uint64_t eight;}test;]]local meta ={__index ={__typename = 'test',}}actual = ffi.metatype(ffi.typeof('test'), meta)local data = {}data.yksi = {1, 2, 3, 4}data.kaksi = actual()local blob = writer()blob:write(data)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155128">Xii</a> — Sat Feb 13, 2021 4:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xii]]></name></author>
+		<updated>2021-02-13T15:36:03+00:00</updated>
+
+		<published>2021-02-13T15:36:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238538#p238538</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238538#p238538"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238538#p238538"><![CDATA[
+And here I was thinking I had been rudely demanding. You really delivered <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><br><blockquote class="uncited"><div>The __serialize() and __deserialize() functions are only required for complex structs with pointers,</div></blockquote>So for plain old data structs, just need __typename ?<br><blockquote class="uncited"><div>and for cases when ffi.sizeof() is not sufficient to get the true size of the data.</div></blockquote>As I were experimenting with this before, I noticed that ffi.sizeof() returns a <em class="text-italics">padded</em> size for my test struct. Will that be an issue?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155128">Xii</a> — Sat Feb 13, 2021 3:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2021-02-12T20:29:18+00:00</updated>
+
+		<published>2021-02-12T20:29:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238521#p238521</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238521#p238521"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238521#p238521"><![CDATA[
+<blockquote class="uncited"><div>Can I pass the ctype information to the library somehow? I have the string definition, after all.</div></blockquote>Not currently supported. My current plan for transparent cdata support would require user code for all serialized ctypes:<br><div class="codebox"><p>Code: </p><pre><code>local ffi = require('ffi')ffi.cdef('typedef struct { double x, y; } teststruct_t')local ctype = ffi.typeof('teststruct_t')ffi.metatype(ctype, {__index = {__typename = 'teststruct_t',__serialize = function(self, writer)return writer:number(self.x):number(self.y)end,__deserialize = function(ctype, reader)return ctype(reader:number(), reader:number())end,}})</code></pre></div>This solution still has some drawbacks: anonymous struct types are not supported (since they have no type name), and custom code would be required for all ctypes. ctypes from libraries with a metatype of their own, e.g. brinevector, wouldn't work.<br><br><del>I can implement support for this, but it will take a while.</del><br><br>Edit: cdata serialization as described above is now supported. <a href="https://github.com/megagrump/moonblob/blob/master/examples/cdata.lua" class="postlink">Example code</a>.<br><br>The __serialize() and __deserialize() functions are only required for complex structs with pointers, and for cases when ffi.sizeof() is not sufficient to get the true size of the data.<br>The __typename field is required, except when calling :cdata() manually with a type name, in which case the metatype is not required at all (e.g. when using brinevector).<br><div class="codebox"><p>Code: </p><pre><code>-- brinevector example (no __typename, __serialize, or __deserialize are defined in brinevector}-- this workswriter:cdata('brinevector', vector)...vector = reader:cdata()-- but this is not possible, because no type information is available (and metatypes are immutable)writer:write(vector)-- orwriter:table({ vector }) -- ditto</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Fri Feb 12, 2021 8:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xii]]></name></author>
+		<updated>2021-02-12T16:54:11+00:00</updated>
+
+		<published>2021-02-12T16:54:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238514#p238514</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238514#p238514"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238514#p238514"><![CDATA[
+<blockquote class="uncited"><div>cdata is supported. :raw can read and write cdata just fine. </div></blockquote>Yeah but that means I have to manually iterate over my tables doing hacky things instead of just this as per the example:<br><div class="codebox"><p>Code: </p><pre><code>local blob = BlobWriter()blob:write(data)</code></pre></div><blockquote class="uncited"><div>All cdata has the same type ("cdata"). There is no ffi API that provides more detailled type information, which makes fully transparent support of cdata somewhat difficult to implement.</div></blockquote>Can I pass the ctype information to the library somehow? I have the string definition, after all.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155128">Xii</a> — Fri Feb 12, 2021 4:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2021-02-12T15:47:18+00:00</updated>
+
+		<published>2021-02-12T15:47:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238510#p238510</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238510#p238510"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238510#p238510"><![CDATA[
+<blockquote class="uncited"><div>Still no support for <em class="text-italics">cdata</em>.</div></blockquote>cdata is supported. :raw can read and write cdata just fine. <br><br>All cdata has the same type ("cdata"). There is no ffi API that provides more detailled type information, which makes fully transparent support of cdata somewhat difficult to implement. Even if type information was available, serialization would break with opaque pointers, because in C there is no information about the size of data a pointer is pointing to.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Fri Feb 12, 2021 3:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Xii]]></name></author>
+		<updated>2021-02-12T14:31:09+00:00</updated>
+
+		<published>2021-02-12T14:31:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238508#p238508</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238508#p238508"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238508#p238508"><![CDATA[
+Still no support for <em class="text-italics">cdata</em>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155128">Xii</a> — Fri Feb 12, 2021 2:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2019-01-30T06:06:13+00:00</updated>
+
+		<published>2019-01-30T06:06:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225471#p225471</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225471#p225471"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225471#p225471"><![CDATA[
+<blockquote class="uncited"><div>Thanks! Yeah, vector support is really needed since serialization is used for saving objects.</div></blockquote>You can implement object saving without explicit ctype support if you use one of the methods I have shown in the previous comment. <br><br>Doing it automatically has proven <a href="https://love2d.org/forums/viewtopic.php?f=4&amp;t=86292" class="postlink">somewhat difficult</a>, so I'd need to write code to support custom types. Adding ctype (and class) support is on my list of TODOs, but the priority of the project is low, it may take some time.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Wed Jan 30, 2019 6:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-01-30T04:59:30+00:00</updated>
+
+		<published>2019-01-30T04:59:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225470#p225470</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225470#p225470"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225470#p225470"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Hi, it says support for c data type. Would this be compatible for <a href="https://github.com/novemberisms/brinevector" class="postlink">https://github.com/novemberisms/brinevector</a><br>?</div></blockquote>Not fully.<br><br>This works:<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)-- serialize local w = BlobWriter()w:number(v.x):number(v.y)-- deserializelocal r = BlobReader(w:tostring())v = Vector(r:number(), r:number())</code></pre></div>Serializing tables that contain Vectors is not supported. (I'm thinking about adding support for this)<div class="codebox"><p>Code: </p><pre><code>local t = { Vector(23, 42) }BlobWriter():write(t) -- error, can't serialize cdata in tables</code></pre></div>Serializing them directly with BlobWriter:table works, but that has drawbacks. BlobReader can't automatically recreate the Vector object.<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)local w = BlobWriter()w:table(v) -- works</code></pre></div>When you read this back, it becomes a plain table:<div class="codebox"><p>Code: </p><pre><code>local r = BlobReader(w:tostring())local v = r:table()print(v.x, v.y) -- worksprint(v.length) -- does not work, v is a plain table, not a Vectorv = Vector(v.x, v.y) -- now v is a Vector againprint(v.length) -- works</code></pre></div><strong class="text-strong">EDIT</strong>: this will also work:<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)local w = BlobWriter()w:raw(v, ffi.sizeof(v))local r = BlobReader(w:tostring())local v2 = ffi.cast('brinevector*', r:raw(ffi.sizeof('brinevector')))print(v2.x, v2.y, v2.length)</code></pre></div>I will add some code to simplify this a bit.</div></blockquote>Thanks! Yeah, vector support is really needed since serialization is used for saving objects.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Jan 30, 2019 4:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2019-01-25T08:50:12+00:00</updated>
+
+		<published>2019-01-25T08:50:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225373#p225373</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225373#p225373"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225373#p225373"><![CDATA[
+<blockquote class="uncited"><div>Hi, it says support for c data type. Would this be compatible for <a href="https://github.com/novemberisms/brinevector" class="postlink">https://github.com/novemberisms/brinevector</a><br>?</div></blockquote>Not fully.<br><br>This works:<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)-- serialize local w = BlobWriter()w:number(v.x):number(v.y)-- deserializelocal r = BlobReader(w:tostring())v = Vector(r:number(), r:number())</code></pre></div>Serializing tables that contain Vectors is not supported. (I'm thinking about adding support for this)<div class="codebox"><p>Code: </p><pre><code>local t = { Vector(23, 42) }BlobWriter():write(t) -- error, can't serialize cdata in tables</code></pre></div>Serializing them directly with BlobWriter:table works, but that has drawbacks. BlobReader can't automatically recreate the Vector object.<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)local w = BlobWriter()w:table(v) -- works</code></pre></div>When you read this back, it becomes a plain table:<div class="codebox"><p>Code: </p><pre><code>local r = BlobReader(w:tostring())local v = r:table()print(v.x, v.y) -- worksprint(v.length) -- does not work, v is a plain table, not a Vectorv = Vector(v.x, v.y) -- now v is a Vector againprint(v.length) -- works</code></pre></div><strong class="text-strong">EDIT</strong>: this will also work:<div class="codebox"><p>Code: </p><pre><code>local v = Vector(23, 42)local w = BlobWriter()w:raw(v, ffi.sizeof(v))local r = BlobReader(w:tostring())local v2 = ffi.cast('brinevector*', r:raw(ffi.sizeof('brinevector')))print(v2.x, v2.y, v2.length)</code></pre></div>I will add some code to simplify this a bit.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Fri Jan 25, 2019 8:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-01-25T01:50:27+00:00</updated>
+
+		<published>2019-01-25T01:50:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225369#p225369</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225369#p225369"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225369#p225369"><![CDATA[
+Hi, it says support for c data type. Would this be compatible for <a href="https://github.com/novemberisms/brinevector" class="postlink">https://github.com/novemberisms/brinevector</a><br>?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Jan 25, 2019 1:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-11-28T13:03:25+00:00</updated>
+
+		<published>2018-11-28T13:03:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224373#p224373</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224373#p224373"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224373#p224373"><![CDATA[
+<blockquote class="uncited"><div>If that's the issue, then just adding parentheses suffices:</div></blockquote>Right, thanks.<br><br>I've <a href="https://github.com/megagrump/moonblob/commit/2196850dc4a8db934fdc4d4891d104210c933332" class="postlink">changed</a> the <a href="https://megagrump.github.io/moonblob/doc/classes/BlobReader.html#new" class="postlink">constructor</a> and made the second parameter a variant type. It now accepts the love.filesystem.read() return values without the parentheses.<br><div class="codebox"><p>Code: </p><pre><code>local BlobReader = require('BlobReader')local r = BlobReader(love.filesystem.read('main.lua'))print(r:raw(r:size()))</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Wed Nov 28, 2018 1:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2018-11-28T11:32:39+00:00</updated>
+
+		<published>2018-11-28T11:32:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224371#p224371</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224371#p224371"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224371#p224371"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>function saves_load()  if love.filesystem.getInfo(saveListPath) ~= nil then    saves = BlobReader(love.filesystem.read(saveListPath))  endend</code></pre></div></div></blockquote><blockquote class="uncited"><div>love.filesystem.read returns data and size; you can't pass the call result directly to BlobReader(), because it expects the optional second parameter to be byte order, not size. </div></blockquote>If that's the issue, then just adding parentheses suffices:<div class="codebox"><p>Code: </p><pre><code>function saves_load()  if love.filesystem.getInfo(saveListPath) ~= nil then    saves = BlobReader((love.filesystem.read(saveListPath)))  endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Nov 28, 2018 11:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MissDanish]]></name></author>
+		<updated>2018-11-28T08:40:43+00:00</updated>
+
+		<published>2018-11-28T08:40:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224369#p224369</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224369#p224369"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224369#p224369"><![CDATA[
+<blockquote class="uncited"><div>...<br>The save code is fine as is and should work as expected.</div></blockquote>Thank you so much <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139945">MissDanish</a> — Wed Nov 28, 2018 8:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-11-28T08:02:46+00:00</updated>
+
+		<published>2018-11-28T08:02:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224368#p224368</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224368#p224368"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224368#p224368"><![CDATA[
+<blockquote class="uncited"><div>how do I save and load a simple table? I find the documentation a bit confusing</div></blockquote>The <a href="https://github.com/megagrump/moonblob/blob/master/README.md" class="postlink">README</a> has read and write examples right at the top, and there's a (moonscript) <a href="https://github.com/megagrump/moonblob/blob/master/examples/file.moon" class="postlink">file I/O example</a> in the 'examples' directory.<br><br>I just added a <a href="https://github.com/megagrump/moonblob/blob/master/examples/love.lua" class="postlink">minimal example</a> that shows how to read and write tables in LÖVE. Hope that helps.<br><blockquote class="uncited"><div>my code:<div class="codebox"><p>Code: </p><pre><code>local saveListPath = "saves/savelist.save"local saves = {}local currentSave = ""function save_add(ID)  local save = {    ID = ID,    data = {}  }  table.insert(saves,save)endfunction saves_load()  if love.filesystem.getInfo(saveListPath) ~= nil then    saves = BlobReader(love.filesystem.read(saveListPath))  endendfunction saves_save()  save_add("bah")  local saveList = BlobWriter()  saveList:write(saves)  love.filesystem.createDirectory("saves")  love.filesystem.write(saveListPath, saveList:tostring())end</code></pre></div></div></blockquote>love.filesystem.read returns data and size; you can't pass the call result directly to BlobReader(), because it expects the optional second parameter to be byte order, not size. <br><br>This will work:<div class="codebox"><p>Code: </p><pre><code>function saves_load()  if love.filesystem.getInfo(saveListPath) ~= nil then    data = love.filesystem.read(saveListPath)    saves = BlobReader(data):read()  endend</code></pre></div>The save code is fine as is and should work as expected.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Wed Nov 28, 2018 8:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MissDanish]]></name></author>
+		<updated>2018-11-28T06:12:19+00:00</updated>
+
+		<published>2018-11-28T06:12:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224366#p224366</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224366#p224366"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224366#p224366"><![CDATA[
+how do I save and load a simple table? I find the documentation a bit confusing. It just gives me a bytecode error<br><br>my code:<div class="codebox"><p>Code: </p><pre><code>local saveListPath = "saves/savelist.save"local saves = {}local currentSave = ""function save_add(ID)  local save = {    ID = ID,    data = {}  }  table.insert(saves,save)endfunction saves_load()  if love.filesystem.getInfo(saveListPath) ~= nil then    saves = BlobReader(love.filesystem.read(saveListPath))  endendfunction saves_save()  save_add("bah")  local saveList = BlobWriter()  saveList:write(saves)  love.filesystem.createDirectory("saves")  love.filesystem.write(saveListPath, saveList:tostring())end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139945">MissDanish</a> — Wed Nov 28, 2018 6:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nikki93]]></name></author>
+		<updated>2018-11-06T15:38:27+00:00</updated>
+
+		<published>2018-11-06T15:38:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224015#p224015</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224015#p224015"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224015#p224015"><![CDATA[
+Awesome! Will experiment with this myself. Thanks so much for the benchmark example! Will helps a lot.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139976">nikki93</a> — Tue Nov 06, 2018 3:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-11-06T13:06:45+00:00</updated>
+
+		<published>2018-11-06T13:06:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224009#p224009</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224009#p224009"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224009#p224009"><![CDATA[
+<blockquote class="uncited"><div>Nice! How does it compare to bitser <a href="https://github.com/gvx/bitser" class="postlink">https://github.com/gvx/bitser</a>?</div></blockquote>I quickly made a test program to compare the speed of binser, bitser and Blob. Blob came out faster in almost all tests.<br><br>Tests include: a sequence of 64k numbers (sequentialManyNumbers), 64k uint32_t (sequentialManyU32), 32 numbers (sequentialFewNumbers), 32 uint8_t (sequentialFewU8), and a deeply nested table (deepTable). <br><br><img src="https://love2d.org/imgmirrur/DkNuBy0.png" class="postimage" alt="Image"><br><br>According to these results, serialization is pretty fast, but deserialization needs work. Take the results with a grain of salt though - these are not real life examples and I might even be using binser/bitser wrong.<br><blockquote class="uncited"><div>I am using that along with a slight modification (<a href="https://github.com/expo/ghost-multi/compare/e0471667d391774f95a2e5f63d6fa2c4669a4dfc...master#diff-6cd97a3bef29e9560afcabb6a1abe3ee" class="postlink">https://github.com/expo/ghost-multi/com ... b6a1abe3ee</a>) to handle entity references by id (to deserialize to existing entity on receiving end) for a multiplayer sync library (<a href="https://github.com/expo/ghost-multi/blob/master/sync.lua" class="postlink">https://github.com/expo/ghost-multi/blo ... r/sync.lua</a>) and am highly interested in fast + compact binary serialization.</div></blockquote>Well, it's quite fast. Compactness depends on how you use it - if you know how many bits your values require and use it accordingly, it can be pretty much optimal with regards to data size. Just throwing tables at it won't do it. There's still room for optimzation though.<br><br>Oh, and it doesn't have fancy class support like bitser. It supports simple values and nested tables, anything else will make it croak.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=16842">blob_benchmark.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Tue Nov 06, 2018 1:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nikki93]]></name></author>
+		<updated>2018-11-05T23:35:59+00:00</updated>
+
+		<published>2018-11-05T23:35:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223999#p223999</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223999#p223999"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223999#p223999"><![CDATA[
+Nice! How does it compare to bitser <a href="https://github.com/gvx/bitser" class="postlink">https://github.com/gvx/bitser</a>? I am using that along with a slight modification (<a href="https://github.com/expo/ghost-multi/compare/e0471667d391774f95a2e5f63d6fa2c4669a4dfc...master#diff-6cd97a3bef29e9560afcabb6a1abe3ee" class="postlink">https://github.com/expo/ghost-multi/com ... b6a1abe3ee</a>) to handle entity references by id (to deserialize to existing entity on receiving end) for a multiplayer sync library (<a href="https://github.com/expo/ghost-multi/blob/master/sync.lua" class="postlink">https://github.com/expo/ghost-multi/blo ... r/sync.lua</a>) and am highly interested in fast + compact binary serialization.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139976">nikki93</a> — Mon Nov 05, 2018 11:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-11-03T11:57:28+00:00</updated>
+
+		<published>2018-11-03T11:57:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223941#p223941</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223941#p223941"/>
+		<title type="html"><![CDATA[Re: Blob.lua - binary serialization library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223941#p223941"><![CDATA[
+When I created this lib, love.data.pack/unpack did not exist yet.<br><br>Some benefits:<ul><li> It supports more data types than pack/unpack. BlowWriter/Reader can serialize tables and 64 bit integers, both trough dedicated read/write functions and the pack/unpack functions. LÖVE's pack/unpack can't handle tables or integers &gt; 2^52.</li><li> Pack/unpack is limited to the format string syntax, which can become tedious and a serious limitation, depending on your use case. This library can be used like file I/O, and provides read/write functions for each supported data type, while also having support for the pack/unpack syntax.</li><li> BlobWriter uses an efficient storage scheme for strings and (optional) 32 bit integers. It has a special size-optimized 32 bits integer type (vs32/vu32) that is internally used to encode string lengths.</li><li> Pack/unpack uses native data sizes, making it harder to use in cross-platform use cases, while Blob.lua uses fixed data sizes.</li> <li> It's <strong class="text-strong">much</strong> faster in general.</li></ul>Performance in comparison to table.concat:<div class="codebox"><p>Code: </p><pre><code>local t1 = love.timer.getTime()local blob = BlobWriter(nil, 2 ^ 20)-- create a 10 MiB string of random bytesfor i = 1, 10 * 2 ^ 20 doblob:u8(love.math.random(0, 255))endlocal str = blob:tostring()local t2 = love.timer.getTime()print(1000 * (t2 - t1), 'ms')</code></pre></div>vs.<div class="codebox"><p>Code: </p><pre><code>local t1 = love.timer.getTime()local tmp = {}-- create a 10 MiB string of random bytesfor j = 1, 10 * 2 ^ 20 dotmp[#tmp + 1] = string.char(love.math.random(0, 255))endlocal str = table.concat(tmp)local t2 = love.timer.getTime()print(1000 * (t2 - t1), 'ms')</code></pre></div><strong class="text-strong">BlobWriter: 83.615149000252 ms<br>table.concat: 2581.4122849988 ms</strong><br><br>Performance comparison when not being limited by table.concat:<br><div class="codebox"><p>Code: </p><pre><code>local t1 = love.timer.getTime()local blob = BlobWriter()for j = 1, 1e6 doblob:u32(j):u8(0)endlocal t2 = love.timer.getTime()print(1000 * (t2 - t1), 'ms')</code></pre></div>vs.<div class="codebox"><p>Code: </p><pre><code>local t1 = love.timer.getTime()-- note: data is discarded here, while it's retained with BlobWriterfor j = 1, 1e6 dolove.data.pack('string', 'I4B', j, 0)endlocal t2 = love.timer.getTime()print(1000 * (t2 - t1), 'ms')</code></pre></div><strong class="text-strong">BlobWriter: 8.5714660017402 ms<br>love.data.pack: 281.65941900079 ms</strong><br><br>In direct comparison, BlobWriter:pack is slower than love.data.pack.<div class="codebox"><p>Code: </p><pre><code>local t1 = love.timer.getTime()local blob = BlobWriter()for j = 1, 1e6 doblob:pack('LB', j, 0)endlocal t2 = love.timer.getTime()print(1000 * (t2 - t1), 'ms')</code></pre></div><strong class="text-strong">BlobWriter:pack: 714.23170400521 ms</strong> (vs. the <strong class="text-strong">~282 ms</strong> of love.data.pack from above)<br>But you can of course combine love.data.pack with BlobWriter.<br><br>Note that the comparison is flawed, because it does not take the cost of buffer concatenation into account that is already 'built-in' with BlobWriter:pack. Also, BlobWriter:pack does not support all features of love.data.pack.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Nov 03, 2018 11:57 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

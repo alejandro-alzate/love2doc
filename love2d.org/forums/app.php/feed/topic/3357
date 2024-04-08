@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3357" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-07-19T03:46:53+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3357</id>
+
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2011-07-19T03:46:53+00:00</updated>
+
+		<published>2011-07-19T03:46:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33863#p33863</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33863#p33863"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33863#p33863"><![CDATA[
+New version! Several new little tweaks to make it a bit more user friendly.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Tue Jul 19, 2011 3:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-07-17T20:34:56+00:00</updated>
+
+		<published>2011-07-17T20:34:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33819#p33819</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33819#p33819"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33819#p33819"><![CDATA[
+<a href="http://lua-users.org/wiki/ForTutorial" class="postlink">http://lua-users.org/wiki/ForTutorial</a><br><blockquote class="uncited"><div>Lua provides a pairs() function to create the explist information for us to iterate over a table. The pairs() function will allow iteration over key-value pairs. Note that the order that items are returned is not defined, not even for indexed tables.</div></blockquote>You can guarantee the order by sticking the keys into an array, sorting the array, and then accessing the values by the ordered keys.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Jul 17, 2011 8:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2011-07-17T20:06:23+00:00</updated>
+
+		<published>2011-07-17T20:06:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33816#p33816</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33816#p33816"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33816#p33816"><![CDATA[
+<blockquote class="uncited"><div>The order of traversal when using pairs is not guaranteed, but yes, you're correct.</div></blockquote>Explain. Is there a way to know exactly what order they'll go through? I thought it would go in the order the table row was added. Especially if it uses a string instead of a number. And that you can use table.sort to order them for more predictable run through. At least that's what I count on when I use table.sort for my top-down engines to keep "front" objects in front of "back" ones.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sun Jul 17, 2011 8:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-07-17T05:13:19+00:00</updated>
+
+		<published>2011-07-17T05:13:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33786#p33786</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33786#p33786"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33786#p33786"><![CDATA[
+The order of traversal when using pairs is not guaranteed, but yes, you're correct.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Jul 17, 2011 5:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2011-07-17T04:41:36+00:00</updated>
+
+		<published>2011-07-17T04:41:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33784#p33784</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33784#p33784"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33784#p33784"><![CDATA[
+If I have this correct, a table like:<br><br>table[1]<br>table[2]<br>table[3]<br>table[6]<br>table["words"]<br><br>Will be traversed from 1 to "words" when using pairs(), but only up to 3 if using ipairs(). I believe?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sun Jul 17, 2011 4:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-07-15T20:01:02+00:00</updated>
+
+		<published>2011-07-15T20:01:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33698#p33698</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33698#p33698"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33698#p33698"><![CDATA[
+i thought ipairs only traversed the array part, e.g. it's already ordered in an arrary<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Fri Jul 15, 2011 8:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2011-07-15T09:28:41+00:00</updated>
+
+		<published>2011-07-15T09:28:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33685#p33685</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33685#p33685"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33685#p33685"><![CDATA[
+Of course this is tested on equal table structure, or at least I'd hope so. As for why that makes pairs faster, it is unordered, so it doesn't have to make sure things are in order, as ipairs does.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Jul 15, 2011 9:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-07-15T03:07:21+00:00</updated>
+
+		<published>2011-07-15T03:07:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33682#p33682</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33682#p33682"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33682#p33682"><![CDATA[
+about the ipairs vs. pairs vs. generic for loop, it makes sense that for loops would be so much faster for a few reasons<br><br>* no function calls yet Lua has instructions MADE for this in it's VM instructions<br>* the expressions doesn't need to be evaluated every time as in a while loop, it's only evaluated once then i is compared to it<div class="codebox"><p>Code: </p><pre><code>local t = {1,2,3}for i=0, #t, 1 doprint(i)table.insert(t, i)end</code></pre></div>* no conversions from the lua API when switching functions or extra copys, everything stays in place and nothing gives controls to another function<br>* function calls carry a significant tole in performance even with languages like C/C++<br>* numbers are faster to use than generators<br><br>it makes sense that these would be faster, it seems odd that ipairs isn't a little bit faster though sense it dosn't have to look at the hash table part only the array part.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Fri Jul 15, 2011 3:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2011-07-15T02:31:56+00:00</updated>
+
+		<published>2011-07-15T02:31:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33681#p33681</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33681#p33681"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33681#p33681"><![CDATA[
+Apparently this runs super fast on an Asus laptop, when merged into an exe (via 0.7.2). Is anyone aware of any dt problems in merged games?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Fri Jul 15, 2011 2:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kadoba]]></name></author>
+		<updated>2011-07-14T13:50:09+00:00</updated>
+
+		<published>2011-07-14T13:50:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33642#p33642</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33642#p33642"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33642#p33642"><![CDATA[
+Wait yeah, it's just 2^7! isn't it?<br><br>You should be able to figure any n value system by 2^(n-1)!<br><br><span style="font-size:50%;line-height:116%">I think. I suck at math.</span><br><br>Edit:<br>Argh, nevermind. I got summations and factorials mixed up.<br><br><span style="font-size:50%;line-height:116%">I told you I suck at math.</span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1761">Kadoba</a> — Thu Jul 14, 2011 1:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2011-07-14T13:47:25+00:00</updated>
+
+		<published>2011-07-14T13:47:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33641#p33641</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33641#p33641"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33641#p33641"><![CDATA[
+I implemented ivan's new getCoords() function, seems to be working just fine: thanks!<br><br>Also rearranged how some of the code works, now it generates a table of coords whenever the render changes, and the render pulls from that, rather than recalculating each frame. I also added a simple frame capping statement:<div class="codebox"><p>Code: </p><pre><code>if dt &lt; (1/60) thenlove.timer.sleep((1/60) - dt)end</code></pre></div>Interestingly, I cannot discern a performance difference between the two programs. Any input, guys?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Thu Jul 14, 2011 1:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-07-14T10:45:20+00:00</updated>
+
+		<published>2011-07-14T10:45:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33637#p33637</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33637#p33637"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33637#p33637"><![CDATA[
+<blockquote class="uncited"><div><a href="http://www.facepunch.com/threads/875909-Speed-Analysis-of-pairs-and-ipairs" class="postlink">Well, there's this.</a></div></blockquote>Interestingly, that same analysis seems to indicate that i=1,# is much faster than either (scroll down).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Jul 14, 2011 10:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2011-07-14T10:35:55+00:00</updated>
+
+		<published>2011-07-14T10:35:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33636#p33636</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33636#p33636"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33636#p33636"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Yes, 'pairs' is generally faster than numeric loops (and faster than 'ipairs' too).</div></blockquote>What. Have you got evidence for that? I've always heard that it was the other way, and it makes sense too.</div></blockquote><a href="http://www.facepunch.com/threads/875909-Speed-Analysis-of-pairs-and-ipairs" class="postlink">Well, there's this.</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Thu Jul 14, 2011 10:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-07-14T10:29:34+00:00</updated>
+
+		<published>2011-07-14T10:29:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33635#p33635</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33635#p33635"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33635#p33635"><![CDATA[
+<blockquote class="uncited"><div>Yes, 'pairs' is generally faster than numeric loops (and faster than 'ipairs' too).</div></blockquote>What. Have you got evidence for that? I've always heard that it was the other way, and it makes sense too.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Jul 14, 2011 10:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ivan]]></name></author>
+		<updated>2011-07-14T05:44:59+00:00</updated>
+
+		<published>2011-07-14T05:44:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33619#p33619</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33619#p33619"/>
+		<title type="html"><![CDATA[Re: 8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33619#p33619"><![CDATA[
+Hey, I looked at your script code.<br>It's pretty clean and looks farily bug-free.<br>There are a few optimization tricks you may want to consider:<div class="codebox"><p>Code: </p><pre><code>for i=1, 8 dofor j=1, 8 doif points[i][j] == 1 then</code></pre></div>Lua has an easier (and faster) way of implementing those loops:<div class="codebox"><p>Code: </p><pre><code>for i, v in pairs (points) do</code></pre></div>Yes, 'pairs' is generally faster than numeric loops (and faster than 'ipairs' too).<br><div class="codebox"><p>Code: </p><pre><code>function changePoints()for i=1, 8 dopoints[i] = {0,0,0,0,0,0,0,0}-- zero out old values</code></pre></div>This code is not terribly efficient in particular.<br>It's executed every frame and you are allocating a new table each time.<br>This is doubly slow since you are overwriting your reference to the old table which the garbage collector needs to pick up.<br>A faster alternative would be:<div class="codebox"><p>Code: </p><pre><code>-- zero out old valuesfor j, v in pairs (points[i]) do  points[i][j] = 0end</code></pre></div>I'm not too crazy about the "getCoords" function.<br>I think it could be simplified using trigonometry.<br>Something like:<div class="codebox"><p>Code: </p><pre><code>function getCoords(p)  local a = math.rad(45)*p  local x, y = math.cos(a), math.sin(a)  return x * 150 + 250, y * 150 + 250end</code></pre></div>Where 150 is the 'radius' of your octagon and 250 is the offset where you want it rendered.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=69">ivan</a> — Thu Jul 14, 2011 5:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tentus]]></name></author>
+		<updated>2011-07-19T03:46:01+00:00</updated>
+
+		<published>2011-07-14T02:33:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=33608#p33608</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=33608#p33608"/>
+		<title type="html"><![CDATA[8 Dimensions Rendered]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=33608#p33608"><![CDATA[
+The title sounds far more grand than what I'm actually doing. In a nutshell, my dad asked me to visualize an eight-dimensional system, where each dimension of the system was an aspect of ethical principles. He wanted to know how many possible combinations are there, and wanted me to make him a rendering of them in an octagonal arrangement.<br><br>My older brother beat me to the punch and did a math paper on this stuff, and even wrote a cool little program to output SVGs of each possibility. By his math, there are 268,435,456 possibilities (buh!). You can see the paper here: <a href="http://wjholden.com/octagon/" class="postlink">http://wjholden.com/octagon/</a><br><br>Now, I've finally gotten around to writing a .love that can render the general idea. If you guys could look at the source and make suggestions that would be grand.<br><br><span style="text-decoration:underline">Controls:</span> <br>Enter: toggle text<br>Space: pause<br>Up: Increase odds of showing line<br>Down: Decrease odds of showing line<br>Escape: Exit<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2806">8dimensions.love</a></dt></dl><br /><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2785">8dimensions.love</a></dt></dl><br /><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2780">8dimensions.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1578">tentus</a> — Thu Jul 14, 2011 2:33 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

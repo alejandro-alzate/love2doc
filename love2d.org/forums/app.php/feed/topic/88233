@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/88233" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-11-18T16:50:24+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/88233</id>
+
+		<entry>
+		<author><name><![CDATA[Imagic]]></name></author>
+		<updated>2021-11-18T16:50:24+00:00</updated>
+
+		<published>2021-11-18T16:50:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244883#p244883</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244883#p244883"/>
+		<title type="html"><![CDATA[Re: Luaoop - OOP library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244883#p244883"><![CDATA[
+Released 2.0.<br><br>Complete rework based on the <a href="https://github.com/ImagicTheCat/lua-xtype" class="postlink">xtype</a> library, now a dependency.<br>It solves previous limitations, correctly handles inheritance and simplifies everything.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143604">Imagic</a> — Thu Nov 18, 2021 4:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Imagic]]></name></author>
+		<updated>2020-02-05T18:41:04+00:00</updated>
+
+		<published>2020-02-05T18:41:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=231962#p231962</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=231962#p231962"/>
+		<title type="html"><![CDATA[Luaoop - OOP library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=231962#p231962"><![CDATA[
+Hi,<br><br><em class="text-italics">I'm currently developing games with LÖVE, which implies developing tools when I don't find a suitable one and I like to make them generic (not bound to a specific thing). This post is one among others in the future to share those Lua librairies which may interest LÖVE developers.</em><br><br>Luaoop is an Object Oriented Programming (class-based) library. There are many of those, but I didn't find something as clean as I wanted and it was interesting to make.<br><br>Project and documentation: <a href="https://github.com/ImagicTheCat/Luaoop" class="postlink">https://github.com/ImagicTheCat/Luaoop</a><br><br>If you are interested by how it looks in a project using the library, here is an <a href="https://github.com/ImagicTheCat/vRP/blob/master/vrp/vRPShared.lua" class="postlink">example</a> unrelated to LÖVE.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143604">Imagic</a> — Wed Feb 05, 2020 6:41 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

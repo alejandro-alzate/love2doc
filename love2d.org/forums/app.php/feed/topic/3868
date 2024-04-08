@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/3868" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-03-14T14:59:01+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/3868</id>
+
+		<entry>
+		<author><name><![CDATA[tsturzl]]></name></author>
+		<updated>2012-03-14T14:59:01+00:00</updated>
+
+		<published>2012-03-14T14:59:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51794#p51794</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51794#p51794"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51794#p51794"><![CDATA[
+<blockquote class="uncited"><div>I'm convinced it does the job reasonably well, and not only with love.* functions, but with any kind of <a href="http://en.wikipedia.org/wiki/Event-driven_programming" class="postlink">event-driven programming</a> done in Lua. In all cases except the simplest examples (where, agreeably, it might be overkill).<br><br>I've thought about this a great deal! You will have to do a lot better than those 4 lines of code in order to convince me otherwise! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><blockquote class="uncited"><div>That and if you're a big performance geek, you're not creating another string, function and object that doesn't need to be there.</div></blockquote>In Lua, strings are <em class="text-italics">very</em> cheap - they are actually created only once. The second time they are created, they are virtually free.<br><br>Functions, while not free, are cheap - at least in the context we are moving, which is event-driven programming. For each keypress/keyrelease the user triggers, any modern computer is capable of invoking <em class="text-italics">millions</em> of functions. Adding or removing only one or two makes no difference.<br><br>I <em class="text-italics">am</em> concerned with performance. So I try really hard to detect where it matters and where it doesn't - so I can concentrate on the juicy parts! I'd advise you to do the same, fellow performance geek.<br><blockquote class="uncited"><div>Perhaps it depends on the programmers style, but personally I don't think I'd use this.</div></blockquote>Even if you keep thinking the same after reading this post, that's absolutely fine.<br><br>I hope that I have helped you (and others) to make a more informed decision nevertheless.</div></blockquote>I suppose I'm being bias. I guess I'm thinking more in a manner of love, where it seems to be a procedural environment. I guess some people try and stray away from this, but I think as long as you put everything in methods you're not really mixing goblin code with keyboard code. You're goblin code is still in your goblin object. I can see what you mean though, but this kind of thing doesn't bother me.<br><br>I'm not saying a performance geek :p If I was I probably wouldn't make games in lua. I'm just saying those are things performance geeks are going to avoid.<br><br>To me event-driven system's were always a perk when the underlying event system was programmed in a faster language such as C, C++ or even C#. This way scripts only determine small bits of logic, and declaring entities into the game which are then processed by the engine which does all the heavy lifting. Kind of like what Panda3D does. Other than that I've never much been a fan of event driven game engines.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2334">tsturzl</a> — Wed Mar 14, 2012 2:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-14T14:28:52+00:00</updated>
+
+		<published>2012-03-14T14:28:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51791#p51791</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51791#p51791"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51791#p51791"><![CDATA[
+<blockquote class="uncited"><div>Thanks for the enlightening post kikito! I finally get <strong class="text-strong">why</strong> one would use an event library like this, much like how your posts in <a href="https://love2d.org/forums/viewtopic.php?t=2826&amp;p=33948" class="postlink">this topic</a> helped me understand the usefulness of functions and subclassing.</div></blockquote>Thanks, you are too kind! If my ramblings help just one person, I'm a happy panda! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Mar 14, 2012 2:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Santos]]></name></author>
+		<updated>2012-03-14T12:07:12+00:00</updated>
+
+		<published>2012-03-14T12:07:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51780#p51780</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51780#p51780"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51780#p51780"><![CDATA[
+Thanks for the enlightening post kikito! I finally get <strong class="text-strong">why</strong> one would use an event library like this, much like how your posts in <a href="https://love2d.org/forums/viewtopic.php?t=2826&amp;p=33948" class="postlink">this topic</a> helped me understand the usefulness of functions and subclassing.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3835">Santos</a> — Wed Mar 14, 2012 12:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-13T22:53:10+00:00</updated>
+
+		<published>2012-03-13T22:53:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51743#p51743</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51743#p51743"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51743#p51743"><![CDATA[
+Hi, thanks for your feedback.<br><blockquote class="uncited"><div>I think with proper programming techniques people could completely avoid the need to use this.</div></blockquote>If we define "proper" as "the code tsturzl likes now" then, yes, absolutely <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><blockquote class="uncited"><div>For example, if I have several objects/entities that require using love.keypressed callback, I'll give them each a .keypress method and do something like this:<div class="codebox"><p>Code: </p><pre><code>function love.keypressed(key)   obj1.keypress(key)   obj2.keypress(key)end</code></pre></div></div></blockquote>For the sake of simplicity, let's assume that we are restricted to love's callbacks (which are, as you have said, not the only case where this lib is useful). Consider the following scenarios:<ul><li>Objects are routinely created and destroyed. What happens obj1 is destroyed in that code?</li><li>Often there are several ways to control an object - one user might want to control the player via certain keys, while other might want to use a different set of keys. Yet another might want to use a joystick. One of the objects might be controlled via the network by other players. How does this affect the code inside obj1 and obj2?</li></ul>Let me tell you what I think will happen: Code will end up where it doesn't belong.<br><br>On the first case, love.keypressed, which is a function dealing with key presses, will have to "know" about the status of obj1 and obj2. At the very least, it will have to make an "if". Probably in keypressed it doesn't amount to much; after all, most games don't have more than one "player" or "current menu". But nevertheless, code for managing the Player should be in the player functions, not "scattered around".<br><br>On the second case, of obj1 &amp; obj2 will include functions for keypresses, keyreleases, joystick presses, joystick releases, network signals, and probably game configuration (to get the different key sets). But .. that code doesn't belong there. If obj1 is a Goblin, then its code should have exclusively Goblin-specific stuff: attacking. Detecting enemies. Firing weapons. Goblins don't have "keyboards on their back". Instead, we have it mixed up with other kinds of code.<br><br>This "don't mix up different things" that I'm talking about actually has a name; it's called <a href="http://en.wikipedia.org/wiki/Separation_of_concerns" class="postlink">Separation of Concerns</a>. Please give it a look. Most people tend to think of it as one of the ways to write "Proper" code (I'm using the general definition "proper" this time).<br><br>So that's what I'm trying to provide with this lib. It's a "barrier for your code". It allows you to separate goblin stuff from keyboard stuff.<br><br>I'm convinced it does the job reasonably well, and not only with love.* functions, but with any kind of <a href="http://en.wikipedia.org/wiki/Event-driven_programming" class="postlink">event-driven programming</a> done in Lua. In all cases except the simplest examples (where, agreeably, it might be overkill).<br><br>I've thought about this a great deal! You will have to do a lot better than those 4 lines of code in order to convince me otherwise! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><blockquote class="uncited"><div>That and if you're a big performance geek, you're not creating another string, function and object that doesn't need to be there.</div></blockquote>In Lua, strings are <em class="text-italics">very</em> cheap - they are actually created only once. The second time they are created, they are virtually free.<br><br>Functions, while not free, are cheap - at least in the context we are moving, which is event-driven programming. For each keypress/keyrelease the user triggers, any modern computer is capable of invoking <em class="text-italics">millions</em> of functions. Adding or removing only one or two makes no difference.<br><br>I <em class="text-italics">am</em> concerned with performance. So I try really hard to detect where it matters and where it doesn't - so I can concentrate on the juicy parts! I'd advise you to do the same, fellow performance geek.<br><blockquote class="uncited"><div>Perhaps it depends on the programmers style, but personally I don't think I'd use this.</div></blockquote>Even if you keep thinking the same after reading this post, that's absolutely fine.<br><br>I hope that I have helped you (and others) to make a more informed decision nevertheless.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Mar 13, 2012 10:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tsturzl]]></name></author>
+		<updated>2012-03-13T16:25:48+00:00</updated>
+
+		<published>2012-03-13T16:25:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51717#p51717</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51717#p51717"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51717#p51717"><![CDATA[
+I think with proper programming techniques people could completely avoid the need to use this.<br><br>For example, if I have several objects/entities that require using love.keypressed callback, I'll give them each a .keypress method and do something like this:<div class="codebox"><p>Code: </p><pre><code>function love.keypressed(key)   obj1.keypress(key)   obj2.keypress(key)end</code></pre></div>To me this makes more sense, you're not adding another step to the process. That and if you're a big performance geek, you're not creating another string, function and object that doesn't need to be there.<br><br>I realize that beholder does other things then keypresses, but those other situations can also be handled in the same way. People just have to learn to standardize there objects, and use uniform methods(update,draw, keypress, mousepress,collide,etc).<br><br>Perhaps it depends on the programmers style, but personally I don't think I'd use this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2334">tsturzl</a> — Tue Mar 13, 2012 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-06T10:31:31+00:00</updated>
+
+		<published>2012-03-06T10:31:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50991#p50991</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50991#p50991"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50991#p50991"><![CDATA[
+<blockquote class="uncited"><div>ya, Ive tried it like over 20 times; I can see the green squares moving really fast towards the yellow square most of the time.</div></blockquote>That's weird. I'll give the demo a look. Maybe I've forgotten to use dt somewhere or something. And while I'm on that, I'll make that the zombies start up in a disk around the player, with empty space in the middle.<br><blockquote class="uncited"><div>why would somethings not be garbage collected? __mode I assume?</div></blockquote>Yes, there was a __mode missing on the internal table storing all the "groups". So the previous version would probably leak some KBs if groups where used a lot. But it has been fixed now.<br><br>EDIT:<br><br>Hi ishkabible, I have made a couple changes in the demo on the OP. As I feared, I was missing dt in a couple places. Hopefully it will run at a reasonable speed in your machine now.<br><br>(I have not changed how the initial positions are calculated though, so you might still start with a zombie eating the player's brains right at the start)<br><br>Regards,<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Mar 06, 2012 10:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2012-03-06T03:47:11+00:00</updated>
+
+		<published>2012-03-06T03:47:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50972#p50972</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50972#p50972"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50972#p50972"><![CDATA[
+ya, Ive tried it like over 20 times; I can see the green squares moving really fast towards the yellow square most of the time.<br><br>edit:<br>why would somethings not be garbage collected? __mode I assume?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Tue Mar 06, 2012 3:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-05T08:29:46+00:00</updated>
+
+		<published>2012-03-05T08:29:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50899#p50899</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50899#p50899"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50899#p50899"><![CDATA[
+<blockquote class="uncited"><div>it still quits really quick; the 'zombies' move too fast I think.</div></blockquote>The demo isn't updated to the latest version, but have you tried running it several times? Since the zombies start up randomly, in some occasions they will start right on top of the player.<br><blockquote class="uncited"><div>Ruby, much? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div></blockquote>I based this feature on <a href="http://blog.rubybestpractices.com/posts/rklemme/001-Using_blocks_for_Robustness.html" class="postlink">Ruby's way of dealing with File opening/closusing using a block</a>, so yes, it's very "rubish". If you were referring to the use of classes, well, I use classes quite a lot in Lua.<br><br>In other order of things, I have imagined a possible (very minor) bug in the current beholder.group implementation - some things that should be garbage-collected are not. Will update it soon. EDIT: the memory management is now a bit more efficient.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Mar 05, 2012 8:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-03-05T07:56:47+00:00</updated>
+
+		<published>2012-03-05T07:56:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50895#p50895</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50895#p50895"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50895#p50895"><![CDATA[
+<blockquote class="uncited"><div>Here's how an hypothetical Player class might look like:</div></blockquote>Ruby, much? <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Mar 05, 2012 7:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2012-03-05T02:10:13+00:00</updated>
+
+		<published>2012-03-05T02:10:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50868#p50868</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50868#p50868"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50868#p50868"><![CDATA[
+it still quits really quick; the 'zombies' move too fast I think.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Mon Mar 05, 2012 2:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-03-04T23:47:56+00:00</updated>
+
+		<published>2012-03-04T23:47:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50861#p50861</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50861#p50861"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50861#p50861"><![CDATA[
+I added a new functionality to the lib; now there is a way to mark several events as "members of the same group", so they can be "stopped" in a single line. This is done with the new beholder.group function.<br><br>Here's how an hypothetical Player class might look like:<br><div class="codebox"><p>Code: </p><pre><code>function Player:initialize()  beholder.group(self, function() -- the "group" starts here, and it's identified by "self"    for _,dir in ipairs({'up','right','down','left'}) do      beholder.observe('keypressed', dir, function() startMoving(self, dir) end)      beholder.observe('keyreleased',  dir, function() stopMoving(self, dir) end)    end  end)endfunction Player:destroy()  beholder.stopObserving(self) -- by stopping observing "self", all the events inside the group are stoppedend</code></pre></div>Without the group function, I would have had to store all the individual ids for each of the 8 events on the initialize method, and destroy them with a loop in destroy. I'm very happy with how it looks now.<br><br>This moves beholder.lua to v2.1.1<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Mar 04, 2012 11:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-01-29T23:15:48+00:00</updated>
+
+		<published>2012-01-29T23:15:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48150#p48150</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48150#p48150"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48150#p48150"><![CDATA[
+Fixed the bug. It was one of these weird conditions that happended when you triggered an event that stopped observing that same event after going through some hoops. Interestingly enough, the tests work; I could not reproduce it in the tests, only in a working app. Probably it has to do with garbage collection or something. Oh, well. It's fixed.<br><br>Releasing v2.0.1.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 29, 2012 11:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2012-01-29T21:02:22+00:00</updated>
+
+		<published>2012-01-29T21:02:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48111#p48111</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48111#p48111"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48111#p48111"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>does this mean beholder is a singleton now?</div></blockquote>Unless you were using it with dofile instead of require, it was already a singleton. It just had a weird syntax.</div></blockquote>Oh, then good riddance with the :!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Sun Jan 29, 2012 9:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-01-29T20:13:07+00:00</updated>
+
+		<published>2012-01-29T20:13:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48099#p48099</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48099#p48099"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48099#p48099"><![CDATA[
+<blockquote class="uncited"><div>does this mean beholder is a singleton now?</div></blockquote>Unless you were using it with dofile instead of require, it was already a singleton. It just had a weird syntax.<br><br>By the way, I have found a bug. I'm trying to capture it in a test, but so far it's being illusive. I'll keep you posted here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 29, 2012 8:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2012-01-29T19:30:16+00:00</updated>
+
+		<published>2012-01-29T19:30:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48091#p48091</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48091#p48091"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48091#p48091"><![CDATA[
+does this mean beholder is a singleton now?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Sun Jan 29, 2012 7:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-01-29T19:26:22+00:00</updated>
+
+		<published>2012-01-29T19:26:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48089#p48089</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48089#p48089"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48089#p48089"><![CDATA[
+Try again. Since the zombies spawn randomly, sometimes they spawn on top of the player.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 29, 2012 7:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2012-01-29T19:13:28+00:00</updated>
+
+		<published>2012-01-29T19:13:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48083#p48083</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48083#p48083"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48083#p48083"><![CDATA[
+it quits too quick on my computer too see anything.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Sun Jan 29, 2012 7:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-01-29T14:30:21+00:00</updated>
+
+		<published>2012-01-29T14:30:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48050#p48050</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48050#p48050"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48050#p48050"><![CDATA[
+This is a somewhat old thread, so I hope it's ok if I bump it instead of editing the last post, which happens to be mine.<br><br>I've released a new version of this lib. In beholder 2.0.0, you must use dots instead of colons.<br><br>Before:<div class="codebox"><p>Code: </p><pre><code>beholder:observe('FOO', function() )</code></pre></div>Now:<div class="codebox"><p>Code: </p><pre><code>beholder.observe('FOO', function() )</code></pre></div>This change affects all beholder methods.<br><br>I've updated the OP and the demo attached on it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 29, 2012 2:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-11-01T23:47:10+00:00</updated>
+
+		<published>2011-11-01T23:47:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39050#p39050</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39050#p39050"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39050#p39050"><![CDATA[
+<blockquote class="uncited"><div>There are no equivalent statements built into your code for many of the points I highlighted above</div></blockquote>My lib just has a different interface for doing the same 3 things you pointed out. It <em class="text-italics">is</em> equivalent in functionality.<br><blockquote class="uncited"><div>I'm dunno why we're still discussing this. You prefer yours, I prefer the one I've used that's used in commercial code, end of story. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div></blockquote>If you want, we can discuss the merits of open source vs commercial software in another thread, in the General section. But yeah, let's not discuss any more. I think we have both made our positions clear.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Nov 01, 2011 11:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-11-01T22:57:33+00:00</updated>
+
+		<published>2011-11-01T22:57:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39046#p39046</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39046#p39046"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39046#p39046"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>They can be as separate as you want. You can have a single event handler function for a bunch of stuff, a single event handler function that checks a table of functions, an event handler method in a class or table, or multiple event handler methods or functions in a class or table.</div></blockquote>If you do all that, then the code gets bigger, which cancels your original claim - that you have to write the same amount of code for equivalent statements in both libs.</div></blockquote>There are no equivalent statements built into your code for many of the points I highlighted above, so that's not a relevant comparison. In larger codebases than a few lua files you won't want to be doing ad-hoc anonymous lua functions for this sort of thing anyway, which was one of my previous points. Realistically adding a couple lines will often help more than harm your code, if it changes the way it's organized.<br><br>I'm dunno why we're still discussing this. You prefer yours, I prefer the one I've used that's used in commercial code, end of story. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Nov 01, 2011 10:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-11-01T21:16:44+00:00</updated>
+
+		<published>2011-11-01T21:16:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39035#p39035</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39035#p39035"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39035#p39035"><![CDATA[
+<blockquote class="uncited"><div>.... what? </div></blockquote>I'm highlighting the relevant bit for your convenience:<br><blockquote class="uncited"><div>The amount of lines looks similar in that example, and yet, but in the Event example, the <span style="color:#FF0000">player movement code</span> must be next to the gameOver, lastkey and pause code - all in one place. There is no <a href="http://en.wikipedia.org/wiki/Separation_of_concerns" class="postlink">separation of concerns</a>. Beholder's code can be distributed in different functions or files.</div></blockquote><blockquote class="uncited"><div>They can be as separate as you want. You can have a single event handler function for a bunch of stuff, a single event handler function that checks a table of functions, an event handler method in a class or table, or multiple event handler methods or functions in a class or table.</div></blockquote>If you do all that, then the code gets bigger, which cancels your original claim - that you have to write the same amount of code for equivalent statements in both libs.<br><blockquote class="uncited"><div>As an outsider to this discussion, I prefer kikito's event library. It looks cleaner, and with slime's library I don't see much advantage of using it as opposed to using no event library.</div></blockquote>Thanks! I think there is advantage in using a lib, be it Slime's or other. But it might be a bit difficult to see.<br><br>In other other of things, it has occurred to me that there might be a bug in the lib related with garbage collection - will try to fix it tonight.<br><br>EDIT: The fix is done. Here's the <a href="https://github.com/kikito/beholder.lua/commit/71c1118039d5997498e58a66d6daa7e266ecfbfe" class="postlink">relevant commit</a>, if you are interested. I've created a minor version (1.0.1) on github, and updated it in the demo.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Nov 01, 2011 9:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-11-01T20:11:57+00:00</updated>
+
+		<published>2011-11-01T20:11:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39029#p39029</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39029#p39029"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39029#p39029"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>&lt;code&gt;</div></blockquote>The amount of lines looks similar in that example, and yet, but in the Event example, the player movement code must be next to the gameOver, lastkey and pause code - all in one place. There is no <a href="http://en.wikipedia.org/wiki/Separation_of_concerns" class="postlink">separation of concerns</a>. Beholder's code can be distributed in different functions or files.</div></blockquote>.... what? I put my example stuff together like that because they were together in your own source code. The lines were literally in the same place. They can be as separate as you want. You can have a single event handler function for a bunch of stuff, a single event handler function that checks a table of functions, an event handler method in a class or table, or multiple event handler methods or functions in a class or table.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Nov 01, 2011 8:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-11-01T18:59:15+00:00</updated>
+
+		<published>2011-11-01T18:59:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39020#p39020</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39020#p39020"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39020#p39020"><![CDATA[
+As an outsider to this discussion, I prefer kikito's event library. It looks cleaner, and with slime's library I don't see much advantage of using it as opposed to using no event library.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Nov 01, 2011 6:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-11-01T18:20:35+00:00</updated>
+
+		<published>2011-11-01T18:20:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=39019#p39019</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=39019#p39019"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=39019#p39019"><![CDATA[
+<blockquote class="uncited"><div>&lt;code&gt;</div></blockquote>The amount of lines looks similar in that example, and yet, but in the Event example, the player movement code must be next to the gameOver, lastkey and pause code - all in one place. There is no <a href="http://en.wikipedia.org/wiki/Separation_of_concerns" class="postlink">separation of concerns</a>. Beholder's code can be distributed in different functions or files.<br><br>It is actually an evolution of the last code you wrote. Internally, it's a bit like that table of functions. But imagine that instead of a table, you have a tree that some "pattern matching" for you.<br><blockquote class="uncited"><div>It's usually better &lt;snip&gt;. Not very pretty.</div></blockquote>I don't think you really mean that. The "nicer" version in the code after it does some of the things you call "not pretty" there   <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"> .<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Nov 01, 2011 6:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-11-01T15:53:49+00:00</updated>
+
+		<published>2011-11-01T15:53:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=38995#p38995</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=38995#p38995"/>
+		<title type="html"><![CDATA[Re: beholder.lua - event observation in Lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=38995#p38995"><![CDATA[
+I changed your pausing syntax because I didn't like it, you were doing a pause-and-unpause instead of just unpause or something. Mine can't do local or anonymous functions because it stores by reference rather than by id or whatever, but in my four years of using a near identical system to what I made, I have not once felt it necessary. It's usually much better to have a strong reference to important things like event handling anyway. The scoping will also be weird for a full object-oriented program if you use anonymous functions to register the events, or if you use a method as an event handler function you will always have to wrap yours in a local or anonymous function. Not very pretty.<br><div class="codebox"><p>Code: </p><pre><code>beholder:observe("KEYPRESSED", function(key)  lastPressedKey = keyend)beholder:observe("KEYPRESSED", "escape", gameOver)beholder:observe("KEYPRESSED", "pause", function()  all(entities, paused and unpause or pause)  paused = not pausedend)function handleKeyPressed(e, key)  lastPressedKey = key  if key == "escape" then    gameOver()  elseif key == "pause" then    all(entities, paused and unpause or pause)    paused = not paused  endendEvent.Register(handleKeyPressed, "KEYPRESSED")---- OR-- this one is much nicer for larger programs. It also compliments keyreleased because you can make a keyreleased table with functions and add that to your handleKeys function or whateverlocal keypressed = {  ["escape"] = gameOver,  ["pause"] = function()    all(entities, paused and unpause or pause)    paused = not paused  end,}function handleKeyPressed(e, key)  lastPressedKey = key  if keypressed[key] then keypressed[key]() endendEvent.Register(handleKeyPressed, "KEYPRESSED")</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Nov 01, 2011 3:53 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

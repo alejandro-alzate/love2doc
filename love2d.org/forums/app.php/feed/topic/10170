@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/10170" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-07-30T13:10:19+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/10170</id>
+
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-07-30T10:41:41+00:00</updated>
+
+		<published>2012-07-30T10:41:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=62196#p62196</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=62196#p62196"/>
+		<title type="html"><![CDATA[Re: Moses And Alles, Lua Tools for Tables and Strings]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=62196#p62196"><![CDATA[
+<blockquote class="uncited"><div>Great job !<br>Just one thing. In this file : <a href="https://github.com/Yonaba/Allen/blob/master/Allen_StringOp_Tests.lua" class="postlink">https://github.com/Yonaba/Allen/blob/ma ... _Tests.lua</a> you are saying that '+' is commutative. But I don't think this is the case of your implementation, right?</div></blockquote>Typo error. Thanks so much for pointing that out, i fixed it.<br>In the meanwhile, i am open to any new suggestions for new functions that one may find useful. Let's make this a contributive work!<br>Also, one may find some better/faster ways of implementing some of the functions provided. I'll be pleased to have their feedbacks <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Jul 30, 2012 10:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Elena5]]></name></author>
+		<updated>2012-07-26T08:37:46+00:00</updated>
+
+		<published>2012-07-26T08:37:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=61926#p61926</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=61926#p61926"/>
+		<title type="html"><![CDATA[Re: Moses And Alles, Lua Tools for Tables and Strings]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=61926#p61926"><![CDATA[
+Great job !<br><br>Just one thing. In this file : <a href="https://github.com/Yonaba/Allen/blob/master/Allen_StringOp_Tests.lua" class="postlink">https://github.com/Yonaba/Allen/blob/ma ... _Tests.lua</a> you are saying that '+' is commutative. But I don't think this is the case of your implementation, right?<br><br>Unless<br><div class="codebox"><p>Code: </p><pre><code>"hello " + "world" == "world" + "hello " == "hello world"</code></pre></div>Which is not likely to happen.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3383">Elena5</a> — Thu Jul 26, 2012 8:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dreadkillz]]></name></author>
+		<updated>2012-07-24T17:57:33+00:00</updated>
+
+		<published>2012-07-24T17:57:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=61820#p61820</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=61820#p61820"/>
+		<title type="html"><![CDATA[Re: Moses And Alles, Lua Tools for Tables and Strings]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=61820#p61820"><![CDATA[
+New toys! Will save just in case the need arises. Thanks<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=36477">dreadkillz</a> — Tue Jul 24, 2012 5:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-07-30T13:10:19+00:00</updated>
+
+		<published>2012-07-24T10:00:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=61792#p61792</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=61792#p61792"/>
+		<title type="html"><![CDATA[Moses And Allen, Lua Tools for Tables and Strings]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=61792#p61792"><![CDATA[
+Hi folks,<br><br>Just wanted to share with you these two utility libraries i've been working on the past days.<br><br><strong class="text-strong">Moses</strong> is a utility library to manipulate tables in Lua.<br><strong class="text-strong">Allen</strong> stands for the same purposes, but was designed for strings.<br><br>A full documentation and usage examples are given on their respective projects pages on Github.<br><br><strong class="text-strong"><span style="text-decoration:underline">Credits and thanks</span></strong>:<br>Those libraries were heavily inspired by Javascript <strong class="text-strong">Underscore.js</strong> (by Jeremy Ashkenas) and <strong class="text-strong">Underscore.string</strong> (by <strong class="text-strong">Edward Tsech</strong> and <strong class="text-strong">Esa-Matti Suuronen</strong>).<br>Credits to <strong class="text-strong">Underscore.lua</strong> (by Marcus Irven).<br>Also, thanks to <a href="https://love2d.org/forums/viewtopic.php?f=3&amp;t=9594&amp;p=59246#p59190" class="postlink">Kikito</a> who proposed the names Moses, and Allen...  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>Any feedback, comment or contribution would be highly appreciated. Thanks in advance!<br><strong class="text-strong"><span style="text-decoration:underline">Links</span></strong>:<br><a href="https://github.com/Yonaba/Moses" class="postlink">Moses on Github</a><br><a href="https://github.com/Yonaba/Allen" class="postlink">Allen on Github</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Jul 24, 2012 10:00 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

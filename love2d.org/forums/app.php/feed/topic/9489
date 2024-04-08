@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/9489" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-04-06T11:11:17+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/9489</id>
+
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2016-04-06T11:11:17+00:00</updated>
+
+		<published>2016-04-06T11:11:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197266#p197266</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197266#p197266"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197266#p197266"><![CDATA[
+<blockquote class="uncited"><div>what does getDictItemsInCellrect do?</div></blockquote>In short: this function returns the items which are present in a group of cells. It's part of the collision detection, but it does not "handle" collision.<br><br>The long explanation: Bump divides space in "cells" (they look like squares in a grid, you can see them turning on the "debug info" in the demos).  When an item is inserted in the world, the world notes "which cells it touches". If the item moves, this list is updated. When you want to calculate the collisions of that item, instead of comparing the item with all the items in the world, you only compare it with "the items which touch the same cells". These items are called "neighbours of the item". This makes bump go faster.<br><br>Items in bump are stored as "rectangles". If an item isn't moving, you can use its rectangle to "find neighbours". If it's moving, on each frame, its movement is also contained inside a (bigger) rectangle. You can use that to "find neighbours along its path". So in both cases you need a function which "given a rectangle, gets the items in the cells touching it".<br><br>When you want to "query those cells via a rectangle", this rectangle must be "translated into cell coordinates".In bump, that is called a "cell rect". An example: if the cells are 64x64 px and the rectangle corner is in {x=100,y=200} the cell rect will have its corner in {x=2, y=4}, since that's the cell containing that point. The width and height will be similarly adjusted taking into account cell width and height. This transformation is done elsewhere before calling this function, so we can asume it is already done. But that's the reason the function is called "InCellRect" and not just "InRect".<br><br>Finally, let's revisit the fact that an item can touch several cells at once. This means that you can not simply "go over all the cells and put the items touching those cells into an array". If you did that, you would get duplicates, and you would have to eliminate them, which is slow. What we do instead is putting them in a <em class="text-italics">Dictionary</em>. In bump, a dictionary is a table whose <strong class="text-strong">keys</strong> are items, and the values are usually the literal <strong class="text-strong">true</strong>. If you put the items in a dictionary instead of an "array-like" table, you eliminate the duplicates automatically, and very fast too. That's why the function is called "getDictItems" instead of "getItems".<br><br>I hope this explanation is enough, regards!<br><br>EDIT: This thread is for an order version of bump, to ask questions about the new one, please use the most recent thread in <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=79223" class="postlink">viewtopic.php?f=5&amp;t=79223</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 06, 2016 11:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[meowman9000]]></name></author>
+		<updated>2016-04-06T01:27:56+00:00</updated>
+
+		<published>2016-04-06T01:27:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=197263#p197263</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=197263#p197263"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=197263#p197263"><![CDATA[
+A quick question about bump, what does getDictItemsInCellrect do?  It seems like that is how collision is handled, but its quite confusing in how it does it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137655">meowman9000</a> — Wed Apr 06, 2016 1:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2015-09-23T21:02:39+00:00</updated>
+
+		<published>2015-09-23T21:02:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=189585#p189585</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=189585#p189585"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=189585#p189585"><![CDATA[
+Both options can work. Either "1 world per slice" or "everything in one world, and filter by slice". The former will probably be slightly more efficient, but also probably more difficult to work with.<br><br>Also, please use the following thread to talk about bump, this one is about a previous version:<br><br><a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=79223" class="postlink">viewtopic.php?f=5&amp;t=79223</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Sep 23, 2015 9:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[s-ol]]></name></author>
+		<updated>2015-09-23T18:37:51+00:00</updated>
+
+		<published>2015-09-23T18:37:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=189579#p189579</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=189579#p189579"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=189579#p189579"><![CDATA[
+<blockquote class="uncited"><div>I'm trying to think about how one would utilize multiple bump worlds to create background and foreground collision layers, and a player that can move between them. Would it be best to have a player hitbox in each layer and just control the one in the active layer, making the appropriate changes with update when switching?<br><br>My specific idea is to achieve a 'kinda-3D' ish world in an otherwise traditional sidescrolling platformer, where the player can jump to fore- and backgrounds either arbitrarily or at specific points (if arbitrary movement proves too complex). There will be npcs on these layers, too, moving around and, say, shooting arrows at the player on other layers.</div></blockquote>I would just put them all in the same world and have one player but change the "filter" value depending on the 2.5D position. For example like this:<br><div class="codebox"><p>Code: </p><pre><code>world:move(self, newx, newy, function (other)   if other.layer == self.layer then    return "slide" -- slide along obstacles  else    return nil -- do not collide with other objects  endend)</code></pre></div>Of course you will probably have to put a bit more logic in there for other types of things (like powerups, coins etc, you probably don't want to "slide" along those)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135654">s-ol</a> — Wed Sep 23, 2015 6:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sarcose]]></name></author>
+		<updated>2015-09-23T18:13:17+00:00</updated>
+
+		<published>2015-09-23T18:13:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=189577#p189577</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=189577#p189577"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=189577#p189577"><![CDATA[
+I'm trying to think about how one would utilize multiple bump worlds to create background and foreground collision layers, and a player that can move between them. Would it be best to have a player hitbox in each layer and just control the one in the active layer, making the appropriate changes with update when switching?<br><br>My specific idea is to achieve a 'kinda-3D' ish world in an otherwise traditional sidescrolling platformer, where the player can jump to fore- and backgrounds either arbitrarily or at specific points (if arbitrary movement proves too complex). There will be npcs on these layers, too, moving around and, say, shooting arrows at the player on other layers.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136805">Sarcose</a> — Wed Sep 23, 2015 6:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2015-08-01T16:08:04+00:00</updated>
+
+		<published>2015-08-01T16:08:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187325#p187325</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187325#p187325"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187325#p187325"><![CDATA[
+I am on my mobile so I can't write a lot.<br><br>The simplest way to move other characters around is by changing their velocity. The explosions do this in the demo. You can modify the velocity of one object when resolving the cols of another (provided that you handle velocity nicely, not resetting it manually on each frame)<br><br>Moving other items "as you move", like pushing a block in zelda, is trickier. You must move the other object the exact amount. Too littke and you will tunnel through it. Too far and it will be separated, not touching any more.<br><br>There is an example of this in the "platforms"  branch on github. The platforms move the player "just the right amount". Have a look at platform.lua (sorry I can't link it)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Aug 01, 2015 4:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[farzher]]></name></author>
+		<updated>2015-07-31T22:33:57+00:00</updated>
+
+		<published>2015-07-31T22:33:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187308#p187308</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187308#p187308"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187308#p187308"><![CDATA[
+How do I "bump" another object?<br><br>I'm trying to <strong class="text-strong">push other players</strong> by jumping or running into them.<br>Is there any support for that? Or does anyone have any tips/snippets?<br><br>I tried quickly but it's pretty screwy. So I decided to ask here before I mess with it for hours.<br><br>When looping through cols, does it make sense to call world:move on the player I bump into to push them?<br>But then wouldn't they have to loop through their cols from that push and push anyone else they just bumped into? Sounds like a mess and potential infinite loop?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136891">farzher</a> — Fri Jul 31, 2015 10:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ranguna259]]></name></author>
+		<updated>2013-08-13T17:16:08+00:00</updated>
+
+		<published>2013-08-13T17:16:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=118572#p118572</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=118572#p118572"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=118572#p118572"><![CDATA[
+Indeed, it can be tricky and really glitchy, I'm still trying to code collision for my game and till now I've complitly recoded my player.lua two times and I think I'm going for the third.. But this time I'm gonna use HC, I hope it works out<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123960">Ranguna259</a> — Tue Aug 13, 2013 5:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-08-13T16:57:50+00:00</updated>
+
+		<published>2013-08-13T16:57:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=118567#p118567</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=118567#p118567"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=118567#p118567"><![CDATA[
+Sometimes bump "jumps". It is good, but it is not perfect. The demo does a very simplistic collision response, too. You might see a "jump" here or there, I'm afraid. It was the best I could do in 2-3 months; you should not see them very often.<br><br>Collision detection is quite tricky  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Aug 13, 2013 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2013-08-13T16:15:59+00:00</updated>
+
+		<published>2013-08-13T16:15:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=118556#p118556</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=118556#p118556"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=118556#p118556"><![CDATA[
+That's very likely a bug in your collision response, not in bump.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Tue Aug 13, 2013 4:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ranguna259]]></name></author>
+		<updated>2013-08-13T15:44:03+00:00</updated>
+
+		<published>2013-08-13T15:44:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=118544#p118544</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=118544#p118544"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=118544#p118544"><![CDATA[
+Found a typical collision bug on your demo, dunno if it's just in the demo and I can't really explain it so do this:<br>Set fly to true.<br>Go up intil you colide into another object (no the walls, it has to be one of the rectangles).<br>Once you are coliding go slowly to the left or to the right.<br>You'll notice the you'll get teleported to the side of the coliding object before ending the colision.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123960">Ranguna259</a> — Tue Aug 13, 2013 3:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-08-11T08:34:58+00:00</updated>
+
+		<published>2013-08-11T08:34:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=117541#p117541</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=117541#p117541"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=117541#p117541"><![CDATA[
+<blockquote class="uncited"><div>Any suggestions would be appreciated.</div></blockquote>Hi, I don't have any particular suggestion, I have never used ATL yet. Good luck!<br><blockquote class="uncited"><div>p.s. Why do you have 't' and 'l' in Bump instead of 'x' and 'y'? What do they stand for?</div></blockquote>t,l,w,h =&gt; top, left, width, height. I don't call them x and y because sometimes I also need the right and bottom (r and b) and it is weird to have x,r, y,b.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Aug 11, 2013 8:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tilmah]]></name></author>
+		<updated>2013-08-11T01:35:52+00:00</updated>
+
+		<published>2013-08-11T01:35:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=117421#p117421</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=117421#p117421"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=117421#p117421"><![CDATA[
+Hi Kikito,<br>To remove all static objects in Bump, can you simply make a huge selection. For example the width and height of the screen (perhaps 800 by 600)?<br><br>Anyway... I am trying to hack a one way platform system using ATL and Bump.<br><br>I found a way of getting the information of a layer of tiles and adding static objects in bump in their place when the character jumps/reaches a certain height on screen, but I can't seem to do the reverse in removing them when the character goes below that height.<br><br>It worked when used a 'static' table into Bump. So it seems plausible.<br><br>Any suggestions would be appreciated.<br><br>Again thanks for your libraries.<br>p.s. Why do you have 't' and 'l' in Bump instead of 'x' and 'y'? What do they stand for?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=120965">tilmah</a> — Sun Aug 11, 2013 1:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-09-09T15:41:52+00:00</updated>
+
+		<published>2012-09-09T15:41:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=65173#p65173</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=65173#p65173"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=65173#p65173"><![CDATA[
+Hi,<br><br>I am back from my holidays. I did the "simplified demo" that Puzzlem00n was requesting some time ago. It has its own branch on github now:<br><br><a href="https://github.com/kikito/bump.lua/tree/simpledemo" class="postlink">https://github.com/kikito/bump.lua/tree/simpledemo</a><br><br>I'm also attaching the .love file here: <br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=5584">bump-simpledemo.love</a></dt></dl></div>This is probably not needed any more, but it was a good exercise after 3 weeks not touching any code <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Sep 09, 2012 3:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-08-21T15:46:47+00:00</updated>
+
+		<published>2012-08-21T15:46:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63757#p63757</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63757#p63757"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63757#p63757"><![CDATA[
+<blockquote class="uncited"><div>That your code only works because the names happen to be the same</div></blockquote>And yes, I got your point.<br>Actually, an <em class="text-italics">if-return-else-return-end</em> works fine. Thanks pointing that out.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Aug 21, 2012 3:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-08-21T09:55:53+00:00</updated>
+
+		<published>2012-08-21T09:55:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63724#p63724</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63724#p63724"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63724#p63724"><![CDATA[
+<blockquote class="uncited"><div>So, what did I missed ?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-huh.png" width="16" height="16" alt=":huh:" title="Huuh..."></div></blockquote>That your code only works because the names happen to be the same:<div class="codebox"><p>Code: </p><pre><code>Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio&gt; obj = { w = 1, x = 2, y = 3, z = 4 }&gt; function obj:out() return self.w, self.x, self.y, self.z end&gt; function out(i)&gt;&gt; return i.out and (i:out()) or i.a, i.b, i.c, i.d&gt;&gt; end&gt; print(out(obj))1nilnilnil</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Tue Aug 21, 2012 9:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-08-21T00:22:27+00:00</updated>
+
+		<published>2012-08-21T00:22:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63694#p63694</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63694#p63694"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63694#p63694"><![CDATA[
+@bartbes:<br>Let's say, that I have, for instance :<br><div class="codebox"><p>Code: </p><pre><code>obj  = { a = 1, b = 2, c = 3, d  =4 }function obj:out() return self.a,self.b,self.c,self.d endfunction out(i)return i.out and (i:out()) or i.a, i.b, i.c, i.dendlocal a,b,c,d = out(obj)print(a,b,c,d) --&gt; 1, 2, 3, 4obj.out = nila,b,c,d = out(obj)print(a,b,c,d) --&gt; 1, 2, 3, 4</code></pre></div>So, what did I missed ?  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-huh.png" width="16" height="16" alt=":huh:" title="Huuh..."> <br><br>@kikito: sorry for being off-topic, but I needed to understand bartbes' point.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Aug 21, 2012 12:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-08-20T22:02:12+00:00</updated>
+
+		<published>2012-08-20T22:02:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63688#p63688</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63688#p63688"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63688#p63688"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return item.getBBox and (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>Nope, still won't work, the ternary doesn't work quite right with multiple return values, in this case it returns<br>((item:getBBox()) or item.l), item.t, item.w, item.h<br><br>Actually, your parentheses only make it worse (not that it will work without them), because they force only the first return value to be used.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Mon Aug 20, 2012 10:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Puzzlem00n]]></name></author>
+		<updated>2012-08-20T21:58:11+00:00</updated>
+
+		<published>2012-08-20T21:58:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63685#p63685</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63685#p63685"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63685#p63685"><![CDATA[
+<blockquote class="uncited"><div>You don't need item:getBBox(). That was just an example implementation. If your items don't have a :getBBox method, it is fine to do this (adapt to however your items return a bounding box:<div class="codebox"><p>Code: </p><pre><code>function bump.getBBox(item)  return item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>Oh, alright then. Even better.<br><br>I feel that the majority of my comments on this library have been negative, so I'll take this opportunity to say that I do appreciate your work on it and as soon as I get it working I'm sure it'll become very useful in the future!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45221">Puzzlem00n</a> — Mon Aug 20, 2012 9:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-08-21T13:34:40+00:00</updated>
+
+		<published>2012-08-20T21:50:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63683#p63683</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63683#p63683"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63683#p63683"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return item.getBBox and (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>You don't need item:getBBox(). That was just an example implementation. If your items don't have a :getBBox method, it is fine to do this (adapt to however your items return a bounding box):<div class="codebox"><p>Code: </p><pre><code>function bump.getBBox(item)  return item.l, item.t, item.w, item.hend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Aug 20, 2012 9:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Puzzlem00n]]></name></author>
+		<updated>2012-08-20T21:48:51+00:00</updated>
+
+		<published>2012-08-20T21:48:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63682#p63682</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63682#p63682"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63682#p63682"><![CDATA[
+<blockquote class="uncited"><div>The correct version will be:<br><br><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return item.getBBox and (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>Ah, thanks a lot! Kikito, you should consider putting something like that in the master copy.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45221">Puzzlem00n</a> — Mon Aug 20, 2012 9:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-08-20T21:43:57+00:00</updated>
+
+		<published>2012-08-20T21:43:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63681#p63681</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63681#p63681"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63681#p63681"><![CDATA[
+<blockquote class="uncited"><div>Well that won't work. Let's see, if an item doesn't have a getBBox function, it will error, not just that, if it does, only the first return value will get used, and the rest will be item.t, w and h.</div></blockquote>Sorry, you're totally right about the err, if item doesn't have a getBBox function.<br>The correct version will be:<br><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return item.getBBox and (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div>Actually it will work - I tried it - because everywhere in bump's code where getBBox is invoked (line 183), it is supposed to return 4 args. : <br><div class="codebox"><p>Code: </p><pre><code>  -- if the new bounding box is different from the stored one  local l,t,w,h = bump.getBBox(item)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Aug 20, 2012 9:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Puzzlem00n]]></name></author>
+		<updated>2012-08-20T21:05:23+00:00</updated>
+
+		<published>2012-08-20T21:05:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63676#p63676</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63676#p63676"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63676#p63676"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>Well that won't work. Let's see, if an item doesn't have a getBBox function, it will error, not just that, if it does, only the first return value will get used, and the rest will be item.t, w and h.</div></blockquote>Darn. Before I read this, I thought that seemed like exactly what I was looking for.<br><br><br>Oh, and to Roland, I'm not saying it's complicated, I'm just saying it's more complicated than I thought. I have a tendency to overestimate myself. I've been having a ton of bugs in the test game I'm working on to prepare for the coming Ludum Dare, and they all pretty much relate to bump. It's just been kinda frustrating, you know?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45221">Puzzlem00n</a> — Mon Aug 20, 2012 9:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-08-20T19:01:14+00:00</updated>
+
+		<published>2012-08-20T19:01:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63667#p63667</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63667#p63667"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63667#p63667"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div></div></blockquote>Well that won't work. Let's see, if an item doesn't have a getBBox function, it will error, not just that, if it does, only the first return value will get used, and the rest will be item.t, w and h.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Mon Aug 20, 2012 7:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-08-20T17:56:45+00:00</updated>
+
+		<published>2012-08-20T17:56:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=63663#p63663</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=63663#p63663"/>
+		<title type="html"><![CDATA[Re: bump.lua - minimal collision detection lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=63663#p63663"><![CDATA[
+I guess yes.<br>But I won't say bump is complicated. Cause actually, the way bump works seems pretty clear, to me.<br>Reading the intructions given in the <a href="https://github.com/kikito/bump.lua" class="postlink">README</a>.<br>After all, it tends to be a minimalistic tool for AABB collision handling. .. I can't be way too complex at the same time.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br><br>Well, if you're just going to be working with rectangular shapes, you can mod <em class="text-italics">bump.getBBox</em> function this way (line 316 in bump.lua)<br><div class="codebox"><p>Code: </p><pre><code>-- (Overridable) Given an item, return its bounding box (l,t,w,h)function bump.getBBox(item)  return (item:getBBox()) or item.l, item.t, item.w, item.hend</code></pre></div>You won't need anymore to implement <em class="text-italics">bump.getBBox</em>.<br>Therefore, collidable items you will pass to <em class="text-italics">bump.add</em> should have the required <em class="text-italics">l,t,w,h</em> keys.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Aug 20, 2012 5:56 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/2222" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-01-29T22:01:56+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/2222</id>
+
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2010-12-12T21:40:20+00:00</updated>
+
+		<published>2010-12-12T21:40:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23921#p23921</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23921#p23921"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23921#p23921"><![CDATA[
+He he, isometric Minecraft would be amusing.<br><br>I know the shadow thing you're talking about, redlock. I decided to trade-off the ability to properly depth-sort objects with graphics that go below (on the screen, not 3D) their origins to gain a significant performance increase. The fastest way to fix it is to change two lines in Isome\engine\engine.lua to these:<br><br>line 209: lgdraw(v.si, math.round(rx-cam.x), math.round(ry-cam.y)-6, 0, 1,1, 8,4)<br>line 214: lgdraw(v.i, math.round(rx-cam.x), (ry-cam.y)-6, 0, 1,1, 16,32)<br><br>Note the new -6 on the y-coordinates - that moves the graphic upwards a bit, so they won't be clipped by the next row in the depth sort. However, that can make precision jumping a little bit harder. *Shrugs*<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sun Dec 12, 2010 9:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[headchant]]></name></author>
+		<updated>2010-12-12T19:08:35+00:00</updated>
+
+		<published>2010-12-12T19:08:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23900#p23900</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23900#p23900"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23900#p23900"><![CDATA[
+<blockquote class="uncited"><div><br>Mïnecräft, anyone?<br></div></blockquote>...is what I was thinking!<br><br>This looks and feels great. The jumping and gravity stuff is awesome.<br><br>What bugs me is the flickering shadow of the player when he moves. It seems to have an issue of not being in the correct z-order or something.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1428">headchant</a> — Sun Dec 12, 2010 7:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bmelts]]></name></author>
+		<updated>2010-12-12T18:44:04+00:00</updated>
+
+		<published>2010-12-12T18:44:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23898#p23898</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23898#p23898"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23898#p23898"><![CDATA[
+So, uh...<br><br>Mïnecräft, anyone?<br><br>On a more serious note, this looks amazing. May need to mess around with it a bit once finals are over...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=317">bmelts</a> — Sun Dec 12, 2010 6:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2010-12-11T00:39:49+00:00</updated>
+
+		<published>2010-12-11T00:39:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23829#p23829</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23829#p23829"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23829#p23829"><![CDATA[
+zac352, save files are in, at the moment, pure Lua code. Back in Love 0.60 I used to zip them (which really helped), however, newer versions of Love somehow broke the file-reading in just such a way that my zipper won't work any more. *Sigh*<br><br>It works just fine in Love 0.7. What do you mean by embeddable?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Sat Dec 11, 2010 12:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ryne]]></name></author>
+		<updated>2010-12-10T22:15:21+00:00</updated>
+
+		<published>2010-12-10T22:15:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23827#p23827</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23827#p23827"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23827#p23827"><![CDATA[
+<blockquote class="uncited"><div>Isome is a 3D (logically and spatially, 2D graphically), tile-based engine. It could easily be used for platformers, RPGs, puzzle games, or, really, just about anything. It's very optimized, and can easily show over 100,000 tiles without slowing down. It has a realtime editor (with the ability to save and load maps to/from files) with some neat features.<br><br>Since Isome is meant to be built upon, I wrote it to be easily expanded, include useful and flexible functionality (including a code profiler and debug message system), and, most importantly, every file is filled with comments and documentation. The whole thing totals only about 650 lines of code, including comments, example snippets, and some demonstration maps.<br><br>Time for screenies.<br><br>It's /meant/ to also have multiplayer support, however, the networking module is taking me too long to write, so I thought I'd just release the singleplayer version for now. It's perfectly stable as is.<br><br>Want to give it a try? Download it <a href="http://dl.dropbox.com/u/3713769/web/isome/Isome%20v.1.zip" class="postlink">here</a>.<br><br>Want to test its ability to load maps from files? The map from the fourth screenshot is <a href="http://dl.dropbox.com/u/3713769/web/isome/isome.zil" class="postlink">here</a>. Put it in your AppData\Roaming\LOVE\Isome folder (or whichever you use, depending on your OS), run Isome in Love, Hit F3 to enable the editor, and press KP/.<br><br>I know it's not perfectly optimal (the trace function, for example, could be done better, but I don't know the math to do it), so I'd be happy to hear any comments, critique, or improvements you may come up with.</div></blockquote>Looks awesome, I'm definitely going to play with this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=932">Ryne</a> — Fri Dec 10, 2010 10:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2010-12-10T21:12:57+00:00</updated>
+
+		<published>2010-12-10T21:12:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23826#p23826</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23826#p23826"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23826#p23826"><![CDATA[
+Well done! I'll definitely be pointing people to this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Fri Dec 10, 2010 9:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zac352]]></name></author>
+		<updated>2010-12-10T20:18:07+00:00</updated>
+
+		<published>2010-12-10T20:18:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23825#p23825</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23825#p23825"/>
+		<title type="html"><![CDATA[Re: Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23825#p23825"><![CDATA[
+It sounds nice.<br><br>I have a question: What format are the saves in? CSV?<br>And will this work with 0.7.0, and how embeddable is it?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1415">zac352</a> — Fri Dec 10, 2010 8:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2012-01-29T22:01:56+00:00</updated>
+
+		<published>2010-12-10T16:40:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=23814#p23814</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=23814#p23814"/>
+		<title type="html"><![CDATA[Isome - 3D isometric tile-based engine]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=23814#p23814"><![CDATA[
+Isome is a 3D (logically and spatially, 2D graphically), tile-based engine. It could easily be used for platformers, RPGs, puzzle games, or, really, just about anything. It's very optimized, and can easily show over 100,000 tiles without slowing down. It has a realtime editor (with the ability to save and load maps to/from files) with some neat features.<br><br>Since Isome is meant to be built upon, I wrote it to be easily expanded, include useful and flexible functionality (including a code profiler and debug message system), and, most importantly, every file is filled with comments and documentation. The whole thing totals only about 650 lines of code, including comments, example snippets, and some demonstration maps.<br><br>Time for screenies.<br><br><img src="http://dl.dropbox.com/u/3713769/web/Love/isome/isome_screen1.png" class="postimage" alt="Image"><br><img src="http://dl.dropbox.com/u/3713769/web/Love/isome/isome_screen2.png" class="postimage" alt="Image"><br><img src="http://dl.dropbox.com/u/3713769/web/Love/isome/isome_screen3.png" class="postimage" alt="Image"><br><img src="http://dl.dropbox.com/u/3713769/web/Love/isome/isome_screen4.png" class="postimage" alt="Image"><br><br><br>It's /meant/ to also have multiplayer support, however, the networking module is taking me too long to write, so I thought I'd just release the singleplayer version for now. It's perfectly stable as is.<br><br>Want to give it a try? Download it <a href="http://dl.dropbox.com/u/3713769/web/Love/isome/Isome.love" class="postlink">here</a>.<br><br>Want to test its ability to load maps from files? The map from the fourth screenshot is <a href="http://dl.dropbox.com/u/3713769/web/Love/isome/isome.zil" class="postlink">here</a>. Put it in your AppData\Roaming\LOVE\Isome folder (or whichever you use, depending on your OS), run Isome in Love, Hit F3 to enable the editor, and press KP/.<br><br>I know it's not perfectly optimal (the trace function, for example, could be done better, but I don't know the math to do it), so I'd be happy to hear any comments, critique, or improvements you may come up with.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Fri Dec 10, 2010 4:40 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

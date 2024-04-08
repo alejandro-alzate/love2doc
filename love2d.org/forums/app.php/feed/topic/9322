@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/9322" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2017-03-31T07:55:33+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/9322</id>
+
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2017-03-31T07:55:33+00:00</updated>
+
+		<published>2017-03-31T07:55:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211264#p211264</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211264#p211264"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211264#p211264"><![CDATA[
+Glad it serves you well. Keep an eye on Jumper anyway. The next release will feature a lot of new features and improvements.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Fri Mar 31, 2017 7:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[NobodysSon]]></name></author>
+		<updated>2017-03-30T17:04:44+00:00</updated>
+
+		<published>2017-03-30T17:04:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211250#p211250</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211250#p211250"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211250#p211250"><![CDATA[
+Thank you 4aiman and Roland_Yonaba both for your replies! <br><br>And thank you Roland_Yonaba especially for this great library  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I've been struggling to reinvent the pathfinding wheel myself for a game I'm working on and your library has saved it from abandonment.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=71627">NobodysSon</a> — Thu Mar 30, 2017 5:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2017-03-30T15:46:11+00:00</updated>
+
+		<published>2017-03-30T15:46:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211246#p211246</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211246#p211246"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211246#p211246"><![CDATA[
+Yes there is. With the latest stable version (<a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1" class="postlink">1.8.1</a>), you can turn off diagonal searching <br>But actually it will work fine with most of search algorithm, except Jump Point Search. I remember I had a lot of troubles to get it to work with JPS since the original algorithm were not defined in such a way it can handle orthogonal moves only. Finally I came up with something buggy for JPS, but which will be fixed in a next release of the library.<br>See the documentation about <a href="http://yonaba.github.io/Jumper/docs/modules/jumper.pathfinder.html#pathfinder:setMode" class="postlink">pathfinder:setMode()</a> for more details.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Thu Mar 30, 2017 3:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2017-03-30T14:27:14+00:00</updated>
+
+		<published>2017-03-30T14:27:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211244#p211244</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211244#p211244"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211244#p211244"><![CDATA[
+According to the readme you should be able to.<div class="codebox"><p>Code: </p><pre><code>local path,length = myFinder:setFinder('ASTAR')   :setHeuristic('EUCLIDIAN')   :setMode('ORTHOGONAL')   :getPath(1,1,3,3)</code></pre></div><a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1" class="postlink">https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Thu Mar 30, 2017 2:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[NobodysSon]]></name></author>
+		<updated>2017-03-29T18:48:07+00:00</updated>
+
+		<published>2017-03-29T18:48:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211225#p211225</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211225#p211225"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211225#p211225"><![CDATA[
+Is there a way to 'turn off' diagonal searching limiting the path to orthogonal moves only?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=71627">NobodysSon</a> — Wed Mar 29, 2017 6:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2017-02-17T13:12:24+00:00</updated>
+
+		<published>2017-02-17T13:12:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209634#p209634</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209634#p209634"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209634#p209634"><![CDATA[
+Ummm... <br>Actually, I have found where my problems originated from:<br>- level map wasn't transposed prior to feeding it to the lib<br>- final location had to be walkable<br> <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> <br><br><br>Thanks for the lib!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>(And sorry for the trouble  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"> )<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Fri Feb 17, 2017 1:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2017-02-17T07:59:55+00:00</updated>
+
+		<published>2017-02-17T07:59:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209627#p209627</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209627#p209627"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209627#p209627"><![CDATA[
+<blockquote class="uncited"><div>Umm... Is there anyone who can help with jumper?</div></blockquote>Sure. Just state what the problem is.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Fri Feb 17, 2017 7:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4aiman]]></name></author>
+		<updated>2017-02-17T06:02:55+00:00</updated>
+
+		<published>2017-02-17T06:02:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209625#p209625</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209625#p209625"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209625#p209625"><![CDATA[
+Umm... Is there anyone who can help with jumper?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137450">4aiman</a> — Fri Feb 17, 2017 6:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rishavs]]></name></author>
+		<updated>2015-12-11T09:57:10+00:00</updated>
+
+		<published>2015-12-11T09:57:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=191898#p191898</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=191898#p191898"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=191898#p191898"><![CDATA[
+Hi<br><br>does anyone have a simple example of Jumper working with STI?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=727">Rishavs</a> — Fri Dec 11, 2015 9:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2014-01-17T15:34:45+00:00</updated>
+
+		<published>2014-01-17T15:34:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160987#p160987</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160987#p160987"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160987#p160987"><![CDATA[
+The Great Micha is definitely right. Although as of now, Jumper just features grid based maps.<br><a href="http://forums.coronalabs.com/topic/40813-pathfinding-a-video-tutorial-now-available/?p=214224" class="postlink">But I am working on it</a>. <a href="https://github.com/Yonaba/delaunay/" class="postlink">Slowly</a>, <a href="https://github.com/Yonaba/Algorithm-Implementations/tree/master/A_Star_Search/Lua/Yonaba" class="postlink">but I am definitely</a> <a href="https://github.com/Yonaba/Algorithm-Implementations/blob/master/Bresenham_Based_Supercover_Line/Lua/Yonaba/bresenham_based_supercover.lua" class="postlink">having some</a> <a href="https://github.com/Yonaba/Jumper/issues?state=open" class="postlink">progress</a>. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Ragzouken, great work so far. If you do not want the path to squeeze around the circle shape, you can tag its surrounding nodes as unwalkable in the collision map... <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Fri Jan 17, 2014 3:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ragzouken]]></name></author>
+		<updated>2014-01-17T12:43:02+00:00</updated>
+
+		<published>2014-01-17T12:43:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160971#p160971</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160971#p160971"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160971#p160971"><![CDATA[
+oh yeah, you are right about the corner thing<br><br>the reason I'm using jumper rather than polygon pathfinding is that I haven't really been able to work out how to derive the underlying polygons from the map data - the collision is done by ray intersection checks on 2d constructed solid geometry i.e union/difference/intersection of shapes, which as I understand it is a pain in the ass to make polygons from<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=59612">Ragzouken</a> — Fri Jan 17, 2014 12:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[micha]]></name></author>
+		<updated>2014-01-17T12:36:09+00:00</updated>
+
+		<published>2014-01-17T12:36:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160970#p160970</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160970#p160970"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160970#p160970"><![CDATA[
+<blockquote class="uncited"><div>you can see the top path sadly has a kink in it, but it's quite a lot better than what I was doing before.</div></blockquote>The kink is there, because at the corner, there is not grid points. The kink-path seems to be the shortest possible one on the grid.<br><br>There are algorithms for finding the true shortest path in a 2d area of polygons:<br>First remove the underlying grid. For the shortest path, all the "internal" grid nodes are not needed. Instead you only need all nodes at wall corners (assuming the player has a radius of zero). For round obstacles you would have to discretize them using polygons.<br>The start and end point of the path are not in this set of nodes, so add these two, too.<br><br>Next construct a graph out of these points by adding edges: For each pair of nodes, check if the two points can be connects by a straight line without hitting an obstacle (ray casting), if so, add an edge between the two nodes. This graph is called "visibility graph", I believe.<br><br>Then do path finding on this graph.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=67839">micha</a> — Fri Jan 17, 2014 12:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ragzouken]]></name></author>
+		<updated>2014-01-17T12:18:40+00:00</updated>
+
+		<published>2014-01-17T12:18:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160967#p160967</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160967#p160967"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160967#p160967"><![CDATA[
+<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=9148&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=9148" class="postimage" alt="002.png" /></a></dt></dl></div>all in all pretty good <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> you can see the top path sadly has a kink in it, but it's quite a lot better than what I was doing before.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=59612">Ragzouken</a> — Fri Jan 17, 2014 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2014-01-14T00:20:09+00:00</updated>
+
+		<published>2014-01-14T00:20:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160705#p160705</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160705#p160705"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160705#p160705"><![CDATA[
+Awesome. Really glad it worked.<br>Actually it has some minor flaws, when used with grids with tile based movements (yours is vertex-based), but i recently pinpointed the problem, i just need to replace the lineOfSight algorithm with a supercover bresenham based line marching algorithm. <br>Also, i might replace ThetAstar with a cheaper any-angle pathfinding algorithm, named Lazy ThetAstar, which seems better (I still have to make some tests before).<br>All those features will be merged in the next release! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Jan 14, 2014 12:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ragzouken]]></name></author>
+		<updated>2014-01-13T23:42:51+00:00</updated>
+
+		<published>2014-01-13T23:42:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160704#p160704</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160704#p160704"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160704#p160704"><![CDATA[
+This works great <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=59612">Ragzouken</a> — Mon Jan 13, 2014 11:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2014-01-13T23:24:15+00:00</updated>
+
+		<published>2014-01-13T23:24:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160701#p160701</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160701#p160701"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160701#p160701"><![CDATA[
+Let us try something.<br>Download the latest development version of Jumper (<a href="https://github.com/Yonaba/Jumper/archive/master.zip" class="postlink">direct link</a> to .zip), try ThetAStar and let me know how it works for you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><div class="codebox"><p>Code: </p><pre><code>local finder = Pathfinder(grid, 'THETASTAR',walkable)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Jan 13, 2014 11:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ragzouken]]></name></author>
+		<updated>2014-01-13T19:06:57+00:00</updated>
+
+		<published>2014-01-13T19:06:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160687#p160687</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160687#p160687"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160687#p160687"><![CDATA[
+Hey, thanks again for this; it's really nice to have a simple and fast pathing thing to drop in.<br><br>I'm wondering if you can provide any input to a problem I'm trying to solve - I want to try and smooth the path afterwards. One way of looking at it is that I want to allow any kind of movement between nodes that isn't blocked by a wall, rather than only allowing the eight compass directions. Not sure the best way to achieve this, if there even is a good way to solve it.<br><br>My current thought is look at sets of three consecutive points and see if the ends have line of sight to each other, but I'm not sure this would give great results every time and I probably need a strategy to subdivide straight paths (e.g in the image below you can see it wouldn't work for the top three points because they don't have line of sight). I thought you might have useful input since you seem to know a bit about pathfinding problems!<br><br>Here's what I'm currently looking at - ideally I'd want to turn that path into an approximation of the actual shortest path if there were no grid. <div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=9108&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=9108" class="postimage" alt="sound.png" /></a></dt></dl></div>edit: I guess I should make it clear that my geometry doesn't lend itself well to anything but ray/line/point checks for collision<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=59612">Ragzouken</a> — Mon Jan 13, 2014 7:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-07-08T18:01:17+00:00</updated>
+
+		<published>2013-07-08T18:01:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=110978#p110978</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=110978#p110978"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=110978#p110978"><![CDATA[
+<blockquote class="uncited"><div>hey i have a problem<br>in game.lua<div class="codebox"><p>Code: </p><pre><code>gr = grid(map)finder = pathfinder('JPS', gr, 0) </code></pre></div>i get an error saying it needs a grid object when initializing finder. so "gr" isn't a grid object for some reason.<br>help?</div></blockquote>Hi,<br><br>You might be using the latest <a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1" class="postlink">1.8.1</a> version. As I said in the <a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=9322&amp;start=70#p85285" class="postlink">relevant post</a>, and also in the <a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1#initializing-jumper" class="postlink">Readme</a>, the <strong class="text-strong">grid object must come first</strong>.<br>This is due to a little change I pushed since the previous version, as it was making more sense.<br>So the correct syntax would be :<br><div class="codebox"><p>Code: </p><pre><code>gr = grid(map)finder = pathfinder(gr, 'JPS', 0) </code></pre></div>Hope this helps.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Jul 08, 2013 6:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rokit boy]]></name></author>
+		<updated>2013-07-07T17:07:18+00:00</updated>
+
+		<published>2013-07-07T17:07:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=110880#p110880</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=110880#p110880"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=110880#p110880"><![CDATA[
+hey i have a problem<br>in main.lua<div class="codebox"><p>Code: </p><pre><code>grid = require ("jumper.grid")pathfinder = require ("jumper.pathfinder")</code></pre></div>in game.lua<div class="codebox"><p>Code: </p><pre><code>gr = grid(map)finder = pathfinder('JPS', gr, 0) </code></pre></div>i get an error saying it needs a grid object when initializing finder. so "gr" isn't a grid object for some reason.<br>help?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=25074">rokit boy</a> — Sun Jul 07, 2013 5:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[qaisjp]]></name></author>
+		<updated>2013-04-30T17:51:37+00:00</updated>
+
+		<published>2013-04-30T17:51:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101669#p101669</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101669#p101669"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101669#p101669"><![CDATA[
+I was minding my own business on a forum and it looks like I found something that may or may not interest you.. <a href="http://forum.mtasa.com/viewtopic.php?t=58384" class="postlink">http://forum.mtasa.com/viewtopic.php?t=58384</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=65500">qaisjp</a> — Tue Apr 30, 2013 5:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Karai17]]></name></author>
+		<updated>2013-03-08T17:33:39+00:00</updated>
+
+		<published>2013-03-08T17:33:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=87601#p87601</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=87601#p87601"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=87601#p87601"><![CDATA[
+Ooooh~ Avoiding stacking is brilliant!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=65219">Karai17</a> — Fri Mar 08, 2013 5:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-03-08T12:35:08+00:00</updated>
+
+		<published>2013-03-08T12:35:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=87516#p87516</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=87516#p87516"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=87516#p87516"><![CDATA[
+Hi all,<br><br>Find here an unofficial version of Jumper with minor modifications for multi-agents pathfinding, that I wrote upon the request of a user.<br>It doesn't aims to speed, but to return intelligent and realistic looking paths when moving a group of units, avoiding the "stacking" issue when units pathing at the same time have the same destination.<br>The <a href="https://github.com/Yonaba/Jumper/blob/node-weight/README.md" class="postlink">Readme</a> provides interesting details on how to use it.<br><strong class="text-strong">Grab it on Github</strong>: <a href="https://github.com/Yonaba/Jumper/tree/node-weight" class="postlink">branch - Node-weight</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Fri Mar 08, 2013 12:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-03-01T21:09:38+00:00</updated>
+
+		<published>2013-03-01T21:09:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=85285#p85285</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=85285#p85285"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.1)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=85285#p85285"><![CDATA[
+Hi all,<br>Here is a new iteration of Jumper: <a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1" class="postlink">1.8.1 release.</a><br>The detailed changelog can be found <a href="https://github.com/Yonaba/Jumper/blob/jumper-1.8.0/version_history.md" class="postlink">here</a>.<br><br>This new release if totally backwards compatible with the latest one, except for only one minor change (for pure convience issues), related to the way one inits the pathfinder object.<br>See the related documentation: <a href="http://yonaba.github.com/Jumper/modules/jumper.pathfinder.html#pathfinder:new" class="postlink">pathfinder</a><br>For now on, to init a new Pathfinder object, the <em class="text-italics">grid object comes first</em>. Then one specifies the finder algorithm to be used, and then the walkable value(s).<br><br>As a straightforward example:<div class="codebox"><p>Code: </p><pre><code>local Grid = require('jumper.grid')local Pathfinder = require('jumper.pathfinder')local map = {  {1,1,1,1,1},  {1,0,0,0,1},  {1,0,0,0,1},  {1,1,1,1,1},}local grid = Grid(map)local myFinder = Pathfinder(grid, 'JPS',0)</code></pre></div>Added to that, some inner changes were brought to the code in order to fix some little odds that were causing the pathfinder to fail on specific situations.<br>Hopefully, all issues detected were solved, as of now.<br><br>A new feature have been added, that is the ability for the pathfinder to tunnel through walls.<br>That feature overrides the normal behaviour of the pathfinder, and would authorize it to tunnel through walls, heading diagonally towards them.<br>The screeshot below illustrates this feature:<br><br><img src="http://ompldr.org/vaG1wNg" class="postimage" alt="Image"><br><br>See the <a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.1-1#tunnelling" class="postlink">dedicated section in the Readme</a>, for more details.<br><br>Documentation and full source is freely available.<br>To easily get started with this library, please take a look at the readme.<br><br><strong class="text-strong">Source</strong>: <a href="https://github.com/Yonaba/Jumper" class="postlink">Github</a><br><strong class="text-strong">Documentation</strong>: <a href="https://yonaba.github.com/Jumper" class="postlink">Jumper</a><br><br>Thanks reading.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Fri Mar 01, 2013 9:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-01-26T08:45:58+00:00</updated>
+
+		<published>2013-01-26T08:45:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=75717#p75717</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=75717#p75717"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.8.0)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=75717#p75717"><![CDATA[
+I've been actively working on this project the past hours, and i came up with a new iteration of Jumper.<br>Here's the <a href="https://github.com/Yonaba/Jumper/tree/jumper-1.8.0" class="postlink">1.8.0</a> release. The detailed changelog can be found <a href="https://github.com/Yonaba/Jumper/blob/jumper-1.8.0/version_history.md" class="postlink">here</a>.<br><br>Some little changes were brought to the interface. Mostly because I wasn't satisfied with the relationship that was existing between the Grid class and the Pathfinder class, that is, encapsulating the grid  object within the pathfinder. That was a bad design choice, just because it was preventing a user from handling efficiently map with multiple terrain types.<br>So, as of this new release, Jumper offers now to its users two main modules, at the top level :  a <strong class="text-strong">Grid</strong> class, and a <strong class="text-strong">Pathfinder</strong> class.<br><div class="codebox"><p>Code: </p><pre><code>local Grid = require('jumper.grid')local Pathfinder = require('jumper.pathfinder')</code></pre></div>To create a Grid, it is still fairly simple, just pass a collision map to the <em class="text-italics">Grid</em> class. Then, pass the Grid object to the <em class="text-italics">Pathfinder</em>. <br>The <em class="text-italics">Pathfinder</em> class takes three args upon instantiation: the finder name, referring to the search algorithm to be used, the grid and the value/function for walkable tiles.<br><div class="codebox"><p>Code: </p><pre><code>local map = {  {1,1,1,1,1},  {1,0,0,0,1},  {1,0,0,0,1},  {1,1,1,1,1},}local grid = Grid(map)local myFinder = Pathfinder('JPS', grid, 0)</code></pre></div>What makes that layout very interesting is that you can stick to a unique grid object, and then easily simulate multiple terrain types. In the example above, let's consider '1' represents a specific terrain type, like 'land', and 0 stands for 'water'. That way, one can design a finder that will look for path on 'lands', and another that will search for paths on 'water'. We can even have a pathfinder for both (land and water, as walkable can also be a function).<br><div class="codebox"><p>Code: </p><pre><code>local finderLand = Pathfinder('ASTAR', grid, 1)local finderWater = Pathfinder('ASTAR', grid, 0)local finderAmphibia = Pathfinder('ASTAR', grid, function(v) return v == 0 or v==1 end)</code></pre></div>Added to that, I have included some new search algorithms. Well, they may all not be fast, by essence, but the duty of a library is to offer choices, not to limit. So far, Jumper implements five well-know search algorithms:<em class="text-italics"> A-star, Dijkstra, Breadth first Search, Depth first search and Jump Point Search</em> (the fastest one actually).<br><br>The <em class="text-italics">Pathfinder</em> class and the <em class="text-italics">Grid</em> class have also been extended with some new methods, mostly for their convenient use. You can check out the online documentation for more details.<br><br>Last point, some methods such as <em class="text-italics">Pathfinder:filter()</em> and <em class="text-italics">Pathfinder:fill()</em> were removed from the Pathfinder class. For now on, using <a href="http://yonaba.github.com/Jumper/modules/jumper.pathfinder.html#pathfinder:getPath" class="postlink">Pathfinder:getPath</a> returns a <a href="http://yonaba.github.com/Jumper/modules/jumper.core.path.html" class="postlink">path</a>, which would be an instance or an internal class named Path. To alter the returned path (interpolate, or compress it), you will just have to call these methods from the returned object:<br><div class="codebox"><p>Code: </p><pre><code>local path = myFinder:getPath(startX, startY, endX, endY)if path then  path:fill() -- or path:filter()    -- iterating along the path  for node, count in path:iter() do    -- etc  endend</code></pre></div>Documentation is available online, and source. Check out the <a href="https://github.com/Yonaba/Jumper/blob/jumper-1.8.0/README.md" class="postlink">Readme</a>, as it provides all informations you need to easily get started.<br><strong class="text-strong">Source</strong>: <a href="https://github.com/Yonaba/Jumper" class="postlink">Github</a><br><strong class="text-strong">Documentation</strong>: <a href="http://yonaba.github.com/Jumper" class="postlink">Jumper</a><br><br>Thanks reading.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Sat Jan 26, 2013 8:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2013-01-24T15:20:39+00:00</updated>
+
+		<published>2013-01-24T15:20:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=75266#p75266</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=75266#p75266"/>
+		<title type="html"><![CDATA[Re: Jumper : 2D Pathfinder with Jump Point Search (v.1.7.0)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=75266#p75266"><![CDATA[
+Longest path is actually a much harder problem than shortest path:<br><br><a href="http://en.wikipedia.org/wiki/Longest_path_problem" class="postlink">http://en.wikipedia.org/wiki/Longest_path_problem</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Thu Jan 24, 2013 3:20 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

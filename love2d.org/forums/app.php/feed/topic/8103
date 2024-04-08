@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/8103" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-03-11T02:36:01+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/8103</id>
+
+		<entry>
+		<author><name><![CDATA[Kingdaro]]></name></author>
+		<updated>2012-03-11T02:36:01+00:00</updated>
+
+		<published>2012-03-11T02:36:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51447#p51447</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51447#p51447"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51447#p51447"><![CDATA[
+so wait<br><br>this "moonscript"<br><br>it's a scripting language made with a scripting language made with a scripting language?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1297">Kingdaro</a> — Sun Mar 11, 2012 2:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[trubblegum]]></name></author>
+		<updated>2012-03-10T11:57:09+00:00</updated>
+
+		<published>2012-03-10T11:57:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51343#p51343</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51343#p51343"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51343#p51343"><![CDATA[
+I think this would be a great little time-saver for a lot of folks.<br><br>Here's how the one line thing works ..<br><br>in donut.lua :<div class="codebox"><p>Code: </p><pre><code>local donut = {-- code here}return donut</code></pre></div>in main.lua :<div class="codebox"><p>Code: </p><pre><code>debug = require('donut') -- a global conaining the value returned by donut.lua, a donut</code></pre></div>no need for donut.init() because require returned a fully-formed donut, and I can still have a global donut, if I'm making a game about a donut <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>and since debug is a fully-formed donut, debug.draw() (more likely debug:draw()) is the donut's draw function<br><br>if you want to allow several instances of your donut (which personally, I think all libs should try to do) you can do something like :<div class="codebox"><p>Code: </p><pre><code>local donut = {   new = function(this)      local new = {         -- variables here, so they're not referenced      }      return setmetatable(new, {__index = this})   end-- functions here, so they're inherited}return donut</code></pre></div>Edit : You probably just want to return donut at the bottom of donut.lua, not an instance of donut, since it will be the master class anyway. That way I can use it right out of the box, or create instances if I choose.<br><br>Now I can have several debug objects, each tracking different objects, and positioned independently, like so :<div class="codebox"><p>Code: </p><pre><code>donut = require('donut')debugload = donut:new()debugupdate = donut:new()</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=33290">trubblegum</a> — Sat Mar 10, 2012 11:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasoki]]></name></author>
+		<updated>2012-03-10T02:06:39+00:00</updated>
+
+		<published>2012-03-10T02:06:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=51307#p51307</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=51307#p51307"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=51307#p51307"><![CDATA[
+Donut now also supports MoonScript. I thought it might be worth mentioning <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy">.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32369">Kasoki</a> — Sat Mar 10, 2012 2:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasoki]]></name></author>
+		<updated>2012-02-24T16:59:21+00:00</updated>
+
+		<published>2012-02-24T16:59:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50145#p50145</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50145#p50145"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50145#p50145"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>Two minor issues:<br>- Use require("donut"), not require("donut.lua").</div></blockquote>Done, but why is that so? I'm not a lua-guy^^</div></blockquote>That's because require thinks in terms of modules, not files. Just like in Java, or say Python:<div class="codebox"><p>Code: </p><pre><code>import this</code></pre></div>What programming language are you most familiar with? If it's not C/C++, chances are it uses a module-based thingy rather than a file-based thingy.</div></blockquote>Thanks, I thought Lua is rather file-based. I read the wrong tutorial, I guess.<br><br>I'm by the way a python developer <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink">.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32369">Kasoki</a> — Fri Feb 24, 2012 4:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-02-24T13:32:13+00:00</updated>
+
+		<published>2012-02-24T13:32:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50125#p50125</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50125#p50125"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50125#p50125"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Two minor issues:<br>- Use require("donut"), not require("donut.lua").</div></blockquote>Done, but why is that so? I'm not a lua-guy^^</div></blockquote>That's because require thinks in terms of modules, not files. Just like in Java, or say Python:<div class="codebox"><p>Code: </p><pre><code>import this</code></pre></div>What programming language are you most familiar with? If it's not C/C++, chances are it uses a module-based thingy rather than a file-based thingy.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Feb 24, 2012 1:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasoki]]></name></author>
+		<updated>2012-02-24T12:23:35+00:00</updated>
+
+		<published>2012-02-24T12:23:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=50121#p50121</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=50121#p50121"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=50121#p50121"><![CDATA[
+<blockquote class="uncited"><div>Look nice. I'll have to try it out.<br><br>Shouldn't it be called like Rimjob or something to work with the Libraries naming theme?</div></blockquote>I chose Donut because of 2 reasons:<br><br>1. It starts with a "D" like debug<br>2. And i thought the name would be perfect for a library called LÖVE. Donuts are lövely too! ;D<br><blockquote class="uncited"><div>Two minor issues:<br>- Use require("donut"), not require("donut.lua").</div></blockquote>Done, but why is that so? I'm not a lua-guy^^<br><blockquote class="uncited"><div>- Return a table containing your module's functions, don't create a global.</div></blockquote>I wanted to make something like that:<br><div class="codebox"><p>Code: </p><pre><code>require("donut")function love.load()debug = Donut.init(10, 10)fps = debug.add("FPS")random = debug.add("Random")endfunction love.update(dt)fps.update(love.timer.getFPS())random.update(math.random(0, 100))endfunction love.draw()debug.draw()end</code></pre></div>But if I would make it like that then, I would probably lose the one-line draw method. There is a possibility to make it like in the snippet but this would probably make the code inside donut.lua really ugly.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32369">Kasoki</a> — Fri Feb 24, 2012 12:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-02-21T11:55:31+00:00</updated>
+
+		<published>2012-02-21T11:55:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=49884#p49884</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=49884#p49884"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=49884#p49884"><![CDATA[
+Look nice. I'll have to try it out.<br><br>Shouldn't it be called like Rimjob or something to work with the Libraries naming theme?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Tue Feb 21, 2012 11:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2012-02-21T00:19:34+00:00</updated>
+
+		<published>2012-02-21T00:19:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=49867#p49867</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=49867#p49867"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=49867#p49867"><![CDATA[
+Two minor issues:<br>- Use require("donut"), not require("donut.lua").<br>- Return a table containing your module's functions, don't create a global.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Tue Feb 21, 2012 12:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ellohir]]></name></author>
+		<updated>2012-02-21T00:18:40+00:00</updated>
+
+		<published>2012-02-21T00:18:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=49866#p49866</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=49866#p49866"/>
+		<title type="html"><![CDATA[Re: Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=49866#p49866"><![CDATA[
+Simple... yet useful. Looks nice.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3838">Ellohir</a> — Tue Feb 21, 2012 12:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasoki]]></name></author>
+		<updated>2012-03-10T02:01:55+00:00</updated>
+
+		<published>2012-02-20T23:49:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=49865#p49865</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=49865#p49865"/>
+		<title type="html"><![CDATA[Donut - simplified debug message control system]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=49865#p49865"><![CDATA[
+Hey,<br><br>I developed a little library for debug messages. Why? I hate writing the same code multiple times, so i made this library. Probably there is no need for this but i still release it.<br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">What is Donut?</strong></span><br><br>Donut is a simplified debug message control system for LÖVE<br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">Debug message control system? wth???</strong></span><br><br>You're able to add debug messages like this:<br><br><img src="https://love2d.org/w/images/1/18/donutdebugscreen.png" class="postimage" alt="Image"><br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">Supported languages</strong></span><ul><li> Lua</li><li> MoonScript</li></ul><span style="font-size:150%;line-height:116%"><strong class="text-strong">Usage (Lua)</strong></span><br><div class="codebox"><p>Code: </p><pre><code>require("donut")function love.load()debug = Donut.init(10, 10)fps = debug.add("FPS")random = debug.add("Random")endfunction love.update(dt)debug.update(fps, love.timer.getFPS())debug.update(random, math.random(0, 100))endfunction love.keypressed(key, unicode)if key == "s" then -- show/hide with "s"debug.toggle()endendfunction love.draw()debug.draw()-- you could also use debug.draw(xoffset, yoffset) to move the message if you're using a camend</code></pre></div><span style="font-size:150%;line-height:116%"><strong class="text-strong">Usage (MoonScript)</strong></span><br><div class="codebox"><p>Code: </p><pre><code>require "donut"love.load = -&gt;export debug = Donut(10, 10)export fps = debug\add "FPS"export random = debug\add "Random"love.update = (dt) -&gt;debug\update fps, love.timer.getFPS()debug\update random, math.random(0, 100)""love.keypressed = (key, unicode) -&gt;debug\toggle if key == "s"""love.draw = -&gt;debug\draw 0, 0</code></pre></div><span style="font-size:150%;line-height:116%"><strong class="text-strong">Documentation</strong></span><br><br>Coming soon...<br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">License</strong></span><br><br>Donut is licensed under the terms of <a href="http://www.gnu.org/copyleft/lgpl.html" class="postlink">GNU Lesser General Public License v3</a>.<br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">Download</strong></span><br><ul><li> <a href="http://github.com/Kasoki/Donut/zipball/master" class="postlink">Download from my master-branch</a></li></ul><span style="font-size:150%;line-height:116%"><strong class="text-strong">Sourcecode</strong></span><br><ul><li> <a href="http://github.com/Kasoki/Donut" class="postlink">Donut on Github</a></li></ul><span style="font-size:150%;line-height:116%"><strong class="text-strong">See Also</strong></span><br><ul><li> <a href="https://love2d.org/wiki/Donut" class="postlink">Donut at LÖVE wiki</a></li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=32369">Kasoki</a> — Mon Feb 20, 2012 11:49 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
