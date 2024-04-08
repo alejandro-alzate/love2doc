@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1240" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2012-07-18T23:03:02+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1240</id>
+
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2012-07-18T23:03:02+00:00</updated>
+
+		<published>2012-07-18T23:03:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=61377#p61377</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=61377#p61377"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=61377#p61377"><![CDATA[
+Wow!<br><br>Cool to know that someone is still using this :-)<br><br>I'll update the library, thanks for the report...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Wed Jul 18, 2012 11:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TimFuchs]]></name></author>
+		<updated>2012-06-02T21:34:36+00:00</updated>
+
+		<published>2012-06-02T21:34:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=58329#p58329</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=58329#p58329"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=58329#p58329"><![CDATA[
+Pölygamy 0.4.1 doesn't work with Löve 0.8.0<br>It is easy to fix, just do the following:<br><br>in init.lua:<ul><li>replace handlers.q with handlers.quit<br>add 'love.event.pump()' before 'for e,a,b,c in love.event.poll() do'<br>replace 'a,b,c' with 'a,b,c,d in 'love.event.poll()' loop<br>change '1' in love.timer.sleep( 1 ) to 0.001<br>remove '..".lua"' from line 259 at 'require(Polygamy.path .."modules/" .. moduleIndex[module_] .. ".lua");'</li></ul>in PolyKeyboard replace handlers.kp and handlers.kr with handlers.keypressed and handlers.keyreleased.<br><br>To make the example 'main.lua' work, also replace "love.event.push('q')" wint "love.event.push('quit')"<br><br>Hope that helps somebody<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=52314">TimFuchs</a> — Sat Jun 02, 2012 9:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartoleo]]></name></author>
+		<updated>2010-07-21T09:02:43+00:00</updated>
+
+		<published>2010-07-21T09:02:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17541#p17541</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17541#p17541"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17541#p17541"><![CDATA[
+Very good<br>Thanks a lot<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1288">bartoleo</a> — Wed Jul 21, 2010 9:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-07-21T09:48:41+00:00</updated>
+
+		<published>2010-07-21T08:19:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17540#p17540</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17540#p17540"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17540#p17540"><![CDATA[
+To run it, you must put the Polygamy folder wherever you want to, and <br><div class="codebox"><p>Code: </p><pre><code>require "path.to.Polygamy.init" </code></pre></div>It will create a global Polygamy object. From there, you can use it as described in the first post of this thread.<br><br>There were indeed stray files in the archive. I've uploaded a cleaned up version.<br><br>The next version, which I'm polishing right now[*], is more modular. The custom love.run is extracted as library and is optional for both the state and keyboard lib.<br><br>Actually, it is extremely similar to the normal love.run loop, except that you can insert, remove and switch callbacks at a predictable point in the loop, ensuring that all callbacks are consistent at any given time. Polygamy works without it, but it makes things more transparent and more efficient.<br><br>The next Polygamy is almost self contained.<br><ul><li>the keyboard lib relies on the presence of the love.keypressed() and love.keyreleased() callbacks.</li><li>the state lib could relies only on love.update() and love.draw().</li><li>the upcoming timer lib relies on love.timer.getTime().</li><li>the upcoming soundtrack lib is a more invasive by design, but it only relies on love.sound.newSource, the presence of a metatable for source objects, source:getVolume and source:setVolume.</li></ul>The libraries are completely independent, although there's an option to integrate the keyboard and the state library for convenience.<br><br><strong class="text-strong">Edit: </strong>Refactoring done, the (upcoming) state library is love.run() agnostic.<br><br><span style="font-size:85%;line-height:116%"></span>[*] Lesson learned: never again will I let some half-refactored code rot for a few months.[/size]<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Wed Jul 21, 2010 8:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-07-20T15:13:03+00:00</updated>
+
+		<published>2010-07-20T15:13:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17506#p17506</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17506#p17506"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17506#p17506"><![CDATA[
+You won't lose the ability. (for now)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Tue Jul 20, 2010 3:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2010-07-20T15:03:52+00:00</updated>
+
+		<published>2010-07-20T15:03:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17503#p17503</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17503#p17503"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17503#p17503"><![CDATA[
+I use a custom love.run() function. I hope I don't lose the ability in the future. It's very convenient.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Tue Jul 20, 2010 3:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-07-20T08:54:27+00:00</updated>
+
+		<published>2010-07-20T08:54:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17494#p17494</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17494#p17494"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17494#p17494"><![CDATA[
+<blockquote class="uncited"><div>custom love.run ... this can be dangerous with new LÖVE versions...</div></blockquote>How is that dangerous? If a new version of LÖVE breaks the API (which it will), you will have to rewrite everything touching LÖVE anyway.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Jul 20, 2010 8:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartoleo]]></name></author>
+		<updated>2010-07-20T08:27:16+00:00</updated>
+
+		<published>2010-07-20T08:27:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17492#p17492</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17492#p17492"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17492#p17492"><![CDATA[
+I Thought it was easier...<br>custom love.run ... this can be dangerous with new LÖVE versions...<br>i'll try<br>there are many directories in the zip...<br>i must include all in my project?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1288">bartoleo</a> — Tue Jul 20, 2010 8:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-07-19T22:40:19+00:00</updated>
+
+		<published>2010-07-19T22:40:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17487#p17487</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17487#p17487"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17487#p17487"><![CDATA[
+0.4.1 is back online. Sorry for the delay.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Mon Jul 19, 2010 10:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2010-07-15T18:12:27+00:00</updated>
+
+		<published>2010-07-15T18:12:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17336#p17336</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17336#p17336"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17336#p17336"><![CDATA[
+<blockquote class="uncited"><div>[*]allows to treat the keyboard as a key matrix (full support for US qwerty keyboards only at the moment, but the common subset of qwerty, azerty and qwertz can be used universally (sorry, dvorak users))</div></blockquote>*Malcontent grumbling*<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Thu Jul 15, 2010 6:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartoleo]]></name></author>
+		<updated>2010-07-15T09:08:46+00:00</updated>
+
+		<published>2010-07-15T09:08:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=17326#p17326</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=17326#p17326"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=17326#p17326"><![CDATA[
+download link giving<br><br>404 Not Found<br><br>--------------------------------------------------------------------------------<br><br>nginx/0.7.67<br><br>where can i download last version of lib?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1288">bartoleo</a> — Thu Jul 15, 2010 9:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-04-29T16:49:49+00:00</updated>
+
+		<published>2010-04-29T16:49:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15228#p15228</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15228#p15228"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15228#p15228"><![CDATA[
+<blockquote class="uncited"><div>Nevon, any comment so far? You're the first Pölygamist to make his/her coming out...</div></blockquote>A series of unforeseen and shocking events have made me come to the conclusion that despite the fact that you have quite a lot of documentation in the first post, a real demo would be nice to have included. Preferably something just a smidge more in-depth than the one currently included.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Thu Apr 29, 2010 4:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-04-26T17:03:40+00:00</updated>
+
+		<published>2010-04-26T17:03:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15155#p15155</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15155#p15155"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15155#p15155"><![CDATA[
+<blockquote class="uncited"><div>Nevon, any comment so far? You're the first Pölygamist to make his/her coming out...</div></blockquote>Between mine and bartbes' project and university, I haven't had any time to work on my own project (that will be using Pölygamy), so I don't really have any comments yet.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Mon Apr 26, 2010 5:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-04-26T13:31:40+00:00</updated>
+
+		<published>2010-04-26T13:31:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15152#p15152</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15152#p15152"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15152#p15152"><![CDATA[
+I'm still working on the next version, things are starting to look more tidy.<br><br>Nevon, any comment so far? You're the first Pölygamist to make his/her coming out...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Mon Apr 26, 2010 1:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-04-19T18:17:08+00:00</updated>
+
+		<published>2010-04-19T18:17:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14962#p14962</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14962#p14962"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14962#p14962"><![CDATA[
+<blockquote class="uncited"><div>That's already been <a href="http://love2d.org/forum/viewtopic.php?f=5&amp;t=1472" class="postlink">done</a>.</div></blockquote>Oh, you're right. I guess I have to settle for second place.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Mon Apr 19, 2010 6:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-04-19T17:56:25+00:00</updated>
+
+		<published>2010-04-19T17:56:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14961#p14961</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14961#p14961"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14961#p14961"><![CDATA[
+That game was perfect.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Mon Apr 19, 2010 5:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2010-04-19T17:49:49+00:00</updated>
+
+		<published>2010-04-19T17:49:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14960#p14960</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14960#p14960"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14960#p14960"><![CDATA[
+That's already been <a href="http://love2d.org/forum/viewtopic.php?f=5&amp;t=1472" class="postlink">done</a>.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Apr 19, 2010 5:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-04-19T17:43:28+00:00</updated>
+
+		<published>2010-04-19T17:43:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14959#p14959</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14959#p14959"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14959#p14959"><![CDATA[
+<blockquote class="uncited"><div>v 0.4.1 is back up.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Yay! Now I can get back to building the most polished and well-engineered game that the Löve forums have ever seen!<br><br><span style="color:#FFFF80"><span style="font-size:85%;line-height:116%">That last part might have been a slight overstatement.</span></span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Mon Apr 19, 2010 5:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-04-19T17:13:52+00:00</updated>
+
+		<published>2010-04-19T17:13:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14958#p14958</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14958#p14958"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14958#p14958"><![CDATA[
+v 0.4.1 is back up.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br><br>--<br>Kikito: You're right, I meant a subject for the phrase.<br><br><em class="text-italics">x and y</em> are the coordinates of the keys, to use with key ranges, for example.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Mon Apr 19, 2010 5:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2010-04-16T22:55:17+00:00</updated>
+
+		<published>2010-04-16T22:55:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14854#p14854</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14854#p14854"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14854#p14854"><![CDATA[
+<blockquote class="uncited"><div>how would you translate<br><div class="codebox"><p>Code: </p><pre><code>"arrows" :held (function(k,x,y,dt) character[k](character,dt) end)</code></pre></div></div></blockquote>:/ <br><br>...I would have to understand it first. What is that code? What are x and y? what does character[k] return?<br><br>My approach isn't exactly OO-tied. You just need a "message queue" where "observers" can "subscribe" to "events". Since PÄSSION was object oriented, it was very logical to use it, but it is not a requirement. As long as the subscribers have a method to "be told" that an event has happened, it is still doable. I think. In any case, you still need a "subject" for the "phrase" - maybe that's what you meant by object-oriented.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Apr 16, 2010 10:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-04-16T21:10:38+00:00</updated>
+
+		<published>2010-04-16T21:10:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14853#p14853</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14853#p14853"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14853#p14853"><![CDATA[
+<blockquote class="uncited"><div>That sounds awfully useful...<br><br>EDIT: That's a positive thing btw, I state this here because Robin failed to understand it.</div></blockquote>Thanks :-)<br><br>Another potential feature (that may appear in a distant future): the ability to record and play back the keystrokes, to record a demo, for example, building on SerialDäter and Pölygamy.keyboard.<br><br>Edit: Kikito, that solution is fine for an object-oriented approach like yours, but I don't think it would work for Polygamy. The callbacks are bound to letters, not to objects. I may pass the object, it's property and a parameter, but I'm not sure it would fit the rest of the DSL. Say, how would you translate<br><br>"arrows" :held (function(k,x,y,dt) character[k](character,dt) end)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Fri Apr 16, 2010 9:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-04-16T17:50:13+00:00</updated>
+
+		<published>2010-04-16T17:50:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14851#p14851</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14851#p14851"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14851#p14851"><![CDATA[
+<blockquote class="uncited"><div>EDIT: That's a positive thing btw, I state this here because Robin failed to understand it.</div></blockquote>I thank you with all of my humble intellect.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Apr 16, 2010 5:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-04-16T17:34:12+00:00</updated>
+
+		<published>2010-04-16T17:34:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14850#p14850</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14850#p14850"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14850#p14850"><![CDATA[
+That sounds awfully useful...<br><br>EDIT: That's a positive thing btw, I state this here because Robin failed to understand it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Apr 16, 2010 5:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pygy]]></name></author>
+		<updated>2010-04-16T17:14:39+00:00</updated>
+
+		<published>2010-04-16T17:14:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14849#p14849</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14849#p14849"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14849#p14849"><![CDATA[
+Well, they make me smile...They all make sense, though, don't they?<br><br>I plan to refer to all of them using <em class="text-italics">Affaïrs</em> as an umbrella term <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy">.<br><br>I hope the names won't prevent you from using them.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=915">pygy</a> — Fri Apr 16, 2010 5:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-04-16T16:53:23+00:00</updated>
+
+		<published>2010-04-16T16:53:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=14848#p14848</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=14848#p14848"/>
+		<title type="html"><![CDATA[Re: Pölygamy: a collection of LÖVE helper libraries]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=14848#p14848"><![CDATA[
+Those names make me cringe. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-uhm.png" width="16" height="16" alt=":roll:" title="Rolling Eyes"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Apr 16, 2010 4:53 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

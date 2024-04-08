@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/8281" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2019-03-07T14:54:38+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/8281</id>
+
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-03-07T14:54:38+00:00</updated>
+
+		<published>2019-03-07T14:54:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=226211#p226211</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=226211#p226211"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=226211#p226211"><![CDATA[
+<blockquote class="uncited"><div>My understanding of how programmers and artists interact with regards to animation is limited. The scenario where there is an artist tweaking animations and a programmer doing the code didn't even cross my mind to be honest. The user I envision for my libraries tends to be a single programmer working by themselves. My gut feeling is that that describes 95% of my users.</div></blockquote>I agree, I also assume that most love users are single programmers. However, there's a lot of team making cool games with love for a while now as more and more users get interested into using love for making games, so it's fair to reach and provide an animation library for programmers and artists for such audience. Or maybe a separate animation library? This way, there will be no compromise to the initial design and philosophy of anim8 while still tending to teams.<br><blockquote class="uncited"><div>If I were to cover the additional use case for artists and programmers, I guess I would be adding some kind of "tagging" feature to animations. I am not sure about how they would look. I am pretty sure I would not want to "marry" tags to frames. They would be separate systems. It could be done with an extra parameter:</div></blockquote>Yeah, tagging is also useful and great, especially for me and my artist friend because Aseprite is our main tool.<br><blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>local animation = anim8.newAnimation(..., frame_duration, nil, { fire = frame_duration * 2 })</code></pre></div>Then the update method could return a list of tags that have passed since last frame:<br><div class="codebox"><p>Code: </p><pre><code>local tags = animation:update(dt)if tags.fire then  -- a bullet was firedend</code></pre></div></div></blockquote>That usage is how I would really prefer it!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Thu Mar 07, 2019 2:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2019-03-07T02:11:10+00:00</updated>
+
+		<published>2019-03-07T02:11:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=226203#p226203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=226203#p226203"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=226203#p226203"><![CDATA[
+I was AKF for while there, apologies.<br><br>Very good points on this thread.<br><br>My understanding of how programmers and artists interact with regards to animation is limited. The scenario where there is an artist tweaking animations and a programmer doing the code didn't even cross my mind to be honest. The user I envision for my libraries tends to be a single programmer working by themselves. My gut feeling is that that describes 95% of my users.<br><br>If I were to cover the additional use case for artists and programmers, I guess I would be adding some kind of "tagging" feature to animations. I am not sure about how they would look. I am pretty sure I would not want to "marry" tags to frames. They would be separate systems. It could be done with an extra parameter:<br><div class="codebox"><p>Code: </p><pre><code>local animation = anim8.newAnimation(..., frame_duration, nil, { fire = frame_duration * 2 })</code></pre></div>Then the update method could return a list of tags that have passed since last frame:<br><div class="codebox"><p>Code: </p><pre><code>local tags = animation:update(dt)if tags.fire then  -- a bullet was firedend</code></pre></div>Something along those lines. The artist would have to tweak both the animation frames and the tags when he did changes. Or their tools would update those.<br><br>Anyway that is just an idea of how it might work. I don't think the amount of programmers cooperating with artists using my library justifies this development. But I will review PRs on this direction if someone else sends them.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Mar 07, 2019 2:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2019-02-23T05:07:14+00:00</updated>
+
+		<published>2019-02-23T05:07:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225971#p225971</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225971#p225971"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225971#p225971"><![CDATA[
+<blockquote class="uncited"><div>What properties do you think should the metadata have?</div></blockquote>We shouldn't hijack this thread - post a new one with a bit of description what you want to do.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Feb 23, 2019 5:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-02-23T03:18:08+00:00</updated>
+
+		<published>2019-02-23T03:18:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225969#p225969</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225969#p225969"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225969#p225969"><![CDATA[
+<blockquote class="uncited"><div>Animation formats that allow to bind events to certain timecodes are superior in my opinion. The artist should be able to control the timing of those events, not the programmer. You can of course add this on top of an existing animation system and make timing information part of the animation asset's metadata. That's good and flexible design.</div></blockquote>I am interested in making a gui tool for artists to easily provide details for metadata to be used within the game.<br><br>What properties do you think should the metadata have?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Feb 23, 2019 3:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-02-22T15:27:38+00:00</updated>
+
+		<published>2019-02-22T15:27:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225959#p225959</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225959#p225959"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225959#p225959"><![CDATA[
+There's another point I wanted to make: anim8 is designed in a way that considers animations like mini-movies, which is good for simple retro-style games, but for more sophisticated games, you may want to pay attention to things like where the limbs of the main character are while walking, e.g. in order to smooth the transition from walking to stopped. This depends directly on the animation frame being played, and different animations at different stages need to be played depending on it. For example, while walking, if the left leg of the character is advanced, you need to play a stopping animation that moves it back and not the right leg. Flashback comes to mind as an example.<br><br>Another example: <a href="https://love2d.org/forums/viewtopic.php?f=4&amp;t=85324" class="postlink">viewtopic.php?f=4&amp;t=85324</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Fri Feb 22, 2019 3:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[NotARaptor]]></name></author>
+		<updated>2019-02-22T15:07:53+00:00</updated>
+
+		<published>2019-02-22T15:07:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225958#p225958</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225958#p225958"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225958#p225958"><![CDATA[
+@grump, totally see your point, and so long as kikito doesn't mind his thread being hijacked, it makes for a great discussion. As with everything in development, there is rarely a one-size-fits-all solution that is optimal for every project, team and workflow.<br><blockquote class="uncited"><div>You can of course add this on top of an existing animation system and make timing information part of the animation asset's metadata. That's good and flexible design.</div></blockquote>Yes, 100% yes.<br><blockquote class="uncited"><div>The artist should be able to control the timing of those events, not the programmer. </div></blockquote>Ehhh.... yes and no. I can see what you mean, but let me give you a simple counterexample.<br><br>If you have some kind of... shooter game or something, with different weapons and different enemies, the damage values, rates of fire, and lots of other statistics will be worked out well in advance and thoroughly tested to balance it. If an artists adds a few frames to the reload animation of... a crossbow, for example, it would change its rate of fire, which would mess up the (hopefully) fine-tuned balance of weapons and enemies. It's easy to say "well, if the rate of fire has decreased X% then we'll increase the damage per projectile by Y% to keep the same DPS", but if some enemies have different protection values against different weapons, it obviously becomes more complicated than that.<br><br>On top of that, the level designer might have designed a specific wave of enemies to work well (appropriate challenge level) with the weapons found on the level in a certain sequence, in collab with the stats guy who balanced everything... well those few extra frames just killed the level experience, possibly making it way too easy or way too difficult.<br><br>So I 100% agree that the animation asset (and everything else) should contain metadata about timings, that metadata should be available to the other systems; in an ideal world (with the above example) the animator would change the animation, and then when the unit tests are run the changes in weapon/enemy balances would flag up as failed tests and it would be resolved in the team.<br><blockquote class="uncited"><div>having your game still work flawlessly after your artist changed some animation makes for a good workflow with low turnaround times</div></blockquote>Of course, but I'm not convinced that there's a way to make it still work flawlessly, as in the above example. Of course for some games it wouldn't be an issue, but in the general case I think it would.<br><blockquote class="uncited"><div>I'd argue that having to change hardcoded constants in the code because some graphics has changed is not very good design in most cases</div></blockquote>I also agree, I misspoke when I said "X seconds - defined in the game logic" - I meant "defined in the game system". Hardcoded constants have no place in code - code is for logic, data belongs elsewhere (config files, databases) where it can be accessed, consumed and even modified by several components, not just the code itself.<br><blockquote class="uncited"><div>can become hell very quickly, especially in larger games</div></blockquote>Absolutely. Complexity grows very quickly and becomes impossible to manage if not planned for. The architecture of any system - game or otherwise - needs to be specced out in advance, and one of the key points is to determine what the source of truth of the data is, and stick to it (anyone who has developed anything dealing with multiple layers of cache will know this!). There are definitely projects where the animation timeline itself is a viable source of truth, but others where it isn't; a simple example would be some cut scene with a background track - if the animator changes the timings of an important character movement, it may then not line up with the relevant part of the background music, which would make the composer justifiably irked.<br><br>Huh, that was longer than I intended to write. Oops. Anyway, the point is - there are several animation libraries which allow callbacks and syncs based on the animation system's internal state. This one doesn't and I understand why, and like the approach. It might be convoluted and for some projects or ways of working, but that's fine, there are other animation libraries <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139886">NotARaptor</a> — Fri Feb 22, 2019 3:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2019-02-22T12:54:04+00:00</updated>
+
+		<published>2019-02-22T12:54:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225955#p225955</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225955#p225955"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225955#p225955"><![CDATA[
+On the other hand, having your game still work flawlessly after your artist changed some animation makes for a good workflow with low turnaround times. I'd argue that having to change hardcoded constants in the code because some graphics has changed is not very good design in most cases and can become hell very quickly, especially in larger games. Compare that to a UI where you have to alter the code because the dimensions or tween timings of some elements have changed - that's not desirable at all.<br><br>Animation formats that allow to bind events to certain timecodes are superior in my opinion. The artist should be able to control the timing of those events, not the programmer. You can of course add this on top of an existing animation system and make timing information part of the animation asset's metadata. That's good and flexible design.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Fri Feb 22, 2019 12:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-02-22T12:49:59+00:00</updated>
+
+		<published>2019-02-22T12:49:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225954#p225954</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225954#p225954"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225954#p225954"><![CDATA[
+After reading the thread, ive learned that what kikito stands for is good. It's a good thing to learn something better everyday. Thanks for kindly explaining it<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Feb 22, 2019 12:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[NotARaptor]]></name></author>
+		<updated>2019-02-22T11:59:48+00:00</updated>
+
+		<published>2019-02-22T11:59:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225953#p225953</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225953#p225953"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225953#p225953"><![CDATA[
+I just want to chip in here and say that I really like your stance on the flow of information in the animation library here, even if it seems to be unpopular with (or just strange to) some users.<br><br>I totally agree - business logic should dictate animation logic, and not the other way around. After all, the animation is just one visualisation of the game state itself - it should be entirely possible to run a simulation of the game with no graphics (so no animation), and any business logic that executes as a result of the animation state would make that impossible.<br><br>As a simple example, an explosion sprite should not despawn because it's just played its last frame, it should despawn because an explosion takes X seconds - defined in the game logic. That timing is passed on to the animation AND to the and despawn event (and to the sound effect), but the despawn (game logic) event should never be triggered from the animation state itself, no more than it would be triggered from the explosion sound effect ending.<br><br>I think that this might seem odd to people who are used to working with timeline-based tools such as Flash, where there are events assigned to "Frame X", which always seemed odd and convoluted to me on the few occasions I had to use the Flash Editor (many moons ago); it felt like setting up the entire game flow with gotos instead of proper control structures.<br><br>Anyway, I like it, but I can see why it might seem odd to some people. But imo it's the best way to do it. Rock on.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139886">NotARaptor</a> — Fri Feb 22, 2019 11:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2019-02-22T10:27:44+00:00</updated>
+
+		<published>2019-02-22T10:27:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225950#p225950</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225950#p225950"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225950#p225950"><![CDATA[
+<blockquote class="uncited"><div><br>Why not integrate something like<br><div class="codebox"><p>Code: </p><pre><code>obj_anim:onFrame(2, function_callback)</code></pre></div></div></blockquote>Sorry to sound like a broken record: If I'm understanding you correctly, that would push people into coupling game logic with animation logic. That goes against the design I envisioned for this library and I will not make such change.<br><br>If you wish you can fork the library and add such callback, feel free to do it in your fork. I will not take it personally.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Feb 22, 2019 10:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-02-22T10:05:35+00:00</updated>
+
+		<published>2019-02-22T10:05:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225949#p225949</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225949#p225949"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225949#p225949"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>frame_duration * (nth_frame_wanted - 1)<br><br>?</div></blockquote>Yes, but don't take it as a law. That code works for the given example: an animation where all frames have the same duration. Other animations can have different duration on different frames, so the equation could be different. Furthermore, they can be set up to wrap around, or to advance at delayed/increased rates (see a previous answer on this thread), or the animation reset with <strong class="text-strong">gotoFrame</strong>.</div></blockquote>Why not integrate something like<br><div class="codebox"><p>Code: </p><pre><code>obj_anim:onFrame(2, function_callback)</code></pre></div>Only for animation with same duration for all frame? That seems necessary for an animation library, what do you think?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Feb 22, 2019 10:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2019-02-22T09:55:50+00:00</updated>
+
+		<published>2019-02-22T09:55:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225947#p225947</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225947#p225947"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225947#p225947"><![CDATA[
+<blockquote class="uncited"><div>frame_duration * (nth_frame_wanted - 1)<br><br>?</div></blockquote>Yes, but don't take it as a law. That code works for the given example: an animation where all frames have the same duration. Other animations can have different duration on different frames, so the equation could be different. Furthermore, they can be set up to wrap around, or to advance at delayed/increased rates (see a previous answer on this thread), or the animation reset with <strong class="text-strong">gotoFrame</strong>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Feb 22, 2019 9:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-02-21T21:47:15+00:00</updated>
+
+		<published>2019-02-21T21:47:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225940#p225940</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225940#p225940"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225940#p225940"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>How does one get the frame duration of a specific frame in animation? </div></blockquote>Those values are not meant to be read by the outside world, because game logic should not depend on animation frames. That info is "set" only - by design. If you need the frame duration for future use, I recommend you store it on its own variable and reuse it for both the animation and the timer:<br><div class="codebox"><p>Code: </p><pre><code>local frame_duration = 0.3local firing_threshold = frame_duration * 2 -- fire at the start of third framelocal function create_player()  return {    current_animation = nil,    firing_timer = nil,    fire_animation = Anim8.newAnimation(grid('1-6', 1), frame_duration),  }endlocal function start_firing(player)  player.firing_timer = 0  player.fire_animation:gotoFrame(1)  player.current_animation = fire_animationendlocal function update_player(player, dt)  if player.firing_timer then    player.firing_timer = player.firing_timer + dt    if player.firing_timer &gt;= firing_threshold then      create_bullet(player)      player.firing_timer = nil    end  endend</code></pre></div>On the example above, the variable firing_threshold is calculated with values that are also used to set up the animation, but the animation itself is not used as an input for the firing timer. You could remove anim8 from the game completely (perhaps using a different animation system, or just static images for everything) and the game logic should still work.</div></blockquote>Thanks for the explanation. <br><br>So to wrap up and, it is<br><br>frame_duration * (nth_frame_wanted - 1)<br><br>?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Thu Feb 21, 2019 9:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2019-02-21T15:37:40+00:00</updated>
+
+		<published>2019-02-21T15:37:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225916#p225916</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225916#p225916"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225916#p225916"><![CDATA[
+<blockquote class="uncited"><div>How does one get the frame duration of a specific frame in animation? </div></blockquote>Those values are not meant to be read by the outside world, because game logic should not depend on animation frames. That info is "set" only - by design. If you need the frame duration for future use, I recommend you store it on its own variable and reuse it for both the animation and the timer:<br><div class="codebox"><p>Code: </p><pre><code>local frame_duration = 0.3local firing_threshold = frame_duration * 2 -- fire at the start of third framelocal function create_player()  return {    current_animation = nil,    firing_timer = nil,    fire_animation = Anim8.newAnimation(grid('1-6', 1), frame_duration),  }endlocal function start_firing(player)  player.firing_timer = 0  player.fire_animation:gotoFrame(1)  player.current_animation = fire_animationendlocal function update_player(player, dt)  if player.firing_timer then    player.firing_timer = player.firing_timer + dt    if player.firing_timer &gt;= firing_threshold then      create_bullet(player)      player.firing_timer = nil    end  endend</code></pre></div>On the example above, the variable firing_threshold is calculated with values that are also used to set up the animation, but the animation itself is not used as an input for the firing timer. You could remove anim8 from the game completely (perhaps using a different animation system, or just static images for everything) and the game logic should still work.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Feb 21, 2019 3:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-02-15T04:42:13+00:00</updated>
+
+		<published>2019-02-15T04:42:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225765#p225765</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225765#p225765"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225765#p225765"><![CDATA[
+<blockquote class="uncited"><div>The "current frame" is not documented on purpose, because you should not tie your game logic to your animations.<br><br>If you must know, it is `anim.position`. Let me explain why you should not use it.<br><br>As an example, let's say that your 4-frame animation is a "shooting a gun" animation, with frame durations {0.1, 0.2, 0.3, 0.4 }. Let's say that a bullet should be created a the beginning of the third frame.<br><br>The way to properly resolve this is: when you initialize the animation, you also set an independent timer variable to 0. Every time you update the animation with dt, you also increase the timer animation with dt. Then you check if the timer is &gt;= 0.3 seconds (which is the duration of the first and second frames put together, 0.1 + 0.2). If the condition succeeds, you create the bullet and discard the counter.<br><br>You should *not* be doing is `if anim.position == 3` on every frame and create the bullet with that if. For two reasons:<br><ul><li> anim.position is going to be equal to 3 for potentially a lot of frames. You will need an extra variable to control that you have already fired the bullet. So you might as well create the timer variable instead of the `hasAlreadyFired` variable.</li><li> The game could have spent a lot of time on the previous frame (doing something intensive like physics or pathfinding) and the animation could have gone from frame 1 to frame 4 without going over the intermediate frames. If you only look at the animation frames you won't create a bullet, but if you use a separate timer you will.</li></ul></div></blockquote>How does one get the frame duration of a specific frame in animation? Let's say i have a 6-frame animation:<br><div class="codebox"><p>Code: </p><pre><code>local grid = Anim8.newGrid(101, 360, sheet:getWidth(), sheet:getHeight())local obj_anim = Anim8.newAnimation(grid('1-6', 1), 0.3)</code></pre></div>so each frame has a duration of 0.3, then with what youve explained using a timer<br><div class="codebox"><p>Code: </p><pre><code>--every time the animation is played/createdlocal timer = 0--on updatetimer = timer + dtobj_anim:update(dt)if timer &gt;= ???? then  --do somethingend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Fri Feb 15, 2019 4:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2019-01-22T12:28:15+00:00</updated>
+
+		<published>2019-01-22T12:28:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225316#p225316</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225316#p225316"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225316#p225316"><![CDATA[
+The "current frame" is not documented on purpose, because you should not tie your game logic to your animations.<br><br>If you must know, it is `anim.position`. Let me explain why you should not use it.<br><br>As an example, let's say that your 4-frame animation is a "shooting a gun" animation, with frame durations {0.1, 0.2, 0.3, 0.4 }. Let's say that a bullet should be created a the beginning of the third frame.<br><br>The way to properly resolve this is: when you initialize the animation, you also set an independent timer variable to 0. Every time you update the animation with dt, you also increase the timer animation with dt. Then you check if the timer is &gt;= 0.3 seconds (which is the duration of the first and second frames put together, 0.1 + 0.2). If the condition succeeds, you create the bullet and discard the counter.<br><br>You should *not* be doing is `if anim.position == 3` on every frame and create the bullet with that if. For two reasons:<br><ul><li> anim.position is going to be equal to 3 for potentially a lot of frames. You will need an extra variable to control that you have already fired the bullet. So you might as well create the timer variable instead of the `hasAlreadyFired` variable.</li><li> The game could have spent a lot of time on the previous frame (doing something intensive like physics or pathfinding) and the animation could have gone from frame 1 to frame 4 without going over the intermediate frames. If you only look at the animation frames you won't create a bullet, but if you use a separate timer you will.</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Jan 22, 2019 12:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack Dandy]]></name></author>
+		<updated>2019-01-18T18:16:57+00:00</updated>
+
+		<published>2019-01-18T18:16:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225258#p225258</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225258#p225258"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225258#p225258"><![CDATA[
+Hey there. Let's say I have an animation composed of 4 frames.  How can I figure out the number of the frame the animation is currently in?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135624">Jack Dandy</a> — Fri Jan 18, 2019 6:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2018-01-26T17:11:20+00:00</updated>
+
+		<published>2018-01-26T17:11:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=218000#p218000</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=218000#p218000"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=218000#p218000"><![CDATA[
+<blockquote class="uncited"><div>...Please explain...</div></blockquote>Those two sentences mean the same thing, playing the animation once == looping once, then pausing at the last frame, i.e. the index won't go back to the first frame.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Jan 26, 2018 5:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Timon]]></name></author>
+		<updated>2018-01-26T13:17:57+00:00</updated>
+
+		<published>2018-01-26T13:17:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217992#p217992</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217992#p217992"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217992#p217992"><![CDATA[
+Dear Kikito, thanks you for anim8!<br><br>Please explain - in <a href="https://github.com/kikito/anim8#animations" class="postlink">Animations part</a> i see <blockquote class="uncited"><div>onLoop is an optional parameter which can be a function or a string representing one of the animation methods. It does nothing by default. If specified, it will be called every time an animation "loops". It will have two parameters: the animation instance, and how many loops have been elapsed. The most usual value (apart from none) is the string 'pauseAtEnd'. It will make the animation <span style="text-decoration:underline">loop once and then pause and stop on the last frame.</span></div></blockquote>But bellow i see another description<blockquote class="uncited"><div>animation:pauseAtEnd()<br><span style="text-decoration:underline">Moves the animation to its last frame and then pauses it.</span></div></blockquote>I know that this works as described below - moves the animation to its last frame and then pauses it.<br><br>Thanks you again )<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139813">Timon</a> — Fri Jan 26, 2018 1:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-01-02T16:17:00+00:00</updated>
+
+		<published>2018-01-02T16:17:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217539#p217539</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217539#p217539"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217539#p217539"><![CDATA[
+<blockquote class="uncited"><div>You can make animations go faster or slower by altering the dt you pass them:<br><div class="codebox"><p>Code: </p><pre><code>-- if instead of anim:update(dt) you do:anim:update(dt * 2)   -- anim will run twice as fast.anim:update(dt * 0.5) -- anim will run twice as slow.</code></pre></div>So you can store that coefficient in a variable and multiply it on the update section. You can use this to do cool stuff like time manipulation, or make the gears of a train engine move in synchronicity with its velocity, using a single animation.<br><br>Apart from that, you can always create a new animation, of course.</div></blockquote>Yet so simple, how could I miss that, great. Thank you so much!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Tue Jan 02, 2018 4:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2018-01-02T14:45:28+00:00</updated>
+
+		<published>2018-01-02T14:45:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217535#p217535</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217535#p217535"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217535#p217535"><![CDATA[
+You can make animations go faster or slower by altering the dt you pass them:<br><div class="codebox"><p>Code: </p><pre><code>-- if instead of anim:update(dt) you do:anim:update(dt * 2)   -- anim will run twice as fast.anim:update(dt * 0.5) -- anim will run twice as slow.</code></pre></div>So you can store that coefficient in a variable and multiply it on the update section. You can use this to do cool stuff like time manipulation, or make the gears of a train engine move in synchronicity with its velocity, using a single animation.<br><br>Apart from that, you can always create a new animation, of course.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Jan 02, 2018 2:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-01-02T12:34:40+00:00</updated>
+
+		<published>2018-01-02T12:34:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217532#p217532</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217532#p217532"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217532#p217532"><![CDATA[
+Does anybody know how I can change the duration of a running animation or do I have to create a new animation?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Tue Jan 02, 2018 12:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[piotrek75]]></name></author>
+		<updated>2016-11-05T09:36:58+00:00</updated>
+
+		<published>2016-11-05T09:36:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205407#p205407</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205407#p205407"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205407#p205407"><![CDATA[
+Hello, FYI, I could not understand how to get a CURRENT frame count and TOTAL frame count for an animation.<br><br>So I modified a bit the anim8.lua by adding:<div class="codebox"><p>Code: </p><pre><code>function Animation:getCurrentFrameCounter()  return self.positionendfunction Animation:getTotalFrameCounter()  return #self.framesend</code></pre></div>(Posting this here as it may be usefull for some of you and I still do not get the process of having a change validated and pushed to the main anim8 GitHub repository)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138509">piotrek75</a> — Sat Nov 05, 2016 9:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jack Dandy]]></name></author>
+		<updated>2016-10-18T19:14:13+00:00</updated>
+
+		<published>2016-10-18T19:14:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204763#p204763</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204763#p204763"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204763#p204763"><![CDATA[
+Thanks for the clear-up. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135624">Jack Dandy</a> — Tue Oct 18, 2016 7:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2016-10-18T16:18:58+00:00</updated>
+
+		<published>2016-10-18T16:18:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204759#p204759</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204759#p204759"/>
+		<title type="html"><![CDATA[Re: [Library] anim8 - An animation library - v2.3.0 released]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204759#p204759"><![CDATA[
+<blockquote class="uncited"><div>In the readme in <a href="https://github.com/kikito/anim8" class="postlink">https://github.com/kikito/anim8</a>, it says:<blockquote class="uncited"><div>onLoop is an optional parameter which can be <span style="text-decoration:underline"><em class="text-italics">either</em> a function <em class="text-italics">or</em> a string</span> representing one of the animation methods. It does nothing by default. If specified, it will be called every time an animation "loops".It will have two parameters: the animation instance, and how many loops have been elapsed. The most usual value (apart from none) is the string 'pauseAtEnd'. It will make the animation loop once and then pause and stop on the last frame.</div></blockquote>Now, let's say I supply my own little function.<br>But I don't exactly understand, how am I supposed to access the two parameters you talked about in the quote?<br><br>For example, the following didn't work.<div class="codebox"><p>Code: </p><pre><code>slashAnim = anim8.newAnimation(animgrid('1-6',1), 0.04, (function(a,b) DRAWSLASH=false  a:pauseAtEnd() end))</code></pre></div></div></blockquote>So, these are legal (I'm only going to modify the third parameter):<div class="codebox"><p>Code: </p><pre><code>someAnim1 = anim8.newAnimation(animgrid('1-6',1), 0.04) -- or an explicit nil, since it's optional.someAnim2 = anim8.newAnimation(animgrid('1-6',1), 0.04, 'pauseAtEnd') -- this is the string version.</code></pre></div>The readme goes on to list the animation methods (detailed blocks removed), probably not a good idea to use some/most of them though:<br><span style="font-size:85%;line-height:116%"></span><blockquote class="uncited"><div><span style="font-size:85%;line-height:116%">Animations have the following methods:<br>animation:update(dt)<br>animation:draw(image, x,y, angle, sx, sy, ox, oy, kx, ky)<br>animation:gotoFrame(frame)<br>animation:pause()<br>animation:resume()<br>animation:clone()<br>animation:flipH()<br>animation:flipV()<br>animation:pauseAtEnd() --Moves the animation to its last frame and then pauses it.<br>animation:pauseAtStart() --Moves the animation to its first frame and then pauses it.<br>animation:getDimensions()<br>(...)<br></span></div></blockquote><br>The third type would be a function:<div class="codebox"><p>Code: </p><pre><code>someAnim3 = anim8.newAnimation(animgrid('1-6',1), 0.04, function(animationInstance,elapsedLoops) --[[do something with animInstance using elapsedLoops...--]] end)-- or alternatively:local function animCallback(instance,loops)-- somethingendsomeAnim3 = anim8.newAnimation(animgrid('1-6',1), 0.04, animCallback)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Tue Oct 18, 2016 4:18 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

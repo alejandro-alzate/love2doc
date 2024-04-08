@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/92526" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-07-06T12:06:00+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/92526</id>
+
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2023-07-06T12:06:00+00:00</updated>
+
+		<published>2023-07-06T12:06:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=255639#p255639</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=255639#p255639"/>
+		<title type="html"><![CDATA[Re: InputField - proper text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=255639#p255639"><![CDATA[
+I tried to find a way for InputField to support different font sizes and different fonts (font types).<br><br>Is that an easy thing for me to add to my local version?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Thu Jul 06, 2023 12:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2023-05-20T02:13:43+00:00</updated>
+
+		<published>2023-05-20T02:13:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=254881#p254881</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=254881#p254881"/>
+		<title type="html"><![CDATA[Re: InputField - proper text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=254881#p254881"><![CDATA[
+Fantastic library that I finally got to use. It took me way too long to find this essential function:<br><br>field:getText( )<br><br>Suggest you add that to an example or on the main doc.<br><br>Thanks a lot!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sat May 20, 2023 2:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-08-18T14:03:04+00:00</updated>
+
+		<published>2022-08-18T14:03:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=250247#p250247</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=250247#p250247"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=250247#p250247"><![CDATA[
+<span style="font-size:150%;line-height:116%"><strong class="text-strong"><a href="https://github.com/ReFreezed/InputField/releases/latest" class="postlink">Update 3.3.1</a></strong></span><br><br><strong class="text-strong">Changes since <a href="https://github.com/ReFreezed/InputField/releases/tag/3.3.0" class="postlink">3.3</a>:</strong><ul><li> Changed: scroll() now returns how much was actually scrolled.</li><li> Changed: wheelmoved() now only returns true if any scrolling actually happened.</li><li> Fixed "font filtering blocks newlines in multi-line fields".</li><li> Fixed "undo/redo counts as editing text even when nothing happened".</li></ul>(A bit of a delayed release since not much changed.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Thu Aug 18, 2022 2:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-03-15T14:46:34+00:00</updated>
+
+		<published>2022-03-15T14:46:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=247058#p247058</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=247058#p247058"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=247058#p247058"><![CDATA[
+<span style="font-size:150%;line-height:116%"><strong class="text-strong"><a href="https://github.com/ReFreezed/InputField/releases/latest" class="postlink">Update 3.3</a></strong></span><br><br><strong class="text-strong">Changes since 3.2:</strong><ul><li>Added: Event method wheelmoved() (which can do horizontal scrolling).</li><li>Added: Triple-click-and-drag to select lines.</li><li>Added: Method setType().</li><li>Added: Methods getInfoAtCoords(), getInfoAtCursor(), getInfoAtCharacter().</li><li>Added: Methods getVisibleLine(), getVisibleLineCount().</li><li>Added: Methods getWheelScrollSpeed(), setWheelScrollSpeed().</li><li>Changed: Better/proper shortcuts in macOS.</li><li>Changed: The cursor's original x position is now preserved when navigating vertically multiple lines.</li><li>Changed: Newlines now count as word boundaries.</li><li>Changed: Navigating up on the first line or down on the last line now does nothing in multi-line fields.</li><li>Changed: The second argument for setMouseScrollSpeed() is now optional.</li><li>Fixed "pressing Home on wrapped lines does nothing". It now navigates to before the soft line wrap.</li><li>Fixed "pressing Escape does not stop the dragging".</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Tue Mar 15, 2022 2:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-03-10T18:15:32+00:00</updated>
+
+		<published>2022-03-10T18:15:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=247003#p247003</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=247003#p247003"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=247003#p247003"><![CDATA[
+<span style="font-size:150%;line-height:116%"><strong class="text-strong"><a href="https://github.com/ReFreezed/InputField/releases/latest" class="postlink">Update 3.2</a></strong></span><br><br><strong class="text-strong">Changes since 3.1:</strong><ul><li>Added text alignment (left/right/center).</li><li>Added methods: canScroll, canScrollHorizontally, canScrollVertically.</li><li>Added methods: getScrollHandles, getScrollHandleHorizontal, getScrollHandleVertical.</li><li>PageUp and PageDown work in multi-line fields.</li><li>Keyboard interactions are now disabled while dragging.</li></ul>I've also added another example program to the repository. (See the new <a href="https://github.com/ReFreezed/InputField/tree/master/examples" class="postlink">examples folder</a>.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Thu Mar 10, 2022 6:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-03-09T22:24:58+00:00</updated>
+
+		<published>2022-03-09T22:24:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246990#p246990</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246990#p246990"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246990#p246990"><![CDATA[
+Yeah - I thought about that after posting. And set it to nil if no field has focus. Thx.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Wed Mar 09, 2022 10:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-03-09T22:23:37+00:00</updated>
+
+		<published>2022-03-09T22:23:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246989#p246989</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246989#p246989"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246989#p246989"><![CDATA[
+If only one field has focus at a time it might be preferred to, instead of having a boolean 'fieldHasFocus', have a global 'focusedField' that determines what field has focus (nil could mean nothing has focus). That way you don't have to update the internal state of several instances when focus changes.<br><div class="codebox"><p>Code: </p><pre><code>function love.keypressed(key, scancode, isRepeat)-- ...elseif focusedField and focusedField:keypressed(key, isRepeat) then-- ...end</code></pre></div><div class="codebox"><p>Code: </p><pre><code>if someField == focusedField then-- someField has focus!end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Wed Mar 09, 2022 10:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-03-09T21:08:30+00:00</updated>
+
+		<published>2022-03-09T21:08:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246988#p246988</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246988#p246988"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246988#p246988"><![CDATA[
+Okay. Thanks. I might have multiple input fields so I'll try moving that focus thing inside the field to keep that tidy.<br><br>field:hasFocus(boolean)<br><br><br>and then set that value in mouse press events.<br><br>I haven't checked the code but that should be straight forward.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Wed Mar 09, 2022 9:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-03-09T11:15:17+00:00</updated>
+
+		<published>2022-03-09T11:15:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246983#p246983</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246983#p246983"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246983#p246983"><![CDATA[
+Yeah, focus is something you'll have to implement yourself. Example for key handling:<br><div class="codebox"><p>Code: </p><pre><code>local fieldHasFocus = falsefunction love.keypressed(key, scancode, isRepeat)-- First handle keys that override InputField's behavior.if key == "tab" thenfieldHasFocus = not fieldHasFocusfield:resetBlinking()-- Then handle InputField, if it has focus.elseif fieldHasFocus and field:keypressed(key, isRepeat) then-- Event was handled.-- Lastly handle keys for when InputField doesn't have focus or the key-- wasn't handled by the library.elseif key == "escape" thenlove.event.quit()endendfunction love.textinput(text)if fieldHasFocus thenfield:textinput(text)endend</code></pre></div>Every InputField instance have their own cursor and everything - i.e. instances are independent from each other.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Wed Mar 09, 2022 11:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2022-03-09T00:54:44+00:00</updated>
+
+		<published>2022-03-09T00:54:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246979#p246979</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246979#p246979"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246979#p246979"><![CDATA[
+Incorporating 3.1 into my project. Works v well.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Is there a way for the inputfield to not have focus all the time? I see the 'cursor' is always on and when I use arrows to move through the text, those same arrows are scrolling the map I have in the game. <br><br>I want my arrows to either: a) scroll the map when the input box does not have focus or b) manipulate the cursor in the input box when it does have focus. Do I need to capture mouse clicks and track focus myself and then govern different actions in love.keypressed? I assume so - and that's okay. Just trying to nut this out.<br><br>I get this is a 'low level' library that requires extra work and I'm happy to do that extra work. Also, how does the cursor respond if you have multiple inputfields? Must try ...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Wed Mar 09, 2022 12:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-01-15T19:44:23+00:00</updated>
+
+		<published>2022-01-15T19:44:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246030#p246030</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246030#p246030"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246030#p246030"><![CDATA[
+<span style="font-size:150%;line-height:116%"><strong class="text-strong"><a href="https://github.com/ReFreezed/InputField/releases/latest" class="postlink">Update 3.1</a></strong></span><br><br><strong class="text-strong">Changes since 3.0:</strong><ul><li>Added double-click-and-drag to select words.</li><li>Added shortcut Shift+Delete to cut text.</li><li>Pressing Escape while dragging stops the dragging.</li><li>Fixed word navigation/selection not working.</li><li>Better Unicode support for word navigation/selection.</li><li>Fixed freezing issue when calling some methods on fields that never had any text.</li></ul><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jan 15, 2022 7:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-01-15T02:39:49+00:00</updated>
+
+		<published>2022-01-15T02:39:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246018#p246018</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246018#p246018"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246018#p246018"><![CDATA[
+Thanks for the feedback, pgimeno!<br><br>Because rendering tend to be different in every game/GUI system I thought having a lower-level library like this would be good for handling text input as it's more portable. (I've actually used a version of the library for several years in multiple different projects and it's been working nicely.)<br><br>Yeah, word navigation was broken (fixed in repo). I noticed utf8.codes() generates garbage after I did most testing so I hastily implemented my own version (very incorrectly). Also, the library doesn't support non-ASCII punctuation and whitespace yet - it sees all non-ASCII characters as letters. It'll be fixed soon.<br><br>I'll add double-click-and-drag and the missing shortcut to the todo list.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Sat Jan 15, 2022 2:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2022-01-15T01:19:46+00:00</updated>
+
+		<published>2022-01-15T01:19:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246017#p246017</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246017#p246017"/>
+		<title type="html"><![CDATA[Re: InputField - text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246017#p246017"><![CDATA[
+Not providing rendering is a quite radical approach. I like it <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Nice work. It's not often that you see so much love placed in an edit control. Almost all fall short of standard features. Slab and Thranduil were the closest to full features editors I've seen before this one, and both missed on some.<br><br>I've found a problem. Double-click to select word does not work well in presence of multibyte characters, and it appears that it doesn't work well when using Ctrl+Arrow either, so maybe it's about the word splitter. As for features, it's pretty complete, congrats! In my tests I only missed the double-click-and-drag feature to select multiple words, and the Shift+Del key combination as equivalent to Ctrl+X.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sat Jan 15, 2022 1:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ReFreezed]]></name></author>
+		<updated>2022-08-18T14:06:35+00:00</updated>
+
+		<published>2022-01-14T21:22:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=246016#p246016</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=246016#p246016"/>
+		<title type="html"><![CDATA[InputField - proper text input handling library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=246016#p246016"><![CDATA[
+<strong class="text-strong">InputField</strong> enables simple handling of user text input into your program. The library is a <a href="https://raw.githubusercontent.com/ReFreezed/InputField/master/InputField.lua" class="postlink">single file</a> with no external dependencies.<br><br><strong class="text-strong">Features:</strong><ul><li>Different field types: <em class="text-italics">Single-line</em>, <em class="text-italics">multi-line</em> (with or without wrapping), <em class="text-italics">password</em> (obscured characters).</li><li>Text cursor and navigation (by keyboard and mouse).</li><li>Text selection.</li><li>Scrolling, both vertical and horizontal.</li><li>Text alignment.</li><li>Shortcuts for common operations, like copying selected text and deleting the next word.</li><li>Undo and redo (history).</li><li>Helper functions for rendering.</li></ul>The library does not do any rendering itself, but provides helper functions for rendering text, cursors and selections.<br><br><span style="font-size:200%;line-height:116%"><strong class="text-strong"><a href="https://github.com/ReFreezed/InputField" class="postlink">InputField on GitHub</a></strong></span> <img src="https://raster.shields.io/github/release/ReFreezed/InputField.png" class="postimage" alt="Image"><br><a href="https://raw.githubusercontent.com/ReFreezed/InputField/master/InputField.lua" class="postlink">Direct link to library file</a><br><a href="https://github.com/ReFreezed/InputField/releases" class="postlink">Releases</a><br><a href="https://github.com/ReFreezed/InputField/tree/master/examples" class="postlink">Example programs</a><br><br><strong class="text-strong">Basic usage:</strong><br><div class="codebox"><p>Code: </p><pre><code>local InputField = require("InputField")local field      = InputField("Initial text.")local fieldX = 80local fieldY = 50love.keyboard.setKeyRepeat(true)function love.keypressed(key, scancode, isRepeat)field:keypressed(key, isRepeat)endfunction love.textinput(text)field:textinput(text)endfunction love.mousepressed(mx, my, mbutton, pressCount)field:mousepressed(mx-fieldX, my-fieldY, mbutton, pressCount)endfunction love.mousemoved(mx, my)field:mousemoved(mx-fieldX, my-fieldY)endfunction love.mousereleased(mx, my, mbutton)field:mousereleased(mx-fieldX, my-fieldY, mbutton)endfunction love.wheelmoved(dx, dy)field:wheelmoved(dx, dy)endfunction love.draw()love.graphics.setColor(0, 0, 1)for _, x, y, w, h in field:eachSelection() dolove.graphics.rectangle("fill", fieldX+x, fieldY+y, w, h)endlove.graphics.setColor(1, 1, 1)for _, text, x, y in field:eachVisibleLine() dolove.graphics.print(text, fieldX+x, fieldY+y)endlocal x, y, h = field:getCursorLayout()love.graphics.rectangle("fill", fieldX+x, fieldY+y, 1, h)end</code></pre></div>See the <a href="https://raw.githubusercontent.com/ReFreezed/InputField/master/InputField.lua" class="postlink">library file</a> for documentation. Also look at the <a href="https://github.com/ReFreezed/InputField/tree/master/examples" class="postlink">example programs</a>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137182">ReFreezed</a> — Fri Jan 14, 2022 9:22 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

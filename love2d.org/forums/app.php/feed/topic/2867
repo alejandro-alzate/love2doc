@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2867" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2015-07-02T20:53:39+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2867</id>
+
+		<entry>
+		<author><name><![CDATA[airstruck]]></name></author>
+		<updated>2015-07-02T20:53:39+00:00</updated>
+
+		<published>2015-07-02T20:53:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=186056#p186056</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=186056#p186056"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=186056#p186056"><![CDATA[
+Testing with luajit exposed some problems with sparse arrays that didn't appear under regular Lua. An up-to-date version of a memoize function handling nil arguments and return values and meeting kikito's spec is here: <a href="https://github.com/airstruck/knife/blob/master/knife/memoize.lua" class="postlink">https://github.com/airstruck/knife/blob ... emoize.lua</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136704">airstruck</a> — Thu Jul 02, 2015 8:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[airstruck]]></name></author>
+		<updated>2015-06-16T21:28:48+00:00</updated>
+
+		<published>2015-06-16T21:28:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=185493#p185493</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=185493#p185493"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=185493#p185493"><![CDATA[
+<blockquote class="uncited"><div>Also uses nilKey if args<em class="text-italics"> == false.</em></div></blockquote><em class="text-italics"><br>Ahh yeah, good catch. Fixed.</em><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136704">airstruck</a> — Tue Jun 16, 2015 9:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2015-06-16T15:24:45+00:00</updated>
+
+		<published>2015-06-16T15:24:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=185488#p185488</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=185488#p185488"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=185488#p185488"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>local key = args[i] or nilKey</code></pre></div>Also uses nilKey if args<em class="text-italics"> == false.</em><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Jun 16, 2015 3:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[airstruck]]></name></author>
+		<updated>2015-06-16T21:34:51+00:00</updated>
+
+		<published>2015-06-14T19:47:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=185424#p185424</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=185424#p185424"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=185424#p185424"><![CDATA[
+I wanted a small memoize function that could support nil arguments and expose the cache. Here's what I came up with, maybe it will be useful for someone else:<br><div class="codebox"><p>Code: </p><pre><code>local function memoize (f)    local cache = setmetatable({}, { __mode = 'k' })    local resultsKey = {}    local nilKey = {}        return function (...)        local args = { ... }        local node = cache                for i = 1, #args do            local key = args[i]            if key == nil then                key = nilKey            end            if not node[key] then                node[key] = setmetatable({}, { __mode = 'k' })            end            node = node[key]        end                if not node[resultsKey] then             node[resultsKey] = { f(...) }        end                return unpack(node[resultsKey])    end, cache, resultsKey, nilKeyend</code></pre></div>It doesn't check for user error, including changes to __call on functables. Memoizing a function again doesn't clear the cache. Other than that, it should work the same (passes relevant parts of this spec).<br><br>I threw it in a gist <a href="https://gist.github.com/airstruck/60d9a0d368e15bb20721" class="postlink">here</a>, along with another longer version that passes the rest of this spec and also supports nil arguments.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136704">airstruck</a> — Sun Jun 14, 2015 7:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-05-03T22:53:03+00:00</updated>
+
+		<published>2011-05-03T22:53:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30799#p30799</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30799#p30799"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30799#p30799"><![CDATA[
+I've made two changes in memoize.lua:<br><ul><li>It now supports funcTables and functions. It'll throw an error if you try to memoize anything else. The cache is reset if the __call function of a funcTable changes</li><li>I've explicitly tested and documented that you can erase a function's cache by re-memoizing</li></ul>Regards!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue May 03, 2011 10:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kadoba]]></name></author>
+		<updated>2011-04-27T16:27:37+00:00</updated>
+
+		<published>2011-04-27T16:27:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30306#p30306</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30306#p30306"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30306#p30306"><![CDATA[
+Ok, that makes sense. Thanks<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1761">Kadoba</a> — Wed Apr 27, 2011 4:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T17:14:36+00:00</updated>
+
+		<published>2011-04-27T15:51:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30305#p30305</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30305#p30305"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30305#p30305"><![CDATA[
+<blockquote class="uncited"><div>Great job, but what about a function to forget all cached data?</div></blockquote>Hi Kadoba,<br><br>When you call memoize(f), the first thing it does is resetting the cache for f.<br><br>You should be able to "forget" the data of f by calling memoize(f) again. But  I don't have tests for that; I think it'll work, but it's completely incidental right now. Thanks for making me realize that!<br><br>Notice that you must conserve the reference to the "regular" f in order to do this. If you override it with its memoized version, or if you memoize an anonymous function, there's no going back (which is the default case).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 3:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kadoba]]></name></author>
+		<updated>2011-04-27T15:38:42+00:00</updated>
+
+		<published>2011-04-27T15:38:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30303#p30303</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30303#p30303"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30303#p30303"><![CDATA[
+Great job, but what about a function to forget all cached data?<br><br>I'm thinking specifically for resource management I don't want to have every resource loaded in memory as the game goes on. I'd like them deleted between scenes but shared between objects in the scene.<br><br>I know it's as simple as slapping in a "function clearMemos() globalCache = {} end" but shouldn't it be included?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1761">Kadoba</a> — Wed Apr 27, 2011 3:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T13:54:51+00:00</updated>
+
+		<published>2011-04-27T13:54:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30292#p30292</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30292#p30292"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30292#p30292"><![CDATA[
+<blockquote class="uncited"><div>Throw an error, without a doubt. Do what t() normally does if it doesn't have a __call. Memoizing should be completely transparent.</div></blockquote>Allright. Yeah, I can see it. Nice <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 1:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-27T12:57:01+00:00</updated>
+
+		<published>2011-04-27T12:57:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30291#p30291</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30291#p30291"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30291#p30291"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>setmetatable(t2, mt)print(memoized_t2(1)) -- 2</code></pre></div></div></blockquote>No, mt.__call is nil, remember?<br><blockquote class="uncited"><div>On ??? I don't know if it's better to return nil, or throw an error.</div></blockquote>Throw an error, without a doubt. Do what t() normally does if it doesn't have a __call. Memoizing should be completely transparent.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Apr 27, 2011 12:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T12:38:10+00:00</updated>
+
+		<published>2011-04-27T12:38:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30290#p30290</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30290#p30290"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30290#p30290"><![CDATA[
+<blockquote class="uncited"><div>Why not just memoize the __call function, then?</div></blockquote>That is probably what I'll have to do, in the end. But I'd like it if memoize was able to handle tables with call properly.<br><div class="codebox"><p>Code: </p><pre><code>mt = {__call = function(a) return a + 1 end}t = setmetatable({}, mt)memoized_t= memoize(tweaker)print(memoized_t(2)) -- 3print(memoized_t(2)) -- 3, memoizedmt.__call = function(a) return a + 2 endprint(memoized_t(2)) -- 4print(memoized_t(2)) -- 4, memoizedmt.__call = nilprint(memoized_t(2)) -- ???t2 = {}memoized_t2 = memoize(t2) -- ???print(memoized_t2(1)) -- ???setmetatable(t2, mt)print(memoized_t2(1)) -- 2</code></pre></div>On ??? I don't know if it's better to return nil, or throw an error.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 12:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-27T12:20:22+00:00</updated>
+
+		<published>2011-04-27T12:20:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30288#p30288</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30288#p30288"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30288#p30288"><![CDATA[
+Why not just memoize the __call function, then?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Apr 27, 2011 12:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T11:59:12+00:00</updated>
+
+		<published>2011-04-27T11:59:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30286#p30286</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30286#p30286"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30286#p30286"><![CDATA[
+Nothing so complicated.<br><br>It's tables.<br><br>I forgot about the __call metamethod! They can be used as functions. It would be nice if memoize was able to handle that particular case of table.<br><br>This poses some interesting challenges, though. What happens if you memoize a table with __call, and then change the __call to another function? What if it's set to nil?<br><br>Mmmmm....<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 11:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-27T11:32:37+00:00</updated>
+
+		<published>2011-04-27T11:32:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30282#p30282</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30282#p30282"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30282#p30282"><![CDATA[
+It'd say deeply sub-classed object. (You know, __index calls another __index, calls another __index etc.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Apr 27, 2011 11:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2011-04-27T08:57:30+00:00</updated>
+
+		<published>2011-04-27T08:57:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30261#p30261</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30261#p30261"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30261#p30261"><![CDATA[
+I thought coroutines, but you don't really want those to do the same over and over, do you?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Wed Apr 27, 2011 8:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-27T08:56:48+00:00</updated>
+
+		<published>2011-04-27T08:56:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30260#p30260</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30260#p30260"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30260#p30260"><![CDATA[
+I don't see how our discussion would lead to that. Anyway, the only data type I can think of is tables, as in, preserving their state. Or is it threads? I don't know.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Wed Apr 27, 2011 8:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T08:37:40+00:00</updated>
+
+		<published>2011-04-27T08:37:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30256#p30256</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30256#p30256"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30256#p30256"><![CDATA[
+After a talk with BlackBulletIV over email yesterday, I think I found a case where TsT's initial post actually makes some sense.<br><br>Apart from functions, there's in fact another type of lua object that might benefit from memoization!<br><br>You guys guess what it is?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 8:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TsT]]></name></author>
+		<updated>2011-04-25T10:34:51+00:00</updated>
+
+		<published>2011-04-25T10:34:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30122#p30122</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30122#p30122"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30122#p30122"><![CDATA[
+I'm agree raising error can be better to disallow stupid use <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179">TsT</a> — Mon Apr 25, 2011 10:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-25T07:30:03+00:00</updated>
+
+		<published>2011-04-25T07:30:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30107#p30107</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30107#p30107"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30107#p30107"><![CDATA[
+<blockquote class="uncited"><div>...shit. I've actually been coding around the problems memoize fixes.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"></div></blockquote><img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultrahappy.png" width="16" height="16" alt=":ultrahappy:" title="Ultrahappy"> I'm glad<br><blockquote class="uncited"><div>by this way you sould use memoize with every kind of object (even it's completely useless) but it will work. (...)</div></blockquote>I'm sorry, but I tend to agree with Robin here... that would be a bit confusing. I'm more inclined to do the exact opposite: raise an error if someone tries to memoize a non-function. In fact, that seems quite correct.<br><br>Please don't let this discourage you from giving more feedback in the future. I really appreciate that you took the time to write down an example of what you meant.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Apr 25, 2011 7:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-25T06:32:08+00:00</updated>
+
+		<published>2011-04-25T06:32:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30103#p30103</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30103#p30103"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30103#p30103"><![CDATA[
+But... that is useless! And confusing for the programmer.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Apr 25, 2011 6:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TsT]]></name></author>
+		<updated>2011-04-25T00:39:34+00:00</updated>
+
+		<published>2011-04-25T00:39:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30082#p30082</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30082#p30082"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30082#p30082"><![CDATA[
+by this way you sould use memoize with every kind of object (even it's completely useless) but it will work.<br><div class="codebox"><p>Code: </p><pre><code>local memoize = require 'memoize' -- or memoize.lua, depending on your env.num = 9local memoizedNumber = memoize(num)print(memoizedNumber)local t = { f = "tablefield" }local memoizedTable = memoize(t)print(memoizedTable.f)</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179">TsT</a> — Mon Apr 25, 2011 12:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TsT]]></name></author>
+		<updated>2011-04-25T00:02:36+00:00</updated>
+
+		<published>2011-04-25T00:02:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30079#p30079</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30079#p30079"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30079#p30079"><![CDATA[
+<blockquote class="uncited"><div>Memoizing is about remembering a deterministic mapping, so it is only useful for functions.<br><br>I wouldn't call those types useless, and I don't know how you imagine "skipping" them.</div></blockquote>Like putting<div class="codebox"><p>Code: </p><pre><code>  if type(f) ~= "function" then return f end</code></pre></div>inside memoize :<div class="codebox"><p>Code: </p><pre><code>local function memoize(f)  if type(f) ~= "function" then return f end  globalCache[f] = { results = {} }  return function (...)    local results = getFromCache( globalCache[f], {...} )          if #results == 0 then      results = { f(...) }      insertInCache(globalCache[f], {...}, results)    end        return unpack(results)  endend</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179">TsT</a> — Mon Apr 25, 2011 12:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-04-24T11:45:54+00:00</updated>
+
+		<published>2011-04-24T11:45:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30046#p30046</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30046#p30046"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30046#p30046"><![CDATA[
+...shit. I've actually been coding around the problems memoize fixes.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Sun Apr 24, 2011 11:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-23T14:37:31+00:00</updated>
+
+		<published>2011-04-23T14:37:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30009#p30009</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30009#p30009"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30009#p30009"><![CDATA[
+<blockquote class="uncited"><div>Hello,<br><br>memoize is very usefull for functions.<br>Is it usefull for another type than function ?<br>I wonder if it can be interesting to skip the useless types, like nil, boolean, number ? maybe table ? I don't know about Userdata...<br><br>My 2 cents <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Hi, I'm always willing to consider improvements, but I honestly don't know what you mean. Can you explain what you mean with maybe a code sample?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Apr 23, 2011 2:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-23T14:36:25+00:00</updated>
+
+		<published>2011-04-23T14:36:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30008#p30008</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30008#p30008"/>
+		<title type="html"><![CDATA[Re: memoize.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30008#p30008"><![CDATA[
+Memoizing is about remembering a deterministic mapping, so it is only useful for functions.<br><br>I wouldn't call those types useless, and I don't know how you imagine "skipping" them.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sat Apr 23, 2011 2:36 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

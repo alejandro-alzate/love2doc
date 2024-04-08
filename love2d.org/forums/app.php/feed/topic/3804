@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3804" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-10-24T19:50:36+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3804</id>
+
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-10-24T19:50:36+00:00</updated>
+
+		<published>2011-10-24T19:50:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38679#p38679</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38679#p38679"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38679#p38679"><![CDATA[
+Or love.timer.getRandomDelay(). <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Oct 24, 2011 7:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-10-24T17:52:58+00:00</updated>
+
+		<published>2011-10-24T17:52:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38677#p38677</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38677#p38677"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38677#p38677"><![CDATA[
+I have to agree with slime on that one. Choosing one random sound from a pool doesn't seem "core". Continuing with the graphics equivalent, I see it being equivalent to having love.graphics.getRandomColor() or similar.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Oct 24, 2011 5:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-10-24T17:36:42+00:00</updated>
+
+		<published>2011-10-24T17:36:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38676#p38676</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38676#p38676"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38676#p38676"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Is it really that hard to do the random stuff yourself? I don't see it being an essential part of a sound library. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div></blockquote>You know that things like love.graphics.draw aren't essential either, right? You've got love.graphics.point, you've got ImageData:getPixel, is it really that hard to do it yourself? But having Love provide that convenience is faster, more efficient, more reliable, and saves everyone from having to reinvent the wheel over and over again.</div></blockquote>love.graphics.draw does things fundamentally differently than using a point for each pixel in your image. My point was that randomizing a list of sounds shouldn't be the responsibility of a sound manager because it's really just randomizing a list, there's nothing there that specifically has to relate to sound.<div class="codebox"><p>Code: </p><pre><code>love.audio.play(mysources[math.random(#mysources)])</code></pre></div> or whatever.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Oct 24, 2011 5:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-10-24T17:32:35+00:00</updated>
+
+		<published>2011-10-24T17:32:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38675#p38675</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38675#p38675"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38675#p38675"><![CDATA[
+<blockquote class="uncited"><div>Is it really that hard to do the random stuff yourself? I don't see it being an essential part of a sound library. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div></blockquote>You know that things like love.graphics.draw aren't essential either, right? You've got love.graphics.point, you've got ImageData:getPixel, is it really that hard to do it yourself? But having Love provide that convenience is faster, more efficient, more reliable, and saves everyone from having to reinvent the wheel over and over again.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Mon Oct 24, 2011 5:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2011-10-24T17:23:26+00:00</updated>
+
+		<published>2011-10-24T17:23:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38674#p38674</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38674#p38674"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38674#p38674"><![CDATA[
+<blockquote class="uncited"><div>Sounds tags are in? Awesome.<br><blockquote class="uncited"><div><blockquote class="uncited"><div>and being able to pass it a table of sounds and it'll choose one at random.</div></blockquote>Not quite sure what that means: Playing a shuffled playlist, or just choosing a sound to play, i.e.:<div class="codebox"><p>Code: </p><pre><code>sounds = table.shuffle{'foo.ogg', 'bar.ogg', 'baz.ogg'} -- doesn't existsource = love.audio.newSource(sounds[1])souce:play()</code></pre></div></div></blockquote>Choosing a sound to play. What I enjoy doing are things like:<div class="codebox"><p>Code: </p><pre><code>-- in love.load or content.luasounds = {growl = {"sounds/growl01.ogg", "sounds/growl02.ogg", "sounds/growl03.ogg", "sounds/growl04.ogg", "sounds/growl05.ogg", "sounds/growl06.ogg", "sounds/growl07.ogg", "sounds/growl08.ogg",},}-- somewhere in my game's code-- This plays one growl sound at randomTEsound.play(sounds.growl)-- That's functionally equivalent to, but much nicer to type, thanTEsound.play(sounds.growl[math.random(#sounds.growl)])-- or in this case,love.audio.play(love.audio.newSource(sounds.growl[math.random(#sounds.growl)], "stream"))</code></pre></div>Also worth mentioning is that if you loop a random sound like this in TEsound, it'll choose a different sound each time. So you could very easily play a random list of music, for example. Would that be possible in BDSM?<br><br>... I don't think you mentioned how to add tags to sounds in BDSM...</div></blockquote>Is it really that hard to do the random stuff yourself? I don't see it being an essential part of a sound library. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Oct 24, 2011 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-10-24T17:09:06+00:00</updated>
+
+		<published>2011-10-24T17:09:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38671#p38671</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38671#p38671"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38671#p38671"><![CDATA[
+Sounds tags are in? Awesome.<br><blockquote class="uncited"><div><blockquote class="uncited"><div>and being able to pass it a table of sounds and it'll choose one at random.</div></blockquote>Not quite sure what that means: Playing a shuffled playlist, or just choosing a sound to play, i.e.:<div class="codebox"><p>Code: </p><pre><code>sounds = table.shuffle{'foo.ogg', 'bar.ogg', 'baz.ogg'} -- doesn't existsource = love.audio.newSource(sounds[1])souce:play()</code></pre></div></div></blockquote>Choosing a sound to play. What I enjoy doing are things like:<div class="codebox"><p>Code: </p><pre><code>-- in love.load or content.luasounds = {growl = {"sounds/growl01.ogg", "sounds/growl02.ogg", "sounds/growl03.ogg", "sounds/growl04.ogg", "sounds/growl05.ogg", "sounds/growl06.ogg", "sounds/growl07.ogg", "sounds/growl08.ogg",},}-- somewhere in my game's code-- This plays one growl sound at randomTEsound.play(sounds.growl)-- That's functionally equivalent to, but much nicer to type, thanTEsound.play(sounds.growl[math.random(#sounds.growl)])-- or in this case,love.audio.play(love.audio.newSource(sounds.growl[math.random(#sounds.growl)], "stream"))</code></pre></div>Also worth mentioning is that if you loop a random sound like this in TEsound, it'll choose a different sound each time. So you could very easily play a random list of music, for example. Would that be possible in BDSM?<br><br>... I don't think you mentioned how to add tags to sounds in BDSM...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Mon Oct 24, 2011 5:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-10-24T16:46:54+00:00</updated>
+
+		<published>2011-10-24T16:46:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38668#p38668</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38668#p38668"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38668#p38668"><![CDATA[
+Late reply, but better late than never. Thanks for the feedback <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><blockquote class="uncited"><div>two features: Sound tags (so you can set the volume or pitch of many different sounds together, thus enabling things like a "sound effect volume" option)</div></blockquote>That is a great idea! Tags can be played/stopped/pitched/whatevered by using <em class="text-italics">love.audio.tags.tagname.foo</em>, e.g. <em class="text-italics">love.audio.tags.effects.setPitch(0.6)</em>. Doing stuff on tags will act upon all sources and their playing instances in that tag. By default, all sources are members of the 'all' tag, so you can act on all sources via <em class="text-italics">love.audio.tags.all</em>.<br><br>Likewise, modifying a source's pitch, volume or looping behavior will effect all playing instances of that source. So be careful with that.<br><blockquote class="uncited"><div>and being able to pass it a table of sounds and it'll choose one at random.</div></blockquote>Not quite sure what that means: Playing a shuffled playlist, or just choosing a sound to play, i.e.:<div class="codebox"><p>Code: </p><pre><code>sounds = table.shuffle{'foo.ogg', 'bar.ogg', 'baz.ogg'} -- doesn't existsource = love.audio.newSource(sounds[1])souce:play()</code></pre></div><blockquote class="uncited"><div> But for what I'm doing I still have some problems with emulating a buffer and/or pop/click noises at the end and start of sources </div></blockquote>Just to clarify: This lib has nothing to do with sound synthesis, and it will not remove the clicking sounds. These are caused by your sound not having zero crossings at the beginning and end. To get rid of them, make sure the last sample you write is 0.0, either by using an envelope, or by making the sound duration a multiple of the wavelength of your wave function. On a side note (haha, get it? <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ehem.png" width="16" height="16" alt=":ehem:" title="Ehem ...">), you might be interested in <a href="https://github.com/vrld/Moan" class="postlink">Moan</a>.<br><br><blockquote class="uncited"><div>The only thing is that I might want to distinguish between BDSM Sources and regular old Sources.</div></blockquote>Doable, but hackish:<ul><li>function isLoveSource(s) return type(s) == "userdata" and s:typeOf("Source") end</li><li>function isLoveSource(s) return s.instances ~= nil end</li><li>function isLoveSource(s) return love.tags.all[s] ~= nil end</li></ul><blockquote class="uncited"><div>Put it on github</div></blockquote>Done: <a href="https://github.com/vrld/Stuff/" class="postlink">https://github.com/vrld/Stuff/</a><br>The name will probably change in the future, since there already is <a href="https://github.com/bartbes/DSM" class="postlink">bdsm</a> for LÖVE.<br><blockquote class="uncited"><div>newSource creates a lot of functions nearly identical. Wouldn't it be possible to extract them to a metatable?</div></blockquote>Good point. Also done.<blockquote class="uncited"><div>Put it on github</div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Mon Oct 24, 2011 4:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-10-20T13:41:40+00:00</updated>
+
+		<published>2011-10-20T13:41:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38547#p38547</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38547#p38547"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38547#p38547"><![CDATA[
+I like this very much! (IMHO this is how LÖVE should handle all sound, I've already talked about this)<br><blockquote class="uncited"><div>What can be improved?</div></blockquote>Only two things:<ul><li>Put it on github (or some other public repo). Or put a link on the forum, if it's already there.</li><li>newSource creates a lot of functions nearly identical. Wouldn't it be possible to extract them to a metatable?</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Oct 20, 2011 1:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[T-Bone]]></name></author>
+		<updated>2011-10-20T06:07:45+00:00</updated>
+
+		<published>2011-10-20T06:07:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38540#p38540</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38540#p38540"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38540#p38540"><![CDATA[
+Great name. Will check it out.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3355">T-Bone</a> — Thu Oct 20, 2011 6:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[headchant]]></name></author>
+		<updated>2011-10-19T21:36:46+00:00</updated>
+
+		<published>2011-10-19T21:36:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38528#p38528</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38528#p38528"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38528#p38528"><![CDATA[
+In combination with your proxy stuff this could extremely simplify the whole sound managing business.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1428">headchant</a> — Wed Oct 19, 2011 9:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-10-19T21:31:39+00:00</updated>
+
+		<published>2011-10-19T21:31:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38527#p38527</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38527#p38527"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38527#p38527"><![CDATA[
+Very interesting, I might want to use that (seems perfect for Jams, for example). The only thing is that I might want to distinguish between BDSM Sources and regular old Sources.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Oct 19, 2011 9:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2011-10-19T15:19:48+00:00</updated>
+
+		<published>2011-10-19T15:19:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38506#p38506</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38506#p38506"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38506#p38506"><![CDATA[
+I have been playing with sound synthesis using LÖVE and I have designed something very similar to what you have here (I think, maybe: <a href="https://github.com/adonaac/love/tree/master/ss" class="postlink">https://github.com/adonaac/love/tree/master/ss</a>). But for what I'm doing I still have some problems with emulating a buffer and/or pop/click noises at the end and start of sources (although I think this has to do with the way I'm handling the samples)... <br><br>Regardless, your solution to my problems look a lot better. I will use this soon and report on what I think of it. Thanks!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Wed Oct 19, 2011 3:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-10-19T15:05:06+00:00</updated>
+
+		<published>2011-10-19T15:05:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38504#p38504</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38504#p38504"/>
+		<title type="html"><![CDATA[Re: Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38504#p38504"><![CDATA[
+I like it (I'm assuming it works fully, rather than testing it). About the only reason I could see myself using TEsound instead of this is for two features: Sound tags (so you can set the volume or pitch of many different sounds together, thus enabling things like a "sound effect volume" option) and being able to pass it a table of sounds and it'll choose one at random. Also, lovely name.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Oct 19, 2011 3:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-10-24T16:48:17+00:00</updated>
+
+		<published>2011-10-19T14:46:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=38500#p38500</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=38500#p38500"/>
+		<title type="html"><![CDATA[Benignly Designed Sound Manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=38500#p38500"><![CDATA[
+Because the one thing I like about Flash/ActionScript3 is how they handle audio playback and seeing new lovers often have trouble understanding love's audio architecture, I sat down and tried to emulate the AS3 behavior. The result is the<br><span style="font-size:150%;line-height:116%"><strong class="text-strong">Benignly Designed Sound Manager</strong></span><br><br>BDSM overwrites love.audio.newSource, love.audio.play and love.audio.stop, so that <em class="text-italics">one source can be played multiple times</em>.<br><br><strong class="text-strong">love.audio.newSource(what, how)</strong><br>Returns a new bdsm source. The parameters are the same as for the old love.audio.newSource().<br><br><strong class="text-strong">love.audio.play(source)</strong> and <strong class="text-strong">source:play()</strong><br>Plays the source and returns a <em class="text-italics">handle</em> to the player. The player is the same as love.audio's <a href="/wiki/Source">Source</a> object. In contrast to love.audio, you can safely ignore the handles.<br><br><strong class="text-strong">love.audio.stop(source)</strong> and <strong class="text-strong">source:stop()</strong><br>Stops all instances of <em class="text-italics">source</em>. If <em class="text-italics">source</em> is omitted, it will stop <em class="text-italics">all</em> the sources.<br><br>The source code is rather short: <strong class="text-strong">Warning: OLD CODE</strong><div class="codebox"><p>Code: </p><pre><code>local newSource = love.audio.newSourcelocal stop = love.audio.stoplocal function remove_stopped(sources)local remove = {}for _, s in pairs(sources) doremove[s] = trueendfor s, _ in pairs(remove) dosources[s] = nilendendfunction love.audio.newSource(what, how)return {play = function(self)remove_stopped(self.handles)local s = newSource(what, how)s:setLooping(self.looping)s:setPitch(self.pitch)s:setVolume(self.volume)self.handles[s] = ss:play()return send,stop = function(self)for _, s in pairs(self.handles) dos:stop()endself.handles = {}end,setLooping = function(self, v) self.looping = not not v   end,setPitch   = function(self, v) self.pitch   = tonumber(v) end,setVolume  = function(self, v) self.volume  = tonumber(v) end,looping = false,pitch = 1,volume = 1,handles = {},}endfunction love.audio.play(what)assert(what.handles, "Can only play source objects.")return what:play()endfunction love.audio.stop(what)if what and what.stop then return what:stop() endstop()end</code></pre></div>Example code:<div class="codebox"><p>Code: </p><pre><code>require 'bdsm'function love.load()music = love.audio.newSource('music.ogg', 'stream')music:setLooping(true) -- set default value for all playersmusic:setVolume(.3)love.audio.play(music) -- the handle can be ignoredwoosh = love.audio.newSource('woosh.ogg', 'static')love.graphics.setFont(30)endfunction love.draw()love.graphics.print('Press a key!', 20,20)endfunction love.keypressed()local h = woosh:play() -- same as love.audio.play(woosh)h:setPitch(.5 + math.random() * 3) -- set pitch for individual playersend</code></pre></div>Can you see yourself using this?<br>If not: why?<br>What can be improved?<br><br><strong class="text-strong">Edit:</strong><br>This is now on github: <a href="https://github.com/vrld/Stuff/tree/master/bdsm" class="postlink">https://github.com/vrld/Stuff/tree/master/bdsm</a><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=3265">example.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Wed Oct 19, 2011 2:46 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/525" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2009-09-30T14:11:10+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/525</id>
+
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-09-30T14:11:10+00:00</updated>
+
+		<published>2009-09-30T14:11:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9746#p9746</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9746#p9746"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9746#p9746"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>For the next version I'll implement a 100% private graphics API (as opposed to 10% private) and just map it to löve's so this doesn't happen again. A side effect is... I might be able to make this library work for <em class="text-italics">other</em> lua game engines. *shudder*</div></blockquote>Will the game-side API be (roughly) the same? If it is very different, we might not be able to upgrade. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"></div></blockquote>The idea is to keep it the same. I'm talking about the functions LoveUI itself uses to draw... like love.graphics.draw, love.graphics.setFont... etc.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Wed Sep 30, 2009 2:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-09-30T14:01:15+00:00</updated>
+
+		<published>2009-09-30T14:01:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9745#p9745</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9745#p9745"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9745#p9745"><![CDATA[
+<blockquote class="uncited"><div>For the next version I'll implement a 100% private graphics API (as opposed to 10% private) and just map it to löve's so this doesn't happen again. A side effect is... I might be able to make this library work for <em class="text-italics">other</em> lua game engines. *shudder*</div></blockquote>Will the game-side API be (roughly) the same? If it is very different, we might not be able to upgrade. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Sep 30, 2009 2:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-09-30T11:39:10+00:00</updated>
+
+		<published>2009-09-30T11:39:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9741#p9741</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9741#p9741"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9741#p9741"><![CDATA[
+Yeah, use lovelybigplanet's port...<br>I still can't haven't got my copy of LoveUI running properly yet...  all the widgets are black even after I've fixed all the setColor issues. I'm going to pull my hair out just to get this working.<br><br>For the next version I'll implement a 100% private graphics API (as opposed to 10% private) and just map it to löve's so this doesn't happen again. A side effect is... I might be able to make this library work for <em class="text-italics">other</em> lua game engines. *shudder*<br><br>I still need the new documentation for any significant performance boosts.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Wed Sep 30, 2009 11:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-09-30T11:35:35+00:00</updated>
+
+		<published>2009-09-30T11:35:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9740#p9740</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9740#p9740"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9740#p9740"><![CDATA[
+thanks so far.. <br>The gui looks a bit more simple but enough to start porting my game to 0.6.0<br>You should fix line 229 of LoveUITableView.lua....<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Wed Sep 30, 2009 11:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-09-21T17:00:07+00:00</updated>
+
+		<published>2009-09-21T17:00:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9587#p9587</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9587#p9587"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9587#p9587"><![CDATA[
+<blockquote class="uncited"><div>I want to start porting my game to 0.6.0(testing on the snapshots) but LoveUI isn't ported yet.</div></blockquote>appleide seems to be working on it, but if you want something in the meantime: bartbes and me made a crude port of LoveUI to 0.6.0 for LovelyBigPlanet. <a href="http://github.com/bartbes/lovelybigplanet/tree/porting/libs/LoveUI/" class="postlink">http://github.com/bartbes/lovelybigplan ... bs/LoveUI/</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Sep 21, 2009 5:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-09-21T16:34:53+00:00</updated>
+
+		<published>2009-09-21T16:34:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9582#p9582</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9582#p9582"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9582#p9582"><![CDATA[
+h there,<br><br>I want to start porting my game to 0.6.0(testing on the snapshots) but LoveUI isn't ported yet. I tried doing that myself but there is no comming through for me....<br><br>I'd love to see a version runing on a snapshot of 0.6.0 so that i could start porting my game to have it as close as possible to runing on a future release of 0.6.0 directly.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Mon Sep 21, 2009 4:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-09-02T05:59:59+00:00</updated>
+
+		<published>2009-09-02T05:59:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9216#p9216</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9216#p9216"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9216#p9216"><![CDATA[
+<blockquote class="uncited"><div>Hi, I've paused development for the past couple of months... Had been waiting for love 0.6.0 so I could boost its performance tremendously (mainly through replacing my implementation of pushmatrix, popmatrix, translate, with OpenGL's.)</div></blockquote>Ah, ok. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><blockquote class="uncited"><div>I'll look into adding checkboxes soon. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"></div></blockquote>OK, great. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> We don't really need it right now for LBP though, since we implemented layer placement differently after all.<blockquote class="uncited"><div>p.s I'm up for beta testing. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>You know where to get the latest? If you need something to test, you can try to do funky thinks with the editor. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Sep 02, 2009 5:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-09-02T00:14:41+00:00</updated>
+
+		<published>2009-09-02T00:14:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9204#p9204</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9204#p9204"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9204#p9204"><![CDATA[
+Hi, I've paused development for the past couple of months... Had been waiting for love 0.6.0 so I could boost its performance tremendously (mainly through replacing my implementation of pushmatrix, popmatrix, translate, with OpenGL's.)<br><br>I'll look into adding checkboxes soon. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><br><br>p.s I'm up for beta testing. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Wed Sep 02, 2009 12:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-08-30T10:58:56+00:00</updated>
+
+		<published>2009-08-30T10:58:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=9156#p9156</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=9156#p9156"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=9156#p9156"><![CDATA[
+How's development going?<br><br>As you might know, we're using LoveUI for the map editor of LovelyBigPlanet. So far, it's working great, but right now we need some kind of checkboxes, so players can select which layer(s) the objects are in. So is there any chance you either made it already or will start working on that sometime soon?<br><br>Thanks in advance <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><br><br>p.s.: You signed up for beta-testing LBP, are you still interested?<br>p.p.s.: 500th post!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Aug 30, 2009 10:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-14T12:31:08+00:00</updated>
+
+		<published>2009-07-14T12:31:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8227#p8227</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8227#p8227"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8227#p8227"><![CDATA[
+I see....<br>btw. the plug in function is only supposed to be used as a quick solution for small prototypes. If you're gonna have states I recommend manually calling the relevant functions in load draw update mousepressed, etc.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Tue Jul 14, 2009 12:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-14T12:18:20+00:00</updated>
+
+		<published>2009-07-14T12:18:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8226#p8226</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8226#p8226"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8226#p8226"><![CDATA[
+Found the problem:<br>I couldn't out "aContext:plugin();" out of the load function of my menu somehow... everytime it was loaded it put more chars...<br>Now I loaded the load draw update keypressed functions BEFORE the statemanager loads the states... very important<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Tue Jul 14, 2009 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-14T10:16:17+00:00</updated>
+
+		<published>2009-07-14T10:16:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8225#p8225</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8225#p8225"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8225#p8225"><![CDATA[
+Hmm... that's a problem. Here's a short term get around, but you'll likely remove key-repeats too. <div class="codebox"><p>Code: </p><pre><code>aContext.keyRepeatSpeed=3000</code></pre></div>The default value is 300 ms. Try raise it to 3 seconds and keys shouldn't repeat like you described (It'll only repeat after holding the key for 3 seconds, slowly accelerating from that base amount.). <br><br>I'm suspecting this could be a timer and input problem. Maybe also to do with zeroes. This will definitely be fixed when 0.6.0 comes out, because that version comes with key repeats, so I don't need to implement my own anymore.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Tue Jul 14, 2009 10:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-14T01:48:43+00:00</updated>
+
+		<published>2009-07-14T01:48:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8218#p8218</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8218#p8218"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, tableView]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8218#p8218"><![CDATA[
+Sometimes when i run my project including LoveUI and I try typing into a textfield it puts 2 or 3 characters of the one im typing into it(deleting to).<br>The more fps I have the more often this problem occurs.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Tue Jul 14, 2009 1:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-09T13:10:59+00:00</updated>
+
+		<published>2009-07-09T13:10:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8093#p8093</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8093#p8093"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8093#p8093"><![CDATA[
+This one is good same speed as with the problems but without them =)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Thu Jul 09, 2009 1:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-09T12:43:41+00:00</updated>
+
+		<published>2009-07-09T12:43:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8092#p8092</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8092#p8092"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8092#p8092"><![CDATA[
+Can you give me a copy of your source code so I can test it? I suspect its GraphicsEnvironment.lua; I basically took an axe and tried to axe as much code as possible in order to boost speed. Evidently I only tested it with the demo...<br><br>Here's one with only a 50% boost in FPS. *cross my fingers*<br><br>EDIT: I'm really really curious how my library can manage such a feat; screwing with so many pixels....... The best I've got it to do was change fonts, line widths, mess with scissors, coordinates, but I've never seen anything like this. That's why I want to take a look at your code.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=859">LoveUI(unstable).love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Thu Jul 09, 2009 12:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-09T12:18:03+00:00</updated>
+
+		<published>2009-07-09T12:18:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8090#p8090</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8090#p8090"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8090#p8090"><![CDATA[
+Sorry this was not too good, demo works but in my own project.. look at the file every second frame it looks something like this every other frame its allright.<br><br>I start the game by hiding all the menu and reseting the draw update and load functions. Ingame gfx are completly fucked, while 90% of the menu stays..<dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=858&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=858" class="postimage" alt="error.png" /></a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Thu Jul 09, 2009 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-09T08:20:40+00:00</updated>
+
+		<published>2009-07-09T08:20:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8083#p8083</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8083#p8083"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8083#p8083"><![CDATA[
+After working for a couple of hours with the insides on my library; I have two pieces of news to announce. One good one bad. <br>Bad news: I have not been able to reduce the growth rate in time needed to render the rows of the table view. More rows = slower. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><br>Good news: with some refactoring of my fake matrix and the graphics environment code I was able to increase FPS by 100% in the demo, from 25 frames to 50. It'll take quadrupling of the rows in the tableView before the FPS gets dropped back to 25 again.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=857">LoveUI(unstable).love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Thu Jul 09, 2009 8:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-09T01:26:06+00:00</updated>
+
+		<published>2009-07-09T01:26:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8074#p8074</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8074#p8074"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8074#p8074"><![CDATA[
+A bit too technical for me, but performance after reload is better.<br>But still performance with a "large" table is poor.<br>I like to use the reload everytime the data of a single new server is obtained, so the user doesn't have to wait for all servers to be loaded...<br>I had some 30 testservers to be obtained and after one single update performance was not acceptable.<br><br>Thanks for the quick update, but I hope work is still going on on the performance topic.<br><br>Great Work!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Thu Jul 09, 2009 1:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-08T23:43:38+00:00</updated>
+
+		<published>2009-07-08T23:43:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8071#p8071</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8071#p8071"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8071#p8071"><![CDATA[
+I've also detected some bugs with reloadData, fixing it atm.<blockquote class="uncited"><div>just as far as I need it for my projects =)<br><br>I figured out how to use the tableview and buttons, till jet thats all i need.<br>But i think there might be more elegant ways to use a GUI:<br><br>in the draw function should be just: drawGUI<br>and in the update: updategui(dt)<br><br>and for the rest all the elements should be set by functions.. which seems more difficult in LoveUI... I'm still using it since it's quite functional and looks nice.</div></blockquote>Umm... what about mousepressed function: mousepressedGUI ?? and all the other input ones.<br><br>EDIT: My demo runs at 25fps, and I've found the source of all performance problems.<br>There are two, actually. One involving "storeGraphicsEnvironment", and the other "pushMatrix". They involve ALOT of function calls for EACH and EVERY widget, EVERY SINGLE FRAME. the graphics environment makes sure that, e.g, line widths, colors, fonts, etc, get reset at the end of drawing for each widget (to what it was, before the widget began drawing). I could go around this by having each widget cleaning before/after itself, instead. <br><br>The pushMatrix/popMatrix/translate, allows users to place views based on coordinates of its superviews. I believe this allows too much convenience to be scrapped. That's why it wont be fixed in the current love version. Either this gets implemented using OpenGL in the coming love versions, OR I'll do this using the coming love.native library.<br><br>By including these two calls I reduced my FPS from hundreds down to couple of dozens. That's not fun.<br><br>p.s reloadData isn't supposed to be called every frame.<br>Here's an update that fixed some bugs reloadData had; It didn't reload the scrollers properly.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=856">LoveUI(unstable).love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Wed Jul 08, 2009 11:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-08T16:57:30+00:00</updated>
+
+		<published>2009-07-08T16:57:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8057#p8057</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8057#p8057"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8057#p8057"><![CDATA[
+The more I use "TableView:reloadData()" the more it has speed problems afterwards (scrolling, sorting etc), even the buttons react more slow after having used reloadData(or clicking the headers to sort the tabel) for about 20 times...<br>Found out its directly influencing my FPS.<br><br>If i hide the table, speed is back to normal.<br><br>I don't see any reason why it should be like that, besides that the table performance itself is quite poor. I love the table, so i hope a solution is following..<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Wed Jul 08, 2009 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-08T15:34:19+00:00</updated>
+
+		<published>2009-07-08T15:34:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8056#p8056</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8056#p8056"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8056#p8056"><![CDATA[
+just as far as I need it for my projects =)<br><br>I figured out how to use the tableview and buttons, till jet thats all i need.<br>But i think there might be more elegant ways to use a GUI:<br><br>in the draw function should be just: drawGUI<br>and in the update: updategui(dt)<br><br>and for the rest all the elements should be set by functions.. which seems more difficult in LoveUI... I'm still using it since it's quite functional and looks nice.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Wed Jul 08, 2009 3:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-07-08T15:18:04+00:00</updated>
+
+		<published>2009-07-08T15:18:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8055#p8055</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8055#p8055"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8055#p8055"><![CDATA[
+That readme file helped a little (at least for me), but I'm still a bit confused about how to use it. I'll dive into it later. I hope Sparx works it out as well.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Jul 08, 2009 3:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[appleide]]></name></author>
+		<updated>2009-07-08T14:52:07+00:00</updated>
+
+		<published>2009-07-08T14:52:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8054#p8054</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8054#p8054"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8054#p8054"><![CDATA[
+You mean <em class="text-italics">internal</em> documentation? Rather than a user guide? I'll try.....<br>Meanwhile, take a look at ReadMe(Old).txt <br>It's old but still relevant. It explains the structure around which I've built things.<br><br>If you want to read the code in the most logical sequence, from back to front, start with this order:<br><br>LoveUI.lua -&gt; LoveUIContext.lua -&gt; LoveUI.View.lua -&gt; LoveUIResponder.lua -&gt; LoveUIControl.lua -&gt; LoveUIButton.lua -&gt;LoveUIActionCell.lua -&gt; LoveUIButtonCell.lua<br><br>Which happens to be the order in which things were coded. (I actually bootstrapped the whole thing by building the first three files concurrently; but that's kinda irrelevant.) You can consider the first 3 files to be the central pillar which holds everything else in this lib together. LoveUIView.lua is the most interesting.<br><br>LoveUI.lua connects love to the library. LoveUIContext.lua connects input into the library. LoveUIView.lua connects every other widget to the library. Together, they become what you know as "LoveUI". You can remove every other widget, and LoveUIView will still be operational. (Although you need LoveUIStack.lua, LoveUIRect.lua, LoveUISize.lua, LoveUIPoint.lua, LoveUIResponder.lua, LoveUIEvent.lua and LoveUIGraphicsEnvironment.lua as support... These files are object-oriented versions of what already exists in lua and love itself.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=85">appleide</a> — Wed Jul 08, 2009 2:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sparx]]></name></author>
+		<updated>2009-07-08T13:26:37+00:00</updated>
+
+		<published>2009-07-08T13:26:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8051#p8051</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8051#p8051"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8051#p8051"><![CDATA[
+<blockquote class="uncited"><div>I'd love to see some documentation for this as well. But I'm afraid the only one who understands LoveUI completely is appleide himself.</div></blockquote>That's exactly why we need a documentation....<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=505">Sparx</a> — Wed Jul 08, 2009 1:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2009-07-08T12:53:15+00:00</updated>
+
+		<published>2009-07-08T12:53:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=8049#p8049</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=8049#p8049"/>
+		<title type="html"><![CDATA[Re: LoveUI... has button, Textfield, scrollVIew]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=8049#p8049"><![CDATA[
+I'd love to see some documentation for this as well. But I'm afraid the only one who understands LoveUI completely is appleide himself.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Jul 08, 2009 12:53 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

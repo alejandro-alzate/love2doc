@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2888" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-04-25T13:01:09+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2888</id>
+
+		<entry>
+		<author><name><![CDATA[TsT]]></name></author>
+		<updated>2011-04-25T13:01:09+00:00</updated>
+
+		<published>2011-04-25T13:01:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30128#p30128</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30128#p30128"/>
+		<title type="html"><![CDATA[love.screen module]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30128#p30128"><![CDATA[
+Hello,<br><br>After <a href="http://love2d.org/forums/viewtopic.php?f=4&amp;t=2884" class="postlink">LOVE API naming discuss</a> topic...<br>I decide to made my own love.screen module to provide a better way (my opinion) to manage the screen (caption, resolution, ...)<br><br>I think, the main improvement is about the setMode(...)<br><br><strong class="text-strong">How to use the module ?</strong><div class="codebox"><p>Code: </p><pre><code>function love.load()        require("love.screen") -- load the love.module        love.screen.init() -- Mandatory : it create the main screen.        screen = love.screen.getScreen()end</code></pre></div><br><strong class="text-strong">How to change the resolution to 640x480 ?<br></strong><div class="codebox"><p>Code: </p><pre><code>screen:setMode(640, 480)</code></pre></div><strong class="text-strong">How to get a 300x300 windowed (not fullscreened)</strong><div class="codebox"><p>Code: </p><pre><code>screen:setMode(300, 300, false)</code></pre></div><strong class="text-strong">How to keep current screen resolution/settings but change the fsaa to 2 </strong><div class="codebox"><p>Code: </p><pre><code>screen:setMode(nil, nil, nil, nil, 2)</code></pre></div>Documentation :<br>The functions that are equal to the love.graphics one :<div class="codebox"><p>Code: </p><pre><code>screen:getCaption()screen:setCaption(title)screen:checkMode(width, height, fullscreen)screen:getModes()screen:toggleFullscreen()screen:getHeight()screen:getWidth()</code></pre></div>The setMode function are like the love.graphics one but manage the nil value like the getMode() (see below):<div class="codebox"><p>Code: </p><pre><code>screen:setMode(width, height, fullscreen, vsync, fsaa)</code></pre></div>I'm also implement missing functions like :<div class="codebox"><p>Code: </p><pre><code>screen:getFullscreen() -- true if currently fullscreen, false if notscreen:getVsync() -- get the vsync value used by the last mode change (or the default if defined in love.conf)screen:getFsaa() -- get the fsaa value used by the last mode change (or the default if defined in love.conf)screen:getMode(...) -- Note: it's not the getModes() see below...screen:getMode() -- get the current screen settings : width, height, fullscreen, vsync, fsaascreen:getMode(width, height, fullscreen, vsync, fsaa) -- return the current screen settings but overwrite with the argument passed, see sample below.</code></pre></div>Sample of use :<br><br>Get the screen handler<div class="codebox"><p>Code: </p><pre><code>        screen = love.screen.getScreen()-- or        screen = love.screen.getScreen("main")</code></pre></div>Change Caption<div class="codebox"><p>Code: </p><pre><code>        screen:setCaption("this is a test caption")</code></pre></div>Change the resolution to 640x480 and keep current other settings<div class="codebox"><p>Code: </p><pre><code>        local width, height, fullscreen, vsync, fsaa = screen:getMode()        screen:setMode(640, 480, fullscreen, vsync, fsaa)        -- or        screen:setMode(screen:getMode(640, 480, nil, nil, nil))</code></pre></div>Switch to vsync = true<div class="codebox"><p>Code: </p><pre><code>        screen:setMode(screen:getMode(nil, nil, nil, true, nil))</code></pre></div>Toggle vsync<div class="codebox"><p>Code: </p><pre><code>        screen:setMode(screen:getMode(nil, nil, nil, not screen:getVsync() , nil))</code></pre></div>Toggle Fullscreen<div class="codebox"><p>Code: </p><pre><code>        screen:toggleFullscreen()-- or        screen:setMode(nil, nil, not screen:getFullscreen(), nil , nil))</code></pre></div>Download <a href="http://www.worldmaster.fr/files/love2d-release/love.screen-20110425.zip" class="postlink">love.screen.zip</a> - 2011.04.21<br><br>EDIT: the module could be able to manage multiple screen object (but not checked, and not really usefull for now)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179">TsT</a> — Mon Apr 25, 2011 1:01 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

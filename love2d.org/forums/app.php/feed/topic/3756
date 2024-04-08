@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/3756" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2014-06-18T14:37:17+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/3756</id>
+
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-18T14:37:17+00:00</updated>
+
+		<published>2014-06-18T14:37:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169891#p169891</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169891#p169891"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169891#p169891"><![CDATA[
+Yes, that definitely could be a use case. Thanks for mentioning it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Jun 18, 2014 2:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-18T12:55:51+00:00</updated>
+
+		<published>2014-06-18T12:55:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169890#p169890</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169890#p169890"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169890#p169890"><![CDATA[
+I use stacking for a pause menu above the main game state.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Wed Jun 18, 2014 12:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gestaltist]]></name></author>
+		<updated>2014-06-17T11:39:04+00:00</updated>
+
+		<published>2014-06-17T11:39:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169854#p169854</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169854#p169854"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169854#p169854"><![CDATA[
+Thanks kikito. That piece of code was very informative.<br><br>Now that I think about it, this kind of state stacking might be useful for manipulating NPC AI. <br><br>But you never using the feature has kind of confirmed my suspicions, as well.<br><br>If I may suggest something, you could link to this thread from stateful’s GitHub page. It answers a lot of questions I had after browsing the code and using the library.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135152">gestaltist</a> — Tue Jun 17, 2014 11:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-17T11:09:28+00:00</updated>
+
+		<published>2014-06-17T11:09:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169852#p169852</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169852#p169852"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169852#p169852"><![CDATA[
+Hi!<br><br>I copied the state stacking mechanics form <a href="http://udn.epicgames.com/Three/MasteringUnrealScriptStates.html#11.6%20-%20STATE%20STACKING" class="postlink">unrealscript</a>. To this day, I have never needed it. When I thought I needed it, I ended up finding a better solution without stacking or even without state.<br><br>I consider gotoState is the general, usual case. Using the state stack is much, much less frequent; an "edge case", if you will. If you use a stack, it is doubtful that you will need more than 1 level. <br><br>The use case is: you have a "general state", and a state which acts as a "complement". The complement acts like a "sub state", modifying some methods of the base state.<br><br>You can find examples of most of the methods on my libraries in the /spec/ folder. These are tests that make sure that each method works as expected, but they also work as documentation. There's a test for state stacking:<br><br><a href="https://github.com/kikito/stateful.lua/blob/master/spec/acceptance_spec.lua#L93" class="postlink">https://github.com/kikito/stateful.lua/ ... ec.lua#L93</a><br><br>Admittedly, the state names are not great - because thinking about ideal places where state stacking makes sense is difficult for me. After all, it's a feature I never use myself. But the guys who made unrealscript are more intelligent than me, so they probably had good reasons to add it.<br><br>Sorry if my answer is a bit lackluster; it's a feature that I never use.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Jun 17, 2014 11:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gestaltist]]></name></author>
+		<updated>2014-06-17T07:55:10+00:00</updated>
+
+		<published>2014-06-17T07:55:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169847#p169847</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169847#p169847"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169847#p169847"><![CDATA[
+Hi kikito.<br><br>I am having a hard time understanding how and when to use state popping and pushing. I am always using “gotoState”. I would be grateful for an explanation<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135152">gestaltist</a> — Tue Jun 17, 2014 7:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-13T13:47:56+00:00</updated>
+
+		<published>2014-06-13T13:47:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169676#p169676</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169676#p169676"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169676#p169676"><![CDATA[
+My pleasure, thank you for helping me make the library better!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Jun 13, 2014 1:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-13T08:44:11+00:00</updated>
+
+		<published>2014-06-13T08:44:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169667#p169667</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169667#p169667"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169667#p169667"><![CDATA[
+Thanks for fixing this!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Fri Jun 13, 2014 8:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-12T17:20:25+00:00</updated>
+
+		<published>2014-06-12T17:20:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169636#p169636</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169636#p169636"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169636#p169636"><![CDATA[
+Thanks for reporting this. I will give it a look.<br><br>EDIT: It is now fixed on github. I have made some other small changes and released version 1.0.2<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Jun 12, 2014 5:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-12T15:59:27+00:00</updated>
+
+		<published>2014-06-12T15:59:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169632#p169632</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169632#p169632"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169632#p169632"><![CDATA[
+@kikito : I have another problem with stateful. Maybe a bug, maybe design decision. I hope you can help <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<br><br>When i stack states and use gotoState() in a stacked state, the 'exitedState' function is only called for the stacked state and not all, down to root state. I thought goto calls all 'exitedState' from all states i have stacked via push.<br><br>Sample<br>- 'MainMenu'<br>  push 'LevelMenu' -&gt; here i call gotoState 'InGame' and this only calls LevelMenu:exitedState() and not also MainMenu:exitedState()<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Jun 12, 2014 3:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-11T08:19:35+00:00</updated>
+
+		<published>2014-06-11T08:19:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169542#p169542</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169542#p169542"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169542#p169542"><![CDATA[
+<blockquote class="uncited"><div>Running that code and pressing 'f' twice yields a string '133'. Is this intended?</div></blockquote>Yes - reason below.<br><blockquote class="uncited"><div>A bigger problem for me is that<br><div class="codebox"><p>Code: </p><pre><code>function Troop:enteredState() str = str .. '2' end</code></pre></div>adding that code and switching to the nil state doesn't add '2' to the string. Is there anyway to get a callback function to trigger when a troop instance goes to the nil state?</div></blockquote>'nil' is not a state. In consequence, it does not have entered/exited callbacks, nor it does occupy a place in the internal state stack.<br><br>If you want your objects to always be in a state, you have to provide one for them - call it Default or Init or Idle or something. You can probably make your instances go to that state by default in their constructor:<br><div class="codebox"><p>Code: </p><pre><code>function Troop:initialize()  self:gotoState('Default')endfunction Default:enteredState()  str = str .. '1'end</code></pre></div><blockquote class="uncited"><div>...</div></blockquote>Thank you for your clarifications.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Jun 11, 2014 8:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rxi]]></name></author>
+		<updated>2014-06-11T06:35:17+00:00</updated>
+
+		<published>2014-06-11T06:35:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169538#p169538</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169538#p169538"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169538#p169538"><![CDATA[
+<blockquote class="uncited"><div>That will give you trouble later on, especially if you want to use it with a dynamic loader such as lurker</div></blockquote>A bit of a slow response, but just wanted to clarify on this point: Unless you meant this was due to the combination of Lurker and Stateful, Lurker should work quite happily with modules which are set to global variables. I wrote it in a way such that it rebuilds all the corresponding module tables in place when it reloads a module, rather than recreating the module. This was so that things like metatables are also immediately effected without objects needing to be reconstructed, and is also the reason for another point you mentioned:<br><blockquote class="uncited"><div> if you remove one function from a state and the state is reloaded by lurker, the function will "still be there" when lurker reloads.</div></blockquote>I won't go into too much detail, but many of the decisions were made to try and make lurker work really well for quick, small, iterative changes -- for example, if you want to perfectly tweak the gravity in a game and see the effects of this immediately. Due to how it works it does mean you either need to explicitly set a table's deleted function to nil or simply restart the game for changes where you delete a function.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134747">rxi</a> — Wed Jun 11, 2014 6:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[CaptainMaelstrom]]></name></author>
+		<updated>2014-06-11T04:13:53+00:00</updated>
+
+		<published>2014-06-11T04:13:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169537#p169537</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169537#p169537"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169537#p169537"><![CDATA[
+Hey kikito. I've been playing around with stateful lately and I really like it.<br><br>I do have a couple suggestions though. I ran some tests and noticed that you can enter states without leaving them, at least, the "enteredState" function executes for a specific state if you try to "gotoState" into it without having left it first. Example:<br><div class="codebox"><p>Code: </p><pre><code>function Troop:initialize() endfunction Visible:enteredState() str = str .. '3' endfunction love.load()troop = Troop()str = '1'endfunction love.draw() lg.print(str,20,20) endfunction love.keypressed(key)if key=='f' then troop:gotoState('Visible') endif key=='a' then troop:gotoState(nil) endend</code></pre></div>Running that code and pressing 'f' twice yields a string '133'. Is this intended?<br><br>A bigger problem for me is that<br><div class="codebox"><p>Code: </p><pre><code>function Troop:enteredState() str = str .. '2' end</code></pre></div>adding that code and switching to the nil state doesn't add '2' to the string. Is there anyway to get a callback function to trigger when a troop instance goes to the nil state?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83282">CaptainMaelstrom</a> — Wed Jun 11, 2014 4:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-01T17:47:14+00:00</updated>
+
+		<published>2014-05-01T17:47:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167275#p167275</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167275#p167275"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167275#p167275"><![CDATA[
+<blockquote class="uncited"><div>Yeah sure! but I think that this is not done <a href="http://www.love2d.org/forums/viewtopic.php?f=5&amp;t=3756#p38128" class="postlink">here</a> or <a href="https://github.com/kikito/stateful.lua#example" class="postlink">here</a>, making things confusing. It would be great if you changed:<br><strong class="text-strong">require "middleclass"</strong> to <strong class="text-strong"><span style="color:#FF4000">local class = </span>require "middleclass"</strong></div></blockquote>You are right, of course. I've updated those, thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu May 01, 2014 5:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2014-05-01T16:41:35+00:00</updated>
+
+		<published>2014-05-01T16:41:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167270#p167270</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167270#p167270"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167270#p167270"><![CDATA[
+<blockquote class="uncited"><div>I recommend doing this instead:</div></blockquote>Yeah sure! but I think that this is not done <a href="http://www.love2d.org/forums/viewtopic.php?f=5&amp;t=3756#p38128" class="postlink">here</a> or <a href="https://github.com/kikito/stateful.lua#example" class="postlink">here</a>, making things confusing. It would be great if you changed:<br><strong class="text-strong">require "middleclass"</strong> to <strong class="text-strong"><span style="color:#FF4000">local class = </span>require "middleclass"</strong><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Thu May 01, 2014 4:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-01T10:29:47+00:00</updated>
+
+		<published>2014-05-01T10:29:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167258#p167258</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167258#p167258"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167258#p167258"><![CDATA[
+(sorry about double posting, I'm answering to two different posts here)<br><blockquote class="uncited"><div>class = require "<a href="https://github.com/kikito/middleclass" class="postlink">middleclass</a>"<br><br>That should do it</div></blockquote>I recommend doing this instead:<br><div class="codebox"><p>Code: </p><pre><code>local class = require 'middleclass'local Stateful = require 'stateful'</code></pre></div>at the beginning of game.lua.<br><br>In general, use local xxx = require 'xxx' on all the files that need to use xxx. It's a bit longer to write, but it pays off. The end of my previous post explains a bit more about this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu May 01, 2014 10:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-01T10:30:52+00:00</updated>
+
+		<published>2014-05-01T10:25:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167257#p167257</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167257#p167257"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167257#p167257"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Does any of you guys have a sample *.love file showing the issue?</div></blockquote>I attached one simple love file for testing purposes. To make the problem happen, open the menu.lua file and save it again. Lurker will reload the file and an assertion error will be thrown:<blockquote class="uncited"><div>State Menu already exists on class Game</div></blockquote></div></blockquote>Hi there! It took me a while to get some time to test this, with Ludum Dare and Real Life getting in the way.<br><br>First of all: there was an error in main.lua:15 - it referenced 'self' instead of 'game', and this raised an error. I fixed that, and will be ignoring it for the rest of this post.<br><br>Second, the solution you posted (removing the assertion in stateful.lua) is not really solving the issue, it's masking it temporarily. You are leaving the "old state" there instead of removing it. Which has lots of unintended consequences. For example, if you remove one function from a state and the state is reloaded by lurker, the function will "still be there" when lurker reloads. It will still "mask" parent functions, even if its code doesn't exist any more. It's one of those ninja-bugs that you really don't want to have in your code. So I am not going to recommend it.<br><br>Third, not everything is lost! I found a way to make things work. It's not as pretty as I'd like, but it's something. The gist is this: you can use stateful with lurker, <em class="text-italics">as long as all the states affecting one class stay in the same file as the class</em>.<br><br>In other words, If you move the content of menu.lua to the end of game.lua and removed the `require "menu"` from main.lua, it works - you can start the game, change the menu state message to "Menu State 2", for example, and it refreshes correctly.<br><br>The reasons for this are complex. Lurker is a "file-based" thing. game.lua and menu.lua, are two files acting on the same piece of memory. So lurker gets confused - it loads menu again, but not game.lua. But if you put everything in one file, Lurker can work with it.<br><br>There might be other ways around this - some of them might need help from Lurker's author. But putting everything in one file is the simplest solution. Here's the fixed stateful-lurker.love:<br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=9862">stateful-lurker-fixed.love</a></dt></dl></div>Finally, I noticed that you rely on global variables to do almost everything; you define classes as globals:<br><div class="codebox"><p>Code: </p><pre><code>Game = class('Game')...</code></pre></div>You also declare libraries as globals in main.lua: <br><div class="codebox"><p>Code: </p><pre><code>class = require "middleclass"lurker = require "lurker"...</code></pre></div>That will give you trouble later on, especially if you want to use it with a dynamic loader such as lurker. I recommend that you:<ul><li>Require the libraries you need on each file where you need them, as local variables</li><li>Define classes as locals and return them at the end of the files where they are defined</li></ul>In other words, your game.lua could look like this:<br><div class="codebox"><p>Code: </p><pre><code>local class = require 'class'local Game = class('Game')... -- (Define Game and Menu)return Game</code></pre></div>And your main.lua could look like this:<div class="codebox"><p>Code: </p><pre><code>local lurker = require 'lurker'local Game = require 'Game'local gamefunction love.load()  game = Game:new()end...</code></pre></div>I realize that this is a bit more tedious to write, but global variables play badly with reloading code. Also, your code will be more clear, by making it explicit where each library is used. You get used to it very quickly.<br><br>Here's a version of stateful-lurker with all the globals removed:<br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=9863">stateful-lurker-no-globals.love</a></dt></dl></div>I hope this helps.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu May 01, 2014 10:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2014-05-01T06:07:03+00:00</updated>
+
+		<published>2014-05-01T06:07:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167255#p167255</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167255#p167255"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167255#p167255"><![CDATA[
+class = require "<a href="https://github.com/kikito/middleclass" class="postlink">middleclass</a>"<br><br>That should do it<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Thu May 01, 2014 6:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JaquesEdrillavo]]></name></author>
+		<updated>2014-05-01T02:08:25+00:00</updated>
+
+		<published>2014-05-01T02:08:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=167251#p167251</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=167251#p167251"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=167251#p167251"><![CDATA[
+<blockquote class="uncited"><div>Then Game can be defined as a class inside Game.lua, and have a Menu state, a Play state, and so on.<br><br>Here's how you would create a Game with a Menu state:<br><div class="codebox"><p>Code: </p><pre><code>-- game.luaGame = class("Game"):include(Stateful)function Game:initialize()  self.image =  love.graphics.newImage("image.jpg")  self:gotoState("Menu") -- start on the Menu stateendlocal Menu = Game:addState("Menu")function Menu:enteredState() -- create buttons, options, etc and store them into self  print("entering the state menu")endfunction Menu:draw() -- draw the menuendfunction Menu:update(dt) -- update anything that needs updatesendfunction Menu:exitedState() -- destroy buttons, options etc here  print("exiting the menu state")end</code></pre></div>That's the basic structure. You could add another state called "Play" similar to "Menu" following this schema.<br><br>That's pretty much it. Let me know if you have any questions.</div></blockquote>Hey!<br>Awesome work. Really!<br><br>Im kind of new with Löve, im struggling like you have no idea.<br>I've been having some issue with trying to define the Game = class("Game"):include(Stateful)<br>I leave it Global, but still says that class is a nil value.<br>I even copied exactly as you did in your explanation and still got the same error.<br><br>Do you have an idea of what I could be doing wrong?<br><br>Thank you for everything!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134914">JaquesEdrillavo</a> — Thu May 01, 2014 2:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-04-24T13:09:44+00:00</updated>
+
+		<published>2014-04-24T13:09:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166892#p166892</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166892#p166892"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166892#p166892"><![CDATA[
+Thanks. I will not be able to check it today, but I will try to do it tomorrow.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Apr 24, 2014 1:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[enygmata]]></name></author>
+		<updated>2014-04-24T12:36:39+00:00</updated>
+
+		<published>2014-04-24T12:36:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166891#p166891</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166891#p166891"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166891#p166891"><![CDATA[
+<blockquote class="uncited"><div>Does any of you guys have a sample *.love file showing the issue?</div></blockquote>I attached one simple love file for testing purposes. To make the problem happen, open the menu.lua file and save it again. Lurker will reload the file and an assertion error will be thrown:<blockquote class="uncited"><div>State Menu already exists on class Game</div></blockquote><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=9825">stateful-lurker.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134992">enygmata</a> — Thu Apr 24, 2014 12:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-04-24T08:12:17+00:00</updated>
+
+		<published>2014-04-24T08:12:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166885#p166885</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166885#p166885"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166885#p166885"><![CDATA[
+<blockquote class="uncited"><div>I can give you what I've found. Apparently, when lurker reloads values defined in states, stateful wants to put the reloaded state as a new state on top of the old one.</div></blockquote>Sorry, but I don't understand what "values defined in states" means, and I have never used lurker before. Does any of you guys have a sample *.love file showing the issue?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Apr 24, 2014 8:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Puzzlem00n]]></name></author>
+		<updated>2014-04-24T01:34:15+00:00</updated>
+
+		<published>2014-04-24T01:34:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166869#p166869</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166869#p166869"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166869#p166869"><![CDATA[
+I can give you what I've found. Apparently, when lurker reloads values defined in states, stateful wants to put the reloaded state as a new state on top of the old one. This gives the error you assert in line 85, about putting an already existing state in the stack. Commenting out the line makes it work, obviously, but the two states still exist, which causes problems when you want to pop a state and it still exists underneath.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45221">Puzzlem00n</a> — Thu Apr 24, 2014 1:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-04-24T01:25:10+00:00</updated>
+
+		<published>2014-04-24T01:25:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166868#p166868</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166868#p166868"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166868#p166868"><![CDATA[
+<blockquote class="uncited"><div><ol style="list-style-type:decimal"><li>Could you make the library compatible with <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=77409" class="postlink">lurker</a>?</li></ol></div></blockquote>Can you give me more information? What did you try, what did you expected to happen, and what did happen instead?<br><blockquote class="uncited"><div><ol style="list-style-type:decimal"><li>Could you please add optional state change "restrictions"?</li></ol></div></blockquote>No, sorry, I don't think that's frequent enough to be on the library.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Apr 24, 2014 1:25 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Puzzlem00n]]></name></author>
+		<updated>2014-04-23T19:11:16+00:00</updated>
+
+		<published>2014-04-23T19:11:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166858#p166858</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166858#p166858"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166858#p166858"><![CDATA[
+Yeah, I ran into the "compatibility with lurker" problem too. I don't think it's something that'd be easy to do, or fair to ask of Kikito. Commenting out line 85 in stateful makes it sorta work, with some bugs on state stacks. In the end, lurker is only meant for the development of the game, not the end product, so the bugs are excusable.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45221">Puzzlem00n</a> — Wed Apr 23, 2014 7:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[enygmata]]></name></author>
+		<updated>2014-04-23T18:45:45+00:00</updated>
+
+		<published>2014-04-23T18:45:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=166857#p166857</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=166857#p166857"/>
+		<title type="html"><![CDATA[Re: stateful.lua]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=166857#p166857"><![CDATA[
+<ol style="list-style-type:decimal"><li>Could you make the library compatible with <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=77409" class="postlink">lurker</a>?</li><li>Could you please add optional state change "restrictions"?</li>Sometimes it is good to make sure the flow goes in a certain way, e.g. going from MainMenu to GameOver state should throw an error or warning. I think it may be possible to implement this by adding a "to" or "from" field and querying these before starting/finishing the state change.</ol><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134992">enygmata</a> — Wed Apr 23, 2014 6:45 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

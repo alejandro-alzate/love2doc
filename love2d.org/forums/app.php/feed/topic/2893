@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2893" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-05-14T09:43:37+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2893</id>
+
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-12T04:18:10+00:00</updated>
+
+		<published>2011-05-12T04:18:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31364#p31364</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31364#p31364"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.2)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31364#p31364"><![CDATA[
+I've added a video demonstration of some of the features to the main post.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Thu May 12, 2011 4:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-09T20:29:53+00:00</updated>
+
+		<published>2011-05-09T20:29:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31258#p31258</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31258#p31258"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.2)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31258#p31258"><![CDATA[
+Strong 1.0.2 has been released! We've got three new methods in this one, center, camelize, and underscore.<br><br><span style="font-size:85%;line-height:116%">Is double posting in this situation correct, or not?</span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Mon May 09, 2011 8:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-14T09:43:37+00:00</updated>
+
+		<published>2011-05-09T20:14:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31256#p31256</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31256#p31256"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31256#p31256"><![CDATA[
+Hmmm, I like the call syntax though, because it's convenient; how does having both options sound? As in, __call would redirect to the method.<br><br>I would contest that there is an, at least somewhat, logical meaning to calling a string. Functions do, or run, code; calling the string would run code, just in different places and resulting in different things.<br><br>And yes, I like that %{} syntax.<br><br>EDIT: I'm not going to do interpolation. The trickery required to get locals to be usable is just not cool. It's not pretty, and it won't work without the debug library (SELOVE doesn't have this).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Mon May 09, 2011 8:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-05-09T16:18:36+00:00</updated>
+
+		<published>2011-05-09T16:18:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31248#p31248</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31248#p31248"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31248#p31248"><![CDATA[
+<blockquote class="uncited"><div>I'm not sure this function is needed, since Lua already has <a href="https://www.lua.org/manual/5.1/manual.html#pdf-string.format">string.format</a>, which does a very similar thing.</div></blockquote>Except not really. This is more like <a href="http://lua-users.org/wiki/SimpleLuaPreprocessor" class="postlink">SimpleLuaPreprocessor</a>, except it is less powerful than the SLP.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon May 09, 2011 4:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-05-09T15:56:49+00:00</updated>
+
+		<published>2011-05-09T15:56:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31246#p31246</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31246#p31246"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31246#p31246"><![CDATA[
+I'm not sure this function is needed, since Lua already has <a href="https://www.lua.org/manual/5.1/manual.html#pdf-string.format">string.format</a>, which does a very similar thing.<br><br>But if I were doing this, I'd try to use the % symbol, since it's the one used in that function. (It's also the symbol used in Python, btw).<br><br>Regarding the name, I'd call it "interpolate", or "parse". I'd not use the __call metamethod.<br><div class="codebox"><p>Code: </p><pre><code>string.parse("You have seen this page %{1} times")-- would be more or less equivalent tostring.format("You have seen this page %d times", 1)</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon May 09, 2011 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-05-09T15:23:03+00:00</updated>
+
+		<published>2011-05-09T15:23:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31244#p31244</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31244#p31244"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31244#p31244"><![CDATA[
+The first for string syntax, the Ruby way. In a templating utility function I wrote, I actually just used curly brackets, without anything before it, but that might not be very usable in this case.<br><br>I don't recommend the call syntax, because it's hardly self-documenting: there is no obvious meaning to calling a string. Furthermore, it might be easily missed when casually reading the source.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon May 09, 2011 3:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-09T10:51:29+00:00</updated>
+
+		<published>2011-05-09T10:51:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31234#p31234</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31234#p31234"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31234#p31234"><![CDATA[
+I need your opinion guys. I want to add string interpolation, but I'd like some opinions on the style of how to do this. Firstly what syntax do you think is good. The two I have in mind is:<div class="codebox"><p>Code: </p><pre><code>"#{i * 42}. Say hello."</code></pre></div>(Ruby syntax), or<div class="codebox"><p>Code: </p><pre><code>"$i * 42$. Say hello."</code></pre></div>(as seen in the reference manual). Being a Rubyist, I prefer the first out of those two of course.<br><br>Next is how to parse it. It'll need to be done by a method. My options here are:<br><br>1. When the call syntax is used with no arguments, it parse the string for interpolation.<div class="codebox"><p>Code: </p><pre><code>("#{i * 42}. Say hello.")()</code></pre></div>2. A normal method, named run or something (suggestions on name?).<div class="codebox"><p>Code: </p><pre><code>("#{i * 42}. Say hello."):run() -- or("#{i * 42}. Say hello."):parse()</code></pre></div>I tend to prefer the first, because it fits nicely with the syntax normally used with <a href="https://www.lua.org/manual/5.1/manual.html#pdf-loadstring">loadstring</a>:<div class="codebox"><p>Code: </p><pre><code>loadstring("foo = 3")()</code></pre></div>So what do you think?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Mon May 09, 2011 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-04T01:07:49+00:00</updated>
+
+		<published>2011-05-04T01:07:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30801#p30801</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30801#p30801"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0.1)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30801#p30801"><![CDATA[
+I've just released 1.0.1. No changes to the API, just some stuff under-the-hood is better now. Check out the repo and the <a href="https://github.com/BlackBulletIV/strong/wiki/Changelog" class="postlink">change log</a> for more information.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Wed May 04, 2011 1:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-28T23:01:56+00:00</updated>
+
+		<published>2011-04-28T23:01:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30484#p30484</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30484#p30484"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger (1.0)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30484#p30484"><![CDATA[
+Alright everyone, 1.0 has been released. I'm currently writing the documentation in the <a href="https://github.com/BlackBulletIV/strong/wiki" class="postlink">wiki</a>. Everything is now tested, and all 60 of them pass. Enjoy!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Thu Apr 28, 2011 11:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-28T07:49:12+00:00</updated>
+
+		<published>2011-04-28T07:49:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30386#p30386</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30386#p30386"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30386#p30386"><![CDATA[
+Hey string.title() would be a good idea.<br><br>Yeah, I'll make them iterators.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Thu Apr 28, 2011 7:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-28T04:53:57+00:00</updated>
+
+		<published>2011-04-28T04:53:57+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30362#p30362</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30362#p30362"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30362#p30362"><![CDATA[
+You have no string.title(), right?<blockquote class="uncited"><div>And second is whether I should use function arguments for iterative methods, like bytes, chars, and eachLine, or use iterators? I've tending to like iterators more, as it's more Lua-like.</div></blockquote>Definitely make them iterators.<br><br>table.foreach and table.foreachi are deprecated in favour of pairs and ipairs.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Apr 28, 2011 4:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-28T01:35:53+00:00</updated>
+
+		<published>2011-04-28T01:35:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30337#p30337</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30337#p30337"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30337#p30337"><![CDATA[
+Ok here's the status of strong.<br><br>Pretty much all methods are implemented (I think the 'center' method would be the only one left) and have tests for them. If you look at the README in the Bugs/Problems section you'll find the details for a pesky problem in the squeeze method. This problem is the reason I'm hesitant to make a 1.0 release now. If anyone could help out, that would be most appreciated.<br><br>I've also started working the documentation, have a look at the GitHub wiki for that. If anyone would like to help out in the function reference, please do.<br><br>Finally I want your opinion on a couple of things.<br><br>First is whether I should use camel-case naming for the functions with multiple words, or whether I should keep their Ruby names which have underscores? And no, I won't accept the Lua style of all lower-case, and no spaces; that's hard to read (and I don't know why they did that in the first place).<br><br>And second is whether I should use function arguments for iterative methods, like bytes, chars, and eachLine, or use iterators? I've tending to like iterators more, as it's more Lua-like.<br><br>Thanks guys!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Thu Apr 28, 2011 1:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-26T22:49:23+00:00</updated>
+
+		<published>2011-04-26T22:49:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30226#p30226</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30226#p30226"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30226#p30226"><![CDATA[
+Thanks for that. I've put it in <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<br><br>EDIT: Added this a library in the wiki.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Tue Apr 26, 2011 10:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-26T20:01:54+00:00</updated>
+
+		<published>2011-04-26T20:01:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30214#p30214</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30214#p30214"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30214#p30214"><![CDATA[
+Another version of string.insert, which is more consistent in regard to negative indices, at the expense of slightly less elegant code:<div class="codebox"><p>Code: </p><pre><code>function string:insert(index, other)  index = (index &lt; 0 and index + 1 or index) % (#self+1)  if index == 1 then    return other .. self  elseif index == 0 then    return self .. other  else    return self:sub(1, index - 1) .. other .. self:sub(index)  endend</code></pre></div><div class="codebox"><p>Code: </p><pre><code>---------------------| A | B | C | D | E |---------------------1   2   3   4   5   6-6 -5  -4  -3  -2  -1</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Apr 26, 2011 8:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-26T10:40:22+00:00</updated>
+
+		<published>2011-04-26T10:40:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30177#p30177</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30177#p30177"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30177#p30177"><![CDATA[
+Thanks for that kikito. I'll give it a try. Maybe I should create a library or two to "learn" TDD (just like you did to test TDD in Lua).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Tue Apr 26, 2011 10:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-26T10:18:53+00:00</updated>
+
+		<published>2011-04-26T10:18:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30176#p30176</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30176#p30176"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30176#p30176"><![CDATA[
+<blockquote class="uncited"><div>Do you know any good way to get yourself into TDD?</div></blockquote>The beaten path is the best one IMHO. Very succintly:<ul><li>Pick a small enough problem (strong is an excellent candidate)</li><li>(This is optional, but surprisingly useful) - write the README of the library. Make sure it includes some example, or the names of the methods you will use. Some people jokingly call this "README-driven development".</li> <li>Build up the "blank state" (so you are able to run the tests, even if there are no tests yet, without errors). In lua this usually means something like making a return {} on your main &lt;library&gt;.lua file, and making sure that you are able to require that file from inside the test_&lt;mylib&gt;.lua file (or spec_&lt;mylib&gt;.lua). As we have talked over email, I've found that in Lua the simplest solution for this is using symbolic links for the lib files/folders inside the tests folder.</li><li>Pick one method (or independent piece of functionality) for the lib. For example, the __index metamethod for strings.</li><li>Write a test for the simplest case of that method. For example, __index with a number only.</li><li>Make sure that the test fails. I mean, actually going to the console and making sure that the test fails properly - this makes sure that you have not, for example, made a syntax error on the test code.</li><li>Write just the minimum amount of code for making that test pass. This requires you to think like a programmer, not like a code monkey. For example, if your test does ("hello")[1], you don't have to make the index method return "h" on your test. You can actually skip the very very obvious steps and make it return self:sub(key, key)</li><li>Make sure that the test pass.</li><li>Add more tests, make them fail, implement them, and pass the tests again, until the functionality of that first method is complete (in the index case, numbers and not-numbers) and the edge cases have been discovered (what happens when a negative number is passed? what about nil? a function?)</li><li>Then move over to the next piece of functionality and start with the simplest case again.</li>  </ul>This might sound like a lot of work, but take into account that running the tests is super easy - In my case, it takes more time to save the file than to run the tests (because I use the mouse). You will discover soon enough that once you get into the flow, it's more satisfying than the "usual" way.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Apr 26, 2011 10:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-26T09:47:10+00:00</updated>
+
+		<published>2011-04-26T09:47:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30174#p30174</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30174#p30174"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30174#p30174"><![CDATA[
+<blockquote class="uncited"><div>Needless to say, I like the idea and the name. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"></div></blockquote>Thanks kikito!<br><blockquote class="uncited"><div>I don't like this part so much. If I've learned something, is that making tests first helps. A lot!<br><br>I actually tried both approaches with inspect (see <a href="https://github.com/kikito/inspect.lua/commit/3d3840393e81d8c974708d41e126e1c75377f3d3" class="postlink">this commit</a> and the <a href="https://github.com/kikito/inspect.lua/commit/b66508cb560e520521847f780d89dd39a67658d2" class="postlink">next one</a>). The result was: implementing the test first was both easier and ... wait for it ... faster to do!<br><br>Because doing the tests first is more fun <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"> !<br><br>Testing stuff the "traditional way" (i.e. opening a lua console, importing your lib, and executing functions) is quite boring, at least for me. I found myself procrastinating, browsing the internet etc, instead of doing the tests I was supposed to be doing.<br><br>When you write the tests first, you are actually programming. It's something creative, I enjoy it, and I don't feel tempted to do other stuff. Running the tests takes 2 keystrokes and lasts milliseconds. They pass or they don't. And then, back to programming! The "boring time" is reduced.</div></blockquote>Of course you don't like it <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">. I'm not a TDD person by any means, I don't write tests much, but in this case I thought they were necessary for finding problems (and there's quite a few that have been found already). I find I have to force myself to write tests, I just find it boring. But maybe it would be different if I did tests first for the purpose of designing an API, I don't know.<br><br>I find the problem is, most of the time you write more test code than application code when using tests. So as an analogy, a builder places a brick down, which takes a minute. He then spends 5 minutes inspecting that he placed it correctly. So he ends up spending an hour laying bricks, and 5 hours checking that he didn't do anything wrong.<br><br>But anyway, I think I'm just put off by TDD because I've been doing it the exact opposite for some time now. Do you know any good way to get yourself into TDD? I guess this is same kind of ordeal I had with two-space indentation, I knew it was better (because I was coding in Ruby now), but I just couldn't get over not having four spaces; I ended up forcing myself to "get used to it", and now my eyes have adjusted and I can't stand using four spaces (except when I'm in a curly braced language, then I'm not sure what to do).<br><br>Anyway, enough rants from me.<br><br><strong class="text-strong">--------------------------------</strong><br><br>As for your post Robin, thanks heaps! I've put it in the repo and marked your kindness in the README <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Tue Apr 26, 2011 9:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-26T08:40:15+00:00</updated>
+
+		<published>2011-04-26T08:40:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30169#p30169</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30169#p30169"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30169#p30169"><![CDATA[
+Your implementation of string.insert seems a bit... inefficient to me.<br><br>I'd do something like:<div class="codebox"><p>Code: </p><pre><code>function string:insert(index, other)  index = index % (#self+1)  if index == 1 then    return other .. self  elseif index == 0 then    return self .. other  else    return self:sub(1, index - 1) .. other .. self:sub(index)  endend</code></pre></div>Didn't test it, but it should work. It handles negative indices as well.<br><br>EDIT: position of insertion<div class="codebox"><p>Code: </p><pre><code>---------------------| A | B | C | D | E |---------------------1   2   3   4   5   6-5 -4  -3  -2  -1   0</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Apr 26, 2011 8:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-26T08:32:04+00:00</updated>
+
+		<published>2011-04-26T08:32:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30168#p30168</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30168#p30168"/>
+		<title type="html"><![CDATA[Re: strong: Makes strings stronger]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30168#p30168"><![CDATA[
+<blockquote class="uncited"><div>I've been wanting some of the awesome features of <a href="http://www.ruby-doc.org/core/classes/String.html" class="postlink">Ruby's String class</a> for a little while now in Lua.</div></blockquote>Needless to say, I like the idea and the name. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"> <br><blockquote class="uncited"><div>Working on creating the tests which make sure everything works. I'm rapidly making things work as they should.</div></blockquote>I don't like this part so much. If I've learned something, is that making tests first helps. A lot!<br><br>I actually tried both approaches with inspect (see <a href="https://github.com/kikito/inspect.lua/commit/3d3840393e81d8c974708d41e126e1c75377f3d3" class="postlink">this commit</a> and the <a href="https://github.com/kikito/inspect.lua/commit/b66508cb560e520521847f780d89dd39a67658d2" class="postlink">next one</a>). The result was: implementing the test first was both easier and ... wait for it ... faster to do!<br><br>Because doing the tests first is more fun <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"> !<br><br>Testing stuff the "traditional way" (i.e. opening a lua console, importing your lib, and executing functions) is quite boring, at least for me. I found myself procrastinating, browsing the internet etc, instead of doing the tests I was supposed to be doing.<br><br>When you write the tests first, you are actually programming. It's something creative, I enjoy it, and I don't feel tempted to do other stuff. Running the tests takes 2 keystrokes and lasts milliseconds. They pass or they don't. And then, back to programming! The "boring time" is reduced.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Apr 26, 2011 8:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-05-12T04:17:42+00:00</updated>
+
+		<published>2011-04-26T01:02:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30158#p30158</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30158#p30158"/>
+		<title type="html"><![CDATA[strong: Makes strings stronger (1.0.2)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30158#p30158"><![CDATA[
+I've been wanting some of the awesome features of <a href="http://www.ruby-doc.org/core/classes/String.html" class="postlink">Ruby's String class</a> for a little while now in Lua. So this morning and last night, I created a library which I've called "strong".<br><br>GitHub repo: <a href="https://github.com/BlackBulletIV/strong" class="postlink">https://github.com/BlackBulletIV/strong</a><br>Documentation:  <a href="https://github.com/BlackBulletIV/strong/wiki" class="postlink">https://github.com/BlackBulletIV/strong/wiki</a><br>Project page on my website: <a href="http://nova-fusion.com/projects/lua/strong" class="postlink">http://nova-fusion.com/projects/lua/strong</a><br>Wiki page: <a href="http://love2d.org/wiki/strong" class="postlink">http://love2d.org/wiki/strong</a><br><br>For more information, consult the <a href="https://github.com/BlackBulletIV/strong#readme" class="postlink">README</a>.<br><br>Video demonstration of <em class="text-italics">some</em> features:<br> <strong>iframe</strong> <p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Tue Apr 26, 2011 1:02 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

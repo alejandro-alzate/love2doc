@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84110" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-05-03T14:35:25+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84110</id>
+
+		<entry>
+		<author><name><![CDATA[lukems]]></name></author>
+		<updated>2020-05-03T14:35:25+00:00</updated>
+
+		<published>2020-05-03T14:35:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233456#p233456</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233456#p233456"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233456#p233456"><![CDATA[
+<blockquote class="uncited"><div>For anyone interested in this still, I have done a rewrite of this project with a bit more design and a bit more sillyness with the name: <a href="https://github.com/tanema/talkies" class="postlink">https://github.com/tanema/talkies</a><br><br>Some Changes<br>- eliminated all global leaking variables!<br>- A bit more maintainable<br>- less magic numbers and calculations in drawing the dialog box<br>- easier theming<br>- talking and typing sound systems so that you can multiple types of sounds.<br>- abstracted the key functionality out of the library so that you can manage it yourself.<br>- updated defaults for 11+<br>- added onMessage function<br>- Took out camera functionality because you can do the same with onstart, oncomplete functions and you shouldn't be tied to other peoples libraries.<br>- ability to have dialogs without images.<br>- better project layout so that you don't need to require a whole folder, instead just require a single file.</div></blockquote>@drunken_thor I've created <a href="https://love2d.org/wiki/Talkies.lua" class="postlink">a new page for this project on the Wiki</a>. This should help people noticing its still around and being updated.  Nice job keeping it alive  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-ultra-glee.png" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138835">lukems</a> — Sun May 03, 2020 2:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nequals30]]></name></author>
+		<updated>2020-02-06T00:58:36+00:00</updated>
+
+		<published>2020-02-06T00:58:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=231965#p231965</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=231965#p231965"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=231965#p231965"><![CDATA[
+In möan/talkies, is there a way to resize my font if I am using an imageFont?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=143414">nequals30</a> — Thu Feb 06, 2020 12:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2019-11-25T09:18:04+00:00</updated>
+
+		<published>2019-11-25T09:18:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230875#p230875</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230875#p230875"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230875#p230875"><![CDATA[
+<blockquote class="uncited"><div>There doesn't seem to be any sort of license as far as I can see. Can this be used commercially, and even if you're okay with that, would it then depend on how the OP feels about it, considering Talkies is based on, and pretty much is an updated version of Moan? I'd really like to avoid finding myself in any sort of legal trouble in the future. Thanks!</div></blockquote>Both the original and the rewrite is licensed under the MIT license; the former has a LICENSE file, the latter mentions it at the top of the talkies.lua file.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Mon Nov 25, 2019 9:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[LesbianHam]]></name></author>
+		<updated>2019-11-25T07:17:32+00:00</updated>
+
+		<published>2019-11-25T07:17:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230873#p230873</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230873#p230873"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230873#p230873"><![CDATA[
+<blockquote class="uncited"><div>For anyone interested in this still, I have done a rewrite of this project with a bit more design and a bit more sillyness with the name: <a href="https://github.com/tanema/talkies" class="postlink">https://github.com/tanema/talkies</a><br><br>Some Changes<br>- eliminated all global leaking variables!<br>- A bit more maintainable<br>- less magic numbers and calculations in drawing the dialog box<br>- easier theming<br>- talking and typing sound systems so that you can multiple types of sounds.<br>- abstracted the key functionality out of the library so that you can manage it yourself.<br>- updated defaults for 11+<br>- added onMessage function<br>- Took out camera functionality because you can do the same with onstart, oncomplete functions and you shouldn't be tied to other peoples libraries.<br>- ability to have dialogs without images.<br>- better project layout so that you don't need to require a whole folder, instead just require a single file.</div></blockquote>There doesn't seem to be any sort of license as far as I can see. Can this be used commercially, and even if you're okay with that, would it then depend on how the OP feels about it, considering Talkies is based on, and pretty much is an updated version of Moan? I'd really like to avoid finding myself in any sort of legal trouble in the future. Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=144482">LesbianHam</a> — Mon Nov 25, 2019 7:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[drunken_thor]]></name></author>
+		<updated>2019-10-09T20:28:50+00:00</updated>
+
+		<published>2019-10-09T20:28:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230028#p230028</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230028#p230028"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230028#p230028"><![CDATA[
+@4vZEROv Thanks I just added an update with those changes<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135723">drunken_thor</a> — Wed Oct 09, 2019 8:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[4vZEROv]]></name></author>
+		<updated>2019-02-03T13:59:37+00:00</updated>
+
+		<published>2019-02-03T13:59:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225534#p225534</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225534#p225534"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225534#p225534"><![CDATA[
+Nice rework <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br>I found some things you could work :<br>- playSound() and parseSpeed() are global <br>- indentation timer is framerate dependant<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141677">4vZEROv</a> — Sun Feb 03, 2019 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[drunken_thor]]></name></author>
+		<updated>2019-02-02T05:42:10+00:00</updated>
+
+		<published>2019-02-02T05:42:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225511#p225511</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225511#p225511"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225511#p225511"><![CDATA[
+For anyone interested in this still, I have done a rewrite of this project with a bit more design and a bit more sillyness with the name: <a href="https://github.com/tanema/talkies" class="postlink">https://github.com/tanema/talkies</a><br><br>Some Changes<br>- eliminated all global leaking variables!<br>- A bit more maintainable<br>- less magic numbers and calculations in drawing the dialog box<br>- easier theming<br>- talking and typing sound systems so that you can multiple types of sounds.<br>- abstracted the key functionality out of the library so that you can manage it yourself.<br>- updated defaults for 11+<br>- added onMessage function<br>- Took out camera functionality because you can do the same with onstart, oncomplete functions and you shouldn't be tied to other peoples libraries.<br>- ability to have dialogs without images.<br>- better project layout so that you don't need to require a whole folder, instead just require a single file.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135723">drunken_thor</a> — Sat Feb 02, 2019 5:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-01-06T12:25:15+00:00</updated>
+
+		<published>2019-01-06T12:25:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224997#p224997</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224997#p224997"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224997#p224997"><![CDATA[
+There's a fork here: <a href="https://github.com/stephenwithav/Moan.lua" class="postlink">https://github.com/stephenwithav/Moan.lua</a><br><br>Maybe you can reconstruct part of the history based on that.<br><br>I hate when people do that. It shows little respect for their followers. Unfortunately this is not among the <a href="https://love2d.org/forums/viewtopic.php?f=3&amp;t=84974" class="postlink">libraries that I was keeping a mirror of</a> because I didn't think I'd ever need it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Jan 06, 2019 12:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[drunken_thor]]></name></author>
+		<updated>2019-01-06T02:06:44+00:00</updated>
+
+		<published>2019-01-06T02:06:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224989#p224989</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224989#p224989"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224989#p224989"><![CDATA[
+Hey everyone, I went looking for this library today and found that the repo and the user's github account has been deleted so I created and mirrors the code from the original .love file in this thread <a href="https://github.com/tanema/Moan.lua" class="postlink">https://github.com/tanema/Moan.lua</a>. If anyone has a more recent version of it with bug fixes please either let me know or open a PR.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135723">drunken_thor</a> — Sun Jan 06, 2019 2:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Snaker1]]></name></author>
+		<updated>2018-12-27T20:04:20+00:00</updated>
+
+		<published>2018-12-27T20:04:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=224778#p224778</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=224778#p224778"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=224778#p224778"><![CDATA[
+Just bumping to say that I really like this lib.<br><br>It is a great and lightweight way of adding message boxes to a game that looks great and does not mess with the rest of the game code. Absolutely priceless!<br><br>I recently used it for a game in Love 11.2 without any problems and with only a few tweaks, so it still a viable option.<br><br>Is there a reason why it was removed on github? Is it still worked on?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141538">Snaker1</a> — Thu Dec 27, 2018 8:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milk]]></name></author>
+		<updated>2018-06-30T15:52:13+00:00</updated>
+
+		<published>2018-06-30T15:52:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221936#p221936</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221936#p221936"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221936#p221936"><![CDATA[
+Moan.speak is used to insert a single message into the message queue, and therefore should only be called once per message - by putting Moan.speak into love.draw you are inserting new message every frame (which would probably cause the game to crash eventually)<br>Moan.update updates the library (which you forgot to add)<br>Moan.draw is used to draw the messages in the message queue<br><br>Hopefully this works (in LOVE 0.10.x) - untested btw.<div class="codebox"><p>Code: </p><pre><code>require("lovesplash/lovesplash")local Moan = require("Moan")state = "lovesplash"function love.load()  -- Insert a message into the message queue   -- Message shown when Moan.draw called (in menu state)  Moan.speak("Title", {"Hello world!", "It's me;--Möan.lua"})endfunction love.draw()  if state == "lovesplash" then    lovesplash.draw()  else if state == "menu" then    Moan.draw()  endendfunction love.update(dt)  if state == "lovesplash" then    lovesplash.update(dt)    if lovesplash.done() then      state = "menu"      Moan.update(dt)    end  endendfunction love.keypressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendendfunction love.mousepressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendend</code></pre></div>Also I'd recommend reading the example main.lua (<a href="https://github.com/ttxi/Moan.lua/blob/master/main.lua" class="postlink">https://github.com/ttxi/Moan.lua/blob/master/main.lua</a>) as it shows how to use the library and is pretty heavily commented.<br>I apologise in advance for how awkward the library is to use - I wrote it last year when my programming skills were pretty bad, I'm planning a rewrite in the near future for LOVE 11.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138192">milk</a> — Sat Jun 30, 2018 3:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T12:04:01+00:00</updated>
+
+		<published>2018-06-30T12:04:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221933#p221933</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221933#p221933"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221933#p221933"><![CDATA[
+ok so now i have updated it a bit and it now continually beeps without the message showing up<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=16464">Project 1.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 12:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-06-30T11:29:49+00:00</updated>
+
+		<published>2018-06-30T11:29:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221931#p221931</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221931#p221931"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221931#p221931"><![CDATA[
+...and you didn't feel like telling us that the errors you made this thread for magically solved themselves and that you have a different problem with it now?<br><br>You're not using it correctly, you have to call Moan.draw to see something. And calling Moan.speak in every frame may also not be correct, but I don't know that lib.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Jun 30, 2018 11:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T11:18:13+00:00</updated>
+
+		<published>2018-06-30T11:18:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221930#p221930</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221930#p221930"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221930#p221930"><![CDATA[
+well on my computer the message box is not showing up after the splash screen<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 11:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-06-30T11:13:29+00:00</updated>
+
+		<published>2018-06-30T11:13:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221929#p221929</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221929#p221929"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221929#p221929"><![CDATA[
+There is no error.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Jun 30, 2018 11:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T11:16:59+00:00</updated>
+
+		<published>2018-06-30T11:09:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221928#p221928</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221928#p221928"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221928#p221928"><![CDATA[
+here is the .love file of the project<br><br>edit: now has a conf.lua file<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=16462">Project 1.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 11:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-06-30T10:02:32+00:00</updated>
+
+		<published>2018-06-30T10:02:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221927#p221927</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221927#p221927"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221927#p221927"><![CDATA[
+These errors do not match the <a href="https://github.com/ttxi/Moan.lua/blob/master/Moan.lua" class="postlink">current state</a> of that lib. Check again if you didn't do any modifications to it, or whether you're using an older version.<br><br>If you can't find the error, post a love file. The code you posted is not the culprit.<br><br>And don't triple post, edit your comments to add new info.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Jun 30, 2018 10:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T10:00:30+00:00</updated>
+
+		<published>2018-06-30T10:00:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221926#p221926</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221926#p221926"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221926#p221926"><![CDATA[
+here is the latest code btw<div class="codebox"><p>Code: </p><pre><code>require("lovesplash/lovesplash")local Moan = require("Moan")state = "lovesplash"function love.draw()  if state == "lovesplash" then    lovesplash.draw()  else if state == "menu" then    Moan.speak("Title", {"Hello world!", "It's me;--Möan.lua"})  endendendfunction love.update(dt)  if state == "lovesplash" then    lovesplash.update(dt)    if lovesplash.done() then      state = "menu"    end  endendfunction love.keypressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendendfunction love.mousepressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 10:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T09:58:36+00:00</updated>
+
+		<published>2018-06-30T09:58:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221925#p221925</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221925#p221925"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221925#p221925"><![CDATA[
+yeah i am using the latest version i just downloaded it<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 9:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T09:53:14+00:00</updated>
+
+		<published>2018-06-30T09:53:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221924#p221924</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221924#p221924"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221924#p221924"><![CDATA[
+alright after changing the require line i now have a different error<div class="codebox"><p>Code: </p><pre><code>Errormain.lua:10: attempt to index upvalue 'Moan' (a boolean value)Tracebackmain.lua:10: in function 'draw'[C]: in function 'xpcall'</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2018-06-30T09:50:14+00:00</updated>
+
+		<published>2018-06-30T09:50:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221923#p221923</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221923#p221923"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221923#p221923"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Actually, aftwr checking the repo. It should be <br><br>```<br>local Moan = require("moan")<br>```<br><br>Not<br><br>```<br>require("moan")<br>```</div></blockquote>I checked it too and Moan.lua declares a global Moan table. OP's Moan.speak call should work as is with the current Moan.lua from the repo.<br><div class="codebox"><p>Code: </p><pre><code>require('Moan')Moan.speak('Test', { 'test' })</code></pre></div></div></blockquote>Oh yeah, it's global.<br><br>OP, are you using the latest version?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Jun 30, 2018 9:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2018-06-30T09:26:49+00:00</updated>
+
+		<published>2018-06-30T09:26:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221921#p221921</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221921#p221921"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221921#p221921"><![CDATA[
+<blockquote class="uncited"><div>Actually, aftwr checking the repo. It should be <br><br>```<br>local Moan = require("moan")<br>```<br><br>Not<br><br>```<br>require("moan")<br>```</div></blockquote>I checked it too and Moan.lua declares a global Moan table. OP's Moan.speak call should work as is with the current Moan.lua from the repo.<br><div class="codebox"><p>Code: </p><pre><code>require('Moan')Moan.speak('Test', { 'test' })</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Sat Jun 30, 2018 9:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2018-06-30T08:53:32+00:00</updated>
+
+		<published>2018-06-30T08:53:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221919#p221919</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221919#p221919"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221919#p221919"><![CDATA[
+<blockquote class="uncited"><div>sorry wrong error log i already deleted the joycon library<div class="codebox"><p>Code: </p><pre><code>Errormain.lua:10: attempt to call field 'speak' (a nil value)Tracebackmain.lua:10: in function 'draw'[C]: in function 'xpcall'</code></pre></div></div></blockquote>That means that the "speak" function of Moan is nil (not a function or doesn't exist). Try browsing the Moan file and search for the "speak" variable<br><br>Actually, aftwr checking the repo. It should be <br><br>```<br>local Moan = require("moan")<br>```<br><br>Not<br><br>```<br>require("moan")<br>```<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Jun 30, 2018 8:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Titanor]]></name></author>
+		<updated>2018-06-30T08:15:36+00:00</updated>
+
+		<published>2018-06-30T08:15:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221918#p221918</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221918#p221918"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221918#p221918"><![CDATA[
+sorry wrong error log i already deleted the joycon library<div class="codebox"><p>Code: </p><pre><code>Errormain.lua:10: attempt to call field 'speak' (a nil value)Tracebackmain.lua:10: in function 'draw'[C]: in function 'xpcall'</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140385">Titanor</a> — Sat Jun 30, 2018 8:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2018-06-30T07:48:34+00:00</updated>
+
+		<published>2018-06-30T07:48:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221916#p221916</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221916#p221916"/>
+		<title type="html"><![CDATA[Re: Möan.lua - A simple messagebox system.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221916#p221916"><![CDATA[
+<blockquote class="uncited"><div>hey guys i am trying to use moan in my project but when it gets to the message box code it crashes can someone help with this<br>here is the error<div class="codebox"><p>Code: </p><pre><code>ErrorSyntax error: joycon.lua:7: unexpected symbol near '&lt;'Traceback[C]: at 0x7fa82417f230[C]: in function 'require'main.lua:3: in main chunk[C]: in function 'require'[C]: in function 'xpcall'[C]: in function 'xpcall'</code></pre></div>and here is the code<div class="codebox"><p>Code: </p><pre><code>require("lovesplash/lovesplash")require("Moan")joycon = require("joycon")state = "lovesplash"function love.draw()  if state == "lovesplash" then    lovesplash.draw()  else if state == "menu" then    Moan.speak("Title", {"Hello world!", "It's me;--Möan.lua"})  endendendfunction love.update(dt)  if state == "lovesplash" then    lovesplash.update(dt)    if lovesplash.done() then      state = "menu"    end  endendfunction love.keypressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendendfunction love.mousepressed()  if state == "lovesplash" then    lovesplash.stop()  else if state == "exit" then    love.event.quit()  else  endendend</code></pre></div>anyways thanks if you can help</div></blockquote>Learn to read error messages. It says "in joycon", the moan library is not the issue. Check for that &lt; operator<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Jun 30, 2018 7:48 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84750" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-03-03T14:05:26+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84750</id>
+
+		<entry>
+		<author><name><![CDATA[kuinashi101]]></name></author>
+		<updated>2023-03-03T14:05:26+00:00</updated>
+
+		<published>2023-03-03T14:05:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253710#p253710</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253710#p253710"/>
+		<title type="html"><![CDATA[Re: Lily - LÖVE Async Loading Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253710#p253710"><![CDATA[
+<blockquote class="uncited"><div>You don't. Even with regular love.audio.newSource, you'll get a Source object, not a table. SLAM does its own thing, and probably is not really compatible with this library. Besides, SLAM also calls Source:setPitch internally so that has nothing to do with tables either.</div></blockquote>By test the code below:<br><br><br>lily.newSource("test.mp3","static"):onComplete(function(userdata, sound)<br>print( sound ) -- Source: 0x7feea5805240<br>        print( "sound: "..inspect(sound) )               -- sound: &lt;userdata 1&gt;<br>end)<br><br>local _table = love.audio.newSource( "test.mp3","static" )<br>print("_table: ".._table)                  -- error (a table value)<br>print( "_table: "..inspect(_table) )   -- SEE BELOW:<br><br>_table: {<br>  _paused = false,<br>  how = "static",<br>  instances = {},<br>  looping = false,<br>  pitch = 1,<br>  target = &lt;userdata 1&gt;,<br>  volume = 1,<br>  &lt;metatable&gt; = &lt;1&gt;{<br>    __index = &lt;table 1&gt;,<br>    __newindex = &lt;function 1&gt;,<br>    addTags = &lt;function 2&gt;,<br>    getLooping = &lt;function 3&gt;,<br>    getPitch = &lt;function 4&gt;,<br>    getVolume = &lt;function 5&gt;,<br>    isLooping = &lt;function 3&gt;,<br>    isStatic = &lt;function 6&gt;,<br>    pause = &lt;function 7&gt;,<br>    play = &lt;function 8&gt;,<br>    removeTags = &lt;function 9&gt;,<br>    resume = &lt;function 10&gt;,<br>    setLooping = &lt;function 11&gt;,<br>    setPitch = &lt;function 12&gt;,<br>    setVolume = &lt;function 13&gt;,<br>    stop = &lt;function 14&gt;<br>  }<br>}<br><br>I've noticed that by require("slam"), the return value become a table with userdata1 wrapped inside when you call love.audio.newSource. <br>that's why I got table instead of userdata. there is nothing wrong with lily, might have to get my hands dirty to tweak slam or make another wrapper. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"><br><br>I won't be noticed that without you point it out, thanks for that <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=217762">kuinashi101</a> — Fri Mar 03, 2023 2:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2023-03-03T08:54:47+00:00</updated>
+
+		<published>2023-03-03T08:54:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253709#p253709</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253709#p253709"/>
+		<title type="html"><![CDATA[Re: Lily - LÖVE Async Loading Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253709#p253709"><![CDATA[
+<blockquote class="uncited"><div>How could I get the return value of loaded sound as table instead of userdata? I need  to  set the pitch before hand and play them multiple times in short period using SLAM. Thanks!</div></blockquote>You don't. Even with regular love.audio.newSource, you'll get a Source object, not a table. SLAM does its own thing, and probably is not really compatible with this library. Besides, SLAM also calls Source:setPitch internally so that has nothing to do with tables either.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Mar 03, 2023 8:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kuinashi101]]></name></author>
+		<updated>2023-03-03T02:02:21+00:00</updated>
+
+		<published>2023-03-03T02:02:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253698#p253698</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253698#p253698"/>
+		<title type="html"><![CDATA[Re: Lily - LÖVE Async Loading Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253698#p253698"><![CDATA[
+How could I get the return value of loaded sound as table instead of userdata? I need  to  set the pitch before hand and play them multiple times in short period using SLAM. Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=217762">kuinashi101</a> — Fri Mar 03, 2023 2:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KayleMaster]]></name></author>
+		<updated>2018-01-05T15:44:57+00:00</updated>
+
+		<published>2018-01-05T15:44:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217625#p217625</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217625#p217625"/>
+		<title type="html"><![CDATA[Re: Lily - LÖVE Async Loading Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217625#p217625"><![CDATA[
+I've been using this library before it was posted here, can assure you - it's great.  <br>Your game won't freeze up on start if you're loading a lot of files (or big ones) and thus won't come up as not responding.  <br>I'm using this with gamestate from hump and I've got myself a nice loading screen that isn't a still picture.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138368">KayleMaster</a> — Fri Jan 05, 2018 3:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AuahDark]]></name></author>
+		<updated>2018-01-05T12:00:33+00:00</updated>
+
+		<published>2018-01-05T12:00:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217619#p217619</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217619#p217619"/>
+		<title type="html"><![CDATA[Lily - LÖVE Async Loading Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217619#p217619"><![CDATA[
+TL;DR: love-loader but uses events and multiple CPUs<br><br>Single loading example<div class="codebox"><p>Code: </p><pre><code>local lily = require("lily")local myimagelocal mysoundfunction love.load()lily.newImage("image.png"):onComplete(function(userdata, image)-- In v2.0, there's "userdata" before the return valuemyimage = imageend)lily.newSource("song.wav"):onComplete(function(userdata, sound)-- In v2.0, there's "userdata" before the return valuemysound = soundsound:play()end)endfunction love.draw()if myimage then love.graphics.draw(myimage, 0, 24, 0, 0.25, 0.25)else love.graphics.print("Loading image") endif not(mysound) then love.graphics.print("Loading song", 0, 12) endend</code></pre></div>Multi loading example<div class="codebox"><p>Code: </p><pre><code>local lily = require("lily")function love.load()multilily = lily.loadMulti({{"newImage", "image1-0.png"},-- You can use string{lily.newImage, love.filesystem.newFile("image1-1.png")},-- or the function object})local a = love.timer.getTime()multilily:onComplete(function(_, lilies)image1 = lilies[1][1]image2 = lilies[2][1]end)endfunction love.update() endfunction love.draw()if multilily:isComplete() thenlove.graphics.draw(image1, -1024, -1024)love.graphics.draw(image2)endend</code></pre></div><a href="https://github.com/MikuAuahDark/lily" class="postlink">GitHub Repository</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139571">AuahDark</a> — Fri Jan 05, 2018 12:00 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/11307" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-11-03T22:53:36+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/11307</id>
+
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2012-11-03T22:53:36+00:00</updated>
+
+		<published>2012-11-03T22:53:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69488#p69488</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69488#p69488"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69488#p69488"><![CDATA[
+Sorry for my confusion.<br>Lost track of who is doing what.<br>Just trying to use Love3d, Light3d &amp; Present3D.<br>Will avoid your topic in the future.<br>Best<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sat Nov 03, 2012 10:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-11-03T17:59:23+00:00</updated>
+
+		<published>2012-11-03T17:59:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69475#p69475</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69475#p69475"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69475#p69475"><![CDATA[
+<blockquote class="uncited"><div>Ahm! <br>Try checking:<br>love3D.preset.triCube3D(sideLength, ox, oy, oz)<br>Think you will find that it used the left hand rule.<br>If you try my attached demo (above), I had to change the facets to left hand for the lighting to track properly.<br>Not stomping on your program (which is great), just an observation.<br>Best</div></blockquote>Excuse me, if you would like to help substitute with his 3d library, would you mind posting in his topic instead? I would prefer for my projects topic to stay on topic.<br><br>Thank you.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Sat Nov 03, 2012 5:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2012-11-03T15:21:26+00:00</updated>
+
+		<published>2012-11-03T15:21:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69465#p69465</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69465#p69465"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69465#p69465"><![CDATA[
+Ahm! <br>Try checking:<br>    love3D.preset.triCube3D(sideLength, ox, oy, oz)<br>Think you will find that it used the left hand rule.<br>If you try my attached demo (above), I had to change the facets to left hand for the lighting to track properly.<br>Not stomping on your program (which is great), just an observation.<br>Best<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sat Nov 03, 2012 3:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-11-03T03:30:34+00:00</updated>
+
+		<published>2012-11-03T03:30:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69430#p69430</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69430#p69430"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69430#p69430"><![CDATA[
+<blockquote class="uncited"><div>Surprised that you order your triangles using the 'left-hand' rule.<br>Though most implimentations use the 'right_hand' rule???<br>To get the lighting to work correctly, I had to use 'left-hand' point order - see attached.</div></blockquote>Who's one is using the left-hand rule? I am using the right hand rule.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Sat Nov 03, 2012 3:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2012-11-03T02:39:18+00:00</updated>
+
+		<published>2012-11-03T02:39:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69428#p69428</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69428#p69428"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69428#p69428"><![CDATA[
+Surprised that you order your triangles using the 'left-hand' rule.<br>Though most implimentations use the 'right_hand' rule???<br>To get the lighting to work correctly, I had to use 'left-hand' point order - see attached.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=5994">test7_m.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sat Nov 03, 2012 2:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-31T11:46:49+00:00</updated>
+
+		<published>2012-10-31T11:46:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69223#p69223</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69223#p69223"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69223#p69223"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>i love how  my laptop is pure shit and the cubes from heaven keeps at 90fps, that is amazing</div></blockquote>Awesome <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>Glad to hear that! I guess I'm doing something right.<br>On my computer it goes about 40 fps, and this is a desktop...<br>I think mainly the problem is my video card is terrible.<br><br><br>Also, as far as table.sort goes, It's not working particularly well, but I am gonna keep trying.</div></blockquote>... Not to be an advertiser but, please try to read my Love3D Library, specifically the z-sorting functions. There are lots of ways to do it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Wed Oct 31, 2012 11:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-31T10:38:59+00:00</updated>
+
+		<published>2012-10-31T10:38:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69220#p69220</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69220#p69220"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69220#p69220"><![CDATA[
+<blockquote class="uncited"><div>i love how  my laptop is pure shit and the cubes from heaven keeps at 90fps, that is amazing</div></blockquote>Awesome <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>Glad to hear that! I guess I'm doing something right.<br>On my computer it goes about 40 fps, and this is a desktop...<br>I think mainly the problem is my video card is terrible.<br><br><br>Also, as far as table.sort goes, It's not working particularly well, but I am gonna keep trying.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Wed Oct 31, 2012 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rokit boy]]></name></author>
+		<updated>2012-10-30T19:11:55+00:00</updated>
+
+		<published>2012-10-30T19:11:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69163#p69163</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69163#p69163"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69163#p69163"><![CDATA[
+i love how  my laptop is pure shit and the cubes from heaven keeps at 90fps, that is amazing<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=25074">rokit boy</a> — Tue Oct 30, 2012 7:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-30T19:08:22+00:00</updated>
+
+		<published>2012-10-30T19:08:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69161#p69161</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69161#p69161"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69161#p69161"><![CDATA[
+Wow... I don't know what I never thought of using table.sort like that  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"> <br>Thanks <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>I'l try this out and see what happens.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Tue Oct 30, 2012 7:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-10-30T07:18:13+00:00</updated>
+
+		<published>2012-10-30T07:18:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69123#p69123</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69123#p69123"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69123#p69123"><![CDATA[
+<blockquote class="uncited"><div>Is there an easier way then iterating through the table until I find the correct order? (I'm sure this would be pretty slow too...)</div></blockquote>You'll have to use table.sort, providing a comparison function.<br><blockquote class="uncited"><div>table.sort(vertTable, function(A,B) return A.z &gt; B.z end)</div></blockquote>Substitute is totally right, here. I'll just point out that this way, items in the table will be sorted in decreasing z-index.<br>If you want them to be sorted in increasing z-index order, change the comparison function.<br><blockquote class="uncited"><div>table.sort(vertTable, function(A,B) return A.z &lt; B.z end)</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Oct 30, 2012 7:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-30T05:06:44+00:00</updated>
+
+		<published>2012-10-30T05:06:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69121#p69121</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69121#p69121"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69121#p69121"><![CDATA[
+<blockquote class="uncited"><div>Alright, so I reversed the order of which the points were fed to the drawPolygon function and nothing changed (Figures <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> ).<br>So, I'm wondering, how can I sort a table by a specific place. For instance, in this case, I want to sort the Indices by there vertices Z coordinate. As far as I'm aware, table.sort won't be capable of handling this.<br>Is there an easier way then iterating through the table until I find the correct order? (I'm sure this would be pretty slow too...)</div></blockquote>table.sort(vertTable, function(A,B) return A.z &gt; B.z end)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Tue Oct 30, 2012 5:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-29T23:56:28+00:00</updated>
+
+		<published>2012-10-29T23:56:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=69119#p69119</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=69119#p69119"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=69119#p69119"><![CDATA[
+Alright, so I reversed the order of which the points were fed to the drawPolygon function and nothing changed (Figures <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> ).<br>So, I'm wondering, how can I sort a table by a specific place. For instance, in this case, I want to sort the Indices by there vertices Z coordinate. As far as I'm aware, table.sort won't be capable of handling this.<br>Is there an easier way then iterating through the table until I find the correct order? (I'm sure this would be pretty slow too...)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Mon Oct 29, 2012 11:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-27T15:02:50+00:00</updated>
+
+		<published>2012-10-27T15:02:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68920#p68920</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68920#p68920"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68920#p68920"><![CDATA[
+<blockquote class="uncited"><div>Yeah, is this project still on? I'm interested.</div></blockquote>Yes yes yes...<br>I'm just growing bored of trying to load .obj files.<br>I'l get to it though.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Sat Oct 27, 2012 3:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[waratte]]></name></author>
+		<updated>2012-10-24T05:07:13+00:00</updated>
+
+		<published>2012-10-24T05:07:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68694#p68694</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68694#p68694"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68694#p68694"><![CDATA[
+Yeah, is this project still on? I'm interested.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=69834">waratte</a> — Wed Oct 24, 2012 5:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-24T01:30:31+00:00</updated>
+
+		<published>2012-10-24T01:30:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68690#p68690</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68690#p68690"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68690#p68690"><![CDATA[
+Is this project still on?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Wed Oct 24, 2012 1:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-19T18:21:53+00:00</updated>
+
+		<published>2012-10-19T18:21:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68284#p68284</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68284#p68284"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68284#p68284"><![CDATA[
+<blockquote class="uncited"><div>Good work, looks hawt.<br><br>I should say that it won't really be a good 3D lib if you can't control the camera position (x, y, z) and camera lookat (x, y, z)<br><br>^z<br>| /y<br>|/<br>x----&gt;<br><br>thats the x,y,z in 3d space afaik. I guess x,y looks normal from top down, and a higher z is "closer to the camera from a top-down position"</div></blockquote>What if I challenged your statement with "you won't really be a good 3d programmer unless you understand how rotations work?"<br>Of course, I wouldn't say that.<br>Views and camera positions are relatively easy to control from the translate and rotate functions. It should, in theory, work exactly how openGL works. I'll try to make a fps example so you can see.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Fri Oct 19, 2012 6:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[qaisjp]]></name></author>
+		<updated>2012-10-19T15:45:42+00:00</updated>
+
+		<published>2012-10-19T15:45:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68274#p68274</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68274#p68274"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68274#p68274"><![CDATA[
+Good work, looks hawt.<br><br>I should say that it won't really be a good 3D lib if you can't control the camera position (x, y, z) and camera lookat (x, y, z)<br><br>^z<br>| /y<br>|/<br>x----&gt;<br><br>thats the x,y,z in 3d space afaik. I guess x,y looks normal from top down, and a higher z is "closer to the camera from a top-down position"<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=65500">qaisjp</a> — Fri Oct 19, 2012 3:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-19T06:55:22+00:00</updated>
+
+		<published>2012-10-19T06:55:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68250#p68250</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68250#p68250"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68250#p68250"><![CDATA[
+... Now I know what Nixola's problem was. Z-Sorting.<br><br>Yep, 10$Man's cubes looks like he had that problem. Implementing z-sorting is easy, and there are 2 techniques. First one, which Nixola used before in my original Love3D, was to run a loop that runs at the FACES table, look at each face for how many vertices it has, take the average of those vertices, then, at the outside of the loop, sort the table according to their avg vertices. Second method is similar, only you take the minimum Z. Both of them work, but average Z works best with some culling (I use <a href="http://en.wikipedia.org/wiki/Backface_culling#Backface_culling" class="postlink">backface culling</a>).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Fri Oct 19, 2012 6:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-18T21:12:18+00:00</updated>
+
+		<published>2012-10-18T21:12:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68223#p68223</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68223#p68223"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68223#p68223"><![CDATA[
+<blockquote class="uncited"><div>I didn't explain well, I think.<br>I made that demo starting from the one in which you only see the 8 points; when I started writing the bit of code that draws the cube's faces, I encountered a problem that <strong class="text-strong">was</strong> caused by giving points to lg.polygon in the wrong order, I solved that problem before uploading it. Anyway, 10$Man's cubes are drawn as if he has the same problem I <strong class="text-strong">had</strong>.</div></blockquote>The thing is, it is pretty hard to change it as everything is loaded from a .obj.<br>The problem with this is that, it is harder to change around a specific value then if everything was just in arrays that could easily be manipulated (or at least they don't start in an array).<br>I know the problem is not drawing order (Though I'm sure this is a problem too), it's in the loader. (I know because I programmed it <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> )<br>Thank you for the suggestion though<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Thu Oct 18, 2012 9:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-10-18T12:19:28+00:00</updated>
+
+		<published>2012-10-18T12:19:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68209#p68209</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68209#p68209"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68209#p68209"><![CDATA[
+I didn't explain well, I think.<br>I made that demo starting from the one in which you only see the 8 points; when I started writing the bit of code that draws the cube's faces, I encountered a problem that <strong class="text-strong">was</strong> caused by giving points to lg.polygon in the wrong order, I solved that problem before uploading it. Anyway, 10$Man's cubes are drawn as if he has the same problem I <strong class="text-strong">had</strong>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Thu Oct 18, 2012 12:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-18T12:14:31+00:00</updated>
+
+		<published>2012-10-18T12:14:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68208#p68208</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68208#p68208"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68208#p68208"><![CDATA[
+<blockquote class="uncited"><div><a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=10777&amp;start=20#p66223" class="postlink">viewtopic.php?f=5&amp;t=10777&amp;start=20#p66223</a><br><br>I had some problems with the attached .love because I wasn't giving the points to love.graphics.polygon in the right order, achieving an effect similar to 10$Man's last demo<br><br>P.S: Ok, it's not a library but I didn't remember what it was exactly</div></blockquote>... Why don't we talk this either in the IRC channel, or Skype? (BTW, it's night here so, I will probably be sleeping by the time you reply. Skype username is substitute541).<br><br>I am still confused, but if you mean random glitches that occur when points are placed in the wrong order, try placing the points clockwise/counter-clockwise.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Thu Oct 18, 2012 12:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-10-18T12:06:57+00:00</updated>
+
+		<published>2012-10-18T12:06:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68207#p68207</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68207#p68207"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68207#p68207"><![CDATA[
+<a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=10777&amp;start=20#p66223" class="postlink">viewtopic.php?f=5&amp;t=10777&amp;start=20#p66223</a><br><br>I had some problems with the attached .love because I wasn't giving the points to love.graphics.polygon in the right order, achieving an effect similar to 10$Man's last demo<br><br>P.S: Ok, it's not a library but I didn't remember what it was exactly<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Thu Oct 18, 2012 12:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2012-10-18T11:28:31+00:00</updated>
+
+		<published>2012-10-18T11:28:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68205#p68205</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68205#p68205"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68205#p68205"><![CDATA[
+<blockquote class="uncited"><div>I think the problem is not the bad loading, but the bad drawing; I encountered a similar problem (I han only one cube, though) when trying to make a cube (drawn by Sobstitute's library) only show its visible faces, I had to check the order in which the points are given to love.graphics.polygon (I didn't check your code, but since the problem is similar I think the solution may also be the same)</div></blockquote>... Erm, which library are you talking about. I'm getting a bit confused.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Thu Oct 18, 2012 11:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-10-18T10:52:01+00:00</updated>
+
+		<published>2012-10-18T10:52:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68204#p68204</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68204#p68204"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68204#p68204"><![CDATA[
+I think the problem is not the bad loading, but the bad drawing; I encountered a similar problem (I han only one cube, though) when trying to make a cube (drawn by Sobstitute's library) only show its visible faces, I had to check the order in which the points are given to love.graphics.polygon (I didn't check your code, but since the problem is similar I think the solution may also be the same)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Thu Oct 18, 2012 10:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[10$man]]></name></author>
+		<updated>2012-10-18T10:45:06+00:00</updated>
+
+		<published>2012-10-18T10:45:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=68203#p68203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=68203#p68203"/>
+		<title type="html"><![CDATA[Re: L3D - The Starts of a 3D Lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=68203#p68203"><![CDATA[
+<blockquote class="uncited"><div>... The calculations that I said above...<br><br>Edit : Just look at the Light3D code.</div></blockquote>I'l check it out. I'm not promising I'l use it though.<br><br><br>New Example added. Demonstrates the bad .obj loading  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=47309">10$man</a> — Thu Oct 18, 2012 10:45 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

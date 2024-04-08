@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2680" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2011-03-25T03:08:17+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2680</id>
+
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-03-25T03:08:17+00:00</updated>
+
+		<published>2011-03-25T03:08:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28420#p28420</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28420#p28420"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28420#p28420"><![CDATA[
+I used to use coroutines in earlier versions, and while they were slightly faster (not at finding paths, but at going through the que) and it was nice to be in the same scope as the game (and therefore can see variables), I never found a very satisfactory way to divorce the pathfinding from framerate (multiple yield locations which triggered based on timers and current FPS? Eww...). But it's an inherent part of threads, which tilted my decision.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Fri Mar 25, 2011 3:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-03-24T21:33:54+00:00</updated>
+
+		<published>2011-03-24T21:33:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28410#p28410</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28410#p28410"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28410#p28410"><![CDATA[
+That's how GalCiv does it afaik. For games with minimal AI it's still debatable as to whether it's worth the effort of using threads versus a 0.1 second end of turn delay. This library and Love's recent threading addition definitely gives me more reason to develop more full AI routines.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Thu Mar 24, 2011 9:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-03-24T18:16:33+00:00</updated>
+
+		<published>2011-03-24T18:16:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28399#p28399</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28399#p28399"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28399#p28399"><![CDATA[
+yes there is a benefit. the AI can come up with better solutions while the player is making a move.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Thu Mar 24, 2011 6:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-03-24T17:34:01+00:00</updated>
+
+		<published>2011-03-24T17:34:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28397#p28397</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28397#p28397"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28397#p28397"><![CDATA[
+I took a quick look and I have to commend you for releasing a properly threaded library. That being said, I wonder if there's actually a benefit to use it in turn based game versus a lighter, nonthreaded solution.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Thu Mar 24, 2011 5:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-03-24T12:48:34+00:00</updated>
+
+		<published>2011-03-24T12:48:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28393#p28393</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28393#p28393"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28393#p28393"><![CDATA[
+<blockquote class="uncited"><div>I'd love to offer that, but you can only send strings and numbers (and maybe bools?) to threads, and the resulting functions would have to have the right name or else it wouldn't work.</div></blockquote><blockquote class="uncited"><div>You can serialize functions (without upvalues) using string.dump:<div class="codebox"><p>Code: </p><pre><code>function foo() print('bar') return 'baz' endserialized = string.dump(foo) --&gt; function bytecodemagic = loadstring(serialized)print( magic() )</code></pre></div></div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Thu Mar 24, 2011 12:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-03-23T23:06:18+00:00</updated>
+
+		<published>2011-03-23T23:06:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28379#p28379</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28379#p28379"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28379#p28379"><![CDATA[
+<blockquote class="uncited"><div>They would be more convenient if I could pass true lua functions instead of strings, possibly alongside with some custom data:</div></blockquote>I'd love to offer that, but you can only send strings and numbers (and maybe bools?) to threads, and the resulting functions would have to have the right name or else it wouldn't work. The best I can do is send code as a string and execute it on the other side.<br><blockquote class="uncited"><div>it names nodes by string and lets you build your network. with a bit of modification to the NewNode function it could store whatever data it needed(like coordinates). the benefit of Dijkstra's algorithm here is you don't need a uniform plane for it to work. say you want to put a few rocks in the way, no biggy you simply wont put a node there.</div></blockquote>I don't see why you can't do that in A*? My demo only uses a grid for half of the maps just to show it can be done. Technically you don't even need to place and g-score nodes by coordinates, if you have a different method.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Mar 23, 2011 11:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-03-23T22:50:14+00:00</updated>
+
+		<published>2011-03-23T22:50:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28377#p28377</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28377#p28377"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28377#p28377"><![CDATA[
+can you make a Dijkstra's path finding option? i have an un-encapsulated  implementation if you want to look at it. it names nodes by string and lets you build your network. with a bit of modification to the NewNode function it could store whatever data it needed(like coordinates). the benefit of Dijkstra's algorithm here is you don't need a uniform plane for it to work. say you want to put a few rocks in the way, no biggy you simply wont put a node there.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2467">DijtrasAlgorithim.lua</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Wed Mar 23, 2011 10:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-03-23T19:32:19+00:00</updated>
+
+		<published>2011-03-23T19:32:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28361#p28361</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28361#p28361"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28361#p28361"><![CDATA[
+Straight into my game whenever vrld's suggestion gets added. Well done.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Wed Mar 23, 2011 7:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-03-23T12:16:46+00:00</updated>
+
+		<published>2011-03-23T12:16:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28353#p28353</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28353#p28353"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28353#p28353"><![CDATA[
+<blockquote class="uncited"><div>I've updated the download, which may help.</div></blockquote>That fixed it. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> <blockquote class="uncited"><div>set[GH]function are for convenience.</div></blockquote>They would be more convenient if I could pass true lua functions instead of strings, possibly alongside with some custom data:<div class="codebox"><p>Code: </p><pre><code>TLpath.setGfunction(function(a,b, my_data)    local function reachable() ... stuff with my_data ... end    return reachable() and math.abs(b.x - a.x) + math.abs(b.y - a.y)end, walls)</code></pre></div>That would feel less hackish to me and allow the editor to highlight the code<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Wed Mar 23, 2011 12:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-03-23T00:51:02+00:00</updated>
+
+		<published>2011-03-23T00:51:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28327#p28327</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28327#p28327"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28327#p28327"><![CDATA[
+I have a .zip instead of a .love file to make it that much easier to open up and get the files from - it's not a game in and of itself.<br><br>I have no idea what your problems are from, vrld. I don't experience those. I've updated the download, which may help. set[GH]function are for convenience. If you don't want to use them, you can go rewrite the gScore and hScore functions in TLpath.lua (lines 78 and 80).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Mar 23, 2011 12:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-03-22T11:34:19+00:00</updated>
+
+		<published>2011-03-22T11:34:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28315#p28315</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28315#p28315"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28315#p28315"><![CDATA[
+The demo doesn't work for me:<div class="codebox"><p>Code: </p><pre><code>Error: [string "main.lua"]:174: attempt to index field '?' (a nil value)</code></pre></div>Also set[GH]function feel akward. You can serialize functions (without upvalues) using string.dump:<div class="codebox"><p>Code: </p><pre><code>function foo() print('bar') return 'baz' endserialized = string.dump(foo) --&gt; function bytecodemagic = loadstring(serialized)print( magic() )</code></pre></div><strong class="text-strong">Edit:</strong> Wait, it worked. Then it failed on line 143 (attempt to index local 'b').<br>Sometimes love locks completely (deadlock somewhere?)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Tue Mar 22, 2011 11:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-03-22T08:31:22+00:00</updated>
+
+		<published>2011-03-22T08:31:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28309#p28309</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28309#p28309"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28309#p28309"><![CDATA[
+<img src="http://images2.memegenerator.net/ImageMacro/6384949/U-DO-ZIP-Y-U-NO-love.jpg?imageSize=Medium&amp;generatorName=Y-U-NO" class="postimage" alt="Image"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Mar 22, 2011 8:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-03-22T08:24:05+00:00</updated>
+
+		<published>2011-03-22T08:24:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28306#p28306</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28306#p28306"/>
+		<title type="html"><![CDATA[Re: TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28306#p28306"><![CDATA[
+Looks interesting.<br><blockquote class="uncited"><div>Accolades?</div></blockquote>{, }<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Tue Mar 22, 2011 8:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2011-03-22T06:36:42+00:00</updated>
+
+		<published>2011-03-22T06:36:42+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=28301#p28301</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=28301#p28301"/>
+		<title type="html"><![CDATA[TLpath, A* pathfinding for Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=28301#p28301"><![CDATA[
+I hope this will be handy. TLpath is a fast, efficient pathfinder which I've built to be as flexible as possible. But despite my best efforts, pathfinding isn't a simple thing, so this isn't completely a fire-and-forget solution. To implement it in a given game, you'll need to add path nodes and (likely) give it an appropriate g-function. But other than that, it should be pretty easy to get along with. It even does its work in a separate thread, so your game can continue working as normal while it finds paths for you. It comes with a simple demo showing off how fast it is and how to use it. So let's see some AI in your games!<br><br>Download: <a href="http://dl.dropbox.com/u/3713769/web/Love/TLpath.zip" class="postlink">Here</a><br>Documentation/wiki: <a href="/wiki/TLpath">TLpath</a><br><br>Comments? Critique? Accolades? Need help using it? This is the place for it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Tue Mar 22, 2011 6:36 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

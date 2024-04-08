@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/33179" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2014-06-09T02:31:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/33179</id>
+
+		<entry>
+		<author><name><![CDATA[markgo]]></name></author>
+		<updated>2014-06-08T10:56:18+00:00</updated>
+
+		<published>2014-06-08T10:56:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169376#p169376</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169376#p169376"/>
+		<title type="html"><![CDATA[Re: [v2.0] Tasty Text - (colors/wrapping/align + more!)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169376#p169376"><![CDATA[
+A new version has been released. It's a complete rewrite. It's what you love plus some more.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83126">markgo</a> — Sun Jun 08, 2014 10:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ratchet]]></name></author>
+		<updated>2014-03-17T19:51:11+00:00</updated>
+
+		<published>2014-03-17T19:51:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=164715#p164715</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=164715#p164715"/>
+		<title type="html"><![CDATA[Re: [v1.2] text.lua - (colors/wrapping/align + more!)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=164715#p164715"><![CDATA[
+Fantastic work, just what I need. Will give you a extra section in my credits ^.^<br><br>Found two tiny bugs: When your text starts with a line break ("\nMy text") then it prints just nothing and RowCount is 0. I solved this just by removing the line breaks at the start of the string.<br><br>In function <em class="text-italics">text.new</em>, when you give a non string to parameter <em class="text-italics">str</em> it chrashes. I solved this by add a <em class="text-italics">tostring</em> at the call <em class="text-italics">createRowStrings(t,<span style="color:#FF0040">tostring(str)</span>,taghandlers)</em><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=112828">Ratchet</a> — Mon Mar 17, 2014 7:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[markgo]]></name></author>
+		<updated>2013-05-12T17:23:23+00:00</updated>
+
+		<published>2013-05-12T17:23:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=102418#p102418</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=102418#p102418"/>
+		<title type="html"><![CDATA[Re: text.lua - fancy text (custom effects + more!)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=102418#p102418"><![CDATA[
+Bump for added ability to color texts, add images, and do any neat text effect.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83126">markgo</a> — Sun May 12, 2013 5:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[markgo]]></name></author>
+		<updated>2013-04-16T10:22:46+00:00</updated>
+
+		<published>2013-04-16T10:22:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=100971#p100971</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=100971#p100971"/>
+		<title type="html"><![CDATA[Re: text.lua - text with wrapping and scrolling support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=100971#p100971"><![CDATA[
+Hey thanks for the link. I'm trying to keep it strictly textual, but I'll take a look at how you handle colors.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83126">markgo</a> — Tue Apr 16, 2013 10:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2013-04-15T19:13:53+00:00</updated>
+
+		<published>2013-04-15T19:13:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=100937#p100937</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=100937#p100937"/>
+		<title type="html"><![CDATA[Re: text.lua - text with wrapping and scrolling support]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=100937#p100937"><![CDATA[
+Pretty neat. You may want to take a look at <a href="/wiki/">RichText</a>, which has the ability insert images and change fonts and colours mid-text.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Apr 15, 2013 7:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[markgo]]></name></author>
+		<updated>2014-06-09T02:31:46+00:00</updated>
+
+		<published>2013-04-15T15:28:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=100922#p100922</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=100922#p100922"/>
+		<title type="html"><![CDATA[[v2.0] Tasty Text - (colors/wrapping/align + more!)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=100922#p100922"><![CDATA[
+A library aimed at creating easily scrollable and wrap-able texts. It requires the utf8 library from Kyle Smith.<br><br>Current version : 2.0<br>Version 2.0 is a complete rewrite. It's new and improved!<br>Repository: <a href="https://github.com/markandgo/text.lua" class="postlink">https://github.com/markandgo/text.lua</a><br><br><a href="http://imgur.com/3kVwvgj" class="postlink">http://imgur.com/3kVwvgj</a><br><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=10066">tastytext20.love</a></dt></dl></div><del>Old versions:<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=7406">textv0.9.love</a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=7601">textv1.2.love</a></dt></dl></div>v0.91 (old version with advance scrolling options)<br><a href="https://gist.github.com/markandgo/5552086" class="postlink">https://gist.github.com/markandgo/5552086</a></del><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83126">markgo</a> — Mon Apr 15, 2013 3:28 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

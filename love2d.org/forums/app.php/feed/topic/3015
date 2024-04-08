@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3015" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2013-04-01T15:26:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3015</id>
+
+		<entry>
+		<author><name><![CDATA[JaseMourne]]></name></author>
+		<updated>2013-04-01T11:05:41+00:00</updated>
+
+		<published>2013-04-01T11:05:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99905#p99905</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99905#p99905"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99905#p99905"><![CDATA[
+Thank you, kiki, I'll look into it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=60542">JaseMourne</a> — Mon Apr 01, 2013 11:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-03-31T17:39:19+00:00</updated>
+
+		<published>2013-03-31T17:39:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99869#p99869</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99869#p99869"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99869#p99869"><![CDATA[
+<blockquote class="uncited"><div>Did I ever say how awesome this library is? <br><br>Well: This library is awesome. Great work.</div></blockquote>Thanks <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww">!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Mar 31, 2013 5:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[headchant]]></name></author>
+		<updated>2013-03-31T15:15:58+00:00</updated>
+
+		<published>2013-03-31T15:15:58+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99851#p99851</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99851#p99851"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99851#p99851"><![CDATA[
+Did I ever say how awesome this library is? <br><br>Well: This library is awesome. Great work.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1428">headchant</a> — Sun Mar 31, 2013 3:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-04-01T15:26:46+00:00</updated>
+
+		<published>2013-03-30T23:17:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99820#p99820</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99820#p99820"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99820#p99820"><![CDATA[
+I understood you the first time. Right now, given the way tween.lua is built, you can't use it to modify it in a variable that is already being modified by something else (another tween, or plain Lua). I mean, you can, but the last operation will "override" the previous one.<br><br>One thing you could do is use three variables: the one for the position, one for the "up position", and one for the "down position". Have the tweens modify those variables instead of the position directly, and then calculate the position based on the value of up and down. For example, the average:<div class="codebox"><p>Code: </p><pre><code>position = (upPosition + downPosition)/2</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Mar 30, 2013 11:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JaseMourne]]></name></author>
+		<updated>2013-03-29T16:34:38+00:00</updated>
+
+		<published>2013-03-29T16:34:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99555#p99555</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99555#p99555"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99555#p99555"><![CDATA[
+My problem is not timing the events, that's all handled fine. What I'm looking for is to be able to tween relatively to the current value of a variable. So for instance if I, at the same time, apply two identical tweens that move the y var of an entity by 64 pixels, the resulting motion will be 128 pixels. Or if one tween is 64 and the other is -64, the resulting motion is 0 pixels. Basically, I want to tween a variable relative to its starting (current) value and not absolutely.<br><br>I'm having a difficulty explaining what I want. Is this clearer?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=60542">JaseMourne</a> — Fri Mar 29, 2013 4:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-03-29T08:03:04+00:00</updated>
+
+		<published>2013-03-29T08:03:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99468#p99468</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99468#p99468"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99468#p99468"><![CDATA[
+Hi jasemourne,<br><br>I am on my mobile for 3 days and can't type much. For your case, I would use cron.lua to periodically move the cell down one bit with a funtion. If you want to use tween that way, you will have to cancel and create the teen every time you move things up.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Mar 29, 2013 8:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[LuaWeaver]]></name></author>
+		<updated>2013-03-28T19:33:49+00:00</updated>
+
+		<published>2013-03-28T19:33:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99367#p99367</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99367#p99367"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99367#p99367"><![CDATA[
+<blockquote class="uncited"><div>I guess I'm missing something very valuable here or my super_noob status is level 9k+<br><div class="codebox"><p>Code: </p><pre><code>local tween = require 'tween'function love.draw()love.graphics.setColor(255,255,255,255)love.graphics.print("test",0,0)local label = { x=200, y=0, text = "hello" }tween(4, label, { y=300 }, 'outBounce')endfunction love.update(dt)  tween.update(dt)end</code></pre></div>Still just a black screen with "test". No tweens.</div></blockquote>You're running it every frame, so it's stuck there restarting the tween every time (I would assume). Instead, call tween in love.load() like Kikito's example.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2073">LuaWeaver</a> — Thu Mar 28, 2013 7:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-03-28T15:56:02+00:00</updated>
+
+		<published>2013-03-28T15:56:02+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99329#p99329</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99329#p99329"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99329#p99329"><![CDATA[
+<blockquote class="uncited"><div>Hi, kiki.</div></blockquote>Sorry. Couldn't resist. That's lövely.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Thu Mar 28, 2013 3:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JaseMourne]]></name></author>
+		<updated>2013-03-28T14:33:40+00:00</updated>
+
+		<published>2013-03-28T14:33:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=99318#p99318</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=99318#p99318"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=99318#p99318"><![CDATA[
+Hi, kiki. Thanks for a wonderful lib. Runs smoothly and exactly as one would expect.<br><br>I have a problem, though. I'm trying to apply more than one tweens on a single variable, which some other tween libs (MOAI for instance) allow and handle well, but tween.lua does not. I have a block that periodically falls down by 1 block size (tetris-like game), then stays for a while, then falls again. So I'm tweening its y variable. Sometimes I need the block to move upwards by 1 block size, but I still need the periodic tween to do its job. This is problematic, as two tweens on a single variable result in a quirky and unexpected movement.<br><br>Is there any way to achieve this? Can two tweens work on a single variable?<br><br>Here I post the love file. Line 201 is where we apply the first tween, 202 the second. What I expect this to do is for the face never to move a pixel. Yes, the example is nonsensical - it only serves as an example.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=7285">Game.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=60542">JaseMourne</a> — Thu Mar 28, 2013 2:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mangadrive]]></name></author>
+		<updated>2012-11-18T22:22:28+00:00</updated>
+
+		<published>2012-11-18T22:22:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70646#p70646</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70646#p70646"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70646#p70646"><![CDATA[
+Thank you for the post <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> My post above is where I sorted out semi-on my own but your elaboration  (and this noob moment on behalf/experience in general) helps me understand the game loop a bit better for Love <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Normally I'd create functions to do this kind of thing on key hits or game logic but I was just trying to DO it first <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"> New language, new API, new shoes = funny walking <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74927">mangadrive</a> — Sun Nov 18, 2012 10:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-18T22:16:23+00:00</updated>
+
+		<published>2012-11-18T22:16:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70644#p70644</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70644#p70644"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70644#p70644"><![CDATA[
+Yep, you are missing some stuff. At least 3 important things.<br><br>1. You are actually not drawing anything related with "label". If you want to see it on the screen, you have to print it somewhere!<br>2. The variable "label" is a local variable created inside love.draw. Local variables which are not referenced from outside or returned by their function get destroyed when the function is finished.<br>3. You are creating many tweeners per second. Let me explain this a bit more.<br><br>In LÖVE, the functions love.draw and love.update are called <em class="text-italics">may times per second</em>. Usually more than 30.<br><br>If you put this line inside love.draw:<div class="codebox"><p>Code: </p><pre><code>tween(4, label, { y=300 }, 'outBounce')</code></pre></div>It gets executed <em class="text-italics">many times per second</em>. You just need to create one, and then let it "live" (update) until it expires.<br><br>In order to make your example work, you must conserve the label between love.draw invocations. This can be done by declaring the `label` variable outside of all functions.<br><br>You also want to create a single tweener, not one every frame . A good place to do that is love.load, since it get executed only once at the beginning of the game.<br><br>And of course, you need to actually print the label somewhere!  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-glee.png" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"> <br><br>This will give you this:<br><div class="codebox"><p>Code: </p><pre><code>local tween = require 'tween'local label -- declare label here so it is available to all the functions belowfunction love.load()  label = { x=200, y=0, text = "hello" }  tween(4, label, { y=300 }, 'outBounce')endfunction love.draw()  love.graphics.draw(label.text, label.x, label.y) -- print the label! This is very important! :Dendfunction love.update(dt)  tween.update(dt)end</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Nov 18, 2012 10:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mangadrive]]></name></author>
+		<updated>2012-11-18T22:09:17+00:00</updated>
+
+		<published>2012-11-18T22:09:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70642#p70642</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70642#p70642"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70642#p70642"><![CDATA[
+a) I was going to look up how to post the Love file and found out they were just glorified zip files, which lead me to understand that I could just rename the demo here and look at the source code.<br><br>b) I wasn't running a print on the variable. Even though I *did* try that at one point, it wasn't addressed properly. <br><br>So yes, my fault entirely, but for the benefit of others who might make the same assumptions, I just made here is a better example:<br><div class="codebox"><p>Code: </p><pre><code>local tween = require 'tween'local label = { text = "Tween!", x = 200, y = -10 }function love.update(dt)  tween.update(dt)endfunction  love.load()--text "falls down" from the top of the screen  tween(3, label, { y = 300 }, 'outBounce')endfunction love.draw()  love.graphics.setColor(255, 255, 255)  love.graphics.print(label.text, label.x, label.y)endend</code></pre></div>Thank you for writing this wonderful library that will help me finish my game that might be sometime in 2049.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74927">mangadrive</a> — Sun Nov 18, 2012 10:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mangadrive]]></name></author>
+		<updated>2012-11-18T21:50:19+00:00</updated>
+
+		<published>2012-11-18T21:50:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70641#p70641</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70641#p70641"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70641#p70641"><![CDATA[
+I guess I'm missing something very valuable here or my super_noob status is level 9k+<br><div class="codebox"><p>Code: </p><pre><code>local tween = require 'tween'function love.draw()love.graphics.setColor(255,255,255,255)love.graphics.print("test",0,0)local label = { x=200, y=0, text = "hello" }tween(4, label, { y=300 }, 'outBounce')endfunction love.update(dt)  tween.update(dt)end</code></pre></div>Still just a black screen with "test". No tweens.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74927">mangadrive</a> — Sun Nov 18, 2012 9:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-18T21:33:05+00:00</updated>
+
+		<published>2012-11-18T21:33:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70639#p70639</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70639#p70639"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70639#p70639"><![CDATA[
+Oh, I see.<br><br>In general (like 95% of the time), require statements are at the beginning of each file, and outside all functions.<br><br>Try putting the `local tween = require 'tween'` line outside of love.load:<div class="codebox"><p>Code: </p><pre><code>local tween = require 'tween'function love.load() -- whatever else you want to put hereendfunction love.draw()  -- same as beforeend</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Nov 18, 2012 9:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mangadrive]]></name></author>
+		<updated>2012-11-18T21:13:51+00:00</updated>
+
+		<published>2012-11-18T21:13:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70633#p70633</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70633#p70633"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70633#p70633"><![CDATA[
+I'm using your coded examples from your git. Maybe not correctly but it's your code.<br><div class="codebox"><p>Code: </p><pre><code>function love.load()local tween = require 'tween'endfunction love.draw()local backgroundColor = {255,255,255}tween(2, backgroundColor, {0,0,0}, 'linear', print, "hello!")local label = { x=200, y=0, text = "hello" }tween(4, label, { y=300 }, 'outBounce')endfunction love.update(dt)  tween.update(dt)end</code></pre></div>Using require tween with local gives a nil value..  If I remove local it runs, and when you call the console it prints, but I see no tweens. I've required "tween" as in pointing to the lua file itself. I've set the background different colors, I've run with and without bat. I've put the globals in load, i've put them in draw. I've divided the code up every which way.. Your "traffic light" example on the git doesn't work either due to syntax. I'm still kind of new to Love 2d and LUA. I respect that you aren't entitled to teach people these things to use your library, but either I translated the information poorly (more likely) or there wasn't enough.<br><br>I hope that didn't sound disrespectful. Just meaning I didn't know how to use the code or examples you provide without getting erroneous results.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74927">mangadrive</a> — Sun Nov 18, 2012 9:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-18T20:57:55+00:00</updated>
+
+		<published>2012-11-18T20:57:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70630#p70630</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70630#p70630"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70630#p70630"><![CDATA[
+<blockquote class="uncited"><div>I've been messing with this for the past 30 mins and I cannot get anything to draw. I'm fairly certain I have it hooked up right, but even the basic demo examples won't work.</div></blockquote>Hello there.<br><br>I'd like to help you, but I'm afraid your message is too vage. By reading this, all I can tell you is "Sorry, <a href="http://www.codinghorror.com/blog/2008/03/the-first-rule-of-programming-its-always-your-fault.html" class="postlink">you must be doing something wrong in your code</a>".<br><br>In order to give you a more helpful answer, I'd need more. Something that helps me see the problem. Reading the code that you wrote would almost certainly help. The whole .love file, even if it draws nothing, would be even better.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Nov 18, 2012 8:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mangadrive]]></name></author>
+		<updated>2012-11-18T20:25:55+00:00</updated>
+
+		<published>2012-11-18T20:25:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=70627#p70627</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=70627#p70627"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=70627#p70627"><![CDATA[
+I've been messing with this for the past 30 mins and I cannot get anything to draw. I'm fairly certain I have it hooked up right, but even the basic demo examples won't work.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74927">mangadrive</a> — Sun Nov 18, 2012 8:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-08-26T11:19:19+00:00</updated>
+
+		<published>2012-08-26T11:19:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=64094#p64094</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=64094#p64094"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=64094#p64094"><![CDATA[
+<img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> no problemo<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Aug 26, 2012 11:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KingRecycle]]></name></author>
+		<updated>2012-08-26T02:33:05+00:00</updated>
+
+		<published>2012-08-26T02:33:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=64079#p64079</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=64079#p64079"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=64079#p64079"><![CDATA[
+Oh...so that is how you do it. Whoops. Thanks.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=51129">KingRecycle</a> — Sun Aug 26, 2012 2:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-08-25T20:36:15+00:00</updated>
+
+		<published>2012-08-25T20:36:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=64059#p64059</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=64059#p64059"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=64059#p64059"><![CDATA[
+What code are you using? Have you seen the demo?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Aug 25, 2012 8:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[KingRecycle]]></name></author>
+		<updated>2012-08-25T15:48:39+00:00</updated>
+
+		<published>2012-08-25T15:48:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=64029#p64029</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=64029#p64029"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=64029#p64029"><![CDATA[
+It seems for me the callback is being called right away and not when the tween is finished.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=51129">KingRecycle</a> — Sat Aug 25, 2012 3:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-04-28T14:25:28+00:00</updated>
+
+		<published>2012-04-28T14:25:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55543#p55543</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55543#p55543"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55543#p55543"><![CDATA[
+Oh, ok. Fixed that too, thanks a lot!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Apr 28, 2012 2:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zeliarden]]></name></author>
+		<updated>2012-04-28T13:55:12+00:00</updated>
+
+		<published>2012-04-28T13:55:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55538#p55538</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55538#p55538"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55538#p55538"><![CDATA[
+the function call is inCirc, outCirc, inOutCirc, outInCirc instad of inCircle, outCircle, inOutCircle, outInCircle<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=35168">Zeliarden</a> — Sat Apr 28, 2012 1:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-04-28T13:38:36+00:00</updated>
+
+		<published>2012-04-28T13:38:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55537#p55537</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55537#p55537"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55537#p55537"><![CDATA[
+<blockquote class="uncited"><div>I mean sync their timers or something like that <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div></blockquote>Well, if you use them the normal way (just passing them dt in love.update) they will be syncronized, wouldn't they? <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> But really, that's what I meant on my previous phrase. You can't really syncronize a tween with an animation, but you can sync it with its speed, which is pretty much the same. The thing is that you would have to do this with separate variables. Something like this:<div class="codebox"><p>Code: </p><pre><code>function love.load()   a = {speed=1}   tween(5, a, {speed=2}) -- increase the animation speed 2x in 5 seconds   anim = anim8(...) -- create a regular animationendfunction love.update(dt)  tween.update(dt)  anim:update(dt * a.speed) -- update animation with a variable speedend</code></pre></div><blockquote class="uncited"><div>Anyways here is a tween test I made</div></blockquote>Hey, how cool is that! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> I like the pink guy. It looks weirdly familiar.<br><blockquote class="uncited"><div>btw check Circle and outInElascit in the README.textile</div></blockquote>Thanks! I changed outInElascit to outInElastic. What is the problem with Circle?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Apr 28, 2012 1:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zeliarden]]></name></author>
+		<updated>2012-04-28T11:25:15+00:00</updated>
+
+		<published>2012-04-28T11:25:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=55534#p55534</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=55534#p55534"/>
+		<title type="html"><![CDATA[Re: tween.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=55534#p55534"><![CDATA[
+I mean sync their timers or something like that  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"> . Anyways here is a tween test I made. btw check Circle and outInElascit in the README.textile<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=4547">Tween Test.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=35168">Zeliarden</a> — Sat Apr 28, 2012 11:25 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

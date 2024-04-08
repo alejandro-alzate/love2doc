@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/87083" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2019-08-22T01:11:27+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/87083</id>
+
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-08-22T01:11:27+00:00</updated>
+
+		<published>2019-08-22T01:11:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=229127#p229127</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=229127#p229127"/>
+		<title type="html"><![CDATA[Re: NoHighDPI - Disable High DPI on Android devices]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=229127#p229127"><![CDATA[
+It's nice that you made this library; I've struggled with this myself. Note however that the next version (11.3 hopefully) will have a built-in setting for this. <a href="https://bitbucket.org/rude/love/commits/87d16cfedf8f1c8a31c793d64d31ca53a78b6eb0" class="postlink">https://bitbucket.org/rude/love/commits ... 53a78b6eb0</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Aug 22, 2019 1:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[FloatingBanana]]></name></author>
+		<updated>2019-08-21T19:16:09+00:00</updated>
+
+		<published>2019-08-21T19:16:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=229124#p229124</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=229124#p229124"/>
+		<title type="html"><![CDATA[NoHighDPI - Disable High DPI on Android devices]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=229124#p229124"><![CDATA[
+It's my first post in this community, sorry for anything  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><br><br> High DPI scaling on Android is very annoying, especially when you use both the Windows and Android to work with the same project.<br><br>There is a trick to solve this using <a href="/wiki/love.window.fromPixels">love.window.fromPixels</a> and <a href="/wiki/love.window.toPixels">love.window.toPixels</a>, so I made this library to do this for you!<br><br><span style="font-size:200%;line-height:116%"><strong class="text-strong">How to use</strong></span><br><br>You just need to do this:<br><div class="codebox"><p>Code: </p><pre><code>nohdpi = require "nohighdpi"function love.load()    --Pass "graphics", "mouse" and/or "touch"    --as arguments to replace the given modules.    --If you don't give any arguments, then    --all modules will be replaced.    nohighdpi:replace()end</code></pre></div>And voilà, you can use LÖVE normally without worrying about DPI scaling!<br><br><span style="font-size:200%;line-height:116%"><strong class="text-strong">Manual mode</strong></span><br><br>You can also use this library manually:<br><div class="codebox"><p>Code: </p><pre><code>nohdpi = require "nohighdpi"function love.load()endfunction love.draw()    --You can optionally give a custom resolution    nohdpi:start(800, 600)        --Draw your things here    love.graphics.circle("line", nohdpi:mouseX(), nohdpi:mouseY(), 5, 100)    --You can also change the resolution    nohdpi:rescale(1000, 675)        nohdpi:stop()endfunction love.update(dt)endfunction love.mousepressed(x, y, button, isTouch)    x, y = nohdpi:toResized(x, y)        --Use it normally. The same goes to mousereleased, touchpressed, touchreleased...end</code></pre></div><strong class="text-strong">Using only "graphics" manually</strong><div class="codebox"><p>Code: </p><pre><code>nohdpi = require "nohighdpi"function love.load()    nohdpi:replace("mouse", "touch")endfunction love.draw()    nohdpi:start()    love.graphics.circle("line", love.mouse.getX(), love.mouse.getY(), 5, 100)     nohdpi:stop()endfunction love.update(dt)endfunction love.mousepressed(x, y, button, isTouch)    end</code></pre></div><a href="https://github.com/FloatingBanana/NoHighDPI" class="postlink">Github page</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141978">FloatingBanana</a> — Wed Aug 21, 2019 7:16 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

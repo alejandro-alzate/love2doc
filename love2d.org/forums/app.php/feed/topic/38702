@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/38702" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-02-10T23:10:55+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/38702</id>
+
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-10T23:10:55+00:00</updated>
+
+		<published>2021-02-10T23:10:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238473#p238473</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238473#p238473"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238473#p238473"><![CDATA[
+<blockquote class="uncited"><div>If you and Davidobot have github accounts, I would love to add you both as collaborators.</div></blockquote>I go by <a href="https://github.com/anaseskyrider" class="postlink">https://github.com/anaseskyrider</a>.<br><br>Also, I've thought of some use-cases for *keeping* the original state:new() function, creating state subclasses, so if you want to keep that in addition to cloneState(), it would only take a quick copy-paste to keep it in your released version 3. For one thing, it's generally more memory-efficient. Although the behavior itself is relatively simple, using very basic Lua inheritance, so anyone could easily write the three-or-so lines of code needed to create a state subclass within an individual state module's file.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Wed Feb 10, 2021 11:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2021-02-06T14:08:03+00:00</updated>
+
+		<published>2021-02-06T14:08:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238401#p238401</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238401#p238401"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238401#p238401"><![CDATA[
+Hi both! That's really cool to see this work live on after so many years <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I'll update the OP as soon as I can.<br><br>My github name is the same as my username here and I starred the repo <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Sat Feb 06, 2021 2:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bVictor7364]]></name></author>
+		<updated>2021-02-06T04:09:35+00:00</updated>
+
+		<published>2021-02-06T04:09:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238393#p238393</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238393#p238393"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238393#p238393"><![CDATA[
+Hi Anase Skyrider,<br><br>Your update is AWESOME! Thanks for keeping this library alive! Unfortunately, I am not using love2d full time for the time being, but I'm planning to get back to it eventually. In the meantime, I tested out your version and it's great!<br><br>I decided to adress the issue that you mentioned, that this is the only place the library is available. So, I created a github repo for it with all three versions and thei releases and appropriate credits. If you and Davidobot have github accounts, I would love to add you both as collaborators.<br><br>Here's the github repo: <a href="https://github.com/yokai-shogun/lovelyMoon" class="postlink">https://github.com/yokai-shogun/lovelyMoon</a><br><br>And the library can be downloaded using this link: <a href="https://github.com/yokai-shogun/lovelyMoon/releases/latest" class="postlink">https://github.com/yokai-shogun/lovelyM ... ses/latest</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137566">bVictor7364</a> — Sat Feb 06, 2021 4:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-01T01:54:58+00:00</updated>
+
+		<published>2021-02-01T01:54:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238252#p238252</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238252#p238252"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238252#p238252"><![CDATA[
+Following up on my last post, I've modified LovelyMoon for anyone to download. This file includes, in one zip, an updated demo, template, and usage guide (README.txt) for v3, as well as an MIT license (LICENSE.txt). Some minor fixes include the demo calling lovelyMoon.event instead of lovelyMoon.events.<br><div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=19104">lovelyMoon_v3.zip</a></dt></dl></div>Changelog:<br>- added MIT license for Davidobot to lovelyMoon.lua, with credits to bVictor7364 and Anase Skyrider below (and separate from) the license.<br>- replaced lovelyMoon.new with lovelyMoon.cloneState(state). cloneState deepcopies a passed state.<br>- renamed the following lovelyMoon functions in order to make it more clear which state methods they call:<br>-- addState() -&gt; loadState()<br>-- destroyState() -&gt; removeState()<br>- renamed the following state methods in accordance with the above change:<br>-- state:destroy() -&gt; state:remove()<br>- lovelyMoon.removeState() now returns the removed state when called.<br>- lovelyMoon.loadState() now allows you to pass a state object as the first argument. Will not call state:load() if passing a state. Loading a module will still call state:load(). You can also still pass an optional id for the second argument, this will rename the state.<br>- removed some code from lovelyMoon.event.update. No longer causes your state to unload and reload if state:update() returns anything.<br>- updated keypressed, keyreleased, mousepressed, and mousereleased events to pass parameters, up to date with LOVE 11.3.<br>- added wheelmoved event.<br>- included (simplistic) directions for adding your own LOVE callback events to lovelyMoon.lua (inside the module file itself).<br>- slight formatting tweaks and comments generally everywhere.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Mon Feb 01, 2021 1:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-01-31T01:58:11+00:00</updated>
+
+		<published>2021-01-31T01:58:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238235#p238235</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238235#p238235"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238235#p238235"><![CDATA[
+Hi, I've been looking at libraries to help me with my game's internal architecture. This looks FANTASTIC for my purposes: simple to use, has enough features without being too convoluted to use (Polygamy looks very feature-rich but also too complicated for me).<br><br>Reading the code without testing it, it would appear that states' events are called in the order they're created, making addState() equivalent to a push() and destroyState() equivalent to a pop() in the call-order. If states ever need to be reordered, say because of some weird interactions with object draw order while running multiple states, you'd have to use these two functions to do so. To support this, I recommend making these changes in lovelyMoon.lua:<br><br>#141: This will return the removed state, as table.remove() returns removed tables, so if you need to store it as a local, you can. Prior to this, you'd first have to call lovelyMoon.getState(id) before calling lovelyMoon.destroyState(id).<div class="codebox"><p>Code: </p><pre><code>return table.remove(_slotState.states, index)</code></pre></div>#76: If you call lovelyMoon.addState(&lt;state_object&gt;), it will push it to the stack *without* reinitializing the state.<div class="codebox"><p>Code: </p><pre><code>function lovelyMoon.addState(req, id)local classif type(req) == "table" thenclass = reqif id thenclass._id = idendelseclass = require(req)class._enabled = falseclass._id = idclass:load()endtable.insert(_slotState.states, class)return class, stateend</code></pre></div>Also, where does the variable `state` that is returned come from? It doesn't seem to do anything, and isn't set anywhere in this function.<br><br>Regarding lovelyMoon.event.update(dt), it appears that the line <div class="codebox"><p>Code: </p><pre><code>local newState = state:update(dt)</code></pre></div> followed by the checks for newState not being nil and if it has a .close and .load function, implies that writing a state object whose :update() returns *anything* will close and reload the state (if it can). I'm not sure what the purpose of this is, but it's an undocumented usage.<br><br>The usage for state:new() is also ambiguous because the code-as-written, with the examples given, appears to function around the idea of creating state classes and then modifying the single class when you require() it. I'm not sure what place that instances of the state classes has since addState() require()s the class's file and adds that to the stack, :new() doesn't do anything to add the instance to anything, states don't have any metatable stuff that calls any extant instances, and you can't add instances to the state stack without the addState() modifications I made.<br><br>Documentation in general on what the state functions do would be appreciated since this is the only link to this project that exists. Examples:<br><br><strong class="text-strong"><span style="text-decoration:underline">Documentation:</span></strong><br>State objects:<div class="codebox"><p>Code: </p><pre><code>state:load()</code></pre></div>Called whenever a state is created with lovelyMoon.addState(req, id).<br><div class="codebox"><p>Code: </p><pre><code>state:close()</code></pre></div>Called whenever a state is removed with lovelyMoon.destroyState(id).<br><div class="codebox"><p>Code: </p><pre><code>state:enable()</code></pre></div>Called whenever a state is enabled with lovelyMoon.enableState(id).<br><div class="codebox"><p>Code: </p><pre><code>state:disable()</code></pre></div>Called whenever a state is disabled with lovelyMoon.disableState(id).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Sun Jan 31, 2021 1:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2018-04-09T20:58:56+00:00</updated>
+
+		<published>2018-04-09T20:58:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219877#p219877</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219877#p219877"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219877#p219877"><![CDATA[
+<blockquote class="uncited"><div>Hey Davidobot, great work!... </div></blockquote> <br>Hi! Feel free to give attribution via an MIT license and just refer to me and bVictor7364 by username. You can include my website <a href="http://davidobot.net" class="postlink">http://davidobot.net</a> in the credit too.<br><br>As for substates - that sounds like a bit of a niche thing. You can add such functionality relatively easily by either keeping track of the variable yourself, or by wrangling something into the lovelymoon base.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Mon Apr 09, 2018 8:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[love2d]]></name></author>
+		<updated>2018-04-09T06:09:56+00:00</updated>
+
+		<published>2018-04-09T06:09:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219844#p219844</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219844#p219844"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219844#p219844"><![CDATA[
+Hey Davidobot, great work!<br><br>Is it possible for you to add a LICENSE comment at the top of the file with attribution such as your name, website, and bVictor7364? Something like MIT or Apache 2.0 or zlib depending on your preferences?<br><br>Also, is it possible to look into adding a way to do substates. So each file is a state, but maybe easily accessible custom value such as class._id so that within the file, multiple logic blocks can occur depending on what substate we're in. Allows to reduce file bloat if you have say 100 substates, and can fit them into 10 states (files) instead of 100 files.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140046">love2d</a> — Mon Apr 09, 2018 6:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bVictor7364]]></name></author>
+		<updated>2017-03-08T11:49:15+00:00</updated>
+
+		<published>2017-03-08T11:49:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210510#p210510</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210510#p210510"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210510#p210510"><![CDATA[
+<blockquote class="uncited"><div>Awesome! Is this still active in development?</div></blockquote>Yes, I'm using it in my current project so I'll be adding stuff to it and fixing any bugs.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137566">bVictor7364</a> — Wed Mar 08, 2017 11:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-03-07T17:21:23+00:00</updated>
+
+		<published>2017-03-07T17:21:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210473#p210473</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210473#p210473"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon v2]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210473#p210473"><![CDATA[
+Awesome! Is this still active in development?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Tue Mar 07, 2017 5:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2016-12-23T09:02:17+00:00</updated>
+
+		<published>2016-12-23T09:02:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207299#p207299</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207299#p207299"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207299#p207299"><![CDATA[
+<blockquote class="uncited"><div>Thank you, I found your library very useful, but it needed some improvement. The gamestate mechanism I designed was at least uncomfortable. But your solution is pretty elegant, so it was worth reviving. And I'd be happy if you use it as a new version of your library! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Thank you! I updated the OP!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Fri Dec 23, 2016 9:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bVictor7364]]></name></author>
+		<updated>2016-12-22T23:53:23+00:00</updated>
+
+		<published>2016-12-22T23:53:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207278#p207278</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207278#p207278"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207278#p207278"><![CDATA[
+<blockquote class="uncited"><div>Wow, I am blown away at the amount of work you put into this otherwise dead library!<br>I looked through your code - this is some major improvement. Hell, I might even use your version for my latest project. Thanks a lot for your work! It will find good use I'm sure.<br>Do you mind if I link your reply in the main post?</div></blockquote>Thank you, I found your library very useful, but it needed some improvement. The gamestate mechanism I designed was at least uncomfortable. But your solution is pretty elegant, so it was worth reviving. And I'd be happy if you use it as a new version of your library! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137566">bVictor7364</a> — Thu Dec 22, 2016 11:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2016-12-22T16:51:03+00:00</updated>
+
+		<published>2016-12-22T16:51:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207262#p207262</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207262#p207262"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207262#p207262"><![CDATA[
+<blockquote class="uncited"><div>...</div></blockquote>Wow, I am blown away at the amount of work you put into this otherwise dead library!<br>I looked through your code - this is some major improvement. Hell, I might even use your version for my latest project. Thanks a lot for your work! It will find good use I'm sure.<br>Do you mind if I link your reply in the main post?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Thu Dec 22, 2016 4:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bVictor7364]]></name></author>
+		<updated>2016-12-23T02:30:44+00:00</updated>
+
+		<published>2016-12-22T11:54:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207250#p207250</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207250#p207250"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207250#p207250"><![CDATA[
+Hey, found your library. Looks good, saved me the trouble to design the states mechanism. Though it needed some tweaking.<br>Here's my version of it:<br><br>Changes:<ul><li>lovelyMoon.lua &amp; stateManager.lua are now merged in one module "lovelyMoon".</li><li>All "lovelyMoon.*" functions (update, draw, etc.) are moved to "lovelyMoon.events.*".</li><li>All the functions that were in a global scope (from stateManager) were moved to "lovelyMoon.*"</li><li>Simplified adding state procedure.</li><li>Added a "switchState(currentID, nextID)", which basically calls "disableState(id)" and then "enableState(id)".</li><li>Added a "lovelyMoon.new(self)" function.</li><li>Simplified "state:new()" function. all you have to do now is: "return lovelyMoon.new(self)"</li></ul>Reference:<div class="codebox"><p>Code: </p><pre><code>lovelyMoon.event.update(dt)lovelyMoon.event.draw()lovelyMoon.event.keypressed(key, unicode)lovelyMoon.event.keyreleased(key, unicode)lovelyMoon.event.mousepressed(x, y, button)lovelyMoon.event.mousereleased(x, y, button)lovelyMoon.new(self) -- Initializes a new state; call from: function state:new()lovelyMoon.addState(file, id) -- return state; file argument is used for require.lovelyMoon.isStateEnabled(id) -- return boollovelyMoon.getState(id) -- return statelovelyMoon.enableState(id)lovelyMoon.disableState(id)lovelyMoon.switchState(currentID, nextID)lovelyMoon.toggleState(id)lovelyMoon.destroyState(id)</code></pre></div>Usage:<br>0. Place "lovelyMoon.lua" library somewhere in source folder (e.g. "/lib/lovelyMoon.lua")<br>1. In main.lua add a variable to require the lovelyMoon library and preferable create a table for states:<div class="codebox"><p>Code: </p><pre><code>lovelyMoon = require("lib.lovelyMoon")states = {}</code></pre></div>2. In function love.load() add states and enable first one:<div class="codebox"><p>Code: </p><pre><code>function love.load()states.menu = lovelyMoon.addState("states.menu", "menu") -- Argument 1 is file path for requirestates.game = lovelyMoon.addState("states.game", "game")lovelyMoon.enableState("menu")end</code></pre></div>3. Replace love event states by lovelyMoon ones:<div class="codebox"><p>Code: </p><pre><code>function love.update(dt)lovelyMoon.event.update(dt)endfunction love.draw()lovelyMoon.event.draw()endfunction love.keypressed(key, unicode)lovelyMoon.event.keypressed(key, unicode)endfunction love.keyreleased(key, unicode)lovelyMoon.event.keyreleased(key, unicode)endfunction love.mousepressed(x, y, button)lovelyMoon.event.mousepressed(x, y, button)endfunction love.mousereleased(x, y, button)lovelyMoon.event.mousereleased(x, y, button)end</code></pre></div>4. Create the state script (e.g. "/states/menu.lua"):<div class="codebox"><p>Code: </p><pre><code>local state = {}function state:new()return lovelyMoon.new(self)endfunction state:load()endfunction state:close()endfunction state:enable()endfunction state:disable()endfunction state:update(dt)endfunction state:draw()endfunction state:keypressed(key, unicode)endfunction state:keyreleased(key, unicode)endfunction state:mousepressed(x, y, button)endfunction state:mousereleased(x, y, button)endreturn state</code></pre></div>5.That's all. Add game code to states' functions.<br>---<br>Check the example for more info. It also includes a state template in "states" folder (the one in step 3).<br>P.S. Tell me if you find any bugs.<br><div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=14212">lovelyMoon.lua</a></dt></dl></div><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=14211">lovelyMoon v2 [0.10.2].love</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137566">bVictor7364</a> — Thu Dec 22, 2016 11:54 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2016-02-10T17:18:29+00:00</updated>
+
+		<published>2016-02-10T17:18:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=194821#p194821</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=194821#p194821"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=194821#p194821"><![CDATA[
+<blockquote class="uncited"><div>Actually, I did some tweaking before my message. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> It sure works with my project.<br>And it made my day.<br><br>The WIKI page leads to some old stuff. So blame it ))<br>I like LOVE2d more and more.</div></blockquote>Well, I'm glad to hear that. I hope you'll enjoy using it.<br>And yes, the wiki page for libraries is quite old.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Wed Feb 10, 2016 5:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2016-02-10T16:30:59+00:00</updated>
+
+		<published>2016-02-10T16:30:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=194815#p194815</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=194815#p194815"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=194815#p194815"><![CDATA[
+Actually, I did some tweaking before my message. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> It sure works with my project.<br>And it made my day.<br><br>The WIKI page leads to some old stuff. So blame it ))<br>I like LOVE2d more and more.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Wed Feb 10, 2016 4:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2016-02-10T13:13:59+00:00</updated>
+
+		<published>2016-02-10T13:13:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=194795#p194795</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=194795#p194795"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=194795#p194795"><![CDATA[
+<blockquote class="uncited"><div>There is an error in <strong class="text-strong">menuState.lua</strong> example file due to the new LOVE 0.10<div class="codebox"><p>Code: </p><pre><code>if key == " " then</code></pre></div>should be replaced with<div class="codebox"><p>Code: </p><pre><code>if key == "space" then</code></pre></div>thanks for the lib, I'm going to use it.</div></blockquote>Haha, thanks for pointing that out. This library is ancient, you might need to do some tweaking inside it's own code to make it do what you want, but it should still work mostly.<br><br>Thank you anyways.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Wed Feb 10, 2016 1:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2016-02-10T06:32:15+00:00</updated>
+
+		<published>2016-02-10T06:32:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=194776#p194776</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=194776#p194776"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=194776#p194776"><![CDATA[
+There is an error in <strong class="text-strong">menuState.lua</strong> example file due to the new LOVE 0.10<div class="codebox"><p>Code: </p><pre><code>if key == " " then</code></pre></div>should be replaced with<div class="codebox"><p>Code: </p><pre><code>if key == "space" then</code></pre></div>thanks for the lib, I'm going to use it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Wed Feb 10, 2016 6:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[jjmafiae]]></name></author>
+		<updated>2013-08-09T22:01:10+00:00</updated>
+
+		<published>2013-08-09T22:01:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=116898#p116898</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=116898#p116898"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=116898#p116898"><![CDATA[
+i think i will use some time staring at your code. who knows, it might inspire me to do another unreleased commie library?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57259">jjmafiae</a> — Fri Aug 09, 2013 10:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-08-02T17:53:30+00:00</updated>
+
+		<published>2013-08-02T17:53:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111082#p111082</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111082#p111082"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111082#p111082"><![CDATA[
+<blockquote class="uncited"><div>Looks awesome! I'll defiantly be using it in some of my projects! None that I've already gotten into, because I'm too lazy to change the code, but in some other projects this'll be really useful! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Thanks! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>If you need any help with the library, feel free to ask me. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Fri Aug 02, 2013 5:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Eamonn]]></name></author>
+		<updated>2013-07-09T14:38:36+00:00</updated>
+
+		<published>2013-07-09T14:38:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111078#p111078</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111078#p111078"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111078#p111078"><![CDATA[
+Looks awesome! I'll defiantly be using it in some of my projects! None that I've already gotten into, because I'm too lazy to change the code, but in some other projects this'll be really useful! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=116490">Eamonn</a> — Tue Jul 09, 2013 2:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-07-09T13:58:45+00:00</updated>
+
+		<published>2013-07-09T13:58:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111075#p111075</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111075#p111075"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111075#p111075"><![CDATA[
+Well, as far as I tested, this is possible with this library.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Tue Jul 09, 2013 1:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-07-09T13:47:26+00:00</updated>
+
+		<published>2013-07-09T13:47:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111073#p111073</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111073#p111073"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111073#p111073"><![CDATA[
+<blockquote class="uncited"><div>Thanks!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><br>What do you exactly mean by "stackable states"? <br>You can have multiple gamestates running at the same time if that is what you mean?</div></blockquote><a href="http://gamedevgeek.com/tutorials/managing-game-states-in-c/" class="postlink">Yes</a>.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Jul 09, 2013 1:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-07-09T12:48:28+00:00</updated>
+
+		<published>2013-07-09T12:48:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111068#p111068</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111068#p111068"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111068#p111068"><![CDATA[
+<blockquote class="uncited"><div>Putting aside the fact that it spawns lots of globals to the main code, I like it.<br>Have you considered stackable states ? I don't use them by myself, but it seems some people are fond of them.</div></blockquote>Thanks!  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><br>What do you exactly mean by "stackable states"? You can have multiple gamestates running at the same time if that is what you mean?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Tue Jul 09, 2013 12:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-07-09T12:07:48+00:00</updated>
+
+		<published>2013-07-09T12:07:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111067#p111067</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111067#p111067"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111067#p111067"><![CDATA[
+Putting aside the fact that it spawns lots of globals to the main code, I like it.<br>Have you considered stackable states ? I don't use them by myself, but it seems some people are fond of them.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue Jul 09, 2013 12:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-07-09T10:35:51+00:00</updated>
+
+		<published>2013-07-09T10:35:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=111059#p111059</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=111059#p111059"/>
+		<title type="html"><![CDATA[Re: [Library] LövelyMoon]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=111059#p111059"><![CDATA[
+<blockquote class="uncited"><div>Can't open "states/Gamestate.lua". No such file or directory.</div></blockquote>Whoops  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-shy.png" width="16" height="16" alt=":oops:" title="Embarrassed"> .<br>Sorry, remind me to never use <em class="text-italics">dofile</em> again (Well, actually, it can prove useful for making a game mod-friendly, hmmmm). Fixed.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Tue Jul 09, 2013 10:35 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

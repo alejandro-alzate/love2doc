@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/81522" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-02-26T17:27:08+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/81522</id>
+
+		<entry>
+		<author><name><![CDATA[megalukes]]></name></author>
+		<updated>2020-02-26T17:27:08+00:00</updated>
+
+		<published>2020-02-26T17:27:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232363#p232363</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232363#p232363"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232363#p232363"><![CDATA[
+<blockquote class="uncited"><div>Try suit.isHovered instead if suit:isHovered.<br><br>Yes, the docs could be a bit clearer on this point.</div></blockquote>It worked! Thank you!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135290">megalukes</a> — Wed Feb 26, 2020 5:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2020-02-18T04:14:35+00:00</updated>
+
+		<published>2020-02-18T04:14:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232199#p232199</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232199#p232199"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232199#p232199"><![CDATA[
+Try suit.isHovered instead if suit:isHovered.<br><br>Yes, the docs could be a bit clearer on this point.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Feb 18, 2020 4:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[megalukes]]></name></author>
+		<updated>2020-02-17T21:49:13+00:00</updated>
+
+		<published>2020-02-17T21:49:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232196#p232196</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232196#p232196"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232196#p232196"><![CDATA[
+Hello everyone. Is it just me or the isHovered(id) function is not working properly? I've been trying to make it work but I guess there must be something wrong since I was following documentation correctly. Here's my code. Any help would be really appreciated. Thank you!<br><div class="codebox"><p>Code: </p><pre><code>io.stdout:setvbuf("no")function love.load()suit = require 'suit'    if suit.Button("Attack", 396,140, 80,25).hit then end    if suit.Button("Skill", 396,140+25, 80,25).hit then endendfunction love.update(dt)    if suit.Button("Attack", 396,140, 150,50).hit then end    if suit.Button("Skill", 396,140+60, 150,50).hit then end    print("Attack",suit:isHovered("Attack"))    print("Skill",suit:isHovered("Skill"))endfunction love.draw()    suit:draw()end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135290">megalukes</a> — Mon Feb 17, 2020 9:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Connorses]]></name></author>
+		<updated>2018-02-02T01:45:27+00:00</updated>
+
+		<published>2018-02-02T01:45:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=218181#p218181</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=218181#p218181"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=218181#p218181"><![CDATA[
+Just want to say thanks, "Immediate Mode" is a great way to insert or remove UI elements arbitrarily and I've been using SUIT to help build my own level editor.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15930&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15930" class="postimage" alt="Untitled.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133998">Connorses</a> — Fri Feb 02, 2018 1:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rmcode]]></name></author>
+		<updated>2017-03-27T17:05:46+00:00</updated>
+
+		<published>2017-03-27T17:05:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=211122#p211122</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=211122#p211122"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=211122#p211122"><![CDATA[
+Is there a way to reduce the garbage production of SUIT? The bigdemo produces a few hundred kb in a few frames and I'm worried this might become a bottleneck with more involved GUIs on top of the engine.<br><blockquote class="uncited"><div>Seems to my the Github repository is dead, anyone interessted in continueing a fork?</div></blockquote>There was a commit just 11 days ago. If a library runs fine there often just isn't a need to update its repo.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135388">rmcode</a> — Mon Mar 27, 2017 5:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ashura]]></name></author>
+		<updated>2017-03-15T16:41:57+00:00</updated>
+
+		<published>2017-03-15T16:41:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210735#p210735</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210735#p210735"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210735#p210735"><![CDATA[
+Seems to my the Github repository is dead, anyone interessted in continueing a fork?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139010">Ashura</a> — Wed Mar 15, 2017 4:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Townsie]]></name></author>
+		<updated>2017-01-05T19:15:18+00:00</updated>
+
+		<published>2017-01-05T19:15:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207855#p207855</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207855#p207855"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207855#p207855"><![CDATA[
+I've been trying on this SUIT, and I really like it. I'd love a small example of a custom widget though. I'm trying to hack together a scrollview with some text, but I'm having a hard time getting a custom widget working.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138749">Townsie</a> — Thu Jan 05, 2017 7:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2017-01-03T03:35:20+00:00</updated>
+
+		<published>2017-01-03T03:35:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207714#p207714</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207714#p207714"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207714#p207714"><![CDATA[
+<blockquote class="uncited"><div>Alright, thanks for the heads up and the help.</div></blockquote>No problem! I'm here to help<br><br>PS: Is weird how I have never used this library yet I have helped so many times in this thread hahaha.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Tue Jan 03, 2017 3:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lifri]]></name></author>
+		<updated>2017-01-02T20:07:03+00:00</updated>
+
+		<published>2017-01-02T20:07:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207704#p207704</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207704#p207704"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207704#p207704"><![CDATA[
+Alright, thanks for the heads up and the help.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138720">Lifri</a> — Mon Jan 02, 2017 8:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-12-31T21:11:23+00:00</updated>
+
+		<published>2016-12-31T21:11:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207629#p207629</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207629#p207629"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207629#p207629"><![CDATA[
+Think about it this way, if you don't call any SUIT function then how can SUIT run any code at all? If it can't run code then how do you expect it to detect that the mouse is not down anymore?<br><br>SUIT doesn't plug itself to LÖVE callbacks, and that is a good thing. You can actually control how everything works.<br><br>SUIT checks if there is something to draw if there is then it draws it, if it doesn't it just returns, so even if you call pause:draw() every frame, if you haven't added the buttons and labels in the update nothing will be drawn and the function will return inmediately.<br><br>SUIT draw function actually is two functions in one, one is the update function which actually updates all components and the other is the draw function which draws the elements to screen. SUIT combines them in order to offer a simpler API, you call one function that does everything.<br><br>And it works cause as I said, if nothing is added in the update then nothing is drawn to screen so there is no disadvantage on calling that function even when not needed<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sat Dec 31, 2016 9:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lifri]]></name></author>
+		<updated>2016-12-31T13:28:46+00:00</updated>
+
+		<published>2016-12-31T13:28:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207617#p207617</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207617#p207617"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207617#p207617"><![CDATA[
+Yep, that seems to be the issue, it is working now.<br>I thought that the release event would be updated automatically when the mouse is hit, since it specifically does not check for the mouse to be hold down, but just hit. At least that is what I understand by the mouse being hit, a hold down is not intended.<br><br>Anyways, that means it is necessary to call the draw function every draw call of löve, even if we do not draw something? Does not sound to be the best practice.<br>Is there a way that I can manually update the button / the mouse event?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138720">Lifri</a> — Sat Dec 31, 2016 1:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-12-31T00:22:30+00:00</updated>
+
+		<published>2016-12-31T00:22:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207600#p207600</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207600#p207600"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207600#p207600"><![CDATA[
+That is because the mouse is never released, since showPauseMenu becomes false you don't update SUIT anymore, so it doesn't get a release event. Or that is what I think...<br><br>Try:<div class="codebox"><p>Code: </p><pre><code>local suit = require ('suit')pauseMenu = suit.new()function love.update(dt)  if (showPauseMenu) then      pauseMenu.layout:reset((love.graphics.getWidth() / 2 ) - 150,(love.graphics.getHeight() / 2 ) - 45)      pauseMenu:Label("Pause", pauseMenu.layout:row(300,30))                if (pauseMenu:Button( "Resume", pauseMenu.layout:row() ).hit) then        showPauseMenu = false        --resume all gameplay logics      end   endendfunction love.draw()  --If you draw but pauseMenu when showPauseMenu is false you should get no UI  love.graphics.setBackgroundColor(0, 100, 200, 0.2)  pauseMenu:draw()end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sat Dec 31, 2016 12:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lifri]]></name></author>
+		<updated>2016-12-30T23:39:43+00:00</updated>
+
+		<published>2016-12-30T23:39:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=207599#p207599</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=207599#p207599"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=207599#p207599"><![CDATA[
+Hey there,<br>I'm new to LÖVE, however it is fun to use so I went a bit further, trying this ui toolkit.<br>Everything is working fine, expect one small thing.<br><br>I want to have a menu drawn if some boolean variable is true. Now this works the first time the "menu" displayed. However, it appears that the .hit variable stays true after the button was hit and already released. This means that the menu is never drawn again after the first time, since the "Resume" button is always hit.<br><br>This is my very basic setup of code, don't want to include anything unrelated( Also, ignore the semicolons, not comming from Lua  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-megagrin.png" width="16" height="16" alt=":megagrin:" title="Mega Grin"> ):<div class="codebox"><p>Code: </p><pre><code>local suit = require ('suit');pauseMenu = suit.new();......function love.update(dt)if (showPauseMenu) thenpauseMenu.layout:reset((love.graphics.getWidth() / 2 ) - 150,(love.graphics.getHeight() / 2 ) - 45);    pauseMenu:Label("Pause", pauseMenu.layout:row(300,30));        --Here is the error, the .hit variable stays true, therefore the menu is never drawnif (pauseMenu:Button( "Resume", pauseMenu.layout:row() ).hit) then      showPauseMenu = false;      --resume alle gameplay logics      end      endend......function love.draw()if ( showPauseMenu ) then    love.graphics.setBackgroundColor(0, 100, 200, 0.2);    pauseMenu:draw();    return;  end  ...end......function love.keypressed(key)  if key == "escape" then  showPauseMenu = true  endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138720">Lifri</a> — Fri Dec 30, 2016 11:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-12-02T20:37:24+00:00</updated>
+
+		<published>2016-12-02T20:37:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206356#p206356</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206356#p206356"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206356#p206356"><![CDATA[
+You never change how love functionalities work because you may need them somewhere else, you can easily provide another theme file for SUIT, you just need to do whatever you want to draw around or with the text in the theme.Label function. The idea of having theme files is that anyone can use their own. You can pass other parameters to SUIT functions that you can later access in your theme file. I don't understand why you think it is better to redefine a built in function than using a theme file.<br><br>The <a href="http://suit.readthedocs.io/en/latest/widgets.html#common-options" class="postlink">documentation</a> says that you can pass a draw function to replace the theme's one<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Fri Dec 02, 2016 8:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[shoujoq]]></name></author>
+		<updated>2016-12-02T18:41:22+00:00</updated>
+
+		<published>2016-12-02T18:41:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206350#p206350</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206350#p206350"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206350#p206350"><![CDATA[
+<blockquote class="uncited"><div>NO! You need to modify the theme.lua file or provide your own. SUIT is a bare UI library that allows people to theme it. It doesn't come with a lot of stuff but users can easily change the themes and other stuff, that is the idea.</div></blockquote>From looking at theme.lua, theme.Label calls love.graphics.printf, passing parameters relating to the string to be displayed, the position of the string and its alignment. Unless love.graphics.printf has a different version that allows one to pass other parameters relating to the kind of styling I want, it doesn't seem to me like changing the methods or variables in theme.lua would be able to achieve what I want to achieve.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138619">shoujoq</a> — Fri Dec 02, 2016 6:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-12-02T18:25:39+00:00</updated>
+
+		<published>2016-12-02T18:25:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206347#p206347</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206347#p206347"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206347#p206347"><![CDATA[
+NO! You need to modify the theme.lua file or provide your own. SUIT is a bare UI library that allows people to theme it. It doesn't come with a lot of stuff but users can easily change the themes and other stuff, that is the idea.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Fri Dec 02, 2016 6:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[shoujoq]]></name></author>
+		<updated>2016-12-02T17:01:37+00:00</updated>
+
+		<published>2016-12-02T17:01:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206344#p206344</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206344#p206344"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206344#p206344"><![CDATA[
+<blockquote class="uncited"><div>You can read the source to see exactly what options the default theme uses:<br><a href="https://github.com/vrld/SUIT/blob/master/theme.lua#L44" class="postlink">https://github.com/vrld/SUIT/blob/master/theme.lua#L44</a><br>For labels, you can only customize color, font, and alignment. You can always write your own draw function though, if the default doesn't work.</div></blockquote>Thanks for the response. It's a shame that there's no functionality like this in SUIT already.<br><br>Am I right in concluding that the function I would essentially need to rewrite is love.graphics.printf?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138619">shoujoq</a> — Fri Dec 02, 2016 5:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alloyed]]></name></author>
+		<updated>2016-12-02T09:02:29+00:00</updated>
+
+		<published>2016-12-02T09:02:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206331#p206331</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206331#p206331"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206331#p206331"><![CDATA[
+You can read the source to see exactly what options the default theme uses:<br><a href="https://github.com/vrld/SUIT/blob/master/theme.lua#L44" class="postlink">https://github.com/vrld/SUIT/blob/master/theme.lua#L44</a><br>For labels, you can only customize color, font, and alignment. You can always write your own draw function though, if the default doesn't work.<br>if stroke text, the easiest thing would probably be to generate an imagefont and then apply the stroke in photoshop or something. In my game I personally reused an outline shader on my text, and this was fiddly enough that I probably wouldn't do it again, but ymmv<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136682">alloyed</a> — Fri Dec 02, 2016 9:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[shoujoq]]></name></author>
+		<updated>2016-11-30T08:06:43+00:00</updated>
+
+		<published>2016-11-30T08:06:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=206240#p206240</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=206240#p206240"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=206240#p206240"><![CDATA[
+Hi,<br><br>I'm new to LÖVE and using <a href="http://suit.readthedocs.io/" class="postlink">SUIT</a> to create a user interface for my game in LÖVE and I'm trying to figure out what kind of text formatting can be done on text created with SUIT.<br><br>For example, I have some text generated like this:<div class="codebox"><p>Code: </p><pre><code>suit.Label("PRO", {align = "center", font = Libel128, color = colorBlue}, suit.layout:row(400,60))</code></pre></div>where Libel128 and colorBlue have been defined in love.load() as follows:<div class="codebox"><p>Code: </p><pre><code>Libel128 = love.graphics.newFont("fonts/libel-suit-rg.ttf", 128)colorBlue={normal = {bg = {71,134,206}, fg = {71,134,206}}}</code></pre></div>and I was wondering what else I can do regarding the styling of this text - for example, putting a stroke border around the text?<br><br>I couldn't find anything on this in the documentation, so I figured I'd ask here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138619">shoujoq</a> — Wed Nov 30, 2016 8:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[felipetesc]]></name></author>
+		<updated>2016-11-03T18:01:11+00:00</updated>
+
+		<published>2016-11-03T18:01:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205350#p205350</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205350#p205350"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205350#p205350"><![CDATA[
+Hello. I'm just sending this post to say the code from  <a href="https://love2d.org/wiki/SUIT" class="postlink">https://love2d.org/wiki/SUIT</a> is incorrect and should be changed to the one on top of this post. Changing it will avoid people to think is buggy, at the first impression. Nonetherless, great project<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138422">felipetesc</a> — Thu Nov 03, 2016 6:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[VectorNormal]]></name></author>
+		<updated>2016-10-23T06:37:25+00:00</updated>
+
+		<published>2016-10-23T06:37:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204878#p204878</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204878#p204878"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204878#p204878"><![CDATA[
+First off, really great library. I can tell a lot of care went into this.<br>Now, having looked through the code, it's not immediately apparent how it's storing the keyboard focus state for the input boxes.<br>Is it possible to have it drop focus after hitting enter?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138460">VectorNormal</a> — Sun Oct 23, 2016 6:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zireael]]></name></author>
+		<updated>2016-10-13T09:50:14+00:00</updated>
+
+		<published>2016-10-13T09:50:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=204550#p204550</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=204550#p204550"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=204550#p204550"><![CDATA[
+Thanks for the tip!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138380">Zireael</a> — Thu Oct 13, 2016 9:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rishavs]]></name></author>
+		<updated>2016-09-15T06:55:36+00:00</updated>
+
+		<published>2016-09-15T06:55:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203676#p203676</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203676#p203676"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203676#p203676"><![CDATA[
+If you dont want full sortable columns and otehr thingamajigs etc then its easy.<br><br>Create a msg_queue object.<br><br>start inserting all messages you want in the code in it.<br>create a var called wid_size where you define the number of messages to be shown.<br>(so if your msg_q obj has 1000 items and you only want to show the last 10 on each update)<br><br>then add two buttons and a slider in a horizontal layout (scrollbar)<br>when you click on the buttons or use the slider just keep changing the msgs range to be displayed.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=727">Rishavs</a> — Thu Sep 15, 2016 6:55 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zireael]]></name></author>
+		<updated>2016-09-14T09:58:27+00:00</updated>
+
+		<published>2016-09-14T09:58:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203642#p203642</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203642#p203642"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203642#p203642"><![CDATA[
+I am looking for a simple UI library capable of doing scrolling lists. Would you recommend SUIT?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138380">Zireael</a> — Wed Sep 14, 2016 9:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alloyed]]></name></author>
+		<updated>2016-08-08T14:09:17+00:00</updated>
+
+		<published>2016-08-08T14:09:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=201811#p201811</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=201811#p201811"/>
+		<title type="html"><![CDATA[Re: [Lib] SUIT - Simple User Interface Toolkit]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=201811#p201811"><![CDATA[
+<blockquote class="uncited"><div>Hi,<br>I'd like to use suit.anyHovered() in the love input callbacks (love.mousemoved, love.mousepressed ...), to check whether the input should go to what's beneath the GUI, or whether the GUI blocked the input.<br>However, in these functions, anyHovered is always false. I assume this is because love.update (where the suit layout is being generated) is called after the callbacks?<br><br>Is there a nice way to figure out if something howered over the GUI in the previous frame? (Of course, I could save suit.anyHovered into a global variable, but ugh.) Or do you recommend another way to do what I want?</div></blockquote>yep, the run loop looks like<br><br>* do events<br>* update (build suit state)<br>* draw (clear suit state)<br><br>so events happen in that void where the suit state is cleared.  What I'm doing to work around this is by checking `suit.hovered_last` directly, which holds the hovered widget id as of the last frame, or nil if there's nothing being hovered over.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136682">alloyed</a> — Mon Aug 08, 2016 2:09 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

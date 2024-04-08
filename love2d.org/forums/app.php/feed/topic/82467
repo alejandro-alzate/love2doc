@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/82467" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-08-16T19:09:33+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/82467</id>
+
+		<entry>
+		<author><name><![CDATA[sonoro]]></name></author>
+		<updated>2020-08-16T19:09:33+00:00</updated>
+
+		<published>2020-08-16T19:09:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=235392#p235392</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=235392#p235392"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=235392#p235392"><![CDATA[
+I am the author of <a href="https://github.com/sonoro1234/LuaJIT-ImGui" class="postlink">https://github.com/sonoro1234/LuaJIT-ImGui</a> (and also cimgui)<br><br>I have just added an imgui.love module and an example.<br><br>It supportss drawlists (It should support everything imgui has)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155242">sonoro</a> — Sun Aug 16, 2020 7:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[tobiasvl]]></name></author>
+		<updated>2020-03-16T23:00:31+00:00</updated>
+
+		<published>2020-03-16T23:00:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=232642#p232642</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=232642#p232642"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=232642#p232642"><![CDATA[
+Hey! Sorry for the necro here, but I just noticed that although slages's repo has been silent for a good while, there's recently been some activity in these forks:<br><br><a href="https://github.com/MikuAuahDark/love-imgui" class="postlink">https://github.com/MikuAuahDark/love-imgui</a> (imgui 1.73)<br><a href="https://github.com/CoryNull/love-imgui" class="postlink">https://github.com/CoryNull/love-imgui</a> (imgui 1.75)<br><a href="https://github.com/Alloyed/love-imgui" class="postlink">https://github.com/Alloyed/love-imgui</a><br><br>It's exciting to see work being done on love-imgui, but it's almost getting too busy! Although Alloyed's fork actually lists what functions aren't implemented (a godsend!!), I'm not entirely sure what fork to follow now, or what differences there are between them.<br><br>There's also this LuaJIT implementation, perhaps it could be of use for love-imgui somehow? <a href="https://github.com/sonoro1234/LuaJIT-ImGui" class="postlink">https://github.com/sonoro1234/LuaJIT-ImGui</a><br><br>Anyway! What I actually came here to ask: Is there a way to draw simple rectangles with love-imgui (any version)? All imgui examples I see involve manipulating the drawlist, functionality I don't entirely understand and which no version of love-imgui seems to support anyway.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140862">tobiasvl</a> — Mon Mar 16, 2020 11:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-07-24T05:06:50+00:00</updated>
+
+		<published>2019-07-24T05:06:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228476#p228476</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228476#p228476"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228476#p228476"><![CDATA[
+Hi, ive fixed the issue with the docks. The fix is in <a href="https://github.com/flamendless.love-imgui" class="postlink">https://github.com/flamendless.love-imgui</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Wed Jul 24, 2019 5:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2019-07-21T14:30:17+00:00</updated>
+
+		<published>2019-07-21T14:30:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228436#p228436</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228436#p228436"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228436#p228436"><![CDATA[
+Hi, in your gif docks work, however it does not work with the latest source code over on github.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sun Jul 21, 2019 2:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ikroth]]></name></author>
+		<updated>2019-03-25T17:57:41+00:00</updated>
+
+		<published>2019-03-25T17:57:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=226457#p226457</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=226457#p226457"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=226457#p226457"><![CDATA[
+Hello everyone, I got an email notification a few days ago that my pull request to add automatic x64 build support has been merged. This means you should be able to find an "up to date" version of the DLL in the repository now. However, it's still only ImGui 1.53, but it means that future updates will have DLLs available right away. (<a href="https://github.com/slages/love-imgui/releases" class="postlink">https://github.com/slages/love-imgui/releases</a>) I haven't had time to go back and add 32-bit support since I created that pull request, so it would be great if someone here is able to look into that. The current build only supports Windows 64-bit.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=127310">Ikroth</a> — Mon Mar 25, 2019 5:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nedok]]></name></author>
+		<updated>2019-02-18T09:19:32+00:00</updated>
+
+		<published>2019-02-18T09:19:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225830#p225830</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225830#p225830"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225830#p225830"><![CDATA[
+I do love ImGui LÖVE. However, I rely like to see it updated to ImGui v1.61 at least. This is because of some bugs related to column that exists in 1.53.<br><br>I have tried to update it myself, but lack the know how. Is there anyone that could give me some pointers on how to do this  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww">?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141856">Nedok</a> — Mon Feb 18, 2019 9:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gdinit]]></name></author>
+		<updated>2019-02-15T01:39:55+00:00</updated>
+
+		<published>2019-02-15T01:39:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225763#p225763</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225763#p225763"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225763#p225763"><![CDATA[
+After much googling, I couldn't make font change at runtime work with existing functions.<br>Well, if I am reading this correctly, it does exist in imgui but not in love-imgui hence the problem.<br><br>Anyhow, I have now added a small method myself (to imgui and love-imgui) which can be used as follows:<br>1) First, load a bunch of fonts/sizes and then<br>2) Switch between these at runtime. <br><br>It's late now but with a quick test, it seems to work. Shared on Github in a new issue &amp; pull request.<br>Here is the link in case anyone else finds it useful: <a href="https://github.com/slages/love-imgui/issues/33" class="postlink">https://github.com/slages/love-imgui/issues/33</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141902">gdinit</a> — Fri Feb 15, 2019 1:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gdinit]]></name></author>
+		<updated>2019-02-14T21:14:20+00:00</updated>
+
+		<published>2019-02-14T21:14:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=225745#p225745</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=225745#p225745"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=225745#p225745"><![CDATA[
+<blockquote class="uncited"><div>EDIT:<br>github project:<br><a href="https://github.com/slages/love-imgui" class="postlink">https://github.com/slages/love-imgui</a><br>...&lt;snip&gt;...</div></blockquote>Fenrir,<br>Thank you very much for this project.<br><br><br><blockquote class="uncited"><div>I followed the 'Simple integration' on the repo but I'm getting this error ;<br>...&lt;snip&gt;...<br>I really have no idea what I'm doing wrong</div></blockquote>GijsB, <br>You're not doing anything wrong except probably your software is outdated.<br>For Win64, can you try using the binary (DLL) provided here and see if it helps?<br><a href="https://github.com/slages/love-imgui/issues/27#issuecomment-420133631" class="postlink">https://github.com/slages/love-imgui/is ... -420133631</a><br><br>EDIT: <br>I have a question: is there a way to change font size at run time?<br>If I understand correctly lack of ImFont, ImFontAtlas ties our hands a bit, making "standard" ways of changing font at runtime unavailable to us. I can load (for test purposes) 80 fonts as follows:<div class="codebox"><p>Code: </p><pre><code>for i=1,80 do    imgui.SetGlobalFontFromFileTTF(ASSET_PATH_FONT_ARIAL, i)table.insert(fontSizes, i)    print("Loaded font size: "..i)end</code></pre></div>I can confirm their successfully-loaded-status with: imgui.ShowFontSelector(".").<br>Picking a font from drop-down successfully changes active globalfont fine.<br><br>Likewise, this does have 'font -&gt; list -&gt; set as &lt;fontentry&gt; as default' button: imgui.ShowStyleEditor()<br>Picking a font with that button successfully changes active globalfont fine also.<br>I am looking for a way to do this without buttons/manual clicking though, programmatically from inside Lua code.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141902">gdinit</a> — Thu Feb 14, 2019 9:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GijsB]]></name></author>
+		<updated>2018-10-26T08:27:20+00:00</updated>
+
+		<published>2018-10-26T08:27:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223772#p223772</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223772#p223772"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223772#p223772"><![CDATA[
+I followed the 'Simple integration' on the repo but I'm getting this error ;<br><div class="codebox"><p>Code: </p><pre><code>Errormain.lua:18: bad argument #1 to 'NewFrame' (string expected, got table)Traceback[C]: in function 'NewFrame'main.lua:18: in function 'update'[C]: in function 'xpcall'</code></pre></div>Which refers simply to :<br><div class="codebox"><p>Code: </p><pre><code>function love.update(dt)    imgui.NewFrame()end</code></pre></div>I really have no idea what I'm doing wrong<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3485">GijsB</a> — Fri Oct 26, 2018 8:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ArchAngel075]]></name></author>
+		<updated>2018-09-23T12:15:48+00:00</updated>
+
+		<published>2018-09-23T12:15:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223209#p223209</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223209#p223209"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223209#p223209"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>-</div></blockquote>Had the same problem, did the same thing with setting a custom drag payload and checking whether the target area is hovered, it works but doesn't feel as good as using native ImGui's DragDrop* methods.</div></blockquote>My grievances with custom payload handling is there is no clean method of saying 'what i just dropped onto is what mt target'<br>instead need to for each exact element do some chunk of code that does the isHovered test, not mouse.isDown() (released mouse over imgui element) and then setting that payload is now nil and no longer trigger any other tests (say elements beneath)<br><br>The other issue is using imgui to set what is the payloads visuals (say some Text, or image) - imgui.isItemHovered() on targets needs flags to ignore popups else the visual payload obstructs. its so gimicky and annoying. Also had to add some timeout to my payload test as testing the same frame or two of release seems to not work.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124513">ArchAngel075</a> — Sun Sep 23, 2018 12:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2018-09-21T18:27:42+00:00</updated>
+
+		<published>2018-09-21T18:27:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223187#p223187</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223187#p223187"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223187#p223187"><![CDATA[
+<blockquote class="uncited"><div>-</div></blockquote>Had the same problem, did the same thing with setting a custom drag payload and checking whether the target area is hovered, it works but doesn't feel as good as using native ImGui's DragDrop* methods.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Fri Sep 21, 2018 6:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ArchAngel075]]></name></author>
+		<updated>2018-09-21T13:35:21+00:00</updated>
+
+		<published>2018-09-21T13:35:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=223185#p223185</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=223185#p223185"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=223185#p223185"><![CDATA[
+Having issues using DragDrop*** methods.<br><br>Consider the following code after a usual imgui.Begin() :<br><div class="codebox"><p>Code: </p><pre><code>    local active = imgui.Selectable("Test DropableItem");    if (imgui.BeginDragDropSource()) then        imgui.Text("dropping this")        -- imgui.SetDragDropPayload("Item", {item_id = "MyItem#ABCDEF-ABCDEF"})        imgui.EndDragDropSource()    end    local active = imgui.Selectable("Test Target");    local payload = imgui.BeginDragDropTarget();    if payload then        print("DropSource")        print(payload)            -- local payload = imgui.AcceptDragDropPayload("Item");        imgui.EndDragDropTarget()    end</code></pre></div>the methods <ul><li>AcceptDragDropPayload</li><li>SetDragDropPayload</li></ul>are all nil. I did a search in the imgui table and those methods indeed do not exist.<br><br>Did a search in src folder of github and found in <a href="https://github.com/slages/love-imgui/blob/592a6806a8729d4e49247eef109d2bc127a20c0e/src/imgui_iterator.h#L1704" class="postlink">here</a><br>the method is commented out along with "Unsupported return type const"<br><br>Is LOVE2D-imgui unable to support fully drag drop of items (not files externally) and/or is there some way i can detect the drop?<br><br>atm im considering setting a bool on Drag (since that happens) and checking if wasDragging on mouse release capturing mouse. then after targets doing <div class="codebox"><p>Code: </p><pre><code>if isItemHovered() and _wasDragging then --payload handling hereend</code></pre></div>id prefer some more imgui method here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124513">ArchAngel075</a> — Fri Sep 21, 2018 1:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[typx]]></name></author>
+		<updated>2018-06-26T07:57:18+00:00</updated>
+
+		<published>2018-06-26T07:57:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221862#p221862</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221862#p221862"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221862#p221862"><![CDATA[
+I'm making use of imgui.SetGlobalFontFromFileTTF("gfx/JAi.ttf", 14) which is working fine when running in ZeroBrane Studio. Sadly, as soon as I make an .exe file and run it, it ignores the font and uses the default one. How could I change this behaviour?<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=16454&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=16454" class="postimage" alt="imgui_font.jpg" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140034">typx</a> — Tue Jun 26, 2018 7:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[typx]]></name></author>
+		<updated>2018-06-23T22:13:48+00:00</updated>
+
+		<published>2018-06-23T22:13:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221832#p221832</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221832#p221832"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221832#p221832"><![CDATA[
+Nice! Thanks alot <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140034">typx</a> — Sat Jun 23, 2018 10:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ikroth]]></name></author>
+		<updated>2018-06-23T15:22:15+00:00</updated>
+
+		<published>2018-06-23T15:22:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221826#p221826</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221826#p221826"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221826#p221826"><![CDATA[
+<blockquote class="uncited"><div>Are there any Love 11.1 binaries out there? For some reason, I'm unable to finish the build process. Cloning and CMake work fine but nmake can't find a makefile and opening the project in VS spits out a lot of errors when trying to compile.</div></blockquote>You're in luck! I just went through the whole process of getting it setup to build automatically on Windows, see if this works for you: <a href="https://github.com/camchenry/love-imgui/releases/tag/master-latest" class="postlink">https://github.com/camchenry/love-imgui ... ter-latest</a>. It's currently just a Windows x86_64 only, no 32-bit support yet. I'll probably clean up what I have and submit a pull request to the original repo.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=127310">Ikroth</a> — Sat Jun 23, 2018 3:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[typx]]></name></author>
+		<updated>2018-06-23T10:52:34+00:00</updated>
+
+		<published>2018-06-23T10:52:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221814#p221814</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221814#p221814"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221814#p221814"><![CDATA[
+Are there any Love 11.1 binaries out there? For some reason, I'm unable to finish the build process. Cloning and CMake work fine but nmake can't find a makefile and opening the project in VS spits out a lot of errors when trying to compile.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140034">typx</a> — Sat Jun 23, 2018 10:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[portify]]></name></author>
+		<updated>2017-10-09T07:26:53+00:00</updated>
+
+		<published>2017-10-09T07:26:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215668#p215668</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215668#p215668"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215668#p215668"><![CDATA[
+How do I set the WindowTitleAlign style? I'd like to persist the window title centering I have set here using the style editor:<br><br><img src="https://love2d.org/imgmirrur/3nLzXvQ.png" class="postimage" alt="Image"><br><br>I'm currently using PushStyleVar/PushStyleColor for all my styling (since GetStyle isn't available), but trying to set WindowTitleAlign using PushStyleVar_2 just hits the assert in imgui for when the style variable is of the wrong type.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136332">portify</a> — Mon Oct 09, 2017 7:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Valden]]></name></author>
+		<updated>2017-08-19T14:46:40+00:00</updated>
+
+		<published>2017-08-19T14:46:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214707#p214707</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214707#p214707"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214707#p214707"><![CDATA[
+You pass flags to Imgui by putting them as individual strings in a table and removing the part preceding the underscore. So in your case that would give :<div class="codebox"><p>Code: </p><pre><code>imgui.inputText("password", passwordVar, 64, {"Password", "CharsNoBlank"})</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139430">Valden</a> — Sat Aug 19, 2017 2:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milk]]></name></author>
+		<updated>2017-08-19T09:13:26+00:00</updated>
+
+		<published>2017-08-19T09:13:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214703#p214703</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214703#p214703"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214703#p214703"><![CDATA[
+Does someone know how to add flags to textInputs, specifically the password flags for textInputs;<br><div class="codebox"><p>Code: </p><pre><code> ImGui::InputText("password", bufpass, 64, ImGuiInputTextFlags_Password | ImGuiInputTextFlags_CharsNoBlank);</code></pre></div>Which I turn into <br><div class="codebox"><p>Code: </p><pre><code>imgui.inputText("password", passwordVar ... -- And the rest I don't know</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138192">milk</a> — Sat Aug 19, 2017 9:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dan369]]></name></author>
+		<updated>2017-08-16T22:04:34+00:00</updated>
+
+		<published>2017-08-16T22:04:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214654#p214654</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214654#p214654"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214654#p214654"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Does anyone know how to capture the button press against the 'X' (i.e. to close the window)? I've been looking into the docs and see that p_open is the second parameter in imgui.Begin() but it when i click it in my code it doesn't seem to have any effect/change the boolean value.</div></blockquote>This is in the one place in my code where I use this feature<div class="codebox"><p>Code: </p><pre><code>local isVisible, isOpen = imgui.Begin(windowID, true, flags)if isOpen == false then    -- don't run this block next timeendimgui.End()</code></pre></div>afaik this is an automatically generated change. The C++ api uses that second argument as a reference parameter, but those don't exist in lua so they get tacked on to the list of return arguments instead. This also applies to things like the text fields iirc.</div></blockquote>Thanks @alloyed, that worked perfectly  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134949">dan369</a> — Wed Aug 16, 2017 10:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[alloyed]]></name></author>
+		<updated>2017-08-15T00:32:56+00:00</updated>
+
+		<published>2017-08-15T00:32:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214626#p214626</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214626#p214626"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214626#p214626"><![CDATA[
+<blockquote class="uncited"><div>Does anyone know how to capture the button press against the 'X' (i.e. to close the window)? I've been looking into the docs and see that p_open is the second parameter in imgui.Begin() but it when i click it in my code it doesn't seem to have any effect/change the boolean value.</div></blockquote>This is in the one place in my code where I use this feature<div class="codebox"><p>Code: </p><pre><code>local isVisible, isOpen = imgui.Begin(windowID, true, flags)if isOpen == false then    -- don't run this block next timeendimgui.End()</code></pre></div>afaik this is an automatically generated change. The C++ api uses that second argument as a reference parameter, but those don't exist in lua so they get tacked on to the list of return arguments instead. This also applies to things like the text fields iirc.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136682">alloyed</a> — Tue Aug 15, 2017 12:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dan369]]></name></author>
+		<updated>2017-08-14T18:19:09+00:00</updated>
+
+		<published>2017-08-14T18:19:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214618#p214618</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214618#p214618"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214618#p214618"><![CDATA[
+Does anyone know how to capture the button press against the 'X' (i.e. to close the window)? I've been looking into the docs and see that p_open is the second parameter in imgui.Begin() but it when i click it in my code it doesn't seem to have any effect/change the boolean value.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134949">dan369</a> — Mon Aug 14, 2017 6:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mutos]]></name></author>
+		<updated>2017-08-11T12:18:51+00:00</updated>
+
+		<published>2017-08-11T12:18:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214535#p214535</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214535#p214535"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214535#p214535"><![CDATA[
+Hi Fenrir,<br><br><br>OK, thanks for the hints, I'll see to it, one of the things I wanna do is write a stellar systems editor, so it fits ^-^ If it's OK for making the game also, then I'll use it, alse I'll search for another GUI...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139387">Mutos</a> — Fri Aug 11, 2017 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Fenrir]]></name></author>
+		<updated>2017-08-10T06:14:45+00:00</updated>
+
+		<published>2017-08-10T06:14:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214496#p214496</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214496#p214496"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214496#p214496"><![CDATA[
+<blockquote class="uncited"><div>Hi all,<br><br><br>Looking for a GUI to use with LÖVE2D, what's current status on this one ? Thanks in advance !</div></blockquote>Well I would say that it works quite well and it's pretty stable and functional now. But be aware that it's a GUI mostly intended for tools/editors creation, not really for in-game elements. You can still tweak it for this purpose but it's clearly not its best usage.<br><br>And the biggest issue is still the lack of documentation, the best way to work with it is to have the imgui.h file opened and use it as your reference.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134317">Fenrir</a> — Thu Aug 10, 2017 6:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Mutos]]></name></author>
+		<updated>2017-08-10T03:43:44+00:00</updated>
+
+		<published>2017-08-10T03:43:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=214494#p214494</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=214494#p214494"/>
+		<title type="html"><![CDATA[Re: ImGui LÖVE module]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=214494#p214494"><![CDATA[
+Hi all,<br><br><br>Looking for a GUI to use with LÖVE2D, what's current status on this one ? Thanks in advance !<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139387">Mutos</a> — Thu Aug 10, 2017 3:43 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

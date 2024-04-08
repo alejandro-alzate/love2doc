@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/33506" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2013-05-09T17:26:11+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/33506</id>
+
+		<entry>
+		<author><name><![CDATA[Rickton]]></name></author>
+		<updated>2013-05-09T17:26:11+00:00</updated>
+
+		<published>2013-05-09T17:26:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=102244#p102244</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=102244#p102244"/>
+		<title type="html"><![CDATA[Re: rotLove - A port of rot.js to lua/Love2D]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=102244#p102244"><![CDATA[
+Very cool. I wish this had been around when I was making my roguelike (I actually looked for a lua port of libtcod but couldn't find one).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=104751">Rickton</a> — Thu May 09, 2013 5:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[markgo]]></name></author>
+		<updated>2013-05-05T02:06:57+00:00</updated>
+
+		<published>2013-05-05T02:06:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101900#p101900</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101900#p101900"/>
+		<title type="html"><![CDATA[Re: rotLove - A port of rot.js to lua/Love2D]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101900#p101900"><![CDATA[
+Wow that's a lot of stuff. I just had to post to say thanks for the effort. I'm sure some of the stuff comes in handy when I'll need it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=83126">markgo</a> — Sun May 05, 2013 2:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[paulofmandown]]></name></author>
+		<updated>2013-05-04T15:02:47+00:00</updated>
+
+		<published>2013-05-04T15:02:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=101878#p101878</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=101878#p101878"/>
+		<title type="html"><![CDATA[rotLove - A port of rot.js to lua/Love2D]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=101878#p101878"><![CDATA[
+Source available <a href="https://github.com/paulofmandown/rotLove" class="postlink">here</a><br><br>rotLove provides a lot of the tools from <a href="http://ondras.github.io/rot.js/hp/" class="postlink">rot.js</a>/<a href="http://doryen.eptalys.net/libtcod/download" class="postlink">libtcod</a> to lua and love2D roguelike devs. <br><br>Included is:<br><br>codePage 437 emulator for display - based on <a href="https://github.com/trystan/AsciiPanel" class="postlink">Ascii Panel</a><br><br>random number generator derived from <a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=3424" class="postlink">RandomLua</a><br><br>string generator (learns how to build random words from lists)<br><br>8 different map generators<br><br>simplex noise generator<br><br>2 Field of View calculators<br><br>simple color toolkit<br><br>Simplified dijkstra and a* path finders<br><br>and a really cool light emission/blending calculator<br><br>Most of my free time from the past two weeks has been dedicated to this. It's one of the first half way usable things I've ever built (I hope it doesn't show too much). Any feedback would be greatly appreciated.<br><br><a href="https://love2d.org/imgmirrur/XZvit.html" class="postlink">Some images of the examples I built to test with.</a><br><br><a href="https://docs.google.com/file/d/0B9lIeto0CPFOM2YtanVEajlKVUU/edit?usp=sharing" class="postlink">A zip of 24 example .loves.</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=116415">paulofmandown</a> — Sat May 04, 2013 3:02 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

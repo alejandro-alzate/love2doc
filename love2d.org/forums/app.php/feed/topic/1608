@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/1608" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2010-06-06T00:01:32+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/1608</id>
+
+		<entry>
+		<author><name><![CDATA[hagish]]></name></author>
+		<updated>2010-06-06T00:01:32+00:00</updated>
+
+		<published>2010-06-06T00:01:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15757#p15757</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15757#p15757"/>
+		<title type="html"><![CDATA[Re: Adult Lib - run old Löve code with the current Löve vers]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15757#p15757"><![CDATA[
+Yeah we were to lazy to port our code 5 times so we did it one time <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>But yes a maintained and active project should port the code but is is great to run old löve code without "rewriting" the hole project.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74">hagish</a> — Sun Jun 06, 2010 12:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Luiji]]></name></author>
+		<updated>2010-06-04T15:47:46+00:00</updated>
+
+		<published>2010-06-04T15:47:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15731#p15731</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15731#p15731"/>
+		<title type="html"><![CDATA[Re: Adult Lib - run old Löve code with the current Löve vers]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15731#p15731"><![CDATA[
+I think everybody should just port their code over.  Adult Lib just gives people a way to be lazy coders.  It is only good as a temporary solution, in my opinion.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1185">Luiji</a> — Fri Jun 04, 2010 3:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2010-06-04T13:16:01+00:00</updated>
+
+		<published>2010-06-04T13:16:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15729#p15729</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15729#p15729"/>
+		<title type="html"><![CDATA[Re: Adult Lib - run old Löve code with the current Löve vers]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15729#p15729"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>love.default_font = {} -- "Vera Sans", but doesn't seem to work, so create unique object and detect in setfont</code></pre></div>I'm pretty sure you mean love._vera_ttf instead of "Vera Sans"<br><br>Also, @everyone, if Adult Lib doesn't work for your game, you could try porting it with the help of hand-holder.lua:<div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=1588">hand-holder.lua</a></dt></dl></div>EDIT: also, love.graphics.draw() should look for strings and call love.graphics.print() if appropriate.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Jun 04, 2010 1:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2010-06-04T13:10:35+00:00</updated>
+
+		<published>2010-06-04T13:10:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15728#p15728</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15728#p15728"/>
+		<title type="html"><![CDATA[Re: Adult Lib - run old Löve code with the current Löve vers]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15728#p15728"><![CDATA[
+Great, you reached the forums.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Jun 04, 2010 1:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hagish]]></name></author>
+		<updated>2010-06-04T13:03:33+00:00</updated>
+
+		<published>2010-06-04T13:03:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=15727#p15727</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=15727#p15727"/>
+		<title type="html"><![CDATA[Adult Lib - run old Löve code with the current Löve version]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=15727#p15727"><![CDATA[
+Here is the original post: <a href="http://forum.freegamedev.net/viewtopic.php?f=20&amp;t=363&amp;p=4193" class="postlink">http://forum.freegamedev.net/viewtopic. ... 363&amp;p=4193</a><br><br>A small lib to run old löve code with the current version. Currently it only supports<br>0.5 -&gt; 0.6.2.<br><br>You can find it under: <a href="http://ghoulsblade.schattenkind.net/files/adult.lua" class="postlink">http://ghoulsblade.schattenkind.net/files/adult.lua</a><br><br>How to use:<br>* Take your 0.5 code and include adult in the first line of your main.lua<br>* Then call adult.grow ("0.5")<br>* If you are lucky enough you will see your game <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74">hagish</a> — Fri Jun 04, 2010 1:03 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

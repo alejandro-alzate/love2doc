@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/77612" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2014-04-03T01:45:01+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/77612</id>
+
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2014-04-03T01:31:57+00:00</updated>
+
+		<published>2014-04-03T01:31:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165608#p165608</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165608#p165608"/>
+		<title type="html"><![CDATA[Re: FPSGraph. A simple FPS and Memory graphing utility]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165608#p165608"><![CDATA[
+<blockquote class="uncited"><div>I like it, just added it to my project.<br><br>Couple of thoughts:<br>1) I sense some copy and paste, in your example you have dt in the draw method. It doesn't seem to need to be there.<br>2) Something happened in my code, and messed up the line width of your graph. Realized you never had a love.graphics.setLineWidth(1) there. Perhaps something like that? I'm also new to love, so not sure if there is a convention I'm missing.<br>3) I'd enjoy hooking other things (game specific) to the graph. Perhaps an example of how to do this? Wasn't aware I could till I read the source more in depth.</div></blockquote>1) Haha, didn't actually notice that <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br>2) Yeah, mostly so you can change the change the color and line style by putting the setColor and setLineWidth methods before you draw your graph.<br>3) You can do that b making a custom update function that takes in your graph, dt, and any other optional arguments, then passing the values and labels of your graphs to the fpsGraph.updateGraph function. Something like:<div class="codebox"><p>Code: </p><pre><code>function updateGraphRandomly(graph, dt, arg)local val = love.math.random()*argfpsGraph.updateGraph(graph, val, "Random: " .. math.floor(val*10)/10, dt)end</code></pre></div>Anyways, I'm gonna add more comments to the source code so others can understand it better.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Thu Apr 03, 2014 1:31 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[WetDesertRock]]></name></author>
+		<updated>2014-04-02T19:29:55+00:00</updated>
+
+		<published>2014-04-02T19:29:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165584#p165584</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165584#p165584"/>
+		<title type="html"><![CDATA[Re: FPSGraph. A simple FPS and Memory graphing utility]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165584#p165584"><![CDATA[
+I like it, just added it to my project.<br><br>Couple of thoughts:<br>1) I sense some copy and paste, in your example you have dt in the draw method. It doesn't seem to need to be there.<br>2) Something happened in my code, and messed up the line width of your graph. Realized you never had a love.graphics.setLineWidth(1) there. Perhaps something like that? I'm also new to love, so not sure if there is a convention I'm missing.<br>3) I'd enjoy hooking other things (game specific) to the graph. Perhaps an example of how to do this? Wasn't aware I could till I read the source more in depth.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134773">WetDesertRock</a> — Wed Apr 02, 2014 7:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2014-04-03T01:45:01+00:00</updated>
+
+		<published>2014-04-02T01:22:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165534#p165534</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165534#p165534"/>
+		<title type="html"><![CDATA[FPSGraph. A simple lightweight graphing utility]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165534#p165534"><![CDATA[
+Made out of my free time while taking a break from bigger projects.<br><br>A simple library that graphs <del>both FPS and Memory</del> any set of values you want to graph, including FPS and Memory. You can also have multiple graphs (used ordinary Lua tables instead of objects to make the lib smaller.)<br><br><a href="https://github.com/icrawler/FPSGraph" class="postlink">Github repo</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Wed Apr 02, 2014 1:22 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

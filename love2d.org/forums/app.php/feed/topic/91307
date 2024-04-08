@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/91307" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-12-09T22:47:20+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/91307</id>
+
+		<entry>
+		<author><name><![CDATA[grump]]></name></author>
+		<updated>2021-10-26T18:17:52+00:00</updated>
+
+		<published>2021-10-26T18:17:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244478#p244478</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244478#p244478"/>
+		<title type="html"><![CDATA[Re: cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244478#p244478"><![CDATA[
+<blockquote class="uncited"><div>The library looks very cool, but is it possible to decorate windows using texture atlases?<br>I think it is very important feature for game GUI.</div></blockquote>You can restyle stuff in Dear Imgui with some effort, at least in the C code. It's not really meant to be used as a pretty game UI though.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139355">grump</a> — Tue Oct 26, 2021 6:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[luarocks]]></name></author>
+		<updated>2021-10-26T17:50:58+00:00</updated>
+
+		<published>2021-10-26T17:50:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=244477#p244477</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=244477#p244477"/>
+		<title type="html"><![CDATA[Re: cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=244477#p244477"><![CDATA[
+The library looks very cool, but is it possible to decorate windows using texture atlases?<br>I think it is very important feature for game GUI.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145813">luarocks</a> — Tue Oct 26, 2021 5:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[apicici]]></name></author>
+		<updated>2021-08-23T17:14:52+00:00</updated>
+
+		<published>2021-08-23T17:14:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=243263#p243263</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=243263#p243263"/>
+		<title type="html"><![CDATA[Re: cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=243263#p243263"><![CDATA[
+<blockquote class="uncited"><div>Do you have an example on how to use <strong class="text-strong">imgui::Combo</strong>? I'm very new to ffi.</div></blockquote>This one is a bit tricky because of the way strings are treated in C. There are two options:<br><div class="codebox"><p>Code: </p><pre><code>-- option 1: items passed as a string, separated by zeroslocal imgui = require "cimgui"local ffi = require "ffi"local current_item = ffi.new("int[1]", 0)local lua_items = {"option 1", "option 2", "option 3"}local items = table.concat(lua_items, "\0")function love.draw()    imgui.Combo_Str("combo test", current_item, items)        imgui.Render()    imgui.RenderDrawLists()end</code></pre></div><div class="codebox"><p>Code: </p><pre><code>-- option 2: items passed as an array of const char*local imgui = require "cimgui"local ffi = require "ffi"local current_item = ffi.new("int[1]", 0)local lua_items = {"option 1", "option 2", "option 3"}function love.draw()    local items = ffi.new("const char*[?]", #lua_items, lua_items)    imgui.Combo_Str_arr("combo test", current_item, items, #lua_items)        imgui.Render()    imgui.RenderDrawLists()end</code></pre></div>I would recommend the first option, the second one requires to be careful about garbage collection of the items to avoid unexpected results.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145133">apicici</a> — Mon Aug 23, 2021 5:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[XHH]]></name></author>
+		<updated>2021-08-22T22:30:30+00:00</updated>
+
+		<published>2021-08-22T22:30:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=243245#p243245</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=243245#p243245"/>
+		<title type="html"><![CDATA[Re: cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=243245#p243245"><![CDATA[
+Do you have an example on how to use <strong class="text-strong">imgui::Combo</strong>? I'm very new to ffi.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124146">XHH</a> — Sun Aug 22, 2021 10:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-05-25T10:06:09+00:00</updated>
+
+		<published>2021-05-25T10:06:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=241168#p241168</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=241168#p241168"/>
+		<title type="html"><![CDATA[Re: cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=241168#p241168"><![CDATA[
+Works great! (Linux-x64, recompiled from sources).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue May 25, 2021 10:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[apicici]]></name></author>
+		<updated>2023-12-09T22:47:20+00:00</updated>
+
+		<published>2021-05-23T19:28:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=241129#p241129</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=241129#p241129"/>
+		<title type="html"><![CDATA[cimgui-love: another LÖVE module for DearImGui using LuaJIT FFI]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=241129#p241129"><![CDATA[
+Hi everyone,<br><br>I put together a new LÖVE module for <a href="https://github.com/ocornut/imgui" class="postlink">Dear ImGui</a>. The module uses LuaJIT FFI instead of the Lua/C api, and wraps <a href="https://github.com/cimgui/cimgui" class="postlink">cimgui</a> (a programmatically generated C-api for Dear ImGui). You can find it <a href="https://codeberg.org/apicici/cimgui-love" class="postlink"> here</a>.<br><br>The module is currently on version 1.82 (docking branch) of Dear ImGui and all functions exposed by cimgui should work in LÖVE. The wrappers are generated automatically (like cimgui itself) and can be easily updated for new versions of Dear ImGui.<br><br>Prebuilt binaries for the cimgui shared library and the LauJIT module are available at <a href="https://codeberg.org/apicici/cimgui-love/releases" class="postlink">https://codeberg.org/apicici/cimgui-love/releases</a> for the following systems:<ul><li>Linux x64</li><li>Windows x86 and x64</li><li>macos x64</li></ul>See the <a href="https://codeberg.org/apicici/cimgui-love" class="postlink">git repository</a> for instructions on how to use the module. An example of the module in action is attached to the post.<br><br>--------------------------<br><br>The module was inspired by <a href="https://github.com/sonoro1234/LuaJIT-ImGui" class="postlink">LuaJIT-ImGui</a>, but does not share code with it. In particular cimgui-love it does not require any shared libraries other than cimgui, while LuaJIT-ImGui needs SDL for the LÖVE implementation.<br><br>Part of the LÖVE implementation of DearImGui is based on <a href="https://github.com/slages/love-imgui" class="postlink">love-imgui</a>, although it's done diractly in Lua.<br><br>--------------------------<br><br><em class="text-italics">Note</em>: I only tested the module on Linux and Windows, I have no idea if it works on macos. Let me know if you are able to test it!<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=19664">cimgui-love-test.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=145133">apicici</a> — Sun May 23, 2021 7:28 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

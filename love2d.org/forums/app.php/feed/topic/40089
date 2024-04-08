@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/40089" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2014-05-04T16:39:13+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/40089</id>
+
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2014-05-04T16:39:13+00:00</updated>
+
+		<published>2014-05-04T16:39:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167431#p167431</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167431#p167431"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167431#p167431"><![CDATA[
+Raidho's not been here in months, I highly doubt he'll update it<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun May 04, 2014 4:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Septi]]></name></author>
+		<updated>2014-04-30T04:03:16+00:00</updated>
+
+		<published>2014-04-30T04:03:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167185#p167185</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167185#p167185"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167185#p167185"><![CDATA[
+What's the current status of 0.9 support? Is it coming soon or ever? I downloaded the demo and it's still crashing <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=112190">Septi</a> — Wed Apr 30, 2014 4:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-11T19:55:45+00:00</updated>
+
+		<published>2013-09-11T19:55:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=134532#p134532</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=134532#p134532"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=134532#p134532"><![CDATA[
+I've thought that my update loop is really bulky, and numerous "if-else"s have bothered me quite a lot. So I decided to rewrite the update loop. I took the inspiration from TLbind, which was grouping input by device rather than any other parameter, which allowed for iterating through the whole controls set and only using a single function to aquire input. That should've improved performance a lot, and make the code slimmer.<br><br>Turned out, it made the code twice as bulk, because there were certain snippets that were applied per-binding rather than per-device, so I had to copy-paste them all to every loop. I've managed to perform some fine-tuning and stripping extra characters while maintaining somewhat readability. The code ended up being only 30% shorter. Performance-wise, it was only 20% faster. Given that nobody digs into the sources that much, and that 100000 full update iterations for 12 bindings run in under 2 seconds (one such update loop takes 13.5µs, versus 16.2µs in last version), the difference is completely neglectible. I just wasted a good few of hours re-designing and re-implementing binding internal layout while I could just left it as it is.<br><br>Just for the sake of fairness, I decided to compare the performance to original TLbind library. Of course, given such miserable execution time, it makes no choice difference whatsoever, but I just wanted to know. I expected it to be vastly faster than COCK, several times or more, given former's simplicity. I almost instantly noticed that setting it up is pretty awkward. And while basics are straightforward, other things are quite obscure. There was no proper explanation how to use giveInstance either. Of course on top of that it didn't had an ability to use some features that I've applied to my own test control sets, but nevermind that. I recreated closest possible set to what I used for my own library. Because all other functions aren't called often, I only measured the update function.<br><br>When I ran the test, turned out that TLbind would run update loop in 11.7µs, versus 13.5µs of COCK performance, mere 20% difference. So it wasn't even <em class="text-italics">that</em> much faster, given it's simplicity.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Wed Sep 11, 2013 7:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Punkroku]]></name></author>
+		<updated>2013-09-05T16:03:01+00:00</updated>
+
+		<published>2013-09-05T16:03:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=130079#p130079</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=130079#p130079"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=130079#p130079"><![CDATA[
+<span style="color:#FF90FF">Lol I am going to test out the C.O.C.K. library   <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-glee.png" width="16" height="16" alt=":ultraglee:" title=":Ultraglee"></span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133508">Punkroku</a> — Thu Sep 05, 2013 4:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-03T19:59:45+00:00</updated>
+
+		<published>2013-09-03T19:59:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128599#p128599</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128599#p128599"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128599#p128599"><![CDATA[
+Thanks for clarification, slime.<br><br>Looks like the problem with 0.9 was that it's not supported by the library. The other problem was with poorly written demo and a missing failguard in the code. <br><br>That clears up the things. LuaJIT had nothing to do with the errors.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Tue Sep 03, 2013 7:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2013-09-03T19:40:21+00:00</updated>
+
+		<published>2013-09-03T19:40:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128587#p128587</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128587#p128587"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128587#p128587"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Thanks for the input. Are you using LuaJIT by any chance? These operations are not related to the OS X and are confirmed to work with vanilla LÖVE on Linux and Windows, and there's no reason why lj_getNumJoysticks should've been an upvalue, let alone an undefined upvalue.</div></blockquote>Yeah. They're both LuaJIT. (I'm on Mavericks which breaks all versions of Löve that are stock out of the box, so I have specially compiled versions of 8 and 9 with JIT since I can't use the normal ones from the website itself.)</div></blockquote>0.9.0's joystick module is substantially different from any previous version, don't expect anything joystick-related written for 0.8.0 to work out of the box with it. In fact, I believe you're using a version which won't even work with the latest 0.9.0 changes <em class="text-italics">or</em> the old 0.8.0 API.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Tue Sep 03, 2013 7:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-03T19:29:44+00:00</updated>
+
+		<published>2013-09-03T19:29:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128578#p128578</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128578#p128578"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128578#p128578"><![CDATA[
+Oh, that's a shame. <br><br>I think you can get the latter error kludged up by making all these locals in the beginning of the files a globals, that would tamper performance a bit though.<br><br>As for former, I have a vague idea what went wrong. The code have hard-binded joystick hat mappings, and that line would expect the joystick hat to exist, whereas under OS X, XBox controller wouldn't have one. This is particularry what I've tried to solve with cock.remapJoystickHat. You can still use that: remap your hat "buttons" to the hat #1 and it should work (provided it would run at all). Now I see my mistake to assume that arbitrairly hard-binded joystick hat would exist to begin with. I'll patch that up, thanks for the bug report.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Tue Sep 03, 2013 7:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2013-09-03T19:16:55+00:00</updated>
+
+		<published>2013-09-03T19:16:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128566#p128566</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128566#p128566"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128566#p128566"><![CDATA[
+<blockquote class="uncited"><div>Thanks for the input. Are you using LuaJIT by any chance? These operations are not related to the OS X and are confirmed to work with vanilla LÖVE on Linux and Windows, and there's no reason why lj_getNumJoysticks should've been an upvalue, let alone an undefined upvalue.</div></blockquote>Yeah. They're both LuaJIT. (I'm on Mavericks which breaks all versions of Löve that are stock out of the box, so I have specially compiled versions of 8 and 9 with JIT since I can't use the normal ones from the website itself.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Tue Sep 03, 2013 7:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-03T19:11:11+00:00</updated>
+
+		<published>2013-09-03T19:11:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128560#p128560</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128560#p128560"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128560#p128560"><![CDATA[
+Thanks for the input. <blockquote class="uncited"><div>Crashes for me on OS X with a different error for 8 and 9.<br><br>On 8: cock.lua: 783: attempt to index field '?' (a nil value)<br><br>On 9: cock.lua: 459: attempt to call upvalue 'lj_getNumJoysticks' (a nil value)</div></blockquote>Are you using LuaJIT by any chance? These operations are not related to the OS X and are confirmed to work with vanilla LÖVE on Linux and Windows, and there's no reason why lj_getNumJoysticks should've been an upvalue, let alone an undefined upvalue.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Tue Sep 03, 2013 7:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2013-09-03T18:48:26+00:00</updated>
+
+		<published>2013-09-03T18:48:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=128540#p128540</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=128540#p128540"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=128540#p128540"><![CDATA[
+Crashes for me on OS X with a different error for 8 and 9.<br><br>On 8: cock.lua: 783: attempt to index field '?' (a nil value)<br><br>On 9: cock.lua: 459: attempt to call upvalue 'lj_getNumJoysticks' (a nil value)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Tue Sep 03, 2013 6:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-02T19:06:45+00:00</updated>
+
+		<published>2013-09-02T19:06:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=127760#p127760</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=127760#p127760"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=127760#p127760"><![CDATA[
+Updated to version 1.3. Now it actually <em class="text-italics">IS</em> a TLbind successor.<br><br>Added a bunch of features, fixed a bunch of bugs.<br><br>Complete manual added! See the wiki page.<br><br>Uploaded old demo patched to run with 1.3 library.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Mon Sep 02, 2013 7:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[substitute541]]></name></author>
+		<updated>2013-08-18T04:19:22+00:00</updated>
+
+		<published>2013-08-18T04:19:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=120510#p120510</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=120510#p120510"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.2 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=120510#p120510"><![CDATA[
+Nice library ya got there!<br><br><span style="font-size:50%;line-height:116%">A few thousand miles away, someone is gonna name their library "Animation Starter Helper".</span><br><span style="font-size:20%;line-height:116%">If you think that does not sound like anything, say it irl.</span><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63719">substitute541</a> — Sun Aug 18, 2013 4:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-08-17T00:40:52+00:00</updated>
+
+		<published>2013-08-17T00:40:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=120028#p120028</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=120028#p120028"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.2 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=120028#p120028"><![CDATA[
+Updated to 1.2.<br><br>Testing of setDefaultXBox360 under Linux and OS X would be appreciated.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Sat Aug 17, 2013 12:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-08-04T04:39:12+00:00</updated>
+
+		<published>2013-08-04T04:39:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=115169#p115169</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=115169#p115169"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.1 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=115169#p115169"><![CDATA[
+Features list of 1.1 is on the wiki page, the copypaste of it:<blockquote class="uncited"><div>Create one or several control objects, with each of them having their own controls set<br>Define, extend and access sets of control bindings easily<br>Utilize all input devices and all their abilities supported by LÖVE<br>Capture user input device and value and automatically bind it; bind a device and key manually<br>Optionally block input callbacks and update function during input capture, to ensure safe capture<br>Unbind controls easily<br>Set mouse offset and output values scaling factor; ignore mouse motion during input capture<br>Delta-axis mode for all axis-like devices<br>Reload (re-pickup) previously used joysticks<br>4 psychoanatomic adjustments for joystick hat lateral input, separate option for allowing diagonal input<br>Literal arguments for enum-accepting functions, along with numbers<br>"Control Mode" virtual variable (have no actual effect, a convenience feature)</div></blockquote>(now that I think of it, I forgot to add "define and use default controls configurations easily")<br>1.2 added multiple binds per action, joystick button-to-hat mapping, list joysticks by name, joystick axis deadzones, direct and inverted delta-mode for all types of binded input devices, also input inversion for them, default configuration for XBox360 controller for all OSes. <br><br>As of 1.2, missing features are: multiple joysticks simultaneously, callbacks, thumbsticks "normalizaiton" and joystick trackballs. That's it. Joysticks and callbacks are scheduled for 1.3. There won't be thumb normalization (this won't work well with some joysticks and is not how you resolve "move diagonally faster" anyway) and trackballs support (this feature of LÖVE is dropped since 0.9.0).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Sun Aug 04, 2013 4:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[qaisjp]]></name></author>
+		<updated>2013-08-04T01:27:00+00:00</updated>
+
+		<published>2013-08-04T01:27:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=115156#p115156</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=115156#p115156"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.1 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=115156#p115156"><![CDATA[
+Interesting, can you list what features you have (and if you dare, what features you dont have compared to TLBind)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=65500">qaisjp</a> — Sun Aug 04, 2013 1:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2013-08-01T11:30:06+00:00</updated>
+
+		<published>2013-08-01T11:30:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=114494#p114494</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=114494#p114494"/>
+		<title type="html"><![CDATA[Re: Common Organization of Controls Kit (1.1 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=114494#p114494"><![CDATA[
+A kinky name again...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Thu Aug 01, 2013 11:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-02T19:05:32+00:00</updated>
+
+		<published>2013-07-29T19:34:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=113971#p113971</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=113971#p113971"/>
+		<title type="html"><![CDATA[Common Organization of Controls Kit (1.3 update)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=113971#p113971"><![CDATA[
+Version 1.3 is now ready to use.<br><br>What it is:<br>Basically, it's a <a href="/wiki/">TLbind</a> successor.<br><br>What it does:<br>Enables you to easily define a (several of) set of controls to be used in your game, and provides a very user-friendly methods for handling it, specifically you can access all gathered data as a table member, and it has a function to grab a user input to store it into control map, and to unset it, which is really handy in controls setup screen etc.<br><br>I have attached an example of controls setup menu screen, since it's the place where you have broadest view on what this kit is capable of.<br><br>Wiki page: <a href="/wiki/">Common Organization of Controls Kit</a><br>Project page: <a href="http://raidho36.net/stuff/cock" class="postlink">http://raidho36.net/stuff/cock</a><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=8398">datafile.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Mon Jul 29, 2013 7:34 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

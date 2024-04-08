@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/79553" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2015-11-13T12:24:36+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/79553</id>
+
+		<entry>
+		<author><name><![CDATA[Rishavs]]></name></author>
+		<updated>2015-11-13T12:24:36+00:00</updated>
+
+		<published>2015-11-13T12:24:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=191158#p191158</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=191158#p191158"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=191158#p191158"><![CDATA[
+Hi<br><br>I was wondering how can i set the text for a button?<br><br>Currently i am creating a simple graphics.print object and manually overlaying it on top of the button.<br><br>If this feature is not there, I'd request you to add the same. <br>getText, setText methods will be great to have.<br><br>EDIT: Ignore this. I found out how to do it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=727">Rishavs</a> — Fri Nov 13, 2015 12:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-07-20T07:06:50+00:00</updated>
+
+		<published>2015-07-20T07:06:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186812#p186812</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186812#p186812"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186812#p186812"><![CDATA[
+Updated this with the following things:<br><br><strong class="text-strong">Container (Frame, Scrollarea):</strong><ul><li> Added auto alignment options via auto_align, auto_spacing and auto_margin</li><li> Added element removal and retrieval functions via removeElement(id) and getElement(id)</li><li> Added element focus functions via focusElement(n) and forceUnselect()</li><li> Added directional selection of elements via arrow keys (rebindable)</li><li> Added disable_directional_selection attribute to disable directional selection of elements</li><li> Added disable_tab_selection attribute to disable TAB based selection of elements</li><li> Added the option to not update nor draw children via dont_update_draw</li></ul><strong class="text-strong">Closeable (Frame):</strong><ul><li> Updated button's close_margin attribute to now be divided to close_margin_top and close_margin_right</li></ul><strong class="text-strong">Draggable (Button, Checkbox, Frame, Slider):</strong><ul><li> Added dragging start and end signals via drag_start and drag_end</li></ul><strong class="text-strong">Resizable (Button, Checkbox, Frame, Slider):</strong><ul><li> Added resizing corner (can resize the object by dragging a square on one of its corners) via resize_corner, resize_corner_width and resize_corner_height</li><li> Added resizing start and end signals via resize_start and resize_end</li><li> Updated the resize_margin attribute to now be divided to resize_margin_left, resize_margin_right, resize_margin_top and resize_margin_bottom</li></ul><strong class="text-strong">Scrollarea:</strong><ul><li> Added dynamic_scroll_set attribute, which makes it so that a scrollarea's horizontal_scrolling or vertical_scrolling settings are set automatically based on the size of the object compared to its visible scroll area (area_width, area_height)</li><li> Fixed scrollDown, scrollLeft, scrollUp and scrollRight functions not working properly when the scroll value passed in was bigger than the possible amount that can be scrolled</li></ul><strong class="text-strong">Slider:</strong><ul><li> Added the option for vertical sliders via the vertical attribute</li><li> Added sliding start and end signals via slide_start and slide_end</li><li> Improved slider's dragging code to be more responsive in edge cases</li></ul><strong class="text-strong">Textarea:</strong><ul><li> Added edit lock option (can't change the textarea in any way with the keyboard or mouse) via editing_locked</li><li> Added tabs (tab key)</li><li> Added new lines via the enter key</li><li> Added undo/redo</li><li> Added hooks for Popo tags via setTextSettings and wrap_text_in</li><li> Added cursor visibility (blinking) via cursor_visible and cursor_blink_interval</li><li> Improved cursor interactions to be more responsive in edge cases</li><li> Exposed a number of extra functions and attributes that were previously hidden</li></ul><strong class="text-strong">General:</strong><ul><li> Added overlay option for drawing. On top of defining a draw function on your theme you can define one named overlay. The overlay function is always draw on top of everything else</li><li> Updated the library to support 0.10.0 on top of 0.9.1 and 0.9.2</li><li> Added overridable getMousePosition function for Base mixin</li><li> Improved and fixed Chatbox example</li><li> Added Chatbox walkthrough documentation</li><li> Updated documentation considerably, making it more clear in general</li></ul><a href="https://github.com/adonaac/thranduil" class="postlink"><span style="font-size:150%;line-height:116%">Thranduil</span></a><br><br><a href="https://github.com/adonaac/thranduil/blob/master/README.md" class="postlink"><span style="font-size:150%;line-height:116%">Documentation</span></a><br><br><a href="https://github.com/adonaac/thranduil/blob/master/WALKTHROUGHS.md" class="postlink"><span style="font-size:150%;line-height:116%">Walkthroughs</span></a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Mon Jul 20, 2015 7:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[parallax7d]]></name></author>
+		<updated>2015-07-07T22:04:05+00:00</updated>
+
+		<published>2015-07-07T22:04:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186312#p186312</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186312#p186312"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186312#p186312"><![CDATA[
+cool, I look forward to the updates!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135316">parallax7d</a> — Tue Jul 07, 2015 10:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-07-03T20:38:17+00:00</updated>
+
+		<published>2015-07-03T20:38:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186096#p186096</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186096#p186096"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186096#p186096"><![CDATA[
+<blockquote class="uncited"><div>This library is magnificent, thanks for the thought and effort you put into it.  I'm leaning towards using it in my project.  What are your expectations as to future support and development on this lib?  The docs are very nice, but would you consider making a comprehensive interactive demo?</div></blockquote>I took the past few days off to work on a project that makes extensive use of this library, and while I'm doing that I'm adding/changing/fixing a lot of stuff. I should update it again soon enough with some new features and some general quality of life improvements. I'll also fix up the current demos (the chatbox one is a bit buggy), add 1 or 2 extra demos and make a more comprehensive one as well.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Fri Jul 03, 2015 8:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[parallax7d]]></name></author>
+		<updated>2015-07-01T18:26:16+00:00</updated>
+
+		<published>2015-07-01T18:26:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186011#p186011</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186011#p186011"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186011#p186011"><![CDATA[
+This library is magnificent, thanks for the thought and effort you put into it.  I'm leaning towards using it in my project.  What are your expectations as to future support and development on this lib?  The docs are very nice, but would you consider making a comprehensive interactive demo?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135316">parallax7d</a> — Wed Jul 01, 2015 6:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Fern Silverthorn]]></name></author>
+		<updated>2015-06-08T20:25:59+00:00</updated>
+
+		<published>2015-06-08T20:25:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185197#p185197</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185197#p185197"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185197#p185197"><![CDATA[
+Thank you so much, If I ever get around to releasing my game you get a prime spot on in the credits.<br><br>I needed a GUI library and looking around I found yours and love frames on the wiki as the two with 9.x support.<br>The fact that yours accomplishes so much with so little (user) code is really cool,<br>it felt like using a library whereas love frames felt like learning an entire new language.<br><br>Huge props on the documentation and examples.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136711">Fern Silverthorn</a> — Mon Jun 08, 2015 8:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2015-04-21T06:28:45+00:00</updated>
+
+		<published>2015-04-21T06:28:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=183108#p183108</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=183108#p183108"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=183108#p183108"><![CDATA[
+Hi there.<br>I used Thranduil in a game jam this weekend. It did its job, so thanks for that.<br><br>I didn't quite understand how to make button labels, so I did paint over the buttons using love.graphics.print(). Is it supposed to work like this?<br><br>I noticed a bug with buttons:<br>If the mouse cursor is already over the button when the button appears, then it is impossible to click the button.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Tue Apr 21, 2015 6:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2015-04-18T00:04:41+00:00</updated>
+
+		<published>2015-04-18T00:04:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=183008#p183008</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=183008#p183008"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=183008#p183008"><![CDATA[
+I found a small mistake in the current version:<br><br>UI.lua:5<div class="codebox"><p>Code: </p><pre><code>UI.Input = require(ui_path .. 'input/Input')</code></pre></div>should be<div class="codebox"><p>Code: </p><pre><code>UI.Input = require(ui_path .. 'Input/Input')</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sat Apr 18, 2015 12:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-03-22T02:29:49+00:00</updated>
+
+		<published>2015-03-22T02:29:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=181806#p181806</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=181806#p181806"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=181806#p181806"><![CDATA[
+I don't think it makes sense for you to try to use this because you seem to already have things working and you'd need to do a lot of work to get your specific UI elements working with this. Everything you mentioned can be done: scrollable clickable list box = scrollarea + buttons inside it that will be each element on that list; tooltip = making a textarea visible (inside a frame if you want it to be closeable) whenever .hot is set to true on a button; popdown list = 2 buttons to make the top of the popdown thingy and then when you click either it expands to a bigger frame with buttons inside it composing the list; state stack manager = completely on your side of things so it's all work you'd have to do kinda unrelated to the library... And so on. But doing all this is just a lot of work and if you already have those things working I don't know if there's any value in rewriting them?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Sun Mar 22, 2015 2:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2015-03-22T02:19:15+00:00</updated>
+
+		<published>2015-03-22T02:19:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=181805#p181805</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=181805#p181805"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=181805#p181805"><![CDATA[
+Well see I'd need to be able to add list items to a scrolling clickable list box that have the ability to have a custom icon that can be changed on the fly (Animated) with possibly two lines of text next to it in different fonts. As well as a list box that's just the icons. Each button would optionally have a tooltip too. Right now I have it working fine myself.<br><br>I'd also need popdown lists and other things. Right now my rudimentary GUI is working fine, and I've written my own custom GUI libraries before. I might just do that again. Usually I need to do a lot of demanding custom things which is why I end up writing most of my own libraries. Like my state stack manager, which I actually use to create the popdown menus and other GUI elements right now. I don't really know how well a stock GUI library would cooperate with my state stack anyway. lol<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sun Mar 22, 2015 2:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-03-21T23:40:54+00:00</updated>
+
+		<published>2015-03-21T23:40:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=181795#p181795</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=181795#p181795"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=181795#p181795"><![CDATA[
+<blockquote class="uncited"><div>I wonder how hard it would be to implement this into my map editor.</div></blockquote>That depends on what you wanna do. If it's just placing simple UI elements around then it should be pretty easy, like:<br><div class="codebox"><p>Code: </p><pre><code>function init()  button = UI.Button(x, y, w, h, settings)endfunction update(dt)  button:update(dt)  if button.pressed then    doEditorButtonThing()  endendfunction draw()  button:draw()end</code></pre></div>But if you wanna create more complex UI objects, like a file/directory selector thingy, then you'll have to do a lot of manual work using the basic UI objects that this library provides. It saves some work but if you want anything more complex you'll still have to do stuff.<br><br>---<br><br>Also, I made a Chatbox example to show how to create more complex UI objects using the library. Basically you just create an object of your own that will contain multiple simple UI objects, like buttons, sliders, textareas and so on. Then you create some logic to coordinate between them and get the desired behavior of the complex UI object you wanna create. In this case the Chatbox uses 2 textareas (one input area where the user types and one that is the chat log), 1 scrollarea to make it so that the chat log can be scrolled, and 1 button that can be used to send the message from the textinput to the chat log (can also do it with enter though).<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=11456">chatbox.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Sat Mar 21, 2015 11:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2015-03-21T20:45:12+00:00</updated>
+
+		<published>2015-03-21T20:45:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=181787#p181787</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=181787#p181787"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=181787#p181787"><![CDATA[
+I wonder how hard it would be to implement this into my map editor.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sat Mar 21, 2015 8:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-03-21T05:53:41+00:00</updated>
+
+		<published>2015-03-21T05:53:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=181755#p181755</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=181755#p181755"/>
+		<title type="html"><![CDATA[Re: [Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=181755#p181755"><![CDATA[
+Updated this with a bunch of new stuff, most notably:<br><ul><li> Added Checkbox element</li><li> Added Slider element</li><li> Added Scrollarea element</li><li> Added Textarea element</li><li> Removed Textinput element (Textinput = Textarea with line height = 1)</li></ul><a href="https://github.com/adonaac/thranduil" class="postlink"><span style="font-size:150%;line-height:116%">Thranduil</span></a><br><br><a href="https://github.com/adonaac/thranduil/blob/master/README.md" class="postlink"><span style="font-size:150%;line-height:116%">Documentation</span></a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Sat Mar 21, 2015 5:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2015-03-21T11:16:16+00:00</updated>
+
+		<published>2015-01-27T14:50:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179481#p179481</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179481#p179481"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179481#p179481"><![CDATA[
+@adnzzzzZ Well yes, this is a solution. I would recommed both solution. One for easy handling and the one you suggest for better control.<br><br>About the consoles...would be nice to use with computercraft <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> -&gt; <a href="https://github.com/Sorroko/cclite" class="postlink">https://github.com/Sorroko/cclite</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Tue Jan 27, 2015 2:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TsT]]></name></author>
+		<updated>2015-01-27T10:46:21+00:00</updated>
+
+		<published>2015-01-27T10:46:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179475#p179475</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179475#p179475"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179475#p179475"><![CDATA[
+I added your library in the wiki (you can fix information yourself, if I'm wrong) :<br><br><a href="https://www.love2d.org/wiki/Thranduil" class="postlink">https://www.love2d.org/wiki/Thranduil</a><br><br>Shown in the GUI list :<br><br><a href="https://www.love2d.org/wiki/Graphical_User_Interface" class="postlink">https://www.love2d.org/wiki/Graphical_User_Interface</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=179">TsT</a> — Tue Jan 27, 2015 10:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-01-27T09:37:06+00:00</updated>
+
+		<published>2015-01-27T09:37:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179473#p179473</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179473#p179473"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179473#p179473"><![CDATA[
+Well, I made that decision because that gives the user more control over his UI objects and makes things more explicit. Imagine the idea is to create one of those terminals that some games have:<br><br><img src="http://blog.cdhq.de/wp-content/uploads/2013/03/2013-03-02_f3_terminal_html5.jpg" class="postimage" alt="Image"><br><br><img src="http://www.visualwalkthroughs.com/deusex/deusex3/detroit1-1/40.jpg" class="postimage" alt="Image"><br><br>It really doesn't help you when coding the logic for these things to have your UI objects hidden away somewhere and doing too many things automatically, right?<br><br>Anyway, you can change this if you want by creating UI.update and UI.draw functions in the UI.lua file, going over the elements list and updating/drawing each object.<br><div class="codebox"><p>Code: </p><pre><code>UI.update = function(dt)    for _, element in ipairs(UI.elements) do        if not element.parent then            element:update(dt)        end    endendUI.draw = function()    for _, element in ipairs(UI.elements) do        if not element.parent then            element:draw()        end    endend</code></pre></div>And then just register UI.update and UI.draw on love.update and love.draw. The if not element.parent check is so that you don't update/draw elements that are inside a frame twice, since when objects are added to a frame, their parent attribute is changed to point to the frame and the frame already takes care of updating/drawing its children.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Tue Jan 27, 2015 9:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2015-01-27T08:58:14+00:00</updated>
+
+		<published>2015-01-27T08:58:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179471#p179471</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179471#p179471"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179471#p179471"><![CDATA[
+I don't like the decision that I have to call button:update() and button:draw() myself. By using GSpot I only have to register gspot:update() in my update function and everything is done. Like you register the Input Callbacks.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Tue Jan 27, 2015 8:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-01-27T00:08:50+00:00</updated>
+
+		<published>2015-01-27T00:08:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179454#p179454</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179454#p179454"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179454#p179454"><![CDATA[
+<blockquote class="uncited"><div>I tried using the library, but I couldnt figure out if there is like a function or something that gets called when button is being clicked. In general if you click a button, you can start holding down on top of button, then drag mouse off from button and release, but it doesn't actually do clicking. I am not really sure if its neccessary to be able to cancel a click, but currently from what I tested you cannot have a state where released is true and down is true, or maybe it was, but this would mean that you would yourself have to manually keep a state of each button.</div></blockquote>There's no function that gets called when anything happens. All that happens is that the object's state changes and if you wanna do anything you keep looking at that:<br><div class="codebox"><p>Code: </p><pre><code>function update(dt)    button:update(dt)    if button.pressed then        doYourPressedAction()    end    if button.down then        doYourDownAction()    end    if button.released then        doYourReleasedAction()    endend</code></pre></div>If you wanna make things not do the clicking if you hold the button, drag the mouse off and then release, do something like this:<br><div class="codebox"><p>Code: </p><pre><code>function update(dt)    button:update(dt)    if button.released and button.hot then        doYourReleasedAction()    endend</code></pre></div>This way it will only do the action when the button is released and when the mouse is hovering the button.<br><blockquote class="uncited"><div>Also out of curiosity I tried the gui with android phone, because that is what I have been looking for, a gui that works with Android phone (currently Quickie is only one, but I had a problem with the button click being registered few frames after the click ), but sadly at least out of box thranduil didn't.</div></blockquote>I don't care about mobile so yea, it won't work there. It should be some work to get it working there because you have to change the Input module <a href="https://github.com/adonaac/thomas" class="postlink">https://github.com/adonaac/thomas</a> to support the additional events that exist in mobile and then add those events to each UI element.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Tue Jan 27, 2015 12:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jeeper]]></name></author>
+		<updated>2015-01-26T20:26:12+00:00</updated>
+
+		<published>2015-01-26T20:26:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179448#p179448</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179448#p179448"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179448#p179448"><![CDATA[
+That is some pretty impressive documentation. The library seems awesome and it is clear that you have put a lot of effect into it <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=101561">Jeeper</a> — Mon Jan 26, 2015 8:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2015-01-26T18:32:35+00:00</updated>
+
+		<published>2015-01-26T18:32:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179445#p179445</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179445#p179445"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179445#p179445"><![CDATA[
+I dont know for the name... Why not cap up the "U" ?<br>Just my two cents.<br>This is awesome anyway. Nice API, and well written documentation.<br>I'd love some demos though.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Mon Jan 26, 2015 6:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Muris]]></name></author>
+		<updated>2015-01-26T18:29:32+00:00</updated>
+
+		<published>2015-01-26T18:29:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179444#p179444</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179444#p179444"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179444#p179444"><![CDATA[
+I tried using the library, but I couldnt figure out if there is like a function or something that gets called when button is being clicked. In general if you click a button, you can start holding down on top of button, then drag mouse off from button and release, but it doesn't actually do clicking. I am not really sure if its neccessary to be able to cancel a click, but currently from what I tested you cannot have a state where released is true and down is true, or maybe it was, but this would mean that you would yourself have to manually keep a state of each button.<br><br>Also out of curiosity I tried the gui with android phone, because that is what I have been looking for, a gui that works with Android phone (currently Quickie is only one, but I had a problem with the button click being registered few frames after the click ), but sadly at least out of box thranduil didn't.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135126">Muris</a> — Mon Jan 26, 2015 6:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Doctory]]></name></author>
+		<updated>2015-01-26T16:30:18+00:00</updated>
+
+		<published>2015-01-26T16:30:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179436#p179436</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179436#p179436"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179436#p179436"><![CDATA[
+looks really cool <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>i may use it in future projects<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134446">Doctory</a> — Mon Jan 26, 2015 4:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2015-01-26T16:14:34+00:00</updated>
+
+		<published>2015-01-26T16:14:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179433#p179433</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179433#p179433"/>
+		<title type="html"><![CDATA[Re: [Library, WIP] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179433#p179433"><![CDATA[
+I'm watching <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Mon Jan 26, 2015 4:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adnzzzzZ]]></name></author>
+		<updated>2015-03-21T05:50:18+00:00</updated>
+
+		<published>2015-01-26T14:25:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179426#p179426</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179426#p179426"/>
+		<title type="html"><![CDATA[[Library] Thranduil]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179426#p179426"><![CDATA[
+Hi. I've created a UI library for LÖVE. The idea is that for all UI elements their state and input logic is abstracted away while the user of the library only has to care about how each element is drawn. This makes it easy to create all sorts of UIs for games (since in games they need to look really different all the time) and also makes it simpler to build more complex UI elements on top of the ones that exist right now. The library is under development still, I've only added 3 UI elements so far and no themes, but I thought I'd publish it as it is now to see if people find it useful or not.<br><br><a href="https://github.com/adonaac/thranduil" class="postlink"><span style="font-size:150%;line-height:116%">Thranduil</span></a><br><br><a href="https://github.com/adonaac/thranduil/blob/master/README.md" class="postlink"><span style="font-size:150%;line-height:116%">Documentation</span></a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1715">adnzzzzZ</a> — Mon Jan 26, 2015 2:25 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

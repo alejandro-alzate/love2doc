@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/9116" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-08-01T16:39:01+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/9116</id>
+
+		<entry>
+		<author><name><![CDATA[mutantant]]></name></author>
+		<updated>2020-08-01T16:39:01+00:00</updated>
+
+		<published>2020-08-01T16:39:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=235114#p235114</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=235114#p235114"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=235114#p235114"><![CDATA[
+UPDATE: It was a bug in a 3rd party lib used by LoveFrames if LoveFrames is required from a directory other than the root game directory. See <a href="https://github.com/linux-man/LoveFrames/issues/6" class="postlink">https://github.com/linux-man/LoveFrames/issues/6</a>, I posted a quick fix until the lib is updated, and the creator of LoveFrames has been notified will do what need to be done <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> Glad it wasn't me messing up somehow.<br><br>Leaving this here for our overlord and master, Google, for those unlucky souls who run into the same thing until it's fixed.<br><br>------<br><br>ORIGINAL POST:<br><br>I'm a little rusty with Lua, not that I was ever an expert, but I'm running into this error when requiring loveframes:<br><div class="codebox"><p>Code: </p><pre><code>libs/loveframes/init.lua:305: attempt to index local 'base' (a nil value)</code></pre></div>Now, I've required the project correctly, I believe (or it wouldn't even be dipping into init.lua:<br><div class="codebox"><p>Code: </p><pre><code>loveframes = require "libs.loveframes"</code></pre></div> (and the library is under PROJECTDIR/libs/loveframes/)<br><br>So, before I start trying to figure out the scope issue with base here, I figured I'd ask if anyone else sees this issue? Is it something I need to fix, something to do with Love2D version, etc?<br><br>Using the most recent Love2D on MacOS Catalina.<br><br>(p.s. Strangely the demo runs fine if I load *that* into Love, no errors thrown, even as my require statement breaks the program <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I also tried to find this problem vis Google and the forum search, so forgive me if it's been answered before, I just couldn't find anything on it.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=89238">mutantant</a> — Sat Aug 01, 2020 4:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-24T15:34:27+00:00</updated>
+
+		<published>2020-05-24T15:34:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233883#p233883</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233883#p233883"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233883#p233883"><![CDATA[
+<blockquote class="uncited"><div>Not really. You need to assign a font with Cyrillic support. Missing </div></blockquote>I see, same as before: I've forgotten to check what font sets from skin.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Sun May 24, 2020 3:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-23T21:11:48+00:00</updated>
+
+		<published>2020-05-23T21:11:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233874#p233874</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233874#p233874"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233874#p233874"><![CDATA[
+<blockquote class="uncited"><div>And one more question: is it possible to use some kind of index to draw loveframes objects in some calls?<br>Layer of loveframes objects, then layer of love2d objects, then layer of other oveframes objects?</div></blockquote>No. There's only one loveframes.draw(). You can try to draw before and after, but GUI are assumed to be the top layer of any interface.<br>I looked around and it seems that all Love GUI libraries use the same paradigm.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sat May 23, 2020 9:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-23T20:50:16+00:00</updated>
+
+		<published>2020-05-23T20:50:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233873#p233873</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233873#p233873"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233873#p233873"><![CDATA[
+<blockquote class="uncited"><div>New bug!<br>Text component can not show Cyrillic symbol (shows squares instead).<br>test.love</div></blockquote>Not really. You need to assign a font with Cyrillic support. Missing <div class="codebox"><p>Code: </p><pre><code>_tf:SetFont(love.graphics.newFont( "DroidSans.ttf", 12))</code></pre></div>Before you ask: No, skin fonts are not used on text object creation.<br>BUT, there is an assignement (not really used) on Text initialization.<div class="codebox"><p>Code: </p><pre><code>local text_default_font = skin.directives.text_default_font</code></pre></div>So, if you define a directives.text_default_font on your skin, you don't need to define a font on all your text objects.<br>Your love.load should have these lines<div class="codebox"><p>Code: </p><pre><code>loveframes.GetActiveSkin().controls.smallfont = love.graphics.newFont( "DroidSans.ttf", 10)loveframes.GetActiveSkin().controls.imagebuttonfont = love.graphics.newFont( "DroidSans.ttf", 15)loveframes.GetActiveSkin().directives.text_default_font = love.graphics.newFont( "DroidSans.ttf", 12)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sat May 23, 2020 8:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-23T10:16:13+00:00</updated>
+
+		<published>2020-05-23T10:16:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233858#p233858</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233858#p233858"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233858#p233858"><![CDATA[
+And one more question: is it possible to use some kind of index to draw loveframes objects in some calls?<br>Layer of loveframes objects, then layer of love2d objects, then layer of other oveframes objects?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Sat May 23, 2020 10:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-23T10:13:57+00:00</updated>
+
+		<published>2020-05-23T10:13:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233857#p233857</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233857#p233857"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233857#p233857"><![CDATA[
+New bug!<br>Text component can not show Cyrillic symbol (shows squares instead).<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18251">test.love</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Sat May 23, 2020 10:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-19T15:16:13+00:00</updated>
+
+		<published>2020-05-19T15:16:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233759#p233759</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233759#p233759"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233759#p233759"><![CDATA[
+<blockquote class="uncited"><div>Here is a patch, but I'm not sure to make it mainstream</div></blockquote>Thank you, I`ll check it at this week.<blockquote class="uncited"><div>Some even call it unnatural.</div></blockquote>Well, imagine any rpg game with actions binded to characters portraits. RMB click at a portrait opens inventory, LMB one opens stats and skills.<br>For example.<br>Or manipulating an item in inventory: one button for drag and drop, another one for use.<br>Love2d is the game engine first of all, and LMB actions are natural for games, I think.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Tue May 19, 2020 3:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-18T19:36:01+00:00</updated>
+
+		<published>2020-05-18T19:36:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233734#p233734</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233734#p233734"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233734#p233734"><![CDATA[
+Here is a patch, but I'm not sure to make it mainstream - there's something strange with a button right-click. Some even call it unnatural. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"> <br>You can manage mouse buttons with this modified function:<div class="codebox"><p>Code: </p><pre><code>imagebutton.OnClick = function(object, x, y, button)   print("The image button was clicked! With button "..button)end</code></pre></div><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18230">imagebutton.lua</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Mon May 18, 2020 7:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-18T17:14:38+00:00</updated>
+
+		<published>2020-05-18T17:14:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233729#p233729</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233729#p233729"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233729#p233729"><![CDATA[
+Feature request.<br>linux-man, could you add a possibility to call different functions pressing image button with LMB and RMB? I've made this in my project, but guess my variant is not universal and a bit «dirty».<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Mon May 18, 2020 5:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-09T03:08:24+00:00</updated>
+
+		<published>2020-05-09T03:08:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233588#p233588</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233588#p233588"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233588#p233588"><![CDATA[
+It works!<blockquote class="uncited"><div>used an ugly hack</div></blockquote>Best style of coding ever.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Sat May 09, 2020 3:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-08T23:46:23+00:00</updated>
+
+		<published>2020-05-08T23:46:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233587#p233587</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233587#p233587"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233587#p233587"><![CDATA[
+I think I got it. It was the invisible "text" internal object of tooltip that was messing with the collision system.<br>The collision system is a little convoluted and I don't understand it well enough. I tried some simple changes that didn't work. Since I don't want to create new bugs, I didn't change anything, but used an ugly hack: invisible tooltips are positioned far away. Only tooltip code was changed, just to be sure.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18163">tooltip.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Fri May 08, 2020 11:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-08T03:36:48+00:00</updated>
+
+		<published>2020-05-08T03:36:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233569#p233569</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233569#p233569"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233569#p233569"><![CDATA[
+<blockquote class="uncited"><div>So, please try this .love and tell me what is not working with you.</div></blockquote>Looks like the problem is with "\n" symbol.<br>Watch the *.love file. It works fine without "\n" and does not with.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18160">tootltip.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Fri May 08, 2020 3:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-07T12:19:00+00:00</updated>
+
+		<published>2020-05-07T12:19:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233541#p233541</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233541#p233541"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233541#p233541"><![CDATA[
+Maybe. Right now I'm feeling a little dumb <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> because after adapting your code to my system, it works.<br>So, please try this .love and tell me what is not working with you.<br>Let's exchange love files until we find out what's wrong.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18154">tooltip.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu May 07, 2020 12:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-06T18:37:48+00:00</updated>
+
+		<published>2020-05-06T18:37:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233529#p233529</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233529#p233529"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233529#p233529"><![CDATA[
+<blockquote class="uncited"><div>I don't know. The fact is tooltip works - most of the time. There are some Cyrillic characters that seems to "freeze" LoveFrames, but I can't debug it. No errors. No problems with English alphabet or even Western accented chars.</div></blockquote>There is no Cyrillic characters in this test. And tooltip works fine with LoveFrames (Version 0.10 - Alpha) and does not with the last one (even posted here Version 0.10 - Alpha). Once again: There is a draw function in old tooltip.lua which is not presented in new one. And it calls SetDrawOrder function. May be this is the root of the problem?<br><div class="codebox"><p>Code: </p><pre><code>loveframes = require "lib.loveframes"--loveframes = require "lib.LoveFrames"require 'functions.utilits';require 'lang.translation'if jit then   jit.on();elseprint ("No luajit detected!")endlove.keyboard.setKeyRepeat(true);function love.load()local back = loveframes.Create("image");local image = love.graphics.newImage( "background.dds" )back:SetImage(image);back:SetPos (0, 0)font = love.graphics.newFont("DroidSans.ttf", 16);local textfield = loveframes.Create("text");textfield:SetPos(120, 120);textfield:SetWidth(200);textfield:SetFont(font);textfield:SetText("test");local tooltip = loveframes.Create("tooltip");tooltip:SetObject(textfield);tooltip:SetPadding(10);tooltip:SetText("arrrrrrrrrrrrrrrrararsrasrarsar");end;function love.update(dt)loveframes.update(dt);end;function love.keypressed(key)  loveframes.keypressed(button,true);endfunction love.keyreleased(key)  loveframes.keyreleased(button,true);endfunction love.mousepressed(x,y,button)  loveframes.mousepressed(x, y, button);endfunction love.mousereleased(x,y,button)  loveframes.mousereleased(x, y, button);endfunction love.mousemooved(x,y,dx,dy)endfunction love.wheelmoved( x, y )end;function love.textinput(text)   loveframes.textinput(text);end;function love.draw()loveframes.draw();end;</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Wed May 06, 2020 6:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-05-06T10:20:44+00:00</updated>
+
+		<published>2020-05-06T10:20:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233519#p233519</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233519#p233519"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233519#p233519"><![CDATA[
+I don't know. The fact is tooltip works - most of the time. There are some Cyrillic characters that seems to "freeze" LoveFrames, but I can't debug it. No errors. No problems with English alphabet or even Western accented chars.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Wed May 06, 2020 10:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-06T09:09:29+00:00</updated>
+
+		<published>2020-05-06T09:09:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233518#p233518</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233518#p233518"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233518#p233518"><![CDATA[
+&gt;Cursor is behaving again.<br><br>This fix is not about tooltip, right?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Wed May 06, 2020 9:09 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-04-28T15:10:45+00:00</updated>
+
+		<published>2020-04-28T15:10:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233371#p233371</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233371#p233371"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233371#p233371"><![CDATA[
+Cursor is behaving again.<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18139">loveframes_pre11.3.zip</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Tue Apr 28, 2020 3:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-04-28T12:44:59+00:00</updated>
+
+		<published>2020-04-28T12:44:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233369#p233369</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233369#p233369"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233369#p233369"><![CDATA[
+That's ok. I only appreciate your feedback. As I suspected, textinput is broken with this changes (cursor movement). I might have to rollback some.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Tue Apr 28, 2020 12:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-04-28T04:03:00+00:00</updated>
+
+		<published>2020-04-28T04:03:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233358#p233358</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233358#p233358"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233358#p233358"><![CDATA[
+<blockquote class="uncited"><div>The real problem was that you couldn't change loveframes</div></blockquote>Hm, I thought that font is wrong, but haven't check this… Guess this issue appeared  after removing SetActiveSkin from the project…<br><blockquote class="uncited"><div>so please throw everything you can to test it</div></blockquote>Test how? I mean I'll see an error of course, and I can try different textfield sizes and words, but may be something else can help to find and fix the problem?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Tue Apr 28, 2020 4:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-04-28T00:40:49+00:00</updated>
+
+		<published>2020-04-28T00:40:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233356#p233356</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233356#p233356"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233356#p233356"><![CDATA[
+Thank you for your help.<br>The first 2 issues are probably solved. The text was unreadable because the default Sans Serif font don't support cyrillic chars, as you can see with a simple graphics.text().<br>The real problem was that you couldn't change loveframes font without editing themes, so I normalized the 2 sets of themes (from Nicolai and ingsoc451) to use the same font tables and published them. Now you can define the font loveframes is using without changing theme.<br><div class="codebox"><p>Code: </p><pre><code>-- Change fonts on active skinloveframes.GetActiveSkin().controls.smallfont = love.graphics.newFont( "Arial.ttf", 10)loveframes.GetActiveSkin().controls.imagebuttonfont = love.graphics.newFont( "Arial.ttf", 15)-- Change fonts on all registered skinsfor _, skin in pairs(loveframes.skins) doskin.controls.smallfont = love.graphics.newFont( "Arial.ttf", 10)skin.controls.imagebuttonfont = love.graphics.newFont( "Arial.ttf", 15)end</code></pre></div>I tried to solve the second issue doing an extreme conversion to utf8 library (was already there, but only used sometimes). Now almost all :len, :sub, :gsub and :char are using utf8 versions. I suspect this change can break something, so please throw everything you can to test it.<br><br>I'll look at tooltip tomorrow.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18137">unicode.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Tue Apr 28, 2020 12:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-04-27T17:29:54+00:00</updated>
+
+		<published>2020-04-27T17:29:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233346#p233346</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233346#p233346"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233346#p233346"><![CDATA[
+<blockquote class="uncited"><div>Hi! Can you create a small app that shows the bugs?</div></blockquote>Unpressing. Well, in latest version of loveframes tooltip can block the button. Take an image 20x20 size fir this code and you'll not be able to press the button.<br><div class="codebox"><p>Code: </p><pre><code>loveframes = require "lib.loveframes"require 'functions.utilits';require 'lang.translation'if jit then   jit.on();elseprint ("No luajit detected!")endlove.keyboard.setKeyRepeat(true);function love.load()local back = loveframes.Create("image");local image = love.graphics.newImage( "background.dds" )back:SetImage(image);back:SetPos (0, 0)font = love.graphics.newFont("DroidSans.ttf", 16);local textfield = loveframes.Create("text");textfield:SetPos(120, 120);textfield:SetWidth(200);textfield:SetFont(font);textfield:SetText("обезвреживание");local tooltip = loveframes.Create("tooltip");tooltip:SetObject(textfield);tooltip:SetPadding(10);tooltip:SetFont(font);tooltip:SetOffsetX(-100);tooltip:SetText("fhzfgklzsvk;fbjjh;kb'dbmkhnskvhAKCPdvl;fgoerui p[dfkfajkepfi[flpawe[fkaopwefawk[k");local image2 = love.graphics.newImage( "button.pkm" )button = loveframes.Create("imagebutton");button:SetImage(image2);button:SetPos(160, 120);button:SizeToImage();button:SetText(""); -- Russian languagebutton.OnClick = function(object)end;end;function love.update(dt)loveframes.update(dt);end;function love.keypressed(key)  loveframes.keypressed(button,true);endfunction love.keyreleased(key)  loveframes.keyreleased(button,true);endfunction love.mousepressed(x,y,button)  loveframes.mousepressed(x, y, button);endfunction love.mousereleased(x,y,button)  loveframes.mousereleased(x, y, button);endfunction love.mousemooved(x,y,dx,dy)endfunction love.wheelmoved( x, y )end;function love.textinput(text)   loveframes.textinput(text);end;function love.draw()loveframes.draw();end;</code></pre></div>There is a draw function in old tooltip.lua which is not presented in new one. And it calls SetDrawOrder function. May be this is the root of the problem?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Mon Apr 27, 2020 5:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-04-27T17:08:42+00:00</updated>
+
+		<published>2020-04-27T17:08:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233345#p233345</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233345#p233345"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233345#p233345"><![CDATA[
+<blockquote class="uncited"><div>Hi! Can you create a small app that shows the bugs?</div></blockquote>Small textfield + long russian word causes this error:<br><div class="codebox"><p>Code: </p><pre><code>Error: lib/loveframes/objects/text.lua:285: UTF-8 decoding error: Not enough space</code></pre></div><div class="codebox"><p>Code: </p><pre><code>loveframes = require "lib.loveframes"love.keyboard.setKeyRepeat(true);function love.load()local back = loveframes.Create("image");local image = love.graphics.newImage( "background.dds" )back:SetImage(image);back:SetPos (0, 0)font = love.graphics.newFont("DroidSans.ttf", 16);local textfield = loveframes.Create("text");textfield:SetPos(120, 120);textfield:SetWidth(50); -- small text fieldtextfield:SetFont(font);local text = "обезвреживание"; --russian texttextfield:SetText(text);end;function love.update(dt)loveframes.update(dt);end;function love.keypressed(key)  loveframes.keypressed(button,true);endfunction love.keyreleased(key)  loveframes.keyreleased(button,true);endfunction love.mousepressed(x,y,button)  loveframes.mousepressed(x, y, button);endfunction love.mousereleased(x,y,button)  loveframes.mousereleased(x, y, button);endfunction love.mousemooved(x,y,dx,dy)endfunction love.wheelmoved( x, y )end;function love.textinput(text)   loveframes.textinput(text);end;function love.draw()loveframes.draw();end;</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Mon Apr 27, 2020 5:08 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-04-27T17:30:06+00:00</updated>
+
+		<published>2020-04-27T16:31:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233344#p233344</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233344#p233344"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233344#p233344"><![CDATA[
+<blockquote class="uncited"><div>Hi! Can you create a small app that shows the bugs?</div></blockquote>Well, main.lua for the bug with image buttons and unreadable text:<br><div class="codebox"><p>Code: </p><pre><code>loveframes = require "lib.loveframes"love.keyboard.setKeyRepeat(true);function love.load()local image2 = love.graphics.newImage( "button.pkm" )button = loveframes.Create("imagebutton");button:SetImage(image2);button:SetPos(300, 100);button:SizeToImage();button:SetText("СТАРТ"); -- Russian languagebutton.OnClick = function(object)end;end;function love.update(dt)loveframes.update(dt);end;function love.mousepressed(x,y,button)  loveframes.mousepressed(x, y, button);end;function love.mousereleased(x,y,button)  loveframes.mousereleased(x, y, button);endfunction love.draw()loveframes.draw();end;</code></pre></div>See the comment "Russian language"? In earlier versions of loveframes it works fine.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Mon Apr 27, 2020 4:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2020-04-26T14:28:13+00:00</updated>
+
+		<published>2020-04-26T14:28:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233312#p233312</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233312#p233312"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233312#p233312"><![CDATA[
+Hi! Can you create a small app that shows the bugs?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sun Apr 26, 2020 2:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-04-22T08:07:45+00:00</updated>
+
+		<published>2020-04-22T08:07:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233219#p233219</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233219#p233219"/>
+		<title type="html"><![CDATA[Re: Löve Frames - A GUI Library]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233219#p233219"><![CDATA[
+Hmm, about the «another bug»: looks like the text file was without Unicode BOM, so…<br>It has fixed one error, but not all.<br><br>On more bug: image buttons, created like this:<br><div class="codebox"><p>Code: </p><pre><code>local btn = loveframes.Create("imagebutton");btn:SetImage(media.images.button_minus);btn:SetPos(x + 200 + (index - 1) * createpartyState.columnMultiplier, createpartyState.height + 120 + _counter2 * 20);btn:SizeToImage();btn:SetText("");btn.OnClick = function(object)global.party[index]:StatAddAtCreationMinus (key2, 1, 5);createpartyState.renew ();end;</code></pre></div>can not be pressed.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Wed Apr 22, 2020 8:07 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

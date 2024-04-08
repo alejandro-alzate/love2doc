@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/78053" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2020-06-06T14:46:33+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/78053</id>
+
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2020-06-06T14:46:33+00:00</updated>
+
+		<published>2020-06-06T14:46:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=234161#p234161</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=234161#p234161"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=234161#p234161"><![CDATA[
+Nah, this i think is one of the legit cases where bumping old threads is fine, since it's on-topic AND you basically worked to do some compatibility edits on the old project to get it working again. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sat Jun 06, 2020 2:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hoistbypetard]]></name></author>
+		<updated>2020-06-05T18:38:03+00:00</updated>
+
+		<published>2020-06-05T18:38:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=234151#p234151</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=234151#p234151"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=234151#p234151"><![CDATA[
+Sorry if it's bad form to resurrect this thread. If so, let me know and I will start a new one.<br><br>I was excited to find this because I wanted similar functionality in a project I'm working on. So I spent some time over the past couple of nights getting it to work nicely with 11.3. After building the original (C/SDL) sfxr tool on Linux, I decided that it would be easier to fix this up than to generate builds of the original one for my collaborators to use. It was!<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=18284&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=18284" class="postimage" alt="screenshot of the demo running on windows 10." /></a></dt></dl></div>I used <a href="https://github.com/linux-man/LoveFrames" class="postlink">@linux-man's fork of LoveFrames with 11.x support</a> and have posted a PR <a href="https://github.com/nucular/sfxrlua/pull/19" class="postlink">for @nucular's sfxr.lua repository</a> here. I hope that will get merged in some form. If anyone wants to kick the tires in the meantime or would just find this as useful as I have, I've attached a .love archive to this post.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=18286">sfxr_demo.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=150524">hoistbypetard</a> — Fri Jun 05, 2020 6:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2016-08-06T08:47:19+00:00</updated>
+
+		<published>2016-08-06T08:47:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=201718#p201718</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=201718#p201718"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=201718#p201718"><![CDATA[
+Too bad about the broken "demo" program as it would be really useful for creating sounds and the code that creates it. I got it to work with löve 0.9, a pre löve 0.10 version of frames and a few simple edits, but it still crashes when I hit any of the "randomize" buttons.<br>It is useable, but it would be so much better to have a version that works properly without hassle.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sat Aug 06, 2016 8:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[undef]]></name></author>
+		<updated>2014-08-27T22:17:38+00:00</updated>
+
+		<published>2014-08-27T22:17:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173081#p173081</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173081#p173081"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173081#p173081"><![CDATA[
+Seems to work fine now.<br>Thanks a lot, this will come in handy!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=122723">undef</a> — Wed Aug 27, 2014 10:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-08-27T21:13:28+00:00</updated>
+
+		<published>2014-08-27T21:13:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173075#p173075</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173075#p173075"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173075#p173075"><![CDATA[
+These crashes should hopefully be fixed now. I also added a simple file picker.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Wed Aug 27, 2014 9:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[undef]]></name></author>
+		<updated>2014-08-27T18:55:55+00:00</updated>
+
+		<published>2014-08-27T18:55:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173066#p173066</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173066#p173066"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173066#p173066"><![CDATA[
+I get an error if I try to export to wav:<br><br>sxfr.lua:920: attempt to index upvalue 'f' (a nil value)<br><br>Other than that it seems a lot more stable from when I last tried it.<br>It's quite fun to use actually <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=122723">undef</a> — Wed Aug 27, 2014 6:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-08-27T17:55:51+00:00</updated>
+
+		<published>2014-08-27T17:55:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173059#p173059</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173059#p173059"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173059#p173059"><![CDATA[
+I got the same error on the same line (sfxr.lua:1022) after clicking around a bit and then clicking "Save Lua".<br><br>I am using the .love file on the OP. Maybe you forgot to replace it with a version without bugs? <a href="https://github.com/nucular/sfxrlua/blob/master/sfxr.lua#L1022" class="postlink">Line 22 on github looks empty</a>.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Aug 27, 2014 5:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Cryogenical]]></name></author>
+		<updated>2014-08-27T17:15:14+00:00</updated>
+
+		<published>2014-08-27T17:15:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173055#p173055</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173055#p173055"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173055#p173055"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Just crashed trying to save lua.</div></blockquote></div></blockquote>That's weird because it works fine for me under Windows 7. Did you doubleclick the .love file or used the command line?<br><br>I ran the demo, customized a bit on the "noise", and then clicked save lua<br>If it helps any, I'm on windows 8 x64<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135016">Cryogenical</a> — Wed Aug 27, 2014 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-08-27T10:56:40+00:00</updated>
+
+		<published>2014-08-27T10:56:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173042#p173042</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173042#p173042"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173042#p173042"><![CDATA[
+<blockquote class="uncited"><div>Just crashed trying to save lua.</div></blockquote>That's weird because it works fine for me under Windows 7. Did you doubleclick the .love file or used the command line?<br><blockquote class="uncited"><div>Do you want sfxr.lua to be a 1:1 clone of sfxr, or are you open to pull requests for new features that the original doesn't have? E.g. triangle wave, brownian noise, stuff like that.</div></blockquote>Now that it gets the base features right, new features would be great. It'd have to throw an error when saving to the binary format though or something, to avoid compatibility issues.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Wed Aug 27, 2014 10:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Chèvre]]></name></author>
+		<updated>2014-08-27T07:06:26+00:00</updated>
+
+		<published>2014-08-27T07:06:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173032#p173032</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173032#p173032"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173032#p173032"><![CDATA[
+Hi! I'm jorio on GitHub. I find this project really neat!<br><br>Do you want sfxr.lua to be a 1:1 clone of sfxr, or are you open to pull requests for new features that the original doesn't have? E.g. triangle wave, brownian noise, stuff like that.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=66864">Chèvre</a> — Wed Aug 27, 2014 7:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Cryogenical]]></name></author>
+		<updated>2014-08-26T17:50:08+00:00</updated>
+
+		<published>2014-08-26T17:50:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173009#p173009</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173009#p173009"/>
+		<title type="html"><![CDATA[Re: sfxr.lua - Generate sounds dynamically at runtime]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173009#p173009"><![CDATA[
+Just crashed trying to save lua.<br><a href="http://gyazo.com/05f5679449db47562a9e123ca0bad6e6" class="postlink">http://gyazo.com/05f5679449db47562a9e123ca0bad6e6</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135016">Cryogenical</a> — Tue Aug 26, 2014 5:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-08-26T15:13:18+00:00</updated>
+
+		<published>2014-08-26T15:13:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173003#p173003</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173003#p173003"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173003#p173003"><![CDATA[
+Big update and bump!<br>Thanks to the awesome contributions of <a href="https://github.com/jorio" class="postlink">jorio</a> (and <a href="https://github.com/josefnpat" class="postlink">josefnpat</a>), many of my stupid mistakes were fixed!<br>sfxr.lua now sounds just like the original and can even load the binary parameter files of it! Also, the crash and all other issues were closed!<br>EDIT: Oh, and it's much faster now too <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Tue Aug 26, 2014 3:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-08-04T15:03:13+00:00</updated>
+
+		<published>2014-08-04T15:03:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=172074#p172074</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=172074#p172074"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=172074#p172074"><![CDATA[
+Thank you. Yeah, it's not really production-ready but hopefully I'll find the time to improve it steadily.<br><br>Btw, I added simple saving/loading functionality and increased the size of the GUI lately.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Mon Aug 04, 2014 3:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[undef]]></name></author>
+		<updated>2014-07-20T12:49:24+00:00</updated>
+
+		<published>2014-07-20T12:49:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171344#p171344</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171344#p171344"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171344#p171344"><![CDATA[
+Ah too bad it's still quite buggy, but it's a wonderful program regardless!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=122723">undef</a> — Sun Jul 20, 2014 12:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[soulaymenc]]></name></author>
+		<updated>2014-07-20T12:32:27+00:00</updated>
+
+		<published>2014-07-20T12:32:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171343#p171343</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171343#p171343"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171343#p171343"><![CDATA[
+Love it! Thank you very much.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=126330">soulaymenc</a> — Sun Jul 20, 2014 12:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-06-07T11:39:29+00:00</updated>
+
+		<published>2014-06-07T11:39:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169286#p169286</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169286#p169286"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169286#p169286"><![CDATA[
+@murks<br>Thanks for the feedback. I intend on making a resizable GUI when I get around to finish my implementation of anchors for LöveFrames.<br>You can pass a number between 0 and 1 to Sound:mutate. The second argument is the random seed and the third will enable mutation of the frequency parameters if given.<br><br>@SiENcE<br>Oh, you werr talking about having a "Save" and "Load" button in the demo GUI. Yeah, I want to create a kind of simple filepicker for LöveFrames before that though, so that it'd be more comfortable to use.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Sat Jun 07, 2014 11:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-07T10:19:29+00:00</updated>
+
+		<published>2014-06-07T10:19:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169283#p169283</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169283#p169283"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169283#p169283"><![CDATA[
+@nucular: Hm this is not really what i meant. I want to adjust all the parameters in your sfxr tool and than save it too a file.  Than i want to load this saved parameter file and play it in my game. The suggestion of murks is great too. After each playback you can call 'mutate' and the effect varies between each play. This brings in more variety than to playback waves.<br><br>Randomize is no option, because you don't want to playback random sounds in a game.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sat Jun 07, 2014 10:19 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-06T21:11:49+00:00</updated>
+
+		<published>2014-06-06T21:11:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169259#p169259</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169259#p169259"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169259#p169259"><![CDATA[
+Thanks, this is very nice.<br>I just played with the original sfxr for hours before seeing this.<br>Overall the playback volume produced by your version seems a lot higher, but I didn't measure it.<br>The GUI looks nice than sfxr but has one drawback: you can no longer see all the options/sliders at a glance.<br><br>The possibility to use it by code is very nice. It would be great for slight variation of sounds. Is it possible to mutate predefined sounds within a predefined range?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Fri Jun 06, 2014 9:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-06-06T16:25:27+00:00</updated>
+
+		<published>2014-06-06T16:25:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169250#p169250</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169250#p169250"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169250#p169250"><![CDATA[
+You simply create a new Sound object, fill in the parameters and then call :save(f) on it. You can pass either a path for io.open, a Lua file handle or an open love.filesystem.File instance as f.<div class="codebox"><p>Code: </p><pre><code>sfxr = require("sfxr")function love.load()    sound = sfxr.newSound()endfunction love.keypressed(k)    if k == " " then        sound:randomize()        sound:play()    elseif k == "return" then        local f = love.filesystem.newFile("out.lua")        f:open("w")        sound:save(f)    endend</code></pre></div>This will randomize the sound on each press of the spacebar and save it to "out.lua" when you press return. The output can be found inside the game's save directory, e.g "C:\Users\[user name]\AppData\Roaming\LOVE\sfxrlua" on Windows. Loading would just be doing<div class="codebox"><p>Code: </p><pre><code>sfxr = require("sfxr")function love.load()    sound = sfxr.newSound("out.lua")    -- or    -- sound = sfxr.newSound()    -- sound:load("out.lua")end</code></pre></div>If there's no out.lua inside the save directory, it will look at the games .love archive or main folder instead.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Fri Jun 06, 2014 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-06T14:23:33+00:00</updated>
+
+		<published>2014-06-06T14:23:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169248#p169248</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169248#p169248"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169248#p169248"><![CDATA[
+Sure, but for me the real benefit of this is to not use pregenerated sounds (waves). I can't see how I can save and load the sound parameters to a file from your tool.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Fri Jun 06, 2014 2:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-06-06T12:46:06+00:00</updated>
+
+		<published>2014-06-06T12:46:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169244#p169244</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169244#p169244"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169244#p169244"><![CDATA[
+Yeah, that's the intended use of it. You could also generate all sound effects at the first run of your game, export them as WAV files to the data directory and load them like ordinary sounds in the next runs. This is especially useful when you want to use many sounds with only a few changes.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Fri Jun 06, 2014 12:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-06T10:42:31+00:00</updated>
+
+		<published>2014-06-06T10:42:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169236#p169236</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169236#p169236"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169236#p169236"><![CDATA[
+So I can use this tool to create sound effects and than use the included library in my game to playback this effects instead of using exported wavs? This would save some diskspace and allowes to modify the soundparameters during playback.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Fri Jun 06, 2014 10:42 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-06-05T20:54:21+00:00</updated>
+
+		<published>2014-06-05T20:54:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169224#p169224</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169224#p169224"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169224#p169224"><![CDATA[
+Bumping a bit, also I added functions for generating a simple Lua file from the sound parameters and for loading it. You can use it like this if you want to work with the Löve file API instead of the basic Lua one:<br><div class="codebox"><p>Code: </p><pre><code>local sound = sfxr.newSound()sound:randomize()local f = love.filesystem.newFile("sound.lua")f:open("w")sound:save(f)f:flush()f:close()</code></pre></div><div class="codebox"><p>Code: </p><pre><code>local sound = sfxr.newSound()local f = love.filesystem.newFile("sound.lua")f:open("r")sound:load(f)f:close()sound:play()</code></pre></div>If you pass a second argument to sound:save(), it will generate a somewhat smaller file because no indention and linebreaks are added.<br>Here are the results of these examples, compressed and uncompressed:<div class="codebox"><p>Code: </p><pre><code>local s={ change={  amount=0.39114666484126;  speed=0.53098955685005; }; vibrato={  delay=-0.94992868273876;  depth=-0.024465061542777;  speed=0.84200208799958; }; frequency={  slide=-0.027968131846831;  limit=0;  start=0.23970054770736;  dslide=0.59757475861064; }; phaser={  sweep=0.4304590939705;  offset=-0.070899490398386; }; duty={  ratio=-0.3660692363753;  sweep=-0.5988394794907; }; repeatspeed=0.62650828993079; highpass={  sweep=-0.19473133535069;  cutoff=0.6262447349085; }; envelope={  attack=0.044302194827103;  punch=0.011362092672399;  decay=-0.55449086076159;  sustain=0.47922909089777; }; volume={ }; lowpass={  resonance=-0.0013938250035848;  sweep=2.243246748532e-006;  cutoff=0.67252042718807; };};return s, "0.0"</code></pre></div><div class="codebox"><p>Code: </p><pre><code>local s={change={amount=0.39114666484126;speed=0.53098955685005;};vibrato={delay=-0.94992868273876;depth=-0.024465061542777;speed=0.84200208799958;};frequency={slide=-0.027968131846831;limit=0;start=0.23970054770736;dslide=0.59757475861064;};phaser={sweep=0.4304590939705;offset=-0.070899490398386;};duty={ratio=-0.3660692363753;sweep=-0.5988394794907;};repeatspeed=0.62650828993079;highpass={sweep=-0.19473133535069;cutoff=0.6262447349085;};envelope={attack=0.044302194827103;punch=0.011362092672399;decay=-0.55449086076159;sustain=0.47922909089777;};volume={};lowpass={resonance=-0.0013938250035848;sweep=2.243246748532e-006;cutoff=0.67252042718807;};};return s, "0.0"</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Thu Jun 05, 2014 8:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nucular]]></name></author>
+		<updated>2014-05-31T13:59:04+00:00</updated>
+
+		<published>2014-05-31T13:59:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=168860#p168860</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=168860#p168860"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=168860#p168860"><![CDATA[
+I just added support for exporting the sound in the RIFF WAV format. It's as easy as calling Sound.exportWAV with a path string. Alternatively, you can also pass Lua file handlers or open love.filesystem.File instances. It also supports exporting in 16 or 8 bits and with 44100 or 22050 Hz sample rate.<br><br>EDIT: I'll add this functionality to the demo when I finish my little file dialog thingy for LoveFrames, or somebody else creates a similar thing.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134808">nucular</a> — Sat May 31, 2014 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-05-27T15:31:29+00:00</updated>
+
+		<published>2014-05-27T15:31:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=168611#p168611</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=168611#p168611"/>
+		<title type="html"><![CDATA[Re: Pure Lua port of the sfxr sound generator]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=168611#p168611"><![CDATA[
+<blockquote class="uncited"><div>Afaik, the inbuilt audio API supports positional sounds for mono sources.</div></blockquote>I know, but i have to build it into my game and the editor. It's no that easy to find the right setup and mixing. I haven't seen a löve game that uses this features.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Tue May 27, 2014 3:31 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

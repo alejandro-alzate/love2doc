@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/3781" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2021-05-04T23:00:44+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/3781</id>
+
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2021-05-04T23:00:44+00:00</updated>
+
+		<published>2021-05-04T23:00:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=240666#p240666</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=240666#p240666"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mouse!)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=240666#p240666"><![CDATA[
+I apologise for the necro-bump but this TLbind is on the official wiki and the download (drop box is no longer available) so I'd like to know how to best archive the wiki page, or update the wiki page if a github is known<br><br>+<br><br>are there other keybind libraries ppl can recommend for my own project?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Tue May 04, 2021 11:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bunny_]]></name></author>
+		<updated>2013-09-05T18:04:43+00:00</updated>
+
+		<published>2013-09-05T18:04:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=130118#p130118</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=130118#p130118"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mou]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=130118#p130118"><![CDATA[
+Hello, first of all thank you for making such an useful thing, it makes control stuff so simple  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>I just wanted to point out a bug in the latest (1.3) version:<br><br>The controls are reset in line 62<div class="codebox"><p>Code: </p><pre><code>for k,v in pairs(control) do if type(v)~="table" then control[k] = false end end</code></pre></div>But it used to clear only booleans in an older version I had<div class="codebox"><p>Code: </p><pre><code>for k,v in pairs(hold) do if type(v)=="boolean" then hold[k] = nil end end</code></pre></div>So now it turns anything to 'false'! Including the controlPressed and controlReleased functions you're supposed to be able to assign. It's easy to fix, but I thought I should point it out.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133995">bunny_</a> — Thu Sep 05, 2013 6:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kyle]]></name></author>
+		<updated>2013-09-02T23:09:32+00:00</updated>
+
+		<published>2013-09-02T23:09:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=127838#p127838</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=127838#p127838"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mou]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=127838#p127838"><![CDATA[
+<blockquote class="uncited"><div><span style="font-size:85%;line-height:116%">Shameless self-advertising in competitors' thread:</span><br><br>You can try the COCK library. It's a little harder to use, but works a charm.<br><br><a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=40089" class="postlink">http://love2d.org/forums/viewtopic.php?f=5&amp;t=40089</a></div></blockquote>raidho36, stop trying to make COCK happen. It's not going to happen.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=103656">Kyle</a> — Mon Sep 02, 2013 11:09 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2013-09-02T21:02:10+00:00</updated>
+
+		<published>2013-09-02T21:02:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=127817#p127817</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=127817#p127817"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mou]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=127817#p127817"><![CDATA[
+<span style="font-size:85%;line-height:116%">Shameless self-advertising in competitors' thread:</span><br><br>You can try the COCK library. It's a little harder to use, but works a charm.<br><br><a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=40089" class="postlink">http://love2d.org/forums/viewtopic.php?f=5&amp;t=40089</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Mon Sep 02, 2013 9:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[immakinggames]]></name></author>
+		<updated>2013-07-03T06:18:09+00:00</updated>
+
+		<published>2013-07-03T06:18:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=110370#p110370</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=110370#p110370"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mou]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=110370#p110370"><![CDATA[
+hate to bump, but it has been over a week and this is driving me crazy<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=120720">immakinggames</a> — Wed Jul 03, 2013 6:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[immakinggames]]></name></author>
+		<updated>2013-06-24T19:55:36+00:00</updated>
+
+		<published>2013-06-24T19:55:36+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=109159#p109159</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=109159#p109159"/>
+		<title type="html"><![CDATA[Re: TLbind 1.3 - professional controls made easy (now w/ mou]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=109159#p109159"><![CDATA[
+Can anybody tell me why I can't change the deadzone of my 360 controller with this code?<br><div class="codebox"><p>Code: </p><pre><code>TLbind,control = love.filesystem.load("TLbind.lua")()TLbind.deadzone = .3 --any number here changes nothing :(TLbind.joyHats[1] =  {{"left","right","up","down"}} TLbind.joyAxes[1] =  {"Horizontal", "Vertical"} TLbind.maps = {                ["Horizontal"]  = {"left", "right"},                ["Vertical"]    = {"up", "down"}        }TLbind.deadzoneAxes = { {"Horizontal", "Vertical"} }</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=120720">immakinggames</a> — Mon Jun 24, 2013 7:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2013-04-18T08:36:14+00:00</updated>
+
+		<published>2013-04-18T08:36:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=101077#p101077</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=101077#p101077"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=101077#p101077"><![CDATA[
+I've updated TLbind to 1.3, which replaces the old deadzone behavior with super-smooth scaled radial deadzones. This removes the "axis lock" problem, as well as the "0 to deadzone" jump. Since this also normalizes the input, binds.deadzoneAxes has replaced binds.circleAnalogue.<br><br>So this problem:<blockquote class="uncited"><div>the "corner" problems was due to the TLbind.deadzone setting. Changed the deadzone to 0 and now it works good enough, although the aiming still got "corners" but they are barely noticeable.</div></blockquote>... is now fixed.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Thu Apr 18, 2013 8:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2013-02-20T08:36:32+00:00</updated>
+
+		<published>2013-02-20T08:36:32+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=81136#p81136</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=81136#p81136"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=81136#p81136"><![CDATA[
+During my year of being without Internet, I've upgraded TLbind! It features general improvements, a convenience TLbind.giveInstance function for making new control instances, and the main new feature is mouse support. Mouse buttons are handled as digital input and mouse position as an analogue input (-1 to 1 in screen space). Documentation and download links are the same, <a href="/wiki/TLbind">TLbind</a> and <a href="http://dl.dropbox.com/u/3713769/web/Love/TLTools/TLbind.lua" class="postlink">link</a> respectively.<br><blockquote class="uncited"><div>the "corner" problems was due to the TLbind.deadzone setting. Changed the deadzone to 0 and now it works good enough, although the aiming still got "corners" but they are barely noticeable.</div></blockquote>I highly recommend you don't get rid of the deadzone, or else your game will likely have control drift on many gamepads. To get rid of "corners" (if I understand you), use bind.maps to make an analogue pair circular instead of square.<br><blockquote class="uncited"><div>any plans to support multiple controls per button?</div></blockquote>Nope.<br><blockquote class="uncited"><div>and any plans to add left and right mouse button?</div></blockquote>This update adds all mouse buttons (and wheel) as well as mouse position.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Wed Feb 20, 2013 8:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kingslovelua]]></name></author>
+		<updated>2012-07-17T15:36:25+00:00</updated>
+
+		<published>2012-07-17T15:36:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=61251#p61251</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=61251#p61251"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=61251#p61251"><![CDATA[
+Hi  I'm trying to make a prototype shooter game , as my first project as I'm still learning programming in general. I found TLbind library  on the love2d wiki and tried implementing  it  into my project but for some reason I can't get it to work for me  if you find  the time could you explain what i'm doing wrong  in my project?<br><br><br>I was also trying to figure out how to use the love.joyStick but it it seems confusing does anyone here know how to use the love.joyStick api<br><br>this is how I tried using it  but it was a no go for me <div class="codebox"><p>Code: </p><pre><code>if love.joystick.isDown( joystick, 1 ) then       player.body:applyForce(10, 0.0)   print("moving right")    elseif love.joystick.isDown( joystick, -1 ) then        player.body:applyForce(-10, 0.0)print("moving left")    end    if love.joystick.isDown( joystick, 2 ) then        player.body:applyForce(0, -500)    elseif love.joystick.isDown( joystick, -2 ) then       player.body:applyForce(0, 100)    endas I did with love.keyboard.isDown which worked  if love.keyboard.isDown("right") then       player.body:applyForce(10, 0.0)   print("moving right")    elseif love.keyboard.isDown("left") then        player.body:applyForce(-10, 0.0)print("moving left")    end    if love.keyboard.isDown("up") then        player.body:applyForce(0, -500)    elseif love.keyboard.isDown("down") then       player.body:applyForce(0, 100)    end</code></pre></div><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=5097">player.love.zip</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3696">kingslovelua</a> — Tue Jul 17, 2012 3:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gfreak]]></name></author>
+		<updated>2012-05-06T20:01:45+00:00</updated>
+
+		<published>2012-05-06T20:01:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56150#p56150</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56150#p56150"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56150#p56150"><![CDATA[
+any plans to support multiple controls per button?<br><br>[' ']={"jump","airJump"} or (for joysticks)<br>[1]={"jump","airJump"}<br><br>and any plans to add left and right mouse button?<br><br>thanks!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=20890">gfreak</a> — Sun May 06, 2012 8:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MiniDemonic]]></name></author>
+		<updated>2012-04-03T14:35:00+00:00</updated>
+
+		<published>2012-04-03T14:35:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=53444#p53444</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=53444#p53444"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=53444#p53444"><![CDATA[
+Thanks bartbes, that did fix the auto aiming to right thingy, also noticed that the "corner" problems was due to the TLbind.deadzone setting. Changed the deadzone to 0 and now it works good enough, although the aiming still got "corners" but they are barely noticeable.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=41001">MiniDemonic</a> — Tue Apr 03, 2012 2:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-04-03T06:18:06+00:00</updated>
+
+		<published>2012-04-03T06:18:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=53425#p53425</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=53425#p53425"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=53425#p53425"><![CDATA[
+Well, when you release the joystick the angle becomes 0, which is to the right. You should probably check whether the values are not (close to) 0.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Tue Apr 03, 2012 6:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MiniDemonic]]></name></author>
+		<updated>2012-04-02T22:25:00+00:00</updated>
+
+		<published>2012-04-02T22:25:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=53409#p53409</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=53409#p53409"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=53409#p53409"><![CDATA[
+Hey, how would I do to aim where I point the joystick?<br>Currently I'm doing this:<div class="codebox"><p>Code: </p><pre><code>shape:setRotation(math.atan2(player.control["VerticalAim"], player.control["HorisontalAim"]))</code></pre></div>Which is working, but everytime I release the joystick the character is aiming towards the right instantly, also this code seems to produce "corners".<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=41001">MiniDemonic</a> — Mon Apr 02, 2012 10:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2012-03-08T04:20:24+00:00</updated>
+
+		<published>2012-03-08T04:20:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=51127#p51127</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=51127#p51127"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=51127#p51127"><![CDATA[
+Wanted to give my thanks for making this.<br>It is sweet. And so easy to port to 0.8.0<br><br>I'd like to know if there is a way to go from action to key.<div class="codebox"><p>Code: </p><pre><code>print("Press " .. tlbind.controls.Bomb .. " to drop a bomb.")</code></pre></div>would output<div class="codebox"><p>Code: </p><pre><code>&gt;&gt;Press X to drop a bomb.</code></pre></div> (joystick)<br>or<div class="codebox"><p>Code: </p><pre><code>&gt;&gt;Press Space to drop a bomb.</code></pre></div> (keyboard)<br><br>EDIT:<br>I wrote a quick table reverser and key parser. All is dandy. <a href="https://gist.github.com/1999019" class="postlink">https://gist.github.com/1999019</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Thu Mar 08, 2012 4:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gfreak]]></name></author>
+		<updated>2012-03-05T18:20:01+00:00</updated>
+
+		<published>2012-03-05T18:20:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=50938#p50938</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=50938#p50938"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=50938#p50938"><![CDATA[
+how to bind left mouse button?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=20890">gfreak</a> — Mon Mar 05, 2012 6:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[cattail]]></name></author>
+		<updated>2012-02-21T15:25:24+00:00</updated>
+
+		<published>2012-02-21T15:25:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49898#p49898</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49898#p49898"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49898#p49898"><![CDATA[
+<blockquote class="uncited"><div>by Nixola on Tue Feb 21, 2012 1:13 pm<br>Here it is</div></blockquote>Thank you very much. <br>I have test it by smrq's demo, love2d V0.7.2  is ok <br>(Willbe)V0.8.0 (hg clone from  bitbucket.org) is fail, but after modify main.lua (smrq's demo)<br>it will run almost ok , still has some place will be adjust.<br>The point is <div class="codebox"><p>Code: </p><pre><code>--change this line players[2].controlOptions, players[2].control = makeJoystickControls(0)  --  for love 0.7.x--toplayers[2].controlOptions, players[2].control = makeJoystickControls(1)  -- for  love 0.8</code></pre></div>BTW:<br>That two place I have found TLbind.lua is v1.07 , but still good for my test <br><a href="https://gist.github.com/1744602" class="postlink">https://gist.github.com/1744602</a> ( smrq's demo , a good sample for joystick coding)<br><br>justas_tomkus 's code( TLbind.lua is the same: v1.07)<br><a href="https://bitbucket.org/justas_tomkus/bitsnpieces/downloads" class="postlink">https://bitbucket.org/justas_tomkus/bit ... /downloads</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=30816">cattail</a> — Tue Feb 21, 2012 3:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-02-21T13:13:25+00:00</updated>
+
+		<published>2012-02-21T13:13:25+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49891#p49891</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49891#p49891"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49891#p49891"><![CDATA[
+Here it is<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=4002">TLbind.lua</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Tue Feb 21, 2012 1:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[cattail]]></name></author>
+		<updated>2012-02-21T12:56:29+00:00</updated>
+
+		<published>2012-02-21T12:56:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49889#p49889</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49889#p49889"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49889#p49889"><![CDATA[
+Hi, every one.<br> I like to play joystick, and I find the lib TLbind will be useful. But I can't download it from the official link.<br>The browser  give me a error message "The connection to the server was reset while the page was loading."<br>I guess maybe I'm behind G_ F_W (super_big_firewall) something.<br>And search wiki and forum, I want to get it from smrq's demo .<br><br>But I seen the advice, must use TLbind v1.1<br><br>Can someone  kind to put TLbind.lua(v1.1)  in this forum like a .love demo?<br> (The most .love in the forum I can download them but old one(s)  )<br><br>Or put it to github , post here a link? (That also can be download too)<br><br>Thanks a lot .<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=30816">cattail</a> — Tue Feb 21, 2012 12:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2012-02-06T17:21:06+00:00</updated>
+
+		<published>2012-02-06T17:21:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48858#p48858</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48858#p48858"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48858#p48858"><![CDATA[
+<blockquote class="uncited"><div>I hope you don't mind if I intrude on this conversation.<br><br>I believe the best option is a README and, when needed, a small sample app. Lately I have been adding a "demo" app to all my libs on github just for this.</div></blockquote>Not at all. That's not a bad idea, actually. I think I'd do that if I wasn't in the middle of a bunch of other things right now.<br><blockquote class="uncited"><div>This is really cool <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br><br>Any plans to allow multiple controllers for local multiplayer games?</div></blockquote>Thanks!<br><br>That capability is already there. If you like programming in procedural style, then you just assign some controls for things like "p1left", "p2left", and so forth, and have your game logic do stuff with that. In OO style, you can give each player object its own TLbind object. <a href="https://gist.github.com/1744602" class="postlink">Smrq's test</a> shows one way to do it (don't use the version of TLbind in there, though, it's outdated). Check out the <a href="/wiki/TLbind">TLbind</a> documentation on the wiki (all of my libraries are documented there).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Mon Feb 06, 2012 5:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hughes]]></name></author>
+		<updated>2012-02-06T14:43:47+00:00</updated>
+
+		<published>2012-02-06T14:43:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48846#p48846</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48846#p48846"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48846#p48846"><![CDATA[
+This is really cool <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br><br>Any plans to allow multiple controllers for local multiplayer games?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3872">hughes</a> — Mon Feb 06, 2012 2:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-02-06T13:28:01+00:00</updated>
+
+		<published>2012-02-06T13:28:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48844#p48844</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48844#p48844"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48844#p48844"><![CDATA[
+I hope you don't mind if I intrude on this conversation.<br><br>I believe the best option is a README and, when needed, a small sample app. Lately I have been adding a "demo" app to all my libs on github just for this.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Feb 06, 2012 1:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-02-06T12:42:08+00:00</updated>
+
+		<published>2012-02-06T12:42:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48840#p48840</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48840#p48840"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48840#p48840"><![CDATA[
+<blockquote class="uncited"><div>Maybe I'm biased by all my experiences of being cut off from the 'net...</div></blockquote>Fair enough. Though I was thinking more of a README file than a website for documentation.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Feb 06, 2012 12:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Taehl]]></name></author>
+		<updated>2012-02-06T07:22:27+00:00</updated>
+
+		<published>2012-02-06T07:22:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48831#p48831</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48831#p48831"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48831#p48831"><![CDATA[
+Thanks, smrq. I added your improvements, a tiny bug fix, and a few minuscule optimizations (turns out that if statements are slightly faster than short-circuit evaluations of equal size. Who would have guessed?). Don't worry, it still passes your test just fine.<br><br>TLbind is now v1.1. Download link is still <a href="http://dl.dropbox.com/u/3713769/web/Love/TLTools/TLbind.lua" class="postlink">here</a>.<br><blockquote class="uncited"><div>Isn't that more something for in the documentation than in the library source, even if commented out?</div></blockquote>Maybe I'm biased by all my experiences of being cut off from the 'net...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=874">Taehl</a> — Mon Feb 06, 2012 7:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[smrq]]></name></author>
+		<updated>2012-02-06T04:59:35+00:00</updated>
+
+		<published>2012-02-06T04:59:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48823#p48823</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48823#p48823"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48823#p48823"><![CDATA[
+<blockquote class="uncited"><div>I would be happy to add them to the official TLbind library, if you're amenable to this (you'd get credit, of course).</div></blockquote>Cheers!  I just don't want to have to maintain my own fork of the library <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">  Go right ahead!<br><blockquote class="uncited"><div>So what if, as a compromise, I keep my default example there, but commented out?</div></blockquote>Good enough for me, but...<br><blockquote class="uncited"><div>Isn't that more something for in the documentation than in the library source, even if commented out?</div></blockquote>I agree with that sentiment.  An end user isn't going to look into the library source unless something is wrong.  It would be a lot more useful just to have that information in the docs, since that's what users are actually going to be reading when they get started with the library.  Just my 2 cents.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=28782">smrq</a> — Mon Feb 06, 2012 4:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-02-06T00:46:23+00:00</updated>
+
+		<published>2012-02-06T00:46:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=48806#p48806</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=48806#p48806"/>
+		<title type="html"><![CDATA[Re: TLbind - making professional control schemes easy]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=48806#p48806"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>*I also cleared out the default bindings, which shouldn't affect anything.  Seems kind of weird to me to include game-specific example defaults straight in the middle of the library source, though...  End users (like me!) shouldn't have to edit the library source imho.</div></blockquote>I put that there for three reasons. First, they're decent defaults for most 2D games (the directional stuff, at least. The first two buttons mainly just needed names, so I chose generic, common ones). Two, they're a working example of how to set binds. Three, it's a handy reference for what axes and buttons enumerate to on an XBox 360 gamepad, the "official" Windows gamepad (and most all gamepad-capable games on PC cater to, both professional and indie).<br><br>That being said, you also have a point. So what if, as a compromise, I keep my default example there, but commented out?</div></blockquote>Isn't that more something for in the documentation than in the library source, even if commented out?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Mon Feb 06, 2012 12:46 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

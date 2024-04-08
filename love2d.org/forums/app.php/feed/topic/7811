@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/7811" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2015-01-25T13:37:19+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/7811</id>
+
+		<entry>
+		<author><name><![CDATA[s-ol]]></name></author>
+		<updated>2015-01-25T13:37:19+00:00</updated>
+
+		<published>2015-01-25T13:37:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179379#p179379</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179379#p179379"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179379#p179379"><![CDATA[
+<blockquote class="uncited"><div>I like this and I'd love to use it.<br><br>But can you provide instructions on how to add it to one's current project?</div></blockquote>Just look at the github README, it's relatively well documented there (at least well enough that I got along perfectly)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135654">s-ol</a> — Sun Jan 25, 2015 1:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Snuux]]></name></author>
+		<updated>2015-01-23T16:25:34+00:00</updated>
+
+		<published>2015-01-23T16:25:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=179277#p179277</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=179277#p179277"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=179277#p179277"><![CDATA[
+Good day! How can I change the color of a separate block of text (label for example)?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134384">Snuux</a> — Fri Jan 23, 2015 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[danbo]]></name></author>
+		<updated>2014-09-12T18:30:02+00:00</updated>
+
+		<published>2014-09-12T18:30:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=173718#p173718</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=173718#p173718"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=173718#p173718"><![CDATA[
+Hi there! I hope I haven't missed an answer to this question, but I'd like to override the mouse position getter for Quickie. I don't really know much about metatables etc, but given that it's mentioned in this commit, how do I do this?<br><br><a href="https://github.com/vrld/Quickie/blob/master/mouse.lua" class="postlink">https://github.com/vrld/Quickie/blob/master/mouse.lua</a><br><br>Love the library btw<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82901">danbo</a> — Fri Sep 12, 2014 6:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-07-19T21:50:28+00:00</updated>
+
+		<published>2014-07-19T21:50:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171323#p171323</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171323#p171323"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171323#p171323"><![CDATA[
+You don't need to keep a .gitignore file or .git directory if all you want to do is use quickie. Both are just related to version control and are not necessary for quickie to work.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sat Jul 19, 2014 9:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lolocks]]></name></author>
+		<updated>2014-07-19T14:56:50+00:00</updated>
+
+		<published>2014-07-19T14:56:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171303#p171303</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171303#p171303"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171303#p171303"><![CDATA[
+<blockquote class="uncited"><div>You load the library by adding something like<br><div class="codebox"><p>Code: </p><pre><code>gui = require "Quickie"</code></pre></div>to the top of your main/game lua (in this case, move the folder with all the library files into where main.lua is and name it 'Quickie'.). From then on, you can just call the function to add a button or whatever form you want in update. Make sure to draw it. Here's some super simple example code<br><div class="codebox"><p>Code: </p><pre><code>gui = require "Quickie"function love.load()endfunction love.update(dt)gui.Button{text = "foo"} --this creates a button that does nothing with the text "foo"if gui.Button{text = "bar", pos = {50, 50}} then --this creates a button that has the text "bar", a position of 50,50, and prints "foobar" when you click on it. The functions you call return true if they are activated.print("foobar")endendfunction love.draw()gui.core.draw()end</code></pre></div>You can generally get how to use most of them from looking at the example code on github.</div></blockquote>Thanks!<br>Also, I don't have to keep the .gitignore file, correct?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135389">Lolocks</a> — Sat Jul 19, 2014 2:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-07-19T08:34:12+00:00</updated>
+
+		<published>2014-07-19T08:34:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171283#p171283</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171283#p171283"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171283#p171283"><![CDATA[
+I wish I could release my game (still waiting for a single asset to be replaced). There you could see how it is used in a real game and also how I solved some of the problems I encountered along the way (keyboard focus with multiple menu screens, sound on button mouseover).<br><br>From my experience I'd say only use quickie if what you need is really simple, like a single menu screen for example. Mind you, I don't have any experience with the ohter Löve GUIs, but I'll try one of those for my next project.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sat Jul 19, 2014 8:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[flyingjam]]></name></author>
+		<updated>2014-07-19T07:37:29+00:00</updated>
+
+		<published>2014-07-19T07:37:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171281#p171281</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171281#p171281"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171281#p171281"><![CDATA[
+You load the library by adding something like<br><div class="codebox"><p>Code: </p><pre><code>gui = require "Quickie"</code></pre></div>to the top of your main/game lua (in this case, move the folder with all the library files into where main.lua is and name it 'Quickie'.). From then on, you can just call the function to add a button or whatever form you want in update. Make sure to draw it. Here's some super simple example code<br><div class="codebox"><p>Code: </p><pre><code>gui = require "Quickie"function love.load()endfunction love.update(dt)gui.Button{text = "foo"} --this creates a button that does nothing with the text "foo"if gui.Button{text = "bar", pos = {50, 50}} then --this creates a button that has the text "bar", a position of 50,50, and prints "foobar" when you click on it. The functions you call return true if they are activated.print("foobar")endendfunction love.draw()gui.core.draw()end</code></pre></div>You can generally get how to use most of them from looking at the example code on github.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135361">flyingjam</a> — Sat Jul 19, 2014 7:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lolocks]]></name></author>
+		<updated>2014-07-18T22:11:12+00:00</updated>
+
+		<published>2014-07-18T22:11:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171270#p171270</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171270#p171270"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171270#p171270"><![CDATA[
+No seriously there's like nothing anywhere with instructions on how I can add Quickie to my current project. Could anyone help?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135389">Lolocks</a> — Fri Jul 18, 2014 10:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lolocks]]></name></author>
+		<updated>2014-07-18T19:44:01+00:00</updated>
+
+		<published>2014-07-18T19:44:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=171258#p171258</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=171258#p171258"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=171258#p171258"><![CDATA[
+I like this and I'd love to use it.<br><br>But can you provide instructions on how to add it to one's current project?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135389">Lolocks</a> — Fri Jul 18, 2014 7:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-30T15:15:42+00:00</updated>
+
+		<published>2014-06-30T15:15:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170376#p170376</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170376#p170376"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170376#p170376"><![CDATA[
+As far as I can tell you need to write your own button class. You can base it on the default button class.<br>You also need to add your new class to init.lua and style-default.lua.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Mon Jun 30, 2014 3:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marypop]]></name></author>
+		<updated>2014-06-30T08:24:33+00:00</updated>
+
+		<published>2014-06-30T08:24:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170363#p170363</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170363#p170363"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170363#p170363"><![CDATA[
+Hi,<br><br>I am very new to Löve, so this question is probably silly - but I could not find an answer in the discussion above.<br><br>I would like to be able to customize differently each button (for instance set the button 1 background to image1, the button 2 background to image2, etc).<br>So I can't really change the style-default file.<br><br>Is there any way to do something like that :<br><div class="codebox"><p>Code: </p><pre><code>function love.load()image1 = love.graphics.newImage("Images/Button1.png")endfunction love.update(dt)      if gui.Button ({text = "Blabla",image1, pos = {300, 200}, size = {200, 50}})          then -- do something      endend</code></pre></div>Thanks a lot !<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135300">Marypop</a> — Mon Jun 30, 2014 8:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-24T20:30:19+00:00</updated>
+
+		<published>2014-06-24T20:30:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170159#p170159</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170159#p170159"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170159#p170159"><![CDATA[
+I was quite surprised to see that by default there's no way to display images. I wrote a very simple image widget in case anyone is interested.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Tue Jun 24, 2014 8:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-19T22:27:25+00:00</updated>
+
+		<published>2014-06-19T22:27:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169946#p169946</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169946#p169946"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169946#p169946"><![CDATA[
+Another question:<br>Is there a nice way to play a sound on:<br>a) mouse moves over a button? I found some isHot property in the Quickie code, but I don't understand how to use it and I'd need to only play the sound if the mouse was not already on this button.<br>b) same for keyboard, play the sound only when cycling through the buttons.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Thu Jun 19, 2014 10:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-14T23:45:20+00:00</updated>
+
+		<published>2014-06-14T23:45:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169742#p169742</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169742#p169742"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169742#p169742"><![CDATA[
+<blockquote class="uncited"><div>Update!<br><br>Thanks to MarekkPie, you can now customize the keys that cycle widgets. The default binding is<div class="codebox"><p>Code: </p><pre><code>gui.core.keyboard.cycle.next = {key = 'tab'}gui.core.keyboard.cycle.prev = {key = 'tab', 'lshift', 'rshift'}</code></pre></div>... which means that 'tab' selects the next widget, while 'tab' + 'lshift' <em class="text-italics">or</em> 'tab' + 'rshift' select the previous widgets. This scheme allows for any two-(but not three [nor four])-key combination to cycle widgets. For example,<div class="codebox"><p>Code: </p><pre><code>gui.core.keyboard.cycle = {    prev = {key = ' ', 'a'},    next = {key = ' ', 'd'},}</code></pre></div>cycles on `space + a' and `space + d'.<br><br>Cycle keys take precedence over remaining key actions, so if you set them to 'left' and 'right', you won't be able to move in a textbox anymore.<br><br>Updated code is at github: <a href="https://github.com/vrld/Quickie" class="postlink">https://github.com/vrld/Quickie</a></div></blockquote>Is it somehow possible to cycle on more than one key? I'm looking something like left or up for previous and right or down for next.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sat Jun 14, 2014 11:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-09T11:20:07+00:00</updated>
+
+		<published>2014-06-09T11:20:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169450#p169450</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169450#p169450"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169450#p169450"><![CDATA[
+I fixed my issue by calling <div class="codebox"><p>Code: </p><pre><code>gui.keyboard.clearFocus()</code></pre></div> at the appropriate places. This resets the keyboard focus so that the first element in each menu is focused by default.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Mon Jun 09, 2014 11:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-03T22:03:21+00:00</updated>
+
+		<published>2014-06-03T22:03:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169056#p169056</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169056#p169056"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169056#p169056"><![CDATA[
+I have another question regarding cycling.<br>Basically I switch between game states in love.update().<br>So far there's a main menu and an introduction, you can switch back and forth between them. This works fine if I click the button. However, if I use tab to highlight the introduction button and hit enter, there's no way to highlight the 'back' button using tab. Only if I click introduction the back button can be highlighted using tab. It seems as if the cycling thingy is left in a bad state or rather is stuck in the main menu.<br>Cycling remembers the position in the main menu, and if it's not on the first item in the main menu, it is impossible to cycle through the second menu. Is there a way to 'reset' the cycling thingy when switching between menus?<br><br>I may provide some code once I got the nerve to create a minimal working example.<br><br>EDIT: Attached is not a minimal example but all the code I have so far. I hope it's not too bad. Ways to reproduce:<br><br>A.<br>1. You are in the main menu, 'tab' to INTRODUCTION or EXIT.<br>2. Click on INTRODUCTION.<br>3. You are at the INTRODUCTION screen and there's no way to select BACK using 'tab'.<br><br>B.<br>1. You are in the main menu, 'tab' to EXIT.<br>2. Click on START.<br>3. Hit ESC.<br>4. You are at the retry screen now and there's no way to select buttons by 'tab'.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=10035">gui.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Tue Jun 03, 2014 10:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-03T16:54:42+00:00</updated>
+
+		<published>2014-06-03T16:54:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=169035#p169035</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=169035#p169035"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=169035#p169035"><![CDATA[
+Now that I've found the actual Quickie thread instead of the ridiculous naming thing, here's the minor bug I want to report:<br><br>The example code in README.md doesn't execute:<div class="codebox"><p>Code: </p><pre><code>        function love.keypressed(key, code)gui.keyboard.pressed(key)-- LÖVE 0.8: see if this code can be converted in a characterif pcall(string.char, code) code &gt; 0 then gui.keyboard.textinput(string.char(code)) end end</code></pre></div>I think it should be:<div class="codebox"><p>Code: </p><pre><code>        function love.keypressed(key, code)gui.keyboard.pressed(key)-- LÖVE 0.8: see if this code can be converted in a characterif pcall(string.char, code) and code &gt; 0 then gui.keyboard.textinput(string.char(code)) end end</code></pre></div>I would also love some documentation, for example because I couldn't explain why cycling (using tab) didn't work in my code. It took me hours until I realised that I needed this particular function.  The löve 0.8 compatibility thing obfuscated its function rather well, it suggests that this is about text input. Proper documentation would have helped.<br>I would even write some documentation but there's plenty I don't understand, for example push/pop, widgetHit, draw and so on.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Tue Jun 03, 2014 4:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-12-11T22:27:44+00:00</updated>
+
+		<published>2013-12-11T22:27:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158269#p158269</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158269#p158269"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158269#p158269"><![CDATA[
+Oh - hey, good to know  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"> I will have to update *my* utf8 function then.<br><br>EDIT: well, maybe not. I see that you are skipping bytes, which I can't do when validating. Maybe when all the bytes are parsed it is worth it to use match. I didn't personally run any tests myself.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Dec 11, 2013 10:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2013-12-11T17:21:22+00:00</updated>
+
+		<published>2013-12-11T17:21:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158230#p158230</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158230#p158230"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158230#p158230"><![CDATA[
+<blockquote class="uncited"><div>Apparently, using string.find is faster than parsing the bytes one by one.</div></blockquote>Apparently not for iterating though (or am I missing something?):<div class="codebox"><p>Code: </p><pre><code>local function iter(s, i)        if i &gt;= #s then return end        local b, nbytes = s:byte(i+1,i+1), 1        -- determine width of the codepoint by counting the number of set bits in the first byte        -- warning: there is no validation of the following bytes!        if     b &gt;= 0xc0 and b &lt;= 0xdf then nbytes = 2 -- 1100 0000 to 1101 1111        elseif b &gt;= 0xe0 and b &lt;= 0xef then nbytes = 3 -- 1110 0000 to 1110 1111        elseif b &gt;= 0xf0 and b &lt;= 0xf7 then nbytes = 4 -- 1111 0000 to 1111 0111        elseif b &gt;= 0xf8 and b &lt;= 0xfb then nbytes = 5 -- 1111 1000 to 1111 1011        elseif b &gt;= 0xfc and b &lt;= 0xfd then nbytes = 6 -- 1111 1100 to 1111 1101        elseif b &lt;  0x00 or  b &gt;  0x7f then error(("Invalid codepoint: 0x%02x"):format(b))        end        return i+nbytes, s:sub(i+1,i+nbytes), nbytesendfunction iter2(s, i)    if i &gt;= #s then return end    i = i + 1    local nbytes = 0    if     i == s:find("[%z\1-\127]", i) then nbytes = 1    elseif i == s:find("[\194-\223][\123-\191]", i) then nbytes = 2    elseif i == s:find(       "\224[\160-\191][\128-\191]", i)        or i == s:find("[\225-\236][\128-\191][\128-\191]", i)        or i == s:find(       "\237[\128-\159][\128-\191]", i)        or i == s:find("[\238-\239][\128-\191][\128-\191]", i) then nbytes = 3    elseif i == s:find(       "\240[\144-\191][\128-\191][\128-\191]", i)        or i == s:find("[\241-\243][\128-\191][\128-\191][\128-\191]", i)        or i == s:find(       "\244[\128-\143][\128-\191][\128-\191]", i) then nbytes = 4    end    assert(nbytes &gt; 0, "Invalid UTF8")    return i+nbytes-1, s:sub(i, i+nbytes-1), nbytesend</code></pre></div><div class="codebox"><p>Code: </p><pre><code>function timeit(f, n)local start = os.clock()for i = 1,n do f() endreturn os.clock() - startendprint(timeit(function() for _ in iter, s, 0 do end end, 100000))--&gt; 0.99print(timeit(function() for _ in iter2, s, 0 do end end, 100000))--&gt; 2.34</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Wed Dec 11, 2013 5:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-12-11T16:49:19+00:00</updated>
+
+		<published>2013-12-11T16:49:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158224#p158224</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158224#p158224"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158224#p158224"><![CDATA[
+Hi!<br><br>I did some utf8 manipulation a while back and it resulted in this utf-8 parsing thing:<br><br><a href="https://github.com/kikito/utf8_validator.lua/blob/master/utf8_validator.lua#L35" class="postlink">https://github.com/kikito/utf8_validato ... or.lua#L35</a><br><br>Apparently, using string.find is faster than parsing the bytes one by one.<br><br>Full disclaimer: the original implementation was from <a href="http://notebook.kulchenko.com/programming/fixing-malformed-utf8-in-lua" class="postlink">Michael Kulchenko</a>, I just found a bug and adapted to my needs.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Dec 11, 2013 4:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2013-12-11T15:05:59+00:00</updated>
+
+		<published>2013-12-11T15:05:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=158212#p158212</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=158212#p158212"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=158212#p158212"><![CDATA[
+Sorry it took so long to answer your posts <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-uhm.png" width="16" height="16" alt=":roll:" title="Rolling Eyes"> <br><br>The bug in input.lua should <a href="https://github.com/vrld/Quickie/commit/66a089a07f4d24557cb8e06f78eefb07a344ea32" class="postlink">now be fixed</a>, but I couldn't reproduce the slider2d.lua. I also added basic UTF-8 editing support (<a href="https://github.com/vrld/Quickie/blob/master/utf8.lua" class="postlink">this file</a> could also be interesting for other projects) to support umlauts and the like. However, due to the way 0.8 handles text input, this will only work properly in LÖVE 0.9. For this keyboard.pressed(key, code) was split into keyboard.pressed(key) and keyboard.textinput(str). Porting for these changes is straigtforward:<br><br>LÖVE 0.8<div class="codebox"><p>Code: </p><pre><code>function love.keypressed(key, code)    gui.keyboard.pressed(key)    if code &gt;= 32 and code &lt; 127 then -- old behavior        gui.keyboard.textinput(string.char(code))    endend</code></pre></div>LÖVE 0.9<div class="codebox"><p>Code: </p><pre><code>function love.keypressed(key, code)    gui.keyboard.pressed(key)endfunction love.textinput(str)    gui.keyboard.textinput(str) -- yay, utf8!end</code></pre></div>That multiline textbox is nice by the way. I'll see how to integrate it into Quickie!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Wed Dec 11, 2013 3:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[riidom]]></name></author>
+		<updated>2013-11-27T06:23:25+00:00</updated>
+
+		<published>2013-11-27T06:23:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=157269#p157269</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=157269#p157269"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=157269#p157269"><![CDATA[
+Me again,<br>excuse double-posting, but this is quite another topic than the one before.<br>I made a multiline-textview-widget, see demo below. Actually, it is not a widget, and I could need a little help in wrapping things properly up so it fits in better.<br>So far it features textadjusting, gotta call that manually, since doing each frame would kill peformance (at least for me), and text doesnt change each frame anyway.<br>Then there is the draw and the mousewheel hook, but that's better to view in sourcecode.<br>Hope the code isnt too shitty, if it is, let me know why! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=8791">mlvtest.love</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124036">riidom</a> — Wed Nov 27, 2013 6:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[riidom]]></name></author>
+		<updated>2013-11-21T08:47:54+00:00</updated>
+
+		<published>2013-11-21T08:47:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156750#p156750</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156750#p156750"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156750#p156750"><![CDATA[
+Using your widget demo, I first click into the 2D Slider, to give it focus, then try to move the cross with cursor keys. On first keypress, I get:<div class="codebox"><p>Code: </p><pre><code>Error: Quickie/slider2d.lua:90: attempt to perform arithmetic on field 'x' (a nil value)stack traceback:Quickie/slider2d.lua:90: in function 'Slider2D'main.lua:105: in function 'update'[string "boot.lua"]:407: in function &lt;[string "boot.lua"]:373&gt;[C]: in function 'xpcall'</code></pre></div>When pressing up/down key, respective message for 'y'. Hope this helps!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124036">riidom</a> — Thu Nov 21, 2013 8:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2013-11-21T08:41:28+00:00</updated>
+
+		<published>2013-11-21T08:41:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156749#p156749</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156749#p156749"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156749#p156749"><![CDATA[
+<blockquote class="uncited"><div>Hi, I discovered a little bug in the text-input. When you are at beginning of text and press Backspace, it will duplicate the existing text instead of doing nothing.</div></blockquote>Will fix it soon...ish (the Umlaut-thing too). Thanks for reporting!<br><blockquote class="uncited"><div>Also Slider2D crashes when operated by arrowkeys</div></blockquote>What do you mean by "crashes"?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Thu Nov 21, 2013 8:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[riidom]]></name></author>
+		<updated>2013-11-20T11:33:18+00:00</updated>
+
+		<published>2013-11-20T11:33:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=156687#p156687</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=156687#p156687"/>
+		<title type="html"><![CDATA[Re: Quickie [was: Immediate Mode Gui]]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=156687#p156687"><![CDATA[
+Hi, I discovered a little bug in the text-input. When you are at beginning of text and press Backspace, it will duplicate the existing text instead of doing nothing.<br><br>in input.lua:49<br>change<div class="codebox"><p>Code: </p><pre><code>elseif keyboard.key == 'backspace' then</code></pre></div>to<div class="codebox"><p>Code: </p><pre><code>elseif keyboard.key == 'backspace' and w.info.cursor &gt; 0 then</code></pre></div>and it is fixed, if I havent overseen any terrible consequences.<br><br>Another thing that bugs me a little, is that I cant type Umlauts there, I guess I have to expand the check for the code var, maybe with a table of allowed ones? If you are already on this vlrd, let me know, then I rather wait <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>Also Slider2D crashes when operated by arrowkeys, but I didnt look into this, since I probably will have rare use for it, just wanna mention.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=124036">riidom</a> — Wed Nov 20, 2013 11:33 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

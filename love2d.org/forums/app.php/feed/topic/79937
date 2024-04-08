@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/79937" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-07-19T16:56:16+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/79937</id>
+
+		<entry>
+		<author><name><![CDATA[gdinit]]></name></author>
+		<updated>2021-07-19T16:56:16+00:00</updated>
+
+		<published>2021-07-19T16:56:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=242276#p242276</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=242276#p242276"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=242276#p242276"><![CDATA[
+<blockquote class="uncited"><div><strong class="text-strong"><span style="font-size:200%;line-height:116%">tiny-ecs: Make Games Faster</span></strong><br>&lt;snip&gt;</div></blockquote>Hello bakpakin,<br>Thank you for sharing your work. I found your library via link [1].<br>At the bottom of the same page, I noticed 'Demo Source' in link [2].<br>When I arrived at the Demo Source GitHub page, I found a note saying that "NOTE - Up to date version of this project here" pointing to link [3].<br><br>Last commit on [2] is on 12 Aug 2020.<br>Last commit on [3] is on 10 Sep 2020.<br>Thus, going solely by the last commit date I guess #3 is latest as per your NOTE above.<br><br>Having said that, without detailed study of the code or commit notes, just looking at both 'main GitHub pages', I noticed that:<br>[2] has a commit note 'Love2D 11.3 port'.<br>[3] has a commit note 'Update for LOVE 11.1'<br>Therefore going by the commit notes, it appears [2] actually is more recent.<br><br>This being the case, I would like to ask, as of 2021 which repo would you recommend to someone just starting to look at tiny-ecs?<br>Thanks in advance.<br><br><br>--<br>References<br>[1] <a href="https://love2d.org/wiki/tiny-ecs" class="postlink">https://love2d.org/wiki/tiny-ecs</a><br>[2] <a href="https://github.com/bakpakin/tiny-ecs/tree/demo-commandokibbles" class="postlink">https://github.com/bakpakin/tiny-ecs/tr ... ndokibbles</a><br>[3] <a href="https://github.com/bakpakin/CommandoKibbles" class="postlink">https://github.com/bakpakin/CommandoKibbles</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=141902">gdinit</a> — Mon Jul 19, 2021 4:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-06-08T13:26:22+00:00</updated>
+
+		<published>2018-06-08T13:26:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221359#p221359</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221359#p221359"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221359#p221359"><![CDATA[
+<blockquote class="uncited"><div>I can't reproduce with 11.1. It reaches 630 something and it never reaches the 640 barrier. Then it goes all the way down to ~320. With 0.10.2 I get a similar result, but it never reaches 580. That's after a ~5 minutes run.<br><br>I think this is related to LuaJIT garbage collection, not to the lib.<br><br>Edit: Adding collectgarbage("step", 3) makes the memory stay in the 270 range all the time in 11.1.</div></blockquote>collectgarbage("step", 3) doesn't work for me.<br><br>I could avoid all the trouble by making sure that my entities exist at least for one game loop before I despawn them again. But this is a trap. My spawner system was spawning some things my out-of-screen-despawn-system was despawning again, thus leading to a memory leak, because the update of the world wasn't called in between. <br><br>I don't know why you cannot reproduce the issue.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Fri Jun 08, 2018 1:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2018-06-03T20:11:11+00:00</updated>
+
+		<published>2018-06-03T20:11:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221269#p221269</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221269#p221269"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221269#p221269"><![CDATA[
+I can't reproduce with 11.1. It reaches 630 something and it never reaches the 640 barrier. Then it goes all the way down to ~320. With 0.10.2 I get a similar result, but it never reaches 580. That's after a ~5 minutes run.<br><br>I think this is related to LuaJIT garbage collection, not to the lib.<br><br>Edit: Adding collectgarbage("step", 3) makes the memory stay in the 270 range all the time in 11.1.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Jun 03, 2018 8:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-06-03T15:44:28+00:00</updated>
+
+		<published>2018-06-03T15:44:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=221267#p221267</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=221267#p221267"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=221267#p221267"><![CDATA[
+I found a memory leak in this library: Calling world:remove seems to not clear the memory of the associated object or parts of it as kept alive, I have no idea why this is happening, yet.<br><br>Here is a sample:<div class="codebox"><p>Code: </p><pre><code>tiny = require("lib.tiny")function love.load(args)world = tiny.world()endfunction love.update(dt)local test = { data = "lrjgnjsrdnflseknfkjrsgnsrkjfnleadokmskingvkdrjnfseöofnkjsebfksrlnfkljrbvkhsefbksejbfksl" }world:add(test)world:remove(test)world:update(dt)endfunction love.draw()love.graphics.print(tostring(collectgarbage("count")), 50, 50)end</code></pre></div>Let it run for a minute or two, it will free up constantly, but it will go higher and highe, eventually. In my larger game this is very problematic, Megabytes getting stacked up for each state I enter.<br><br>If you remove <div class="codebox"><p>Code: </p><pre><code>world:add(test)</code></pre></div>the issue is gone. Then, it will not go above 550 bytes memory at me. So, tiny-ecs's remove call seems not to free all pointers of the table, entirely, or anything else is not cleared. So maybe it's the table, maybe it's something else inside of tiny-ecs. <br><br>Tested with love 0.10.2, should appear in 11.1, too. <br><br>EDIT: Okay, Tjakka found the issue. It seems to free up the memory when I call update BEFORE remove. Idk if this should be fixed. Usually added objects shouldn't be removed on the same frame again, in any case.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=16369">memorytest.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Sun Jun 03, 2018 3:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2018-05-12T02:40:09+00:00</updated>
+
+		<published>2018-05-12T02:40:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=220738#p220738</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=220738#p220738"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=220738#p220738"><![CDATA[
+<blockquote class="uncited"><div>Another that I have noticed is that, in the examples `world:update()` is called in `love.update` and `love.draw` doesn't that means all the logic for the entities is being executed twice which seem highly inefficient. Am I understanding this correct or am I missing something?</div></blockquote>He stated that you can set a filter for systems. So in the update call back you will filter for only update systems and in draw only filter for draw systems.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Sat May 12, 2018 2:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ryanzec]]></name></author>
+		<updated>2018-05-12T01:46:19+00:00</updated>
+
+		<published>2018-05-12T01:46:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=220735#p220735</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=220735#p220735"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=220735#p220735"><![CDATA[
+Another that I have noticed is that, in the examples `world:update()` is called in `love.update` and `love.draw` doesn't that means all the logic for the entities is being executed twice which seem highly inefficient. Am I understanding this correct or am I missing something?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140159">ryanzec</a> — Sat May 12, 2018 1:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ryanzec]]></name></author>
+		<updated>2018-05-11T22:01:23+00:00</updated>
+
+		<published>2018-05-11T22:01:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=220728#p220728</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=220728#p220728"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=220728#p220728"><![CDATA[
+@bakpakin<br><br>So I was looking into ECS for a game I am trying to prototype and was wondering how performant tiny.ecs would be for my game.<br><br>For my game, I am going to be rendering a lot of sprites (20k - 30K) however probably about 90 - 95%% of those can be grouped into 2-3 sprite batches and don't need to be updated on every frame so that seems good.<br><br>My concern more lies with that I can going to want to have a lot of entities in the game. It is an open world turn based survival roguelike (can't think of any other buzz words to put in there <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">) that is going to have a seemingly "infinite world" which could contain 10 's to 100's of thousands of entities. Obviously I can't load and simulate that many entities at once (not on the average computer at least), my naive plan from someone who has not built a game of this scope before is:<br><ul><li>split the world into small chucks (maybe something like 16x16) that will store all the data related for that chuck (map data, entities, etc.)</li></ul><ul><li>only load X number of chunks that surround the player (maybe something like 7x7 or 9x9 with the players location being the center chunk)</li></ul><ul><li>as the player moves, I will load and unload chunks that become in scope and out of scope along with loading and unloading entities related to those chunks in the ECS system</li></ul>Now most of the entities should have relatively simple logic that needs to be simulated, only a subset (maybe 100 at most 99% of the time) will need more complex things (the most complex things being a* path finding).<br><br>Do you think that is something the ECS in Lua can handle in general or more specifically tiny.ecs? Maybe I am thinking too grand for using a higher level language (or ECS) and maybe I need to dig into C++ to be able to get the features I want with the performance I need.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140159">ryanzec</a> — Fri May 11, 2018 10:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dr. Peeps]]></name></author>
+		<updated>2018-04-07T17:36:08+00:00</updated>
+
+		<published>2018-04-07T17:36:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219800#p219800</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219800#p219800"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219800#p219800"><![CDATA[
+<blockquote class="uncited"><div>Yes It does seem like that. In any case, I would recommend against relying on this behavior.</div></blockquote>OK. So you mean calling system:update() on inactive systems probably isn't supported.<br><blockquote class="uncited"><div>I’m guessing your use case is that you have some rendering systems, and some logic systems, and you want to update the drawing systems in love.draw, and the rendering systems in love.update.</div></blockquote>Yes, this is what I'm doing, but different <em class="text-italics">sets</em> of rendering systems are called in each gamestate.<br><blockquote class="uncited"><div>You can pass a filter to world.update which will select the systems to update. The filter works much like an entity filter but on systems instead. This is probably what you want to update drawing systems in love.draw, and logic systems in love.update.</div></blockquote>I was doing exactly that, and it worked well. As more sets of systems were added to different gamestates though, things got a bit complicated, filter-wise - so I thought I'd just call each system:update() where needed.<br><br>I can go back to using filters though. And maybe it's easier in my case to just set <strong class="text-strong">active = false</strong> for all the systems I <em class="text-italics">don't</em> want to run! Thanks for the help.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137970">Dr. Peeps</a> — Sat Apr 07, 2018 5:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2018-04-07T16:48:43+00:00</updated>
+
+		<published>2018-04-07T16:48:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219797#p219797</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219797#p219797"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219797#p219797"><![CDATA[
+Yes It does seem like that. In any case, I would recommend against relying on this behavior. I’m guessing your use case is that you have some rendering systems, and some logic systems, and you want to update the drawing systems in love.draw, and the rendering systems in love.update.<br><br>You can pass a filter to world.update which will select the systems to update. The filter works much like an entity filter but on systems instead. This is probably what you want to update drawing systems in love.draw, and logic systems in love.update. You can see the demos for an example of this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Sat Apr 07, 2018 4:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dr. Peeps]]></name></author>
+		<updated>2018-04-06T16:54:14+00:00</updated>
+
+		<published>2018-04-06T16:54:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219762#p219762</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219762#p219762"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219762#p219762"><![CDATA[
+<blockquote class="uncited"><div>This is the book keeping I mentioned. Sorted systems have an onModify method that sorts the system. The system is only sorted when entities are added or removed. This is why should one still call world.update once per frame no matter what.</div></blockquote>It is. I should have mentioned: world:update(dt) <em class="text-italics">is</em> still being called every love:update(), in both cases. Does it matter that I'm calling it in love:update() and updating my system in love:draw() (after)?<br><br>BTW no entities are added or removed after the initial setup. All the entities exist, they just aren't being processed in order unless that system is active = true.<br><br>EDIT: A quick look though your source code and it looks like everything for world updates is wrapped in "if system.active" checks, so maybe inactive systems never have their "book keeping" done?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137970">Dr. Peeps</a> — Fri Apr 06, 2018 4:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2018-04-06T12:59:58+00:00</updated>
+
+		<published>2018-04-06T12:59:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219755#p219755</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219755#p219755"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219755#p219755"><![CDATA[
+This is the book keeping I mentioned. Sorted systems have an onModify method that sorts the system. The system is only sorted when entities are added or removed. This is why should one still call world.update once per frame no matter what.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Fri Apr 06, 2018 12:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dr. Peeps]]></name></author>
+		<updated>2018-04-05T23:13:21+00:00</updated>
+
+		<published>2018-04-05T23:13:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219742#p219742</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219742#p219742"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219742#p219742"><![CDATA[
+<blockquote class="uncited"><div>To make sure that nothing is updated during world.update, set system.active to false. You can call system:update(dt) whenever you want.</div></blockquote>Bakpakin, I'm getting some unexpected behaviour in my sorted processing systems when doing the above:<br>- When I set system.active = <strong class="text-strong">false </strong>and call <strong class="text-strong">system:update()</strong> myself, entities <span style="text-decoration:underline">are not</span> processed in the correct order.<br>- When I set system.active = <strong class="text-strong">true </strong>and call <strong class="text-strong">world:update()</strong>, entities <span style="text-decoration:underline">are</span> processed in the correct order.<br><br>Could this be a bug in tiny-ecs when dealing with sorted systems?<br><br>EDIT: I should clarify a bit - system:compare() isn't getting called at all when I call system:update() myself.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137970">Dr. Peeps</a> — Thu Apr 05, 2018 11:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2018-04-02T14:47:05+00:00</updated>
+
+		<published>2018-04-02T14:47:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219594#p219594</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219594#p219594"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219594#p219594"><![CDATA[
+Yes, you can modify the order of the systems. However, it is usually easier to set up all of the systems up front in the correct order.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Mon Apr 02, 2018 2:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dr. Peeps]]></name></author>
+		<updated>2018-04-02T02:44:30+00:00</updated>
+
+		<published>2018-04-02T02:44:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219572#p219572</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219572#p219572"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219572#p219572"><![CDATA[
+<blockquote class="uncited"><div>Yes, you can do exactly that. You can also run code between other systems by creating a very simple system that processes no entities and simply runs your custom code on update. Not all systems need to process entities. To make sure that nothing is updated during world.update, set system.active to false. You can call system:update(dt) whenever you want.<br><br>However, you still need to call world.update put newly added entities into the correct systems and do other book keeping.</div></blockquote>Excellent. Thanks for the explanation. I also just realized how the <strong class="text-strong">system:pre/postProcess()</strong> and <strong class="text-strong">system:pre/postWrap()</strong> functions work - those are even more appropriate for me in some cases than running code "between systems". (Really, what I needed was that a system do some extra steps after it was done processing entities.) Very flexible!<br><br>Last question: To get systems to run in an exact order, I just need to call <strong class="text-strong">world:setSystemIndex(system, index)</strong> and assign a numeric value to each system, correct?<br><br>Thanks for providing this library to us, btw! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I've found it to be very handy so far.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137970">Dr. Peeps</a> — Mon Apr 02, 2018 2:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2018-04-02T02:24:30+00:00</updated>
+
+		<published>2018-04-02T02:24:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219571#p219571</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219571#p219571"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219571#p219571"><![CDATA[
+Yes, you can do exactly that. You can also run code between other systems by creating a very simple system that processes no entities and simply runs your custom code on update. Not all systems need to process entities. To make sure that nothing is updated during world.update, set system.active to false. You can call system:update(dt) whenever you want.<br><br>However, you still need to call world.update put newly added entities into the correct systems and do other book keeping.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Mon Apr 02, 2018 2:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Dr. Peeps]]></name></author>
+		<updated>2018-04-01T20:28:47+00:00</updated>
+
+		<published>2018-04-01T20:28:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219551#p219551</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219551#p219551"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219551#p219551"><![CDATA[
+<blockquote class="uncited"><div>Inactive Systems should be updated manually or not at all via system:update(dt)</div></blockquote>Bakpakin, do I understand this correctly, that it's perfectly acceptable to just update each system manually with system:update() and <em class="text-italics">never</em> bother calling world:update() at all?<br><br>This would be preferable in my current project, as each system must process entities at certain times, and some other non-system code must be run <em class="text-italics">between</em> some systems as well.<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137970">Dr. Peeps</a> — Sun Apr 01, 2018 8:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[HanaIndiana]]></name></author>
+		<updated>2017-09-13T04:40:57+00:00</updated>
+
+		<published>2017-09-13T04:40:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215227#p215227</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215227#p215227"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215227#p215227"><![CDATA[
+Does anyone have an example of using the world:removeEntity(entity) function? I'm either not using it right, or it's working in a way I'm not expecting. I'm wondering if the system:onRemove(entity) needs to always be included as well. Either way, I'm lost.<br>The two demos bakpakin has in git (kibbles and weregoat), while helpful, don't use either of these functions.  <br><br>Here is a short example of one thing I've tried.<br>If I have an entity called "Word", added to the world like this:<br>world:add(Word(100,50,assets.lrgfont,"Game Title"))<br><br>To remove this entity, would I use this syntax?<br>world:removeEntity(Word)<br><br>I also have a system that uses this Entity, called "WordSystem". And I have a function belonging to this system called:<br>function WordSystem:onRemove(entity)<br>But the function doesn't appear to be called when the removeEntity function is used.<br>Any help is appreciated!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136809">HanaIndiana</a> — Wed Sep 13, 2017 4:40 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[emanevitaerc]]></name></author>
+		<updated>2017-03-18T21:27:27+00:00</updated>
+
+		<published>2017-03-18T21:27:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210834#p210834</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210834#p210834"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210834#p210834"><![CDATA[
+<blockquote class="uncited"><div>Try calling sortedSystem:onModify(). This is called once every time new items are added, and resorts the system.</div></blockquote>EDIT: Misread your comment, this does work for my intentions. Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137666">emanevitaerc</a> — Sat Mar 18, 2017 9:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2017-03-18T16:56:15+00:00</updated>
+
+		<published>2017-03-18T16:56:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210828#p210828</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210828#p210828"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210828#p210828"><![CDATA[
+Try calling sortedSystem:onModify(). This is called once every time new items are added, and resorts the system.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Sat Mar 18, 2017 4:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[emanevitaerc]]></name></author>
+		<updated>2017-03-16T17:59:37+00:00</updated>
+
+		<published>2017-03-16T17:59:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=210761#p210761</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=210761#p210761"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=210761#p210761"><![CDATA[
+How can I make a sorted processing system re-sort its entities? I'm using one to sort drawn entities by depth to get them in a proper draw order, but it only sorts them once upon their addition, so after their depth changes they stay in the same position in the draw system's entity list.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137666">emanevitaerc</a> — Thu Mar 16, 2017 5:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Zireael]]></name></author>
+		<updated>2017-02-23T11:46:17+00:00</updated>
+
+		<published>2017-02-23T11:46:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209985#p209985</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209985#p209985"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209985#p209985"><![CDATA[
+Are the two demos by bakpakin the only examples of how to use it? I wanted to change parts of my existing project to a component structure since I'm having problems with loops/diamond problem when using inheritance...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138380">Zireael</a> — Thu Feb 23, 2017 11:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phobos2077]]></name></author>
+		<updated>2017-02-20T10:03:54+00:00</updated>
+
+		<published>2017-02-20T10:03:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209768#p209768</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209768#p209768"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209768#p209768"><![CDATA[
+It would be awesome to be able to easily update systems without using the "world" but with an advantage of entity filters/cache. I guess it's possible to just create world with systems and entities, but iterate via system's update method (not world:update).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138887">phobos2077</a> — Mon Feb 20, 2017 10:03 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[airstruck]]></name></author>
+		<updated>2017-02-18T19:26:50+00:00</updated>
+
+		<published>2017-02-18T19:26:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209704#p209704</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209704#p209704"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209704#p209704"><![CDATA[
+<blockquote class="uncited"><div>A simple loop-over-all-entities works very well for many applications, but for something more complex, it can be easier to just worry about the per system logic and have something else take care of the iteration.</div></blockquote>I'm not really seeing it, is there an example of that posted somewhere? It seems to me that adding all systems to a world and calling world:update is going to be just as much trouble and about the same amount of code as writing a for-loop that applies all the systems. Of course the "immediate mode" solution is also quite flexible, it alleviates the need for differentiating between "draw" and "update" systems (or any other kind of system the user wants); it makes it very easy to accept additional arguments, or you could use return values to do things like "apply this system or that system or the other system," or you could still put all your systems in a table named "world" if you want to; you can apply all systems to each entity before processing the next (so you can do draw-pipelining stuff, for example), etc. The flexibility you get from applying systems like this can easily outweigh ease-of-use of the "world" approach in a complex application (assuming world approach is actually easier to use; not really convinced without looking at an example).<br><blockquote class="uncited"><div>Lastly, if you really think that caching is killing performance, you can turn it off with the nocache option per system. I honestly doubt it, though.</div></blockquote>I'm not saying it kills performance, although I did get slightly better performance out of a no-cache no-library solution over Tiny on some benchmarks that were supposed to represent somewhat realistic situations. That was a while ago, though, and Tiny has been updated since. What I meant was that the caching behavior necessitates some other complexities, like the need for manual invalidation when giving or taking away components on the fly, the need for "first-class" entity filters, and so on. This was more in response to phobos' suggestions about separation of concerns. I guess my point was that allowing for the possibility of caching (even if you can turn it off) necessitates a lot of complexity, so if someone's not sure the cache is actually going to make or break their game's performance that might be something to think about.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136704">airstruck</a> — Sat Feb 18, 2017 7:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bakpakin]]></name></author>
+		<updated>2017-02-18T17:18:56+00:00</updated>
+
+		<published>2017-02-18T17:18:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209698#p209698</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209698#p209698"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209698#p209698"><![CDATA[
+Results for filtering entities are cached, but results for filtering systems are not - the hope being that you have far fewer systems than you have entities.<br><br>The filtering for systems was a bit of a kludge I added so that I could I easily just add systems to the world and not to a specific list. There are other solutions that avoid this problem, such as overriding love.run and ordering your systems such that drawing happens after update. I honestly prefer this, but some people might not want to mess with love.run.<br><br>In response to airstruck, I would say this library at this point really offers more organizational benefits than performance benefits.<br>A simple loop-over-all-entities works very well for many applications, but for something more complex, it can be easier to just worry about the per system logic and have something else take care of the iteration.<br><br>Lastly, if you really think that caching is killing performance, you can turn it off with the nocache option per system. I honestly doubt it, though.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136429">bakpakin</a> — Sat Feb 18, 2017 5:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[phobos2077]]></name></author>
+		<updated>2017-02-17T04:19:53+00:00</updated>
+
+		<published>2017-02-17T04:19:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=209622#p209622</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=209622#p209622"/>
+		<title type="html"><![CDATA[Re: [Library] tiny-ecs - Fast Simple Entity Component System]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=209622#p209622"><![CDATA[
+That's exactly why I think single responsibility principle is good. If you split your solution into separate modules, each designed for specific problem, there is a better flexibility in how others can use your library. Of course you can also provide single-file build as well for someone who wants it.<br><br>From my perspective as a beginner, I don't want yet to use complex stuff like world and caching (because I lack experience, I don't know yet if I will need it or not), I just need the ECS structure. Other thing that slightly put me of is filters for systems. I think it might be an excess overhead to add flags like "isDrawingSystem" and then every time query for systems with this flag. Might be easier and more transparent to just specify 2 lists for "update" and "draw" systems and iterate over them directly. <br><br>Do I understand correctly that the result of filters are cached? So for example in weregoat game, Lua don't evaluate "updateSystems" filter function for every system EVERY frame?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138887">phobos2077</a> — Fri Feb 17, 2017 4:19 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

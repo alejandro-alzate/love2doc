@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/7721" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-05-06T21:56:30+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/7721</id>
+
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2020-05-06T21:56:30+00:00</updated>
+
+		<published>2020-05-06T21:56:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233532#p233532</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233532#p233532"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233532#p233532"><![CDATA[
+Is it able to create a feature request for love-loader?<br>About it's integration with 3DreamEngine's (<a href="https://github.com/3dreamengine/3DreamEngine" class="postlink">https://github.com/3dreamengine/3DreamEngine</a>) resourses?<br>Preloading *.obj files, *.3do files (innder format of subj), textures?<br>love-loader is an extremely useful piece of code, but It would be nice to use it with other libraries.<br>And I do not even understand what person should I talk about this: kikito, Tanner Rogalsky, 3DreamEngine's author or someone else.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Wed May 06, 2020 9:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tanner]]></name></author>
+		<updated>2016-09-23T22:31:50+00:00</updated>
+
+		<published>2016-09-23T22:31:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203963#p203963</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203963#p203963"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203963#p203963"><![CDATA[
+It still works well!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45757">Tanner</a> — Fri Sep 23, 2016 10:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2016-09-23T08:35:02+00:00</updated>
+
+		<published>2016-09-23T08:35:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203942#p203942</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203942#p203942"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203942#p203942"><![CDATA[
+I have not updated it in a while, but it still works as far as I know.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Sep 23, 2016 8:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[georgeprosser]]></name></author>
+		<updated>2016-09-23T07:24:03+00:00</updated>
+
+		<published>2016-09-23T07:24:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=203939#p203939</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=203939#p203939"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=203939#p203939"><![CDATA[
+Yo is this still alive?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134865">georgeprosser</a> — Fri Sep 23, 2016 7:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2016-01-18T08:58:39+00:00</updated>
+
+		<published>2016-01-18T08:58:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193706#p193706</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193706#p193706"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193706#p193706"><![CDATA[
+I guess by slimes argumentation, it does not make sense to use love-loader for streaming audio either, right?<br><br>Additionally to the workaround I use for sounds (<a href="https://github.com/kikito/love-loader/issues/15" class="postlink">https://github.com/kikito/love-loader/issues/15</a>) I simply load streaming audio without the loader:<div class="codebox"><p>Code: </p><pre><code>MUSIC['song'] = love.audio.newSource('music/05CreepyCastle.ogg', 'stream')</code></pre></div>instead of:<div class="codebox"><p>Code: </p><pre><code>LOADER.newSource(MUSIC, 'song', 'music/05CreepyCastle.ogg', 'stream')</code></pre></div>I have not tested the performance, but it works.<br><br>Btw., kikito, your libraries are great, they tend to ... work! Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Mon Jan 18, 2016 8:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2016-01-17T22:48:44+00:00</updated>
+
+		<published>2016-01-17T22:48:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193687#p193687</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193687#p193687"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193687#p193687"><![CDATA[
+I have not given a look at 0.10.x features for this lbrary just yet. I don't know when I will be able to do so (Pull requests are accepted and encouraged though)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 17, 2016 10:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2016-01-17T22:28:43+00:00</updated>
+
+		<published>2016-01-17T22:28:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193685#p193685</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193685#p193685"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193685#p193685"><![CDATA[
+<blockquote class="uncited"><div>Does anyone know a way to make it love 0.10.0 ready, e.g. load videos?</div></blockquote>Currently, love's video decoding is done by reading the file a bit at a time (and decoding the contents) in a separate thread already, so love-loader wouldn't help much there.<br><br>What love-loader doesn't do properly right now is load Images which are Compressed Textures (it should use [wiki]love.image.isCompressed[/wiki] to determine whether to load the file as a [wiki]CompressedImageData[/wiki] or a regular ImageData, before eventually passing the data to love.graphics.newImage).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Jan 17, 2016 10:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2016-01-17T21:17:17+00:00</updated>
+
+		<published>2016-01-17T21:17:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=193680#p193680</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=193680#p193680"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=193680#p193680"><![CDATA[
+Does anyone know a way to make it work with slam? (<a href="https://github.com/vrld/slam" class="postlink">https://github.com/vrld/slam</a>)<br>I get some hard to debug error (thrown in a thread) when I have love-loader require slam.<br><br>Does anyone know a way to make it love 0.10.0 ready, e.g. load videos?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Sun Jan 17, 2016 9:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[georgeprosser]]></name></author>
+		<updated>2015-08-02T23:52:17+00:00</updated>
+
+		<published>2015-08-02T23:52:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187364#p187364</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187364#p187364"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187364#p187364"><![CDATA[
+This is fantastic, thanks for making this and sharing it with everyone.<br><br>Just implemented a loading screen into my audio-heavy game and it immediately feels much more professional.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134865">georgeprosser</a> — Sun Aug 02, 2015 11:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-30T15:25:05+00:00</updated>
+
+		<published>2014-06-30T15:25:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170377#p170377</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170377#p170377"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170377#p170377"><![CDATA[
+Nice lib, I almost tried to write something like it yesterday, but eventually loaded the music as "stream" (and didn't play it using Tesound). Our game still has some loading delays but it's not as bad as with the music.<br>I'm sure it will come in handy for the next project though.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Mon Jun 30, 2014 3:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AlexYeCu]]></name></author>
+		<updated>2014-06-30T08:21:13+00:00</updated>
+
+		<published>2014-06-30T08:21:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170362#p170362</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170362#p170362"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170362#p170362"><![CDATA[
+Thanks for a useful library! A question: how to restart love-loader correctly?<br>For example:<br>Step 1: We are loading graphical elements and music for main menu.<br>Step 2: We are chainging currentState var, and one more to tell what state should be next, then making <div class="codebox"><p>Code: </p><pre><code>currentState.start(media, finishCallback)</code></pre></div> by «START GAME» button pressing to load resources for a  level. Bar and log show us that all resources are loaded, but next state won`t start. Guess, we need to somehow reset finish/allLoaded callback. So, how to do that?<br><br>SOLVED: <div class="codebox"><p>Code: </p><pre><code>currentState.start(media, loadingFinished)</code></pre></div>Just checked everything carefully.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135160">AlexYeCu</a> — Mon Jun 30, 2014 8:21 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-01-12T23:28:09+00:00</updated>
+
+		<published>2014-01-12T23:28:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160648#p160648</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160648#p160648"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160648#p160648"><![CDATA[
+This Library has been ported to LÖVE 0.9.0 by the great <a href="https://github.com/TannerRogalsky" class="postlink">Tanner Rogalsky</a>. He did a great job, and left the external interface of the lib unchanged.<br><br>I am hereby releasing version 2.0.0.<br><br>I have update the <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=7721&amp;p=47979#p47979" class="postlink">OP</a> with a demo compatible with LÖVE 0.9.0.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 12, 2014 11:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-08-29T15:12:18+00:00</updated>
+
+		<published>2012-08-29T15:12:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=64392#p64392</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=64392#p64392"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=64392#p64392"><![CDATA[
+¡Hi there!<br><br>I have already told you this (¡In person! (¡In Kyoto! How cool is that?)) but in case it helps others: I think love-loader is better-suited for implementing "an animation while loading resources". I don't think it will work for doing "dynamic loading", node.js-style, whithout heavy modifications. Nevertheless, you could use love-loader as a way to understand how threads work, and then do your own thing.<br><br>Regards!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Aug 29, 2012 3:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kexisse]]></name></author>
+		<updated>2012-08-29T06:08:52+00:00</updated>
+
+		<published>2012-08-29T06:08:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=64358#p64358</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=64358#p64358"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=64358#p64358"><![CDATA[
+This library looks awesome. I'm thinking of using it in my project.<br><br>I create a bunch of Entities instances with images, and then set their properties based on the image size/width etc.<br><br>Currently:<div class="codebox"><p>Code: </p><pre><code>function Entity:initialize()  -- load image  -- set propertiesend</code></pre></div>With love-loader there resource isn't ready straight away, so I'm thinking about adding a single callback option to the newImage method.<br>So the code would look like this:<div class="codebox"><p>Code: </p><pre><code>function Entity:initialize()  loader.newImage(... function()    -- set properties  end)end</code></pre></div>It's possible that draw() will get called before the image finishes loading. I'm thinking about checking self.image before drawing every time, and if it's not there, I'll draw a placeholder image. I'll be instantiating objects off-screen so hopefully the player should never see the placeholder image.<br><br>I think I know how to do this, I was just wondering if others think this is a good idea.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53361">kexisse</a> — Wed Aug 29, 2012 6:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-09T09:28:57+00:00</updated>
+
+		<published>2012-05-09T09:28:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=56451#p56451</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=56451#p56451"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=56451#p56451"><![CDATA[
+Nice. Guess BattleCry was updated with this new version too. Going to check.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Wed May 09, 2012 9:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-05-09T07:37:27+00:00</updated>
+
+		<published>2012-05-09T07:37:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=56446#p56446</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=56446#p56446"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=56446#p56446"><![CDATA[
+Update: v1.1.2 fixes an error on windows. I still have to update the demo on this OP with the latest version. Will do so this evening.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed May 09, 2012 7:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-02-02T22:21:36+00:00</updated>
+
+		<published>2012-02-02T22:21:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48609#p48609</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48609#p48609"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48609#p48609"><![CDATA[
+<blockquote class="uncited"><div>&lt;Awesome feedback&gt;</div></blockquote>Thanks! I've updated love-loader to 1.1.0. This new version is able to load imageData and soundData, and is forward-compatible with LÖVE 0.8.x.<br><br>I'm updating the demo on the OP.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Feb 02, 2012 10:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-02-02T17:55:39+00:00</updated>
+
+		<published>2012-02-02T17:55:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48591#p48591</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48591#p48591"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48591#p48591"><![CDATA[
+I had to make two changes to make it work, love-loader.lua:124 still used thread:send, and in main I replaced your quit with:<div class="codebox"><p>Code: </p><pre><code>  if key == 'escape' then   local f = love.event.quit or love.event.push  f("q")  end</code></pre></div>EDIT: Btw, love.event.quit doesn't take any arguments, but also ignores surplus ones, which is why this works. If you wonder why push("q") doesn't work any more, it's because events now have long names, so it's push("quit") instead.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Thu Feb 02, 2012 5:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-02-01T12:03:07+00:00</updated>
+
+		<published>2012-02-01T12:03:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48472#p48472</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48472#p48472"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48472#p48472"><![CDATA[
+<blockquote class="uncited"><div>I know, my reasoning was that sometimes when having loaded stuff in a parallel fashion for a while, you might want to simply cut to the chase and wait, I guess with your code that doesn't really matter too much, but my loader spread things out over the available loading time.</div></blockquote>Just to make sure we understand each other: changing the game state on the "finishedLoading" callback accomplishes just that; you stay on the "loading state" until everything is loaded. But love.update() and love.draw() are still being called every frame.<br><br>EDIT: I made a new (alpha for now) version. Please find modified demo for that version below.<br><br>On this new version:<ul><li>I have changed names of lots of internal things to make the code more clear</li><li>I have added support for soundData(only when creating it from a path or decoder) and ImageData</li><li>I have added forward-compatibility with 0.8.x thread methods</li><li>After loading, the spacebar will play a source loaded directly with love-loader, while the intro key will play a source created from a soundData loaded with love-loader.</li></ul>I'd be especially grateful if you could please test in in 0.8.x, since I don't have it yet.<br><br>If everything goes well, I'll release the new version with those enhancements tomorrow.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=3890">love-loader.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Feb 01, 2012 12:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-02-01T09:52:50+00:00</updated>
+
+		<published>2012-02-01T09:52:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48467#p48467</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48467#p48467"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48467#p48467"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>local function set(thread, key, value)  local f = thread.send or thread.set  return f(thread, key, value)end</code></pre></div>I don't know how well userdata behaves with these manipulations, but if it works, that'd be fine.<br><blockquote class="uncited"><div>That goes pretty much against what I wanted to accomplish. [snip]</div></blockquote>I know, my reasoning was that sometimes when having loaded stuff in a parallel fashion for a while, you might want to simply cut to the chase and wait, I guess with your code that doesn't really matter too much, but my loader spread things out over the available loading time.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Wed Feb 01, 2012 9:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-02-01T09:24:11+00:00</updated>
+
+		<published>2012-02-01T09:24:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48462#p48462</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48462#p48462"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48462#p48462"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Is that really a blocking call that benefits from loading in another thread?</div></blockquote>Not really. I mean it blocks, but it really only allocates some memory, and therefore takes barely any time.</div></blockquote>I already figured that much on my <a href="https://love2d.org/forums/viewtopic.php?f=4&amp;t=7749" class="postlink">cry for help in the support forum</a>. I just have been a bit busy this week to post much or do any work on love-loader. But thanks for confirming.<br><blockquote class="uncited"><div>As for the send/receive =&gt; set/get change, in the code I've written that's supposed to be portable I define local functions that either call send or set depending on the love version, and then use that. (Same goes for receive and get, of course.)</div></blockquote>Makes sense. I don't like having to test for the concrete love version though. Seems a bit brittle. How about testing whether the thread has a method or not?<div class="codebox"><p>Code: </p><pre><code>local function set(thread, key, value)  local f = thread.send or thread.set  return f(thread, key, value)end</code></pre></div>And same with receive/get. Does it look right to you?<br><blockquote class="uncited"><div>EDIT: Something I thought of while looking at the code, perhaps you could implement a function that waits for the thread to finish, if it is not? It's something I've implemented in the past, where if someone was to skip the intro, it would just start loading all (remaining) resources in a blocking way.</div></blockquote>That goes pretty much against what I wanted to accomplish. The whole idea is not blocking the main thread while loading resources. But there is an alternative. The command that "starts the loading thread" is loader.start(finishCallback, loadedResourceCallback). They are both optional. But finishcallback is very recommended (in fact, in the initial version of love-loader it was mandatory).<br><br>One can check that everything has been loaded by setting a boolean, or changing the game state from "loading" to "finishedLoading" in the finishCallback. While it is loading, you can play an animation of a dancing fish, or what have you, and it will play without hiccups.<br><br>A much worse alternative, but one that also works, would be comparing love.loadedCount with love.resourceCount on each update cycle. When love.loadedCount == love.resourceCount, all files have been loaded. But your code will be much cleaner if you just use finishCallback to perform the action of that if.<br><br>My point is - if you want to block the main thread while loading, it's better not using love-loader at all. Its core idea is avoiding blocking on the main thread.<br><br>The second loader.start parameter is a callback called every time an individual resource is finished loading. It receives some parameters, like what kind of resource was it, what was its name, and where it is stored. If you open the demo in the console, you will see that loadedResourceCallback prints lots of stuff on it.<br><br>Regarding the loading of imageData/soundData: I'm pretty sure that if I'm to support those, soundDatas will only be "supported" while being created from a path or a decoder. I'm also investigating whether it would be possible to get a soundData or imageData from a source or image <a href="https://bitbucket.org/rude/love/issue/364/image-getimagedata-and-source-getsounddata" class="postlink">in an issue</a>. Will update this when I know more.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Feb 01, 2012 9:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-01-31T19:07:09+00:00</updated>
+
+		<published>2012-01-31T19:07:09+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48410#p48410</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48410#p48410"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48410#p48410"><![CDATA[
+<blockquote class="uncited"><div>Is that really a blocking call that benefits from loading in another thread?</div></blockquote>Not really. I mean it blocks, but it really only allocates some memory, and therefore takes barely any time.<br><br>As for the send/receive =&gt; set/get change, in the code I've written that's supposed to be portable I define local functions that either call send or set depending on the love version, and then use that. (Same goes for receive and get, of course.)<br><div class="codebox"><p>Code: </p><pre><code>local setlocal getif love._version_major &gt; 0 or love._version_minor &gt; 7 then    set = function(thread, key, value)        return thread:set(key, value)    end    get = function(thread, key)        return thread:get(key)    endelse    set = function(thread, key, value)        return thread:send(key, value)    end    get = function(thread, key)        return thread:receive(key)    endend</code></pre></div>(Untested, I may have borked the version check.)<br><br>EDIT: Something I thought of while looking at the code, perhaps you could implement a function that waits for the thread to finish, if it is not? It's something I've implemented in the past, where if someone was to skip the intro, it would just start loading all (remaining) resources in a blocking way.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Tue Jan 31, 2012 7:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-01-29T23:28:36+00:00</updated>
+
+		<published>2012-01-29T23:28:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48154#p48154</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48154#p48154"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48154#p48154"><![CDATA[
+Regarding soundData: I'm really wondering if it makes sense at all to include the soundDatas created from 4 integers on this lib. Is that really a blocking call that benefits from loading in another thread?<br><br>I really think I need to understand this better before modifying the lib unnecessarily. I have created a <a href="https://love2d.org/forums/viewtopic.php?f=4&amp;t=7749" class="postlink">separate post demanding explanations</a>.<br><blockquote class="uncited"><div>I think it should be labeled "License.txt" or "OCLicense.txt" or something more obvious.</div></blockquote>Will do. EDIT: Done.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Jan 29, 2012 11:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2012-01-29T22:57:29+00:00</updated>
+
+		<published>2012-01-29T22:57:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48146#p48146</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48146#p48146"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48146#p48146"><![CDATA[
+Tru dat.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Sun Jan 29, 2012 10:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2012-01-29T22:51:11+00:00</updated>
+
+		<published>2012-01-29T22:51:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48142#p48142</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48142#p48142"/>
+		<title type="html"><![CDATA[Re: love-loader: load resources in a separate thread, easily]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48142#p48142"><![CDATA[
+I think it should be labeled "License.txt" or "OCLicense.txt" or something more obvious.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Sun Jan 29, 2012 10:51 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

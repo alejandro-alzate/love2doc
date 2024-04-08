@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84525" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2018-04-02T22:05:59+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84525</id>
+
+		<entry>
+		<author><name><![CDATA[yintercept]]></name></author>
+		<updated>2018-04-02T22:05:59+00:00</updated>
+
+		<published>2018-04-02T22:05:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=219605#p219605</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=219605#p219605"/>
+		<title type="html"><![CDATA[Re: [library] fLUIds - A love-imgui API wrap for simplicity]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=219605#p219605"><![CDATA[
+Just want to say thanks for the library, been a breeze working with it. Thanks again.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140017">yintercept</a> — Mon Apr 02, 2018 10:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milk]]></name></author>
+		<updated>2017-11-05T09:35:16+00:00</updated>
+
+		<published>2017-11-05T09:35:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216304#p216304</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216304#p216304"/>
+		<title type="html"><![CDATA[Re: [library] fLUIds - A love-imgui API wrap for simplicity]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216304#p216304"><![CDATA[
+<blockquote class="uncited"><div>Oh, why changed the name?</div></blockquote>because succ wasn't exactly subtle, at least fLUIds kind of makes sense ... fL(ove-imgui)(U)ser(Interface)ds<br>and because people's feefee's<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138192">milk</a> — Sun Nov 05, 2017 9:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[yetneverdone]]></name></author>
+		<updated>2017-11-04T22:31:23+00:00</updated>
+
+		<published>2017-11-04T22:31:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216295#p216295</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216295#p216295"/>
+		<title type="html"><![CDATA[Re: [library] fLUIds - A love-imgui API wrap for simplicity]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216295#p216295"><![CDATA[
+Oh, why changed the name?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138439">yetneverdone</a> — Sat Nov 04, 2017 10:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milk]]></name></author>
+		<updated>2017-11-04T10:51:13+00:00</updated>
+
+		<published>2017-11-04T10:51:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216262#p216262</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216262#p216262"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216262#p216262"><![CDATA[
+<blockquote class="uncited"><div>Sadly I don't see how this library should help make GUI's made with Imgui "less ugly".<br>I find writing a GUI in an immediate way very easy and flexible.<br><br>With this however, you still need to store your variables somewhere. Where that location may be is not "fixed" by your library, so that "problem" still persists. Maybe even made worse.</div></blockquote>The love-imgui example shows windows being opened and closed with arbitrary booleans...<div class="codebox"><p>Code: </p><pre><code>local showTestWindow = falselocal showAnotherWindow = falseif showTestWindow ...</code></pre></div>If you were to have a debug system with over 100 booleans to specify if a window should be opened or closed it'd get a bit ridiculous. All this lib does is manage windows. This would also mount up in your love.update() wherein you would have &gt;100 imgui.Begin()'s, contrasted with a single succ.Update()/succ.Draw()<br><blockquote class="uncited"><div>On top of that, you now also need to create, keep track of, and sometimes destroy a window. Just unnecessary work...</div></blockquote>Also, windows are stored in succ.clients - you don't even need to need to define a variable for a window, you could just call succ.Window() on its own in love.load() ..., defining vars is just so you can run the succ methods, (e.g. :setAlign, :destroy)<br><blockquote class="uncited"><div>So then the only feature I see is being able to put windows next to each other in different ways.<br>However, I can't think of any situation that I would want that.<br>If I want a GUI with a weirdly aligned layout, I'd just use Imgui's child system.</div></blockquote>Maybe not for you, but I've known a few people I've talked to that liked the idea of window positioning the way this lib does, most people simply want make things quickly and without any headaches, not spend ages reading through the imgui documentation which is loaded into  c++ file  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"><br><blockquote class="uncited"><div>I also don't understand the library name. <blockquote class="uncited"><div>A term for fellatio.</div></blockquote>Im not agains't "Love related" library names, as long as they make sense. This just seems like it was named "succ" for the sake of naming a library that.</div></blockquote>I put almost no thought into the name, no need to get your panties in a bunch because you're some kind of celibate <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink">, you can just as easily change it by changing the require name.<br><br>At the end of the day it's just your opinion man, if you don't like the lib thats fine, you do you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138192">milk</a> — Sat Nov 04, 2017 10:51 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2017-11-03T15:57:31+00:00</updated>
+
+		<published>2017-11-03T15:57:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216237#p216237</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216237#p216237"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216237#p216237"><![CDATA[
+<span style="font-size:50%;line-height:116%"><em class="text-italics">Children please, if i were to stoop to such levels, i'd say that both of you should go and do the proverbial library name action <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></em></span><br><br>In any case, why stop people from trying to make a library work as they would rather see it work?<br><br>If they enjoy retained mode more, instead of an immediate mode solution, while still using the same library that actually is somewhat decent, even if only for tinkering, in löve where the selection of working UI-s isn't the top type of lib being worked on, then why stop them?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Fri Nov 03, 2017 3:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[brogrammer]]></name></author>
+		<updated>2017-11-03T15:50:16+00:00</updated>
+
+		<published>2017-11-03T15:50:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216235#p216235</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216235#p216235"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216235#p216235"><![CDATA[
+people create and share things and are free to give them a name of their choice. they don't have to make sense and they don't require your approval. imma write a lib named FÜCK just to spite you and your entitlement lol<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139557">brogrammer</a> — Fri Nov 03, 2017 3:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tjakka5]]></name></author>
+		<updated>2017-11-03T15:25:36+00:00</updated>
+
+		<published>2017-11-03T15:25:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216233#p216233</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216233#p216233"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216233#p216233"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Im not agains't "Love related" library names, as long as they make sense. </div></blockquote>you from the library name police?</div></blockquote>There have been numerous discussions about "Love" related naming of libraries. The general opinion is that they should either have a reason to be called that, or even just not be called that at all.<br><br>There have been multiple libraries posted here with sexual names without any reason. (Off the top of my head I know "Nut", "Moan", "Lovetoys")<br><br>And a few that make actual sense, even taking some thought to 'get': Love Bone, HC.<br><br>Either way, naming your library "Succ" (Which is also used as a meme) just for the sake of naming that is tasteless and childish in my opinion, and should be considered to be changed.<br><br><br>That comment about the name was only a small part of my critique, and should not be the focus of this thread.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134440">Tjakka5</a> — Fri Nov 03, 2017 3:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[brogrammer]]></name></author>
+		<updated>2017-11-03T14:25:02+00:00</updated>
+
+		<published>2017-11-03T14:25:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216231#p216231</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216231#p216231"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216231#p216231"><![CDATA[
+<blockquote class="uncited"><div>Im not agains't "Love related" library names, as long as they make sense. </div></blockquote>you from the library name police?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139557">brogrammer</a> — Fri Nov 03, 2017 2:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tjakka5]]></name></author>
+		<updated>2017-11-03T13:37:43+00:00</updated>
+
+		<published>2017-11-03T13:37:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216229#p216229</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216229#p216229"/>
+		<title type="html"><![CDATA[Re: [library] succ -  A love-imgui helper inspired by LaTeX]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216229#p216229"><![CDATA[
+Sadly I don't see how this library should help make GUI's made with Imgui "less ugly".<br>I find writing a GUI in an immediate way very easy and flexible.<br><br>With this however, you still need to store your variables somewhere. Where that location may be is not "fixed" by your library, so that "problem" still persists. Maybe even made worse.<br><br>On top of that, you now also need to create, keep track of, and sometimes destroy a window. Just unnecessary work by something that could be done as easy as:<div class="codebox"><p>Code: </p><pre><code>if myGuiIsOpen and Imgui.Begin("My GUI") then  -- Do stuffend; Imgui.End()</code></pre></div>So then the only feature I see is being able to put windows next to each other in different ways.<br>However, I can't think of any situation that I would want that.<br>If I want a GUI with a weirdly aligned layout, I'd just use Imgui's child system.<br><br>I also don't understand the library name. <blockquote class="uncited"><div>A term for fellatio.</div></blockquote>Im not agains't "Love related" library names, as long as they make sense. This just seems like it was named "succ" for the sake of naming a library that.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134440">Tjakka5</a> — Fri Nov 03, 2017 1:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[milk]]></name></author>
+		<updated>2017-11-04T21:41:09+00:00</updated>
+
+		<published>2017-11-02T20:34:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=216223#p216223</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=216223#p216223"/>
+		<title type="html"><![CDATA[[library] fLUIds - A love-imgui API wrap for simplicity]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=216223#p216223"><![CDATA[
+love-imgui API wrap for simplicity, inspired by LaTeX TikZ node positioning.<br>Depends on love-imgui: <a href="https://github.com/slages/love-imgui" class="postlink">https://github.com/slages/love-imgui</a> , you'll need to compile the binaries or use the ones provided on that GitHub link.<br><br>As you can see by the love-imgui example, it's pretty, well, <span style="font-size:50%;line-height:116%">ugly</span> un-manageable to say the least, I made this lib to solve that problem.<br>This library simplifies the usage of love-imgui so that you can use it in a neat OO fashion, with some helpers of course.<br><br><strong class="text-strong">Documentation: <span style="font-size:110%;line-height:116%"><a href="https://github.com/twentytwoo/fLUIds" class="postlink">https://github.com/twentytwoo/fLUIds</a></span></strong><br><br>Essentially;<div class="codebox"><p>Code: </p><pre><code>  drawable = function() imgui.Text("Hello World!") end  window_1 = fluids.Window("Window 1", drawable, {10, 10, 300, 200})  window_2 = fluids.Window("Window 2", drawable, {0, 0, 100, 50})  window_2:setAlign({"below of", "right"}, window_1)    -- Or a nameless window  fluids.Window("I am stored nowhere - spooky", drawable, {10, 20, 30, 40}, {"NoTitleBar"}) </code></pre></div>(drawable is different in the picture shown, but the same concept)<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15658&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15658" class="postimage" alt="2017-11-02-200639_1366x768_scrot.png" /></a></dt></dl></div>To be a nice person I've decided to renamed the library from succ to fLUIds - fL(ove-imgui)U(ser)I(interface)ds <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138192">milk</a> — Thu Nov 02, 2017 8:34 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

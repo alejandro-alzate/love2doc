@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/10809" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2014-08-07T12:48:53+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/10809</id>
+
+		<entry>
+		<author><name><![CDATA[Llamageddon]]></name></author>
+		<updated>2014-08-07T12:48:53+00:00</updated>
+
+		<published>2014-08-07T12:48:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=172202#p172202</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=172202#p172202"/>
+		<title type="html"><![CDATA[Re: [library] libxml]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=172202#p172202"><![CDATA[
+This looks really awesome, but without a license, it's unusable, you really should add one. If you're not sure, and want it to be open source, just go with MIT, find a copy, and put it in the github repo.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135466">Llamageddon</a> — Thu Aug 07, 2014 12:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[rdlaitila]]></name></author>
+		<updated>2012-09-06T11:25:51+00:00</updated>
+
+		<published>2012-09-06T11:25:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=64859#p64859</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=64859#p64859"/>
+		<title type="html"><![CDATA[[library] libxml]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=64859#p64859"><![CDATA[
+Hello All,<br><br>I would like to present my newly released library <a href="https://love2d.org/wiki/libxml" class="postlink">libxml</a>. The code was ripped from, and slightly re-factored for more strict XML use from my other ongoing project <a href="https://love2d.org/wiki/lure" class="postlink">LURE</a>. The library is the first incarnation to allow lovers to load, save, and traverse XML documents using standard XML DOM interfaces. Let me show you some examples:<br><br>XML Document:<div class="codebox"><p>Code: </p><pre><code>&lt;players&gt;&lt;player name="Player1"&gt;&lt;location xPos="100" yPos="200"/&gt;&lt;item type="weapon" class="rifle" /&gt;&lt;item type="ammo" class="rifle" /&gt;&lt;item type="healthpack" /&gt;&lt;item type="healthpack" /&gt;&lt;item type="healthpack" /&gt;&lt;/player&gt;&lt;player name="Player2"&gt;&lt;location xPos="500" yPos="200"/&gt;&lt;item type="weapon" class="pistol" /&gt;&lt;item type="ammo" class="pistol" /&gt;&lt;item type="healthpack" /&gt;&lt;/player&gt;&lt;/players&gt;</code></pre></div>Loading the players.xml document:<div class="codebox"><p>Code: </p><pre><code>function love.load()require "libxml//libxml"xmldoc = libxml.load("player.xml")end</code></pre></div>You can now traverse the xml document much like you would expect from languages such as javascript etc:<div class="codebox"><p>Code: </p><pre><code>function love.load()require "libxml//libxml"xmldoc = libxml.load("player.xml")print(xmldoc.documentElement.childNodes[1].getAttribute("name"))        --OUTPUT: Player1end</code></pre></div>You can even create new elements and insert them into the document:<div class="codebox"><p>Code: </p><pre><code>function love.load()require "libxml//libxml"xmldoc = libxml.load("player.xml")newPlayer = xmldoc.createElement("player")newPlayer.setAttribute("name", "player3")newItem = xmldoc.createElement("item")newItem.setAttribute("type", "healthpack")newPlayer.appendChild(newItem)xmldoc.documentElement.appendChild(newPlayer)end</code></pre></div>And to save your newly modified document to file, simply call the libxml.save() function:<div class="codebox"><p>Code: </p><pre><code>function love.load()require "libxml//libxml"xmldoc = libxml.load("player.xml")newPlayer = xmldoc.createElement("player")newPlayer.setAttribute("name", "player3")newItem = xmldoc.createElement("item")newItem.setAttribute("type", "healthpack")newItem.isSelfClosing = truenewPlayer.appendChild(newItem)xmldoc.documentElement.appendChild(newPlayer)libxml.save(xmldoc, "player-new.xml")end</code></pre></div>The above would generate the following new xml in player-new.xml in your user directory:<div class="codebox"><p>Code: </p><pre><code>&lt;players&gt;&lt;player name="Player1"&gt;&lt;location xPos="100" yPos="200" /&gt;&lt;item type="weapon" class="rifle" /&gt;&lt;item type="ammo" class="rifle" /&gt;&lt;item type="healthpack" /&gt;&lt;item type="healthpack" /&gt;&lt;item type="healthpack" /&gt;&lt;/player&gt;&lt;player name="Player2"&gt;&lt;location xPos="500" yPos="200" /&gt;&lt;item type="weapon" class="pistol" /&gt;&lt;item type="ammo" class="pistol" /&gt;&lt;item type="healthpack" /&gt;&lt;/player&gt;&lt;player name="player3"&gt;&lt;item type="healthpack" /&gt;&lt;/player&gt;&lt;/players&gt;</code></pre></div>Lastly for now, the library also does dynamic node name traversal (XPath equivalent not implemented):<div class="codebox"><p>Code: </p><pre><code>function love.load()require "libxml//libxml"xmldoc = libxml.load("player.xml")print( xmldoc.players.player[2].getAttribute("name") )--OUTPUT: Player 2print( xmldoc.players.player[2].location.getAttribute("xPos") )--OUTPUT: 500print( xmldoc.players.player[2].item[2].getAttribute("type") )--OUTPUT: healthpackend</code></pre></div><strong class="text-strong">KNOWN LIMITATIONS</strong><ul><li>- Does not understand XML Namespaces<br>- Does not parse document &lt;? xml ?&gt; tags yet<br>- Does not parse document processing instructions<br>- Does not have XPath capabilities yet<br>- The parser is non-validating, so you must ensure your xml structure is proper<br>- Everything including node tagNames are case-sensative<br>- Does not expand entity references</li></ul>Let me know what you guys think. While its an ealy release, if you guys find any show-stopper bugs or would like a feature implimented please visit the gitup issues page to submit bugs/feature requests. <a href="https://github.com/admin36/libxml/issues" class="postlink">https://github.com/admin36/libxml/issues</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3924">rdlaitila</a> — Thu Sep 06, 2012 11:25 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

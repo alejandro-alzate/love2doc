@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/7174" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2014-06-11T19:10:40+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/7174</id>
+
+		<entry>
+		<author><name><![CDATA[BoundSyco]]></name></author>
+		<updated>2014-06-11T19:10:40+00:00</updated>
+
+		<published>2014-06-11T19:10:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169571#p169571</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169571#p169571"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169571#p169571"><![CDATA[
+There is a minor error in the code which causes incorrect (for A*) path generation.<br><br>Wrong (Existing Implementation)<br><img src="https://love2d.org/imgmirrur/irmRlqY.png" class="postimage" alt="Image"><br>Correct<br><img src="https://love2d.org/imgmirrur/14HZwLr.png" class="postimage" alt="Image"><br><br>The error is a very minor one (and unfortunately quite common). You will notice that the path returned in the existing implementation is not optimal. <br><br>An exaggeration of this problem is demonstrated in the following image. Those two inward dips towards the goal are the result of an incorrect path recreation.<br><br>Very Bad<br><img src="https://love2d.org/imgmirrur/iAFw2OD.png" class="postimage" alt="Image"><br><br>This kind of path generation is a partial "Best First" implementation with lots of overhead. (Best First requires exponentially fewer calculations than A* and the paths generated here are marginally better than best first).<br><br>The fix exists in the astar.lua file, lines 39-40 (two lines).<br>Existing:<div class="codebox"><p>Code: </p><pre><code>39: while path[#path].pathLoc ~= startPos do40:table.insert(path, closedSet[path[#path].pCloseLoc])41: end</code></pre></div>Should be:<div class="codebox"><p>Code: </p><pre><code>39: while path[#path].parent ~= path[#path] do40:table.insert(path, path[#path].parent)41: end</code></pre></div>I have attached a corrected version.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=10098">AStar.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135220">BoundSyco</a> — Wed Jun 11, 2014 7:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[LumoBlaze]]></name></author>
+		<updated>2014-04-23T14:29:05+00:00</updated>
+
+		<published>2014-04-23T14:29:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=166845#p166845</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=166845#p166845"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=166845#p166845"><![CDATA[
+Hey I'm really new to LUA and Love2d, and I've been trying to implement this into my little test project, and can't seem to figure out how to get the pathfinding to start. Is there any sort of tutorial on like, how to use move a cube from Point A to Player? <br>Thanks in advance<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134940">LumoBlaze</a> — Wed Apr 23, 2014 2:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-23T17:16:41+00:00</updated>
+
+		<published>2012-05-23T17:16:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=57494#p57494</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=57494#p57494"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=57494#p57494"><![CDATA[
+Right,<br><br>Well, after lot of reading, headaches and coffee, I think I succeeded in it.<br>I'll be posting as soon as I get the code clean, with a graphical demo.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Wed May 23, 2012 5:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-05-23T16:39:52+00:00</updated>
+
+		<published>2012-05-23T16:39:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=57491#p57491</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=57491#p57491"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=57491#p57491"><![CDATA[
+<a href="http://aigamedev.com/open/tutorial/symmetry-in-pathfinding/" class="postlink">http://aigamedev.com/open/tutorial/symm ... thfinding/</a><br>Here's the same article of AIGameDev, with a surprise appearance by our very own kikito.<br><br>From what I understand, pruning is just using logic that A* doesn't take into account. Keep in mind that JPS (or at least the JPS described in this article) relies on uniform edge costs throughout the graph, otherwise, some of the assumptions made are not necessarily true.<br><br><img src="http://harablog.files.wordpress.com/2011/09/jps_natural.png" class="postimage" alt="Image"><br><br>For orthogonal movement, it's pretty simple. If my move is 4-&gt;X, then all of the grayed-out boxes either:<br><ul><li>Have no path that could be shorter when going through X than what was available when going directly from 4 (vertexes 1, 2, 6, 7);</li><li>Have a symmetrically equal path through a different node (vertexes 3, 8).</li></ul>Diagonal movement follows the first rule, but doesn't seem to follow the second. The only reason I can think for this is when searching for the next jump point successor, diagonal movements give more available options.<br><br><img src="http://harablog.files.wordpress.com/2011/09/jps_forced.png" class="postimage" alt="Image"><br><br>When a non-uniform neighbor set appears (meaning a wall or other obstacle is in your set of neighbors), or for diagonal movement when one of its branches reaches a wall, standard pruning doesn't work, and at that point you need to actually call A* to figure out your next move.<br><br><img src="http://harablog.files.wordpress.com/2011/09/jps_recursestraight.png" class="postimage" alt="Image"><br><br><img src="http://harablog.files.wordpress.com/2011/09/jps_recursediagonally.png" class="postimage" alt="Image"><br>(ignore the transparent tile)<br><br>The other thing is (which is something I didn't quite understand until now) you only actually call A* when you reach a jump point successor. So it all hinges on the speed of the pruning to find the next successor, which is clearly going to be faster than an A* call for orthogonal movement, and likely faster than a call for diagonal movement (which must make multiple orthogonal calls during each step).<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Wed May 23, 2012 4:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-23T12:36:44+00:00</updated>
+
+		<published>2012-05-23T12:36:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=57481#p57481</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=57481#p57481"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=57481#p57481"><![CDATA[
+Sorry, I missed that.<br>Well, I am actually trying to have Jump Point Search working. I read the papers, and I think I go the general idea (how it works, in the outline).<br>But some parts remains a bit unclear...Pruning rules, for instance...<br>Well, I do have something working, yet the are are some odds. With diagonal moves.<br>I'll be looking to it. In the meantime, if one have extra information that might help, please post.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Wed May 23, 2012 12:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-05-15T19:59:04+00:00</updated>
+
+		<published>2012-05-15T19:59:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56936#p56936</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56936#p56936"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56936#p56936"><![CDATA[
+A few lines above that link:<br><blockquote class="uncited"><div>Links to pathfinding optimization articles (who found the article will be noted in parentheses):</div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Tue May 15, 2012 7:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-15T19:25:15+00:00</updated>
+
+		<published>2012-05-15T19:25:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56933#p56933</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56933#p56933"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56933#p56933"><![CDATA[
+<blockquote class="uncited"><div>No, lol.</div></blockquote>Huh...I said it because of the very <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=7174#p46336" class="postlink">last lines</a> of your first post.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue May 15, 2012 7:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-05-15T19:14:35+00:00</updated>
+
+		<published>2012-05-15T19:14:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56931#p56931</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56931#p56931"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56931#p56931"><![CDATA[
+No, lol. Binary heaps and shortest path algorithms have been used together for a long, long time.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Tue May 15, 2012 7:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-15T19:11:07+00:00</updated>
+
+		<published>2012-05-15T19:11:07+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56929#p56929</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56929#p56929"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56929#p56929"><![CDATA[
+Just to mention that I tried to write another implentation of binary-heaps.<br>You can find it <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=9213" class="postlink">here</a>.<br><br>@MarekkPie : Out of topic, are you the original author of <a href="http://www.policyalmanac.org/games/binaryHeaps.htm" class="postlink">Using Binary Heaps in A* Pathfinding</a> ?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Tue May 15, 2012 7:11 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-05-09T20:43:46+00:00</updated>
+
+		<published>2012-05-09T20:43:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56558#p56558</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56558#p56558"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56558#p56558"><![CDATA[
+<strong class="text-strong">Update:</strong> updated the <a href="https://github.com/mkosler/LoveAStar" class="postlink">Github repo</a> to reflect the current version. The repo should also be more sane than it was before. Only text files are in the code section; the demo is found in the <a href="https://github.com/mkosler/LoveAStar/downloads" class="postlink">Downloads</a> section.<br><blockquote class="uncited"><div>This is awful. Well done!</div></blockquote>Que? Wie bitte? What?<br> <blockquote class="uncited"><div>Indeed, using binary heap makes Aster run faster.<br>Did you wrote the binary heap prototype by yourself ? Did you use some documentation for the algorithms (the heap:pop method, especially).<br>I noticied your implementation can be used as min-heap or max-heap, depending on a custom comparison function which can be easily written.<br>Nice.</div></blockquote>Most of the info I got from the links you can find in the original post. I initially wrote it very naively, and was getting enormously crapping run times. So I rewrote it, and in the process tried to optimize it with other things I had learned.<br><br>The binary heap is not mine. I think the contact/licensing information for it can be found in the source file. I've finally taken a formal course in data structures and algorithms now, though, so I'm sure if I ran back through the code I could optimize it some more and make it nicer, but I've got other things on my docket at the moment.<br><br>One thing I wish I was able to figure out was a way to get this to run in a separate thread, but the 0.7.2 documentation for threads was severely lacking. Lemme refresh the main Github repo with the new version, and if anyone wants to take a swing at that, by all means, fork it and go.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Wed May 09, 2012 8:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-09T20:32:39+00:00</updated>
+
+		<published>2012-05-09T20:32:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56556#p56556</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56556#p56556"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56556#p56556"><![CDATA[
+I took a closer look at the code, MarekkPie..This is awful. Well done! <br>Indeed, using binary heap makes Aster run faster.<br>Did you wrote the binary heap prototype by yourself ? Did you use some documentation for the algorithms (the heap:pop method, especially).<br>I noticied your implementation can be used as min-heap or max-heap, depending on a custom comparison function which can be easily written.<br>Nice.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Wed May 09, 2012 8:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[coffee]]></name></author>
+		<updated>2012-05-09T20:28:17+00:00</updated>
+
+		<published>2012-05-09T20:28:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56555#p56555</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56555#p56555"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56555#p56555"><![CDATA[
+<blockquote class="uncited"><div>I don't use LOVE/Lua much anymore</div></blockquote>So you trade us for Haxe... you a punk!<br>The best for you Marekk! Keep visiting us! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3988">coffee</a> — Wed May 09, 2012 8:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-05-09T20:24:39+00:00</updated>
+
+		<published>2012-05-09T20:24:39+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56553#p56553</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56553#p56553"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56553#p56553"><![CDATA[
+I don't use LOVE/Lua much anymore, but I made some fixes for the obvious compatibility issues. <a href="https://github.com/downloads/mkosler/LoveAStar/LoveAStar.love" class="postlink">Here's the new file</a>. I'll update the original post to link to the new version as well.<br><br>Roland is right, though. The code for the actual A* is LOVE independent; it's only the demo that was incompatible.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Wed May 09, 2012 8:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Roland_Yonaba]]></name></author>
+		<updated>2012-05-09T20:17:15+00:00</updated>
+
+		<published>2012-05-09T20:17:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56552#p56552</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56552#p56552"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56552#p56552"><![CDATA[
+<blockquote class="uncited"><div>Will this be updated to 0.8.0?</div></blockquote>It doesn't need to.<br>The algorithm itself is not relevant to any version of love.<br>If you want to disable the warning screen when loading the demo application with love 0.8.0, just open the configuration file (conf.lua) <br>look for the line t.version (or add it) with "0.8.0" as its value.<br><div class="codebox"><p>Code: </p><pre><code>t.version = "0.8.0"</code></pre></div>it should work fine.<br>If your video card supports framebuffers and Canvas, though.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3394">Roland_Yonaba</a> — Wed May 09, 2012 8:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[xjermx]]></name></author>
+		<updated>2012-05-09T20:03:43+00:00</updated>
+
+		<published>2012-05-09T20:03:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=56549#p56549</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=56549#p56549"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=56549#p56549"><![CDATA[
+<del>Will this be updated to 0.8.0?</del><br><br>Nevermind,  <br><br>Changed the following lines in a copy of the code and it works great.  thanks, MarekkPie.<br><blockquote class="uncited"><div>51  local fb = love.graphics.newCanvas()<br>52  love.graphics.setCanvas(fb)<br>65  love.graphics.setCanvas()</div></blockquote><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=49093">xjermx</a> — Wed May 09, 2012 8:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-02-11T04:16:21+00:00</updated>
+
+		<published>2012-02-11T04:16:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49283#p49283</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49283#p49283"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49283#p49283"><![CDATA[
+My A* function is completely abstract. It already does follow everything you've said. The DEMO follows a certain rule, because how am I supposed to demo every map type?<br><br>There is absolutely nothing that is stopping Jasoco from making his own flattenMap function, which prunes out nodes of his graph that follow that specification. The flattenMap function I have provided does not, because it is FAR easier to do it this way.<br><br>Every single piece of information used in my A* is user provided: from the start/end functions to the list of neighbors, to the distance between each node (edit: even the heuristic used is up to the user). The only requirements I have is that you put this information into a "node" class, which I provide in my source code, so that it better interfaces with the algorithm.<br><br>This is the entire point of my second revision of the algorithm, as it clearly states on the original post of this thread:<br><blockquote class="uncited"><div>Even more optimization, and a "final" release. It's also completely abstracted from any particular map, so you can make square maps, rectangular maps, hexagonal maps, circular maps, atlases, possibly even 3D space. Since I require you to shrink everything into a 1D array before use, the rigidity of the map doesn't really matter.</div></blockquote>The demo is simply that. A demo. It is not A*.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Sat Feb 11, 2012 4:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2012-02-11T03:35:55+00:00</updated>
+
+		<published>2012-02-11T03:35:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49282#p49282</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49282#p49282"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49282#p49282"><![CDATA[
+Wouldn't this be an issue of graph construction and not the algorithm? You would have to construct the graph so that there wasn't an edge going diagonal there; It has nothing to do with the A* algorithm. IMO graph construction should be up to the user how to construct the graph. Particularly when it comes to irregular maps you would want to be able to construct your own graph.<br><br>The squares graph should just be a helper function if you ask me. The main interface should deal with edge and node construction. you could even add helpers for both behaviors. <br><br>Always strive to make code more flexible; arguing over which semantics you like better is a bad idea when you can have the best both <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br><br>edit:<br>also, you could allow the specification of a prediction function(predicts the lengths of edges) so that it behaves more optimally with irregular graphs.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Sat Feb 11, 2012 3:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-02-10T14:58:09+00:00</updated>
+
+		<published>2012-02-10T14:58:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49256#p49256</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49256#p49256"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49256#p49256"><![CDATA[
+For a less game-specific answer (along the lines of bartbes):<br><br><img src="http://upload.wikimedia.org/wikipedia/commons/5/5d/AstarExample.gif" class="postimage" alt="Image"><br><br>This is all A* sees. It doesn't look at the actual geometry of any given map; it only knows its neighbors (the other nodes it is connected to) and the distance to each of them. This is why I require a custom flattenMap(), because if I made A* do this for you, not only would it be much slower (you can see from your SS that my flattenMap takes a while), it would make it less abstract, since there is little possibility I could account for all the possible maps.<br><br>I assume you've got everything already in a square-based grid, so all you are looking for is pruning those unique situations? I explained in my first reply how to do it, but I suppose I could whip something up.<br><br>Your game also has doors, which I'm not certain how you'd want the pathfinding to handle. Unless you say otherwise, I am going to assume the enemies can open the doors themselves, and it is instant, which essentially means the doors only exist as a visual barrier. Then I can just write flattenMap so that it ignores doors.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Fri Feb 10, 2012 2:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[coffee]]></name></author>
+		<updated>2012-02-10T11:24:14+00:00</updated>
+
+		<published>2012-02-10T11:24:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49247#p49247</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49247#p49247"/>
+		<title type="html"><![CDATA[Re: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49247#p49247"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>This shouldn't happen.</div></blockquote>That is a common question in roguelikes that allow for diagonal movement. Some of them allow that, others don't.<br>The ones that allow it have a standard explanation: all walls have round corners. A regular monster/player would be able to "squeeze" between them. Like this:</div></blockquote><blockquote class="uncited"><div><blockquote class="uncited"><div>Yes it is. If you were a player, could you go between those walls?</div></blockquote>Hmmm, actually some (probably a lot) roguelikes would let you pass. </div></blockquote>I already stated that some posts ago. As kikito says it's really very very very (add more very's) common in roguelikes. So I and thousands of other rogue players are sending you our addresses now Jasoco. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>The most right correct in this kind of engine is have some switch that enable/desables that "permissive" diagonals. In my rpg/rogue I'm doing atm I actually also let do this diagonal moves. I also understand that Jasoco says that souldn't happen but also always map representations differ so in one game wall "holes" can be larguer than in anothers.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3988">coffee</a> — Fri Feb 10, 2012 11:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-02-10T08:37:06+00:00</updated>
+
+		<published>2012-02-10T08:37:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49238#p49238</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49238#p49238"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49238#p49238"><![CDATA[
+<blockquote class="uncited"><div>This shouldn't happen.</div></blockquote>That is a common question in roguelikes that allow for diagonal movement. Some of them allow that, others don't.<br><br>The ones that allow it have a standard explanation: all walls have round corners. A regular monster/player would be able to "squeeze" between them. Like this:<br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=3940&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=3940" class="postimage" alt="roguelike.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Feb 10, 2012 8:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-02-10T08:08:48+00:00</updated>
+
+		<published>2012-02-10T08:08:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49235#p49235</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49235#p49235"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49235#p49235"><![CDATA[
+Except the A* algorithm doesn't know they are walls, just nodes.<br>I assume every node has a list of neighbours, meaning that if the diagonally 'connected' tiles aren't in that list this shouldn't be happening. (I personally frown upon diagonal movement anyway.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Feb 10, 2012 8:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2012-02-10T08:00:15+00:00</updated>
+
+		<published>2012-02-10T08:00:15+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49234#p49234</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49234#p49234"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49234#p49234"><![CDATA[
+No. It shouldn't happen. That's not an opening. It's two corners of walls touching too close for anything to fit through. Therefore the thing traveling won't be going through it.<br><br>Who doesn't agree? I need names and addresses. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-monocle.png" width="16" height="16" alt=":monocle:" title="Monocle"><br><br>Can you fix it for little old me? For old times sake? Remember the good times we shared?<br>[INSERT MEMORY MONTAGE HERE SET TO SARA BAREILLES "GRAVITY"]<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Feb 10, 2012 8:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-02-10T07:02:52+00:00</updated>
+
+		<published>2012-02-10T07:02:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49232#p49232</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49232#p49232"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49232#p49232"><![CDATA[
+<a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=7174&amp;start=30#p46554" class="postlink">viewtopic.php?f=5&amp;t=7174&amp;start=30#p46554</a><br><br>Not everyone agrees. Pure A* doesn't assess the size of an object, so in this case, there is nothing stopping it. That's why I didn't ignore this case in my demo. There is nothing stopping you from pruning those neighbors when you make your flattenMap function. I gave a simple example of one inside the code, and some instructions on how to make it in instructions.txt. It's nothing major, just at the beginning of a level, loop through the level and make an array of nodes (provided by a constructor in the astar.lua file) with appropriate information. I don't think you'll find an abstract A* (like mine) that is going to be "plug and play."<br><br>For how to get rid of this situation, when you are finding your neighbor nodes, look at the nodes orthogonal to you. If it is a wall, remove all the nodes on that side from your neighbors.<div class="codebox"><p>Code: </p><pre><code>OOO   O = emptyXNO   X = wallOXO &lt; N = currently checked node^</code></pre></div>The row/column with the arrows will be removed from the neighbor list on the currently checked node.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Fri Feb 10, 2012 7:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2012-02-10T06:48:23+00:00</updated>
+
+		<published>2012-02-10T06:48:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=49231#p49231</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=49231#p49231"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=49231#p49231"><![CDATA[
+<img src="http://i.minus.com/ibvea10eTOIGnn.PNG" class="postimage" alt="Image"><br>This shouldn't happen.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Fri Feb 10, 2012 6:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-01-18T17:04:33+00:00</updated>
+
+		<published>2012-01-18T17:04:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=47068#p47068</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=47068#p47068"/>
+		<title type="html"><![CDATA[Re: LoveAStar: A* Search in Lua/Love]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=47068#p47068"><![CDATA[
+This is just a quick look (since I'm in class), but it looks like you put all the nodes (closed and open) into one list and loop over that. Nodes on the closed will never been needed again until a path is found. It looks like you "prune" it by changing its boolean value of "list," but even with something that small, you still have to poke at those dead nodes when you are looking for your next best f score.<br><br>The other thing would be to use a binary heap for your open node list. Binary heaps care little about their order, other than that each pair of child nodes is less than (or greater than for a maximal open list) its parent. That way, you don't even have to loop through your open list, you just take the top most node, and the binary heap updates itself to bubble up the next best f score.<br><br>There might be more, but like I said, I'm in class.<br><br>EDIT: (It looks like you may have changed this method after you mention it in the starting_node comments, but you've got functions with TONS of parameters, so its a bit hard to tell what's going on. I'll leave this warning in just in case you are doing it this way.) <br><br>I just noticed an issue. Right now, it seems that you are calculating your g score by adding the parent's g score to the heuristic score. The heuristic score measures the distance from any node to the exit, not to its neighbors. This is one of the things that separates A* from Dijkstra's. The g score should be the total distance traveled by the algorithm to that node (using the best path).<br><br>Another thing you could do to improve it is by instead of doing a walkable check (which I assume is checking for walls/bodies of water/etc.) inside the algorithm, when you create a node, only link to neighbors that are walkable. This would also remove a few unnecessary checks that probably add up in the long run.<br><br>Overall, I'd say there's a lot of computations being done inside the algorithm that could (and probably should for efficiency) be done outside. A* (by itself) mainly deals with navigating around static objects, so needing to calculate distances and neighbors aren't really necessary during real time. I fixed this by finding the neighbors, the absolute distance (g score) and the heuristic distance (h score) all during the initial creation of the path map (the full list on non-wall nodes in the 2D, or maybe even 3D, game map). That way, instead of having to constantly recalculate information that (probably) hasn't changed, you do this once per deformation (a wall goes away or gets added).<br><br>It does leave that end of the implementation up to the user of my A*, but I included (what I think) are some pretty nice instructions and a helper node constructor that will throw an error if the nodes were constructed incorrectly.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Wed Jan 18, 2012 5:04 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

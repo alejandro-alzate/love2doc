@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/8351" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-02-18T17:44:11+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/8351</id>
+
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-18T17:44:11+00:00</updated>
+
+		<published>2021-02-18T17:44:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238714#p238714</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238714#p238714"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238714#p238714"><![CDATA[
+I don't wanna be rude by arguing, but I have polite disagreements and want to voice them for the last time (and stop clogging the thread thereafter).<br><blockquote class="uncited"><div>Looks like it's not too difficult to work around if it bothers you, by setting the 'value' property of either the button or the parent (but not both) to false. I'm inclined to leave it as is.</div></blockquote>I just added the check for nil that I suggested, personally, but that could work too. It should be worth a mention to users on the wiki IMHO.<br><blockquote class="uncited"><div>Also I believe it's used for things like RPG inventory or in-game buttons, where activating an action on mouse up might have an impact on the feeling of responsiveness, for example.</div></blockquote>Almost every RPG I've played, and really just UI in general, has UI interactions on mouse-up, not mouse-down. Accidental mouse-downs are a thing (I do them a lot), and I always appreciate when a click is activated on mouse-up because I can mouse-off the button before mousing-up and not accidentally click the button.<br><br>Only exception I can think of is World of Warcraft. Many addons let you activate action bars on mouse-down, but those are a special case because those are spells in a fast-paced game *full* of spell icons to click on, so it increases speed (especially if you turn off spell-dragging so you can't accidentally drag them off your action bar), and has use if you play with keybinds because it turns spell-clicking into pressing buttons to do an action, like playing a third person action game. But keypressed is a separate function, so you'd have to code it manually to call click, meaning activating UI on mouse-up doesn't affect this. The user was already deciding, during coding, if they wanted to call click on keypressed or keyreleased.<br><blockquote class="uncited"><div>A multi-line edit box, for example, is a must for many use cases, and is something I really miss in it, but it'd be too much code.</div></blockquote>This would actually take, in my estimation, less than 15 new lines of code to add because most features would be replacing lines of code. Text elements already handle multi-line features with LOVE's <em class="text-italics">font:getWrap()</em> and <em class="text-italics">love.graphics.printf()</em>, so input could just use that. <em class="text-italics">this.cursor</em> is a substring position of <em class="text-italics">this.value</em> -- a 1D value, which is perfect.<br><ul><li>Make <em class="text-italics">Gspot.input</em> use a <em class="text-italics">scrollgroup</em> as the base if you pass <em class="text-italics">true</em> to <em class="text-italics">isMultiline</em> on creation.</li><li>Add a check so that the enter button inputs a return character when <em class="text-italics">isMultiline == true</em>. This is only for user-added new-lines, returns are not added when wrapping <em class="text-italics">this.value</em> to the box.</li><li>When drawing the text, use Gspot's <em class="text-italics">lgprintf()</em> so that the raw <em class="text-italics">this.value</em> string will wrap to the width of the box, and allow the height to clip using the scrollgroup. Users can make the box automatically adjust the height with some very simple code.</li><li>To do the cursor position, just pass the substring of <em class="text-italics">(1, this.cursor)</em> to <em class="text-italics">:getWrap()</em>, which returns a table <em class="text-italics">lines</em> containing the sequence of line-by-line substrings. <em class="text-italics">cursorx</em> is calculated with the substring of the <em class="text-italics">lines[#lines]</em> instead of using the whole <em class="text-italics">this.value</em>, and <em class="text-italics">cursory</em> is the font-height multiplied by <em class="text-italics">#lines</em> (remember: <em class="text-italics">lines</em> is the substring from 1 to this.cursor, not the whole string).</li><li>I don't quite know how scrollgroups work, but you *might* have to add variables to pre-existing lines to get the cursor to offset.</li></ul>Most of the work is already done for you. Very few lines need to be added, and it's backward-compatible with old versions of Gspot since it's based on a single bool (isMultiline).<br><blockquote class="uncited"><div>I like your idea of making images resizeable, but for the above reasons I'm unsure whether to implement it.</div></blockquote>This feature is very necessary if you want to do things like add click logic to an image that is highly animated without reimplementing it manually. Stuff like sprites whose animation isn't *just* the frames but also stuff like shearing and scaling. And my change doesn't impact old code, this is actually backward-compatible with very few added lines of code.<br><br>I'm still not sure why you wouldn't want to update the library to make it a little better to use, to be honest. Of the libraries I've looked at or played with, Gspot is one of the easier ones to use without being too unwieldy like some of the other ones. Do people automatically update their LOVE libraries without looking at the changelog and fixing their code accordingly?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Thu Feb 18, 2021 5:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-17T21:48:38+00:00</updated>
+
+		<published>2021-02-17T21:48:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238675#p238675</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238675#p238675"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238675#p238675"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>Do you have some other suggestion that keeps backwards compatibility?</div></blockquote>In my opinion, it's a feature not worth keeping nor making backwards compatible, but... If you're gonna do it, you'd need to add a bool that uses the default functionality on false/nil, and not increment the colors for parented buttons on true. EDIT2: If you want *me* to write that code, I have no problem with that.</div></blockquote>Looks like it's not too difficult to work around if it bothers you, by setting the 'value' property of either the button or the parent (but not both) to false. I'm inclined to leave it as is.<br><br><blockquote class="uncited"><div>You could still add the depress coloring (seriously, buttons that don't change color when you mousedown? Pfft, that's crazy <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">), just use the bool for whether or not parented buttons will shift the color-states used.</div></blockquote>There are more things in how this lib works that I don't personally like; it's unconventional in some areas, and I'm very conventional <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> But that also makes it a GUI with its own personality, which may be good for some use cases. Also I believe it's used for things like RPG inventory or in-game buttons, where activating an action on mouse up might have an impact on the feeling of responsiveness, for example.<br><br>One of the key features of this library is its compactness: it's a single file. But with 44K, it's already somewhat large. That's the main reason why I don't want to add features. It's easy to hack if you want to add your own feature set, as you seem to be doing. Trying to add features to satisfy all normal uses would make it too large. A multi-line edit box, for example, is a must for many use cases, and is something I really miss in it, but it'd be too much code.<br><br>I like your idea of making images resizeable, but for the above reasons I'm unsure whether to implement it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Feb 17, 2021 9:48 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-17T02:41:51+00:00</updated>
+
+		<published>2021-02-17T02:41:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238649#p238649</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238649#p238649"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238649#p238649"><![CDATA[
+<blockquote class="uncited"><div>Do you have some other suggestion that keeps backwards compatibility?</div></blockquote>In my opinion, it's a feature not worth keeping nor making backwards compatible, but... If you're gonna do it, you'd need to add a bool that uses the default functionality on false/nil, and not increment the colors for parented buttons on true. EDIT2: If you want *me* to write that code, I have no problem with that.<br><br>You could still add the depress coloring (seriously, buttons that don't change color when you mousedown? Pfft, that's crazy <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz">), just use the bool for whether or not parented buttons will shift the color-states used.<br><br>You *could* forgo the bool and just make it a thing that happens on frame creation -- if it has a parent, then shift the color states -- and then the developer can "avoid" it by setting the parent after creating it, or perhaps by caching the default colors for an unparented button and then setting the colors afterwards, but that would remove the color-incrementing behavior occurring dynamically when the button is parented or unparented.<br><br>Regardless of how or whether you keep it backwards compatible, having three colors to use for default+hover+click is a good idea.<br><br>EDIT1: Since double-posting is frowned upon, here's a massive edit.<br><br>Gspot:image elements cannot be scaled. If you supply a width/height on element-creation, it's overwritten: pos.w = img:getWidth(), and pos.h = img:getHeight(). drawimg() function still uses pos.&lt;dimension&gt; and img:get&lt;Dimension&gt; for the offsets. For Gspot:image elements, they equal each other, so <strong class="text-strong">the net offset is 0</strong> (it adds and then subtracts itself). The only reason it does this: the `button` element can have its .img field supplied with a love.image object to add a centered image to the center of the button. That's it, it's the only object with this property.<br><br>So to add image scaling to Gspot, I changed imgdraw(), Gspot.image.load(), and Gpot.button.draw(). <strong class="text-strong">This is backwards compatible with old code</strong>. If you give a Gspot:image element a width and/or height, it will rescale to match. It also can take a pos.r parameter to rotate itself about its top-left anchor-point (this is exclusive to Gspot:image elements because I don't know what it would do otherwise). Here's the changes, with comments explaining the changes.<div class="codebox"><p>Code: </p><pre><code>Gspot.image = {-- other codeload = function(this, Gspot, label, pos, parent, img)local width, height = pos.w, pos.h -- cache width/height if suppliedlocal element = Gspot:element('image', label, pos, parent)element:setimage(img) -- sets width and height to image width and heightif width then element.pos.w = width end -- overwrite object widthif height then element.pos.h = height end -- overwrite object heightreturn Gspot:add(element)end,-- other code}Gspot.util = {-- other codedrawimg = function(this, pos, isNotScalable)local r, g, b, a = love.graphics.getColor()setColor(255, 255, 255, 255)if isNotScalable == true then -- if this bool is true, it will center the image relative to its pos.w and pos.hlove.graphics.draw(this.img, (pos.x + (pos.w / 2)) - (this.img:getWidth() / 2), (pos.y + (pos.h / 2)) - (this.img:getHeight() / 2))else -- if this bool is false, pos.w and pos.h are used to rescale the image to match the supplied dimensionslove.graphics.draw(this.img, pos.x, pos.y, pos.r, pos.w/this.img:getWidth(), pos.h/this.img:getHeight())endlove.graphics.setColor(r, g, b, a)end,-- other code}Gspot.button = {-- other codedraw = function(this, pos)-- other codeif this.shape == 'circle' thenif this.img then this:drawimg(pos, true) end -- button images are not scaled to match the button's dimensionsif this.label then lgprint(this.label, (pos.x + pos.r) - (this.style.font:getWidth(this.label) / 2), (this.img and (pos.y + (pos.r * 2)) + ((this.style.unit - this.style.font:getHeight()) / 2)) or (pos.y + pos.r) - (this.style.font:getHeight() / 2)) endelseif this.img then this:drawimg(pos, true) end -- button images are not scaled to match the button's dimensionsif this.label then lgprint(this.label, (pos.x + (pos.w / 2)) - (this.style.font:getWidth(this.label) / 2), (this.img and pos.y + ((this.style.unit - this.style.font:getHeight()) / 2)) or (pos.y + (pos.h / 2)) - (this.style.font:getHeight() / 2)) endendend,-- other code}</code></pre></div>And if you want an image on a button that has these properties, add it as a separate Gspot:image element that is a child of the button.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Wed Feb 17, 2021 2:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-14T12:07:50+00:00</updated>
+
+		<published>2021-02-14T12:07:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238560#p238560</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238560#p238560"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238560#p238560"><![CDATA[
+Thanks for the test case. I see the effect you mention. It's hard to know whether this is intentional, because the original author is no longer around to ask, but in any case, it's clear that changing the behaviour is going to affect existing applications, including the demo, so I'm disinclined to apply the patch in the form that you've suggested. Do you have some other suggestion that keeps backwards compatibility?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Feb 14, 2021 12:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-13T20:52:26+00:00</updated>
+
+		<published>2021-02-13T20:52:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238546#p238546</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238546#p238546"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238546#p238546"><![CDATA[
+<blockquote class="uncited"><div>I still don't understand. The "Speak" button has the "Chat" input element as parent, while the "A Button" button has no parent, and I don't see a difference between them.</div></blockquote>[EDIT: You only looked at those two buttons. There're other buttons, like the X buttons in the boxes, that are clearly brighter than "A Button" and "Speak" despite not being recolored in the code.]<br><br>Recall that the full, original if-condition is<div class="codebox"><p>Code: </p><pre><code>if this.parent and this.value == this.parent.value then</code></pre></div>Now look at this from the gspot.input.load:<div class="codebox"><p>Code: </p><pre><code>element.value = (value and tostring(value)) or ''</code></pre></div>The Speak button is not working because it checks if this.value == this.parent.value and its parent is an input with a .value of "", and this.value defaults to nil, so they don't equal. And `nil == nil` returns true. So when you have a frame with a nil .value that's parented to a frame with a nil .value, it will cause it to recolor.<br><br>You can test this very easily, and I've attached the quick test I mocked up below. You could also do what I did before I reported the problem and the solution, which was to create some buttons and mess with their parenting after changing the .default to {1,0,0,1}, the .hilite to {0,1,0,1}, and the .focus to {0,0,1,1} just to see how the colors are interacted with.<br><div class="inline-attachment"><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=19160">test.zip</a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Sat Feb 13, 2021 8:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-13T11:27:07+00:00</updated>
+
+		<published>2021-02-13T11:27:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238533#p238533</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238533#p238533"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238533#p238533"><![CDATA[
+I still don't understand. The "Speak" button has the "Chat" input element as parent, while the "A Button" button has no parent, and I don't see a difference between them.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sat Feb 13, 2021 11:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-13T21:00:56+00:00</updated>
+
+		<published>2021-02-13T04:12:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238531#p238531</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238531#p238531"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238531#p238531"><![CDATA[
+<blockquote class="uncited"><div>Can you provide a test case that shows this problem? I don't see anything wrong in the default example.</div></blockquote>You can see it in the demo, though. Parented buttons default to hilite and hover to focus, whereas regular buttons default to default and hover to hilite.<blockquote class="uncited"><div>Please note also point 7 here:</div></blockquote>Edit-button wasn't available an hour later when I decided to add, test, and write-up about the textbutton element I thought would be a useful addition. Wasn't gonna wait until you responded just to post that. /shrug.<br><br>[EDIT on the next day: It's because I wasn't logged in. LOVE's forums periodically log you out or something, it makes writing posts somewhat annoying. Apologies, I didn't know I could still edit it.]<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Sat Feb 13, 2021 4:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-12T18:53:44+00:00</updated>
+
+		<published>2021-02-12T18:53:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238518#p238518</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238518#p238518"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238518#p238518"><![CDATA[
+<blockquote class="uncited"><div>I've added a check for "this.value ~= nil" to fix (what I believe to be) the bug that causes regular buttons to change their color behavior when they are parented to another object. Only buttons which have an explicit this.value property will change their color behavior.</div></blockquote>Can you provide a test case that shows this problem? I don't see anything wrong in the default example.<br><br>Please note also point 7 here: <a href="https://love2d.org/forums/viewtopic.php?f=3&amp;t=64151" class="postlink">https://love2d.org/forums/viewtopic.php?f=3&amp;t=64151</a> - personally I don't mind multi-posting but it seems to piss off some forum users, and it's a rule, so...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Fri Feb 12, 2021 6:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-12T05:56:05+00:00</updated>
+
+		<published>2021-02-12T05:56:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238496#p238496</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238496#p238496"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238496#p238496"><![CDATA[
+I've created a new Gspot element type called textbutton which utilizes the above attempt-at-programming and applies it to text elements -- for all your text-only-button goodness. The number of work-arounds needed to get this to work with a regular button basically meant rewriting the draw code, which at that rate, it was easier to just reuse the prior if-thens and a text element and just make a whole new subtype.<br><br>Feed any non-false (easiest is just "true") for option and then your value for the value parameter, and it will work just like an option button.<div class="codebox"><p>Code: </p><pre><code>Gspot.textbutton = {load = function(this, Gspot, label, pos, parent, autosize, option, value)local element = Gspot:text(label, pos, parent, autosize)if option thenelement.value = valueelement.click = function(this) this.parent.value = this.value endendelement.draw = function(this, pos)if this.parent and this.value ~= nil and this.value == this.parent.value thenif this == this.Gspot.mousein thenif love.mouse.isDown(1) or love.mouse.isDown(2) thensetColor(this.style.labelfg or this.style.fg)elsesetColor(this.style.focus)endelsesetColor(this.style.hilite)endelseif this == this.Gspot.mousein thenif love.mouse.isDown(1) or love.mouse.isDown(2) thensetColor(this.style.focus)elsesetColor(this.style.hilite)endelsesetColor(this.style.labelfg or this.style.fg)endendif this.autosize then lgprint(this.label, pos.x + (this.style.unit / 4), pos.y + (this.style.unit / 8))else lgprintf(this.label, pos.x + (this.style.unit / 4), pos.y + (this.style.unit / 8), (this.autosize and pos.w) or pos.w - (this.style.unit / 2), 'left') endendreturn elementend,}setmetatable(Gspot.textbutton, {__index = Gspot.util, __call = Gspot.textbutton.load})</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Fri Feb 12, 2021 5:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-12T05:04:02+00:00</updated>
+
+		<published>2021-02-12T05:04:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238495#p238495</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238495#p238495"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238495#p238495"><![CDATA[
+Visual behavior for buttons is a bit weird and unintuitive and lacks any detection of "being mouseddown" in collaboration with the new mouserelease version of click. I've modified the Gspot.button.draw function as so (feel free to collapse the indentation):<div class="codebox"><p>Code: </p><pre><code>draw = function(this, pos)if this.parent and this.value ~= nil and this.value == this.parent.value thenif this == this.Gspot.mousein thenif love.mouse.isDown(1) or love.mouse.isDown(2) thensetColor(this.style.default)elsesetColor(this.style.focus)endelsesetColor(this.style.hilite)endelseif this == this.Gspot.mousein thenif love.mouse.isDown(1) or love.mouse.isDown(2) thensetColor(this.style.focus)elsesetColor(this.style.hilite)endelsesetColor(this.style.default)endend-- insert the rest of the code hereend</code></pre></div>For regular buttons:<br>- default = style.default<br>- mouseover = style.hilite<br>- mousedown = style.focus<br><br>For a toggled button (like Option):<br>- default = style.hilite<br>- mouseover = style.focus<br>- mousedown = style.default<br><br>I've added a check for "this.value ~= nil" to fix (what I believe to be) the bug that causes regular buttons to change their color behavior when they are parented to another object. Only buttons which have an explicit this.value property will change their color behavior.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Fri Feb 12, 2021 5:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-11T21:22:18+00:00</updated>
+
+		<published>2021-02-11T21:22:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238486#p238486</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238486#p238486"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238486#p238486"><![CDATA[
+Fix pushed, thanks for the report!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Feb 11, 2021 9:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-11T19:45:29+00:00</updated>
+
+		<published>2021-02-11T19:45:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238482#p238482</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238482#p238482"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238482#p238482"><![CDATA[
+Bug report (and solution): Tooltips applied to larger text elements will render the tooltip-text as small, but will measure the bounds of the box as if they're using the parent's bigger font. Replacing all tooltip-related instances of "element.style.font" with "this.style.font" (the font used by the tooltip) inside Gspot.draw() fixes the issue.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Thu Feb 11, 2021 7:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2021-02-03T14:52:56+00:00</updated>
+
+		<published>2021-02-03T14:52:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238312#p238312</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238312#p238312"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238312#p238312"><![CDATA[
+<blockquote class="uncited"><div>I'd love to see more updates on this library like: differentiating click from mousedown, clicks getting called on mouse-up instead of mouse-down, and easier ways to add those sorts of events to other frames.<br>[...]<br>The ability to set the drawing scale of an image would be most helpful, too.</div></blockquote>These are new features, and Gspöt is currently being maintained only to fix bugs and update to latest versions of Löve. There are libraries more advanced than Gspöt, see e.g. Slab.<br><br><blockquote class="uncited"><div>A notable change I discovered with some testing is that if you make this.mousedt = 0 only when it registers a regular click, you won't see other mouse events contributing to double-clicking, only left-clicking contributes to detecting a double-click. Without that 2nd change, you can quickly right-click and then left-click to get a double-click.</div></blockquote><blockquote class="uncited"><div>The Gspot.util.containspoint function might need to be revisted.</div></blockquote>I have pushed fixes for the text element click and for the doubleclick issues, thanks for the reports.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Feb 03, 2021 2:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-02T01:02:00+00:00</updated>
+
+		<published>2021-02-02T01:02:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238276#p238276</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238276#p238276"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238276#p238276"><![CDATA[
+The Gspot.util.containspoint function might need to be revisted. The detection for the bounds of the height of my text object was incorrect until I set pos.y to use the same formula for the one that changes pos.x. After changing it, my text would correctly detect when my mouse was supposed to be over it and register clicks correctly.<br><br>Old:<div class="codebox"><p>Code: </p><pre><code>pos.y = pos.y - math.floor(((this.style.unit - this.style.font:getHeight()) / 2) + 0.5)</code></pre></div>New:<div class="codebox"><p>Code: </p><pre><code>pos.y = pos.y - math.floor((this.style.unit / 4) + 0.5)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Tue Feb 02, 2021 1:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-02T00:06:04+00:00</updated>
+
+		<published>2021-02-02T00:06:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238275#p238275</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238275#p238275"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238275#p238275"><![CDATA[
+I'm not exactly an expert with this library, but changing Gspot.mousepress and Gspot.mouserelease to this appears to make clicks fire on mouse-up, and not cause anything else to break. A notable change I discovered with some testing is that if you make this.mousedt = 0 only when it registers a regular click, you won't see other mouse events contributing to double-clicking, only left-clicking contributes to detecting a double-click. Without that 2nd change, you can quickly right-click and then left-click to get a double-click.<br><div class="codebox"><p>Code: </p><pre><code>Gspot.mousepress = function(this, x, y, button)this:unfocus()if this.mousein thenlocal element = this.mouseinif element.elementtype ~= 'hidden' then element:getparent():setlevel() endif button == mouseL thenif element.drag thenthis.drag = elementelement.offset = {x = x - element:getpos().x, y = y - element:getpos().y}endendendendGspot.mouserelease = function(this, x, y, button)if this.drag thenlocal element = this.dragif button == mouseR thenif element.rdrop then element:rdrop(this.mouseover) endif this.mouseover and this.mouseover.rcatch then this.mouseover:rcatch(element.id) endelseif element.drop then element:drop(this.mouseover) endif this.mouseover and this.mouseover.catch then this.mouseover:catch(element) endendendthis.drag = nilif this.mousein thenlocal element = this.mouseinif button == mouseL thenif this.mousedt &lt; this.dblclickinterval and element.dblclick then element:dblclick(x, y, button)elseif element.click then element:click(x, y); this.mousedt = 0 endelseif button == mouseR and element.rclick then element:rclick(x, y)elseif button == 'wu' and element.wheelup then element:wheelup(x, y)elseif button == 'wd' and element.wheeldown then element:wheeldown(x, y)endendend</code></pre></div>I'm still figuring out how dragging works. Currently, my elements are getting set to a very distant position away from my mouse when I start dragging it, but this happens even when I undo these changes, so I'm not sure what the cause is.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Tue Feb 02, 2021 12:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Anase Skyrider]]></name></author>
+		<updated>2021-02-01T23:06:41+00:00</updated>
+
+		<published>2021-02-01T23:06:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238274#p238274</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238274#p238274"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238274#p238274"><![CDATA[
+I'd love to see more updates on this library like: differentiating click from mousedown, clicks getting called on mouse-up instead of mouse-down, and easier ways to add those sorts of events to other frames. It took me quite a bit of digging to discover that the way to get a frame object to register hover (mousein) was to declare element.mousein = element, and then set element.mousein.enter/leave functions. As opposed to, say, calling a single function like element:registerHover(enter_funtion, leave_function) or something more developer-friendly like that.<br><br>The ability to set the drawing scale of an image would be most helpful, too.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170462">Anase Skyrider</a> — Mon Feb 01, 2021 11:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zenith]]></name></author>
+		<updated>2019-11-21T15:23:43+00:00</updated>
+
+		<published>2019-11-21T15:23:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230827#p230827</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230827#p230827"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230827#p230827"><![CDATA[
+thank you!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134134">zenith</a> — Thu Nov 21, 2019 3:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-11-21T12:03:11+00:00</updated>
+
+		<published>2019-11-21T12:03:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230822#p230822</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230822#p230822"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230822#p230822"><![CDATA[
+Ah, well, same idea, just set the label of the gui:text element.<br><div class="codebox"><p>Code: </p><pre><code>function love.load()number=0text=gui:text(tostring(number))button=gui:button('Click me')function button.click(this,x,y)number=number+1                text.label = tostring(number)endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Nov 21, 2019 12:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zenith]]></name></author>
+		<updated>2019-11-21T05:52:11+00:00</updated>
+
+		<published>2019-11-21T05:52:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230812#p230812</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230812#p230812"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230812#p230812"><![CDATA[
+I mean, how to update text string on separate gui:text element on button click?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134134">zenith</a> — Thu Nov 21, 2019 5:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-11-20T16:44:10+00:00</updated>
+
+		<published>2019-11-20T16:44:10+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230800#p230800</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230800#p230800"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230800#p230800"><![CDATA[
+<div class="codebox"><p>Code: </p><pre><code>button.label = tostring(number)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Nov 20, 2019 4:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zenith]]></name></author>
+		<updated>2019-11-20T16:35:49+00:00</updated>
+
+		<published>2019-11-20T16:35:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=230799#p230799</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=230799#p230799"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=230799#p230799"><![CDATA[
+Hey! How to update label text on button click? Something like that:<br><div class="codebox"><p>Code: </p><pre><code>function love.load()number=0text=gui:text(number)button=gui:button('Click me')function button.click(this,x,y)number=number+1endend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134134">zenith</a> — Wed Nov 20, 2019 4:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Santvarg]]></name></author>
+		<updated>2019-07-11T03:12:31+00:00</updated>
+
+		<published>2019-07-11T03:12:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228202#p228202</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228202#p228202"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228202#p228202"><![CDATA[
+You're right, while playertargetid and playertargetnpc have values<br>npcbutton[playertargetid][playertargetnpc]<br>is nil<br><br>Means something's up with npcbutton's definitions<br>- it was the<div class="codebox"><p>Code: </p><pre><code>npcbutton[i] = {}</code></pre></div>line, it was setting that every time the 'o' for loop iterated(thats alot), big bad<br>doesnt crash anymore, no matter which npc is destroyed<br>I think the remaining problem is not that much to do about the gui<br>every npc after the one destroyed, when clicked, addresses the new npc in that slot<br>ie: destroy npc 3, click the new npc 3(was npc 4), but it selects 4 instead(which was 5). clicking npc 4 (used to be 5) selects the new npc, if spawned. The new npc(5) selects itself as intended<br><br>Got a feeling its the click function not being updated, working on it now<br>thanks for the help!<br><br>edit:<br>thought i fixed it with <div class="codebox"><p>Code: </p><pre><code>if playertarget[4]&lt;=0 then --if hp=0gui:rem(npcbutton[playertargetid][playertargetnpc]) --removes buttontable.remove(npcs[playertargetid], playertargetnpc) --deletes npc and moves tablefor i=playertargetnpc, #npcs[playertargetid] do -- new partnpcbutton[playertargetid][i+1].click = function(self, x, y) -- redefines the click function of each buttonplayertarget=npcs[playertargetid][i]playertargetnpc=iplayert=1endendplayercombat=0playertarget=nilplayer.fangle = player.angle--do something spectacular, like blow up graphicsend</code></pre></div>the problem was the click function wasnt being updated, a fault of my own, so the function:<br>starts at the position on the table where the npc used to be, and stops at the map's max number for that type of npc<br>changes the click function of the NEXT npc's button, to reference the npc that is now(after table.remove) in the spot the destroyed npc was in. and since the loop starts at the point in the table where changes occur, i can just use i to redefine all the things<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142385">Santvarg</a> — Thu Jul 11, 2019 3:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-07-11T02:15:29+00:00</updated>
+
+		<published>2019-07-11T02:15:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228201#p228201</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228201#p228201"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228201#p228201"><![CDATA[
+<blockquote class="uncited"><div>Thanks for the quick replies<br>using<div class="codebox"><p>Code: </p><pre><code>npcbutton[i][o].click = function(self, x, y)</code></pre></div>(wasnt using self before,oversight)<br>returns the same error:<br><div class="codebox"><p>Code: </p><pre><code>Gspot.lua:380: attempt to index local 'element' (a nil value)--with a traceback to this line:gui:rem(npcbutton[playertargetid][playertargetnpc])</code></pre></div></div></blockquote>Line 380 just tries to use the passed element parameter, so it looks like this means you're passing nil to it. Try printing npcbutton[playertargetid][playertargetnpc] right before calling gui:rem. If you get nil, you'll need to debug that.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Jul 11, 2019 2:15 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Santvarg]]></name></author>
+		<updated>2019-07-11T01:57:04+00:00</updated>
+
+		<published>2019-07-11T01:57:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228199#p228199</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228199#p228199"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228199#p228199"><![CDATA[
+Thanks for the quick replies<br>using<div class="codebox"><p>Code: </p><pre><code>npcbutton[i][o].click = function(self, x, y)</code></pre></div>(wasnt using self before,oversight)<br>returns the same error:<br><div class="codebox"><p>Code: </p><pre><code>Gspot.lua:380: attempt to index local 'element' (a nil value)--with a traceback to this line:gui:rem(npcbutton[playertargetid][playertargetnpc])</code></pre></div>when it's not the last npc/button. confused because none of my elements are set as locals<br>edit: this error happens immediately after an npc is destroyed, other than the 5th/last one; when the game tries to remove the gui element of that npc, and before the npc is removed<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142385">Santvarg</a> — Thu Jul 11, 2019 1:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-07-11T01:38:53+00:00</updated>
+
+		<published>2019-07-11T01:38:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228197#p228197</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228197#p228197"/>
+		<title type="html"><![CDATA[Re: Gspöt - retained GUI lib]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228197#p228197"><![CDATA[
+<blockquote class="uncited"><div>Is there another way to set functions for each instance of button other than using a colon ?</div></blockquote>For normal functions you use dots, not colons. You use a colon just before the last element when you want to call a method in an instance of an object, because that passes the instance as an implicit parameter. In other words, if 'a' is an object (i.e. a table):<div class="codebox"><p>Code: </p><pre><code>function a:b(x, y)end-- is the same as:function a.b(self, x, y)end</code></pre></div>Colon syntax at the time of calling a function, passes whatever is before the colon to the function.<br><br>Take a look at this chapter of the PIL, it explains the difference between dot and colon syntax in the context of OOP:<br><br><a href="https://www.lua.org/pil/16.html" class="postlink">https://www.lua.org/pil/16.html</a><br><br><blockquote class="uncited"><div> Im just using what ive learned from the documentation. using: <div class="codebox"><p>Code: </p><pre><code>function npcbutton[i][o]:click(x, y)</code></pre></div> , gives me the error:<br>syntax error; ( expected near [<br>on that line, same with a comma.</div></blockquote>That's expected, yeah. You can't add sub-indices in function declarations, i.e. you can't do this:<div class="codebox"><p>Code: </p><pre><code>function x[1]() ...</code></pre></div>But as you have noted, you can do<div class="codebox"><p>Code: </p><pre><code>x[1] = function () ...</code></pre></div><br><blockquote class="uncited"><div>Cant make sense of this<br>before, i tried setting it as<div class="codebox"><p>Code: </p><pre><code>npcbutton[i][o]:click = function(x, y)</code></pre></div>this caused the funky errors i was talking about. Using a comma instead will run, but crashes with the error:<br>Gspot.lua:380: attempt to index local 'element' (a nil value)<br>with a traceback to this line:<div class="codebox"><p>Code: </p><pre><code>gui:rem(npcbutton[playertargetid][playertargetnpc])</code></pre></div></div></blockquote>I don't think it will let you to place a colon in the assignment statement. Anyway, try this instead:<div class="codebox"><p>Code: </p><pre><code>npcbutton[i][o].click = function(self, x, y)</code></pre></div><br><blockquote class="uncited"><div>sorry for he lots of code blocks, kept setting stuff as italic</div></blockquote>No need to be sorry, it's quite readable.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Thu Jul 11, 2019 1:38 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

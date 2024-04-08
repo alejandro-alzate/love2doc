@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/9479" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-11-13T21:33:58+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/9479</id>
+
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2016-11-13T21:33:58+00:00</updated>
+
+		<published>2016-11-13T21:33:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205723#p205723</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205723#p205723"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205723#p205723"><![CDATA[
+What about Luigi? or Gooi? If you are adventurous you may as well write one with Material-Love and I would love you a lot!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Nov 13, 2016 9:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2016-11-13T21:24:46+00:00</updated>
+
+		<published>2016-11-13T21:24:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205722#p205722</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205722#p205722"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205722#p205722"><![CDATA[
+Another update, now with a LoveFrames dialog based on a modified LoveFrames (<a href="https://github.com/linux-man/LoveFrames" class="postlink">https://github.com/linux-man/LoveFrames</a>).<br>Any suggestion for other GUI?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sun Nov 13, 2016 9:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2016-11-08T14:43:11+00:00</updated>
+
+		<published>2016-11-08T14:43:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205537#p205537</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205537#p205537"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205537#p205537"><![CDATA[
+Never thought of using several gspot instances. Pull accepted.<br>Give me some time to update the editor code (the game was named "Knights" and would be a "Lords of Midnight" clone).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Tue Nov 08, 2016 2:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2016-11-08T13:18:30+00:00</updated>
+
+		<published>2016-11-08T13:18:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205536#p205536</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205536#p205536"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205536#p205536"><![CDATA[
+<blockquote class="uncited"><div>You're right. I think that a better fix (more inline with code style) would be <div class="codebox"><p>Code: </p><pre><code>if self.dialog then    self:closeDialog(gspot)end</code></pre></div></div></blockquote>That might use a different gspot instance to that the previous dialog was created with, and crash. That's why I used self.dialog.Gspot, which should use the same instance.<br><blockquote class="uncited"><div>The editor I was talking about was developed in loveframes 4 years ago. It's very very VERY incomplete and I must try it with the last loveframes version. Since the future of loveframes is uncertain, I don't know if the code is of any interest.</div></blockquote>Thanks. I'm still interested. I've seen a few ports of loveframes to LÖVE 0.10, so not all is lost. What kind of games was it for?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Nov 08, 2016 1:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2016-11-08T12:29:22+00:00</updated>
+
+		<published>2016-11-08T12:29:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205535#p205535</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205535#p205535"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205535#p205535"><![CDATA[
+You're right. I think that a better fix (more inline with code style) would be <div class="codebox"><p>Code: </p><pre><code>if self.dialog then    self:closeDialog(gspot)end</code></pre></div>The editor I was talking about was developed in loveframes 4 years ago. It's very very VERY incomplete and I must try it with the last loveframes version. Since the future of loveframes is uncertain, I don't know if the code is of any interest.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Tue Nov 08, 2016 12:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2016-11-08T02:44:03+00:00</updated>
+
+		<published>2016-11-08T02:44:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205529#p205529</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205529#p205529"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205529#p205529"><![CDATA[
+Very nice library! At last a good alternative to the binary LuaFileSystem. I've sent a pull request for a fix related to having more than one window open (which shouldn't be possible).<br><br>About this bit from the OP:<blockquote class="uncited"><div>File Systems are the most boring subject I can find, but, since <strong class="text-strong">I started a game editor in love (yet to come)</strong> I had some revolutionary ideas like loading images from somewhere...</div></blockquote>I'm interested in that. I've been considering working on one since I first saw LÖVE. Specifically, a ZZT/MZX-style editor, with several ZZT/MZX-like preset tiles and effects. So I have to ask, what kind of game editor is that and what's its current status?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Nov 08, 2016 2:44 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2016-11-07T23:15:54+00:00</updated>
+
+		<published>2016-11-07T23:15:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=205525#p205525</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=205525#p205525"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=205525#p205525"><![CDATA[
+At last 0.10.2 killed the os.execute() bug, BUT... since I've been away for so long, It was time to rewrite this library.<br>loveFS 1.0 drop console commands and embrace ffi, so it's now feasible to use it on Windows.<br>Also, the demo is made with Gspot.<br>Tested on Mint 64 bits and Windows 7 32 bits.<br>Thanks to Linkpy for showing me the way. You're the man!<br>(1st post updated with links)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Mon Nov 07, 2016 11:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2015-04-30T12:00:34+00:00</updated>
+
+		<published>2015-04-30T12:00:34+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=183501#p183501</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=183501#p183501"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=183501#p183501"><![CDATA[
+It seems that os.execute() always return -1. This behaviour breaks the code since a successful execution should return 0.<br>This is probably due to the change to luajit and some compilation option in love 0.9.2. I would call it a bug.<br>I'll try to make lovefs work but right now I don't have any chance to test os.execute.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu Apr 30, 2015 12:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raingloom]]></name></author>
+		<updated>2015-04-30T01:26:28+00:00</updated>
+
+		<published>2015-04-30T01:26:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=183477#p183477</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=183477#p183477"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=183477#p183477"><![CDATA[
+I get this error when running it on latest 64 bit Ubuntu with Löve from the official PPA:<div class="codebox"><p>Code: </p><pre><code>stack traceback:[C]: in function 'ipairs'lovefs/dialogs.lua:37: in function 'refresh'lovefs/dialogs.lua:174: in function 'loadDialog'main.lua:16: in function 'onclick'loveframes/objects/button.lua:195: in function 'mousereleased'loveframes/objects/base.lua:141: in function 'mousereleased'loveframes/init.lua:267: in function 'mousereleased'main.lua:76: in function &lt;main.lua:75&gt;[string "boot.lua"]:433: in function &lt;[string "boot.lua"]:413&gt;[C]: in function 'xpcall'</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136553">raingloom</a> — Thu Apr 30, 2015 1:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Linkpy]]></name></author>
+		<updated>2015-02-19T09:27:53+00:00</updated>
+
+		<published>2015-02-19T09:27:53+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=180558#p180558</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=180558#p180558"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=180558#p180558"><![CDATA[
+Hello ! I see that, on Windows, you got some trouble with spamming cmd~...<br>You can use kernel32.dll functions directly in Love2D using FFI library : <a href="http://luajit.org/ext_ffi.html" class="postlink">http://luajit.org/ext_ffi.html</a> (Love2D use LuaJIT which include FFI). But you need to setup the C part with all C datatype (BOOL, LPCTSTR, , _FILETIME, etc, etc...)<br><br>Use it like this : <br>kernel32.lua<div class="codebox"><p>Code: </p><pre><code>ffi = require "ffi"kernel32 = {}kernel32._handle = ffi.load ("Kernel32")ffi.cdef [[DWORD GetFileAttributesA (LPCTSTR path);// More code~]]function kernel32:get_file_attributes (path)    return self._handle.GetFileAttributesA (path)end-- More code~function file_exists (path)    local res = kernel32:get_file_attributes (path)    --if on W32 :    return res ~= -1 -- (0xffffffffffffffff)    -- if on W64 :    return res ~= 4294967295 -- (0x00000000ffffffff) Thanks Microsoft... ~end</code></pre></div>And you just need to do this for what you need !  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>You can do it also for POSIX system. But I think you don't need any "ffi.load" call  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr"> <br>You done a great job, don't staph  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> <br>Bye~<br><br>PS: I found this : <a href="https://github.com/stuta/Luajit-Tcp-Server" class="postlink">https://github.com/stuta/Luajit-Tcp-Server</a> Use "WTypes.lua" and "WinBase.lua" for all C types. But if you copy that, don't forget the credit  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-emo.png" width="16" height="16" alt=":emo:" title="Emo"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135588">Linkpy</a> — Thu Feb 19, 2015 9:27 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2014-11-09T05:45:47+00:00</updated>
+
+		<published>2014-11-09T05:45:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=176040#p176040</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=176040#p176040"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=176040#p176040"><![CDATA[
+Thank you! That is nice  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"> I'll host it and let you know about it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Sun Nov 09, 2014 5:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2014-11-08T19:29:07+00:00</updated>
+
+		<published>2014-11-08T19:29:07+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=176018#p176018</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=176018#p176018"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=176018#p176018"><![CDATA[
+Thank you. Sometimes, one of you reminds me about this lib. Although I moved away from LÖVE, I always come back to see what's happening, and I still have a couple of half-made projects to finish.<br>Of course you can open and modify this code as you please. I guess I forgot to license the code. I officially announce that it uses the same license as LÖVE (zlib).<br>A Github repository is not in my plans - after all, I'm not improving the code for a long time. You can do that, if you want.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sat Nov 08, 2014 7:29 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Positive07]]></name></author>
+		<updated>2014-11-03T22:26:16+00:00</updated>
+
+		<published>2014-11-03T22:26:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=175868#p175868</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=175868#p175868"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=175868#p175868"><![CDATA[
+I love this project, is an amazing work! I would love a repo with all your code. I think that we could help you make this even better...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=61024">Positive07</a> — Mon Nov 03, 2014 10:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2014-01-17T01:00:41+00:00</updated>
+
+		<published>2014-01-17T01:00:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160946#p160946</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160946#p160946"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160946#p160946"><![CDATA[
+Updated/Overwrited.<br>Sorry about that! Let's try again.<br>It was a strange bug concerning directories with hyphens and str:find patterns.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Fri Jan 17, 2014 1:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Overtorment]]></name></author>
+		<updated>2014-01-16T20:33:48+00:00</updated>
+
+		<published>2014-01-16T20:33:48+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160934#p160934</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160934#p160934"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160934#p160934"><![CDATA[
+Thhanks!<br>Now it runs, but throws "no such file" upon opening image file.<br>(Windows 8.1)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134522">Overtorment</a> — Thu Jan 16, 2014 8:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2014-01-16T17:26:49+00:00</updated>
+
+		<published>2014-01-16T17:26:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160915#p160915</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160915#p160915"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160915#p160915"><![CDATA[
+Just uploaded a new demo.<br>Thank you for your interest. I thought that no one would remember this little library.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu Jan 16, 2014 5:26 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Overtorment]]></name></author>
+		<updated>2014-01-13T21:14:54+00:00</updated>
+
+		<published>2014-01-13T21:14:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160692#p160692</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160692#p160692"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160692#p160692"><![CDATA[
+Would love to try than under latest Love! Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134522">Overtorment</a> — Mon Jan 13, 2014 9:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2014-01-12T16:36:47+00:00</updated>
+
+		<published>2014-01-12T16:36:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160633#p160633</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160633#p160633"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160633#p160633"><![CDATA[
+Kind of...<br>I will try it with last love. The biggest changes will probably be loveframes update to 0.9.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sun Jan 12, 2014 4:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Overtorment]]></name></author>
+		<updated>2014-01-11T15:37:12+00:00</updated>
+
+		<published>2014-01-11T15:37:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160577#p160577</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160577#p160577"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160577#p160577"><![CDATA[
+Is the project dead?<br><br>Not working under 0.9<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134522">Overtorment</a> — Sat Jan 11, 2014 3:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2012-06-21T16:25:23+00:00</updated>
+
+		<published>2012-06-21T16:25:23+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=59552#p59552</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=59552#p59552"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=59552#p59552"><![CDATA[
+First post updated!<br><br>Thanks to all for the support!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Thu Jun 21, 2012 4:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-06-10T09:29:58+00:00</updated>
+
+		<published>2012-06-10T09:29:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=58841#p58841</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=58841#p58841"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=58841#p58841"><![CDATA[
+I use Ubuntu 12.04 and I usually don't have boxes instead of some characters, I only have them inside LÖVE<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun Jun 10, 2012 9:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2012-06-21T16:12:02+00:00</updated>
+
+		<published>2012-06-10T03:20:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=58828#p58828</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=58828#p58828"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=58828#p58828"><![CDATA[
+<blockquote class="uncited"><div>On Linux, I can select the file "name↑.try" and access the folder "↑", but a box is shown (as every uncommon character on Windows)</div></blockquote>So it works. I don't have boxes, but I'm only using PT characters. What's your distro?<blockquote class="uncited"><div>Yes but with LoveFS in the OSX root are also showed things usually hidden in Finder listings. It shows cores/bin/dev/etc... folders and list files like mach_kernel and other stuff. Those things only show usually with terminal or in X11 dialog interfaces.<br><br>Yes, it browses well foreign folders.</div></blockquote>I'm happy that the functionality is there. We can try to correct the cosmetic later.<br><br>For Windows users: I made a mistake building the love file. No one can test the demo because it only works with console activated. It's a bad situation and I couldn't find a solution. Finally, this demo works on Windows. Since it change console codepage to 437 there will be no more crashes, BUT folders and files with foreign characters are not browsable/selectable. It might crash if there are foreign characters at the opening folder. I'll look later at this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sun Jun 10, 2012 3:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[coffee]]></name></author>
+		<updated>2012-06-09T19:51:42+00:00</updated>
+
+		<published>2012-06-09T19:51:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=58808#p58808</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=58808#p58808"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=58808#p58808"><![CDATA[
+<blockquote class="uncited"><div>Hidden files and folders aren't shown.</div></blockquote>Yes but with LoveFS in the OSX root are also showed things usually hidden in Finder listings. It shows cores/bin/dev/etc... folders and list files like mach_kernel and other stuff. Those things only show usually with terminal or in X11 dialog interfaces.<br><br>Yes, it browses well foreign folders.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3988">coffee</a> — Sat Jun 09, 2012 7:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2012-06-09T19:38:14+00:00</updated>
+
+		<published>2012-06-09T19:38:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=58803#p58803</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=58803#p58803"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=58803#p58803"><![CDATA[
+On Linux, I can select the file "name↑.try" and access the folder "↑", but a box is shown (as every uncommon character on Windows)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sat Jun 09, 2012 7:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[linux-man]]></name></author>
+		<updated>2012-06-09T19:26:08+00:00</updated>
+
+		<published>2012-06-09T19:26:08+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=58799#p58799</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=58799#p58799"/>
+		<title type="html"><![CDATA[Re: LoveFS]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=58799#p58799"><![CDATA[
+<blockquote class="uncited"><div>Only found a problem so far. It don't show foreign/non-english characters. show a "box" instead.</div></blockquote>But can you select files (it shows a "selected file" text bellow Current Directory) or enter directories with foreign characters?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2532">linux-man</a> — Sat Jun 09, 2012 7:26 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

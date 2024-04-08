@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2879" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2018-01-02T16:14:47+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2879</id>
+
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-01-02T16:14:47+00:00</updated>
+
+		<published>2018-01-02T16:14:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=217538#p217538</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=217538#p217538"/>
+		<title type="html"><![CDATA[Re: [library] inspect.lua - print tables and debug beautifully]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=217538#p217538"><![CDATA[
+<blockquote class="uncited"><div>Hi, inspect already works on metatables. What are you trying to do?</div></blockquote>Nevermind, sorry, it was late.  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-death.png" width="16" height="16" alt=":death:" title="Death"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Tue Jan 02, 2018 4:14 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2018-01-02T14:36:22+00:00</updated>
+
+		<published>2018-01-02T14:36:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=217534#p217534</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=217534#p217534"/>
+		<title type="html"><![CDATA[Re: [library] inspect.lua - print tables and debug beautifully]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=217534#p217534"><![CDATA[
+Hi, inspect already works on metatables. What are you trying to do?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue Jan 02, 2018 2:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Marty]]></name></author>
+		<updated>2018-01-01T06:08:34+00:00</updated>
+
+		<published>2018-01-01T06:08:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=217514#p217514</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=217514#p217514"/>
+		<title type="html"><![CDATA[Re: [library] inspect.lua - print tables and debug beautifully]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=217514#p217514"><![CDATA[
+Hey kikito, great work (not only on this lib).<br><br>Is it possible to make inspect work on metatables, too?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=139677">Marty</a> — Mon Jan 01, 2018 6:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuperZazu]]></name></author>
+		<updated>2014-09-21T09:06:40+00:00</updated>
+
+		<published>2014-09-21T09:06:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174015#p174015</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174015#p174015"/>
+		<title type="html"><![CDATA[Re: [library] inspect.lua - print tables and debug beautiful]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174015#p174015"><![CDATA[
+As always, a simple &amp; useful tool. Thank you, mate <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53026">SuperZazu</a> — Sun Sep 21, 2014 9:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-09-20T14:12:22+00:00</updated>
+
+		<published>2014-09-20T14:12:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173998#p173998</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173998#p173998"/>
+		<title type="html"><![CDATA[Re: [library] inspect.lua - print tables and debug beautiful]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173998#p173998"><![CDATA[
+It seems that I forgot to mention inspect 2.0 on this thread.<br><br>Well, nevertheless, here you go: <strong class="text-strong">inspect.lua v3.0.0 is out</strong>. You can get it from github or luarocks:<br><br><a href="https://github.com/kikito/inspect.lua" class="postlink">https://github.com/kikito/inspect.lua</a><br><br>The basic function are the same: you give it a Lua value, and it gives you back a string representing the object, but in a way humans understand easily. It is especially useful for seeing the contents of tables.<br><div class="codebox"><p>Code: </p><pre><code>local inspect = require 'inspect'print(inspect({1,2,3})) -- prints { 1, 2, 3 }</code></pre></div>Inspect accepts a second optional parameter called <strong class="text-strong">options</strong>, which can be used to tweak the generated string in several ways. That is the one which has changed on this version. The new options are explained on the readme.<br><br>I have also made the code a bit smaller and faster, and fixed one bug related with floats used as keys on array-like tables.<br><br>Regards!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Sep 20, 2014 2:12 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-10-29T23:15:18+00:00</updated>
+
+		<published>2012-10-29T23:15:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69117#p69117</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69117#p69117"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69117#p69117"><![CDATA[
+New version (1.2.0) of inspect.lua is out:<br><br>The biggest change is that in the new version, the &lt;id&gt; of a table will be printed only for the tables that are repeated, while the rest will not. This tones visual noise, and makes the printouts more useful. Now if you see an &lt;id&gt; before a table, you now know that that table will appear more than once on the generated string.<br><br>Another change is that now the default depth is "infinite". The historical reason for having such parameter was table recursion, but handling them via &lt;ids&gt; is a better approach IMHO. The depth param is still there, and if you set it up to 4 inspect will behave like before.<br><br>There has also been some small code cleanup and refactoring, and the tests have been cleaned up a little bit.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Oct 29, 2012 11:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-05-09T22:52:37+00:00</updated>
+
+		<published>2011-05-09T22:52:37+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=31265#p31265</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=31265#p31265"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=31265#p31265"><![CDATA[
+v1.1 of inspect.lua has been released!<br><br>On this version I've added counters.<br><br>Counters are used to identify functions, so now they will be called &lt;function 1&gt;, &lt;function 2&gt;, etc instead of simply &lt;function&gt;. This way you can easily tell them appart:<div class="codebox"><p>Code: </p><pre><code>inspect({print, require, print}) == "&lt;1&gt;{ &lt;function 1&gt;, &lt;function 2&gt;, &lt;function 1&gt; }"</code></pre></div>This (should) also happen with threads (&lt;thread 1&gt;, &lt;thread 2&gt;, etc) and userdata (&lt;userdata 1&gt;, &lt;userdata 2&gt;, etc). Although I haven't tested those cases.<br><br>You may have noticed the &lt;1&gt; before the table above. Now tables are preceded by an &lt;identifier&gt;:<div class="codebox"><p>Code: </p><pre><code>inspect({1,2,{3,4}}) == "&lt;1&gt;{ 1, 2, &lt;2&gt;{ 3, 4 } }"</code></pre></div>These identifiers are used to avoid "re-printing" the same table again and again. When inspect encounters the same table more than once, instead of reprinting its contents again, it prints &lt;table x&gt;, where x is the table identifier:<br><div class="codebox"><p>Code: </p><pre><code>a = {1,2}b = {3,4,a}a[3] = binspect(a) = "&lt;1&gt;{ 1, 2, &lt;2&gt;{ 3, 4, &lt;table 1&gt; } }"</code></pre></div>Notice how the second appearance of a was replaced by &lt;table 1&gt;.<br><br>I hope you are satisfied with the changes. Regards, and good night!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon May 09, 2011 10:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-05-04T07:46:49+00:00</updated>
+
+		<published>2011-05-04T07:46:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30808#p30808</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30808#p30808"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30808#p30808"><![CDATA[
+Not yet, sorry! It's on my TODO list.<br><br>I'll get on it as soon as I finish with the new tweening lib.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed May 04, 2011 7:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-05-04T00:04:27+00:00</updated>
+
+		<published>2011-05-04T00:04:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30800#p30800</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30800#p30800"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30800#p30800"><![CDATA[
+hey kikito, have you updated inspect? i saw you updated cron and memorize so i thought i would ask...<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Wed May 04, 2011 12:04 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-04-28T22:13:27+00:00</updated>
+
+		<published>2011-04-28T22:13:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30479#p30479</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30479#p30479"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30479#p30479"><![CDATA[
+i didn't think about that __tostring thing... rolling your own IDs sounds better becuase the numbers will be so much smaller and as such easier to read. nice idea!!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Thu Apr 28, 2011 10:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-28T08:13:35+00:00</updated>
+
+		<published>2011-04-28T08:13:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30402#p30402</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30402#p30402"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30402#p30402"><![CDATA[
+You could momentarily set __tostring to nil, and then set it back again. But hey, I think your own identifiers would work just fine.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Thu Apr 28, 2011 8:13 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-28T08:10:50+00:00</updated>
+
+		<published>2011-04-28T08:10:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30401#p30401</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30401#p30401"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30401#p30401"><![CDATA[
+I think I will not use the lua ids after all. They are not deterministic, so generating tests for them is more difficult than I'd like. Plus, if a table has a __tostring metamethod, its id isn't reachable anymore (I think).<br><br>Right now I'm thinking about rolling down my own table identifiers - as in 1,2,3,4 ... they should be easier to read and compare than the lua ids anyway.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Apr 28, 2011 8:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-28T04:37:50+00:00</updated>
+
+		<published>2011-04-28T04:37:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30358#p30358</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30358#p30358"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30358#p30358"><![CDATA[
+<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>if string.match( string.gsub(str,"[^'\"]",""), '^"+$' ) then</code></pre></div></div></blockquote>Wouldn't it make more sense to use this:<div class="codebox"><p>Code: </p><pre><code>if str:find('"', 1, true) and not str:find("'", 1, true) then</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Apr 28, 2011 4:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-04-27T22:43:22+00:00</updated>
+
+		<published>2011-04-27T22:43:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30330#p30330</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30330#p30330"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30330#p30330"><![CDATA[
+<blockquote class="uncited"><div>I like having a depth limit though. IMHO it increases readability.</div></blockquote>my alteration of your code keeps the depth as it is more readable, it just allows you to specify infinite depth as well.<br><br> ill try robins idea real quick to see how it looks with larger tables. do you know of anyway to get the hex value of the table with out just chopping of the first part of the tostring() output?<br><br>edit: i implemented robins idea, i looks pretty nice actually<br>added a function to get the hex string of a table<div class="codebox"><p>Code: </p><pre><code>local function tableHexStr(t)  return string.sub(tostring(t), 7) end</code></pre></div>and changed &lt;following code&gt; on line 147<div class="codebox"><p>Code: </p><pre><code>self:puts('}')</code></pre></div>to<div class="codebox"><p>Code: </p><pre><code>self:puts('} -- ', tableHexStr(t))</code></pre></div>edit2:<br>just encase anyone is confused on where I am (e.g. i refer to line 147) here is the entier code<div class="codebox"><p>Code: </p><pre><code>------------------------------------------------------------------------------------------------------------------------- inspect.lua - v1.0 (2011-04)-- Enrique García Cota - enrique.garcia.cota [AT] gmail [DOT] com-- human-readable representations of tables.-- inspired by http://lua-users.org/wiki/TableSerialization------------------------------------------------------------------------------------------------------------------------- Apostrophizes the string if it has quotes, but not aphostrophes-- Otherwise, it returns a regular quoted stringlocal function smartQuote(str)  if string.match( string.gsub(str,"[^'\"]",""), '^"+$' ) then    return "'" .. str .. "'"  end  return string.format("%q", str )endlocal function tableHexStr(t)  return string.sub(tostring(t), 7) endlocal controlCharsTranslation = {  ["\a"] = "\\a", ["\b"] = "\\b", ["\f"] = "\\f", ["\n"] = "\\n",  ["\r"] = "\\r", ["\t"] = "\\t", ["\v"] = "\\v", ["\\"] = "\\\\"}local function unescapeChar(c) return controlCharsTranslation[c] endlocal function unescape(str)  local result, _ = string.gsub( str, "(%c)", unescapeChar )  return resultendlocal function isIdentifier(str)  return string.match( str, "^[_%a][_%a%d]*$" )endlocal function isArrayKey(k, length)  return type(k)=='number' and 1 &lt;= k and k &lt;= lengthendlocal function isDictionaryKey(k, length)  return not isArrayKey(k, length)endlocal sortOrdersByType = {  ['number'] = 1, ['boolean'] = 2, ['string'] = 3, ['table'] = 4,  ['function'] = 5, ['userdata'] = 6, ['thread'] = 7}function sortKeys(a,b)  local ta, tb = type(a), type(b)  if ta ~= tb then return sortOrdersByType[ta] &lt; sortOrdersByType[tb] end  if ta == 'string' or ta == 'number' then return a &lt; b end  return falseendlocal function getDictionaryKeys(t)  local length = #t  local keys = {}  for k,_ in pairs(t) do    if isDictionaryKey(k, length) then table.insert(keys,k) end  end  table.sort(keys, sortKeys)  return keysendlocal Inspector = {}function Inspector:new(v, depth)  local inspector = setmetatable( { buffer = {}, depth = depth, level = 0, RefTbl = {} }, {    __index = Inspector,    __tostring = function(instance) return table.concat(instance.buffer) end  } )  return inspector:putValue(v)endfunction Inspector:puts(...)  local args = {...}  for i=1, #args do    table.insert(self.buffer, tostring(args[i]))  end  return selfendfunction Inspector:tabify()  self:puts("\n", string.rep(" ", self.level))  return selfendfunction Inspector:up()  self.level = self.level - 1endfunction Inspector:down()  self.level = self.level + 1endfunction Inspector:putComma(comma)  if comma then self:puts(',') end  return trueendfunction Inspector:putTable(t)if self.RefTbl[t] thenself:puts('&lt;',tostring(t),'&gt;')elseif self.depth &gt; 0 and self.level &gt;= self.depth thenself:puts('{...}')elseself.RefTbl[t] = trueself:puts('{')self:down()local length = #tlocal mt = getmetatable(t)local __tostring = type(mt) == 'table' and mt.__tostringlocal string = type(__tostring) == 'function' and __tostring(t)if type(string) == 'string' and #string &gt; 0 thenself:puts(' -- ', unescape(string))if length &gt;= 1 then self:tabify() end -- tabify the array valuesendlocal comma = falsefor i=1, length docomma = self:putComma(comma)self:puts(' '):putValue(t[i])endlocal dictKeys = getDictionaryKeys(t)for _,k in ipairs(dictKeys) docomma = self:putComma(comma)self:tabify():putKey(k):puts(' = '):putValue(t[k])endif mt thencomma = self:putComma(comma)self:tabify():puts('&lt;metatable&gt; = '):putValue(mt)endself:up()if #dictKeys &gt; 0 or mt then -- dictionary table. Justify closing }self:tabify()elseif length &gt; 0 then -- array tables have one extra space before closing }self:puts(' ')endself:puts('} -- ', tableHexStr(t))self.RefTbl[t] = nilendreturn selfendfunction Inspector:putValue(v)  local tv = type(v)  if tv == 'string' then    self:puts(smartQuote(unescape(v)))  elseif tv == 'number' or tv == 'boolean' then    self:puts(tostring(v))  elseif tv == 'table' then    self:putTable(v)  else    self:puts('&lt;',tv,'&gt;')  end  return selfendfunction Inspector:putKey(k)  if type(k) == "string" and isIdentifier(k) then    return self:puts(k)  end  return self:puts( "[" ):putValue(k):puts("]")endlocal function inspect(t, depth)  depth = depth or 4  return tostring(Inspector:new(t, depth))endreturn inspect</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Wed Apr 27, 2011 10:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2011-04-27T11:34:24+00:00</updated>
+
+		<published>2011-04-27T11:34:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30283#p30283</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30283#p30283"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30283#p30283"><![CDATA[
+<blockquote class="uncited"><div>I like the idea of table IDs, that helps to distinguish one from another.</div></blockquote>Perhaps something like <div class="codebox"><p>Code: </p><pre><code>t = {t = &lt;table: 00B7B928&gt;} -- 00B7B928</code></pre></div>is useful, so the user can see which table the recursion refers to.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Wed Apr 27, 2011 11:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BlackBulletIV]]></name></author>
+		<updated>2011-04-27T08:57:38+00:00</updated>
+
+		<published>2011-04-27T08:57:38+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30262#p30262</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30262#p30262"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30262#p30262"><![CDATA[
+I like the idea of table IDs, that helps to distinguish one from another.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1722">BlackBulletIV</a> — Wed Apr 27, 2011 8:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-27T08:34:34+00:00</updated>
+
+		<published>2011-04-27T08:34:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30255#p30255</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30255#p30255"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30255#p30255"><![CDATA[
+mm. I might steal your idea.<br><br>I'll do a rundown on my libs this weekend, there are some things I must change. Recursion handling on inspect might be one of the things that I change.<br><br>I like having a depth limit though. IMHO it increases readability.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Apr 27, 2011 8:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ishkabible]]></name></author>
+		<updated>2011-04-27T02:35:49+00:00</updated>
+
+		<published>2011-04-27T02:35:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30236#p30236</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30236#p30236"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30236#p30236"><![CDATA[
+i made a small improvement to it. with my version you can handle infinite recursion a bit differently. rather than only allowing for a limited depth my version allows you to pass a negative number to tell the 'putTable' method to keep going forever. this brings up the issue of infinite recursion, so it uses another table to keep a record of all parent tables and if the 'putTable' method is passed a table which has a parent of the same value then  "&lt;table: (hex value)" is printed instead.<br><br>example:<div class="codebox"><p>Code: </p><pre><code>inspect = require('inspect')local t = {}t.t = tprint("t = "..inspect(t,-1))</code></pre></div>will print <blockquote class="uncited"><div>t = {<br> t = &lt;table: 00B7B928&gt;<br>}</div></blockquote>i like this better becuase its more flexible. i kinda want to add a way to show table that it recurs to but im not sure on how i want to do that yet.<br><br><br>entire code: (changes only made to Inspector:putTable and Inspector:new so that's all i posted)<div class="codebox"><p>Code: </p><pre><code>function Inspector:new(v, depth)  local inspector = setmetatable( { buffer = {}, depth = depth, level = 0, RefTbl = {} }, {    __index = Inspector,    __tostring = function(instance) return table.concat(instance.buffer) end  } )  return inspector:putValue(v)endfunction Inspector:putTable(t)if self.RefTbl[t] thenself:puts('&lt;',tostring(t),'&gt;')elseif self.depth &gt; 0 and self.level &gt;= self.depth thenself:puts('{...}')elseself.RefTbl[t] = trueself:puts('{')self:down()local length = #tlocal mt = getmetatable(t)local __tostring = type(mt) == 'table' and mt.__tostringlocal string = type(__tostring) == 'function' and __tostring(t)if type(string) == 'string' and #string &gt; 0 thenself:puts(' -- ', unescape(string))if length &gt;= 1 then self:tabify() end -- tabify the array valuesendlocal comma = falsefor i=1, length docomma = self:putComma(comma)self:puts(' '):putValue(t[i])endlocal dictKeys = getDictionaryKeys(t)for _,k in ipairs(dictKeys) docomma = self:putComma(comma)self:tabify():putKey(k):puts(' = '):putValue(t[k])endif mt thencomma = self:putComma(comma)self:tabify():puts('&lt;metatable&gt; = '):putValue(mt)endself:up()if #dictKeys &gt; 0 or mt then -- dictionary table. Justify closing }self:tabify()elseif length &gt; 0 then -- array tables have one extra space before closing }self:puts(' ')endself:puts('}')self.RefTbl[t] = nilendreturn selfend</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1556">ishkabible</a> — Wed Apr 27, 2011 2:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-04-24T11:39:34+00:00</updated>
+
+		<published>2011-04-24T11:39:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30045#p30045</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30045#p30045"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30045#p30045"><![CDATA[
+I'm glad you like it guys <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Apr 24, 2011 11:39 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lap]]></name></author>
+		<updated>2011-04-24T11:33:08+00:00</updated>
+
+		<published>2011-04-24T11:33:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30044#p30044</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30044#p30044"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30044#p30044"><![CDATA[
+So much better than the basic functionality I've been using. Well done.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1149">Lap</a> — Sun Apr 24, 2011 11:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2011-04-24T02:38:00+00:00</updated>
+
+		<published>2011-04-24T02:38:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30036#p30036</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30036#p30036"/>
+		<title type="html"><![CDATA[Re: inspect.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30036#p30036"><![CDATA[
+It is like PrettyPrinter for Lua. Thanks.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Sun Apr 24, 2011 2:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-10-29T23:23:22+00:00</updated>
+
+		<published>2011-04-24T01:02:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30028#p30028</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30028#p30028"/>
+		<title type="html"><![CDATA[[library] inspect.lua - print tables and debug beautifully]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30028#p30028"><![CDATA[
+Hi there!<br><br>I've created another utility function:<br><br><a href="https://github.com/kikito/inspect.lua" class="postlink">https://github.com/kikito/inspect.lua</a><br><br>It is mainly useful for debugging / logging errors; tables are displayed hierarchically. The main objective here is being easy to read for a human; It does <strong class="text-strong">not</strong> produce 100% lua-compatible code, so you should <strong class="text-strong">not</strong> use it for saving/restoring tables.<br><br>The way it handles "infinite recursion" (table t has a reference to table q, and table q references back to t) by simply limiting the "maximum depth" that will be used (this can be changed on a second value). <strong class="text-strong">EDIT: Nowadays it handles recursion much more awesomely.</strong><br><br>I know that some of you have already developed your own "recursive printers". I hope this is useful for those who haven't.<br><br>The library does some fancy things with metatables. This was implemented to appease Taehl, <a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=2867#p29914" class="postlink">who seems to be into that</a> <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br><br>You may find examples and instructions on the readme, which should be visible on the link above.<br><br>Regards!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Apr 24, 2011 1:02 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

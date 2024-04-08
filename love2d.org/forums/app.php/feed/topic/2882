@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2882" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2014-06-07T10:12:24+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2882</id>
+
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-07T10:12:24+00:00</updated>
+
+		<published>2014-06-07T10:12:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169282#p169282</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169282#p169282"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169282#p169282"><![CDATA[
+@kikito: thanks. i wil try it.<br><br>I want to update a list of elements via cron, but this elements also have thier own update cycle.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sat Jun 07, 2014 10:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2014-06-06T20:35:04+00:00</updated>
+
+		<published>2014-06-06T20:35:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169258#p169258</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169258#p169258"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169258#p169258"><![CDATA[
+Or call [wiki]love.timer.getDelta[/wiki].<br><br>Also, I can't think of a situation where you would need a dt in a cron callback, so why do you need it?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Fri Jun 06, 2014 8:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-06T20:17:27+00:00</updated>
+
+		<published>2014-06-06T20:17:27+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169257#p169257</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169257#p169257"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169257#p169257"><![CDATA[
+<blockquote class="uncited"><div>Yes, the last one.</div></blockquote>You can use a table to hold a reference to it then. For example, a player table:<br><div class="codebox"><p>Code: </p><pre><code>local clock = cron.after(5, function()  print(player.last_dt)end)...function love.update(dt)  player.last_dt = dt  clock:update(dt)end</code></pre></div>The only other option I can think of is overriding clock.update yourself to use dt.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Jun 06, 2014 8:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Rockford]]></name></author>
+		<updated>2014-06-06T16:42:46+00:00</updated>
+
+		<published>2014-06-06T16:42:46+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169251#p169251</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169251#p169251"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169251#p169251"><![CDATA[
+Are you wanting to pass dt through so it can be used by the function that is being triggered by the cron?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134803">Rockford</a> — Fri Jun 06, 2014 4:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-06T07:45:13+00:00</updated>
+
+		<published>2014-06-06T07:45:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169233#p169233</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169233#p169233"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169233#p169233"><![CDATA[
+Yes, the last one.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Fri Jun 06, 2014 7:45 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-06-06T06:12:18+00:00</updated>
+
+		<published>2014-06-06T06:12:18+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169231#p169231</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169231#p169231"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169231#p169231"><![CDATA[
+The callback is invoked after many dts. Which one would you pass to the callback? The last one?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Jun 06, 2014 6:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tanner]]></name></author>
+		<updated>2014-06-05T12:18:51+00:00</updated>
+
+		<published>2014-06-05T12:18:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169179#p169179</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169179#p169179"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169179#p169179"><![CDATA[
+<blockquote class="uncited"><div>Is it possible to get access to <strong class="text-strong">dt</strong> in the callback function? When I look at the code, only args are passed, but not dt.</div></blockquote>What would dt be in the context of a cron callback? Wouldn't it just be the interval that you specified?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=45757">Tanner</a> — Thu Jun 05, 2014 12:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-06-05T10:58:08+00:00</updated>
+
+		<published>2014-06-05T10:58:08+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169175#p169175</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169175#p169175"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169175#p169175"><![CDATA[
+Is it possible to get access to <strong class="text-strong">dt</strong> in the callback function? When I look at the code, only args are passed, but not dt.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Jun 05, 2014 10:58 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jasoco]]></name></author>
+		<updated>2014-05-05T05:16:22+00:00</updated>
+
+		<published>2014-05-05T05:16:22+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167468#p167468</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167468#p167468"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167468#p167468"><![CDATA[
+I don't think the problem lies with cron. I suspect it's a defective shake function. Have you tried testing to make sure the shake works by itself? Attach it to a key press for testing.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=594">Jasoco</a> — Mon May 05, 2014 5:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-04T17:34:10+00:00</updated>
+
+		<published>2014-05-04T17:34:10+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167439#p167439</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167439#p167439"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167439#p167439"><![CDATA[
+I am sorry but I don't have time to dig through your code right now - especially with so little direction. Perhaps others in the community will want to step in.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun May 04, 2014 5:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasperelo]]></name></author>
+		<updated>2014-05-04T16:44:40+00:00</updated>
+
+		<published>2014-05-04T16:44:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167432#p167432</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167432#p167432"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167432#p167432"><![CDATA[
+1. I expected the screen to shake.<br>2. An error.<br>3. Asking you, since I don't know anything about cron.lua.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=46295">Kasperelo</a> — Sun May 04, 2014 4:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-04T15:42:13+00:00</updated>
+
+		<published>2014-05-04T15:42:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167427#p167427</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167427#p167427"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167427#p167427"><![CDATA[
+I am sorry but you will have to give me a little more than that.<br><ul><li>What did you expect to happen, where?</li><li>What has happened instead?</li><li>What have you tried?</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun May 04, 2014 3:42 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasperelo]]></name></author>
+		<updated>2014-05-04T14:35:09+00:00</updated>
+
+		<published>2014-05-04T14:35:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167423#p167423</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167423#p167423"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167423#p167423"><![CDATA[
+Hm. I just get a "callback must be a function" error.<br>EDIT: Wait, no, looked at the example. Now nothing happens.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=9883">game.love</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=46295">Kasperelo</a> — Sun May 04, 2014 2:35 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2014-05-04T12:19:55+00:00</updated>
+
+		<published>2014-05-04T12:19:55+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167418#p167418</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167418#p167418"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167418#p167418"><![CDATA[
+cron.lua does not depend on any part of LÖVE. It's compatible with any LÖVE version without needing any changes, as far as I know.<br><br>EDIT: I just tried the demo <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=2882" class="postlink">on the OP</a> using 0.9.1 and it worked just fine.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun May 04, 2014 12:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Kasperelo]]></name></author>
+		<updated>2014-05-04T11:06:47+00:00</updated>
+
+		<published>2014-05-04T11:06:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=167415#p167415</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=167415#p167415"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=167415#p167415"><![CDATA[
+Do you think you're going to update it for 0.9.1?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=46295">Kasperelo</a> — Sun May 04, 2014 11:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2013-09-25T22:43:03+00:00</updated>
+
+		<published>2013-09-25T22:43:03+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=142477#p142477</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=142477#p142477"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE - v2.0 is ]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=142477#p142477"><![CDATA[
+cron 2.0 is out!<br><br>This new version is backwards-incompatible with the previous version, but it should (hopefully) be easier to use.<br><br>On version 1.0, cron hold an internal list of "clocks", and every time you called cron.update, all the clocks would update. This was not very convenient because one often wants to update some clocks but not others.<br><br>On version 1.5, I tried to fix that issue by adding tags - groups of clocks that could be activated and deactivated independently. This kindof worked, but made the code huge (more than duplicated it). You could now update groups of clocks separatedly, but updating then in order, or doing stuff between updates, was not possible<br><br>On version 2.0 I have decided to simplify. The library creates clocks, but it does not automatically hold references to any clocks; instead, it returns them to the user, so each clock can be updated separatedly. The trouble with this approach is that if all your clocks worked the same way before, they could be updated with a single call to cron.update, and now you need to store them in a table and update them with a loop. But only the simplest games using time will be on that situation, so I consider this an improvement.<br><br>Version 2.0 does not add any new features or fixes new bugs, so if you feel comfortable with previous versions of cron, you can use the previous ones. But if you are starting a new project, I recommend using 2.0, since it's the most flexible one and also the one I will be supporting from now on.<br><br>Regards!<br><br>I've <a href="https://love2d.org/forums/viewtopic.php?f=5&amp;t=2882" class="postlink">edited the OP</a> to reflect the changes in 2.0.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Wed Sep 25, 2013 10:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2012-11-03T22:57:13+00:00</updated>
+
+		<published>2012-11-03T22:57:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69489#p69489</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69489#p69489"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69489#p69489"><![CDATA[
+Thanks for the information - very interesting!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sat Nov 03, 2012 10:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-04T23:00:13+00:00</updated>
+
+		<published>2012-11-03T19:51:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69477#p69477</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69477#p69477"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69477#p69477"><![CDATA[
+<blockquote class="uncited"><div>What does that buy you?<br>Does that mean that the compiler will depreciate any function not called or is this strickly to prevent memory leakage?</div></blockquote>Let me start by saying that in the case of tween, I think that might be a mistake (the tweens table should be strong, not weak).<br><br>The only use I have for weak tables is to prevent memory leakage.<br><br>A lot of my libs "archive instances of stuff in private collections". When these instances are stored in an array-like table, that is no problem at all. The problem is that I end up using other stuff as keys - often the instances themselves. My policy is: if I'm using something given by the user as a key, then I must use a weak table. cron.lua has weak tables on the scopes (internal objects that you create when you do cron.tagged(&lt;blah&gt;) because the &lt;blah&gt; part can be tables provided by the user). But notice how it doesn't use a weak table on the entries collection any more. (That's <a href="https://github.com/kikito/cron.lua/pull/2" class="postlink">one of the fixes</a> hawahoo sent me)<br><br>When your "main collection of instances" (entries in cron, or tweens in tween) is weak, but the references are self-generated, you risk losing instances when the garbage collection runs. This is unlikely in the case of tween, since it uses the tweens as keys and values, but I guess it could happen.<br><br>Initially, tween was supposed to accept keys given by the user as keys. That's why it used a weak table for them. Then I realized that I'd rather generate the ids myself, but then I forgot to undo the change. I must fix this. Thanks for helping me identifying a possible issue!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sat Nov 03, 2012 7:51 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ref]]></name></author>
+		<updated>2012-11-03T15:38:14+00:00</updated>
+
+		<published>2012-11-03T15:38:14+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69468#p69468</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69468#p69468"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69468#p69468"><![CDATA[
+A little off topic but...<br>I notice that your libraries are weak tables:<br>e.g.  tweens = setmetatable({}, {__mode = "k"})<br>What does that buy you?<br>Does that mean that the compiler will depreciate any function not called or is this strickly to prevent memory leakage?<br>Still learning and appreciate any input.<br>Best<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48377">Ref</a> — Sat Nov 03, 2012 3:38 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-02T09:00:13+00:00</updated>
+
+		<published>2012-11-02T09:00:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69374#p69374</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69374#p69374"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69374#p69374"><![CDATA[
+Ok, I'll try to improve that (I accept pull requests, too <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"> )<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Fri Nov 02, 2012 9:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-11-02T07:23:31+00:00</updated>
+
+		<published>2012-11-02T07:23:31+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69372#p69372</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69372#p69372"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69372#p69372"><![CDATA[
+That makes sense, but I think your documentation may be lacking, then, when I (addmittedly) glanced over them, I couldn't find anything related to the scope of the 'global' functions with respect to tags.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Nov 02, 2012 7:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-11-01T23:20:13+00:00</updated>
+
+		<published>2012-11-01T23:20:13+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69348#p69348</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69348#p69348"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69348#p69348"><![CDATA[
+<blockquote class="uncited"><div>If you use cron.update, does it update all tags too?</div></blockquote>Yes. cron's non-tagged functions work as before - update(dt) updates all existing entries (no matter their tags), cron.cancel(id) cancels an individual entry, and cron.after &amp; cron.every create non-tagged entries.<br><br>There is no way to "update only the non-tagged entries", though. I experimented using cron.tagged() - with no params - but I encountered one case where the logic wasn't quite clear/didn't work for some reason. In any case, that's not a problem I wanted to solve.<br><br>The main problems I wanted to deal with where:<ul><li>Using cron inside a "game paused" menu - now I can do cron.tagged('pause-menu').update(dt) and the rest of the tags will freeze naturally.</li><li>A complex instance (like an enemy) could have more than one cron entry simultaneously. When the enemy is killed, cancelling all those ids is tiresome. Now cron.tag(self) can create/cancel all the relevant entries for that enemy quite easily (tags can be anything - strings are just one possibility)</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Thu Nov 01, 2012 11:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2012-11-01T21:02:43+00:00</updated>
+
+		<published>2012-11-01T21:02:43+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69343#p69343</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69343#p69343"/>
+		<title type="html"><![CDATA[Re: [library] cron.lua - time management for LÖVE]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69343#p69343"><![CDATA[
+If you use cron.update, does it update all tags too?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Thu Nov 01, 2012 9:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2012-10-28T23:53:06+00:00</updated>
+
+		<published>2012-10-28T23:53:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=69055#p69055</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=69055#p69055"/>
+		<title type="html"><![CDATA[Re: cron.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=69055#p69055"><![CDATA[
+cron.lua update!<br><br>I've released a new version (1.2)<br><br>The big change in cron.lua 1.2 is a new method, <strong class="text-strong">cron.tagged</strong>. It allows tagging time entries, as well as updating them/cancelling them in groups:<div class="codebox"><p>Code: </p><pre><code>local cron = require 'cron'cron.tagged('main-menu','menu').after(5, showMenu)...cron.tagged('main-menu').update(dt)cron.tagged('menu').cancel()</code></pre></div>Other changes:<br><ul><li>Minor changes/optimizations (contributed by <a href="https://github.com/hahawoo" class="postlink">hahawoo</a></li><li>Tests have been improved</li></ul><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Sun Oct 28, 2012 11:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-05-03T22:50:44+00:00</updated>
+
+		<published>2011-05-03T22:50:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=30798#p30798</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=30798#p30798"/>
+		<title type="html"><![CDATA[Re: cron.lua]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=30798#p30798"><![CDATA[
+Quick update: I've made a couple small changes in cron.lua<br><ul><li>It now liberates more memory than before (not all of it, but still)</li><li>It supports funcTables (tables with a _call metamethod) in addition to functions</li></ul>I'm working on my tweening library, and it is nearly finished. I just need to make it a bit cooler and it'll be ready.<br><br>EDIT: the tweening library was released months ago, but I forgot to update this thread. Here it is: <a href="/wiki/tween.lua">tween.lua</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Tue May 03, 2011 10:50 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

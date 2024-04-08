@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84093" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2023-03-23T06:28:41+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84093</id>
+
+		<entry>
+		<author><name><![CDATA[GVovkiv]]></name></author>
+		<updated>2023-03-23T06:28:41+00:00</updated>
+
+		<published>2023-03-23T06:28:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253982#p253982</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253982#p253982"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253982#p253982"><![CDATA[
+<blockquote class="uncited"><div>Is there a mirror for this? The BitBucket repos are both gone. Same for the other input library I was looking at on the wiki. Would be nice to know if D0NM got it working.</div></blockquote>You could try "Baton" instead, it available on github<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=169762">GVovkiv</a> — Thu Mar 23, 2023 6:28 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Connorses]]></name></author>
+		<updated>2023-03-22T20:47:29+00:00</updated>
+
+		<published>2023-03-22T20:47:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=253980#p253980</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=253980#p253980"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=253980#p253980"><![CDATA[
+Is there a mirror for this? The BitBucket repos are both gone. Same for the other input library I was looking at on the wiki. Would be nice to know if D0NM got it working.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=133998">Connorses</a> — Wed Mar 22, 2023 8:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2019-07-25T07:17:06+00:00</updated>
+
+		<published>2019-07-25T07:17:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228485#p228485</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228485#p228485"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228485#p228485"><![CDATA[
+i've almost customized Tactile lib (on unplugging / re-lugging gamepads during the game).<br>But I'm going to move to Love2D 11.x one day.<br><br>So I'm going to test this neat lib again.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Thu Jul 25, 2019 7:17 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2017-09-27T17:15:05+00:00</updated>
+
+		<published>2017-09-27T17:15:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215501#p215501</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215501#p215501"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215501#p215501"><![CDATA[
+Not sure it's that necessary, but I've added it.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Wed Sep 27, 2017 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[georgeprosser]]></name></author>
+		<updated>2017-09-27T16:34:12+00:00</updated>
+
+		<published>2017-09-27T16:34:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215500#p215500</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215500#p215500"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215500#p215500"><![CDATA[
+<blockquote class="uncited"><div>getValue, isUp and isDown (equivalen to love's functions) exist, if that's what you're asking.</div></blockquote>I mean in addition to what love provides, so wasPressed(k) would return true if isDown(k) is true in this frame and was false last frame.<br><br>I just usually find it a hassle to do event handling or button press callbacks when all I want to check is that a key that wasn't down before is now down.<br><br>I've found myself wanting to write a library like yours for some time, partly just to add this functionality!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134865">georgeprosser</a> — Wed Sep 27, 2017 4:34 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2017-09-27T16:05:02+00:00</updated>
+
+		<published>2017-09-27T16:05:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215499#p215499</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215499#p215499"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215499#p215499"><![CDATA[
+getValue, isUp and isDown (equivalen to love's functions) exist, if that's what you're asking.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Wed Sep 27, 2017 4:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[georgeprosser]]></name></author>
+		<updated>2017-09-27T13:20:37+00:00</updated>
+
+		<published>2017-09-27T13:20:37+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215496#p215496</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215496#p215496"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215496#p215496"><![CDATA[
+This looks really neat!<br><br>Would you consider adding a way to respond to key press/release events through function calls, rather than through callbacks? eg. ctrl:wasPressed()<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134865">georgeprosser</a> — Wed Sep 27, 2017 1:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ulydev]]></name></author>
+		<updated>2017-09-08T09:18:40+00:00</updated>
+
+		<published>2017-09-08T09:18:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215125#p215125</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215125#p215125"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215125#p215125"><![CDATA[
+Great job! This will prove useful for sure.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135889">Ulydev</a> — Fri Sep 08, 2017 9:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2017-09-08T09:11:20+00:00</updated>
+
+		<published>2017-09-08T09:11:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215124#p215124</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215124#p215124"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215124#p215124"><![CDATA[
+<blockquote class="uncited"><div><a href="https://imgur.com/a/sRu2P" class="postlink">https://imgur.com/a/sRu2P</a><br>sorry for such a lazy bug report</div></blockquote>Haha right I forgot to put an if guard in that branch in the demo program. I've updated the demo, now it works fine. <br><br>Thank you for reporting it!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Fri Sep 08, 2017 9:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2017-09-08T06:56:22+00:00</updated>
+
+		<published>2017-09-08T06:56:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=215116#p215116</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=215116#p215116"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=215116#p215116"><![CDATA[
+<blockquote class="uncited"><div>Fixed some bugs, added basic example program.</div></blockquote><a href="https://imgur.com/a/sRu2P" class="postlink">https://imgur.com/a/sRu2P</a><br>sorry for such a lazy bug report<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Fri Sep 08, 2017 6:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2017-07-01T03:16:51+00:00</updated>
+
+		<published>2017-07-01T03:16:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213644#p213644</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213644#p213644"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213644#p213644"><![CDATA[
+Fixed some bugs, added basic example program.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Sat Jul 01, 2017 3:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Beelz]]></name></author>
+		<updated>2017-06-29T18:41:45+00:00</updated>
+
+		<published>2017-06-29T18:41:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213614#p213614</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213614#p213614"/>
+		<title type="html"><![CDATA[Re: [lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213614#p213614"><![CDATA[
+Looks nice and polished, I'll definitely be giving it a try. Keep up the good work!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137091">Beelz</a> — Thu Jun 29, 2017 6:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[raidho36]]></name></author>
+		<updated>2017-09-08T09:19:09+00:00</updated>
+
+		<published>2017-06-28T20:26:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=213591#p213591</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=213591#p213591"/>
+		<title type="html"><![CDATA[[lib] CTRL - input handling]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=213591#p213591"><![CDATA[
+<a href="https://bitbucket.org/rcoaxil/ctrl" class="postlink">https://bitbucket.org/rcoaxil/ctrl</a><br><br><a href="https://love2d.org/wiki/CTRL" class="postlink">https://love2d.org/wiki/CTRL</a><br><br>Simple for basic usage and at the same time robust and advanced for extended use, this library provides all necessary facilities to handle user input, and with enough skill, can be extended to handle even the input devices not natively supported by the framework.<br><div class="codebox"><p>Code: </p><pre><code>local ctrl = require ( 'ctrl' ) ( )function ctrl:inputpressed ( name, value ) print ( "pressed", name, value ) endfunction ctrl:inputreleased ( name, value ) print ( "released", name, value ) endfunction ctrl:inputmoved ( name, value ) print ( "moved", name, value ) endctrl:bind ( "fire", { "keyboard", "space" } )ctrl:bind ( "fire", { "joystick", "default", "button", 1 } )ctrl:bind ( "fire", { "mouse", "left" } )ctrl:hookup ( )</code></pre></div>Currently supports keyboard, mouse, gamepad, joystick input devices, input binding in many-to-many fashion, raw value mapping functions and clean value filtering functions, custom events and event triggers, and automatic grabbing of user input &amp; autobind - for controls setup screens, and some more.<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=15488">example.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=123810">raidho36</a> — Wed Jun 28, 2017 8:26 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

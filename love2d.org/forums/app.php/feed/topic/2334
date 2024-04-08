@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2334" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2023-11-05T06:35:06+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2334</id>
+
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2023-11-05T06:35:06+00:00</updated>
+
+		<published>2023-11-05T06:35:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=257255#p257255</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=257255#p257255"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=257255#p257255"><![CDATA[
+<blockquote class="uncited"><div>I found this in play function<br><br>table.insert(TEsound.channels, { love.audio.newSource(sound, sourceType), func, {volume or 1, pitch or 1}, tags=(type(tags) == "table" and tags or {tags}) })<br><br>Why does it creates newSource every time I call play?</div></blockquote>The library is old as heck and unmaintained, consider not using it.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Sun Nov 05, 2023 6:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[respectableman]]></name></author>
+		<updated>2023-11-04T18:31:23+00:00</updated>
+
+		<published>2023-11-04T18:31:23+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=257252#p257252</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=257252#p257252"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=257252#p257252"><![CDATA[
+I found this in play function<br><br>table.insert(TEsound.channels, { love.audio.newSource(sound, sourceType), func, {volume or 1, pitch or 1}, tags=(type(tags) == "table" and tags or {tags}) })<br><br>Why does it creates newSource every time I call play?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=257141">respectableman</a> — Sat Nov 04, 2023 6:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[easy82]]></name></author>
+		<updated>2016-11-21T11:02:29+00:00</updated>
+
+		<published>2016-11-21T11:02:29+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=205927#p205927</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=205927#p205927"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=205927#p205927"><![CDATA[
+Here's a list of Love2D libraries you might be interested:<br><a href="https://github.com/love2d-community/awesome-love2d" class="postlink">https://github.com/love2d-community/awesome-love2d</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=114248">easy82</a> — Mon Nov 21, 2016 11:02 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2016-11-21T06:48:57+00:00</updated>
+
+		<published>2016-11-21T06:48:57+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=205923#p205923</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=205923#p205923"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=205923#p205923"><![CDATA[
+This is technically deprecated, which is the worst kind, since no one really knows about its status of being deprecated. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"><br>(not to mention that i might be wrong in saying it's deprecated, but i'm pretty sure it kinda is)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Mon Nov 21, 2016 6:48 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Pyuu]]></name></author>
+		<updated>2016-11-21T04:11:00+00:00</updated>
+
+		<published>2016-11-21T04:11:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=205919#p205919</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=205919#p205919"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=205919#p205919"><![CDATA[
+The download on the dropbox returns a 404. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-surprised2.png" width="16" height="16" alt=":o:" title="Oh"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=138166">Pyuu</a> — Mon Nov 21, 2016 4:11 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[D0NM]]></name></author>
+		<updated>2016-11-01T16:10:00+00:00</updated>
+
+		<published>2016-11-01T16:10:00+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=205253#p205253</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=205253#p205253"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=205253#p205253"><![CDATA[
+Hey, good TEsound users!<br><br>Now playing some text .XM module and see <br>~1 second of silence every loop...<br><br>Has anyone noticed a 1-second delay between tracks' loops? How to fix it?<br><br>It must be some xm. re-reading/rebuffering thing.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137525">D0NM</a> — Tue Nov 01, 2016 4:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2015-10-11T13:25:20+00:00</updated>
+
+		<published>2015-10-11T13:25:20+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=190167#p190167</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=190167#p190167"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=190167#p190167"><![CDATA[
+Actually, LÖVE also supports [wiki]Source:tell[/wiki].<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Sun Oct 11, 2015 1:25 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2015-10-11T13:21:06+00:00</updated>
+
+		<published>2015-10-11T13:21:06+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=190166#p190166</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=190166#p190166"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=190166#p190166"><![CDATA[
+I don't think so. You can still use the LÖVE api, but LÖVE only supports <a href="https://www.love2d.org/wiki/SoundData:getDuration" class="postlink">https://www.love2d.org/wiki/SoundData:getDuration</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sun Oct 11, 2015 1:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TheMeq]]></name></author>
+		<updated>2015-10-07T16:58:21+00:00</updated>
+
+		<published>2015-10-07T16:58:21+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=190022#p190022</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=190022#p190022"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=190022#p190022"><![CDATA[
+Is there a way to get the current playtime of a song?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3616">TheMeq</a> — Wed Oct 07, 2015 4:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hiccupface]]></name></author>
+		<updated>2015-06-07T00:46:24+00:00</updated>
+
+		<published>2015-06-07T00:46:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=185109#p185109</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=185109#p185109"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=185109#p185109"><![CDATA[
+I just want to post here to say thanks for creating TEsound. <br><br>It's so easy and handy and wonderful!  <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-neko.png" width="16" height="16" alt=":neko:" title="Neko"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136566">hiccupface</a> — Sun Jun 07, 2015 12:46 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-10-06T20:22:51+00:00</updated>
+
+		<published>2014-10-06T20:22:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174658#p174658</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174658#p174658"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174658#p174658"><![CDATA[
+<blockquote class="uncited"><div>You should use love.math.random, it is seeded on startup.</div></blockquote>Oh yes, or initialize the lua generator like this.<br><div class="codebox"><p>Code: </p><pre><code>-- Initialize the pseudo random number generator-- The first random number you get is not really 'randomized' (at least in Windows 2K and OS X).-- To get better pseudo-random number just pop some random number before using them for real:math.randomseed(os.time())math.random(); math.random(); math.random()</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Mon Oct 06, 2014 8:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[DaedalusYoung]]></name></author>
+		<updated>2014-10-06T19:32:33+00:00</updated>
+
+		<published>2014-10-06T19:32:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174653#p174653</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174653#p174653"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174653#p174653"><![CDATA[
+You should use love.math.random, it is seeded on startup.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=126818">DaedalusYoung</a> — Mon Oct 06, 2014 7:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Cryogenical]]></name></author>
+		<updated>2014-10-06T19:15:28+00:00</updated>
+
+		<published>2014-10-06T19:15:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174650#p174650</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174650#p174650"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174650#p174650"><![CDATA[
+It's only playing the 5th index.<br>Even with your combined code.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135016">Cryogenical</a> — Mon Oct 06, 2014 7:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-10-06T12:00:12+00:00</updated>
+
+		<published>2014-10-06T12:00:12+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174625#p174625</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174625#p174625"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174625#p174625"><![CDATA[
+Randomize before you pass the soundeffect to TESound.<br><div class="codebox"><p>Code: </p><pre><code>list = {     [1]="assets/music/matryoshkachorus.mp3",     [2]="assets/music/senbonzakurachorus.mp3",     [3]="assets/music/noushouchorus.mp3",      [4]="assets/music/headphoneactorchorus.mp3",      [5]="assets/music/nyanchorus.mp3",      [6]="assets/music/rimokonchorus.mp3",    }local soundnumber = math.random( #list)TEsound.play( love.sound.newSoundData( list[soundnumber] ) , "sfx")</code></pre></div>But better is to load all soundeffects at the start of the game using "love.sound.newSoundData" and than later in your game pass this SoundData to TEsound.play . My sample is bad, because every time you play a sound, your sound is loaded and converted to SoundData and than in TESound converted to a audio "Source".<br><br>Something like this:<div class="codebox"><p>Code: </p><pre><code>local loadedsounds =  {}for k,v in pairs(list) dotable.insert(loadedsounds, k, love.sound.newSoundData(v) )end--later in the game use this to play a soundlocal soundnumber = math.random( #loadedsounds )TEsound.play( loadedsounds[ soundnumber ] , "sfx")</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Mon Oct 06, 2014 12:00 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Cryogenical]]></name></author>
+		<updated>2014-09-22T17:53:50+00:00</updated>
+
+		<published>2014-09-22T17:53:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=174051#p174051</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=174051#p174051"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=174051#p174051"><![CDATA[
+I don't understand then.<br>How would I incorporate my list then, when I want to play it randomized?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135016">Cryogenical</a> — Mon Sep 22, 2014 5:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-09-20T11:38:19+00:00</updated>
+
+		<published>2014-09-20T11:38:19+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173994#p173994</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173994#p173994"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173994#p173994"><![CDATA[
+Hey,<br><br>sorry for the later answer, i was on vacation.<br><br>You first have to make a Sounddata from this.<br><br>Like this, and than pass it to the play function.<br><div class="codebox"><p>Code: </p><pre><code>love.sound.newSoundData("sfx.wav")</code></pre></div>I made this because it's totally stupid to reload a sound from disk every time you want to play it!<br><br>Also I disabled playback of tables. Just remove the -- before "if type ...". I don't know why I made this, maybe there where some errors.<br><div class="codebox"><p>Code: </p><pre><code>-- arrays not supported, because loading of sounds had to be done before--if type(sound) == "table" then sound = sound[math.random(#sound)] end</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sat Sep 20, 2014 11:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Cryogenical]]></name></author>
+		<updated>2014-08-28T17:46:11+00:00</updated>
+
+		<published>2014-08-28T17:46:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=173130#p173130</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=173130#p173130"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=173130#p173130"><![CDATA[
+SCiENCE, I think you might have broken the function TEsound.play(list) or something?<br>I made a list as such: <div class="codebox"><p>Code: </p><pre><code>list = {"assets/music/matryoshkachorus.mp3",     "assets/music/senbonzakurachorus.mp3",     "assets/music/noushouchorus.mp3",      "assets/music/headphoneactorchorus.mp3",      "assets/music/nyanchorus.mp3",      "assets/music/rimokonchorus.mp3",    }</code></pre></div>and tried to run "TEsound.play(list)", and it gave me this error:<img src="http://i.gyazo.com/bbf6ce03a78039c5a20459a009db454f.png" class="postimage" alt="Image"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135016">Cryogenical</a> — Thu Aug 28, 2014 5:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JaredSartin]]></name></author>
+		<updated>2014-08-25T18:45:17+00:00</updated>
+
+		<published>2014-08-25T18:45:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=172960#p172960</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=172960#p172960"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=172960#p172960"><![CDATA[
+That would be awesome! Thanks SiENcE!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135343">JaredSartin</a> — Mon Aug 25, 2014 6:45 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-07-31T21:49:17+00:00</updated>
+
+		<published>2014-07-31T21:49:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171938#p171938</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171938#p171938"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171938#p171938"><![CDATA[
+It's on github as i posted <a href="https://github.com/SiENcE/love2d_gametemplate/blob/master/lib/TEsound.lua" class="postlink">https://github.com/SiENcE/love2d_gamete ... Esound.lua</a><br><br>But currently only in my game template. I create another github tomorrow for only TESound, so you can contribute. Ok <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> ?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Jul 31, 2014 9:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[JaredSartin]]></name></author>
+		<updated>2014-07-22T14:19:16+00:00</updated>
+
+		<published>2014-07-22T14:19:16+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171450#p171450</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171450#p171450"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171450#p171450"><![CDATA[
+Is this (or can it be) on github? I would love to contribute and track changes!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135343">JaredSartin</a> — Tue Jul 22, 2014 2:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2014-07-22T09:47:56+00:00</updated>
+
+		<published>2014-07-22T09:47:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171439#p171439</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171439#p171439"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171439#p171439"><![CDATA[
+I <a href="https://github.com/SiENcE/love2d_gametemplate/blob/master/lib/TEsound.lua" class="postlink">modified TEsound</a> to support audio sources. This way you can modify audio sources via the LÖVE <a href="http://www.love2d.org/wiki/Source" class="postlink">source commands</a> for positional Audio. You can change Pitch and maybe implement the <a href="http://forum.devmaster.net/t/openal-lesson-7-the-doppler-effect/2894" class="postlink">OpenAL Doppler Effect</a>.<br><br>I also introduced this switches to globally enable or disable sounds/music (Streams).<div class="codebox"><p>Code: </p><pre><code>TEsound.sound = trueTEsound.music = true</code></pre></div>OpenAL EFXs are currently not supported.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Tue Jul 22, 2014 9:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[drunken_munki]]></name></author>
+		<updated>2015-02-09T18:44:06+00:00</updated>
+
+		<published>2014-07-15T08:57:47+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=171024#p171024</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=171024#p171024"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=171024#p171024"><![CDATA[
+nil<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2255">drunken_munki</a> — Tue Jul 15, 2014 8:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[murks]]></name></author>
+		<updated>2014-06-23T22:37:05+00:00</updated>
+
+		<published>2014-06-23T22:37:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=170130#p170130</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=170130#p170130"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=170130#p170130"><![CDATA[
+Bug: It seems like TEsound.play() can't handle tables at all.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135180">murks</a> — Mon Jun 23, 2014 10:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jeeper]]></name></author>
+		<updated>2014-06-10T17:15:45+00:00</updated>
+
+		<published>2014-06-10T17:15:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169512#p169512</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169512#p169512"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169512#p169512"><![CDATA[
+<blockquote class="uncited"><div>Hi, is TEsound updated to work with 0.9?</div></blockquote>Yes it is compatible to 0.9<br><blockquote class="uncited"><div>And is there any way to start a sound playing from a certain point? (I want to jump to a 'parallel' version of the same song when the game is paused.)</div></blockquote>I am not sure, but one way would be to edit it on the audio file, ie have the file start where you want it to start.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=101561">Jeeper</a> — Tue Jun 10, 2014 5:15 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[georgeprosser]]></name></author>
+		<updated>2014-06-10T11:46:40+00:00</updated>
+
+		<published>2014-06-10T11:46:40+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=169498#p169498</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=169498#p169498"/>
+		<title type="html"><![CDATA[Re: TEsound - simple, easy sound/music manager]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=169498#p169498"><![CDATA[
+Hi, is TEsound updated to work with 0.9?<br><br>And is there any way to start a sound playing from a certain point? (I want to jump to a 'parallel' version of the same song when the game is paused.)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134865">georgeprosser</a> — Tue Jun 10, 2014 11:46 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
