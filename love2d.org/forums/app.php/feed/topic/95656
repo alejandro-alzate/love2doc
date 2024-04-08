@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/95656" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-07T20:37:49+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/95656</id>
+
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T20:37:49+00:00</updated>
+
+		<published>2024-04-07T20:37:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259194#p259194</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259194#p259194"/>
+		<title type="html"><![CDATA[Re: Audio just stopped playing in all love programs]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259194#p259194"><![CDATA[
+Glad that worked.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 8:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T17:04:47+00:00</updated>
+
+		<published>2024-04-07T17:04:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259193#p259193</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259193#p259193"/>
+		<title type="html"><![CDATA[Re: Audio just stopped playing in all love programs]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259193#p259193"><![CDATA[
+Thank you, that was the problem. I have no earthly idea how that could have been muted. Must have hit some bizarre keyboard shortcut or something. Thanks again!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 5:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T10:38:24+00:00</updated>
+
+		<published>2024-04-07T10:38:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259191#p259191</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259191#p259191"/>
+		<title type="html"><![CDATA[Re: Audio just stopped playing in all love programs]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259191#p259191"><![CDATA[
+That app/channel might be muted, Linux uses separate outputs (pulse audio) for each audio source and each audio output can be individually muted. Go to application volumes in systray and check that.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T00:18:17+00:00</updated>
+
+		<published>2024-04-07T00:18:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259187#p259187</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259187#p259187"/>
+		<title type="html"><![CDATA[Audio just stopped playing in all love programs]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259187#p259187"><![CDATA[
+I was in the middle of development using ZeroBrane Studio, on linux (opensuse TW). Been working all day. Made some minor tweak, totally unrelated to sound, and now whenever I execute any love program, whether from command line or through the IDE, no sounds play at all. So weird. I rebooted, uninstalled and reinstalled love, no idea. Sound is working fine in the OS and other games/programs. Anyone ever seen something similar or have any ideas?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 12:18 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

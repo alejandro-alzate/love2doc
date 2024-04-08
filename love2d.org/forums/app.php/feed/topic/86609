@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/86609" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-07T01:10:35+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/86609</id>
+
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-07T01:10:35+00:00</updated>
+
+		<published>2024-04-07T01:10:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259189#p259189</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259189#p259189"/>
+		<title type="html"><![CDATA[Re: Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259189#p259189"><![CDATA[
+<blockquote class="uncited"><div>The title was too short to explain my problem fully, so here it is:<br>Right now, keyboard movement controls for my game are working perfectly ("a" to move left, "d" to move right, "space" to jump). However, I also want to test movement on my Android phone, and I'm not sure how Love2d touch functions work (as the wiki isn't very clear). For example, after I get a camera set up (currently in progress), my player should be centered in the middle of the screen. A touch and hold on the left side of the screen would make the player move to the right, and a touch and hold on the right should make the player move to the left, with doubletap to jump. As soon as touch is released, the player should stop moving. Any suggestions as to how I should set this up?</div></blockquote>I am no Love2D expert, (in fact I just joined) but it might use the mouse and you just have to add an if clicked statement for a mobile version.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Sun Apr 07, 2024 1:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Lekic]]></name></author>
+		<updated>2020-09-20T15:59:51+00:00</updated>
+
+		<published>2020-09-20T15:59:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=235976#p235976</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=235976#p235976"/>
+		<title type="html"><![CDATA[Re: Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=235976#p235976"><![CDATA[
+Please am creating a game on android platform can i get the code for touch i.e touchPressed etc stuffs like dat and site where i can get it please<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=157759">Lekic</a> — Sun Sep 20, 2020 3:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2019-04-30T22:41:49+00:00</updated>
+
+		<published>2019-04-30T22:41:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=227010#p227010</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=227010#p227010"/>
+		<title type="html"><![CDATA[Re: Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=227010#p227010"><![CDATA[
+If you do not need handling simultaneous touches, you don't need to use touch; you can just use the mouse functions.<br><br>If you need to handle simultaneous touches, the only significant difference between the mouse functions and the touch functions is that each touch (each finger in contact with the screen) is assigned an id, which you're given.<br><br>You can track how many touches there are, and at which coordinates, by using the id as the key of a table.<br><br>Untested:<div class="codebox"><p>Code: </p><pre><code>local touches = {}function love.touchpressed(id, x, y)  touches[id] = {x, y}endfunction love.touchmoved(id, x, y)  touches[id][1] = x  touches[id][2] = yendfunction love.touchreleased(id, x, y)  touches[id] = nilendlocal function howManyTouches()  return #touchesendfunction isRectangleBeingTouched(rect)  for k, v in pairs(touches) do    if rect:containsPoint(v[1], v[2]) then      return true    end  end  return falseend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Tue Apr 30, 2019 10:41 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[miniaturedog]]></name></author>
+		<updated>2019-04-30T22:31:14+00:00</updated>
+
+		<published>2019-04-30T22:31:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=227008#p227008</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=227008#p227008"/>
+		<title type="html"><![CDATA[Re: Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=227008#p227008"><![CDATA[
+<blockquote class="uncited"><div>What parts of the wiki are unclear?</div></blockquote>Essentially all of the love.touch section, for a beginner like me. I'm specifically not sure how to check if a touch is within a certain area of the screen (and make the player move if so), or how to use touch ids.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142258">miniaturedog</a> — Tue Apr 30, 2019 10:31 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2019-04-30T20:36:58+00:00</updated>
+
+		<published>2019-04-30T20:36:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=227002#p227002</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=227002#p227002"/>
+		<title type="html"><![CDATA[Re: Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=227002#p227002"><![CDATA[
+What parts of the wiki are unclear?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Tue Apr 30, 2019 8:36 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[miniaturedog]]></name></author>
+		<updated>2019-04-30T14:27:54+00:00</updated>
+
+		<published>2019-04-30T14:27:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=226993#p226993</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=226993#p226993"/>
+		<title type="html"><![CDATA[Love2d touch functions?]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=226993#p226993"><![CDATA[
+The title was too short to explain my problem fully, so here it is:<br>Right now, keyboard movement controls for my game are working perfectly ("a" to move left, "d" to move right, "space" to jump). However, I also want to test movement on my Android phone, and I'm not sure how Love2d touch functions work (as the wiki isn't very clear). For example, after I get a camera set up (currently in progress), my player should be centered in the middle of the screen. A touch and hold on the left side of the screen would make the player move to the right, and a touch and hold on the right should make the player move to the left, with doubletap to jump. As soon as touch is released, the player should stop moving. Any suggestions as to how I should set this up?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142258">miniaturedog</a> — Tue Apr 30, 2019 2:27 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
