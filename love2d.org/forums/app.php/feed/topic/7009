@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/7009" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2012-05-08T02:12:54+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/7009</id>
+
+		<entry>
+		<author><name><![CDATA[trev0006]]></name></author>
+		<updated>2012-05-08T02:12:54+00:00</updated>
+
+		<published>2012-05-08T02:12:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=56290#p56290</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=56290#p56290"/>
+		<title type="html"><![CDATA[Re: Customizing Geany for LOVE]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=56290#p56290"><![CDATA[
+Was having trouble with Geany, your example cleared most of the questions I had. Thanks<br><br><blockquote class="uncited"><div>The topic discussing everyone's favorite IDE/text editor has got me wanting to pimp out my current favorite IDE, Geany (<a href="http://www.geany.org/" class="postlink">http://www.geany.org/</a>). It's lightweight, feature-rich, but not overbearing. I've found a few nice ways to make it more compatible with LOVE.<br><br><strong class="text-strong">Customizing Geany for LOVE</strong><br><br>(This is written from a Linux perspective, but it should be fairly similar for anyone using different OS's. This is also written for Geany 0.20, so any other version may or may not have the same functionality. See the manual (<a href="http://www.geany.org/manual/current/index.html" class="postlink">http://www.geany.org/manual/current/index.html</a>) for better integration with your setup.)<br><br><strong class="text-strong">Creating a main.lua template:</strong><br><br>You can simplify the start-up of your game by creating a template that will create the main.lua file with  whatever useful LOVE functions you normally use for your games. First, create the main.lua file with your most used LOVE functions. Don't go overboard; if you're needing to erase significant portions of your template every time you start making a game, you're doing it wrong. My template is this:<br><div class="codebox"><p>Code: </p><pre><code>function love.load()endfunction love.update(dt)endfunction love.draw()endfunction love.keypressed(k)if k == "escape" thenlove.event.push("q");endend</code></pre></div>Four functions, three of which are completely bare, and one to quickly close the program for use during debugging.<br><br>You can customize the template even more, with header comments and the like, but that is a bit beyond the scope of my simple tutorial, so I will merely provide a link to the necessary portions of the Geany manual (<a href="http://www.geany.org/manual/current/index.html#customizing-templates" class="postlink">http://www.geany.org/manual/current/ind ... -templates</a>).<br><br>When you are satisfied with your template, you need to save it in the template directory with a file name that will identify what the template describes (in my case, I saved it as LoveBasicGame.lua, but you can do whatever. This name will have no affect on the filename of any files created from this template). For Linux distributions, the template directory is usually:<br><br>~/.config/geany/templates/files/<br><br>(If you are trying to access this via the GUI, be sure to enable hidden files to find the .config directory.)<br><br>And you're done! Now, whenever you are starting a new project, all you need to do is: <em class="text-italics">File – New (from Template) – LoveBasicGame.lua</em> and your new main.lua will appear. Alternatively, the drop-down arrow next to the New File icon on the toolbar lists the current templates as well. The only issue is that this file will be untitled, so when you first save it, you'll need to save it as <strong class="text-strong">main.lua</strong>.<br><br><strong class="text-strong">Customizing a project for LOVE:</strong><br><br>Geany has a a very simple project system. It will reopen all the files that were open the last time the project and/or Geany was closed, and you can customize a few of the properties of the project to take advantage of some built-in Geany functionality. Our main concern is changing the “Execute” command so that the current LOVE game can be run at the push of a button. <br><br>After you have created a new project <em class="text-italics">(Project – New)</em>, go to <em class="text-italics">Project – Properties</em>, and select the <em class="text-italics">Build</em> tab. Under the heading <strong class="text-strong">Execute Commands</strong>, change the first list item's command (the second column) to <strong class="text-strong">love %p</strong>. This will run the love command using the absolute path to your current project's base path. As long as your main.lua file in at the top of that directory, your LOVE game will run using Geany's internal terminal. Now just click the Execute button on the toolbar (the gears) or use the default keybinding F5, and you're set!<br><br><em class="text-italics"><strong class="text-strong">Note:</strong> As of 1/8/12, it doesn't seem that Geany supports a custom project type (like they do with the templates). Therefore you will need to do this step every time you make a new project for your LOVE games. There may be ways to make it so that this command will run for every .lua file, regardless of its project association, but there are many caveats to this approach, so I will leave that to you to figure out.</em><br><br>---<br><br>That's all I have for now. If any other Geany users have any other neat tricks to help implement LOVE into this nice little IDE then feel free to post them here.</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=48977">trev0006</a> — Tue May 08, 2012 2:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-01-29T19:02:27+00:00</updated>
+
+		<published>2012-01-29T19:02:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48080#p48080</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48080#p48080"/>
+		<title type="html"><![CDATA[Re: Customizing Geany for LOVE]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48080#p48080"><![CDATA[
+Thanks for the compliments, guys!<br><blockquote class="uncited"><div>In a similar fashion to your example, I made a template from the <a href="https://love2d.org/wiki/Config_Files" class="postlink">love.conf example on the wiki</a>, because I always forget what all the config variables are called.</div></blockquote>I do this as well, but I figured rewriting essentially the same steps over again would be a waste of space.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Sun Jan 29, 2012 7:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[hryx]]></name></author>
+		<updated>2012-01-29T18:19:38+00:00</updated>
+
+		<published>2012-01-29T18:19:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=48076#p48076</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=48076#p48076"/>
+		<title type="html"><![CDATA[Re: Customizing Geany for LOVE]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=48076#p48076"><![CDATA[
+Nice. Since Notepad++ hasn't been ported and probably never will be, Geany will have to do.<br><br>In a similar fashion to your example, I made a template from the <a href="https://love2d.org/wiki/Config_Files" class="postlink">love.conf example on the wiki</a>, because I always forget what all the config variables are called.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1073">hryx</a> — Sun Jan 29, 2012 6:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[josefnpat]]></name></author>
+		<updated>2012-01-27T20:50:16+00:00</updated>
+
+		<published>2012-01-27T20:50:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=47885#p47885</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=47885#p47885"/>
+		<title type="html"><![CDATA[Re: Customizing Geany for LOVE]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=47885#p47885"><![CDATA[
+This is very cool. I'm going to have to try this out at some point <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=3732">josefnpat</a> — Fri Jan 27, 2012 8:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[MarekkPie]]></name></author>
+		<updated>2012-01-09T06:12:50+00:00</updated>
+
+		<published>2012-01-09T06:12:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=46016#p46016</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=46016#p46016"/>
+		<title type="html"><![CDATA[Customizing Geany for LOVE]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=46016#p46016"><![CDATA[
+The topic discussing everyone's favorite IDE/text editor has got me wanting to pimp out my current favorite IDE, Geany (<a href="http://www.geany.org/" class="postlink">http://www.geany.org/</a>). It's lightweight, feature-rich, but not overbearing. I've found a few nice ways to make it more compatible with LOVE.<br><br><strong class="text-strong">Customizing Geany for LOVE</strong><br><br>(This is written from a Linux perspective, but it should be fairly similar for anyone using different OS's. This is also written for Geany 0.20, so any other version may or may not have the same functionality. See the manual (<a href="http://www.geany.org/manual/current/index.html" class="postlink">http://www.geany.org/manual/current/index.html</a>) for better integration with your setup.)<br><br><strong class="text-strong">Creating a main.lua template:</strong><br><br>You can simplify the start-up of your game by creating a template that will create the main.lua file with  whatever useful LOVE functions you normally use for your games. First, create the main.lua file with your most used LOVE functions. Don't go overboard; if you're needing to erase significant portions of your template every time you start making a game, you're doing it wrong. My template is this:<br><div class="codebox"><p>Code: </p><pre><code>function love.load()endfunction love.update(dt)endfunction love.draw()endfunction love.keypressed(k)if k == "escape" thenlove.event.push("q");endend</code></pre></div>Four functions, three of which are completely bare, and one to quickly close the program for use during debugging.<br><br>You can customize the template even more, with header comments and the like, but that is a bit beyond the scope of my simple tutorial, so I will merely provide a link to the necessary portions of the Geany manual (<a href="http://www.geany.org/manual/current/index.html#customizing-templates" class="postlink">http://www.geany.org/manual/current/ind ... -templates</a>).<br><br>When you are satisfied with your template, you need to save it in the template directory with a file name that will identify what the template describes (in my case, I saved it as LoveBasicGame.lua, but you can do whatever. This name will have no affect on the filename of any files created from this template). For Linux distributions, the template directory is usually:<br><br>~/.config/geany/templates/files/<br><br>(If you are trying to access this via the GUI, be sure to enable hidden files to find the .config directory.)<br><br>And you're done! Now, whenever you are starting a new project, all you need to do is: <em class="text-italics">File – New (from Template) – LoveBasicGame.lua</em> and your new main.lua will appear. Alternatively, the drop-down arrow next to the New File icon on the toolbar lists the current templates as well. The only issue is that this file will be untitled, so when you first save it, you'll need to save it as <strong class="text-strong">main.lua</strong>.<br><br><strong class="text-strong">Customizing a project for LOVE:</strong><br><br>Geany has a a very simple project system. It will reopen all the files that were open the last time the project and/or Geany was closed, and you can customize a few of the properties of the project to take advantage of some built-in Geany functionality. Our main concern is changing the “Execute” command so that the current LOVE game can be run at the push of a button. <br><br>After you have created a new project <em class="text-italics">(Project – New)</em>, go to <em class="text-italics">Project – Properties</em>, and select the <em class="text-italics">Build</em> tab. Under the heading <strong class="text-strong">Execute Commands</strong>, change the first list item's command (the second column) to <strong class="text-strong">love %p</strong>. This will run the love command using the absolute path to your current project's base path. As long as your main.lua file in at the top of that directory, your LOVE game will run using Geany's internal terminal. Now just click the Execute button on the toolbar (the gears) or use the default keybinding F5, and you're set!<br><br><em class="text-italics"><strong class="text-strong">Note:</strong> As of 1/8/12, it doesn't seem that Geany supports a custom project type (like they do with the templates). Therefore you will need to do this step every time you make a new project for your LOVE games. There may be ways to make it so that this command will run for every .lua file, regardless of its project association, but there are many caveats to this approach, so I will leave that to you to figure out.</em><br><br>---<br><br>That's all I have for now. If any other Geany users have any other neat tricks to help implement LOVE into this nice little IDE then feel free to post them here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=19274">MarekkPie</a> — Mon Jan 09, 2012 6:12 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

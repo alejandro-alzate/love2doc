@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/80330" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2019-08-03T12:50:26+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/80330</id>
+
+		<entry>
+		<author><name><![CDATA[fexra]]></name></author>
+		<updated>2019-08-03T12:50:26+00:00</updated>
+
+		<published>2019-08-03T12:50:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=228853#p228853</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=228853#p228853"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=228853#p228853"><![CDATA[
+<blockquote class="uncited"><div>Reviving this project, check original post for details!</div></blockquote>Glad to hear. Is it still active?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142957">fexra</a> — Sat Aug 03, 2019 12:50 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2016-08-16T15:55:54+00:00</updated>
+
+		<published>2016-08-16T15:55:54+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=202166#p202166</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=202166#p202166"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=202166#p202166"><![CDATA[
+Reviving this project, check original post for details!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Aug 16, 2016 3:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ethan-Taylor]]></name></author>
+		<updated>2015-09-11T21:57:11+00:00</updated>
+
+		<published>2015-09-11T21:57:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=189086#p189086</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=189086#p189086"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=189086#p189086"><![CDATA[
+How do you get mutliple connections and drawings going at once?<br>I was thinking of doing something like this :<br><div class="codebox"><p>Code: </p><pre><code>   for id,data in pairs( Net:connectedUsers() ) do         data.players.x[id] = net:recieve(...)         data.players.y[id] = net:recieve(...)   end</code></pre></div>I know that the net:recieve thing is probably not how you use it.<br>But I was wondering if you can recieve with out those weird commands and recieve from whatever id you want anytime you want it.<br><br>for example:<br><div class="codebox"><p>Code: </p><pre><code>   for id,data in pairs( Net:connectedUsers() ) do         net:recieve(127.0.0.1, recievedData)         data.players[id] = recievedData   end</code></pre></div>this probably isn't possible either, but if you could find something similar to that, this would be a good help for me.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135947">Ethan-Taylor</a> — Fri Sep 11, 2015 9:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Tjakka5]]></name></author>
+		<updated>2015-08-06T13:19:44+00:00</updated>
+
+		<published>2015-08-06T13:19:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187453#p187453</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187453#p187453"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187453#p187453"><![CDATA[
+Looks like a awesome library, but I'm having trouble connecting to any computer outside of my home network.<br>So, running the server and client on 1 pc works fine; running the server on my laptop and the client on my computer somewhere else in the house works fine too, but running the server on my laptop and the client on somebody else's computer somewhere else does not.<br><br>Can anybody help me out here?<br><br>Client:<div class="codebox"><p>Code: </p><pre><code>Net = require "Net"function love.load()   Net:init( "client" )   Net:connect( "212.187.101.32", 80 ) --Is it safe putting my IP on the web like that..? Sure!   timer = 0   client_data = {}   client_data.xPos = 300   client_data.yPos = 300endfunction love.update(dt)Net:update(dt)timer = timer + dtif timer &gt; 0.001 thentimer = 0Net:send(client_data, "update", nil)endif love.keyboard.isDown("d") thenclient_data.xPos = client_data.xPos + 100*dtelseif love.keyboard.isDown("a") thenclient_data.xPos = client_data.xPos - 100*dtendendfunction love.draw()love.graphics.rectangle("fill", client_data.xPos, client_data.yPos, 64, 64)end</code></pre></div>Server:<div class="codebox"><p>Code: </p><pre><code>Net = require("Net")box = {xPos = 0,yPos = 0,}function love.load()Net:init("server")Net:connect(nil, 80)Net:setMaxPing(1000)Net:registerCMD( "update", function( client_data, param, id, deltatime )box.xPos, box.yPos = client_data.xPos, client_data.yPosprint(box.xPos.. " " ..box.yPos)end)endfunction love.update(dt)Net:update(dt)for id,data in pairs( Net:connectedUsers() ) do      print(id)   endendfunction love.draw()love.graphics.rectangle("fill", box.xPos, box.yPos, 64, 64)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134440">Tjakka5</a> — Thu Aug 06, 2015 1:19 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-08-06T04:12:31+00:00</updated>
+
+		<published>2015-08-06T04:12:31+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187446#p187446</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187446#p187446"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187446#p187446"><![CDATA[
+<blockquote class="uncited"><div>OK, so I got an example to work when the client sends data to the server, but when I tried to implement the server sending to the client in a game i've been programming, it gives me an error.</div></blockquote>I'm looking into this error now, I'll let you know ASAP. I am at a friends house but I'll work on it in a few hours. Sorry for the long wait<br>**EDIT: I've found your problem, when you're supplying the ip in net:send on the server... it's the clients --ID-- not their ip, the id is a string that is formated like this IP:PORT and deformatted like this local ip, port = id:match( "^(.-):(%d+)$" ) and then passes that to the REAL send command.. and any ids of clients kept by the server is the IP:PORT format, so you need to supply an id. Best solution is to use the net.users and loop through it, and find some sort of indicator. Because you need the port of the client connected to your server. I suggest doing it like this:<br>1. This will literally send this to every single client connected unless you do the second method<div class="codebox"><p>Code: </p><pre><code>for CLIENTSID,table in pairs( net.users ) do    Net:send( server_data, "ready", Nil, CLIENTSID)end</code></pre></div>2. This is the "better" alternative, however if you were to give a name to clients you could use the ALTERNATE method<div class="codebox"><p>Code: </p><pre><code>for CLIENTSID,table in pairs( net.users ) do    i, k = string.find( CLIENTSID, "192.168.1.69" )    if i or k then        Net:send( server_data, "ready", Nil, CLIENTSID )    endend-- Alternatefor CLIENTSID,table in pairs( net.users ) do    if table.name == "Nicholas Scott" then        Net:send( server_data, "ready", Nil, CLIENTSID )    endend</code></pre></div>*NOTE: This is were your error is happening <em class="text-italics">socket:sendto( net:encode( table ), ip, <strong class="text-strong">tonumber( port )</strong> )</em> It's because ip and port are set by local ip, port = id:match( "^(.-):(%d+)$" ) and your string you supply is just an ip it will set the port to nil, hence your error string expected, got nil... <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><blockquote class="uncited"><div>I'm having a strange issue where the player will connect but will be immediately timed out and will attempt to reconnect.<br>(Also, the steam link in the OP is broken)</div></blockquote>Looking into this now, do you think you could dropbox the folder of all of your server code, if you don't mind. I would like to see how you run it for debugging, Please and thank you <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> --Also thanks for informing me of the steam link <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br><blockquote class="uncited"><div>Great library! Been messing around with it and it seems very promising! I love the run remote command feature.<br><br>Would like to see a feature to drop packets that are out of order</div></blockquote>I'll look into that feature, sounds like a good one. I might receive packets 1, 2, 3 and server/client will drop packet 1, store packet 2 as LAST RECEIVED and keep packet 3 as the latest one. But as of now the end of the net code receives a command and runs it with a table that is also passed, not really any packet/storage, really just a run as it receives kind of thing. May work on this briefly, although I am kind of busy right now, I'll see though <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> Also thanks for the compliments, I love making my code nice, neat, and if at all possible CHEAT PROOF!! Cause noone likes cheaters <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> *Cough Cough* DAYZ... H1Z1... CS:GO... CSS... Rocket League... Minecraft( Who cares about minecraft, sorry mc lovers <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> )... The list goes on and on<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Thu Aug 06, 2015 4:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[.InsertNameHere]]></name></author>
+		<updated>2015-08-03T22:17:59+00:00</updated>
+
+		<published>2015-08-03T22:17:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187387#p187387</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187387#p187387"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187387#p187387"><![CDATA[
+OK, so I got an example to work when the client sends data to the server, but when I tried to implement the server sending to the client in a game i've been programming, it gives me an error: lib/net.lua:325: bad argument #2 to 'sendto' (string expected, got nil). I took a look at net.lua and it's missing the ip. I specified the ip like this: <div class="codebox"><p>Code: </p><pre><code>Net:send( server_data, "ready", Nil, "192.168.1.69")</code></pre></div>It worked fine going from client to server, when I didn't specify an ip. Just a side note, incase it matters, I'm running both client and server on the same computer.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136649">.InsertNameHere</a> — Mon Aug 03, 2015 10:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[lumaio]]></name></author>
+		<updated>2015-08-01T19:27:26+00:00</updated>
+
+		<published>2015-08-01T19:27:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187330#p187330</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187330#p187330"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187330#p187330"><![CDATA[
+I'm having a strange issue where the player will connect but will be immediately timed out and will attempt to reconnect.<br><img src="https://love2d.org/imgmirrur/mDgZPdJ.png" class="postimage" alt="Image"><br>My code is identical to the example posted above (or close enough to it).<br>(Also, the steam link in the OP is broken)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136896">lumaio</a> — Sat Aug 01, 2015 7:27 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[calusari]]></name></author>
+		<updated>2015-07-28T20:44:21+00:00</updated>
+
+		<published>2015-07-28T20:44:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187181#p187181</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187181#p187181"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187181#p187181"><![CDATA[
+Great library! Been messing around with it and it seems very promising! I love the run remote command feature.<br><br>Would like to see a feature to drop packets that are out of order<br><br>Ex. <br><br>Server sends packets 1, 2, 3<br><br>Client receives packets in order 3, 2, 1 (and should drop packets 2 and 1 because 3 is the latest most up to date info)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136878">calusari</a> — Tue Jul 28, 2015 8:44 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-07-28T11:49:17+00:00</updated>
+
+		<published>2015-07-28T11:49:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187128#p187128</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187128#p187128"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187128#p187128"><![CDATA[
+<blockquote class="uncited"><div>Could you throw a more detailed example.</div></blockquote>Yeah absolutely, give me a bit. I ment to do this alot sooner but I have been super busy lately, lots of stuff going on, But I will definitely do that when I get home from work in about 7 hours <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jul 28, 2015 11:49 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[RovieD]]></name></author>
+		<updated>2015-07-26T14:43:26+00:00</updated>
+
+		<published>2015-07-26T14:43:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=187056#p187056</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=187056#p187056"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=187056#p187056"><![CDATA[
+Could you throw a more detailed example. For example, you can send one message from the server to the client and from the client to the server. Display this messages. It needs an example. Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136842">RovieD</a> — Sun Jul 26, 2015 2:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-07-17T16:28:30+00:00</updated>
+
+		<published>2015-07-17T16:28:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186685#p186685</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186685#p186685"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186685#p186685"><![CDATA[
+<blockquote class="uncited"><div>Can you create a github repo for this?</div></blockquote>Sure -_- Gotta make things difficult huh? Nuh, jk, I'll do this now. I was putting it off cause I didn't think it would be of any assistance, but sure... Since I'm here I might as well make some documentation on using it xD All things I didn't wanna do xD<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Fri Jul 17, 2015 4:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2015-07-08T06:52:03+00:00</updated>
+
+		<published>2015-07-08T06:52:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186331#p186331</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186331#p186331"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186331#p186331"><![CDATA[
+Can you create a github repo for this?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Wed Jul 08, 2015 6:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-07-07T09:10:40+00:00</updated>
+
+		<published>2015-07-07T09:10:40+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186287#p186287</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186287#p186287"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186287#p186287"><![CDATA[
+<blockquote class="uncited"><div>I am actually in need of something like this, so thank you! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div></blockquote>Great man! If you make anything using the library let me know! I'd love to see it <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jul 07, 2015 9:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Jeeper]]></name></author>
+		<updated>2015-06-11T11:43:41+00:00</updated>
+
+		<published>2015-06-11T11:43:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185298#p185298</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185298#p185298"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185298#p185298"><![CDATA[
+Awesome work, keep it up. I am actually in need of something like this, so thank you! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=101561">Jeeper</a> — Thu Jun 11, 2015 11:43 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-11T07:23:04+00:00</updated>
+
+		<published>2015-06-11T07:23:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185289#p185289</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185289#p185289"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185289#p185289"><![CDATA[
+<blockquote class="uncited"><div>Also, I can't even seem to get the server to connect to the client <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad">.</div></blockquote>*If you need ANYMORE help feel free to pm me and I'll respond asap, sorry I didn't respond quicker I was playing some CS:GO xD<br><br>This could be of several things I see, first off you are calling "Net:connect( localhost, 20024 )" and my question is do you have the variable localhost set, and if not I HIGHLY suggest changing that to a string value of 127.0.0.1 as such: "Net:connect( "127.0.0.1", 20024 )"<br>Another possible reason could be that you aren't calling the Net:update(dt) in an active love.update(dt) function<br>It should change to look like this.<br>Client:<div class="codebox"><p>Code: </p><pre><code>Net = require 'net'function love.load()Net:init("Client")Net:connect("127.0.0.1", 20024)endfunction love.draw()if Net.connected thenlove.graphics.print("Connected")endendfunction love.update( deltatime )        Net:update( deltatime )end</code></pre></div>Server:<div class="codebox"><p>Code: </p><pre><code>Net = require 'net'function love.load()Net:init("Server")Net:connect(nil, 20024)endfunction love.update( deltatime )       Net:update( deltatime )end</code></pre></div>As for the tutorial, I will update it and make it MUCH more in depth, I just need a little bit of time, and as for sending nothing but a table to the server I would suggest using the command system implimented so you have the server actually do something when it receives it as such, however you can always just send it to the server as a raw table without the command system and on server use the net.event.server.receive( data, cmd, param, id ) if you so desire, for this example I will send to the server the name I have input on my client and my color I have chosen and then set those into the user database.<br><br>CLIENT:<div class="codebox"><p>Code: </p><pre><code>Net = require( "modules.Net" )function love.load()Net:init( "Client" )Net:connect( "127.0.0.1", 20024 )timer = 0client_data = {}client_data.name = "Nick"client_data.colorR = 255client_data.colorG = 100client_data.colorB = 0endfunction love.update( dt )Net:update( dt ) --WE MUST CALL THIS IN THE love.update and pass a deltatime for the network to update properlytimer = timer + dtif timer &gt; 10 thentimer = -1654163 --Sets the timer so it won't trigger for a LONG time, just an example of course :PNet:send( client_data, "updateClientInfo", nil ) --client_data is our table we created in love.load, remember ANYTHING can be in this table and it will be sent to server, second is the command for the server to issue, and the last "" is a parameter of the command, since the command we are issuing doesn't need parameters we will just set it to nilendend</code></pre></div>SERVER:<div class="codebox"><p>Code: </p><pre><code>Net = require( "modules.Net" )function love.load()Net:init( "server" )Net:connect( nil, 20024 )Net:registerCMD( "updateClientInfo", function( client_data, param, id, deltatime ) --client_data is whatever you want to call it, it's the table we sent from the client with our data in it ;)if not client_data.name then return end --Just some safety featuresif not client_data.colorR then return endif not client_data.colorG then return endif not client_data.colorB then return endNet.users[id].name = client_data.name --Adds the name sent by the client to the clients table in our database of usersNet.users[id].colorR = client_data.colorR --Adds the red color value sent by the client to the clients table in our database of usersNet.users[id].colorG = client_data.colorG --Adds the green color value sent by the client to the clients table in our database of usersNet.users[id].colorB = client_data.colorB --Adds the blue color value sent by the client to the clients table in our database of usersend )endfunction love.update( dt )Net:update( dt )end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Thu Jun 11, 2015 7:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[.InsertNameHere]]></name></author>
+		<updated>2015-06-11T06:06:16+00:00</updated>
+
+		<published>2015-06-11T06:06:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185284#p185284</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185284#p185284"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185284#p185284"><![CDATA[
+Also, I can't even seem to get the server to connect to the client <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad">.<br><br>Client:<div class="codebox"><p>Code: </p><pre><code>Net = require 'net'function love.load()Net:init("Client")Net:connect(localhost, 20024)endfunction love.draw()if Net.connected thenlove.graphics.print("Connected")endend</code></pre></div>Server:<div class="codebox"><p>Code: </p><pre><code>Net = require 'net'function love.load()Net:init("Server")Net:connect(nil, 20024)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136649">.InsertNameHere</a> — Thu Jun 11, 2015 6:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[.InsertNameHere]]></name></author>
+		<updated>2015-06-11T05:34:43+00:00</updated>
+
+		<published>2015-06-11T05:34:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185283#p185283</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185283#p185283"/>
+		<title type="html"><![CDATA[Re: LÖVE CÖNNECTION 1.4]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185283#p185283"><![CDATA[
+It sure looks like good stuff, but could we get a bit better of a tutorial, especially explaining all of the other commands?<br>For example, what if I only want to do something simple, like send a table?<br><br>The whole encode and decode thing seems interesting to me, but how to I send a table using that?<br><br>Thanks!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136649">.InsertNameHere</a> — Thu Jun 11, 2015 5:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-10T02:30:16+00:00</updated>
+
+		<published>2015-06-10T02:30:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185241#p185241</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185241#p185241"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185241#p185241"><![CDATA[
+<blockquote class="uncited"><div>Um sir, ping should not be measure in seconds that's too big lol</div></blockquote>I know, sorry, Trust me it's only temporary, but I will correct this A.S.A.P it was only in seconds cause that is what my happy lovely, update function known as love.update increases by <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>But I'll change it to satisfy you my fine glorious sir! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Wed Jun 10, 2015 2:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bobbyjones]]></name></author>
+		<updated>2015-06-10T02:12:38+00:00</updated>
+
+		<published>2015-06-10T02:12:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185240#p185240</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185240#p185240"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185240#p185240"><![CDATA[
+Um sir, ping should not be measure in seconds that's too big lol. Most things that deal with time in networking uses milliseconds as their units. But its fine just feels like it doesn't properly represent way things are generally done.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135003">bobbyjones</a> — Wed Jun 10, 2015 2:12 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-09T21:40:42+00:00</updated>
+
+		<published>2015-06-09T21:40:42+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185237#p185237</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185237#p185237"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185237#p185237"><![CDATA[
+<blockquote class="uncited"><div>That said, your library looks neat and useful!</div></blockquote>Thanks alot man, I really try my best and work hard on stuff like this, also I'm extremely OCD so it has to be neat and perfect or it will annoy the shit out of me xD. Also who knows, I might even consider making it it's own dependency, therefore removing Class.lua and Lube.lua <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> PSST I'm never going to use Class.lua, sorry to those who truly want me to <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jun 09, 2015 9:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nixola]]></name></author>
+		<updated>2015-06-09T12:40:59+00:00</updated>
+
+		<published>2015-06-09T12:40:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185222#p185222</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185222#p185222"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185222#p185222"><![CDATA[
+Please avoid multiple posts in a row; you can edit your previous ones if needed. Also, please don't quote huge blocks like that, but just the single part or use something like <div class="codebox"><p>Code: </p><pre><code>[quote=bartbes]snip[/quote]</code></pre></div>That said, your library looks neat and useful! If I ever get around making a multiplayer game, it might be just what I'd use.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=12793">Nixola</a> — Tue Jun 09, 2015 12:40 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-09T21:49:34+00:00</updated>
+
+		<published>2015-06-09T07:26:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185217#p185217</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185217#p185217"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185217#p185217"><![CDATA[
+Updated to version 1.1! Credit to [bartbes]<a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147" class="postlink">memberlist.php?mode=viewprofile&amp;u=147</a> for all his wonderful help! You da man my man!!! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jun 09, 2015 7:26 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-09T21:47:08+00:00</updated>
+
+		<published>2015-06-09T07:06:57+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185216#p185216</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185216#p185216"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185216#p185216"><![CDATA[
+<blockquote class="uncited"><div>The correct separator for requires (so for <span style="text-decoration:underline">module names</span>) is a dot.</div></blockquote><strong class="text-strong"><span style="text-decoration:underline">Fixed !!! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></span></strong><br><blockquote class="uncited"><div>Lastly, adding these capital letters seemingly randomly is a bit weird and awkward, especially for the windows users who switch between case-insensitive and case-sensitive filesystems.</div></blockquote><strong class="text-strong"><em class="text-italics">Fixed! <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> I personally use it because I was used to using </em></strong><div class="codebox"><p>Code: </p><pre><code>if CLIENT then print("Client") end</code></pre></div> because I previously coded in GMOD. same with server[/i][/b]<br><blockquote class="uncited"><div>Are all your functions globals?</div></blockquote><em class="text-italics"><strong class="text-strong">Annnnnd it's gone, the functions aren't global anymore, look at the update <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"></strong></em><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jun 09, 2015 7:06 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Nicholas Scott]]></name></author>
+		<updated>2015-06-09T07:01:22+00:00</updated>
+
+		<published>2015-06-09T07:01:22+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185214#p185214</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185214#p185214"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185214#p185214"><![CDATA[
+<blockquote class="uncited"><div>Cool! I might have missed it in the main post, but could you provide a download?<br><br>I'd love to test it and implement it in a game I've been trying to make for a while!<br><br>Thanks.</div></blockquote>Sorry about the delay man, I've been really busy all day xD<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136713">Nicholas Scott</a> — Tue Jun 09, 2015 7:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2015-06-08T07:09:27+00:00</updated>
+
+		<published>2015-06-08T07:09:27+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=185161#p185161</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=185161#p185161"/>
+		<title type="html"><![CDATA[Re: [LUBE Expansion]LÖVE CÖNNECTION]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=185161#p185161"><![CDATA[
+<blockquote class="uncited"><div>Provides simple, easy to use, networking functions.<br>Feel free to nitpick in the comments and suggest improvements, or new features</div></blockquote>Challenge accepted.<br><blockquote class="uncited"><div>Class.lua(for LUBE 1.0)</div></blockquote>Either support class commons as lube does, or just use its fallback. It's a bit weird when there's a system in place to allow you to swap out class libraries that you then throw it away.<br><blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>Class = require("modules/Class")require("modules/Binary")require("modules/Lube")require("modules/Net")</code></pre></div></div></blockquote>Eek, slashes in requires are <strong class="text-strong">evil</strong>. The correct separator for requires (so for <span style="text-decoration:underline">module names</span>) is a dot. Dots work always, regardless of whether the library is a c library, a lua library, injected by some other means whatever. Furthermore, mixing dots and slashes is always bad, since it breaks requires caching.<br><br>Lastly, adding these capital letters seemingly randomly is a bit weird and awkward, especially for the windows users who switch between case-insensitive and case-sensitive filesystems.<br><blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>net_init("SERVER")</code></pre></div></div></blockquote>Are all your functions globals? I'd recommend your libraries return (but don't globally set) their table, then putting all functions in those tables.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Mon Jun 08, 2015 7:09 am</p><hr />
+]]></content>
+	</entry>
+	</feed>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/84657" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2021-01-26T00:41:28+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/84657</id>
+
+		<entry>
+		<author><name><![CDATA[kbmonkey]]></name></author>
+		<updated>2021-01-26T00:41:28+00:00</updated>
+
+		<published>2021-01-26T00:41:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238164#p238164</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238164#p238164"/>
+		<title type="html"><![CDATA[Re: Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238164#p238164"><![CDATA[
+@GestaltEngine, it seems like the <a href="https://gist.github.com/wesleywerner/616d23b203b819befe6a4c6c9c8b151e/638e12d661bd2a14c507162da2c0b2803e91038b" class="postlink">first revision of my generated tags file</a> contains the rectangle definition while the second revision does not. I guess there is a bug in the script. It will need debugging and fixing.<br><br>I have work deadlines and lack time. The code is MIT/BSD compatible so feel free to fork and fix it. I might decide to debug the script as a weekend project in the future, but I can't promise anything.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137014">kbmonkey</a> — Tue Jan 26, 2021 12:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[GestaltEngine]]></name></author>
+		<updated>2021-01-17T16:07:52+00:00</updated>
+
+		<published>2021-01-17T16:07:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=238017#p238017</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=238017#p238017"/>
+		<title type="html"><![CDATA[Re: Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=238017#p238017"><![CDATA[
+<blockquote class="uncited"><div>I updated the Geany tags to version 11.1 of the LÖVE sources.<br><br><a href="https://gist.github.com/wesleywerner/616d23b203b819befe6a4c6c9c8b151e" class="postlink">https://gist.github.com/wesleywerner/61 ... 6c9c8b151e</a></div></blockquote>Neither the pregenerated tags nor the ones I generated with you script from the newest source worked completely. While some functions, like setLinearVelocity and others from Box2D were given tags, most weren't (e.g. love.graphics.rectangle, etc). Is there something I am missing?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=168413">GestaltEngine</a> — Sun Jan 17, 2021 4:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Astorek86]]></name></author>
+		<updated>2018-08-31T22:49:21+00:00</updated>
+
+		<published>2018-08-31T22:49:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=222795#p222795</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=222795#p222795"/>
+		<title type="html"><![CDATA[Re: Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=222795#p222795"><![CDATA[
+Thank you all for sharing these informations <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> .<br><br>I thought I'll share my Windows-Configuration which could be useful for others^^:<br><img src="https://love2d.org/imgmirrur/50VF8Yh.png" class="postimage" alt="Image"><br><ul><li><strong class="text-strong">Using 7-Zip to build a "game.love"-file</strong><br>Install <a href="https://www.7-zip.org/" class="postlink">7-Zip</a> which can be used to create .love-files. Add following:<div class="codebox"><p>Code: </p><pre><code>cmd /c "del game.love &amp; "C:\Program Files\7-Zip\7z.exe" u -xr0!game.love -xr0!bin/ -tzip game.love *"</code></pre></div>Also add <strong class="text-strong">%p</strong> as Working Directory, replace "C:\Program Files\7-Zip" if needed. (The Directory where you have installed 7-Zip)<br><br>Also add following:<div class="codebox"><p>Code: </p><pre><code>"C:\Program Files\7-Zip\7z.exe" u -xr0!game.love -xr0!bin/ -tzip game.love *</code></pre></div>Also add <strong class="text-strong">%p</strong> as Working Directory, replace "C:\Program Files\7-Zip" if needed. (The Directory where you have installed 7-Zip)<br><ul><li>Sometimes it's necessary to delete "game.love" (First Command), because 7-Zip doesn't <span style="text-decoration:underline">delete</span> any file, which can bloat up your "game.love". For example, if you add many Assets in an early state of your Game, these Assets will remain in your "game.love" forever, even if you deleted it from your Source-Directory. That's why I added a "Build completely new"-Option in Geany^^.<br><br>The Second Command doesn't delete "game.love", but as an Advantance, it will only compress new Files, which can be useful. For example, if you have GB-sized Assets, it won't be compressed again, which saves time to recreate "game.love"^^.</li></ul></li><li><strong class="text-strong">On "Execute", replace "love" with "lovec"</strong><br>That's because Geany-Windows doesn't have VTE, so perhaps it's a good idea to use lovec.exe, because you can see a Terminal and some self-programmed Debug-Infos like Luas "print"-Statements^^.<br><br>Add following:<div class="codebox"><p>Code: </p><pre><code>"C:\Program Files (x86)\LOVE\lovec.exe" "%p"</code></pre></div>Also leave Working-Directory empty, replace "C:\Program Files (x86)\LOVE" if needed. (The Directory where you have installed LOVE)</li><li><strong class="text-strong">Create Windows-Executable</strong><br>That Thing need a bit of work.<ul><li>First, Copy these Lines:<div class="codebox"><p>Code: </p><pre><code>MKDIR %1\bincopy *.dll %1\bin\copy love.exe %1\bin\copy license.txt %1\bin\cd %1\bincopy ..\game.love .copy /b love.exe+game.love game.exedel game.love love.exe</code></pre></div></li><li>Save these Lines in a new File called "love2exe.bat".</li><li>Move this File into the Directory where you installed LOVE.</li><li>Add following Line in Geany:<div class="codebox"><p>Code: </p><pre><code>cmd /c ""C:\Program Files (x86)\LOVE\love2exe.bat" "%p""</code></pre></div>Replace "C:\Program Files (x86)\LOVE" if needed. (The Directory where you have installed LOVE).</li><li>As "Working-Directory", add following Line:<div class="codebox"><p>Code: </p><pre><code>C:\Program Files (x86)\LOVE\</code></pre></div>Replace if needed. (The Directory where you have installed LOVE).</li></ul>Important: Before you can use this Command, you must build a "game.love" first!</li></ul>That's my Config I'm using in Geany, and it works pretty well. As say, I thought it can be useful for others^^.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=140465">Astorek86</a> — Fri Aug 31, 2018 10:49 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kbmonkey]]></name></author>
+		<updated>2018-08-31T05:41:41+00:00</updated>
+
+		<published>2018-08-31T05:41:41+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=222789#p222789</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=222789#p222789"/>
+		<title type="html"><![CDATA[Re: Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=222789#p222789"><![CDATA[
+I updated the Geany tags to version 11.1 of the LÖVE sources.<br><br><a href="https://gist.github.com/wesleywerner/616d23b203b819befe6a4c6c9c8b151e" class="postlink">https://gist.github.com/wesleywerner/61 ... 6c9c8b151e</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137014">kbmonkey</a> — Fri Aug 31, 2018 5:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kbmonkey]]></name></author>
+		<updated>2018-01-03T08:16:29+00:00</updated>
+
+		<published>2018-01-03T08:16:29+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217559#p217559</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217559#p217559"/>
+		<title type="html"><![CDATA[Re: Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217559#p217559"><![CDATA[
+I've written a Lua script that scans the Love source and generates a tag file for Geany auto-completion. Place the tags file in ~/.config/geany/tags/ and restart Geany.<br><br><a href="https://gist.github.com/wesleywerner/869313cb1e47b9f48e70c432e9eea1dc" class="postlink">geany-love-tag-gen.lua</a><br><a href="https://gist.github.com/wesleywerner/616d23b203b819befe6a4c6c9c8b151e" class="postlink">generated love.lua.tag for Love 0.10.2</a><br><div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15830&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15830" class="postimage" alt="geany-tags-shot1.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137014">kbmonkey</a> — Wed Jan 03, 2018 8:16 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[jordan4ibanez]]></name></author>
+		<updated>2017-12-08T23:15:44+00:00</updated>
+
+		<published>2017-12-08T23:15:44+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=217008#p217008</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=217008#p217008"/>
+		<title type="html"><![CDATA[Integrating Love Into Geany]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=217008#p217008"><![CDATA[
+I would like to preface this, by stating that all of the resources I've looked up on the wiki are very outdated for Linux.<br><br>First off, VTE integration. Open up your package manager/terminal/software manager and search vte and the vte terminal package will come up. Install it.<br><br>Now integrate it in the<strong class="text-strong"> settings -&gt; terminal </strong>tab:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15731&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15731" class="postimage" alt="OCbNLxs.png" /></a></dt></dl></div><br>Okay great! Now let's get serious. Navigate to <strong class="text-strong">Build -&gt; Set Build Commands</strong>.<br><br>Add a Preset into Lua Commands called <strong class="text-strong">build .love file</strong>, set the command to <strong class="text-strong">zip -r packaged_game.love *</strong>, and change the working directory to <strong class="text-strong">%p</strong>.<br><br>Next change the <strong class="text-strong">Execute</strong> command to l<strong class="text-strong">ove "%p"</strong>.<br><br>It should look like this:<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=15732&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=15732" class="postimage" alt="cPTm6kx.png" /></a></dt></dl></div><br>That's it, now you can build and run programs without issues.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82402">jordan4ibanez</a> — Fri Dec 08, 2017 11:15 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

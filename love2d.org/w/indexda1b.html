@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Source&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2024 07:10:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Source - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Source","wgTitle":"Source","wgCurRevisionId":25623,"wgRevisionId":25623,"wgArticleId":9,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Types"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Source","wgRelevantArticleId":9,"wgRequestId":"18c8a4962b5ee2f7e7da57d5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load9f67.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<link rel="stylesheet" href="load50b2.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<script async="" src="load0045.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;printable=1&amp;skin=love"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,follow"/>
+<link rel="alternate" type="application/rdf+xml" title="Source" href="indexc853.php?title=Special:ExportRDF/Source&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Source rootpage-Source skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="../wiki/Source.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk"><a href="../wiki/Talk_Source.html" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index293d.html?title=Source&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index2394.html?title=Source&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Source</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A Source represents audio you can play back.
+You can do interesting things with Sources, like set the volume, pitch, and its position relative to the listener. Please note that positional audio only works for mono (i.e. non-stereo) sources.
+</p><p>The source is internally referenced as long as it is playing.
+</p><p>The Source controls (play/pause/stop) act according to the following state table.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>Playing</th>
+<th>Paused
+</th></tr>
+<tr>
+<td>play()</td>
+<td>No change</td>
+<td>Play
+</td></tr>
+<tr>
+<td>stop()</td>
+<td>Pause + Rewind</td>
+<td>Rewind
+</td></tr>
+<tr>
+<td>pause()</td>
+<td>Pause</td>
+<td>No change
+</td></tr></tbody></table>
+<p>And for fans of flowcharts (note: omitted calls have no effect, stopping always rewinds).
+</p><p><a href="../wiki/File_NewSourceControls.html" class="image"><img alt="NewSourceControls.png" src="images/b/bc/NewSourceControls.png" width="287" height="132" /></a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Constructors"><span class="tocnumber">1</span> <span class="toctext">Constructors</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Functions"><span class="tocnumber">2</span> <span class="toctext">Functions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Enums"><span class="tocnumber">3</span> <span class="toctext">Enums</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Supertypes"><span class="tocnumber">4</span> <span class="toctext">Supertypes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_Also"><span class="tocnumber">5</span> <span class="toctext">See Also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Other_Languages"><span class="tocnumber">6</span> <span class="toctext">Other Languages</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Constructors">Constructors</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/love.audio-17.html" title="love.audio.newQueueableSource">love.audio.newQueueableSource</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Creates a new Source usable for real-time generated sound playback with <a href="../wiki/Source_queue.html" title="Source:queue">Source:queue</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/love.audio-18.html" title="love.audio.newSource">love.audio.newSource</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Creates a new <a class="mw-selflink selflink">Source</a> from a file, <a href="../wiki/SoundData.html" title="SoundData">SoundData</a>, or <a href="../wiki/Decoder.html" title="Decoder">Decoder</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span class="mw-headline" id="Functions">Functions</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Object_release.html" title="Object:release">Object:release</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Immediately destroys the object's Lua reference.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Object_type.html" title="Object:type">Object:type</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the type of the object as a string.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Object_typeOf.html" title="Object:typeOf">Object:typeOf</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Checks whether an object is of a certain type.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_clone.html" title="Source:clone">Source:clone</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Creates an identical copy of the Source in the stopped state.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9-3.html" title="0.9.1">0.9.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getActiveEffects.html" title="Source:getActiveEffects">Source:getActiveEffects</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets a list of the Source's active effect names.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getAirAbsorption.html" title="Source:getAirAbsorption">Source:getAirAbsorption</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the amount of air absorption applied to the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11-4.html" title="11.2">11.2</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getAttenuationDistances.html" title="Source:getAttenuationDistances">Source:getAttenuationDistances</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the reference and maximum attenuation distances of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getChannelCount.html" title="Source:getChannelCount">Source:getChannelCount</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the number of channels in the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getChannels.html" title="Source:getChannels">Source:getChannels</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the number of channels in the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getCone.html" title="Source:getCone">Source:getCone</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the Source's directional volume cones.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getDirection.html" title="Source:getDirection">Source:getDirection</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the direction of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getDistance.html" title="Source:getDistance">Source:getDistance</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns the reference and maximum distance of the source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getDuration.html" title="Source:getDuration">Source:getDuration</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the duration of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getEffect.html" title="Source:getEffect">Source:getEffect</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Retrieve filter settings associated to a specific effect.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getFilter.html" title="Source:getFilter">Source:getFilter</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the <a href="../wiki/Source_setFilter.html" title="Source:setFilter">filter</a> settings currently applied to the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getFreeBufferCount.html" title="Source:getFreeBufferCount">Source:getFreeBufferCount</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the number of free buffer slots of a queueable Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getPitch.html" title="Source:getPitch">Source:getPitch</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the current pitch of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getPosition.html" title="Source:getPosition">Source:getPosition</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the position of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getRolloff.html" title="Source:getRolloff">Source:getRolloff</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns the rolloff factor of the source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getType.html" title="Source:getType">Source:getType</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the type of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getVelocity.html" title="Source:getVelocity">Source:getVelocity</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the velocity of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getVolume.html" title="Source:getVolume">Source:getVolume</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the current volume of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_getVolumeLimits.html" title="Source:getVolumeLimits">Source:getVolumeLimits</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns the volume limits of the source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isLooping.html" title="Source:isLooping">Source:isLooping</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns whether the Source will loop.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isPaused.html" title="Source:isPaused">Source:isPaused</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns whether the Source is paused.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7-3.html" title="0.7.1">0.7.1</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isPlaying.html" title="Source:isPlaying">Source:isPlaying</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns whether the Source is playing.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isRelative.html" title="Source:isRelative">Source:isRelative</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets whether the Source's position and direction are relative to the listener.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isStatic.html" title="Source:isStatic">Source:isStatic</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns whether the Source is static.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_isStopped.html" title="Source:isStopped">Source:isStopped</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Returns whether the Source is stopped.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_pause.html" title="Source:pause">Source:pause</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Pauses a source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_play.html" title="Source:play">Source:play</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Plays a source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_queue.html" title="Source:queue">Source:queue</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Queues SoundData for playback in a <a href="../wiki/love.audio-17.html" title="love.audio.newQueueableSource">queueable Source</a>.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_resume.html" title="Source:resume">Source:resume</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Resumes a paused source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_rewind.html" title="Source:rewind">Source:rewind</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Rewinds a source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_seek.html" title="Source:seek">Source:seek</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the currently playing position of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setAirAbsorption.html" title="Source:setAirAbsorption">Source:setAirAbsorption</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the amount of air absorption applied to the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11-4.html" title="11.2">11.2</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setAttenuationDistances.html" title="Source:setAttenuationDistances">Source:setAttenuationDistances</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the reference and maximum attenuation distances of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setCone.html" title="Source:setCone">Source:setCone</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the Source's directional volume cones.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setDirection.html" title="Source:setDirection">Source:setDirection</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the direction of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setDistance.html" title="Source:setDistance">Source:setDistance</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the reference and maximum distance of the source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #fff8f8; vertical-align: top;"><img alt="Removed in" src="images/f/f4/Remove.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a>
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setEffect.html" title="Source:setEffect">Source:setEffect</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Applies an audio <a href="../wiki/EffectType.html" title="EffectType">effect</a> to the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setFilter.html" title="Source:setFilter">Source:setFilter</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets a low-pass, high-pass, or band-pass filter to apply when playing the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setLooping.html" title="Source:setLooping">Source:setLooping</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets whether the Source should loop.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setPitch.html" title="Source:setPitch">Source:setPitch</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the pitch of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setPosition.html" title="Source:setPosition">Source:setPosition</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the position of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setRelative.html" title="Source:setRelative">Source:setRelative</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets whether the Source's position and direction are relative to the listener.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.9.html" title="0.9.0">0.9.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setRolloff.html" title="Source:setRolloff">Source:setRolloff</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the rolloff factor.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setVelocity.html" title="Source:setVelocity">Source:setVelocity</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the velocity of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setVolume.html" title="Source:setVolume">Source:setVolume</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the current volume of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_setVolumeLimits.html" title="Source:setVolumeLimits">Source:setVolumeLimits</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Sets the volume limits of the source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_stop.html" title="Source:stop">Source:stop</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Stops a source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.7.html" title="0.7.0">0.7.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/Source_tell.html" title="Source:tell">Source:tell</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Gets the currently playing position of the Source.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/0.8.html" title="0.8.0">0.8.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span class="mw-headline" id="Enums">Enums</span></h2>
+<table class="smwtable" style="background-color: #eeeeff;">
+
+
+<tbody><tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/FilterType.html" title="FilterType">FilterType</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Types of filters for Sources.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #f8fff8; vertical-align: top;"><img alt="Added since" src="images/a/a7/Add.png" width="8" height="11" /> <a href="../wiki/11.html" title="11.0">11.0</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+<tr>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"><a href="../wiki/SourceType.html" title="SourceType">SourceType</a></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">Types of audio sources.</td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;"></td>
+<td style="padding: 1px 5px 1px 5px; background-color: #ffffff; vertical-align: top;">
+</td></tr>
+
+</tbody></table>
+<h2><span class="mw-headline" id="Supertypes">Supertypes</span></h2>
+<ul><li><a href="../wiki/Object.html" title="Object">Object</a></li></ul>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<ul><li><a href="../wiki/love-2.html" title="love.audio">love.audio</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="../wiki/Source_(Dansk).html?title=Source_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Source (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="../wiki/Source_(Deutsch).html" title="Source (Deutsch)">Deutsch</a>&#160;&#8211;
+<a class="mw-selflink selflink">English</a>&#160;&#8211; 
+<a href="../wiki/Source_(Espa%c3%b1ol).html" title="Source (Español)">Español</a>&#160;&#8211;
+<a href="../wiki/Source_(Fran%c3%a7ais).html" title="Source (Français)">Français</a>&#160;&#8211;
+<a href="../wiki/Source_(Indonesia).html?title=Source_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Source (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="../wiki/Source_(Italiano).html?title=Source_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="Source (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="../wiki/Source_(Lietuvi%c5%a1kai).html?title=Source_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Source (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="../wiki/Source_(Magyar).html?title=Source_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Source (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="../wiki/Source_(Nederlands).html?title=Source_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Source (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="../wiki/Source_(Polski).html?title=Source_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="Source (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="../wiki/Source_(Portugu%c3%aas).html" title="Source (Português)">Português</a>&#160;&#8211;
+<a href="../wiki/Source_(Rom%c3%a2n%c4%83).html?title=Source_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Source (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="../wiki/Source_(Slovensk%c3%bd).html?title=Source_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Source (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="../wiki/Source_(Suomi).html?title=Source_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Source (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="../wiki/Source_(Svenska).html?title=Source_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="Source (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="../wiki/Source_(T%c3%bcrk%c3%a7e).html?title=Source_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Source (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="../wiki/Source_(%c4%8cesky).html?title=Source_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Source (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="../wiki/Source_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Source_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Source (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="../wiki/Source_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Source_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Source (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="../wiki/Source_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Source (Русский)">Русский</a>&#160;&#8211;
+<a href="../wiki/Source_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Source_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Source (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="../wiki/Source_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Source (Українська)">Українська</a>&#160;&#8211;
+<a href="../wiki/Source_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Source_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Source (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="../wiki/Source_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Source_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Source (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="../wiki/Source_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Source (日本語)">日本語</a>&#160;&#8211;
+<a href="../wiki/Source_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html?title=Source_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Source (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="../wiki/Source_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html?title=Source_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Source (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="../wiki/Source_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="Source (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="../wiki/Source_(%ed%95%9c%ea%b5%ad%ec%96%b4).html" title="Source (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="../wiki/Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240406174749
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.137 seconds
+Real time usage: 0.163 seconds
+Preprocessor visited node count: 2322/1000000
+Preprocessor generated node count: 4902/1000000
+Post‐expand include size: 72312/2097152 bytes
+Template argument size: 8047/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   72.592      1 -total
+ 26.78%   19.441     56 Template:ListingFields
+  9.91%    7.192      1 Template:i18n
+  5.63%    4.088     28 Template:Lang
+  1.43%    1.038      3 Template:ListingIntro
+  1.16%    0.845      3 Template:ListingOutro
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:9-0!canonical and timestamp 20240406174749 and revision id 25623
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="index313f.html?title=Source&amp;oldid=25623">http://love2d.org/w/index.php?title=Source&amp;oldid=25623</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../wiki/Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../wiki/Category_Types.html" title="Category:Types">Types</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index6067-2.html?title=Special:UserLogin&amp;returnto=Source&amp;returntoquery=printable%3Dyes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../wiki/Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="../wiki/love.html">love</a></li>
+											<li id="n-love.audio"><a href="../wiki/love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="../wiki/love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="../wiki/love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="../wiki/love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="../wiki/love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="../wiki/love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="../wiki/love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="../wiki/love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="../wiki/love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="../wiki/love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="../wiki/love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="../wiki/love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="../wiki/love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="../wiki/love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="../wiki/love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="../wiki/love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="../wiki/love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="../wiki/love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="../wiki/love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="../wiki/lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="../wiki/socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="../wiki/utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="../wiki/Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="../wiki/Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="../wiki/Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="../wiki/Special_WhatLinksHere/Source.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="../wiki/Special_RecentChangesLinked/Source.html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="../wiki/Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-permalink"><a href="index313f.html?title=Source&amp;oldid=25623" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="index4478.html?title=Source&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="../wiki/Special_Browse/_Source.html" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 5 December 2020, at 16:11.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="../wiki/LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="../wiki/LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="../wiki/LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.137","walltime":"0.163","ppvisitednodes":{"value":2322,"limit":1000000},"ppgeneratednodes":{"value":4902,"limit":1000000},"postexpandincludesize":{"value":72312,"limit":2097152},"templateargumentsize":{"value":8047,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   72.592      1 -total"," 26.78%   19.441     56 Template:ListingFields","  9.91%    7.192      1 Template:i18n","  5.63%    4.088     28 Template:Lang","  1.43%    1.038      3 Template:ListingIntro","  1.16%    0.845      3 Template:ListingOutro"]},"cachereport":{"timestamp":"20240406174749","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":26});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Source&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2024 07:10:45 GMT -->
+</html>
