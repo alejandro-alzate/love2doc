@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/Getting_Started_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2024 08:06:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Getting Started (Tiếng Việt) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Getting_Started_(Tiếng_Việt)","wgTitle":"Getting Started (Tiếng Việt)","wgCurRevisionId":9203,"wgRevisionId":9203,"wgArticleId":2486,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["LÖVE"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Getting_Started_(Tiếng_Việt)","wgRelevantArticleId":2486,"wgRequestId":"c54c85504b854644736a60ea","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="Getting Started (Tiếng Việt)" href="../w/index4f30.php?title=Special:ExportRDF/Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Getting_Started_Tiếng_Việt rootpage-Getting_Started_Tiếng_Việt skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Getting_Started_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="Talk_Getting_Started_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html?title=Talk:Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/indexe3c8.html?title=Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/index8fe8.html?title=Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Getting Started (Tiếng Việt)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#L.E1.BA.A5y_L.C3.96VE_v.E1.BB.81"><span class="tocnumber">1</span> <span class="toctext">Lấy LÖVE về</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#L.E1.BA.ADp_m.E1.BB.99t_tr.C3.B2_ch.C6.A1i"><span class="tocnumber">2</span> <span class="toctext">Lập một trò chơi</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ch.E1.BA.A1y_tr.C3.B2_ch.C6.A1i"><span class="tocnumber">3</span> <span class="toctext">Chạy trò chơi</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Windows"><span class="tocnumber">3.1</span> <span class="toctext">Windows</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Linux"><span class="tocnumber">3.2</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Mac_OSX"><span class="tocnumber">3.3</span> <span class="toctext">Mac OSX</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#B.C6.B0.E1.BB.9Bc_ti.E1.BA.BFp_theo"><span class="tocnumber">4</span> <span class="toctext">Bước tiếp theo</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Ng.C3.B4n_ng.E1.BB.AF_kh.C3.A1c"><span class="tocnumber">5</span> <span class="toctext">Ngôn ngữ khác</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Lấy_LÖVE_về"></span><span class="mw-headline" id="L.E1.BA.A5y_L.C3.96VE_v.E1.BB.81">Lấy LÖVE về</span></h2>
+<p>Hãy tải về phiên bản mới nhất của LÖVE từ <a rel="nofollow" class="external text" href="../index.html#download">website</a>, rồi cài đặt nó. Nếu bạn đang ở trong Windows và không muốn <i>cài đặt</i> LÖVE, bạn cũng có thể chỉ việc tải về các file thực thi được nén, rồi giải nén ở thư mục tùy ý.
+</p><p>Bạn cũng có thể xem mình đã cài đặt phiên bản nào của LÖVE, như sau:
+</p><p><code>
+love --version
+</code>
+</p>
+<h2><span id="Lập_một_trò_chơi"></span><span class="mw-headline" id="L.E1.BA.ADp_m.E1.BB.99t_tr.C3.B2_ch.C6.A1i">Lập một trò chơi</span></h2>
+<p>Để lập một trò chơi nhỏ nhất, bạn hãy tạo một thư mục tùy ý, rồi mở trình soạn thảo mã lệnh ưa thích. Notepad++ là một ứng dụng khá tốt trên Windows, và nó sẵn có trợ giúp cho Lua. Hãy tạo một file mới trong thư mục vừa tạo, và đặt tên nó là <code>main.lua</code>. Đặt mã lệnh sau đây vào file này, rồi lưu nó lại.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span id="Chạy_trò_chơi"></span><span class="mw-headline" id="Ch.E1.BA.A1y_tr.C3.B2_ch.C6.A1i">Chạy trò chơi</span></h2>
+<p>LÖVE có thể tải một trò chơi theo hai cách:
+</p>
+<ul><li>Từ một thư mục. Đường dẫn khởi động sẽ chỉ định thư mục này.</li>
+<li>Từ một file .love (vốn là file .zip được đổi tên).  Đường dẫn khởi động sẽ chỉ định file này.</li></ul>
+<p>Trong cả hai trường hợp trên, cần phải có một file tên là <code>main.lua</code> trong đường dẫn khởi động hoặc file nén .love. File này sẽ được nạp khi LÖVE khởi động. Nếu thiếu file này, LÖVE sẽ không nhận ra thư mục hoặc .love là một trò chơi, và nó sẽ phàn nàn là trò chơi này đóng gói sai. Một lỗi thường mắc phải là nén cả thư mục thay vì nén nội dung bên trong nó. Điều này bắt nguồn từ thói quen cũ (vì khi bạn giải nén thư mục bạn không muốn nó tung tóe mọi nội dung vào thư mục hiện hành), nhưng với LÖVE làm điều này không có nghĩa lý gì: bạn cần nén nội dung của thư mục, <b>chỉ có nội dung bên trong</b>, để được file .love hợp lệ.
+</p>
+<h3><span class="mw-headline" id="Windows">Windows</span></h3>
+<p>Trên nền Windows, cách dễ nhất để chạy trò chơi là dùng chuột kéo biểu tượng của thư mục trò chơi vào biểu tượng file love.exe, hoặc vào biểu tượng lối tắt đến love.exe. Hãy nhớ là kéo cả thư mục chứa <code>main.lua</code>, chứ không phải chỉ mình <code>main.lua</code>
+Cũng có một tùy chọn của <a href="Scite-3.html" class="mw-redirect" title="Scite">Scite</a>.
+</p><p>Bạn cũng có thể gọi nó từ dòng lệnh:
+</p><p>Chằng hạn:
+</p>
+<pre>love C:\games\mygame
+love C:\games\packagedgame.love
+</pre>
+<p>Trong Windows, có một lựa chọn đặc biệt để gắn cửa sổ dòng lệnh vào Window. Điều này cho phép bạn nhìn thấy kết quả đầu ra chuẩn.
+</p><p><code>
+love --console
+</code>
+</p>
+<h3><span class="mw-headline" id="Linux">Linux</span></h3>
+<p>Trong Linux, bạn có thể dùng một trong số các dòng lệnh sau:
+</p>
+<pre>love /home/path/to/gamedir/
+love /home/path/to/packagedgame.love
+</pre>
+<p>Nếu bạn đã cài đặt gói .deb, bạn cũng có thể kích đúp chuột vào các file .love từ trong trình quản lý file đang dùng.
+</p>
+<h3><span class="mw-headline" id="Mac_OSX">Mac OSX</span></h3>
+<p>Trong Mac OSX, ta có thể dùng chuột kéo và thả một thư mục hoặc một file .love vào gói ứng dụng Love.app. Còn trong cửa sổ dòng lệnh Mac OSX (Terminal), bạn có thể dùng LÖVE như sau (coi như nó đã được cài đặt vào thư mục Applications):
+</p><p><code>open -n -a love "/home/path/to/game"</code>
+</p><p>Trong một số trường hợp, có thể sẽ nhanh hơn nếu ta trực tiếp kích hoạt file chương trình love bên trong gói ứng dụng bằng lệnh sau:
+</p><p><code>/Applications/love.app/Contents/MacOS/love mygame</code>
+</p><p>Bạn có thể lập một alias (tên khác) trong phiên dùng Terminal để gọi đến file chương trình khi dùng <code>love</code> bằng cách thêm một alias vào file ~/.bash_profile của bạn (<code>open -a TextEdit ~/.bash_profile</code>):
+</p>
+<pre># alias to love
+alias love="/Applications/love.app/Contents/MacOS/love"
+</pre>
+<p>Bây giờ bạn có thể gọi nó từ dòng lệnh giống như trong Linux và Windows:
+</p><p><code>
+love "/home/path/to/game"
+</code>
+</p><p>Nếu bạn gỡ lỗi bằng lệnh print, sẽ rất hữu ích khi thấy được thông tin này được in ra trong quá trình chạy. Để làm như vậy, lệnh sau sẽ mở ra thêm một cửa sổ để hiện các chữ.
+</p><p><code>
+xterm -e /Applications/love.app/Contents/MacOS/love "/home/path/to/game"
+</code>
+</p><p><i>Lưu ý đối với người dùng OS X Lion:</i> Các bước trên không có tác dụng trong Lion. Để chạy được Löve và giữ được tính năng print() bạn có thể dùng đoạn lệnh chương trình như sau:
+</p>
+<pre>#!/bin/bash
+exec /Applications/love.app/Contents/MacOS/love "/home/path/to/game"
+</pre>
+<p><br />
+</p>
+<h2><span id="Bước_tiếp_theo"></span><span class="mw-headline" id="B.C6.B0.E1.BB.9Bc_ti.E1.BA.BFp_theo">Bước tiếp theo</span></h2>
+<ul><li><a href="Tutorial_Callback_Functions_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="Tutorial:Callback Functions (Tiếng Việt)">Hướng dẫn:Các hàm callback</a> sẽ dạy cho bạn cấu trúc cơ bản của một trò chơi love.</li>
+<li><a href="Category_Tutorials_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="Category:Tutorials (Tiếng Việt)">Hướng dẫn</a> là thông tin tiếp theo cần đọc.</li></ul>
+<h2><span id="Ngôn_ngữ_khác"></span><span class="mw-headline" id="Ng.C3.B4n_ng.E1.BB.AF_kh.C3.A1c">Ngôn ngữ khác</span></h2>
+<div class="i18n">
+<p><a href="Getting_Started_(Dansk).html" title="Getting Started (Dansk)">Dansk</a>&#160;&#8211;
+<a href="Getting_Started_(Deutsch).html" title="Getting Started (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="Getting_Started.html" title="Getting Started">English</a>&#160;&#8211; 
+<a href="Getting_Started_(Espa%c3%b1ol).html" title="Getting Started (Español)">Español</a>&#160;&#8211;
+<a href="Getting_Started_(Fran%c3%a7ais).html" title="Getting Started (Français)">Français</a>&#160;&#8211;
+<a href="Getting_Started_(Indonesia).html?title=Getting_Started_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="Getting_Started_(Italiano).html" title="Getting Started (Italiano)">Italiano</a>&#160;&#8211;
+<a href="Getting_Started_(Lietuvi%c5%a1kai).html?title=Getting_Started_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="Getting_Started_(Magyar).html" title="Getting Started (Magyar)">Magyar</a>&#160;&#8211;
+<a href="Getting_Started_(Nederlands).html" title="Getting Started (Nederlands)">Nederlands</a>&#160;&#8211;
+<a href="Getting_Started_(Polski).html" title="Getting Started (Polski)">Polski</a>&#160;&#8211;
+<a href="Getting_Started_(Portugu%c3%aas).html" title="Getting Started (Português)">Português</a>&#160;&#8211;
+<a href="Getting_Started_(Rom%c3%a2n%c4%83).html" title="Getting Started (Română)">Română</a>&#160;&#8211;
+<a href="Getting_Started_(Slovensk%c3%bd).html" title="Getting Started (Slovenský)">Slovenský</a>&#160;&#8211;
+<a href="Getting_Started_(Suomi).html?title=Getting_Started_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="Getting_Started_(Svenska).html" title="Getting Started (Svenska)">Svenska</a>&#160;&#8211;
+<a href="Getting_Started_(T%c3%bcrk%c3%a7e).html" title="Getting Started (Türkçe)">Türkçe</a>&#160;&#8211;
+<a href="Getting_Started_(%c4%8cesky).html?title=Getting_Started_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="Getting_Started_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Getting_Started_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="Getting_Started_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Getting_Started_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="Getting_Started_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Getting Started (Русский)">Русский</a>&#160;&#8211;
+<a href="Getting_Started_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Getting_Started_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="Getting_Started_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Getting Started (Українська)">Українська</a>&#160;&#8211;
+<a href="Getting_Started_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Getting_Started_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="Getting_Started_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Getting_Started_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Getting Started (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="Getting_Started_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Getting Started (日本語)">日本語</a>&#160;&#8211;
+<a href="Getting_Started_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html" title="Getting Started (正體中文)">正體中文</a>&#160;&#8211;
+<a href="Getting_Started_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html" title="Getting Started (简体中文)">简体中文</a>&#160;&#8211;
+<a class="mw-selflink selflink">Tiếng Việt</a>&#160;&#8211;
+<a href="Getting_Started_(%ed%95%9c%ea%b5%ad%ec%96%b4).html" title="Getting Started (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240408071426
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.020 seconds
+Real time usage: 0.127 seconds
+Preprocessor visited node count: 307/1000000
+Preprocessor generated node count: 711/1000000
+Post‐expand include size: 3347/2097152 bytes
+Template argument size: 1430/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 954/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.254      1 -total
+100.00%    6.254      1 Template:i18n
+ 50.42%    3.153     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:2486-0!canonical and timestamp 20240408071426 and revision id 9203
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/index9ec6.html?title=Getting_Started_(Ti%e1%ba%bfng_Vi%e1%bb%87t)&amp;oldid=9203">http://love2d.org/w/index.php?title=Getting_Started_(Tiếng_Việt)&amp;oldid=9203</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_L%c3%96VE.html" title="Category:LÖVE">LÖVE</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/index2ffb.html?title=Special:UserLogin&amp;returnto=Getting+Started+%28Ti%E1%BA%BFng+Vi%E1%BB%87t%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/Getting_Started_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/Getting_Started_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/index6db5.html?title=Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/index6c87.html?title=Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;oldid=9203" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index6fe3.html?title=Getting_Started_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_Getting-5FStarted-5F(Ti%e1%ba%bfng-5FVi%e1%bb%87t).html" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 13 September 2012, at 14:27.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.020","walltime":"0.127","ppvisitednodes":{"value":307,"limit":1000000},"ppgeneratednodes":{"value":711,"limit":1000000},"postexpandincludesize":{"value":3347,"limit":2097152},"templateargumentsize":{"value":1430,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":954,"limit":5000000},"timingprofile":["100.00%    6.254      1 -total","100.00%    6.254      1 Template:i18n"," 50.42%    3.153     28 Template:Lang"]},"cachereport":{"timestamp":"20240408071426","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":161});});</script></body>
+<!-- Mirrored from love2d.org/wiki/Getting_Started_(Tiếng_Việt) by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Apr 2024 08:07:03 GMT -->
+</html>
