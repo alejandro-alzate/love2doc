@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/76998" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2016-05-13T21:13:11+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/76998</id>
+
+		<entry>
+		<author><name><![CDATA[mode7]]></name></author>
+		<updated>2016-05-13T21:13:11+00:00</updated>
+
+		<published>2016-05-13T21:13:11+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=198632#p198632</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=198632#p198632"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=198632#p198632"><![CDATA[
+Thanks for the insightfull explanation. I guess setting the OS specific sleep period makes all the difference.<br><br>As it turns out I was using an outdated version of SDL2. Replaced it with the one from LÖVE and it works like a charm.<br><br>I'm still not sure if the period will always result to exactly 1ms as the SDL doc just implies it might not be reliable and might return more.<br>So I eventually ended up enforcing VSYNC which seems like a much safer choice - at least for me.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072">mode7</a> — Fri May 13, 2016 9:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2016-05-13T20:43:14+00:00</updated>
+
+		<published>2016-05-13T20:43:14+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=198629#p198629</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=198629#p198629"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=198629#p198629"><![CDATA[
+The SDL 1.2 docs don't reflect how SDL 2.0 works (and those docs don't really reflect modern operating systems anyway – SDL 1.2 was released a decade and a half ago). LÖVE has used SDL 2.0 since version 0.9.0. <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>SDL 2.0 also makes sure to set the Windows sleep timer period to 1ms.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Fri May 13, 2016 8:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[mode7]]></name></author>
+		<updated>2016-05-13T20:07:12+00:00</updated>
+
+		<published>2016-05-13T20:07:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=198627#p198627</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=198627#p198627"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=198627#p198627"><![CDATA[
+Sorry for bumping this old thread, but I guess it's the right place to post this, since it's even linked in the wiki.<br><br>I got really interested in this explanation, as it obviously works for LÖVE even though it absolutely shouldn't (!).<br><br>I played around with SDL a bit lately and ran into the same issue with my game loop eating up the whole CPU core.<br>I had a look a the LÖVE2D source code and saw that love.timer.sleep looks like this:<div class="codebox"><p>Code: </p><pre><code>void Timer::sleep(double seconds) const{if (seconds &gt; 0)love::sleep((unsigned int)(seconds*1000));}</code></pre></div>Which in turn just calls an SDL function<div class="codebox"><p>Code: </p><pre><code>void sleep(unsigned int ms){SDL_Delay(ms);}</code></pre></div>This means love.timer.sleep(0.001) translates to: SDL_Delay(1)<br><br>The problem is, that this won't actually wait for 1ms, but more likely for about 10ms, as stated here:<br><a href="https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdldelay.html" class="postlink">https://www.libsdl.org/release/SDL-1.2. ... delay.html</a><blockquote class="uncited"><div>Note: Count on a delay granularity of at least 10 ms. Some platforms have shorter clock ticks but this is the most common.</div></blockquote> <br><br>This is also exactly how SDL will behave in my tests, dropping the framerate signifcantly bellow 1000 fps (more like 75)<br>OS specific calls to Thread.Sleep behave the same way, so WHY is this working for LOVE?<br><br>It would be great if some of the Devs would shed some light on this.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=63072">mode7</a> — Fri May 13, 2016 8:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BoopDeePoop]]></name></author>
+		<updated>2014-01-16T22:10:51+00:00</updated>
+
+		<published>2014-01-16T22:10:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160937#p160937</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160937#p160937"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160937#p160937"><![CDATA[
+<blockquote class="uncited"><div>Out of curiosity, what's the purpose of the 1000 fps limit? Not that 1000 fps isn't enough.</div></blockquote>There has to be some sort of set limit to the frames that you can get.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=82315">BoopDeePoop</a> — Thu Jan 16, 2014 10:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[veethree]]></name></author>
+		<updated>2014-01-16T09:32:00+00:00</updated>
+
+		<published>2014-01-16T09:32:00+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160885#p160885</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160885#p160885"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160885#p160885"><![CDATA[
+Out of curiosity, what's the purpose of the 1000 fps limit? Not that 1000 fps isn't enough.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=13784">veethree</a> — Thu Jan 16, 2014 9:32 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[slime]]></name></author>
+		<updated>2014-01-16T08:50:19+00:00</updated>
+
+		<published>2014-01-16T08:50:19+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160881#p160881</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160881#p160881"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160881#p160881"><![CDATA[
+It does a few things:<br>- Limits FPS to 1000 if vsync isn't enabled.<br>- Massively reduces CPU usage in many situations (especially with vsync disabled.)<br>- gives control back to the OS for a bit, as Plu mentioned.<br><br>It's (in theory) a 1-millisecond CPU-side sleep per frame. 60 FPS (the refresh rate of a typical monitor) is 16.6 milliseconds per frame, so in reality the sleep isn't using much of the total CPU time you have available to maintain 60 FPS (and it doesn't sleep the GPU - keep in mind the GPU runs asynchronously as well, so sleeping the CPU won't slow down the GPU if you're GPU-bound.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Thu Jan 16, 2014 8:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Plu]]></name></author>
+		<updated>2014-01-16T08:22:04+00:00</updated>
+
+		<published>2014-01-16T08:22:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160880#p160880</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160880#p160880"/>
+		<title type="html"><![CDATA[Re: delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160880#p160880"><![CDATA[
+I believe it's to give control back to the Operating System so it doesn't forcefully cut your program short whenever it feels like it. But the devs can probably explain it better <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=103181">Plu</a> — Thu Jan 16, 2014 8:22 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[AntonioModer]]></name></author>
+		<updated>2014-01-16T07:28:24+00:00</updated>
+
+		<published>2014-01-16T07:28:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=160878#p160878</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=160878#p160878"/>
+		<title type="html"><![CDATA[delay in love.run()]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=160878#p160878"><![CDATA[
+Why use this delay in love.run()? (<a href="http://www.love2d.org/wiki/love.run" class="postlink">http://www.love2d.org/wiki/love.run</a>)<div class="codebox"><p>Code: </p><pre><code>if love.timer then love.timer.sleep(0.001) end</code></pre></div>This reduces the speed of execution!<br>My guess: Maybe, for the timer to work with high accuracy?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=53593">AntonioModer</a> — Thu Jan 16, 2014 7:28 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
