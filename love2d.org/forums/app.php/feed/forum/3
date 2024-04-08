@@ -5,11 +5,86 @@
 	<title>LÖVE</title>
 	
 	<link href="https://love2d.org/forums/index.php" />
-	<updated>2024-04-06T14:24:28+00:00</updated>
+	<updated>2024-04-07T20:37:49+00:00</updated>
 
 	<author><name><![CDATA[LÖVE]]></name></author>
 	<id>https://love2d.org/forums/app.php/feed/forum/3</id>
 
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T20:37:49+00:00</updated>
+
+		<published>2024-04-07T20:37:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259194#p259194</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259194#p259194"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259194#p259194"><![CDATA[
+Glad that worked.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 8:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T17:04:47+00:00</updated>
+
+		<published>2024-04-07T17:04:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259193#p259193</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259193#p259193"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259193#p259193"><![CDATA[
+Thank you, that was the problem. I have no earthly idea how that could have been muted. Must have hit some bizarre keyboard shortcut or something. Thanks again!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 5:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T10:38:24+00:00</updated>
+
+		<published>2024-04-07T10:38:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259191#p259191</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259191#p259191"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259191#p259191"><![CDATA[
+That app/channel might be muted, Linux uses separate outputs (pulse audio) for each audio source and each audio output can be individually muted. Go to application volumes in systray and check that.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[keharriso]]></name></author>
+		<updated>2024-04-07T00:18:59+00:00</updated>
+
+		<published>2024-04-07T00:18:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259188#p259188</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259188#p259188"/>
+		<title type="html"><![CDATA[General • Re: Lua]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259188#p259188"><![CDATA[
+You need to pass the scale twice, one for X and one for Y:<div class="codebox"><p>Code: </p><pre><code>love.graphics.draw(PlaImg, posX, posY, rot, tam, tam, ori, ori)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74528">keharriso</a> — Sun Apr 07, 2024 12:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T00:18:17+00:00</updated>
+
+		<published>2024-04-07T00:18:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259187#p259187</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259187#p259187"/>
+		<title type="html"><![CDATA[General • Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259187#p259187"><![CDATA[
+I was in the middle of development using ZeroBrane Studio, on linux (opensuse TW). Been working all day. Made some minor tweak, totally unrelated to sound, and now whenever I execute any love program, whether from command line or through the IDE, no sounds play at all. So weird. I rebooted, uninstalled and reinstalled love, no idea. Sound is working fine in the OS and other games/programs. Anyone ever seen something similar or have any ideas?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 12:18 am</p><hr />
+]]></content>
+	</entry>
 		<entry>
 		<author><name><![CDATA[edu]]></name></author>
 		<updated>2024-04-06T14:24:28+00:00</updated>
@@ -308,81 +383,6 @@ Maybe provide some basic info regarding your game and your roadmap.<p>Statistics
 		
 		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259071#p259071"><![CDATA[
 <a href="https://github.com/EnderWizard391/game" class="postlink">https://github.com/EnderWizard391/game</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=262318">ender</a> — Wed Mar 20, 2024 8:55 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[JohnMclaughlin]]></name></author>
-		<updated>2024-03-19T00:48:40+00:00</updated>
-
-		<published>2024-03-19T00:48:40+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259064#p259064</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259064#p259064"/>
-		<title type="html"><![CDATA[General • Re: Is Love2D really for me?]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259064#p259064"><![CDATA[
-For me engines are too clunky to use. Too much time's spent on waiting when for example Unity scripts reload for several seconds. But it wouldn't bother me if some real problems didn't come out. I don't want to be a developer to fix some problems in engine's core. Eventually, I think I will be fixing NVidia drivers at the end if I'm not gonna stop doing it.<br><br>For example: I used Godot for a while and the first thing I stumbled upon is lack of proper physics interpolation. You have to overcome this issue using interpolation yourself. Most of the time you go back and forth with your nodes from _process to _physics_process and turn it on and off using another node when they're offscreen wasting CPU power or when a sprite needs to teleport. It'll never be stable until they fix it but I think it's a core issue so it's not gonna be easy to fix if it'll ever be fixed. If you have a monitor with 250hz and physics set to 60fps you gonna notice what I'm talking about. Somebody doesn't care at all about all those things. You can use smooth plugins but it's sort of a crutch. When you want to work with rigidbody you can't manipulate it directly therefore can't smooth it only if you apply interpolation between visuals(sprite or 3d material) that follow rigidbody again using another node for that. Only one little thing and it can demand so much attention.<br><br>I was quite surprised with LOVE and its stability maybe because I ate already too much s... with those engines. And threads are so easy to use and effective. LOVE uses Box2D as physics engine as far as I know without any jitter movements. I honestly can't believe that. Sometimes Godot has stutter movements in almost empty project for no reason every 10-20 seconds without using physics at all.<br><br>Don't forget to check your sanity regularly when you're working with game engines.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=266987">JohnMclaughlin</a> — Tue Mar 19, 2024 12:48 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[RNavega]]></name></author>
-		<updated>2024-03-18T06:06:55+00:00</updated>
-
-		<published>2024-03-18T06:06:55+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259055#p259055</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259055#p259055"/>
-		<title type="html"><![CDATA[General • Re: Code Doodles!]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259055#p259055"><![CDATA[
-<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24089&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24089" class="postimage" alt="roundedRectanglePreview.gif" /></a></dt></dl></div><br>Example of drawing a round-corner rectangle using a pixel shader.<br>While there's the rx,ry parameters of love.graphics.rectangle() that make a rounded rectangle using geometry, in this way it's done by fading the alpha of pixels outside of the rounded corners.<br><div class="codebox"><p>Code: </p><pre><code>io.stdout:setvbuf('no')local rect = {    x1 = 80.0,         y1 = 140.0,    x2 = 80.0 + 400.0, y2 = 140.0 + 160.0,    borderData = {        -- Width (px)        nil,        -- Height (px)        nil,        -- Initial corner radius (px)        50.0,        -- Initial border thickness (px)        12.0    }}local meshlocal shaderlocal PIXEL_SOURCE = [[uniform vec4 border_data;vec4 effect(vec4 color, Image tex, vec2 texture_coords, vec2 screen_coords){    // The default Löve shader code, unused:    //vec4 texcolor = Texel(tex, texture_coords);    //return texcolor * color;    // --------------------------------------------------------------    // The rounded rectangle &amp; border code:    const vec4 WHITE_COLOR = vec4(1.0);    vec2 local_pixel = texture_coords * border_data.xy;    vec2 center_pixel = border_data.xy / 2.0;    vec2 center_offset = abs(local_pixel - center_pixel);    vec2 corner_offset = center_offset - (center_pixel - border_data.z);    vec2 is_corner = step(0.0, corner_offset);    float corner_offset_length = length(corner_offset);    // This +0.5 constant seems to give the smoothest result.    float corner_antialias = corner_offset_length + 0.5 - border_data.z;    vec2 border_offset = center_offset - (center_pixel - border_data.w);    vec2 is_edge_border = step(0.0, border_offset);    float border_antialias = corner_offset_length + 0.5 - (border_data.z - border_data.w);    float is_corner_border = (border_antialias * is_corner.x * is_corner.y);    float border_factor = clamp(is_edge_border.x + is_edge_border.y + is_corner_border, 0.0, 1.0);    vec4 final_color = mix(color, WHITE_COLOR, border_factor);    final_color.a = 1.0 - (corner_antialias * is_corner.x * is_corner.y);    return final_color;}]]-- Cosmetic, used for dragging the corners.local draggedCorner = nillocal highlightedCorner = nillocal dragOffset = {0.0, 0.0}local cornerKeys = {{'x1', 'y1'}, {'x2', 'y1'}, {'x2', 'y2'}, {'x1', 'y2'}}function love.load()    mesh = love.graphics.newMesh(4, 'fan', 'static')    -- Default format: x, y, u, v, r, g, b, a.    -- Setting only x, y, u, v.    -- Creating the mesh sized at 1 x 1 px, to be scaled to its proper width &amp; height    -- using the 'sx' and 'sy' parameters of love.graphics.draw().    mesh:setVertices({        {0.0, 0.0, 0.0, 0.0},        {1.0, 0.0, 1.0, 0.0},        {1.0, 1.0, 1.0, 1.0},        {0.0, 1.0, 0.0, 1.0},    })    -- TODO: it's also possible to use a custom mesh format, and then setup the    -- "borderData" information per vertex, so that you can have many rounded    -- rectangles of different sizes and borders, all stored in the same mesh.    mesh:setVertexMap(1, 2, 3, 4)    shader = love.graphics.newShader(PIXEL_SOURCE)    love.keyboard.setKeyRepeat(true)endfunction love.draw()    love.graphics.setShader(shader)    love.graphics.setColor(0.5, 0.5, 0.5)    rect.borderData[1] = rect.x2 - rect.x1    rect.borderData[2] = rect.y2 - rect.y1    shader:send('border_data', rect.borderData)    love.graphics.draw(mesh, rect.x1, rect.y1, 0.0, rect.borderData[1], rect.borderData[2])    love.graphics.setShader()    if highlightedCorner then        local keys = cornerKeys[highlightedCorner]        love.graphics.setColor(0.0, 1.0, 1.0, 0.333)        local x = rect[keys[1]]        local y = rect[keys[2]]        local tolerance = rect.borderData[3] &gt; 32 and rect.borderData[3] or 32        if highlightedCorner == 2 or highlightedCorner == 3 then            x = x - tolerance        end        if highlightedCorner == 3 or highlightedCorner == 4 then            y = y - tolerance        end        love.graphics.rectangle('fill', x, y, tolerance, tolerance)    end    love.graphics.setColor(1.0, 1.0, 1.0)    local info = string.format('Drag the rectangle corners to resize it (%d x %d px).\n\n'                             ..'Press and hold Up / Down to resize the corner radius (%d px).\n\n'                             ..'Press and hold Left / Right to resize the border thickness (%d px).\n\n'                             ..'Press Esc to quit.',                               rect.x2 - rect.x1,                               rect.y2 - rect.y1,                               rect.borderData[3],                               rect.borderData[4])    love.graphics.print(info, 10, 10)endfunction love.keypressed(key)    if key == 'escape' then        love.event.quit()    elseif key == 'up' then        rect.borderData[3] = (rect.borderData[3] &gt; 0.0 and rect.borderData[3] - 1.0 or 0.0)    elseif key == 'down' then        local halfHeight = math.abs(rect.y2 - rect.y1) / 2.0        rect.borderData[3] = (rect.borderData[3] &lt; halfHeight and rect.borderData[3] + 1.0                              or halfHeight)    elseif key == 'left' then        rect.borderData[4] = (rect.borderData[4] &gt; 0.0 and rect.borderData[4] - 1.0 or 0.0)    elseif key == 'right' then        local halfHeight = math.abs(rect.y2 - rect.y1) / 2.0        rect.borderData[4] = (rect.borderData[4] &lt; halfHeight and rect.borderData[4] + 1.0                              or halfHeight)    endendfunction love.mousemoved(x, y, dx, dy)    if draggedCorner then        local keys = cornerKeys[draggedCorner]        rect[keys[1]] = dragOffset[1] + x        rect[keys[2]] = dragOffset[2] + y    else        highlightedCorner = findCorner(x, y)    endendfunction love.mousepressed(x, y, button)    local corner = findCorner(x, y)    if corner then        draggedCorner = corner        local keys = cornerKeys[corner]        dragOffset[1] = rect[keys[1]] - x        dragOffset[2] = rect[keys[2]] - y    endendfunction love.mousereleased(x, y)    draggedCorner = nil    highlightedCorner = findCorner(x, y)endfunction findCorner(x, y)    local tolerance = rect.borderData[3] &gt; 32 and rect.borderData[3] or 32    local leftEdge   = x &gt;= rect.x1 and x &lt;= rect.x1 + tolerance    local rightEdge  = x &gt;= rect.x2 - tolerance and x &lt;= rect.x2    local topEdge    = y &gt;= rect.y1 and y &lt;= rect.y1 + tolerance    local bottomEdge = y &gt;= rect.y2 - tolerance and y &lt;= rect.y2    if leftEdge and topEdge then        return 1    elseif rightEdge and topEdge then        return 2    elseif rightEdge and bottomEdge then        return 3    elseif leftEdge and bottomEdge then        return 4    end    return nilend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Mon Mar 18, 2024 6:06 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[slime]]></name></author>
-		<updated>2024-03-18T00:57:10+00:00</updated>
-
-		<published>2024-03-18T00:57:10+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259052#p259052</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259052#p259052"/>
-		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259052#p259052"><![CDATA[
-<blockquote class="uncited"><div>That reasoning feels like the classic "works on my maschine" excuse.</div></blockquote>It's the exact opposite - making sure other people will get the same experience that you developed, instead of shrugging off differences or bugs as something that's not your responsibility to handle as the game's developer because details of the installation were decided by some third party (actually many many third parties usually, given how many distro package managers and package solutions there are).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Mon Mar 18, 2024 12:57 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[BrotSagtMist]]></name></author>
-		<updated>2024-03-18T00:54:39+00:00</updated>
-
-		<published>2024-03-18T00:54:39+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259051#p259051</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259051#p259051"/>
-		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259051#p259051"><![CDATA[
-That reasoning feels like the classic "works on my maschine" excuse.<br>And appimages feel like a step back to a time where we had no shared libs.<br>I now in the recent years shipping the entire thing has dramatically grown again, probably because everything grew so big and complicated and has tons of depends, so i get the reasoning.<br>But i dont like it. I dont do it. And out of stubbornness i refuse to use appimages.<br><br>Repo maintainers actually love adding stuff if they are pointed to it, so whenever something is missing ill just drop a message and its in my distros repo the next day with the version i need. <br>And if its not the right version, discovering bugs is a plus in my book.<br><br>Maybe i will think different about this when releasing comercial software tho.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Mon Mar 18, 2024 12:54 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[slime]]></name></author>
-		<updated>2024-03-17T22:49:31+00:00</updated>
-
-		<published>2024-03-17T22:49:31+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259049#p259049</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259049#p259049"/>
-		<title type="html"><![CDATA[General • Re: sh + love bundled in one file - is this intended behaviour?]]></title>
-
-					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259049#p259049"><![CDATA[
-You may do as you wish. Personally as someone whose project is included in many different package managers that are maintained by many different people, I have more than enough first-hand experience to see how that system can break down with complex and long-lasting projects and ends up accumulating unique combinations of bugs over time. I like having consistent software, even when the goal of being bug free is never 100% achievable.<br><br>The most reliable way to provide a game is to provide the exact dependencies you've developed against, which means the entire dependency tree including dependencies of dependencies of dependencies needs to be the same. Which is what the appimage (packed or unpacked) is, to the best of its ability anyway. My examples illustrated situations where the dependency (love) may have the same version and it breaks because dependencies of dependencies (SDL or luajit in the examples) are different.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1399">slime</a> — Sun Mar 17, 2024 10:49 pm</p><hr />
 ]]></content>
 	</entry>
 	</feed>
