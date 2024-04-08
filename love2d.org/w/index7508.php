@@ -20,7 +20,7 @@
 	xmlns:property="&property;">
 
 	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/LÖVE_PhysicsEditor_Loader">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-07T00:36:30+00:00</swivt:creationDate>
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-08T11:22:38+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
 	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/LÖVE_PhysicsEditor_Loader">
