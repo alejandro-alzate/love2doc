@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=TEsound&oldid=24402 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:56:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>TEsound - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TEsound","wgTitle":"TEsound","wgCurRevisionId":24402,"wgRevisionId":24402,"wgArticleId":1365,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Libraries"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"TEsound","wgRelevantArticleId":1365,"wgRequestId":"f1deb6df70a5fd39bde2c612","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="TEsound" href="http://love2d.org/w/index.php?title=Special:ExportRDF/TEsound&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-TEsound rootpage-TEsound skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="http://love2d.org/wiki/TEsound" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Talk:TEsound&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="http://love2d.org/w/index.php?title=TEsound&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=TEsound&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">TEsound</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"><div class="mw-revision"><div id="mw-revision-info">Revision as of 06:14, 15 December 2019 by <a href="/wiki/User:Greenwing" class="mw-userlink" title="User:Greenwing"><bdi>Greenwing</bdi></a> <span class="mw-usertoollinks">(<a href="/wiki/User_talk:Greenwing" class="mw-usertoollinks-talk" title="User talk:Greenwing">talk</a> | <a href="/wiki/Special:Contributions/Greenwing" class="mw-usertoollinks-contribs" title="Special:Contributions/Greenwing">contribs</a>)</span></div><div id="mw-revision-nav">(<a href="/w/index.php?title=TEsound&amp;diff=prev&amp;oldid=24402" title="TEsound">diff</a>) <a href="/w/index.php?title=TEsound&amp;direction=prev&amp;oldid=24402" title="TEsound">← Older revision</a> | Latest revision (diff) | Newer revision → (diff)</div></div></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#About"><span class="tocnumber">1</span> <span class="toctext">About</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Download"><span class="tocnumber">1.1</span> <span class="toctext">Download</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Contact"><span class="tocnumber">1.2</span> <span class="toctext">Contact</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Setup"><span class="tocnumber">2</span> <span class="toctext">Setup</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#FAQ"><span class="tocnumber">3</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Functions"><span class="tocnumber">4</span> <span class="toctext">Functions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Playback_Functions"><span class="tocnumber">4.1</span> <span class="toctext">Playback Functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#TEsound.play"><span class="tocnumber">4.1.1</span> <span class="toctext">TEsound.play</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#TEsound.playLooping"><span class="tocnumber">4.1.2</span> <span class="toctext">TEsound.playLooping</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Sound_Modification_Functions"><span class="tocnumber">4.2</span> <span class="toctext">Sound Modification Functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#TEsound.volume"><span class="tocnumber">4.2.1</span> <span class="toctext">TEsound.volume</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#TEsound.volume_2"><span class="tocnumber">4.2.2</span> <span class="toctext">TEsound.volume</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#TEsound.pitch"><span class="tocnumber">4.2.3</span> <span class="toctext">TEsound.pitch</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#TEsound.pitch_2"><span class="tocnumber">4.2.4</span> <span class="toctext">TEsound.pitch</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#TEsound.pause"><span class="tocnumber">4.2.5</span> <span class="toctext">TEsound.pause</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#TEsound.pause_2"><span class="tocnumber">4.2.6</span> <span class="toctext">TEsound.pause</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#TEsound.resume"><span class="tocnumber">4.2.7</span> <span class="toctext">TEsound.resume</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#TEsound.resume_2"><span class="tocnumber">4.2.8</span> <span class="toctext">TEsound.resume</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#TEsound.stop"><span class="tocnumber">4.2.9</span> <span class="toctext">TEsound.stop</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#TEsound.stop_2"><span class="tocnumber">4.2.10</span> <span class="toctext">TEsound.stop</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Utility_Functions"><span class="tocnumber">4.3</span> <span class="toctext">Utility Functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#TEsound.cleanup"><span class="tocnumber">4.3.1</span> <span class="toctext">TEsound.cleanup</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#TEsound.volume_3"><span class="tocnumber">4.3.2</span> <span class="toctext">TEsound.volume</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#TEsound.tagPitch"><span class="tocnumber">4.3.3</span> <span class="toctext">TEsound.tagPitch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="#Internal_Functions"><span class="tocnumber">4.4</span> <span class="toctext">Internal Functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="#TEsound.findTag"><span class="tocnumber">4.4.1</span> <span class="toctext">TEsound.findTag</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#TEsound.findVolume"><span class="tocnumber">4.4.2</span> <span class="toctext">TEsound.findVolume</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#TEsound.findPitch"><span class="tocnumber">4.4.3</span> <span class="toctext">TEsound.findPitch</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Other_Languages"><span class="tocnumber">5</span> <span class="toctext">Other Languages</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="About">About</span></h2>
+<p>TEsound is a sound manager for the Love2D framework. TEsound is intended to make it easier to use sounds and music in your games.
+</p><p>It's under the <a rel="nofollow" class="external text" href="http://www.opensource.org/licenses/zlib-license.php">ZLIB license</a>. If you use the library and your game ends up making a lot of money, its creators politely request that you consider sending a little bit of it their way.
+</p>
+<h3><span class="mw-headline" id="Download">Download</span></h3>
+<p>The original Dropbox link is dead; leaving for posterity and in case it comes back. Until it does, <a rel="nofollow" class="external text" href="https://github.com/drhayes/TESound">here's the GitHub link</a>.
+</p><p><a rel="nofollow" class="external text" href="http://dl.dropbox.com/u/3713769/web/Love/TLTools/TEsound.lua">Direct from Dropbox</a>
+</p>
+<h3><span class="mw-headline" id="Contact">Contact</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=2334">Forum Thread</a></li>
+<li>Ensayia - Ensayia@gmail.com</li>
+<li>Taehl - SelfMadeSpirit@gmail.com</li></ul>
+<h2><span class="mw-headline" id="Setup">Setup</span></h2>
+<p>Everything in the module is contained in the TEsound namespace, so don't worry about it messing with your global variables. Memory and channel management is automatic.
+</p>
+<ol><li>Put TEsound.lua in your game's folder</li>
+<li>At the top of main.lua, add the line <code>require"TEsound"</code></li>
+<li>In love.update(), add the line <code>TEsound.cleanup()</code></li></ol>
+<h2><span class="mw-headline" id="FAQ">FAQ</span></h2>
+<dl><dt>Q) How do I just play a sound?</dt>
+<dd>A) All you need to do is <code>TEsound.play(sound)</code>, where <code>sound</code> is either a <a href="http://love2d.org/wiki/SoundData" title="SoundData">SoundData</a> or a string filepath to a sound file (like <code>"sounds/boom.ogg"</code>).</dd></dl>
+<dl><dt>Q) I have three different jump sounds, how can I play one at random?</dt>
+<dd>A) <code>TEsound.play(list)</code>, where <code>list</code> is a table like <code>{"jump1.ogg", "jump2.ogg", "jump3.ogg"}</code>.</dd></dl>
+<dl><dt>Q) Can I make it constantly play randomized music?</dt>
+<dd>A) Sure! <code>TEsound.playLooping(list)</code>. When one song ends, a new one from the list will automatically start playing.</dd></dl>
+<dl><dt>Q) Now how do I stop the music? / What are sound tags?</dt>
+<dd>A) The best way is to use TEsound's "tagging" feature. Simply put, TEsound lets you add one or more tags to each sound that's playing, and you can call various functions on all sounds with a given tag. So you could do this:</dd>
+<dd><code>TEsound.playLooping("song1.ogg", "music")</code></dd>
+<dd><code>TEsound.stop("music")</code></dd>
+<dd>Sounds can have multiple tags if you desire (use a list: <code>TEsound.play(sound, {"something", "whatever", "lol"})</code>, and multiple sounds can share tags (if you call something like <code>TEsound.pitch("sfx", .5)</code>, all sounds with the "sfx" tag will immediately be low-pitched). Tags can also be unique, in case you want to work with a specific sound.</dd></dl>
+<dl><dt>Q) What if I want to change the volume/pitch of all sounds?</dt>
+<dd>A) That's what the special "all" tag is for. You don't need to give the tag to sounds, it's automatically applied to them. So if you wanted to cut the volume of everything in half, you just need to <code>TEsound.volume("all",.5)</code>.</dd></dl>
+<dl><dt>Q) I want to let the player choose different volume levels for sound effects, music, and voice-acting. Can TEsound handle it?</dt>
+<dd>A) Yep! You can set a volume multiplier for any tag with <code>TEsound.volume(tag, volume)</code>. Tag-volume changes take immediate effect (even on sounds that are already playing!). So you could use <code>TEsound.volume("voice", .75)</code>, and any sound with the "voice" tag would play at .75 volume. This is multiplied by the sound's own volume and what the "all" tag is set to - if you <code>TEsound.play("splat.ogg", "sfx", .5)</code>, and you've set the "sfx" and "all" tags to .6 and 1 volume, then the sound would play at .3 volume.</dd></dl>
+<dl><dt>Q) How do I pronounce the name of your module? "Tee ee sound"?</dt>
+<dd>A) That works, but I, personally, say "teh sound"&#160;;)</dd></dl>
+<h2><span class="mw-headline" id="Functions">Functions</span></h2>
+<h3><span class="mw-headline" id="Playback_Functions">Playback Functions</span></h3>
+<h4><span class="mw-headline" id="TEsound.play">TEsound.play</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">volume</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+</pre></div>
+<p>Plays a sound. Returns either the number of the channel the sound is playing in, or nil and an error message.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/table" title="table">table</a> sound</code></dt>
+<dd>Either a <a href="http://love2d.org/wiki/SoundData" title="SoundData">SoundData</a> or a string filepath to a sound file (example: "sounds/jump.ogg"), or a list of these. If a list is used, a random sound from that list will be played.</dd>
+<dt><code><a href="http://love2d.org/wiki/table" title="table">table</a> tags ({})</code></dt>
+<dd>One or more tags that can be used to identify a sound (Example, single: "music". Example, multiple: {"sfx", "gun", "player"}). Multiple sounds may share tags, or tags may be unique. If omitted, no tags are assigned. Passing a string is shorthand for passing a table with only one item.</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> volume (1)</code></dt>
+<dd>A number between 0 and 1 which specifies how loud a sound is. If the sound has a tag which a volume has been specified for, it will multiply this number (ie., if you use the tag "sfx" and volume 0.5, and "sfx" has been volume-ed to 0.6, then the sound will be played at 0.3 volume).</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> pitch (1)</code></dt>
+<dd>A number which specifies the speed/pitch the sound will be played it. If the sound has a tag which a pitch has been specified for, it will multiply this number.</dd>
+<dt><code><a href="http://love2d.org/wiki/function" title="function">function</a> func (no callback)</code></dt>
+<dd>A function which will be called when the sound is finished playing (it's passed one parameter - a list with the sound's volume and pitch). If omitted, no function will be used.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.playLooping">TEsound.playLooping</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">playLooping</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">volume</span><span class="p">,</span> <span class="n">pitch</span><span class="p">)</span>
+</pre></div>
+<p>Plays a sound which will repeat be repeated n times. If n isn't given, it will loop until stopped manually with TEsound.stop. Returns either the number of the channel the sound is playing in, or nil and an error message.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/table" title="table">table</a> sound</code></dt>
+<dd>See TEsound.play. If a list is used, each loop will randomly choose from the list. Good for randomized background music.</dd>
+<dt><code><a href="http://love2d.org/wiki/table" title="table">table</a> tags</code></dt>
+<dd>See TEsound.play</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> n</code></dt>
+<dd>The number of times the sound will be looped. If omitted, the sound will loop forever.</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> volume</code></dt>
+<dd>See TEsound.play</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> pitch</code></dt>
+<dd>See TEsound.play</dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Sound_Modification_Functions">Sound Modification Functions</span></h3>
+<h4><span class="mw-headline" id="TEsound.volume">TEsound.volume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">volume</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">volume</span><span class="p">)</span>
+</pre></div>
+<p>Sets the volume of channel or tag and its loops (if any).
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> channel</code></dt>
+<dd>Determines which channel will be affected. Since sound channels aren't static, it's generally advisable to use the tag method (see below).</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> volume (no change)</code></dt>
+<dd>See TEsound.play. If omitted, the sound's volume won't be changed (pointless in most cases).</dd></dl>
+<h4><span class="mw-headline" id="TEsound.volume_2">TEsound.volume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">volume</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">volume</span><span class="p">)</span>
+</pre></div>
+<p>Sets the volume of channel or tag and its loops (if any).
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>Determines which channel will be affected. All channels playing a sound with that tag will be affected. Since sound channels aren't static, it's generally advisable to use the tag method.</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> volume (no change)</code></dt>
+<dd>See TEsound.play. If omitted, the sound's volume won't be changed (pointless in most cases).</dd></dl>
+<h4><span class="mw-headline" id="TEsound.pitch">TEsound.pitch</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">pitch</span><span class="p">)</span>
+</pre></div>
+<p>Sets the pitch of channel or tag and its loops (if any).
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> channel</code></dt>
+<dd>See TEsound.volume</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> pitch (no change)</code></dt>
+<dd>See TEsound.play. If omitted, the sound's pitch won't be changed.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.pitch_2">TEsound.pitch</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">pitch</span><span class="p">)</span>
+</pre></div>
+<p>Sets the pitch of channel or tag and its loops (if any).
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.volume</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> pitch (no change)</code></dt>
+<dd>See TEsound.play. If omitted, the sound's pitch won't be changed.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.pause">TEsound.pause</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">pause</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+</pre></div>
+<p>Pauses a channel or tag. Use TEsound.resume to unpause.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> channel</code></dt>
+<dd>See TEsound.volume</dd></dl>
+<h4><span class="mw-headline" id="TEsound.pause_2">TEsound.pause</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">pause</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+<p>Pauses a channel or tag. Use TEsound.resume to unpause.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.volume</dd></dl>
+<h4><span class="mw-headline" id="TEsound.resume">TEsound.resume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+</pre></div>
+<p>Resumes a channel or tag from a pause.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> channel</code></dt>
+<dd>See TEsound.volume</dd></dl>
+<h4><span class="mw-headline" id="TEsound.resume_2">TEsound.resume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">resume</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+<p>Resumes a channel or tag from a pause.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.volume</dd></dl>
+<h4><span class="mw-headline" id="TEsound.stop">TEsound.stop</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">stop</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">finish</span><span class="p">)</span>
+</pre></div>
+<p>Stops a sound channel or tag either immediately or when finished, and prevents it from looping.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> channel</code></dt>
+<dd>See TEsound.volume</dd>
+<dt><code><a href="http://love2d.org/wiki/boolean" title="boolean">boolean</a> finish (false)</code></dt>
+<dd>If true, the sound will be allowed to finish playing instead of stopping immediately. This is mainly used to end a sound loop.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.stop_2">TEsound.stop</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">stop</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">finish</span><span class="p">)</span>
+</pre></div>
+<p>Stops a sound channel or tag either immediately or when finished, and prevents it from looping.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.volume</dd>
+<dt><code><a href="http://love2d.org/wiki/boolean" title="boolean">boolean</a> finish (false)</code></dt>
+<dd>If true, the sound will be allowed to finish playing instead of stopping immediately. This is mainly used to end a sound loop.</dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Utility_Functions">Utility Functions</span></h3>
+<h4><span class="mw-headline" id="TEsound.cleanup">TEsound.cleanup</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">cleanup</span><span class="p">()</span>
+</pre></div>
+<p>Cleans up finished sounds, freeing memory. It's highly recommended you call this in love.update(). If not called, memory and channels won't be freed, and sounds won't loop.
+</p>
+<h4><span class="mw-headline" id="TEsound.volume_3">TEsound.volume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">volume</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">volume</span><span class="p">)</span>
+</pre></div>
+<p>Change the volume level for a specified tag. Volume changes take effect immediately and last until changed again. This is recommended for changing entire categories of sounds, so you can independently adjust the volume of all sound effects, music, etc. (but don't forget to tag your sounds appropriately). If a sound has multiple tags with set volumes, the first one (in the order of its tag list) will be used.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>The tag to set the volume of. There is a special tag called "all" which will multiply ALL sounds (in addition to a regular tag, if present) - use it as a master volume control. Sounds do not need to be assigned the "all" tag for this to happen.</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> volume (optional)</code></dt>
+<dd>See TEsound.play. If omitted, the tag will no longer affect the volume of matching sounds.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.tagPitch">TEsound.tagPitch</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">tagPitch</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">volume</span><span class="p">)</span>
+</pre></div>
+<p>Change the pitch for a specified tag. Changes take effect immediately and last until changed again. This is recommended for changing entire categories of sounds. If a sound has multiple tags with set pitches, the first one (in the order of its tag list) will be used.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.volume</dd>
+<dt><code><a href="http://love2d.org/wiki/number" title="number">number</a> pitch (optional)</code></dt>
+<dd>See TEsound.play. If omitted, the tag will no longer affect the pitch of matching sounds.</dd></dl>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Internal_Functions">Internal Functions</span></h3>
+<h4><span class="mw-headline" id="TEsound.findTag">TEsound.findTag</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">findTag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+<p>Returns a list of all sound channels with a given tag.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>The channels of all sounds with this tag will be returned.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.findVolume">TEsound.findVolume</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">findVolume</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+<p>Returns a volume level for a given tag or tags, or 1 if the tag(s)'s volume hasn't been set. If a list of tags is given, it will return the level of the first tag with a setting.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>Chooses the tag to check the volume of. Passing a table will check only the first item.</dd></dl>
+<h4><span class="mw-headline" id="TEsound.findPitch">TEsound.findPitch</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">TEsound</span><span class="p">.</span><span class="n">findPitch</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</pre></div>
+<p>Returns a pitch level for a given tag or tags, or 1 if the tag(s)'s pitch hasn't been set.
+</p>
+<dl><dt><code><a href="http://love2d.org/wiki/string" title="string">string</a> tag</code></dt>
+<dd>See TEsound.findVolume</dd></dl>
+<h2><span class="mw-headline" id="Other_Languages">Other Languages</span></h2>
+<div class="i18n">
+<p><a href="http://love2d.org/w/index.php?title=TEsound_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Deutsch)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Deutsch) (page does not exist)">Deutsch</a>&#160;&#8211;
+<a class="mw-selflink selflink">English</a>&#160;&#8211; 
+<a href="http://love2d.org/w/index.php?title=TEsound_(Espa%C3%B1ol)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Español) (page does not exist)">Español</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Français) (page does not exist)">Français</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Italiano)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Italiano) (page does not exist)">Italiano</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Polski)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Polski) (page does not exist)">Polski</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Portugu%C3%AAs)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Português) (page does not exist)">Português</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Svenska)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Svenska) (page does not exist)">Svenska</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Русский) (page does not exist)">Русский</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Українська) (page does not exist)">Українська</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="http://love2d.org/wiki/TEsound_(日本語)" title="TEsound (日本語)">日本語</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (简体中文) (page does not exist)">简体中文</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(Ti%E1%BA%BFng_Vi%E1%BB%87t)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (Tiếng Việt) (page does not exist)">Tiếng Việt</a>&#160;&#8211;
+<a href="http://love2d.org/w/index.php?title=TEsound_(%ED%95%9C%EA%B5%AD%EC%96%B4)&amp;action=edit&amp;redlink=1" class="new" title="TEsound (한국어) (page does not exist)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="http://love2d.org/wiki/Help:i18n" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240408110727
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.084 seconds
+Real time usage: 1.970 seconds
+Preprocessor visited node count: 955/1000000
+Preprocessor generated node count: 2431/1000000
+Post‐expand include size: 7348/2097152 bytes
+Template argument size: 4408/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5996/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1834.192      1 -total
+  0.49%    8.909      1 Template:i18n
+  0.42%    7.671     33 Template:param
+  0.27%    4.972     28 Template:Lang
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:1365-0!canonical and timestamp 20240408110725 and revision id 24402
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/w/index.php?title=TEsound&amp;oldid=24402">http://love2d.org/w/index.php?title=TEsound&amp;oldid=24402</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://love2d.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://love2d.org/wiki/Category:Libraries" title="Category:Libraries">Libraries</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=TEsound&amp;returntoquery=oldid%3D24402" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/TEsound" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/TEsound" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="http://love2d.org/w/index.php?title=TEsound&amp;oldid=24402&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="http://love2d.org/w/index.php?title=TEsound&amp;oldid=24402" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=TEsound&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="http://love2d.org/wiki/Special:Browse/:TEsound" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 15 December 2019, at 06:14.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.084","walltime":"1.970","ppvisitednodes":{"value":955,"limit":1000000},"ppgeneratednodes":{"value":2431,"limit":1000000},"postexpandincludesize":{"value":7348,"limit":2097152},"templateargumentsize":{"value":4408,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5996,"limit":5000000},"timingprofile":["100.00% 1834.192      1 -total","  0.49%    8.909      1 Template:i18n","  0.42%    7.671     33 Template:param","  0.27%    4.972     28 Template:Lang"]},"cachereport":{"timestamp":"20240408110727","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2012});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=TEsound&oldid=24402 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:56:29 GMT -->
+</html>
