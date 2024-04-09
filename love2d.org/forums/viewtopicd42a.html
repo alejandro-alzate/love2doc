@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=11307 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:50:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>L3D - The Starts of a 3D Lib - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - L3D - The Starts of a 3D Lib" href="app.php/feed/topic/11307">	
+	<link rel="canonical" href="viewtopic8db3.html?t=11307">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpef96.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D11307" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic8db3.html?t=11307">L3D - The Starts of a 3D Lib</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting6f19.html?mode=reply&amp;t=11307" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic086d.html?t=11307&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="11307" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			54 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice614.html?t=11307&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic0f95.html?t=11307&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic338d.html?t=11307&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopicd74d.html?t=11307&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic7d93.html?t=11307&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice614.html?t=11307&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p67967" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67967">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcc56.html?author_id=47309&amp;sr=posts">77</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67967">
+
+					<h3 class="first">
+						<a href="viewtopic1d9c.html?p=67967#p67967">L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting85fc.html?mode=quote&amp;p=67967" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1d9c.html?p=67967#p67967" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a></strong> &raquo; </span><time datetime="2012-10-15T20:48:14+00:00">Mon Oct 15, 2012 8:48 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><span style="font-size:150%;line-height:116%"><strong class="text-strong">Love3D</strong></span><br>
+<br>
+Hello everyone!<br>
+I'm not a very frequent member, but I try to keep up with things.<br>
+Anyhow, I have been working for the last few days to create a 3d engine for Love2d!<br>
+<br>
+<strong class="text-strong">Description:</strong><br>
+This is a REAL 3d library. It's not pseudo. Objects can be rotated in every single way and .obj files can be loaded and displayed. The engine is very basic and minimal at the moment, but if you want to download it and add some functions in, go for it!<br>
+<br>
+The engine is very basic so far and definitely far from finished, but I thought I would show some of it's functions.<br>
+<br>
+<br>
+Here's a list of functions:<br>
+
+<blockquote class="uncited"><div>-<em class="text-italics">nil</em> <strong class="text-strong">L3DSetup</strong>(Width, Height, FOV)<br>
+To be run when L3D is first started.<br>
+Define the screen width, height and field of view here.<br>
+<br>
+<br>
+-<em class="text-italics">Vertices, Indices, Material</em> <strong class="text-strong">L3DLoadObj</strong>(Path to Object)<br>
+Loads a .obj wavefront file and returns three arrays, Vertices, indices and material<br>
+<br>
+-<em class="text-italics">nil</em> <strong class="text-strong">L3DSetClipping</strong>(Min X, Max X, Min Y, Max Y)<br>
+Set's the clipping to these arguments<br>
+<br>
+-<em class="text-italics">nil</em> <strong class="text-strong">L3DLoadIdentity</strong>()<br>
+Resets the pointer to the origin (0, 0, 0)<br>
+Resets all rotations (Won't effect already drawn objects)<br>
+<br>
+-<em class="text-italics">nil</em> <strong class="text-strong">L3DTranslate</strong>(Position X, Position Y, Position Z)<br>
+Moves the Pointer (Objects are drawn at the pointer)<br>
+<br>
+-<em class="text-italics">nil</em> <strong class="text-strong">L3DRotate</strong>(Rotation X, Rotation Y, Rotation Z)<br>
+Rotates an object prior to drawing it.<br>
+<br>
+-<em class="text-italics">nil</em> <strong class="text-strong">L3DDraw</strong>(Vertice Array, Indice Array, [Material])<br>
+Draws a element to the screen at the current pointer<br>
+position with the current rotation</div></blockquote>
+
+There is functions that are only used by the library, namely "to2d()" and "toinds()" which are used to convert a 3d vertex to a 2d vertex and convert an array of faces to indices, respectively.<br>
+<br>
+The library is attached and here is an example script:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>--Load our Library :) 
+local L3D = require('/libs/L3D/l3d')
+
+--Some tables to store our model in
+Verts = {}
+Indcs = {}
+Mat = {}
+
+--The Rotation is stored here
+rot_y = 0
+
+function love.load()
+	
+	--Let's set the mode (Mainly so I know how big the screen is
+	love.graphics.setMode(640, 480, false, true, 0)
+	
+	--Set the screen width, height and field of view
+	L3DSetup(640, 480, 256)
+	
+	--Load an object into the tables Verts, Indcs and Mat (Vertices, Indices, and material)
+	Verts, Indcs, Mat = L3DLoadObj("Road.obj")
+end
+
+function love.update(dt)
+
+	--Let's see the FPS
+	love.graphics.setCaption("FPS: " .. tostring(love.timer.getFPS()))
+end
+
+function love.draw()
+
+	--Reset Rotations and Translations
+	L3DLoadIdentity()
+	
+	--Rotate the Y axis by rot_y
+	L3DRotate(rot_y, 0, 0)
+	
+	--Translate on the Z axis by 20 units
+	L3DTranslate(0, 0, 20)
+	
+	--Draw the .obj we loaded
+	L3DDraw(Verts, Indcs, Mat, L3DDiffuse)
+	
+	--This will get how many materials are loaded
+	love.graphics.print(#Mat .. " Materials", 0, 0)
+	
+	--This will show the names of all the materials that are loaded
+	for a = 1, #Mat do
+		love.graphics.print(Mat[a].ID, 0, a * 12)
+	end
+	
+	rot_y = rot_y + 0.01
+end</code></pre></div>
+You can see some old example code in use here:<br>
+<a href="http://sience.schattenkind.net/love2d/l3d/" class="postlink">http://sience.schattenkind.net/love2d/l3d/</a><br>
+Thank you to SiENCe <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+<br>
+<br>
+Tell me what you think and if you'd like to analyze the code and suggest optimizations, I would be grateful!<br>
+<br>
+<strong class="text-strong">Things you should NOT suggest:</strong><br>
+• Adding texture and material support for OBJ loader.<br>
+• Frustum Culling<br>
+• Fog support<br>
+• Lookat function (There never will be one unless someone else wants to do it)<br>
+• Lighting support (Unless you want to help me with this one <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> )<br>
+<br>
+<br>
+<strong class="text-strong">What I plan to do before I quit (In order of priority):</strong><br>
+• Error handling<br>
+• <del>Frustum Culling</del><br>
+• <del>Material</del> support <img class="smilies" src="images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br>
+• Fog Support<br>
+• Lighting<br>
+<br>
+<br>
+<br>
+For kicks and giggles, I rendered 100 cubes (Each contains 8 vertices and 6 faces (quads), so 800 faces) with an average fps of about 10. That translates to around 50-60 on a normal computer (Mine has the worst video card....).<br>
+<br>
+<br>
+Here's the Library: <div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/file23b1.php?id=5871">l3d.lua</a></dt>
+						<dd>(8.95 KiB) Downloaded 970 times</dd>
+		</dl>
+		
+			</div>
+
+This is an example demonstrating that color's are being successfully set (:D <img class="smilies" src="images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> <img class="smilies" src="images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy">)
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file546a.php?id=5873">L3D0.02.love</a></dt>
+			<dd><em>0.02 - Materials</em></dd>			<dd>(11.19 KiB) Downloaded 1157 times</dd>
+		</dl>
+		
+			</div>
+
+<br>
+This is showing a whole bunch of cubes falling from the heavons <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/filec342.php?id=5875">CubesFromHeavon.love</a></dt>
+			<dd><em>Falling Cubes</em></dd>			<dd>(4.01 KiB) Downloaded 1190 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a> on Thu Oct 18, 2012 10:47 am, edited 9 times in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67971" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67971">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistca80.html?mode=viewprofile&amp;u=3732" class="avatar"><img class="avatar" src="download/file9fc6.png?avatar=3732_1430030301.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistca80.html?mode=viewprofile&amp;u=3732" class="username">josefnpat</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search379e.html?author_id=3732&amp;sr=posts">955</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Oct 05, 2011 1:36 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> your basement</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact josefnpat">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact josefnpat</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://josefnpat.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67971">
+
+					<h3 >
+						<a href="viewtopic065d.html?p=67971#p67971">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7f27.html?mode=quote&amp;p=67971" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic065d.html?p=67971#p67971" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistca80.html?mode=viewprofile&amp;u=3732" class="username">josefnpat</a></strong> &raquo; </span><time datetime="2012-10-15T21:50:44+00:00">Mon Oct 15, 2012 9:50 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I get this error in your sample code:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Error: l3d.lua:86: Could not open file coin.obj. Does not exist.
+stack traceback:
+	[C]: in function 'lines'
+	l3d.lua:86: in function 'L3DLoadObj'
+	main.lua:11: in function 'load'
+	[string "boot.lua"]:378: in function &lt;[string "boot.lua"]:373&gt;
+	[C]: in function 'xpcall'
+</code></pre></div>
+
+Any chance you can package up a .love that demos this project?</div>
+
+			
+			
+									
+						
+							<div id="sig67971" class="signature"><a href="http://missingsentinelsoftware.com/" class="postlink">Missing Sentinel Software</a> | <a href="http://twitter.com/josefnpat" class="postlink">Twitter</a> <br>
+<span style="font-size:85%;line-height:116%"><br>
+<em class="text-italics">FORCIBLY IGNORED.</em><br>
+&lt;leafo&gt; when in doubt delete all of your code<br>
+&lt;bartbes&gt; git rm -r *<br>
+&lt;bartbes&gt; git commit -m "Fixed all bugs"<br>
+&lt;bartbes&gt; git push</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67973" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67973">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcc56.html?author_id=47309&amp;sr=posts">77</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67973">
+
+					<h3 >
+						<a href="viewtopiccee3.html?p=67973#p67973">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting793a.html?mode=quote&amp;p=67973" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccee3.html?p=67973#p67973" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a></strong> &raquo; </span><time datetime="2012-10-15T22:16:31+00:00">Mon Oct 15, 2012 10:16 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>josefnpat wrote:</cite>I get this error in your sample code:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Error: l3d.lua:86: Could not open file coin.obj. Does not exist.
+stack traceback:
+	[C]: in function 'lines'
+	l3d.lua:86: in function 'L3DLoadObj'
+	main.lua:11: in function 'load'
+	[string "boot.lua"]:378: in function &lt;[string "boot.lua"]:373&gt;
+	[C]: in function 'xpcall'
+</code></pre></div>
+
+Any chance you can package up a .love that demos this project?</div></blockquote>
+No... Not really.<br>
+This was mainly meant to preview what I am working on without being vaporware (which is why I included the source).<br>
+If you see what I have completed and what I intend to complete, I am probably only 50% finished or less depending on how I do lighting.<br>
+I don't want to create demos and package them for each individual update. I was expecting that the user would be able to look at the functions and the example code and write up there own test.<br>
+<br>
+I'm sorry, the code I posted was just showing all the uses of the library. It was not meant to be a demo that you could just copy and run.<br>
+You could go online and google cube.obj or something and load that, or I'l even upload the object I used to test (I tested with many different objects in triangle, quad and n-gon rendering).<br>
+<br>
+Unpack the attached file into the directory of your main.lua that you are using with the code I gave in the example and run it.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="download/fileac5a.php?id=5859">Coin.rar</a></dt>
+						<dd>(5.01 KiB) Downloaded 534 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67977" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67977">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="avatar"><img class="avatar" src="download/file85d4.gif?avatar=63719_1373945994.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha281.html?author_id=63719&amp;sr=posts">484</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 24, 2012 9:04 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Southern Leyte, Visayas, Philippines</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact substitute541">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact substitute541</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://phoenixce.wordpress.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67977">
+
+					<h3 >
+						<a href="viewtopicbf21-2.html?p=67977#p67977">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting276b.html?mode=quote&amp;p=67977" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicbf21-2.html?p=67977#p67977" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a></strong> &raquo; </span><time datetime="2012-10-16T02:06:14+00:00">Tue Oct 16, 2012 2:06 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Frusturm Culling? I don't know what that is, but I think that removes faces that are not visible... Anyways, this inspired me to continue my own Love3D Lib o.o<br>
+..<br>
+<br>
+Did I notice something? My Rotate functions are almost the same as yours
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>--My Rotate functions
+function love3D.func.rotateX(y, z, angleX, centerY, centerZ)
+	local cosX = math.cos(angleX)
+	local sinX = math.sin(angleX)
+	local y1 = (y - centerY) * cosX - (z - centerZ) * sinX
+	local z1 = (z - centerZ) * cosX + (y - centerY) * sinX
+	return y1 + centerY, z1 + centerZ
+end
+
+function love3D.func.rotateY(x, z, angleY, centerX, centerZ)
+	local cosY = math.cos(angleY)
+	local sinY = math.sin(angleY)
+	local x1 = (x - centerX) * cosY - (z - centerZ) * sinY
+	local z1 = (z - centerZ) * cosY + (x - centerX) * sinY
+	return x1 + centerX, z1 + centerZ
+end
+
+function love3D.func.rotateZ(x, y, angleZ, centerX, centerY)
+	local cosZ = math.cos(angleZ)
+	local sinZ = math.sin(angleZ)
+	local x1 = (x - centerX) * cosZ - (y - centerY) * sinZ
+	local y1 = (y - centerY) * cosZ + (x - centerX) * sinZ
+	return x1 + centerX, y1 + centerY
+end
+
+-- Your rotate functions :
+local ca = math.cos(L3D.ROTATE[1])
+	local sa = math.sin(L3D.ROTATE[1])
+	
+	local y_temp = y1
+	y1 = y1 * ca - z1 * sa
+	z1 = y_temp * sa + z1 * ca
+	
+	ca = math.cos(L3D.ROTATE[2])
+	sa = math.sin(L3D.ROTATE[2])
+	
+	local z_temp = z1
+	z1 = z1 * ca - x1 * sa
+	x1 = z_temp * sa + x1 * ca
+	
+	ca = math.cos(L3D.ROTATE[3])
+	sa = math.sin(L3D.ROTATE[3])
+	
+	local x_temp = x1
+	x1 = x1 * ca - y1 * sa
+	y1 = x_temp * sa + y1 * ca
+</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig67977" class="signature">Currently designing themes for WordPress.<br>
+<br>
+Sometimes lurks around the forum.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67979" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67979">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcc56.html?author_id=47309&amp;sr=posts">77</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67979">
+
+					<h3 >
+						<a href="viewtopicd6c2.html?p=67979#p67979">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingeb23.html?mode=quote&amp;p=67979" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd6c2.html?p=67979#p67979" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a></strong> &raquo; </span><time datetime="2012-10-16T02:22:18+00:00">Tue Oct 16, 2012 2:22 am</time>
+			</p>
+			
+			
+			
+			<div class="content">OK cool <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+Please share ideas and thoughts as you go.<br>
+<br>
+Yes, that's probably because it's the simplest way to rotate an object without rotation matrices. It's not a new trick.<br>
+  <br>
+Oh wait.... I think yours look a bit like mine... <a href="http://bb.waratteka.net/viewtopic.php?f=21&amp;t=573" class="postlink">http://bb.waratteka.net/viewtopic.php?f=21&amp;t=573</a><br>
+Notice, that is 8 months before you posted about your library.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67987" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67987">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="avatar"><img class="avatar" src="download/file85d4.gif?avatar=63719_1373945994.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha281.html?author_id=63719&amp;sr=posts">484</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 24, 2012 9:04 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Southern Leyte, Visayas, Philippines</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact substitute541">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact substitute541</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://phoenixce.wordpress.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67987">
+
+					<h3 >
+						<a href="viewtopic0726-2.html?p=67987#p67987">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingda7e.html?mode=quote&amp;p=67987" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0726-2.html?p=67987#p67987" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a></strong> &raquo; </span><time datetime="2012-10-16T03:25:29+00:00">Tue Oct 16, 2012 3:25 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>10$man wrote:</cite>OK cool <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+Please share ideas and thoughts as you go.<br>
+<br>
+Yes, that's probably because it's the simplest way to rotate an object without rotation matrices. It's not a new trick.<br>
+  <br>
+Oh wait.... I think yours look a bit like mine... <a href="http://bb.waratteka.net/viewtopic.php?f=21&amp;t=573" class="postlink">http://bb.waratteka.net/viewtopic.php?f=21&amp;t=573</a><br>
+Notice, that is 8 months before you posted about your library.</div></blockquote>
+
+I used a book about Actionscript 3.0 (the programming language for making flash games) for my 3D projection. It was written in.. 2008 maybe? It's called "Actionscript 3.0 : Making Things Move".</div>
+
+			
+			
+									
+						
+							<div id="sig67987" class="signature">Currently designing themes for WordPress.<br>
+<br>
+Sometimes lurks around the forum.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67988" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67988">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="avatar"><img class="avatar" src="download/file85d4.gif?avatar=63719_1373945994.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha281.html?author_id=63719&amp;sr=posts">484</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 24, 2012 9:04 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Southern Leyte, Visayas, Philippines</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact substitute541">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact substitute541</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://phoenixce.wordpress.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67988">
+
+					<h3 >
+						<a href="viewtopic6814.html?p=67988#p67988">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf852.html?mode=quote&amp;p=67988" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6814.html?p=67988#p67988" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a></strong> &raquo; </span><time datetime="2012-10-16T03:29:34+00:00">Tue Oct 16, 2012 3:29 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I would like to help you about lighting support, although it will take lots of vector calculations for that. Fortunately my book has it <img class="smilies" src="images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"></div>
+
+			
+			
+									
+						
+							<div id="sig67988" class="signature">Currently designing themes for WordPress.<br>
+<br>
+Sometimes lurks around the forum.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67989" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67989">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcc56.html?author_id=47309&amp;sr=posts">77</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67989">
+
+					<h3 >
+						<a href="viewtopicfcbc.html?p=67989#p67989">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7cd1.html?mode=quote&amp;p=67989" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfcbc.html?p=67989#p67989" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a></strong> &raquo; </span><time datetime="2012-10-16T03:36:12+00:00">Tue Oct 16, 2012 3:36 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I would prefer to not go straight from a book.<br>
+It helps to really understand it and going from a book just doesn't get it for me.<br>
+If you want to try helping, I'm happy to have an extra hand.<br>
+<br>
+First I need to worry about getting materials from the .mtl file.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67990" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67990">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="avatar"><img class="avatar" src="download/file85d4.gif?avatar=63719_1373945994.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha281.html?author_id=63719&amp;sr=posts">484</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 24, 2012 9:04 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Southern Leyte, Visayas, Philippines</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact substitute541">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact substitute541</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://phoenixce.wordpress.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67990">
+
+					<h3 >
+						<a href="viewtopic4a72.html?p=67990#p67990">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting08a3.html?mode=quote&amp;p=67990" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4a72.html?p=67990#p67990" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1b85.html?mode=viewprofile&amp;u=63719" class="username">substitute541</a></strong> &raquo; </span><time datetime="2012-10-16T03:52:38+00:00">Tue Oct 16, 2012 3:52 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>10$man wrote:</cite>I would prefer to not go straight from a book.<br>
+It helps to really understand it and going from a book just doesn't get it for me.<br>
+If you want to try helping, I'm happy to have an extra hand.<br>
+<br>
+First I need to worry about getting materials from the .mtl file.</div></blockquote>
+
+I do understand what's in the book...<br>
+<br>
+.mtl.... Is that from 3Ds Max or Autocad. And one thing, the Love engine DOES NOT support distorting pics, if you meant that your adding textures. It only supports skewing/shearing.</div>
+
+			
+			
+									
+						
+							<div id="sig67990" class="signature">Currently designing themes for WordPress.<br>
+<br>
+Sometimes lurks around the forum.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p67996" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile67996">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcc56.html?author_id=47309&amp;sr=posts">77</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content67996">
+
+					<h3 >
+						<a href="viewtopic8380.html?p=67996#p67996">Re: L3D - The Starts of a 3D Lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingfc8a.html?mode=quote&amp;p=67996" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8380.html?p=67996#p67996" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5360.html?mode=viewprofile&amp;u=47309" class="username">10$man</a></strong> &raquo; </span><time datetime="2012-10-16T10:36:00+00:00">Tue Oct 16, 2012 10:36 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>substitute541 wrote:</cite><blockquote><div><cite>10$man wrote:</cite>I would prefer to not go straight from a book.<br>
+It helps to really understand it and going from a book just doesn't get it for me.<br>
+If you want to try helping, I'm happy to have an extra hand.<br>
+<br>
+First I need to worry about getting materials from the .mtl file.</div></blockquote>
+
+I do understand what's in the book...<br>
+<br>
+.mtl.... Is that from 3Ds Max or Autocad. And one thing, the Love engine DOES NOT support distorting pics, if you meant that your adding textures. It only supports skewing/shearing.</div></blockquote>
+I meant me. I want to understand too <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br>
+(<br>
+.obj files are wavefront. If they have a material they will also have a .mtl file that contains the information for the material. Materials can be textures but they can also be solid colors (which is what I am going to implement first)</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting6f19.html?mode=reply&amp;t=11307" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic086d.html?t=11307&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=11307">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			54 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice614.html?t=11307&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic0f95.html?t=11307&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic338d.html?t=11307&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopicd74d.html?t=11307&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic7d93.html?t=11307&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice614.html?t=11307&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=11307 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:50:16 GMT -->
+</html>

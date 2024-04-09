@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=14&t=84594 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:07:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>CarWar - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Games and Creations" href="app.php/feed/forum/14">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - CarWar" href="app.php/feed/topic/84594">	
+	<link rel="canonical" href="viewtopicf549.html?t=84594">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="14"><a itemprop="item" href="viewforum9780.html?f=14"><span itemprop="name">Games and Creations</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpc297.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D14%26t%3D84594" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopicf549.html?t=84594">CarWar</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Show off your games, demos and other (playable) creations.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting6312.html?mode=reply&amp;t=84594" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic4036.html?t=84594&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="84594" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			22 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic6ed6.html?t=84594&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic2f8a.html?t=84594&amp;start=20" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic6ed6.html?t=84594&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p216641" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216641">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="avatar"><img class="avatar" src="download/file4c41.gif?avatar=139550_1508068259.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4b63.html?author_id=139550&amp;sr=posts">32</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 14, 2017 3:50 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216641">
+
+					<h3 class="first">
+						<a href="viewtopic3643.html?p=216641#p216641">CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingee89.html?mode=quote&amp;p=216641" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3643.html?p=216641#p216641" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a></strong> &raquo; </span><time datetime="2017-11-18T05:55:39+00:00">Sat Nov 18, 2017 5:55 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This is my first playable game. Enjoy!<br>
+P. S. Thanks to Azhukar<br>
+P. P. S. The game become smaller. I uploaded it here instead of uploading it to any file hoster.<br>
+P. P. P. S. Update! New graphics and new music!</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file5faf.php?id=16378">CarWar.love</a></dt>
+						<dd>(17 MiB) Downloaded 682 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+													<div class="notice">
+					Last edited by <a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a> on Fri Jun 08, 2018 12:18 am, edited 6 times in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216644" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216644">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist3fa3.html?mode=viewprofile&amp;u=4340" class="avatar"><img class="avatar" src="download/filefce3.gif?avatar=4340_1386175766.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist3fa3.html?mode=viewprofile&amp;u=4340" class="username">master both</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search0b44.html?author_id=4340&amp;sr=posts">262</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Nov 08, 2011 12:39 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Chile</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216644">
+
+					<h3 >
+						<a href="viewtopicaeac.html?p=216644#p216644">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga9fc.html?mode=quote&amp;p=216644" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicaeac.html?p=216644#p216644" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3fa3.html?mode=viewprofile&amp;u=4340" class="username">master both</a></strong> &raquo; </span><time datetime="2017-11-18T16:15:44+00:00">Sat Nov 18, 2017 4:15 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I don't know what to click <img class="smilies" src="images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216658" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216658">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist5783.html?mode=viewprofile&amp;u=139479" class="username">bludburn</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search100e.html?author_id=139479&amp;sr=posts">2</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Sep 14, 2017 12:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216658">
+
+					<h3 >
+						<a href="viewtopicacec.html?p=216658#p216658">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting371f.html?mode=quote&amp;p=216658" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicacec.html?p=216658#p216658" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist5783.html?mode=viewprofile&amp;u=139479" class="username">bludburn</a></strong> &raquo; </span><time datetime="2017-11-19T13:44:34+00:00">Sun Nov 19, 2017 1:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=216644#p216644"><div><cite><a href="memberlist3fa3.html?mode=viewprofile&amp;u=4340">master both</a> wrote: <a href="viewtopicaeac.html?p=216644#p216644" data-post-id="216644" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sat Nov 18, 2017 4:15 pm</span></cite>
+I don't know what to click <img class="smilies" src="images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".
+</div></blockquote>
+
+You need account on TAS-IX for download this <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216661" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216661">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistdcfa.html?mode=viewprofile&amp;u=134253" class="avatar"><img class="avatar" src="download/file2fba.png?avatar=134253_1616666873.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistdcfa.html?mode=viewprofile&amp;u=134253" class="username">Pebsie</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search53e0.html?author_id=134253&amp;sr=posts">144</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Nov 11, 2013 12:35 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Lincoln, United Kingdom</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Pebsie">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Pebsie</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://luven.io/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216661">
+
+					<h3 >
+						<a href="viewtopic02e2.html?p=216661#p216661">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2e6b.html?mode=quote&amp;p=216661" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic02e2.html?p=216661#p216661" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistdcfa.html?mode=viewprofile&amp;u=134253" class="username">Pebsie</a></strong> &raquo; </span><time datetime="2017-11-19T15:56:21+00:00">Sun Nov 19, 2017 3:56 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=216658#p216658"><div><cite><a href="memberlist5783.html?mode=viewprofile&amp;u=139479">bludburn</a> wrote: <a href="viewtopicacec.html?p=216658#p216658" data-post-id="216658" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Nov 19, 2017 1:44 pm</span></cite>
+<blockquote cite="./viewtopic.php?p=216644#p216644"><div><cite><a href="memberlist3fa3.html?mode=viewprofile&amp;u=4340">master both</a> wrote: <a href="viewtopicaeac.html?p=216644#p216644" data-post-id="216644" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sat Nov 18, 2017 4:15 pm</span></cite>
+I don't know what to click <img class="smilies" src="images/smilies/ms-sad.png" width="16" height="16" alt=":(" title="Sad"> I don't speak russian. I clicked something and it said "Ooops!".
+</div></blockquote>
+
+You need account on TAS-IX for download this <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">
+</div></blockquote>
+
+Would you be able to upload a .love file as an attachment to the OP instead? <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+							<div id="sig216661" class="signature"><strong class="text-strong">Website:</strong> <a href="http://peb.si/" class="postlink">http://peb.si</a><br>
+<strong class="text-strong">Twitter:</strong> @Pebsiee <a href="http://twitter.com/pebsiee" class="postlink">http://twitter.com/pebsiee</a><br>
+<strong class="text-strong">Steam:</strong> pebsie</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216755" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216755">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="avatar"><img class="avatar" src="download/file4c41.gif?avatar=139550_1508068259.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4b63.html?author_id=139550&amp;sr=posts">32</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 14, 2017 3:50 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216755">
+
+					<h3 >
+						<a href="viewtopic9789.html?p=216755#p216755">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1bce.html?mode=quote&amp;p=216755" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9789.html?p=216755#p216755" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a></strong> &raquo; </span><time datetime="2017-11-24T04:20:15+00:00">Fri Nov 24, 2017 4:20 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm afraid to spend 35 megabytes of traffic. You don't need Tas-Ix account. The site thinks you're robot <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> . Try click on button below "Я не робот" text. This is captcha. And then press "Скачать" button.<br>
+Or you can try this direct link:<br>
+<a href="http://filebox.uz/d/430f632e09aca5c36bfa9dcbeb8945d14a96a66f/CarWar.love" class="postlink">http://filebox.uz/d/430f632e09aca5c36bf ... arWar.love</a></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216759" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216759">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistd883.html?mode=viewprofile&amp;u=138368" class="username">KayleMaster</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3f0f.html?author_id=138368&amp;sr=posts">234</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Aug 29, 2016 8:51 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216759">
+
+					<h3 >
+						<a href="viewtopicc1e1.html?p=216759#p216759">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting185b.html?mode=quote&amp;p=216759" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc1e1.html?p=216759#p216759" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd883.html?mode=viewprofile&amp;u=138368" class="username">KayleMaster</a></strong> &raquo; </span><time datetime="2017-11-24T08:31:29+00:00">Fri Nov 24, 2017 8:31 am</time>
+			</p>
+			
+			
+			
+			<div class="content">No, you're wrong. You do need a TAS-IX account. Even after I go through the captcha and press Скачатъ it shows a message about not being a TAS-IX member. Same thing for the direct link. Try logging out of your account and you will see the same.  <br>
+In the future, you can upload .love files directly in the forum.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216760" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216760">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="avatar"><img class="avatar" src="download/file34bc.png?avatar=80325_1451847465.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha5b1.html?author_id=80325&amp;sr=posts">3440</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 13, 2012 2:55 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Absurdistan, Hungary</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact zorg">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact zorg</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://soon.tm.exclamationma.rk/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/zorg_z0rg_z0r8" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216760">
+
+					<h3 >
+						<a href="viewtopic1b02.html?p=216760#p216760">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3a9e.html?mode=quote&amp;p=216760" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1b02.html?p=216760#p216760" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a></strong> &raquo; </span><time datetime="2017-11-24T10:02:19+00:00">Fri Nov 24, 2017 10:02 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Besides, you spent exactly 35 megabytes of traffic uploading it to that site than if you had just uploaded it here... though to be honest, i'm not sure whether this forum has a filesize limit or not...</div>
+
+			
+			
+									
+						
+							<div id="sig216760" class="signature"><a href="../wiki/User_Zorg.html" class="postlink">Me and my stuff <img class="smilies" src="images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"></a><span style="font-size:10%;line-height:116%">True Neutral Aspirant. Why, yes, i do indeed enjoy sarcastically correcting others when they make the most blatant of spelling mistakes. No bullying or trolling the innocent tho.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216778" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216778">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="avatar"><img class="avatar" src="download/file4c41.gif?avatar=139550_1508068259.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4b63.html?author_id=139550&amp;sr=posts">32</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 14, 2017 3:50 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216778">
+
+					<h3 >
+						<a href="viewtopicb985.html?p=216778#p216778">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting54a6.html?mode=quote&amp;p=216778" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb985.html?p=216778#p216778" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistee8f.html?mode=viewprofile&amp;u=139550" class="username">TC1061</a></strong> &raquo; </span><time datetime="2017-11-25T04:52:53+00:00">Sat Nov 25, 2017 4:52 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=216759#p216759"><div><cite><a href="memberlistd883.html?mode=viewprofile&amp;u=138368">KayleMaster</a> wrote: <a href="viewtopicc1e1.html?p=216759#p216759" data-post-id="216759" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Fri Nov 24, 2017 8:31 am</span></cite>
+No, you're wrong. You do need a TAS-IX account. Even after I go through the captcha and press Скачатъ it shows a message about not being a TAS-IX member. Same thing for the direct link. Try logging out of your account and you will see the same.  <br>
+In the future, you can upload .love files directly in the forum.
+</div></blockquote>
+
+But there's no any account system.  <img class="smilies" src="images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"><br>
+Oh. Sorry. filebox.uz really blocks non-Tas-Ix users (If your Internet provider isn't in Tas-IX, you're non-Tas-IX user) . Now I will try dump.uz<br>
+<a href="https://dump.uz/fc94c5ce813be3f4814b16dcf6ab06e5" class="postlink">https://dump.uz/fc94c5ce813be3f4814b16dcf6ab06e5</a></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216787" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216787">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlistd883.html?mode=viewprofile&amp;u=138368" class="username">KayleMaster</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3f0f.html?author_id=138368&amp;sr=posts">234</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Aug 29, 2016 8:51 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216787">
+
+					<h3 >
+						<a href="viewtopic71af.html?p=216787#p216787">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9500.html?mode=quote&amp;p=216787" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic71af.html?p=216787#p216787" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd883.html?mode=viewprofile&amp;u=138368" class="username">KayleMaster</a></strong> &raquo; </span><time datetime="2017-11-25T16:20:25+00:00">Sat Nov 25, 2017 4:20 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Wow you really choose the worst file hosters around, I forgot I downloaded this thing since I download with 12kb from that website.<br>
+<br>
+Anyways, I played it. And the programmer side of me is impressed. I mean, this is basically multiplayer, and runs fine. No bugs other than the graphics side stuff. <br>
+It ... uh.. just needs polishing... like ... a lot. There's some noticable tile bleeding when it zooms out (I can see through the borders of the tile). And the graphics are just ... programmer art. Get some stuff from opengameart and make it more pleasant for the eyes <img class="smilies" src="images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"><br>
+Good luck.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216789" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216789">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="avatar"><img class="avatar" src="download/file34bc.png?avatar=80325_1451847465.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha5b1.html?author_id=80325&amp;sr=posts">3440</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 13, 2012 2:55 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Absurdistan, Hungary</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact zorg">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact zorg</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://soon.tm.exclamationma.rk/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/zorg_z0rg_z0r8" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216789">
+
+					<h3 >
+						<a href="viewtopic17a5.html?p=216789#p216789">Re: CarWar</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4e64.html?mode=quote&amp;p=216789" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic17a5.html?p=216789#p216789" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a></strong> &raquo; </span><time datetime="2017-11-25T18:07:14+00:00">Sat Nov 25, 2017 6:07 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Can anyone explain to me why the hell is uploading data to a file hoster is in any way BETTER than uploading it as an attachment HERE?<br>
+Especially when you yourself said that you didn't want to waste traffic? you basically did, twice already.<br>
+Edit: Excuse my salt levels, but still.</div>
+
+			
+			
+									
+						
+							<div id="sig216789" class="signature"><a href="../wiki/User_Zorg.html" class="postlink">Me and my stuff <img class="smilies" src="images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"></a><span style="font-size:10%;line-height:116%">True Neutral Aspirant. Why, yes, i do indeed enjoy sarcastically correcting others when they make the most blatant of spelling mistakes. No bullying or trolling the innocent tho.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting6312.html?mode=reply&amp;t=84594" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic4036.html?t=84594&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=84594">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			22 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic6ed6.html?t=84594&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic2f8a.html?t=84594&amp;start=20" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic6ed6.html?t=84594&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum9780.html?f=14" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Games and Creations”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=14&t=84594 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:07:21 GMT -->
+</html>

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=79937 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:44:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>[Library] tiny-ecs - Fast Simple Entity Component System - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - [Library] tiny-ecs - Fast Simple Entity Component System" href="app.php/feed/topic/79937">	
+	<link rel="canonical" href="viewtopic4fe1.html?t=79937">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp1a59.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D79937" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic4fe1.html?t=79937">[Library] tiny-ecs - Fast Simple Entity Component System</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting1a0c.html?mode=reply&amp;t=79937" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic207b.html?t=79937&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="79937" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			51 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic07ed-2.html?t=79937&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopice5ce.html?t=79937&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic53b1-2.html?t=79937&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic6765.html?t=79937&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopicfd7c.html?t=79937&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic07ed-2.html?t=79937&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p182113" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile182113">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="avatar"><img class="avatar" src="download/filea4b2.png?avatar=136429_1430024431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha8d2.html?author_id=136429&amp;sr=posts">114</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Mar 15, 2015 9:29 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Boston</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content182113">
+
+					<h3 class="first">
+						<a href="viewtopic5400.html?p=182113#p182113">[Library] tiny-ecs - Fast Simple Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2567.html?mode=quote&amp;p=182113" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5400.html?p=182113#p182113" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a></strong> &raquo; </span><time datetime="2015-03-29T13:17:17+00:00">Sun Mar 29, 2015 1:17 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><strong class="text-strong"><span style="font-size:200%;line-height:116%">tiny-ecs: Make Games Faster</span></strong><br>
+<br>
+<a href="https://github.com/bakpakin/tiny-ecs" class="postlink">CODE</a><br>
+<a href="http://bakpakin.github.io/tiny-ecs/doc/" class="postlink">API</a><br>
+<a href="https://raw.githubusercontent.com/bakpakin/tiny-ecs/master/tiny.lua" class="postlink">COPY/PASTE SOURCE</a><br>
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%">What is this?</span></strong><br>
+<br>
+tiny-ecs is a Lua module for implementing entity component systems (ECS) in a fast and flexible way.  For those unfamiliar with ECS, I recommend reading the <a href="https://en.wikipedia.org/wiki/Entity_component_system" class="postlink">wikipedia page</a> on it. It's the hip, cool, and not-so-new trend in how to structure a game. This should make your games easier to extend, reason about, and scale. <br>
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%">Why?</span></strong><br>
+<br>
+One of LOVE's greatest strengths and also greatest weaknesses is a lack of defined structure for games. You're just given library calls, a few callbacks to build off of, and told to get going. Without some structure, it's hard to make a medium sized game, let alone a large or marketable product. tiny-ecs is a framework / library that facilitates proven and intelligent ways to structure games. <br>
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%">How?</span></strong><br>
+<br>
+So I was making a game, and I did what probably every developer and hobbyist has done at some point, and I started making a library rather than a game. <img class="smilies" src="images/smilies/ms-crazy.png" width="16" height="16" alt=":crazy:" title="Hurr Durr">  I made another Entity Component System for Lua (not just LOVE), because all the other's that I found online were either unsatisfactory or not good enough do dissuade me from making my own. I've seen a couple (Fez) around here, but they seem to be mostly ports of things like Artemis, which is a poor fit for Lua IMHO. I spent a few days making a complete library with documentation, and tiny-ecs was born. I've since put some effort into updating it and adding new features.<br>
+<br>
+<strong class="text-strong"><span style="font-size:150%;line-height:116%">Demos</span></strong><br>
+<br>
+I personally have used tiny-ecs in two Ludum Dares successfully. I evolved the syntax and capabilities of tiny-ecs as I realized how I liked to use it and I realized how other people used it. Keep in mind that the demo code is not always a pure example of entity component systems; they are practical examples that show ONE WAY how to use tiny-ecs to make a game. I am sure there is impractical code aplenty in the demos, but don't worry - tiny-ecs.lua itself has much cleaner code.<br>
+<br>
+Also keep in mind that the demos may be using an older version of tiny-ecs that is slightly different than the current one. When there is a disagreement between the API and a demo, the API wins.<br>
+<br>
+<a href="https://github.com/bakpakin/tiny-ecs/tree/demo-commandokibbles" class="postlink">DEMO1 - COMMANDO KIBBLES</a><br>
+<a href="https://github.com/bakpakin/weregoat" class="postlink">DEMO2 - WEREGOAT</a><br>
+<br>
+Feedback is appreciated.  <img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a> on Sun Jun 05, 2016 1:43 am, edited 8 times in total.
+									</div>
+			
+						
+							<div id="sig182113" class="signature">((_((_CRAYOLA_((_((_&gt; <a href="https://github.com/bakpakin" class="postlink">GitHub</a> &lt;_((_((_CRAYOLA_((_(()</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p182114" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile182114">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistb42a.html?mode=viewprofile&amp;u=134384" class="avatar"><img class="avatar" src="download/file71f2.png?avatar=134384_1409584697.png" width="85" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistb42a.html?mode=viewprofile&amp;u=134384" class="username">Snuux</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1ebb.html?author_id=134384&amp;sr=posts">49</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Dec 15, 2013 10:43 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Russia, Moskow</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Snuux">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Snuux</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://www.icq.com/people/6914545/" title="ICQ" class="last-cell">
+										<span class="contact-icon phpbb_icq-icon">ICQ</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content182114">
+
+					<h3 >
+						<a href="viewtopic8261.html?p=182114#p182114">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingb59d.html?mode=quote&amp;p=182114" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8261.html?p=182114#p182114" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistb42a.html?mode=viewprofile&amp;u=134384" class="username">Snuux</a></strong> &raquo; </span><time datetime="2015-03-29T13:48:21+00:00">Sun Mar 29, 2015 1:48 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Nice! I'm like entity-based game structure. Good luck with this lib.</div>
+
+			
+			
+									
+						
+							<div id="sig182114" class="signature">My library for <span style="color:#FF0040">easy</span> saving <a href="viewtopic5eef.html?f=5&amp;t=77295" class="postlink">Slib</a>! Try this! Now you can <span style="color:#0000FF">encrypt</span> your save!<br>
+- <a href="viewtopic425d.html?f=5&amp;t=78691" class="postlink">Drop of light LD#30</a><br>
+- <a href="https://www.love2d.org/forums/viewtopic.php?f=5&amp;t=79254" class="postlink">OUTRANGE LD#31</a><br>
+<span style="font-size:85%;line-height:116%">(Sorry for my english. I learn it myself, and I don't have enough experience)</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p182589" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile182589">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="avatar"><img class="avatar" src="download/file99fc.png?avatar=117_1370954297.png" width="73" height="73" alt="User avatar" /></a>														</div>
+								<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search19db.html?author_id=117&amp;sr=posts">792</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 24, 2008 2:25 pm</dd>		
+		
+																					<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Berlin/Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact SiENcE">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact SiENcE</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://www.icq.com/people/11516096/" title="ICQ">
+										<span class="contact-icon phpbb_icq-icon">ICQ</span>									</a>
+																																																<a href="http://crankgaming.blogspot.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content182589">
+
+					<h3 >
+						<a href="viewtopicabb4.html?p=182589#p182589">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting534a.html?mode=quote&amp;p=182589" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicabb4.html?p=182589#p182589" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a></strong> &raquo; </span><time datetime="2015-04-06T21:52:09+00:00">Mon Apr 06, 2015 9:52 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Nice. I have to take a look into it. I also wanted to make my own component system, but i' currently doing a game ;-).</div>
+
+			
+			
+									
+						
+							<div id="sig182589" class="signature"><a href="http://aeonofsands.com/" class="postlink">http://aeonofsands.com/</a> | <a href="http://blog.aeonofsands.com/" class="postlink">http://blog.aeonofsands.com/</a> | <a href="https://twitter.com/#!/crank_gaming" class="postlink">https://twitter.com/#!/crank_gaming</a> | <a href="http://crankgaming.blogspot.com/" class="postlink">http://crankgaming.blogspot.com</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p183091" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile183091">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="avatar"><img class="avatar" src="download/filea4b2.png?avatar=136429_1430024431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha8d2.html?author_id=136429&amp;sr=posts">114</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Mar 15, 2015 9:29 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Boston</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content183091">
+
+					<h3 >
+						<a href="viewtopicaca9.html?p=183091#p183091">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting022f.html?mode=quote&amp;p=183091" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicaca9.html?p=183091#p183091" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a></strong> &raquo; </span><time datetime="2015-04-20T08:52:54+00:00">Mon Apr 20, 2015 8:52 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I just finished my game for Ludum Dare 32 using tiny-ecs, bump.lua, Simple Tiled Implentation, and several other libraries. Tiny-ecs worked very well, and allowed me to use a class system (30log) on top of the entity Component System. I know that's not really how Entity Component Systems are supposed to work, but it worked well for me. Infact, I just used classes like typical oo, added my instances to the world, and tiny-ecs processed them accordingly. The syntax for creating reusable systems, however, I think is rather ugly, and I may look into that. I want to tiny-ecs to be as flexible as possible, but without assuming or forcing a class system. The game is not exactly fun, but the mechanics are clean and fast. Big shoutout to bump.lua, which is really awesome, and to Simple Tiled Implementation.<br>
+<br>
+Here's the game, and the source can be found at <a href="https://github.com/bakpakin/CommandoKibbles" class="postlink">https://github.com/bakpakin/CommandoKibbles</a>.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file087c.php?id=11598">Commando Kibbles.love</a></dt>
+						<dd>(758.11 KiB) Downloaded 749 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig183091" class="signature">((_((_CRAYOLA_((_((_&gt; <a href="https://github.com/bakpakin" class="postlink">GitHub</a> &lt;_((_((_CRAYOLA_((_(()</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p183095" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile183095">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="avatar"><img class="avatar" src="download/file99fc.png?avatar=117_1370954297.png" width="73" height="73" alt="User avatar" /></a>														</div>
+								<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search19db.html?author_id=117&amp;sr=posts">792</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 24, 2008 2:25 pm</dd>		
+		
+																					<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Berlin/Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact SiENcE">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact SiENcE</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://www.icq.com/people/11516096/" title="ICQ">
+										<span class="contact-icon phpbb_icq-icon">ICQ</span>									</a>
+																																																<a href="http://crankgaming.blogspot.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content183095">
+
+					<h3 >
+						<a href="viewtopicb855.html?p=183095#p183095">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2dec.html?mode=quote&amp;p=183095" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb855.html?p=183095#p183095" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a></strong> &raquo; </span><time datetime="2015-04-20T12:23:00+00:00">Mon Apr 20, 2015 12:23 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Nice and good that you used your own library in a field test <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">. I also used my <a href="https://github.com/SiENcE/love2d_gametemplate" class="postlink">gametemplate</a> and found some bugs and possible enhancements.</div>
+
+			
+			
+									
+						
+							<div id="sig183095" class="signature"><a href="http://aeonofsands.com/" class="postlink">http://aeonofsands.com/</a> | <a href="http://blog.aeonofsands.com/" class="postlink">http://blog.aeonofsands.com/</a> | <a href="https://twitter.com/#!/crank_gaming" class="postlink">https://twitter.com/#!/crank_gaming</a> | <a href="http://crankgaming.blogspot.com/" class="postlink">http://crankgaming.blogspot.com</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p183304" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile183304">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="avatar"><img class="avatar" src="download/filea4b2.png?avatar=136429_1430024431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha8d2.html?author_id=136429&amp;sr=posts">114</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Mar 15, 2015 9:29 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Boston</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content183304">
+
+					<h3 >
+						<a href="viewtopic15f4.html?p=183304#p183304">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingde4d.html?mode=quote&amp;p=183304" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic15f4.html?p=183304#p183304" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a></strong> &raquo; </span><time datetime="2015-04-26T04:09:28+00:00">Sun Apr 26, 2015 4:09 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Just put tiny-ecs on <a href="https://luarocks.org/" class="postlink">https://luarocks.org/</a>. Also, I have been updating the library even more, making it faster, cleaner, and improving the syntax. The syntax should be pretty stable now, but I want to add more different types of systems (and examples, of course). <img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"></div>
+
+			
+			
+									
+						
+							<div id="sig183304" class="signature">((_((_CRAYOLA_((_((_&gt; <a href="https://github.com/bakpakin" class="postlink">GitHub</a> &lt;_((_((_CRAYOLA_((_(()</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p183346" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile183346">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="avatar"><img class="avatar" src="download/filea4b2.png?avatar=136429_1430024431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha8d2.html?author_id=136429&amp;sr=posts">114</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Mar 15, 2015 9:29 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Boston</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content183346">
+
+					<h3 >
+						<a href="viewtopic5529.html?p=183346#p183346">Re: tiny-ecs - Another Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga411.html?mode=quote&amp;p=183346" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5529.html?p=183346#p183346" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a></strong> &raquo; </span><time datetime="2015-04-27T06:41:21+00:00">Mon Apr 27, 2015 6:41 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I just put my example game, <a href="https://github.com/bakpakin/tiny-ecs/tree/demo-commandokibbles" class="postlink">Command Kibbles</a>, in the github repository. I've also updated to include the post-compo version of tiny-ecs. The system code is now cleaner, and was very easy to port from the old syntax. Now, almost the entire game is based of 30log classes, and I could easily use middleclass or any other framework if I wanted to.<br>
+<br>
+Tiny-ecs is also now quite performant, and iterates through entities as fast as any other framework, or faster. Adding and Removing Systems and Entities is as fast as I can get up it without injecting ids into Entities, which I don't want to do as Entities should just be arbitrary tables. I haven't done  any profiling, but the demo performs quite well, even when I add lots of Entities. Safe to say, all operations with Entities are constant time.</div>
+
+			
+			
+									
+						
+							<div id="sig183346" class="signature">((_((_CRAYOLA_((_((_&gt; <a href="https://github.com/bakpakin" class="postlink">GitHub</a> &lt;_((_((_CRAYOLA_((_(()</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p188563" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile188563">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist8ae7.html?mode=viewprofile&amp;u=134773" class="username">WetDesertRock</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search286e.html?author_id=134773&amp;sr=posts">67</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 07, 2014 8:16 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content188563">
+
+					<h3 >
+						<a href="viewtopic1ff1.html?p=188563#p188563">Re: [Library] tiny-ecs - Fast Simple Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingfe76.html?mode=quote&amp;p=188563" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1ff1.html?p=188563#p188563" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist8ae7.html?mode=viewprofile&amp;u=134773" class="username">WetDesertRock</a></strong> &raquo; </span><time datetime="2015-08-27T05:27:05+00:00">Thu Aug 27, 2015 5:27 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Sorry for the gravedig, but as I'm interested in using ecs and learning more about it, I have a few questions.<br>
+<br>
+How does a separation between update and draw get handled? Just different systems with different indices?<br>
+<br>
+I noticed in the example you used a combination of systems and entity methods to do the logic. Slightly confused why someone may do this, is it just sloppy programming, or are the entity methods used because they are specific to that one entity and nothing else?<br>
+<br>
+When filters are used, does it cache the results? For example, if I had a fadeout system that required "fadeout" and "opacity", would just adding those fields to an entity cause it to start using the fadeout system?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p188572" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile188572">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc3dc.html?mode=viewprofile&amp;u=135704" class="avatar"><img class="avatar" src="download/file1bfd.png?avatar=135704_1411721386.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc3dc.html?mode=viewprofile&amp;u=135704" class="username">shakesoda</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search4c10.html?author_id=135704&amp;sr=posts">78</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Sep 25, 2014 11:57 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Seattle, WA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact shakesoda">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact shakesoda</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://excessive.moe/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content188572">
+
+					<h3 >
+						<a href="viewtopicd552.html?p=188572#p188572">Re: [Library] tiny-ecs - Fast Simple Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting664e.html?mode=quote&amp;p=188572" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd552.html?p=188572#p188572" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc3dc.html?mode=viewprofile&amp;u=135704" class="username">shakesoda</a></strong> &raquo; </span><time datetime="2015-08-27T08:12:34+00:00">Thu Aug 27, 2015 8:12 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>WetDesertRock wrote:</cite>When filters are used, does it cache the results? For example, if I had a fadeout system that required "fadeout" and "opacity", would just adding those fields to an entity cause it to start using the fadeout system?</div></blockquote>
+
+Filters aren't updated until you cycle an entity in the world (i.e. world:removeEntity(foo); world:addEntity(foo)) - although I'd very much like a world:modifyEntity as well which indicates an entity getting new components without being removed (I've got some systems which make/remove caches on add/remove - and cycling the entity means losing their data)</div>
+
+			
+			
+									
+						
+							<div id="sig188572" class="signature"><a href="https://github.com/excessive/" class="postlink">excessive ❤ moé</a> (LÖVE3D, CPML, ...). holo on IRC.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p188590" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile188590">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="avatar"><img class="avatar" src="download/filea4b2.png?avatar=136429_1430024431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha8d2.html?author_id=136429&amp;sr=posts">114</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Mar 15, 2015 9:29 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Boston</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content188590">
+
+					<h3 >
+						<a href="viewtopic759f.html?p=188590#p188590">Re: [Library] tiny-ecs - Fast Simple Entity Component System</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingec79.html?mode=quote&amp;p=188590" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic759f.html?p=188590#p188590" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a></strong> &raquo; </span><time datetime="2015-08-27T14:40:44+00:00">Thu Aug 27, 2015 2:40 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Filters do cache results for preformance reasons; systems that iterate through entities only iterate through a sequence when they update. Unless you add or remove a lot of entities every update cycle, there is very little overhead. In fact, a vanilla 'tiny.system' doesn't even iterate through it's entities by default, it just calls its 'update' function.<br>
+<br>
+As for my example, it is a little bit of sloppy programming (considering that game was made in 48 for a game jam), but also an acknowledgement that sometimes entity methods are just easier than systems. This hybrid approach is actually what is used in many major game engines, like Unity. If I had more time and needed to scale the project more, I would moved more logic to systems and out of the the entities. tiny-ecs is completely compatible with most major Lua class systems including middleclass and 30log, to name two, so entity methods don't interfere with other more traditional system based logic. This one of the benefits of a dynamic language, as I see it.<br>
+<br>
+shakesoda is correct in saying that caches aren't updated every frame for already existing entities. Right now, you just re-add entities to the world to update them if you add or remove components that would make them valid or invalid for certain systems. shakesoda's suggestion is valid, however.<br>
+<br>
+Example on how to change an entities components:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>myEntity.newComponent = {1, 3, 5, 7, 42}
+myEntity.oldComponent = nil
+
+-- re-add myEntity to the World to refresh caches for that entity.
+world:add(myEntity)
+</code></pre></div>
+
+Separating drawing and update logic is another thing I added after the fact. In LOVE, you don't actually have to separate them (you could just put all of your update logic in love.draw), but it's often useful to make SURE that your update code gets called before your draw code. tiny.update takes an optional parameter after deltaTime called 'filter' that only selects certain systems. you can make two different filters for updateSystems and drawSystems and update only the correct systems in love.update and love.draw. <br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>-- Create drawing systems
+myDrawSystem = tiny.system({isDrawingSystem = true})
+myDrawSystem2 = tiny.system({isDrawingSystem = true})
+
+-- Create update systems
+myUpdateSystem = tiny.system()
+myUpdateSystem2 = tiny.system()
+
+-- Make system filters
+drawSystemFilter = tiny.requireAll("isDrawingSystem")
+updateSystemFilter = tiny.rejectAll("isDrawingSystem")
+
+-- Initialize world
+world = tiny.world(myDrawSystem, myDrawSystem2, myUpdateSystem, myUpdateSystem2)
+
+function love.update(dt)
+   world:update(dt, updateSystemFilter)
+end
+
+function love.draw()
+   world:update(love.timer.getDelta(), drawSystemFilter)
+end
+
+</code></pre></div>
+
+In the above example, Update Systems will be called love.update, and Drawing Systems in love.draw.<br>
+<br>
+For more info and examples, check the api <a href="http://bakpakin.github.io/tiny-ecs/doc/" class="postlink">here</a>, and a newer example <a href="https://github.com/bakpakin/weregoat" class="postlink">here</a>. In the newer example in particular, check love.update and love.draw in main.lua for an example on how to separate update and draw systems. I do apologize, however, for the messy code.<br>
+<br>
+Hope that helps and is not too confusing.<br>
+<br>
+As its seems a few people are using tiny-ecs, I'm glad this thread is coming out of the grave.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistd5a5.html?mode=viewprofile&amp;u=136429" class="username">bakpakin</a> on Sat Jun 18, 2016 9:28 pm, edited 1 time in total.
+									</div>
+			
+						
+							<div id="sig188590" class="signature">((_((_CRAYOLA_((_((_&gt; <a href="https://github.com/bakpakin" class="postlink">GitHub</a> &lt;_((_((_CRAYOLA_((_(()</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting1a0c.html?mode=reply&amp;t=79937" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic207b.html?t=79937&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=79937">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			51 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic07ed-2.html?t=79937&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopice5ce.html?t=79937&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic53b1-2.html?t=79937&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic6765.html?t=79937&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopicfd7c.html?t=79937&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic07ed-2.html?t=79937&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 3 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=79937 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 04:44:56 GMT -->
+</html>
