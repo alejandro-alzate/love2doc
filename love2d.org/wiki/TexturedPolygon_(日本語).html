@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/wiki/TexturedPolygon_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 12:15:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>TexturedPolygon (日本語) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TexturedPolygon_(日本語)","wgTitle":"TexturedPolygon (日本語)","wgCurRevisionId":19790,"wgRevisionId":19790,"wgArticleId":6020,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Snippets (日本語)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"TexturedPolygon_(日本語)","wgRelevantArticleId":6020,"wgRequestId":"99c72c63d546b1038da3a551","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.smw.style","ext.smw.tooltips","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="../w/load7e12.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="../w/load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="../w/loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<link rel="alternate" type="application/rdf+xml" title="TexturedPolygon (日本語)" href="../w/index04bf.php?title=Special:ExportRDF/TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="../w/api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-TexturedPolygon_日本語 rootpage-TexturedPolygon_日本語 skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="TexturedPolygon_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="Talk_TexturedPolygon_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html?title=Talk:TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="../w/indexc60d.html?title=TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="../w/indexdb03.html?title=TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">TexturedPolygon (日本語)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>この関数はテクスチャによりテクスチャを施されたポリゴン (多角形) の <a href="Image_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Image (日本語)">Image</a> を作成します。
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#function_TexturedPolygon.28polygon.2Ctexture.2C_xx.2Cyy.2Crr.2Csx.2Csy.2Cox.2Coy.2C_smooth.29"><span class="tocnumber">1</span> <span class="toctext">function TexturedPolygon(polygon,texture, xx,yy,rr,sx,sy,ox,oy, smooth)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E5.BC.95.E6.95.B0"><span class="tocnumber">1.1</span> <span class="toctext">引数</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E8.BF.94.E5.80.A4"><span class="tocnumber">1.2</span> <span class="toctext">返値</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#.E5.AE.9F.E8.A3.85"><span class="tocnumber">2</span> <span class="toctext">実装</span></a></li>
+</ul>
+</div>
+
+<h2><span id="function_TexturedPolygon(polygon,texture,_xx,yy,rr,sx,sy,ox,oy,_smooth)"></span><span class="mw-headline" id="function_TexturedPolygon.28polygon.2Ctexture.2C_xx.2Cyy.2Crr.2Csx.2Csy.2Cox.2Coy.2C_smooth.29">function TexturedPolygon(polygon,texture, xx,yy,rr,sx,sy,ox,oy, smooth)</span></h2>
+<h3><span id="引数"></span><span class="mw-headline" id=".E5.BC.95.E6.95.B0">引数</span></h3>
+<p><code>polygon</code> テクスチャを地点座標形式のテーブルで多角形にテクスチャを施します: <code>{x1,y1, x2,y2, ...}</code>
+</p><p><code>texture</code> <a href="ImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ImageData (日本語)">ImageData</a> オブジェクトまたは画像のファイル名です。垂直・水平方向の加工を行い、多角形全体を塗り潰すために使用されます。
+</p><p>それ以外全ての引数は選択制です:
+</p><p><code>xx,yy,r,...</code> は、ずらし、回転、および多角形に適用される前段階でのテクスチャに対する尺度変更を行う使用されます。それに関しては一枚の神であると考えることができ、変形されたテクスチャは反復された画像により塗り潰されており、ハサミで特定の図形を切り取るために多角形の地点座標を使用します。例えば、多角形自体がその場所で停止している間に、 <code>xx</code> の値を増加させると、テクスチャは右側へ移動します。
+</p><p><code>xx,yy</code> テクスチャの座標 (原点)。
+</p><p><code>rr</code> 次数による (原点と関連する) テクスチャの回転角度。
+</p><p><code>sx,xy</code> x および x 軸に対するテクスチャの尺度係数 (原点と関連します)。
+</p><p><code>ox,oy</code> テクスチャにおける原点の地点。それは回転および尺度の適用方法に影響を与えます。
+</p><p>標準では、変換を一切適用しません。この意味は: <code>xx,yy,rr,sx,sy,ox,oy=0,0,0,1,1,0,0</code>
+</p><p><code>smooth</code> は画像の平滑化を行うかどうかを指定します (<code>true</code> または <code>false</code>)。平滑化された画像の見た目は良くなりますが、計算速度は遅くなります。標準で <code>smooth</code> は <code>true</code> に設定されています。
+</p>
+<h3><span id="返値"></span><span class="mw-headline" id=".E8.BF.94.E5.80.A4">返値</span></h3>
+<p>関数は描画を行うのに非常に簡単なオブジェクトを返します:
+</p><p><code>{img, x,y, w,h, imgData}</code>
+</p><p>ここでは:
+</p><p><code>img</code> <a href="Image_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Image (日本語)">Image</a> オブジェクトであり、 <a href="love.graphics-165.html" title="love.graphics.draw (日本語)">love.graphics.draw</a> 関数により描画されます。
+</p><p><code>x,y</code> どこに画像を描画するかどうか。このように使用します: <code>love.graphics.draw(obj.img, obj.x,obj.y)</code>
+</p><p><code>w,h</code> 画像の幅と高さ。
+</p><p><code>imgData</code> <a href="ImageData_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ImageData (日本語)">ImageData</a> オブジェクトです。これを使用したい場合は、それに対する専門知識が必要です。
+</p>
+<h2><span id="実装"></span><span class="mw-headline" id=".E5.AE.9F.E8.A3.85">実装</span></h2>
+<p>関数は結果の画像としてピクセル(画素)単位で描画を行うために <a href="ImageData_mapPixel_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="ImageData:mapPixel (日本語)">ImageData:mapPixel</a> を使用します。多角形の領域外は完全に透過されたままになります。 
+</p><p>全てのピクセルをすぐに計算する必要がある場合は、関数の処理時間はかなりかかります。 それ故に、例えばゲームまたは新しいレベルを読み込む上では、可能な限り使用は稀にしたほうが良いです。これは <a href="love-667.html" title="love.update (日本語)">love.update</a> 関数内で使用しようとはしないでください。まだ必要な場合は、 <code>smooth</code> を <code>false</code> に設定してから何が発生するのかを確認してください。
+</p>
+<hr />
+<p>これ自体に関する詳細情報はソースコード本文を参照してください。それは同様に使用できる補助関数の一部に関しても有しています (まさに用例は正しく、勇敢なる巻物です)。
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nf">TexturedPolygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span><span class="n">texture</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="n">rr</span><span class="p">,</span><span class="n">sx</span><span class="p">,</span><span class="n">sy</span><span class="p">,</span><span class="n">ox</span><span class="p">,</span><span class="n">oy</span><span class="p">,</span> <span class="n">smooth</span><span class="p">)</span> <span class="c1">-- 画像の配列を返します。全て描画する場合は、テクスチャを施された多角形を表現します。</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span><span class="o">~=</span><span class="s2">&quot;table&quot;</span> <span class="ow">or</span> <span class="o">#</span><span class="n">polygon</span><span class="o">%</span><span class="mi">2</span><span class="o">~=</span><span class="mi">0</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">nil</span> <span class="kr">end</span>  <span class="c1">-- 多角形は x1, y1, x2, y2 ... 形式のテーブルにする必要があります。</span>
+    <span class="kr">if</span> <span class="o">#</span><span class="n">polygon</span><span class="o">&lt;</span><span class="mi">6</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">nil</span> <span class="kr">end</span> <span class="c1">-- この行では nil を返します: ここではなにも描画しません。</span>
+
+    <span class="c1">-- 必要であればテクスチャを読み込みます。</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;string&quot;</span> <span class="kr">then</span>
+        <span class="n">texture</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">newImageData</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+    <span class="kr">end</span>
+
+    <span class="c1">-- テクスチャ位置の引数に対する既定値。</span>
+    <span class="kr">if</span> <span class="n">xx</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">xx</span><span class="o">=</span><span class="mi">0</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">yy</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">yy</span><span class="o">=</span><span class="mi">0</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">rr</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">rr</span><span class="o">=</span><span class="mi">0</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">sx</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">sx</span><span class="o">=</span><span class="mi">1</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">sy</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">sy</span><span class="o">=</span><span class="mi">1</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">ox</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">ox</span><span class="o">=</span><span class="mi">0</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">oy</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">oy</span><span class="o">=</span><span class="mi">0</span> <span class="kr">end</span>
+
+    <span class="kr">if</span> <span class="n">sx</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="n">sx</span><span class="o">=</span><span class="mi">1</span> <span class="kr">end</span> <span class="c1">-- 悪い状況の回避。</span>
+    <span class="kr">if</span> <span class="n">sy</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="n">sy</span><span class="o">=</span><span class="mi">1</span> <span class="kr">end</span>
+
+    <span class="n">rr</span><span class="o">=</span><span class="n">rr</span><span class="o">/</span><span class="mi">180</span><span class="o">*</span><span class="mf">3.14159</span> <span class="c1">-- 次数を弧度へ変換します。</span>
+
+    <span class="kr">if</span> <span class="n">smooth</span><span class="o">==</span><span class="kc">nil</span> <span class="kr">then</span> <span class="n">smooth</span><span class="o">=</span><span class="kc">true</span> <span class="kr">end</span> <span class="c1">-- 標準で綺麗なものを描画します。</span>
+
+    <span class="kd">local</span> <span class="n">bb</span><span class="o">=</span><span class="n">PolygonBoundingBox</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span> <span class="c1">-- 多角形の境界ボックス。</span>
+
+    <span class="c1">-- simple==0 の意味は単純ではなく、1 の意味はテクスチャの変換を行ない、 2 の意味は x, y の値に対して丸め込み不要であることです。</span>
+    <span class="kd">local</span> <span class="n">simple</span><span class="o">=</span><span class="mi">0</span>
+    <span class="kr">if</span> <span class="n">xx</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">yy</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">rr</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">sx</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">sy</span><span class="o">==</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">ox</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">oy</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span>
+        <span class="n">simple</span><span class="o">=</span><span class="mi">1</span>
+        <span class="kr">if</span> <span class="n">bb</span><span class="p">.</span><span class="n">x</span><span class="o">==</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="n">bb</span><span class="p">.</span><span class="n">y</span><span class="o">==</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="kr">then</span>
+            <span class="n">simple</span><span class="o">=</span><span class="mi">2</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="c1">-- さらに、 simple==3 の意味はテクスチャの変換は必要だが、利用者は平滑化された画像は不要であることです。</span>
+    <span class="kr">if</span> <span class="n">simple</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">smooth</span> <span class="kr">then</span> 
+        <span class="n">simple</span><span class="o">=</span><span class="mi">3</span>
+    <span class="kr">end</span>
+
+    <span class="c1">-- 素晴らしいコードを最適化するために頻繁に使用される一部の数値を計算します。</span>
+    <span class="kd">local</span> <span class="n">cr</span><span class="p">,</span><span class="n">sr</span><span class="o">=</span><span class="nb">math.cos</span><span class="p">(</span><span class="n">rr</span><span class="p">),</span> <span class="nb">math.sin</span><span class="p">(</span><span class="n">rr</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">tw</span><span class="p">,</span><span class="n">th</span><span class="o">=</span><span class="n">texture</span><span class="p">:</span><span class="n">getWidth</span><span class="p">(),</span> <span class="n">texture</span><span class="p">:</span><span class="n">getHeight</span><span class="p">()</span>
+
+    <span class="c1">-- triangles は三角形の配列です (これは案内人です！)</span>
+    <span class="kd">local</span> <span class="n">triangles</span><span class="o">=</span><span class="kc">nil</span>
+    <span class="kr">if</span> <span class="o">#</span><span class="n">polygon</span><span class="o">==</span><span class="mi">6</span> <span class="kr">then</span> 
+        <span class="n">triangles</span><span class="o">=</span><span class="p">{</span><span class="n">polygon</span><span class="p">}</span>
+    <span class="kr">else</span>
+        <span class="n">triangles</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">math</span><span class="p">.</span><span class="n">triangulate</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span>
+    <span class="kr">end</span>
+    
+    <span class="kd">local</span> <span class="n">imageData</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">newImageData</span><span class="p">(</span><span class="nb">math.ceil</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">w</span><span class="p">),</span><span class="nb">math.ceil</span><span class="p">(</span><span class="n">bb</span><span class="p">.</span><span class="n">h</span><span class="p">))</span> <span class="c1">-- ImageData を描画するために &quot;空&quot; にします。</span>
+                                                                             <span class="c1">-- &quot;空&quot; の意味は全てのピクセル値が 0, 0, 0, 0 を有することを意味します。</span>
+
+    <span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">triangle</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">triangles</span><span class="p">)</span> <span class="kr">do</span> <span class="c1">-- 全ての三角形に対して...</span>
+
+        <span class="c1">-- ピクセルが三角形内に存在するか 3 種類の尺度で調べるために必要です。</span>
+        <span class="c1">-- 3 種類の線形関数を定義します y=a#+b#*(x-c#) or x=a#+b#*(y-c#) (側面の傾斜角に依存します)</span>
+        <span class="c1">--m# は方式です: 上部 (1), 下部 (2), 右部 (3) または 左部 (4)</span>
+        <span class="c1">--e#: この線が原点にある多角形の端であるかどうか: nil (false) あるいは x か y の範囲内 (true)</span>
+        <span class="kd">local</span> <span class="n">a0</span><span class="o">=</span><span class="p">{}</span>
+        <span class="kd">local</span> <span class="n">b0</span><span class="o">=</span><span class="p">{}</span>
+        <span class="kd">local</span> <span class="n">c0</span><span class="o">=</span><span class="p">{}</span>
+        <span class="kd">local</span> <span class="n">m0</span><span class="o">=</span><span class="p">{}</span>
+        <span class="kd">local</span> <span class="n">e0</span><span class="o">=</span><span class="p">{}</span>
+
+        <span class="c1">-- 三角形の地点にある組上に閉路を作成することを望みますが、 3 番目の組は (3,4) ではなく (1,3) です。</span>
+
+        <span class="c1">-- 1 番目にある地点の組に関して。</span>
+        <span class="c1">-- triangle[1]-&gt;x1, [2]-&gt;y1, [3]-&gt;x2, [4]-&gt;y2, [5]-&gt;x3, [6]-&gt;y3 であることに留意してください。</span>
+        <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">math.abs</span><span class="p">(</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 傾斜角は垂直に近いです。</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+        <span class="kr">else</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 水平尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="kr">then</span> <span class="c1">-- この尺度を別の地点にある三角形へ渡す方法を調べます。</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">-- 上部の尺度</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span> <span class="c1">-- 下部の尺度</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span> <span class="c1">-- 垂直尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="kr">then</span> <span class="c1">-- この尺度を別の地点にある三角形へ渡す方法を調べます。</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span> <span class="c1">-- 右部の尺度</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span> <span class="c1">-- 左部の尺度</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">PolygonEdgeLine</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="kr">then</span> <span class="c1">-- この線が多角形の端であるかどうかを調べます。</span>
+            <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">5</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">6</span> <span class="kr">then</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">])}</span> <span class="c1">-- x の範囲内ならば true です。</span>
+            <span class="kr">else</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">])}</span> <span class="c1">-- y の範囲内ならば true です。</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span>
+            <span class="n">e0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="kc">nil</span> <span class="c1">-- いいえ、内部分割線です。</span>
+        <span class="kr">end</span>
+        <span class="c1">-- など...</span>
+
+        <span class="c1">-- 2 番目にある地点の組に関して。</span>
+        <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">math.abs</span><span class="p">(</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 傾斜角は垂直に近いです。</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+        <span class="kr">else</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 水平尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="kr">then</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span> <span class="c1">-- 上部の尺度</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span> <span class="c1">-- 垂直尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="kr">then</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">PolygonEdgeLine</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="kr">then</span>
+            <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">5</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="mi">6</span> <span class="kr">then</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">])}</span>
+            <span class="kr">else</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">])}</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span>
+            <span class="n">e0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="kc">nil</span>
+        <span class="kr">end</span>
+
+        <span class="c1">-- 3 番目にある地点の組に関して。</span>
+        <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">math.abs</span><span class="p">(</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 傾斜角は垂直に近いです。</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+        <span class="kr">else</span>
+            <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 水平尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="kr">then</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span> <span class="c1">-- 垂直尺度</span>
+            <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">b0</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">c0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">-</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="kr">if</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">b0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="kr">then</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span>
+            <span class="kr">else</span>
+                <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">4</span>
+            <span class="kr">end</span>
+        <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">PolygonEdgeLine</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="kr">then</span>
+            <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="mi">5</span> <span class="ow">or</span> <span class="n">m0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="mi">6</span> <span class="kr">then</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">5</span><span class="p">])}</span>
+            <span class="kr">else</span>
+                <span class="n">e0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="nb">math.min</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="nb">math.max</span><span class="p">(</span><span class="n">triangle</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">triangle</span><span class="p">[</span><span class="mi">6</span><span class="p">])}</span>
+            <span class="kr">end</span>
+        <span class="kr">else</span>
+            <span class="n">e0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="kc">nil</span>
+        <span class="kr">end</span>
+
+        <span class="kd">local</span> <span class="kr">function</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> <span class="c1">-- ImageData の多角形に mapPixel メソッドを適用する関数です。</span>
+            <span class="kr">if</span> <span class="n">r</span><span class="o">~=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">g</span><span class="o">~=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">b</span><span class="o">~=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">a</span><span class="o">~=</span><span class="mi">0</span> <span class="kr">then</span> <span class="kr">return</span> <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span> <span class="kr">end</span> <span class="c1">-- ピクセルは既に描画されているため、処理を飛ばします。</span>
+
+            <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">bb</span><span class="p">.</span><span class="n">x</span> <span class="c1">-- 結果として画像の座標から内部テクスチャの座標まで進みます。</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="n">bb</span><span class="p">.</span><span class="n">y</span>
+
+            <span class="kd">local</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span> <span class="c1">-- 円滑化された角の透過 (if smooth==true の使用時のみ)</span>
+
+            <span class="c1">-- 全ての第 3 尺度を確認します。</span>
+            <span class="kr">for</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span> <span class="kr">do</span>
+
+                <span class="kr">if</span> <span class="n">m0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="kr">then</span>
+                    <span class="kd">local</span> <span class="n">y0</span><span class="o">=</span><span class="n">a0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="c1">-- なにと比較を行うかどうか。</span>
+                    <span class="kr">if</span> <span class="n">smooth</span> <span class="ow">and</span> <span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">~=</span><span class="kc">nil</span> <span class="ow">and</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="kr">then</span> <span class="c1">-- 角を平滑化する必要があるかどうか。</span>
+                        <span class="kd">local</span> <span class="n">z</span><span class="o">=</span><span class="n">y0</span><span class="o">-</span><span class="n">y</span> <span class="c1">-- 理想的な端の位置から離れています。</span>
+                        <span class="kr">if</span> <span class="n">z</span><span class="o">&gt;</span><span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 離れすぎている。</span>
+                            <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                        <span class="kr">elseif</span> <span class="n">z</span><span class="o">&gt;</span><span class="mi">0</span> <span class="kr">then</span> <span class="c1">-- 平滑化されたピクセルの端にある領域内にあります。</span>
+                            <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">z</span><span class="p">)</span>
+                        <span class="kr">end</span>
+                    <span class="kr">elseif</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">y0</span> <span class="kr">then</span> <span class="c1">-- 三角形の範囲外にあります。</span>
+                        <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                    <span class="kr">end</span>
+                    <span class="c1">-- など...</span>
+
+                <span class="kr">elseif</span> <span class="n">m0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span> <span class="kr">then</span>
+                    <span class="kd">local</span> <span class="n">y0</span><span class="o">=</span><span class="n">a0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="kr">if</span> <span class="n">smooth</span> <span class="ow">and</span> <span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">~=</span><span class="kc">nil</span> <span class="ow">and</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="kr">then</span>
+                        <span class="kd">local</span> <span class="n">z</span><span class="o">=</span><span class="n">y0</span><span class="o">-</span><span class="n">y</span>
+                        <span class="kr">if</span> <span class="n">z</span><span class="o">&lt;</span><span class="mi">0</span> <span class="kr">then</span>
+                            <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                        <span class="kr">elseif</span> <span class="n">z</span><span class="o">&lt;</span><span class="mi">1</span> <span class="kr">then</span>
+                            <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="n">z</span>
+                        <span class="kr">end</span>
+                    <span class="kr">elseif</span> <span class="n">y</span><span class="o">&gt;=</span><span class="n">y0</span> <span class="kr">then</span>
+                        <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                    <span class="kr">end</span>
+
+                <span class="kr">elseif</span> <span class="n">m0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">3</span> <span class="kr">then</span>
+                    <span class="kd">local</span> <span class="n">x0</span><span class="o">=</span><span class="n">a0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="kr">if</span> <span class="n">smooth</span> <span class="ow">and</span> <span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">~=</span><span class="kc">nil</span> <span class="ow">and</span> <span class="n">y</span><span class="o">&gt;=</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="kr">then</span>
+                        <span class="kd">local</span> <span class="n">z</span><span class="o">=</span><span class="n">x0</span><span class="o">-</span><span class="n">x</span>
+                        <span class="kr">if</span> <span class="n">z</span><span class="o">&gt;</span><span class="mi">1</span> <span class="kr">then</span>
+                            <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                        <span class="kr">elseif</span> <span class="n">z</span><span class="o">&gt;</span><span class="mi">0</span> <span class="kr">then</span>
+                            <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">z</span><span class="p">)</span>
+                        <span class="kr">end</span>
+                    <span class="kr">elseif</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">x0</span> <span class="kr">then</span>
+                        <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                    <span class="kr">end</span>
+
+                <span class="kr">elseif</span> <span class="n">m0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">4</span> <span class="kr">then</span>
+                    <span class="kd">local</span> <span class="n">x0</span><span class="o">=</span><span class="n">a0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">c0</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="kr">if</span> <span class="n">smooth</span> <span class="ow">and</span> <span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">~=</span><span class="kc">nil</span> <span class="ow">and</span> <span class="n">y</span><span class="o">&gt;=</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">e0</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="kr">then</span>
+                        <span class="kd">local</span> <span class="n">z</span><span class="o">=</span><span class="n">x0</span><span class="o">-</span><span class="n">x</span>
+                        <span class="kr">if</span> <span class="n">z</span><span class="o">&lt;</span><span class="mi">0</span> <span class="kr">then</span>
+                            <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                        <span class="kr">elseif</span> <span class="n">z</span><span class="o">&lt;</span><span class="mi">1</span> <span class="kr">then</span>
+                            <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="o">*</span><span class="n">z</span>
+                        <span class="kr">end</span>
+                    <span class="kr">elseif</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">x0</span> <span class="kr">then</span>
+                        <span class="kr">return</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+                    <span class="kr">end</span>
+
+                <span class="kr">end</span>
+            <span class="kr">end</span>
+
+            <span class="kr">if</span> <span class="n">simple</span><span class="o">==</span><span class="mi">0</span> <span class="kr">then</span> <span class="c1">-- 複雑な事例。</span>
+                <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">getAveragePixel</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="o">-</span><span class="n">xx</span><span class="p">)</span><span class="o">*</span><span class="n">cr</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mf">0.5</span><span class="o">-</span><span class="n">yy</span><span class="p">)</span><span class="o">*</span><span class="n">sr</span><span class="p">)</span><span class="o">/</span><span class="n">sx</span><span class="o">+</span><span class="n">ox</span><span class="p">,</span> <span class="p">((</span><span class="n">y</span><span class="o">+</span><span class="mf">0.5</span><span class="o">-</span><span class="n">yy</span><span class="p">)</span><span class="o">*</span><span class="n">cr</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="o">-</span><span class="n">xx</span><span class="p">)</span><span class="o">*</span><span class="n">sr</span><span class="p">)</span><span class="o">/</span><span class="n">sy</span><span class="o">+</span><span class="n">oy</span><span class="p">,</span> <span class="n">tw</span><span class="p">,</span><span class="n">th</span><span class="p">)</span>
+            <span class="kr">elseif</span> <span class="n">simple</span><span class="o">==</span><span class="mi">1</span> <span class="kr">then</span> <span class="c1">-- 単純な事例。</span>
+                <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">%</span><span class="n">tw</span><span class="p">,</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">%</span><span class="n">th</span><span class="p">)</span>
+            <span class="kr">elseif</span> <span class="n">simple</span><span class="o">==</span><span class="mi">2</span> <span class="kr">then</span> <span class="c1">-- さらに単純な事例。</span>
+                <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span> <span class="n">x</span><span class="o">%</span><span class="n">tw</span><span class="p">,</span> <span class="n">y</span><span class="o">%</span><span class="n">th</span><span class="p">)</span>
+            <span class="kr">else</span><span class="c1">--if simple==3 then -- 汚いが、早い事例。</span>
+                <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span> <span class="nb">math.floor</span><span class="p">(((</span><span class="n">x</span><span class="o">-</span><span class="n">xx</span><span class="p">)</span><span class="o">*</span><span class="n">cr</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">yy</span><span class="p">)</span><span class="o">*</span><span class="n">sr</span><span class="p">)</span><span class="o">/</span><span class="n">sx</span><span class="o">+</span><span class="n">ox</span><span class="p">)</span><span class="o">%</span><span class="n">tw</span><span class="p">,</span> <span class="nb">math.floor</span><span class="p">(((</span><span class="n">y</span><span class="o">-</span><span class="n">yy</span><span class="p">)</span><span class="o">*</span><span class="n">cr</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">xx</span><span class="p">)</span><span class="o">*</span><span class="n">sr</span><span class="p">)</span><span class="o">/</span><span class="n">sy</span><span class="o">+</span><span class="n">oy</span><span class="p">)</span><span class="o">%</span><span class="n">th</span><span class="p">)</span>
+            <span class="kr">end</span>
+
+            <span class="kr">if</span> <span class="n">smooth</span> <span class="kr">then</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">alpha</span> <span class="kr">end</span> <span class="c1">-- 端を綺麗にすることができます。</span>
+            <span class="c1">--return texture:getPixel( (x)%texture:getWidth(), (y)%texture:getHeight())</span>
+            <span class="kr">return</span> <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span>
+        <span class="kr">end</span>
+
+        <span class="n">imageData</span><span class="p">:</span><span class="n">mapPixel</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1">-- ImageData に三角形の描画を一つ以上適用します。</span>
+    <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">image</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="n">imageData</span><span class="p">)</span> <span class="c1">-- 描画可能なオブジェクトの作成。</span>
+
+    <span class="kr">return</span> <span class="p">{</span><span class="n">img</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">bb</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">bb</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="n">bb</span><span class="p">.</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">bb</span><span class="p">.</span><span class="n">h</span><span class="p">,</span> <span class="n">imgData</span><span class="o">=</span><span class="n">imageData</span><span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">PolygonBoundingBox</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span> <span class="c1">-- 多角形に対して最大・最小 x, y 座標の判定、および BoundingBox オブジェクト形式 {x,y,w,h} で返す単純な関数です。</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span><span class="o">~=</span><span class="s2">&quot;table&quot;</span> <span class="ow">or</span> <span class="o">#</span><span class="n">polygon</span><span class="o">&lt;</span><span class="mi">2</span> <span class="ow">or</span> <span class="o">#</span><span class="n">polygon</span><span class="o">%</span><span class="mi">2</span><span class="o">~=</span><span class="mi">0</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">nil</span> <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">minX</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="kd">local</span> <span class="n">maxX</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="kd">local</span> <span class="n">minY</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="kd">local</span> <span class="n">maxY</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="o">#</span><span class="n">polygon</span><span class="p">,</span><span class="mi">2</span> <span class="kr">do</span>
+        <span class="kr">if</span> <span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">minX</span> <span class="kr">then</span> <span class="n">minX</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">maxX</span> <span class="kr">then</span> <span class="n">maxX</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&lt;</span><span class="n">minY</span> <span class="kr">then</span> <span class="n">minY</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="kr">end</span>
+        <span class="kr">if</span> <span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">maxY</span> <span class="kr">then</span> <span class="n">maxY</span><span class="o">=</span><span class="n">polygon</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="kr">end</span>
+    <span class="kr">end</span>
+
+    <span class="kr">return</span> <span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">minX</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">minY</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="n">maxX</span><span class="o">-</span><span class="n">minX</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="n">maxY</span><span class="o">-</span><span class="n">minY</span><span class="p">}</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">PolygonEdgeLine</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span> <span class="c1">-- 既存の地点にある組がある多角形の端に属するかどうかを調べるために特定を行う関数です。</span>
+    <span class="kd">local</span> <span class="n">length</span><span class="o">=#</span><span class="n">polygon</span>
+    <span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span><span class="o">~=</span><span class="s2">&quot;table&quot;</span> <span class="ow">or</span> <span class="n">length</span><span class="o">&lt;</span><span class="mi">4</span> <span class="ow">or</span> <span class="n">length</span><span class="o">%</span><span class="mi">2</span><span class="o">~=</span><span class="mi">0</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">nil</span> <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">buf</span><span class="o">=</span><span class="p">{}</span> <span class="c1">-- これらの値が丸め込まれている場合に限り (例えば、二桁まで)、非整数値の比較は安全です。</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">polygon</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">v</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+    <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">x1</span><span class="o">=</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+    <span class="kd">local</span> <span class="n">y1</span><span class="o">=</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+    <span class="kd">local</span> <span class="n">x2</span><span class="o">=</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">x2</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+    <span class="kd">local</span> <span class="n">y2</span><span class="o">=</span><span class="nb">math.floor</span><span class="p">(</span><span class="n">y2</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span>
+
+    <span class="kr">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">length</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span> <span class="kr">do</span> <span class="c1">-- 最後の線以外をすべて比較します。</span>
+        <span class="kr">if</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">x1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">y1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">x2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="n">y2</span> <span class="kr">then</span>
+            <span class="kr">return</span> <span class="kc">true</span>
+        <span class="kr">elseif</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">x2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">y2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">x1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="n">y1</span> <span class="kr">then</span>
+            <span class="kr">return</span> <span class="kc">true</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+
+    <span class="c1">-- 最後の線を別に比較します。</span>
+    <span class="kr">if</span> <span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">x1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">y1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">x2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">length</span><span class="p">]</span><span class="o">==</span><span class="n">y2</span> <span class="kr">then</span>
+        <span class="kr">return</span> <span class="kc">true</span>
+    <span class="kr">elseif</span> <span class="n">buf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">x2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">y2</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">x1</span> <span class="ow">and</span> <span class="n">buf</span><span class="p">[</span><span class="n">length</span><span class="p">]</span><span class="o">==</span><span class="n">y1</span> <span class="kr">then</span>
+        <span class="kr">return</span> <span class="kc">true</span>
+    <span class="kr">end</span>
+
+    <span class="c1">-- 全ての検査を以前に合格した場合は、失敗します:</span>
+    <span class="kr">return</span> <span class="kc">false</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">getAveragePixel</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="c1">--テクスチャ周辺の x, y 座標と近接するピクセルに対して平均化された色を返します。コードの高速化のために w, h は事前計算されます。</span>
+    <span class="kd">local</span> <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span> <span class="o">=</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">math.ceil</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="nb">math.ceil</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1">-- 索引化されたピクセルの隣接値整数を検出します。</span>
+    <span class="kr">if</span> <span class="n">x2</span><span class="o">==</span><span class="n">x1</span> <span class="kr">then</span> <span class="n">x2</span><span class="o">=</span><span class="n">x2</span><span class="o">+</span><span class="mi">1</span> <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">y2</span><span class="o">==</span><span class="n">y1</span> <span class="kr">then</span> <span class="n">y2</span><span class="o">=</span><span class="n">y2</span><span class="o">+</span><span class="mi">1</span> <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">d4</span> <span class="o">=</span> <span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y2</span><span class="o">-</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y2</span><span class="o">-</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y1</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y1</span><span class="p">)</span> <span class="c1">-- 結果としてピクセルある少数部を検出します。</span>
+
+    <span class="n">x1</span><span class="o">=</span><span class="n">x1</span><span class="o">%</span><span class="n">w</span> <span class="c1">-- テクスチャが範囲内にあることを保証します (周囲の加工)。</span>
+    <span class="n">x2</span><span class="o">=</span><span class="n">x2</span><span class="o">%</span><span class="n">w</span>
+    <span class="n">y1</span><span class="o">=</span><span class="n">y1</span><span class="o">%</span><span class="n">h</span>
+    <span class="n">y2</span><span class="o">=</span><span class="n">y2</span><span class="o">%</span><span class="n">h</span>
+
+    <span class="kd">local</span> <span class="n">r1</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">a1</span> <span class="o">=</span> <span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span> <span class="c1">-- 生の 4 色を取得します。</span>
+    <span class="kd">local</span> <span class="n">r2</span><span class="p">,</span><span class="n">g2</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">a2</span> <span class="o">=</span> <span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">r3</span><span class="p">,</span><span class="n">g3</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">a3</span> <span class="o">=</span> <span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">r4</span><span class="p">,</span><span class="n">g4</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">a4</span> <span class="o">=</span> <span class="n">texture</span><span class="p">:</span><span class="n">getPixel</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+
+    <span class="c1">--...そして全ての平均を返します。</span>
+    <span class="kr">return</span> <span class="n">d1</span><span class="o">*</span><span class="n">r1</span><span class="o">+</span><span class="n">d2</span><span class="o">*</span><span class="n">r2</span><span class="o">+</span><span class="n">d3</span><span class="o">*</span><span class="n">r3</span><span class="o">+</span><span class="n">d4</span><span class="o">*</span><span class="n">r4</span><span class="p">,</span> <span class="n">d1</span><span class="o">*</span><span class="n">g1</span><span class="o">+</span><span class="n">d2</span><span class="o">*</span><span class="n">g2</span><span class="o">+</span><span class="n">d3</span><span class="o">*</span><span class="n">g3</span><span class="o">+</span><span class="n">d4</span><span class="o">*</span><span class="n">g4</span><span class="p">,</span> <span class="n">d1</span><span class="o">*</span><span class="n">b1</span><span class="o">+</span><span class="n">d2</span><span class="o">*</span><span class="n">b2</span><span class="o">+</span><span class="n">d3</span><span class="o">*</span><span class="n">b3</span><span class="o">+</span><span class="n">d4</span><span class="o">*</span><span class="n">b4</span><span class="p">,</span> <span class="n">d1</span><span class="o">*</span><span class="n">a1</span><span class="o">+</span><span class="n">d2</span><span class="o">*</span><span class="n">a2</span><span class="o">+</span><span class="n">d3</span><span class="o">*</span><span class="n">a3</span><span class="o">+</span><span class="n">d4</span><span class="o">*</span><span class="n">a4</span>
+<span class="kr">end</span>
+</pre></div>
+<p>動作状態を確認するには用例を実行します:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">require</span> <span class="s2">&quot;textured_polygon&quot;</span> <span class="c1">-- TexturedPolygon 関数のあるファイルを呼び出すか、またはこの下に内容を貼り付けてください。</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+    <span class="n">texture</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">newImageData</span><span class="p">(</span><span class="s1">&#39;texture.png&#39;</span><span class="p">)</span>
+    <span class="n">bkg</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+    <span class="n">polygon</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">530</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">}</span>
+
+    <span class="n">t_start</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">timer</span><span class="p">.</span><span class="n">getTime</span><span class="p">()</span>
+    
+    <span class="n">image</span><span class="o">=</span><span class="n">TexturedPolygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span><span class="s1">&#39;texture.png&#39;</span><span class="p">)</span>
+
+    <span class="n">t_end</span><span class="o">=</span><span class="n">love</span><span class="p">.</span><span class="n">timer</span><span class="p">.</span><span class="n">getTime</span><span class="p">()</span>
+
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="kr">end</span>
+ 
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span> <span class="n">bkg</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span> <span class="n">image</span><span class="p">.</span><span class="n">img</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">image</span><span class="p">.</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Spent &quot;</span><span class="o">..</span><span class="p">(</span><span class="n">t_end</span><span class="o">-</span><span class="n">t_start</span><span class="p">)</span><span class="o">..</span><span class="s2">&quot; seconds to create textured polygon&quot;</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&lt;- see theese pixels smoothed!&quot;</span><span class="p">,</span> <span class="mi">530</span><span class="p">,</span><span class="mi">140</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| works with concave polygons as well!&quot;</span><span class="p">,</span> <span class="mi">302</span><span class="p">,</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;V                                     &quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;^                           &quot;</span><span class="p">,</span> <span class="mi">420</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| semi-transparent textures!&quot;</span><span class="p">,</span> <span class="mi">422</span><span class="p">,</span><span class="mi">205</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<hr />
+<p>このテクスチャを使用しています:
+</p><p><a href="File_texture.html" class="image"><img alt="texture.png" src="../w/images/9/98/texture.png" width="64" height="32" /></a>
+</p>
+<hr />
+<p>動作状態:
+</p><p><a href="File_screenshot1.html" class="image"><img alt="screenshot1.png" src="../w/images/2/23/screenshot1.png" width="816" height="639" /></a>
+</p><p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240408130212
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.076 seconds
+Real time usage: 1.272 seconds
+Preprocessor visited node count: 23/1000000
+Preprocessor generated node count: 76/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 89207/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:6020-0!canonical and timestamp 20240408130211 and revision id 19790
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="../w/index62e1.html?title=TexturedPolygon_(%e6%97%a5%e6%9c%ac%e8%aa%9e)&amp;oldid=19790">http://love2d.org/w/index.php?title=TexturedPolygon_(日本語)&amp;oldid=19790</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="Category_Snippets_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Category:Snippets (日本語)">Snippets (日本語)</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="../w/index0950.html?title=Special:UserLogin&amp;returnto=TexturedPolygon+%28%E6%97%A5%E6%9C%AC%E8%AA%9E%29" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="love.html">love</a></li>
+											<li id="n-love.audio"><a href="love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="Special_WhatLinksHere/TexturedPolygon_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="Special_RecentChangesLinked/TexturedPolygon_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-print"><a href="../w/index8c98.html?title=TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+											<li id="t-permalink"><a href="../w/indexcb57-3.html?title=TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;oldid=19790" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="../w/index4975-2.html?title=TexturedPolygon_(%E6%97%A5%E6%9C%AC%E8%AA%9E)&amp;action=info" title="More information about this page">Page information</a></li>
+											<li id="t-smwbrowselink"><a href="Special_Browse/_TexturedPolygon-5F(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" rel="search">Browse properties</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="../w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="../w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAACJVBMVEXe3t62trbLy8vGxsbAwMDX19e6urqsrKxHcEzQ0NC2tratra2oqKixsbHd3eDFxcXe3t7U1NTa2trX19fQ0NDV1dWNjY2dnZ2UlJSUlJTS0tKUlJSWlpbR0dGenp79/f38/Pz+/v7t7e3v7+/u7u7s7Oz19fX29vb6+vr7+/vz8/Pz8/P4+fnw8PD39/gWTq/09PX6+vktX7b/sg8XT7F6mc/f5OwhVrNvkMthhsfT2+j7rQ/M1eZqjcmFotPs7e9Cb722xuFResK/zOObstnu7/Grvd3M1+mNqNY6aLoaUbEaUbZWfsTk6fE2Zrnp7O8bTq0kWLQuYcpcg8Xh5/Byk83a4eukud1/nM+6yeQkWcGwwuDxnRQyYrigttvI0+gpW7XGyttLdsBni8geVLo0Z9XlkCPb4u+QqtcfVLLo7PNHcr73phFGX6HsmBnpkxg6bNwnXcbX3er19vnr7/SVrdhuhLl+j70vVqY6Xqv0oxJVcbQhV76DjKTz9ffQ2evE0OZAbbzu7/PS1uFufrDnrGgpSZjy8/SQnMFddrKuekXSiCsgTKRaaZHejy9yang3VptNaqspWbnmliy3j2/m6OzT3e7x8fL4+v3p6uwaN2re0cifqLiLiZWYhYGYb0xXYn+5g0xwiMKYpc2BcHZmW2srRXpGWIhecKfilz4+WID2+PyosMywqbGqss1aVnLZq33p1sGklZqrp7dkfr7CpY9yg59Ud6QZAAAAH3RSTlPfBN/f39/f2wDf39vV3/7N2rrEz5D5c8ONuHaPuXXDImoxqwAABO1JREFUSMe1kQdz01gQgBXaBS4w9OtHwMFSdPKTUNxkW+61xN2Je4tLHJNOGukkAUINJTzaUIbO9fr7TpLtS44DZiC5b6Sn3dW+TysJaWz4cv9eZFPZu/+bhkakYR88WqP59u3vjxzdDCT7GpCD4qNH3sEGzOhB5MCR/4PmA8j25uZ33t0A23lxff5hZTIzOrz2Ph8qK936l7i1tT7hk8DAoHNsbeLWKjPdQcZ+qvX9tHMNXca1XBDXHtL6x2Bh0HWtuXUo8oTgC1gVpcdsdpew92PUYtjwzFq+E9mJYfXxx1x5l2/l5Vhy0DW6TuyQCZcR2hnswXJM0h+203471u5WKMIE5mDpspIIO8sZTMZiIbczY6+JCaI+/sJZ38qjP28+nQjkx/mcqGJ26rW3iKg/fYphCL1jNk5WbqXI0nBnu00RJ2j9bNRp6MmFS0SYIXLuUlQ5w22qizHr5MTyy2u/3XxVvHHlwtWVa/xTCQIIlEaMzrgswzA5P9BrAciYASqNoiNdjL8b0GYAHN3AGAEgzPSQc9UtYCeyBQAMO2G9PhhzXfp9qdifSCT6Lj788QQnrvWEuNPI2um0LW0D+m4A6E4AnIZOeq7ksQuJvi6eUXRW+8EWXsxNPhkYGJiSXr7Rd1qtVp9MXHkgIurzAkdFxjrj7cmKbN4K5v8RGxT2sJMTpwBflNHhUJgBdoUylzy3TuwIDBRi0hf9p9VtbW3qk30X7q2Je1IybZq7mLVWFKTSADXPoqi9AzVorda0kKTS6KkRbSgaR1GT1h5CObYiW1GU27yc5z6F9Fn/yTYedeLi9AIA6AbgxGIxAMPZcZeUHH9cFavVfY97FaNA/DbazRZVV89/61at2BTlg1JXiFtrYoBmRyd7p6/UP0XxaSDmy4pt0jmuh8qx6wQ2MmRz18TaJCUWO9xisUVhMMsoZZDiGHLLuXUbso2iatP/1HvhYu3n3bh6Pe/LUjZSj1NUJ8lSlNwahRRlMRjmyFDICikVn8+SacomdbZTVj+0mQSxweS1WqpiHK/Ncubs858f9idOJ/qKS1cv+RbFuIbMmHEvTbO4QeF25CxyD62nSbmJ1MUzRrpiwR0RPBJMpnCGxWVGXBn8TkarNGQHjuPrxOeWY4GY9FmxWHy19Gvv+ayYF6f8oYi7i8U93bjFkYokvbhWEFu8Og2ZxrUe3NMpc3vLhqqYpVV4XbwDQkpgoVwYKOR9N5d+eXB5vJevQA0pD7oVqi4WOj16vX6EYSA08WKvyeOZJw1cQ6rsnXOa/RYoM0Kls0zLuVoHhHAHL8YFXkwVCoE8uXhvMVCY8mW5Ci8eKkcgJ9azOl0UajNDFiUpj5JeloEqTgwd/iCUJP0sFMSejkpO96b4zl1fPuYiyd6Vs4GBmHSsJoYmLy/WeBTlis5rlJYrgjhe1s+XOXGEtHJOMl4VB2EHLauKdyG7JBLIc//uslRKkhOrcGJqyiU9z5UkOpVOwiGXSyQizRAfqlRc7Y5KJFnV6FReiWSV7xAWeQd/SOSq6qY18eVHq4vjlyazEJ73ScmJPVxJVKdF9MFwYpFIEL+ehvDOcSH8YXRsAa4XfwS7kd0tLfw7Sp7fl7xJywbYjTTVotfTb+849lEcb0K+2lMN/5o+tons+Rxp+PrQ8U3n0BcNSGPj4W+bPuX5ZLNo+uxwY+PfoLJHX1KXgyMAAAAASUVORK5CYII=" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 12 May 2017, at 04:11.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.076","walltime":"1.272","ppvisitednodes":{"value":23,"limit":1000000},"ppgeneratednodes":{"value":76,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":89207,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240408130212","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2671});});</script></body>
+<!-- Mirrored from love2d.org/wiki/TexturedPolygon_(日本語) by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 12:15:47 GMT -->
+</html>
