@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/230" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2015-07-08T04:41:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/230</id>
+
+		<entry>
+		<author><name><![CDATA[DrPresident]]></name></author>
+		<updated>2015-07-08T04:41:46+00:00</updated>
+
+		<published>2015-07-08T04:41:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=186325#p186325</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=186325#p186325"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=186325#p186325"><![CDATA[
+Hey so i see all this stuff about lube.bin and i really wanna use it but everytime i try to use it i get <div class="codebox"><p>Code: </p><pre><code>attempt to index global 'bin' (a nil value) </code></pre></div>and i dont see anything that would say it has been removed so i think i just missed it or dont have it properly required, but all my other calls work fine. I really dont want to setup my own table serialization but if i have to I wanna get started! If that is the case I would love recommendations for third party libraries that can serialize tables into strings<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136782">DrPresident</a> — Wed Jul 08, 2015 4:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Sosolol261]]></name></author>
+		<updated>2015-04-05T10:34:55+00:00</updated>
+
+		<published>2015-04-05T10:34:55+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=182462#p182462</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=182462#p182462"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=182462#p182462"><![CDATA[
+This might be a little late but i have an idea:<br><br>We take Love Connection and create: LÖCOmotive<br><br>*yeahs in the background*<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135953">Sosolol261</a> — Sun Apr 05, 2015 10:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[OstrichRider]]></name></author>
+		<updated>2015-04-02T21:21:04+00:00</updated>
+
+		<published>2015-04-02T21:21:04+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=182323#p182323</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=182323#p182323"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=182323#p182323"><![CDATA[
+Is there a working example for version 1.0? Like a basic Server/Client skeleton. TechnoCat's is out of date and I learn 20x faster with an actual example.<br><br>EDIT: I made my own! After hours of pouring over the outdated examples, me and my friend hacked together a simple Server/Client program with LUBE 1.0 and LÖVE 0.9.2. Hopefully this saves someone out there a bunch of time!<dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=11535&amp;sid=f74f0103d6f03a1ed8f217fa5ecaa951">LUBE 1.0 Example (For LÖVE 0.9.2).love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135104">OstrichRider</a> — Thu Apr 02, 2015 9:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[whitebear]]></name></author>
+		<updated>2015-02-11T10:35:32+00:00</updated>
+
+		<published>2015-02-11T10:35:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=180185#p180185</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=180185#p180185"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=180185#p180185"><![CDATA[
+I have trouble getting the client recieve packets from server.<br>Client to Server = success<br>Server to Client = fail<br><br>my server code: <a href="http://hastebin.com/dakiguhegu.lua" class="postlink">http://hastebin.com/dakiguhegu.lua</a><br>my client code: <a href="http://hastebin.com/caquvofequ.lua" class="postlink">http://hastebin.com/caquvofequ.lua</a><br><br>EDIT got it working with tcp connection but udp still fails on server sending data to user<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=472">whitebear</a> — Wed Feb 11, 2015 10:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2014-08-16T08:14:02+00:00</updated>
+
+		<published>2014-08-16T08:14:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=172504#p172504</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=172504#p172504"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=172504#p172504"><![CDATA[
+<blockquote class="uncited"><div>why classes in lua? lua's strong side is the way of not using object oriented (in my view at least).</div></blockquote>Because lua is amazing because it allows you to do whatever you want.<br><br>With that out of the way, I am using a slightly class-based design for lube these days, but it's mostly because in my opinion objects fit this api well. Don't forget that lua's files mostly act like objects too. And love is object-oriented too!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Aug 16, 2014 8:14 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[jjmafiae]]></name></author>
+		<updated>2014-08-15T19:53:05+00:00</updated>
+
+		<published>2014-08-15T19:53:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=172487#p172487</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=172487#p172487"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=172487#p172487"><![CDATA[
+why classes in lua? lua's strong side is the way of not using object oriented (in my view at least).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57259">jjmafiae</a> — Fri Aug 15, 2014 7:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2014-08-15T10:20:47+00:00</updated>
+
+		<published>2014-08-15T10:20:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=172466#p172466</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=172466#p172466"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=172466#p172466"><![CDATA[
+It does come with a fallback class library, but if a class commons-compatible library is present, it will use that instead.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Fri Aug 15, 2014 10:20 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Helvecta]]></name></author>
+		<updated>2014-08-15T04:52:33+00:00</updated>
+
+		<published>2014-08-15T04:52:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=172459#p172459</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=172459#p172459"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=172459#p172459"><![CDATA[
+A library that requires another unincluded library, and class-based at that? Meh, I prefer the old version, but I'm picky. Terrific library!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=67846">Helvecta</a> — Fri Aug 15, 2014 4:52 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Drepic26]]></name></author>
+		<updated>2014-06-28T01:35:51+00:00</updated>
+
+		<published>2014-06-28T01:35:51+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=170262#p170262</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=170262#p170262"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=170262#p170262"><![CDATA[
+Is there a way to stop the server? I searched through the source, but I couldn't find anything.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135022">Drepic26</a> — Sat Jun 28, 2014 1:35 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zell2002]]></name></author>
+		<updated>2014-03-28T11:41:25+00:00</updated>
+
+		<published>2014-03-28T11:41:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165346#p165346</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165346#p165346"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165346#p165346"><![CDATA[
+Hi<br>thought id post back with an example of the server recieving from the client :<br>server code :<div class="codebox"><p>Code: </p><pre><code>function onConnect(id)    server:send("hi", id) -- never gets through    print(id) -- always prints idendfunction onReceive(data, id)    print(data .. "sent from "..id) -- always see thisendfunction StartServer()    server = lube.udpServer()    server:listen("7000")    server.callbacks.connect = onConnect    server.callbacks.recv = onReceive    server.handshake = "Hi!"    print("started server")end</code></pre></div>client code :<div class="codebox"><p>Code: </p><pre><code>_ip = "127.0.0.1"_port = "7000"function StartClient()    client = lube.udpClient()    client.handshake = "Hi!"    client.callbacks.recv = Receive    success, er = client:connect(_ip, _port)        print("success : " .. tostring(success)) -- always true, even if the server hasnt been started    client:send("hello") -- server always receives and prints this (see above)    return successend</code></pre></div>in LUBE<div class="codebox"><p>Code: </p><pre><code>function client:update(dt)if not self.connected then return endassert(dt, "Update needs a dt!")-- First, let's handle ping messages.if self.ping thenself.ping.timer = self.ping.timer + dtif self.ping.timer &gt; self.ping.time thenself:_send(self.ping.msg)self.ping.timer = 0endend-- If a recv callback is set, let's grab-- all incoming messages. If not, leave-- them in the queue.        if self.callbacks.recv then                local data, err = self:_receive()                print(data) -- always nil/false               print(err) -- "Unknown remote sent data." (from the function udpClient:_receive()while data doself.callbacks.recv(data)data, err = self:_receive()endendend</code></pre></div>so because data always returns "nil", it never calls my self.callbacks.recv() function<br><br>i am really baffled...<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134713">zell2002</a> — Fri Mar 28, 2014 11:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zell2002]]></name></author>
+		<updated>2014-03-23T13:28:12+00:00</updated>
+
+		<published>2014-03-23T13:28:12+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165061#p165061</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165061#p165061"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165061#p165061"><![CDATA[
+client calls update(dt) yeah.<br>and yeah the callbacks are getting called<br>the recieves get called because they are getting constantly called in the update :<div class="codebox"><p>Code: </p><pre><code>function udpClient:_receive()local data, ip, port = self.socket:receivefrom()</code></pre></div>its just this, in the client, always returns : nil, timed out,  nil<br><br>here is some of the client receive logic<br>so the first function receive() never gets called<br>but in the client:update() <br>if self.callbacks.recv then          <br>local data, err = self:_receive()<br>this does get called<br><div class="codebox"><p>Code: </p><pre><code>function client:receive()-- Check if we're connected and pass it on.print("client receive")if not self.connected thenreturn false, "Not connected"endreturn self:_receive()endfunction client:update(dt)if not self.connected then return endassert(dt, "Update needs a dt!")-- First, let's handle ping messages.if self.ping thenself.ping.timer = self.ping.timer + dtif self.ping.timer &gt; self.ping.time thenself:_send(self.ping.msg)self.ping.timer = 0endend-- If a recv callback is set, let's grab-- all incoming messages. If not, leave-- them in the queue.        if self.callbacks.recv then          local data, err = self:_receive()while data doself.callbacks.recv(data)data, err = self:_receive()endendend</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134713">zell2002</a> — Sun Mar 23, 2014 1:28 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2014-03-23T13:04:50+00:00</updated>
+
+		<published>2014-03-23T13:04:50+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165058#p165058</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165058#p165058"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165058#p165058"><![CDATA[
+So the connection callback triggers, but the receive ones never do? Have you tried sending from the client to the server? Do you update the client too?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sun Mar 23, 2014 1:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zell2002]]></name></author>
+		<updated>2014-03-23T11:01:18+00:00</updated>
+
+		<published>2014-03-23T11:01:18+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165053#p165053</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165053#p165053"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165053#p165053"><![CDATA[
+i havent over ridden them....<blockquote class="uncited"><div>-- more code</div></blockquote>was me saying, basically, the rest of the function code - i just didnt want to copy it all out - seemed a bit pointless<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134713">zell2002</a> — Sun Mar 23, 2014 11:01 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2014-03-23T10:57:38+00:00</updated>
+
+		<published>2014-03-23T10:57:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165051#p165051</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165051#p165051"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165051#p165051"><![CDATA[
+You're not supposed to override them, you're supposed to call them.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sun Mar 23, 2014 10:57 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zell2002]]></name></author>
+		<updated>2014-03-23T10:33:26+00:00</updated>
+
+		<published>2014-03-23T10:33:26+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165050#p165050</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165050#p165050"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165050#p165050"><![CDATA[
+yea<br>in LUBE :<div class="codebox"><p>Code: </p><pre><code>function server:update(dt)print("server update")-- more codeendfunction udpServer:receive()print("server rec!")local data, ip, port = self.socket:receivefrom()print("data : " .. tostring(data))-- more codeend</code></pre></div>both these functions run<br>data is always nil<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134713">zell2002</a> — Sun Mar 23, 2014 10:33 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2014-03-23T09:56:25+00:00</updated>
+
+		<published>2014-03-23T09:56:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165047#p165047</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165047#p165047"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165047#p165047"><![CDATA[
+Does your server run the update method or the receive method?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sun Mar 23, 2014 9:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zell2002]]></name></author>
+		<updated>2014-03-23T01:50:36+00:00</updated>
+
+		<published>2014-03-23T01:50:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=165027#p165027</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=165027#p165027"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=165027#p165027"><![CDATA[
+hi<br>version 0.7 i got working fine.<br>but version 1.0 is very different, and i just can't get it to work at all<br><br>globals :<div class="codebox"><p>Code: </p><pre><code>_ip = "127.0.0.1"_port = "18025"</code></pre></div>server code :<div class="codebox"><p>Code: </p><pre><code>function StartServer()    server = lube.udpServer()    server:listen(_port)    server.callbacks.connect = onConnect    server.callbacks.recv = onReceive    server.handshake = "Hi!"    print("created")end</code></pre></div>client code : <div class="codebox"><p>Code: </p><pre><code>function StartClient()    client = lube.udpClient()    client.handshake = "Hi!"    client.callbacks.recv = Receive    success, er = client:connect(_ip, _port)    print("success : " .. tostring(success))     return successend</code></pre></div>regardless if the server is running StartClient() is always successful - I assume this is due to the nature of udp being connectionless ? (maybe?). Or should it only connect to a port that is being "listened" on ? If this is so.. then I have no idea why/how it always connects successfully.<br><br>the main problem is, in the server code i have <div class="codebox"><p>Code: </p><pre><code>function onConnect(id)    print("Connected : " .. id)    server:send("hi")end</code></pre></div>"Connected : ip:port" gets printed to my log so that's all good.<br>but server:send("hi") is NEVER received by the client<br><br>inside LUBE.lua, it fails here<div class="codebox"><p>Code: </p><pre><code>function udpClient:_receive()local data, ip, port = self.socket:receivefrom()print(data)if ip == self.host and port == self.port then            return dataend        print("data " .. tostring(data))        print("ip " .. ip)        print("port " .. tostring(port))        print("self host : "..self.host)        print("self port : "..self.port)return false, "Unknown remote sent data."end</code></pre></div>console window:<blockquote class="uncited"><div>nil<br>data nil<br>ip timeout<br>port nil<br>self host : 127.0.0.1<br>self port : 18025</div></blockquote>What am I missing here ?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134713">zell2002</a> — Sun Mar 23, 2014 1:50 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Robin]]></name></author>
+		<updated>2014-01-23T09:29:52+00:00</updated>
+
+		<published>2014-01-23T09:29:52+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161408#p161408</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161408#p161408"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161408#p161408"><![CDATA[
+Okay, here's the thing: LUBE uses [wiki]Class Commons[/wiki]. That allows libraries to use OOP without depending on any specific class implementation. To use it, you need a class library that is compatible with Class Commons (like <a href="https://bitbucket.org/bartbes/slither" class="postlink">Slither</a> or [wiki]MiddleClass[/wiki]).<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=436">Robin</a> — Thu Jan 23, 2014 9:29 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[jjmafiae]]></name></author>
+		<updated>2014-01-22T20:58:15+00:00</updated>
+
+		<published>2014-01-22T20:58:15+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161378#p161378</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161378#p161378"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161378#p161378"><![CDATA[
+No, as far as I know LUBE is a pure lua library (and it works here)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=57259">jjmafiae</a> — Wed Jan 22, 2014 8:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[sam]]></name></author>
+		<updated>2014-01-22T04:47:03+00:00</updated>
+
+		<published>2014-01-22T04:47:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=161327#p161327</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=161327#p161327"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=161327#p161327"><![CDATA[
+<img src="https://love2d.org/imgmirrur/dktl6yH.png" class="postimage" alt="Image"><br>just from copy/pasting the example code given, i'm given this error when i attempt to run it (good idea to right click/copy link location to see the full error). currently using 0.9.0. is it incompatible with the new version?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=72783">sam</a> — Wed Jan 22, 2014 4:47 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-12-21T14:54:56+00:00</updated>
+
+		<published>2013-12-21T14:54:56+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=159087#p159087</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=159087#p159087"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=159087#p159087"><![CDATA[
+<blockquote class="uncited"><div>Well, you're using an old version of lube.</div></blockquote>Okay, thanks  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Sat Dec 21, 2013 2:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2013-12-21T12:22:43+00:00</updated>
+
+		<published>2013-12-21T12:22:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=159078#p159078</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=159078#p159078"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=159078#p159078"><![CDATA[
+Well, you're using an old version of lube.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Dec 21, 2013 12:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-12-21T12:17:01+00:00</updated>
+
+		<published>2013-12-21T12:17:01+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=159077#p159077</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=159077#p159077"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=159077#p159077"><![CDATA[
+<blockquote class="uncited"><div>I don't think there is one for tcp, and there probably isn't one for enet, but for udp it's 64k.</div></blockquote>Thanks!<br>Using LUBE, how would you make the server run via tcp, because (correct me if I'm wrong) by default it runs udp?<div class="codebox"><p>Code: </p><pre><code>server = lube.server(globalIP, globalPort)server:setCallback(onReceive, onConnect, onDisconnect)server:setHandshake("abc")</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Sat Dec 21, 2013 12:17 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[bartbes]]></name></author>
+		<updated>2013-12-21T10:23:05+00:00</updated>
+
+		<published>2013-12-21T10:23:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=159070#p159070</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=159070#p159070"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=159070#p159070"><![CDATA[
+I don't think there is one for tcp, and there probably isn't one for enet, but for udp it's 64k.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=147">bartbes</a> — Sat Dec 21, 2013 10:23 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Davidobot]]></name></author>
+		<updated>2013-12-21T09:58:43+00:00</updated>
+
+		<published>2013-12-21T09:58:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=159067#p159067</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=159067#p159067"/>
+		<title type="html"><![CDATA[Re: LUBE (Networking Library)]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=159067#p159067"><![CDATA[
+Is there a limit to how big a string can be when sending over the network?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=44056">Davidobot</a> — Sat Dec 21, 2013 9:58 am</p><hr />
+]]></content>
+	</entry>
+	</feed>
