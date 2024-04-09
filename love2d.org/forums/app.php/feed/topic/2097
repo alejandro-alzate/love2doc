@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2097" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2010-12-31T20:23:45+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2097</id>
+
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-12-31T20:23:45+00:00</updated>
+
+		<published>2010-12-31T20:23:45+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=24554#p24554</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=24554#p24554"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=24554#p24554"><![CDATA[
+The best format for Tiled probably is CSV as it can be far easier to parse<br><br>Wait you have spriteBatch = love.graphics.newSpriteBatch( self.tileset.src, self.layers * self.data.width*self.data.height<br>in draw,be careful as it might gobble insane amounts of memory<br>Also can you post a .love? as I have no idea what resource you are using for the tileset<br><br>Underscores don't work because you don't have the right string pattern in the parase phase<br>You have to offset collision by the screen resolution(lot of headache as the coordinate system is not sane,better just use my results)<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Fri Dec 31, 2010 8:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[headchant]]></name></author>
+		<updated>2010-12-31T15:06:41+00:00</updated>
+
+		<published>2010-12-31T15:06:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=24547#p24547</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=24547#p24547"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=24547#p24547"><![CDATA[
+Don't know what adrix did but here is my version of tiledMap.lua<br><br>this is an enhanced version of the "Tiled Map Loader" from ninwa<br><br>problems:<br> underscore _ in filenames break the loading of the tileset image<br> collision check is still off<br>changes:<br>  removed middleclass and instead used hump<br> now compatible with more tilesets(only vertically lined up tilesets were allowed in the original version)<br> faster drawing with spritebatch<br> draw layers seperatly(for z-stuff)<br><br>I noticed that the parser only recognizes .tmx files in the standard "XML" format which is the worst(and biggest) format available . Love 0.7 supports some kind of base64(<a href="http://love2d.org/wiki/FileDecoder" class="postlink">http://love2d.org/wiki/FileDecoder</a>) so this obviously would be the better choice. The default format for the .tmx files in "Tiled" is base64(gzip compressed). I don't know if that is supported by love?<dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2209">tiledMap.lua</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1428">headchant</a> — Fri Dec 31, 2010 3:06 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-30T14:30:11+00:00</updated>
+
+		<published>2010-11-30T14:30:11+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23349#p23349</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23349#p23349"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23349#p23349"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div><blockquote class="uncited"><div>How nice of you to have it go full screen and not have a way to exit.</div></blockquote>q</div></blockquote>Lol. I mashed on the keyboard to try to find a quit key. That must have been one of the few keys I never tried. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"></div></blockquote>I do agree that q isn't the most intuitive,the alternative is however to look at the keyboard constants to be sure what value it has<br>Also the event push to quit is q so it wouldn't surprise me if more games have q as the quit button<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Tue Nov 30, 2010 2:30 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-11-30T13:52:26+00:00</updated>
+
+		<published>2010-11-30T13:52:26+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23346#p23346</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23346#p23346"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23346#p23346"><![CDATA[
+<blockquote class="uncited"><div><blockquote class="uncited"><div>How nice of you to have it go full screen and not have a way to exit.</div></blockquote>q</div></blockquote>Lol. I mashed on the keyboard to try to find a quit key. That must have been one of the few keys I never tried. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Tue Nov 30, 2010 1:52 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-30T13:47:33+00:00</updated>
+
+		<published>2010-11-30T13:47:33+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23345#p23345</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23345#p23345"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23345#p23345"><![CDATA[
+<blockquote class="uncited"><div>How nice of you to have it go full screen and not have a way to exit.</div></blockquote>q<br><br>damn should have set the fullscreen to false<br>i'm using fullscreen because of vsync problems<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Tue Nov 30, 2010 1:47 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[nevon]]></name></author>
+		<updated>2010-11-30T12:58:01+00:00</updated>
+
+		<published>2010-11-30T12:58:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23342#p23342</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23342#p23342"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23342#p23342"><![CDATA[
+How nice of you to have it go full screen and not have a way to exit.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=58">nevon</a> — Tue Nov 30, 2010 12:58 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-30T12:24:50+00:00</updated>
+
+		<published>2010-11-30T12:24:50+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23341#p23341</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23341#p23341"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23341#p23341"><![CDATA[
+Added rez independent collisions(and sane/insane coordinates)<br>Also added spritebatch<br>I'll play with frame buffer when the final ver of love 0.7 is released<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2142">PlanetCute_miab2.love</a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Tue Nov 30, 2010 12:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-28T07:37:57+00:00</updated>
+
+		<published>2010-11-28T07:37:57+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23267#p23267</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23267#p23267"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23267#p23267"><![CDATA[
+<blockquote class="uncited"><div>Oh hey, very cool! Thank you adrix. I have moved on to other projects, so if anybody wants to pick this one up and make it their own, feel free. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I'm pretty excited though that you got it working. I think we did end up pinning down the problem to too big of a sprite-sheet, right? I'm using the tiled map parser in a new game, and though I haven't run into the problem, I should consider fixing it before I do.</div></blockquote>Well I'm still not sure if it works for all depending on how love handles stuff<br>I wish there was a tester with really old hardware<br>Currently it works on my ati 1900 but I'm not sure about the previous series, although the tile map would probably work perfectly as there 1024 what I'm not sure is the character sprite which 171 by 101<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Sun Nov 28, 2010 7:37 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-27T17:57:01+00:00</updated>
+
+		<published>2010-11-27T17:57:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23224#p23224</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23224#p23224"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23224#p23224"><![CDATA[
+Oh hey, very cool! Thank you adrix. I have moved on to other projects, so if anybody wants to pick this one up and make it their own, feel free. <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"> I'm pretty excited though that you got it working. I think we did end up pinning down the problem to too big of a sprite-sheet, right? I'm using the tiled map parser in a new game, and though I haven't run into the problem, I should consider fixing it before I do.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Sat Nov 27, 2010 5:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-26T17:39:53+00:00</updated>
+
+		<published>2010-11-26T17:39:53+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=23177#p23177</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=23177#p23177"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=23177#p23177"><![CDATA[
+The pot edition<br>Just moved the tileset so as to give  a pot with minor modifications(warning height is tile hight is now 170 instead of 171 so as to enter a 1024 sheet)<br>.tmx files can be easily made to work by chaining some values<br>the %10 and /10 represents how many tiles are in a row,change this if you have more/less<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2129">PlanetCute_pot.love</a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Fri Nov 26, 2010 5:39 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[arquivista]]></name></author>
+		<updated>2010-11-14T01:59:51+00:00</updated>
+
+		<published>2010-11-14T01:59:51+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22322#p22322</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22322#p22322"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22322#p22322"><![CDATA[
+Yeah, it seems that the Java is the most advanced version. I was curious about the so called Lua Export when I saw in changelog (0.7.1) <br><div class="codebox"><p>Code: </p><pre><code>Fixed Lua export to increase firstgid of tilesets properly (by Jelle Geerts)</code></pre></div>However I only experienced 0.5.1 Mac QT version and that option seems not there. But XML output and not some custom program output seems interesting. I will look further how to parse it and study the Tiled tags. I glad you use it, I got interested on this.<br><br>Edited: Experienced Java version. Here is your map in Lua Export option (with GZIP option on. plain one can't be posted here -excess of chars-).<div class="codebox"><p>Code: </p><pre><code>-- Generated by Tiled's Lua Exporter Plugin.map = {  ["label"] = "map";  ["version"] = "0.99b";  ["luaversion"] = "5.1";  ["orientation"] = "orthogonal";  ["width"] = 16;  ["height"] = 16;  ["tilewidth"] = 101;  ["tileheight"] = 80;  ["tilesets"] = {    {      ["label"] = "tileset";      ["name"] = "PlanetCuteSpritesheet";      ["firstgid"] = 1;      ["tilewidth"] = 101;      ["tileheight"] = 171;      {        ["label"] = "image";        ["source"] = "PlanetCuteSpritesheet.png";      };    };  };  ["layers"] = {    {      ["label"] = "layer";      ["name"] = "Ground";      ["width"] = 16;      ["height"] = 16;      ["data"] = {        ["encoding"] = "base64";        ["compression"] = "gzip";        ["content"] = "H4sIAAAAAAAAABNiYGAQgmIDErAQFkyKfmzmgPhmROLBqh8fprV+XHgo6edGw4T0o6unln5S3Y9LL6n6yQ0/cvUDAGPrfmAABAAA";      };    };    {      ["label"] = "layer";      ["name"] = "Surface";      ["width"] = 16;      ["height"] = 16;      ["data"] = {        ["encoding"] = "base64";        ["compression"] = "gzip";        ["content"] = "H4sIAAAAAAAAAGNgoAwYAbEUlKbEjFEwOAAHGo0MTJEwMjAkwlxJIBZFwmJEukeSSvpBAJf7BysgJlwpBQAWQKvyAAQAAA==";      };    };    {      ["label"] = "layer";      ["name"] = "collision";      ["width"] = 16;      ["height"] = 16;      ["properties"] = {        ["collision"] = "true";      };      ["data"] = {        ["encoding"] = "base64";        ["compression"] = "gzip";        ["content"] = "H4sIAAAAAAAAAGNgQABhBtKBMBomBwij0eSC4aAfG6anm9DjQhhNDpub0NXg0k/ITloDcsIUn99orR/dreTqR/c3Mh8AWb+XlQAEAAA=";      };    };    {      ["label"] = "layer";      ["name"] = "lightsources";      ["width"] = 16;      ["height"] = 16;      ["properties"] = {        ["lightsources"] = "true";      };      ["data"] = {        ["encoding"] = "base64";        ["compression"] = "gzip";        ["content"] = "H4sIAAAAAAAAAGNgGAWjgHpAEI0eBYMbAAAsYCpAAAQAAA==";      };    };  };};-- EOF</code></pre></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1267">arquivista</a> — Sun Nov 14, 2010 1:59 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-13T23:54:48+00:00</updated>
+
+		<published>2010-11-13T23:54:48+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22312#p22312</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22312#p22312"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22312#p22312"><![CDATA[
+<blockquote class="uncited"><div>Things are becoming very good ninwa. Was hard for you develop the XML Tiled reader?. "Tiled" webpage says that can be exported in Lua but I foundn't in Mac version that option.</div></blockquote>I didn't write an XML reader so much as a quick and dirty .tmx parser. It's limited in functionality, but it gets the job done. That said, no, not too bad. I just read in each line of the file and use a couple of flags to know which level of tags I should be in, and use :find() with captures to pull out data I need.<br><br>PS: The stable windows build only includes .xml also and is missing a few key features I needed. That's why I'm using their beta nightly build from a few weeks ago.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Sat Nov 13, 2010 11:54 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[arquivista]]></name></author>
+		<updated>2010-11-13T21:05:56+00:00</updated>
+
+		<published>2010-11-13T21:05:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22264#p22264</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22264#p22264"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22264#p22264"><![CDATA[
+Things are becoming very good ninwa. Was hard for you develop the XML Tiled reader?. "Tiled" webpage says that can be exported in Lua but I foundn't in Mac version that option.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1267">arquivista</a> — Sat Nov 13, 2010 9:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-13T07:41:52+00:00</updated>
+
+		<published>2010-11-13T07:41:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22220#p22220</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22220#p22220"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22220#p22220"><![CDATA[
+About title loading you can set it to CVS in the edit preference and save<br>This should give you a file that you can reasonably transform into a text one<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Sat Nov 13, 2010 7:41 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-12T07:07:04+00:00</updated>
+
+		<published>2010-11-12T07:07:04+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=22124#p22124</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=22124#p22124"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=22124#p22124"><![CDATA[
+Now featuring TechnoCat's "MessageInABottleLibrary."<br><br>Walk to the NPC in the upper left and press 'z'<br><br>Also, tidied up my lighting code. Feel free to peak around it. Also added "time of day" 1 minute = 1 hour, and the lighting changes based on this.<br><br><a href="http://www.josephbleau.com/PlanetCute_miab.love" class="postlink">http://www.josephbleau.com/PlanetCute_miab.love</a><br><br>Thank you Technocat! &lt;3<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Fri Nov 12, 2010 7:07 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[thelinx]]></name></author>
+		<updated>2010-11-09T12:10:05+00:00</updated>
+
+		<published>2010-11-09T12:10:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21961#p21961</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21961#p21961"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21961#p21961"><![CDATA[
+<a href="http://mapeditor.org/" class="postlink">Nope.</a><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180">thelinx</a> — Tue Nov 09, 2010 12:10 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[headchant]]></name></author>
+		<updated>2010-11-09T11:34:28+00:00</updated>
+
+		<published>2010-11-09T11:34:28+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21957#p21957</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21957#p21957"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21957#p21957"><![CDATA[
+The Editor looks interesting. Is this written with love?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1428">headchant</a> — Tue Nov 09, 2010 11:34 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ryne]]></name></author>
+		<updated>2010-11-09T10:18:09+00:00</updated>
+
+		<published>2010-11-09T10:18:09+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21955#p21955</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21955#p21955"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21955#p21955"><![CDATA[
+Thats just awesome. I wonder how hard It would be to implement this. Maybe I can leave it for last and you can give me a hand with it?<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=932">Ryne</a> — Tue Nov 09, 2010 10:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-09T07:24:35+00:00</updated>
+
+		<published>2010-11-09T07:24:35+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21954#p21954</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21954#p21954"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21954#p21954"><![CDATA[
+<blockquote class="uncited"><div>Can you post a screenshot?<br>Seems the frame buffer is screwing with me,that or the blend mode(or both)<br>Got it not crashing by setting it up to 1024</div></blockquote>Ask and you shall receive! <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-surprise.png" width="16" height="16" alt=":o" title="Surprised">)<br><br>Outdoor area with lighting (check out the start) in real time it shimmers a little.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=22459&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=22459" class="postimage" alt="LmqAn.png" /></a></dt></dl></div>Inside that house from the perspective of the map editor, Tiled.<div class="inline-attachment"><dl class="file"><dt class="attach-image"><a href="http://love2d.org/forums/download/file.php?id=22460&amp;mode=view"><img src="http://love2d.org/forums/download/file.php?id=22460" class="postimage" alt="KTe0o.png" /></a></dt></dl></div><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Tue Nov 09, 2010 7:24 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ryne]]></name></author>
+		<updated>2010-11-08T21:16:01+00:00</updated>
+
+		<published>2010-11-08T21:16:01+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21926#p21926</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21926#p21926"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21926#p21926"><![CDATA[
+I cant wait <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">, I think adding lighting to my zombie shooter would make it significantly more awesome/immersing .<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=932">Ryne</a> — Mon Nov 08, 2010 9:16 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-08T20:13:05+00:00</updated>
+
+		<published>2010-11-08T20:13:05+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21914#p21914</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21914#p21914"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21914#p21914"><![CDATA[
+I'll post a screenshot up later, I'm currently at work, but the tileset the demo is using is <em class="text-italics"> not </em> PO2-friendly, which I suspect may be causing the problems. It supports any Tiled map, with any tileset, so I may have to fix that even if I'm just padding the tiles.<br><br>@Ryne, thank you! And you're more than welcome to. I probably wouldn't use it just yet as it's really limited and the interface is likely to change but I will be releasing any changes to the library as I go along, so you're welcome to play with it! :]<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Mon Nov 08, 2010 8:13 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Ryne]]></name></author>
+		<updated>2010-11-08T13:18:49+00:00</updated>
+
+		<published>2010-11-08T13:18:49+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21865#p21865</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21865#p21865"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21865#p21865"><![CDATA[
+This looks interesting, I was going to do some fake 2D lighting by making separate sprites but this seems much better, I may end up using it <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=932">Ryne</a> — Mon Nov 08, 2010 1:18 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[adrix89]]></name></author>
+		<updated>2010-11-08T12:01:24+00:00</updated>
+
+		<published>2010-11-08T12:01:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21855#p21855</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21855#p21855"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21855#p21855"><![CDATA[
+Can you post a screenshot?<br>Seems the frame buffer is screwing with me,that or the blend mode(or both)<br>Got it not crashing by setting it up to 1024<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1539">adrix89</a> — Mon Nov 08, 2010 12:01 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ninwa]]></name></author>
+		<updated>2010-11-08T06:38:24+00:00</updated>
+
+		<published>2010-11-08T06:38:24+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21838#p21838</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21838#p21838"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21838#p21838"><![CDATA[
+I think lighting looks a lot better this way. I changed how multiple lightsources blend so it works better, plus am now able to create the effect you see on the star on the house.<br><br><a href="http://dl.dropbox.com/u/13836131/PC.love" class="postlink">http://dl.dropbox.com/u/13836131/PC.love</a><br><br>Also, press 'm' to load a different map. Was seeing how well my code handled doing this on the fly, and it works pretty well.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1531">ninwa</a> — Mon Nov 08, 2010 6:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2010-11-07T23:49:59+00:00</updated>
+
+		<published>2010-11-07T23:49:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=21827#p21827</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=21827#p21827"/>
+		<title type="html"><![CDATA[Re: Primitive &quot;Tiled&quot; map loader and 2D game lighting]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=21827#p21827"><![CDATA[
+Looks good.<br><br>btw. i like your game ideas.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Sun Nov 07, 2010 11:49 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

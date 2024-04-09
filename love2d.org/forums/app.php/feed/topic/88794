@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/88794" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2020-05-20T19:44:01+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/88794</id>
+
+		<entry>
+		<author><name><![CDATA[kuzika]]></name></author>
+		<updated>2020-05-20T19:43:21+00:00</updated>
+
+		<published>2020-05-20T19:43:21+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233792#p233792</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233792#p233792"/>
+		<title type="html"><![CDATA[Re: 2D polygon collision detection cant index table vertices]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233792#p233792"><![CDATA[
+Thanks, it now works perfect. I also cleaned up the if statement so its exactly the same as the original one in C++. Below is the clean code of the polyPoint now working with LOVE2D. <br><div class="codebox"><p>Code: </p><pre><code>function polyPoint(vertices,px,py)local collision = falselocal next = 1  for current = 1, #vertices do    next = current + 1    if (next &gt; #vertices) then      next = 1    end    local vc = vertices[current]    local vn = vertices[next]    if (((vc.y &gt;= py and vn.y &lt; py) or (vc.y &lt; py and vn.y &gt;= py)) and    (px &lt; (vn.x-vc.x)*(py-vc.y) / (vn.y-vc.y)+vc.x)) then        collision = not(collision)    end  end  return collision  </code></pre></div>Here is a .love (version 11.3). I hope this helps out others.<div class="inline-attachment"><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=18245">polypoint.love</a></dt></dl></div>I also posted this in the wiki here.<br><a href="https://love2d.org/wiki/polypoint" class="postlink">https://love2d.org/wiki/polypoint</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=149034">kuzika</a> — Wed May 20, 2020 7:43 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[siberian]]></name></author>
+		<updated>2020-05-20T16:57:03+00:00</updated>
+
+		<published>2020-05-20T16:57:03+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233788#p233788</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233788#p233788"/>
+		<title type="html"><![CDATA[Re: 2D polygon collision detection cant index table vertices]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233788#p233788"><![CDATA[
+Try to replace <div class="codebox"><p>Code: </p><pre><code>if (next == #vertices) then</code></pre></div> <br>with this <div class="codebox"><p>Code: </p><pre><code>if (next &gt; #vertices) then</code></pre></div>or you can set next index like this<div class="codebox"><p>Code: </p><pre><code>next = (current &lt; #vertices) and current + 1 or 1 </code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=142119">siberian</a> — Wed May 20, 2020 4:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kuzika]]></name></author>
+		<updated>2020-05-20T19:44:01+00:00</updated>
+
+		<published>2020-05-20T16:44:16+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=233787#p233787</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=233787#p233787"/>
+		<title type="html"><![CDATA[[SOLVED]2D polygon collision detection cant index table vertices]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=233787#p233787"><![CDATA[
+I'm getting this simple error but I have no idea why lua is not indexing the table...<div class="codebox"><p>Code: </p><pre><code>Errormain.lua:104: attempt to index local 'vn' (a nil value)Tracebackmain.lua:104: in function 'polyPoint'main.lua:41: in function 'update'[C]: in function 'xpcall'</code></pre></div>This is the table with the vertices for a polygon shape. Its in funciton load<div class="codebox"><p>Code: </p><pre><code>--love.load()v = {}v[1] = {x = 200,y = 100}v[2] = {x = 400,y = 130}v[3] = {x = 350,y = 300}v[4] = {x = 250,y = 300}--test is a string that outputs "collision" if the collision is truetest = ""</code></pre></div>I am using push.lua so I set the mouse.x and mouse.y to game values with push:toGame(x,y)<br>I'm also aware that this can return nil so I make an if statement to stop it from checking nil<div class="codebox"><p>Code: </p><pre><code>--love.update()local x = love.mouse.getX()local y = love.mouse.getY()mouse.x,mouse.y = push:toGame(x,y)  if not(mouse.x == nil) and not(mouse.y == nil) then    if polyPoint(v,mouse.x,mouse.y) then      test = "collision"    else      test = ""    end  else    test = ""  end</code></pre></div>The polygon draws perfect so I doubt my table has problems in syntax. <div class="codebox"><p>Code: </p><pre><code> --love.draw()    love.graphics.polygon("fill",v[1].x,v[1].y,v[2].x,v[2].y,v[3].x,v[3].y,v[4].x,v[4].y)    love.graphics.print(""..test,0,0)</code></pre></div>This is where the error points to, the line with &lt;&lt; local vn = vertices[next] &gt;&gt; I would think you can drop a table in a variable like this.<div class="codebox"><p>Code: </p><pre><code>function polyPoint(vertices,px,py)local collision = falselocal next = 1  for current = 1, #vertices do    next = current + 1    if (next == #vertices) then      next = 1    end    local vc = vertices[current]    local vn = vertices[next]    if(((vc.y &gt;= py) or (vc.y &lt; py and vn.y &gt;= py)) and    (px &lt; (vn.x - vc.x)*(py - vc.y)/(vn.y - vc.y)+vc.x)) then        collision = not(collision)    end  end  return collisionend</code></pre></div>The original post is here about 2d point and polygon collision detection using "Jordan Curve Theorem" math.<br><a href="http://www.jeffreythompson.org/collision-detection/poly-point.php" class="postlink">http://www.jeffreythompson.org/collisio ... point.php </a><br><br>If you don't want to go to the site here is the original code. Its in C++. I converted it into Lua or at least tried to.<div class="codebox"><p>Code: </p><pre><code>float px = 0;    // point positionfloat py = 0;// array of PVectors, one for each vertex in the polygonPVector[] vertices = new PVector[4];void setup() {  size(600,400);  noCursor();  strokeWeight(5);  // make the point easier to see  // set position of the vertices  // here we draw a distorted trapezoid, but  // you could make much more complex shapes  // or even randomize the points!  vertices[0] = new PVector(200,100);  vertices[1] = new PVector(400,130);  vertices[2] = new PVector(350,300);  vertices[3] = new PVector(250,300);}void draw() {  background(255);  // update point to mouse coordinates  px = mouseX;  py = mouseY;  // check for collision  // if hit, change fill color  boolean hit = polyPoint(vertices, px,py);  if (hit) fill(255,150,0);  else fill(0,150,255);  // draw the polygon using beginShape()  noStroke();  beginShape();  for (PVector v : vertices) {    vertex(v.x, v.y);  }  endShape();  // draw the point  stroke(0, 150);  point(px,py);}// POLYGON/POINTboolean polyPoint(PVector[] vertices, float px, float py) {  boolean collision = false;  // go through each of the vertices, plus  // the next vertex in the list  int next = 0;  for (int current=0; current&lt;vertices.length; current++) {    // get next vertex in list    // if we've hit the end, wrap around to 0    next = current+1;    if (next == vertices.length) next = 0;    // get the PVectors at our current position    // this makes our if statement a little cleaner    PVector vc = vertices[current];    // c for "current"    PVector vn = vertices[next];       // n for "next"    // compare position, flip 'collision' variable    // back and forth    if (((vc.y &gt;= py &amp;&amp; vn.y &lt; py) || (vc.y &lt; py &amp;&amp; vn.y &gt;= py)) &amp;&amp;         (px &lt; (vn.x-vc.x)*(py-vc.y) / (vn.y-vc.y)+vc.x)) {            collision = !collision;    }  }  return collision;}</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=149034">kuzika</a> — Wed May 20, 2020 4:44 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>

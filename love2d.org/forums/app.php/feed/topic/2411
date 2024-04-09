@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="http://love2d.org/forums/app.php/feed/topic/2411" />
+
+	<title>LÖVE</title>
+	
+	<link href="http://love2d.org/forums/index.php" />
+	<updated>2015-07-21T13:46:56+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>http://love2d.org/forums/app.php/feed/topic/2411</id>
+
+		<entry>
+		<author><name><![CDATA[congusbongus]]></name></author>
+		<updated>2015-07-21T13:46:56+00:00</updated>
+
+		<published>2015-07-21T13:46:56+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=186879#p186879</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=186879#p186879"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=186879#p186879"><![CDATA[
+Thanks for the Tiled loader, it's a great start.<br><br>I've started extending it a bit (CSV encoding support, arbitrary tile sizes) at <a href="https://github.com/cxong/LoveTiledMap" class="postlink">https://github.com/cxong/LoveTiledMap</a> so feel free to try it out!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=136845">congusbongus</a> — Tue Jul 21, 2015 1:46 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Senevri]]></name></author>
+		<updated>2013-08-14T22:07:30+00:00</updated>
+
+		<published>2013-08-14T22:07:30+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=119120#p119120</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=119120#p119120"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=119120#p119120"><![CDATA[
+I found this before the Advanced Tiled Loader, and this seems sufficient with the following addition:<div class="codebox"><p>Code: </p><pre><code>function TiledMap_Objects(filename, objectname)local xml = LoadXML(love.filesystem.read(filename))local objects = {}for k, sub in ipairs(xml[2]) doif (sub.label == "objectgroup") then print ("found objectgroup")for l, child in ipairs(sub) doto = child.xargto.properties = nilif child[1] ~= nil then to.properties = {}local property = {}for i, prop in ipairs(child[1]) dolocal name = prop.xarg.namelocal value = prop.xarg.value--property[name]=valueproperty.name = nameproperty.value = valueendtable.insert(to.properties, property)endif objectname == nil then table.insert(objects, to)elseif child.xarg.name == objectname then table.insert(objects, to)endendendendendreturn objectsend</code></pre></div>So I can access defined start areas etc.<br>*edit*<br>I had a need to access created properties (ie. a chest object could contain a 'loot' property, so I ended up expanding this. I should really switch the loader I'm using, but this is working for now. Hm.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=130927">Senevri</a> — Wed Aug 14, 2013 10:07 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[crow]]></name></author>
+		<updated>2011-03-11T08:00:44+00:00</updated>
+
+		<published>2011-03-11T08:00:44+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=27755#p27755</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=27755#p27755"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=27755#p27755"><![CDATA[
+Very nice work and the amount of replies you have for this project is just epic very very nice work 10 ++ for you and the dev team<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=2041">crow</a> — Fri Mar 11, 2011 8:00 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SiENcE]]></name></author>
+		<updated>2011-03-10T20:32:54+00:00</updated>
+
+		<published>2011-03-10T20:32:54+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=27726#p27726</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=27726#p27726"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=27726#p27726"><![CDATA[
+<a href="http://img827.imageshack.us/i/alienslimemakinggames.jpg/" class="postlink"><img src="http://img827.imageshack.us/img827/9687/alienslimemakinggames.th.jpg" class="postimage" alt="Image"></a><br><br>I found Alien Slime mentioned in the german "making games magazin".<br><br>The first LÖVE Game mentioned in press ;-) ?<br><br>good job!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=117">SiENcE</a> — Thu Mar 10, 2011 8:32 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[kikito]]></name></author>
+		<updated>2011-01-31T18:04:34+00:00</updated>
+
+		<published>2011-01-31T18:04:34+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=25930#p25930</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=25930#p25930"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=25930#p25930"><![CDATA[
+Well, I knew of <a href="http://love2d.org/forums/viewtopic.php?f=5&amp;t=2097&amp;hilit=tiled" class="postlink">one implementation</a>, but I personally like yours better.<br><br>Also, nice game!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=710">kikito</a> — Mon Jan 31, 2011 6:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ghoulsblade]]></name></author>
+		<updated>2011-01-31T18:16:57+00:00</updated>
+
+		<published>2011-01-31T17:53:41+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=25929#p25929</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=25929#p25929"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=25929#p25929"><![CDATA[
+we used the "tiled" map editor ( <a href="http://www.mapeditor.org/" class="postlink">http://www.mapeditor.org/</a> )<br>which supports multiple layers and has a xml based map format.<br><br>since we couldn't find a loader for lua/love at the gamejam,<br>i now extracted everything needed to load and display one of those map files into a single lua file,<br>might be useful for a few people at the next game jam.<br><br>EDIT : also wrote it to the wiki : <a href="http://love2d.org/wiki/TiledMapLoader" class="postlink">http://love2d.org/wiki/TiledMapLoader</a><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2306">love_tiledmap.zip</a></dt></dl><br /><dl class="file"><dt><span class="imageset icon_topic_attach"></span> <a class="postlink" href="http://love2d.org/forums/download/file.php?id=2305">tiledmap.lua</a></dt></dl><p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1577">ghoulsblade</a> — Mon Jan 31, 2011 5:53 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[vrld]]></name></author>
+		<updated>2011-01-31T17:03:17+00:00</updated>
+
+		<published>2011-01-31T17:03:17+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=25927#p25927</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=25927#p25927"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=25927#p25927"><![CDATA[
+Yeah, kill those puny humans!<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1087">vrld</a> — Mon Jan 31, 2011 5:03 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[TechnoCat]]></name></author>
+		<updated>2011-01-31T15:05:52+00:00</updated>
+
+		<published>2011-01-31T15:05:52+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=25910#p25910</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=25910#p25910"/>
+		<title type="html"><![CDATA[Re: AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=25910#p25910"><![CDATA[
+Haha, very nice game. Reminds me of <a href="http://www.dosmuseum.com/pages/view.php?ref=1975&amp;search=&amp;order_by=rating&amp;sort=DESC&amp;offset=78&amp;archive=0&amp;k=" class="postlink">deathball</a> a lot.<p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=649">TechnoCat</a> — Mon Jan 31, 2011 3:05 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[ghoulsblade]]></name></author>
+		<updated>2011-01-31T12:54:59+00:00</updated>
+
+		<published>2011-01-31T12:54:59+00:00</published>
+		<id>http://love2d.org/forums/viewtopic.php?p=25906#p25906</id>
+		<link href="http://love2d.org/forums/viewtopic.php?p=25906#p25906"/>
+		<title type="html"><![CDATA[AlienSlime! (GlobalGameJam2011)]]></title>
+
+		
+		<content type="html" xml:base="http://love2d.org/forums/viewtopic.php?p=25906#p25906"><![CDATA[
+made with löve <img class="smilies" src="http://love2d.org/forums/images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br><a href="http://globalgamejam.org/2011/alienslime" class="postlink">http://globalgamejam.org/2011/alienslime</a><br> <strong>iframe</strong> <br> <strong>iframe</strong> <br> <strong>iframe</strong> <p>Statistics: Posted by <a href="http://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=1577">ghoulsblade</a> — Mon Jan 31, 2011 12:54 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
