@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 01:05:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Tutorial:Callback Functions (Français) - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"Tutorial","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":500,"wgPageName":"Tutorial:Callback_Functions_(Français)","wgTitle":"Callback Functions (Français)","wgCurRevisionId":26950,"wgRevisionId":26950,"wgArticleId":831,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Tutorials (Français)"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Tutorial:Callback_Functions_(Français)","wgRelevantArticleId":831,"wgRequestId":"06d246b1c3d087727400d208","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load8edb.css?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<link rel="stylesheet" href="load9f67.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;printable=1&amp;skin=love"/>
+<script async="" src="load0045.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;printable=1&amp;skin=love"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,follow"/>
+<link rel="alternate" type="application/rdf+xml" title="Tutorial:Callback Functions (Français)" href="index37d4.php?title=Special:ExportRDF/Tutorial:Callback_Functions_(Fran%C3%A7ais)&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="api-result251f.xml?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-500 ns-subject page-Tutorial_Callback_Functions_Français rootpage-Tutorial_Callback_Functions_Français skin-love action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-tutorial" class="selected"><a href="../wiki/Tutorial_Callback_Functions_(Fran%c3%a7ais).html">Tutorial</a></li>
+				<li id="ca-talk" class="new"><a href="../wiki/Tutorial_talk_Callback_Functions_(Fran%c3%a7ais).html?title=Tutorial_talk:Callback_Functions_(Fran%C3%A7ais)&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="index42bc.html?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="index239e.html?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">Tutorial:Callback Functions (Français)</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub"></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Les fonctions <a href="../wiki/Category_Callbacks_(Fran%c3%a7ais).html" title="Category:Callbacks (Français)">callback</a> (fonctions de rappel) sont appelées dans LÖVE par la fonction <a href="../wiki/love-625.html" title="love.run (Français)">love.run</a> pour effectuer des tâches diverses et sont toutes facultatives. Toutefois, pour une expérience de jeu complète il faudra probablement en utiliser la quasi-totalité, il est donc intéressant de les connaître.
+</p><p>Une fonction de rappel, pour ceux qui sont nouveaux en programmation ou peu familier avec ce terme, est une fonction qui fonctionne en arrière en quelque sorte. Dans le cas d'une fonction classique comme <a href="../wiki/love.graphics-166.html" title="love.graphics.draw (Français)">love.graphics.draw</a> ou math.floor, vous appelez cette fonction et LÖVE ou Lua effectue une tâche. Dans le cas d'une fonction de rappel (callback), au contraire, c'est vous qui développez la fonction et LÖVE qui l'appelle lorsque nécessaire. Cela permet de laisser votre code organisé et optimal. Par exemple, comme love.load ne sera appelé que lorsque le jeu est démarré pour la première fois (avant tout autre callback), c'est un endroit approprié pour placer le code qui charge le contenu du jeu et prépare également ses différents éléments.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#love.load"><span class="tocnumber">1</span> <span class="toctext">love.load</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#love.update"><span class="tocnumber">2</span> <span class="toctext">love.update</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#love.draw"><span class="tocnumber">3</span> <span class="toctext">love.draw</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#love.mousepressed"><span class="tocnumber">4</span> <span class="toctext">love.mousepressed</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#love.mousereleased"><span class="tocnumber">5</span> <span class="toctext">love.mousereleased</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#love.keypressed"><span class="tocnumber">6</span> <span class="toctext">love.keypressed</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#love.keyreleased"><span class="tocnumber">7</span> <span class="toctext">love.keyreleased</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#love.focus"><span class="tocnumber">8</span> <span class="toctext">love.focus</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#love.quit"><span class="tocnumber">9</span> <span class="toctext">love.quit</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Autres_langues"><span class="tocnumber">10</span> <span class="toctext">Autres langues</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="love.load"><a href="../wiki/love-626.html" title="love.load (Français)">love.load</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+   <span class="n">image</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newImage</span><span class="p">(</span><span class="s2">&quot;cake.jpg&quot;</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">newFont</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setBackgroundColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction est appelée une seule fois, lorsque le jeu est lancé, et est généralement celle où vous chargez des ressources, initialisez des variables et des paramètres spécifiques. Toutes ces choses peuvent aussi bien être faites n'importe où, mais les faire à cette endroit signifie qu'elles ne sont exécutées qu'une fois, ce qui économise beaucoup de ressources système.
+</p>
+<h2><span class="mw-headline" id="love.update"><a href="../wiki/love-627.html" title="love.update (Français)">love.update</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">love</span><span class="p">.</span><span class="n">keyboard</span><span class="p">.</span><span class="n">isDown</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span> <span class="kr">then</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">-- Cela incrémentera num par 100 à chaque seconde</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction est appelée en permanence et sera probablement l'endroit où la plupart de vos calculs seront effectués. 'dt' signifie «&#160;<a href="../wiki/love.timer-8.html" title="love.timer.getDelta (Français)">delta temps</a>&#160;», c'est le nombre de secondes depuis la dernière fois que cette fonction a été appelée (qui est habituellement une petite valeur du type 0.025714). 
+</p>
+<h2><span class="mw-headline" id="love.draw"><a href="../wiki/love-628.html" title="love.draw (Français)">love.draw</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">imgx</span><span class="p">,</span> <span class="n">imgy</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cliquez et glissez le gâteau autour, ou utilisez les touches de direction&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p><code><a href="../wiki/love-628.html" title="love.draw (Français)">love.draw</a></code> est l'endroit pour tout ce qui concerne l'affichage («&#160;draw&#160;» signifie tracer) et si vous appelez l'un des <code><a href="../wiki/love.graphics-166.html" title="love.graphics.draw (Français)">love.graphics.draw</a></code> en dehors de cette fonction elle n'aura pas d'effet. Cette fonction est aussi appelée en permanence, gardez donc à l'esprit que si vous modifiez la police/couleur/mode/etc à la fin de la fonction, alors cela aura un effet sur les éléments au début de la fonction. Par exemple&#160;: 
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">load</span><span class="p">()</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ce texte n&#39;est pas noir en raison de la lligne du dessous&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="n">setColor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+   <span class="n">love</span><span class="p">.</span><span class="n">graphics</span><span class="p">.</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ce texte est rouge&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<h2><span class="mw-headline" id="love.mousepressed"><a href="../wiki/love-629.html" title="love.mousepressed (Français)">love.mousepressed</a></span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Disponible depuis LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>Ce-tte variant n'est pas supporté-e par des versions plus anciennes.</small>
+</td></tr></tbody></table>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">mousepressed</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span><span class="n">istouch</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">button</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+      <span class="n">imgx</span> <span class="o">=</span> <span class="n">x</span> <span class="c1">-- déplace l&#39;image à l&#39;emplacement du clic de souris</span>
+      <span class="n">imgy</span> <span class="o">=</span> <span class="n">y</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction (souris pressée) est appelée à chaque fois qu'un bouton de la souris est pressé. Elle reçoit le bouton et les coordonnées de l'emplacement où celui-ci a été pressé. Le bouton peut être l'une de ces <a href="../wiki/MouseConstant_(Fran%c3%a7ais).html" title="MouseConstant (Français)">constantes</a>. Cette fonction va de paire avec <code><a href="../wiki/love-630.html" title="love.mousereleased (Français)">love.mousereleased</a></code> (souris relâché). 
+</p>
+<h2><span class="mw-headline" id="love.mousereleased"><a href="../wiki/love-630.html" title="love.mousereleased (Français)">love.mousereleased</a></span></h2>
+<table class="new-section" bgcolor="#d0d0ff" style="margin-top: 1em; padding: 3px; border-radius:5px; -moz-border-radius:5px;" data-newin="&#91;&#91;0.10.0&#93;&#93;">
+<tbody><tr>
+<td><i> <b>Disponible depuis LÖVE <a href="../wiki/0.10-2.html" title="0.10.0">0.10.0</a></b> </i>
+</td></tr>
+<tr>
+<td><small>Ce-tte variant n'est pas supporté-e par des versions plus anciennes.</small>
+</td></tr></tbody></table>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">mousereleased</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">istouch</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">button</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
+      <span class="n">fireSlingshot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1">-- Cette fonction personnalisée complétement incroyable est définir ailleurs</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction (souris relâchée) est appelée chaque fois qu'un bouton de la souris est relâché et il reçoit le bouton et les coordonnées de l'endroit où il a été relâché. Vous pouvez avoir cette fonction avec ou sans <code><a href="../wiki/love-629.html" title="love.mousepressed (Français)">love.mousepressed</a></code>, ces 2 fonctions ne sont absolument pas liées.
+</p>
+<h2><span class="mw-headline" id="love.keypressed"><a href="../wiki/love-631.html" title="love.keypressed (Français)">love.keypressed</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keypressed</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
+      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was pressed.&quot;</span>
+   <span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="kr">then</span>
+      <span class="n">a_down</span> <span class="o">=</span> <span class="kc">true</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction (touche préssée) est appelée chaque fois qu'une touche du clavier est enfoncée et reçoit la touche (key) qui a été enfoncée. La touche peut être l'une de ces <a href="../wiki/KeyConstant_(Fran%c3%a7ais).html" title="KeyConstant (Français)">constantes</a>. Cette fonction va très bien avec <code><a href="../wiki/love-632.html" title="love.keyreleased (Français)">love.keyreleased</a></code> (touche relâchée). 
+</p>
+<h2><span class="mw-headline" id="love.keyreleased"><a href="../wiki/love-632.html" title="love.keyreleased (Français)">love.keyreleased</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">keyreleased</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)</span>
+   <span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span> <span class="kr">then</span>
+      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;The B key was released.&quot;</span>
+   <span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="kr">then</span>
+      <span class="n">a_down</span> <span class="o">=</span> <span class="kc">false</span>
+   <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction est appelée chaque fois qu'une touche du clavier est relâchée et reçoit la touche (key) qui a été relâchée. Vous pouvez avoir cette fonction avec ou sans <code><a href="../wiki/love-631.html" title="love.keypressed (Français)">love.keypressed</a></code> (touche pressée), elles ne sont absolument pas liées.
+</p>
+<h2><span class="mw-headline" id="love.focus"><a href="../wiki/love-633.html" title="love.focus (Français)">love.focus</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">focus</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="ow">not</span> <span class="n">f</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LOST FOCUS&quot;</span><span class="p">)</span>
+  <span class="kr">else</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;GAINED FOCUS&quot;</span><span class="p">)</span>
+  <span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction est appelée lorsque l'utilisateur clique hors ou dans la fenêtre LÖVE. Par exemple, s'il joue en mode fenêtré et qu'il clique sur son navigateur Internet, le jeu pourrait être notifié et automatiquement mettre en pause la partie. 
+</p>
+<h2><span class="mw-headline" id="love.quit"><a href="../wiki/love-634.html" title="love.quit (Français)">love.quit</a></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">function</span> <span class="nc">love</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thanks for playing! Come back soon!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+<p>Cette fonction est appelée chaque fois que l'utilisateur clique sur le bouton de fermeture de fenêtre (souvent une croix). Par exemple, si l'utilisateur décide qu'il a fini de jouer, il peut cliquer sur le bouton Fermer. Puis, avant de se fermer, le jeu peut enregistrer son état. 
+</p><p>Voilà pour les fonctions de «&#160;callback&#160;» et leur utilisation simple.
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Autres_langues">Autres langues</span></h2>
+<div class="i18n">
+<p><a href="../wiki/Tutorial_Callback_Functions_(Dansk).html?title=Tutorial:Callback_Functions_(Dansk)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Dansk) (page does not exist)">Dansk</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Deutsch).html" title="Tutorial:Callback Functions (Deutsch)">Deutsch</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions.html" title="Tutorial:Callback Functions">English</a>&#160;&#8211; 
+<a href="../wiki/Tutorial_Callback_Functions_(Espa%c3%b1ol).html" title="Tutorial:Callback Functions (Español)">Español</a>&#160;&#8211;
+<a class="mw-selflink selflink">Français</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Indonesia).html?title=Tutorial:Callback_Functions_(Indonesia)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Indonesia) (page does not exist)">Indonesia</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Italiano).html" title="Tutorial:Callback Functions (Italiano)">Italiano</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Lietuvi%c5%a1kai).html?title=Tutorial:Callback_Functions_(Lietuvi%C5%A1kai)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Lietuviškai) (page does not exist)">Lietuviškai</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Magyar).html?title=Tutorial:Callback_Functions_(Magyar)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Magyar) (page does not exist)">Magyar</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Nederlands).html?title=Tutorial:Callback_Functions_(Nederlands)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Nederlands) (page does not exist)">Nederlands</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Polski).html" title="Tutorial:Callback Functions (Polski)">Polski</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Portugu%c3%aas).html" title="Tutorial:Callback Functions (Português)">Português</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Rom%c3%a2n%c4%83).html?title=Tutorial:Callback_Functions_(Rom%C3%A2n%C4%83)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Română) (page does not exist)">Română</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Slovensk%c3%bd).html?title=Tutorial:Callback_Functions_(Slovensk%C3%BD)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Slovenský) (page does not exist)">Slovenský</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Suomi).html?title=Tutorial:Callback_Functions_(Suomi)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Suomi) (page does not exist)">Suomi</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Svenska).html" title="Tutorial:Callback Functions (Svenska)">Svenska</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(T%c3%bcrk%c3%a7e).html?title=Tutorial:Callback_Functions_(T%C3%BCrk%C3%A7e)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Türkçe) (page does not exist)">Türkçe</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%c4%8cesky).html?title=Tutorial:Callback_Functions_(%C4%8Cesky)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Česky) (page does not exist)">Česky</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%ce%95%ce%bb%ce%bb%ce%b7%ce%bd%ce%b9%ce%ba%ce%ac).html?title=Tutorial:Callback_Functions_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Ελληνικά) (page does not exist)">Ελληνικά</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%d0%91%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8).html?title=Tutorial:Callback_Functions_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Български) (page does not exist)">Български</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%d0%a0%d1%83%d1%81%d1%81%d0%ba%d0%b8%d0%b9).html" title="Tutorial:Callback Functions (Русский)">Русский</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%d0%a1%d1%80%d0%bf%d1%81%d0%ba%d0%b8).html?title=Tutorial:Callback_Functions_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (Српски) (page does not exist)">Српски</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%d0%a3%d0%ba%d1%80%d0%b0%d1%97%d0%bd%d1%81%d1%8c%d0%ba%d0%b0).html" title="Tutorial:Callback Functions (Українська)">Українська</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%d7%a2%d7%91%d7%a8%d7%99%d7%aa).html?title=Tutorial:Callback_Functions_(%D7%A2%D7%91%D7%A8%D7%99%D7%AA)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (עברית) (page does not exist)">עברית</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%e0%b9%84%e0%b8%97%e0%b8%a2).html?title=Tutorial:Callback_Functions_(%E0%B9%84%E0%B8%97%E0%B8%A2)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (ไทย) (page does not exist)">ไทย</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%e6%97%a5%e6%9c%ac%e8%aa%9e).html" title="Tutorial:Callback Functions (日本語)">日本語</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%e6%ad%a3%e9%ab%94%e4%b8%ad%e6%96%87).html?title=Tutorial:Callback_Functions_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)&amp;action=edit&amp;redlink=1" class="new" title="Tutorial:Callback Functions (正體中文) (page does not exist)">正體中文</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87).html" title="Tutorial:Callback Functions (简体中文)">简体中文</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(Ti%e1%ba%bfng_Vi%e1%bb%87t).html" title="Tutorial:Callback Functions (Tiếng Việt)">Tiếng Việt</a>&#160;&#8211;
+<a href="../wiki/Tutorial_Callback_Functions_(%ed%95%9c%ea%b5%ad%ec%96%b4).html" title="Tutorial:Callback Functions (한국어)">한국어</a> 
+<br />
+<span style="text-align:right;"><i><a href="../wiki/Help_i18n.html" title="Help:i18n">More info</a></i></span>
+</p>
+</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20240407233302
+Cache expiry: 86400
+Dynamic content: false
+[SMW] In‐text annotation parser time: 0 seconds
+CPU time usage: 0.041 seconds
+Real time usage: 1.030 seconds
+Preprocessor visited node count: 429/1000000
+Preprocessor generated node count: 1127/1000000
+Post‐expand include size: 4803/2097152 bytes
+Template argument size: 2208/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 10536/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  618.531      1 -total
+  0.91%    5.615      1 Template:i18n
+  0.49%    3.008     28 Template:Lang
+  0.39%    2.413      2 Template:newin_(Français)
+-->
+</div>
+<!-- Saved in parser cache with key love2d_wiki2:pcache:idhash:831-0!canonical and timestamp 20240407233301 and revision id 26950
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="indexbeb0.html?title=Tutorial:Callback_Functions_(Fran%c3%a7ais)&amp;oldid=26950">http://love2d.org/w/index.php?title=Tutorial:Callback_Functions_(Français)&amp;oldid=26950</a>"</div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../wiki/Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="../wiki/Category_Tutorials_(Fran%c3%a7ais).html" title="Category:Tutorials (Français)">Tutorials (Français)</a></li></ul></div></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="index2164.html?title=Special:UserLogin&amp;returnto=Tutorial%3ACallback+Functions+%28Fran%C3%A7ais%29&amp;returntoquery=printable%3Dyes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../wiki/Main_Page.html" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="../wiki/love.html">love</a></li>
+											<li id="n-love.audio"><a href="../wiki/love-2.html">love.audio</a></li>
+											<li id="n-love.data"><a href="../wiki/love-3.html">love.data</a></li>
+											<li id="n-love.event"><a href="../wiki/love-4.html">love.event</a></li>
+											<li id="n-love.filesystem"><a href="../wiki/love-5.html">love.filesystem</a></li>
+											<li id="n-love.font"><a href="../wiki/love-6.html">love.font</a></li>
+											<li id="n-love.graphics"><a href="../wiki/love-7.html">love.graphics</a></li>
+											<li id="n-love.image"><a href="../wiki/love-8.html">love.image</a></li>
+											<li id="n-love.joystick"><a href="../wiki/love-9.html">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="../wiki/love-10.html">love.keyboard</a></li>
+											<li id="n-love.math"><a href="../wiki/love-11.html">love.math</a></li>
+											<li id="n-love.mouse"><a href="../wiki/love-12.html">love.mouse</a></li>
+											<li id="n-love.physics"><a href="../wiki/love-13.html">love.physics</a></li>
+											<li id="n-love.sound"><a href="../wiki/love-14.html">love.sound</a></li>
+											<li id="n-love.system"><a href="../wiki/love-15.html">love.system</a></li>
+											<li id="n-love.thread"><a href="../wiki/love-16.html">love.thread</a></li>
+											<li id="n-love.timer"><a href="../wiki/love-17.html">love.timer</a></li>
+											<li id="n-love.touch"><a href="../wiki/love-18.html">love.touch</a></li>
+											<li id="n-love.video"><a href="../wiki/love-19.html">love.video</a></li>
+											<li id="n-love.window"><a href="../wiki/love-20.html">love.window</a></li>
+											<li id="n-lua-enet"><a href="../wiki/lua-enet.html">lua-enet</a></li>
+											<li id="n-luasocket"><a href="../wiki/socket.html">luasocket</a></li>
+											<li id="n-utf8"><a href="../wiki/utf8.html">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="../index.html" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="../forums/index.html" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="../wiki/Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="../wiki/Special_RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="../wiki/Special_Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="../wiki/Special_WhatLinksHere/Tutorial_Callback_Functions_(Fran%c3%a7ais).html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="../wiki/Special_RecentChangesLinked/Tutorial_Callback_Functions_(Fran%c3%a7ais).html" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="../wiki/Special_SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-permalink"><a href="index493c.html?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&amp;oldid=26950" title="Permanent link to this revision of the page">Permanent link</a></li>
+											<li id="t-info"><a href="indexc415-2.html?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="lastmod"> This page was last edited on 21 August 2021, at 19:21.</li>
+									<li id="copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3</a> unless otherwise noted.</li>
+									<li id="privacy"><a href="../wiki/LOVE_Privacy_policy.html" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="../wiki/LOVE_About.html" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="../wiki/LOVE_General_disclaimer.html" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0},"limitreport":{"cputime":"0.041","walltime":"1.030","ppvisitednodes":{"value":429,"limit":1000000},"ppgeneratednodes":{"value":1127,"limit":1000000},"postexpandincludesize":{"value":4803,"limit":2097152},"templateargumentsize":{"value":2208,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10536,"limit":5000000},"timingprofile":["100.00%  618.531      1 -total","  0.91%    5.615      1 Template:i18n","  0.49%    3.008     28 Template:Lang","  0.39%    2.413      2 Template:newin_(Français)"]},"cachereport":{"timestamp":"20240407233302","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":30});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=Tutorial:Callback_Functions_(Fran%C3%A7ais)&printable=yes by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2024 01:05:43 GMT -->
+</html>
