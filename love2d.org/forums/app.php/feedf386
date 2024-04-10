@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-10T13:22:32+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed</id>
+
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T13:22:32+00:00</updated>
+
+		<published>2024-04-10T13:22:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259209#p259209</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259209#p259209"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259209#p259209"><![CDATA[
+Just adding: Youre trying to set a bolean using if cases on a bolean. <br>Thats just adding extra steps, if you dont have anything else that uses it just do it in one go:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y)  then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 1:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:23:20+00:00</updated>
+
+		<published>2024-04-10T12:23:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259208#p259208</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259208#p259208"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259208#p259208"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div></div></blockquote>TYSM!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:21:25+00:00</updated>
+
+		<published>2024-04-10T12:21:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259207#p259207</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259207#p259207"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259207#p259207"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div>oops wrong person sorry</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:20:45+00:00</updated>
+
+		<published>2024-04-10T12:20:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259206#p259206</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259206#p259206"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259206#p259206"><![CDATA[
+NOPE. I need that incase the if statement is false, that is definitely what I need. I have not programmed every tile into a read/count system for the if condition because it's just a test. That will make it faster in the future.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2024-04-10T11:56:39+00:00</updated>
+
+		<published>2024-04-10T11:56:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259205#p259205</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259205#p259205"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259205#p259205"><![CDATA[
+This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Apr 10, 2024 11:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2024-04-10T07:08:32+00:00</updated>
+
+		<published>2024-04-10T07:08:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259204#p259204</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259204#p259204"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259204#p259204"><![CDATA[
+<blockquote class="uncited"><div>Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.</div></blockquote>I doubt that's what you need to type.<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end</code></pre></div>This part makes no sense like this; you set platformer.touching to 1 if those 4 conditions are all true, but then you set it to 0 regardless, since "if true then" is always going to execute... and that also needs an end, hence the error in the first place.<br>What did you want to do there?<br>Did you want to just put an else there, like this?:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else        platformer.touching = 0    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Wed Apr 10, 2024 7:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T00:30:02+00:00</updated>
+
+		<published>2024-04-10T00:30:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259203#p259203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259203#p259203"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259203#p259203"><![CDATA[
+It means my editor flags the function as not having a matching end, it gets eaten at line 18.<br>"if true then" &lt; why have you came up with this? This line effectively is not exectuted as if true cancels itself. But it eats an extra end.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 12:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T00:05:36+00:00</updated>
+
+		<published>2024-04-10T00:05:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259202#p259202</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259202#p259202"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259202#p259202"><![CDATA[
+Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-09T23:59:30+00:00</updated>
+
+		<published>2024-04-09T23:59:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259201#p259201</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259201#p259201"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259201#p259201"><![CDATA[
+line 11 is not closed. <br>Get an editor with block checks, really handy.<br>Also look at line 18 where you have a mess.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Tue Apr 09, 2024 11:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-09T23:57:33+00:00</updated>
+
+		<published>2024-04-09T23:57:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259200#p259200</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259200#p259200"/>
+		<title type="html"><![CDATA[Support and Development • Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259200#p259200"><![CDATA[
+I am trying to make a platformer engine by detecting if an object is inbetween the corners of a platform. An error I didn't get before which I didn't do anything wrong. It said expected 'end' after 'function love.load()', but as you can see below, I wrote end.<br><br>My program:<div class="codebox"><p>Code: </p><pre><code>function love.load()    tile = love.graphics.newImage('grassTile.png')    platformer = {}        platformer.a = {}            platformer.a.x = 600            platformer.a.y = 400    platformer.scroll = 0    platformer.y = 200endfunction love.update(dt)    platformer.a.corner_lb_x = platformer.a.x - (tile:getWidth()/2)    platformer.a.corner_lb_y = platformer.a.y - (tile:getHeight()/2)    platformer.a.corner_rt_x = platformer.a.x + (tile:getWidth()/2)    platformer.a.corner_rt_y = platformer.a.y + (tile:getHeight()/2)    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end    if platformer.touching == 0 then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end     platformer.y = platformer.y + 1endfunction love.draw()    love.graphics.setBackgroundColor(0,0.2,0.8)    love.graphics.rectangle("fill",400,400,10,10)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Tue Apr 09, 2024 11:57 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Eric Matyas]]></name></author>
+		<updated>2024-04-09T14:22:06+00:00</updated>
+
+		<published>2024-04-09T14:22:06+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259199#p259199</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259199#p259199"/>
+		<title type="html"><![CDATA[Libraries and Tools • Re: Free Music / SFX Resource for Your Games - Over 2500 Tracks]]></title>
+
+					<category term="Libraries and Tools" scheme="https://love2d.org/forums/viewforum.php?f=5" label="Libraries and Tools"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259199#p259199"><![CDATA[
+Hey Everyone,<br><br>Here's another brand new MP3 track on my Sci-Fi  12 page:<br><br>"INTROSPECTIVE MACHINE INTELLIGENCE"<br><a href="https://soundimage.org/sci-fi-12/" class="postlink">https://soundimage.org/sci-fi-12/</a><br><br>I wonder what kinds of things they will ponder.<br><br>Anyhow...enjoy and keep creating cool stuff!  :-)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=135528">Eric Matyas</a> — Tue Apr 09, 2024 2:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bondrusiek]]></name></author>
+		<updated>2024-04-08T17:33:38+00:00</updated>
+
+		<published>2024-04-08T17:33:38+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259197#p259197</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259197#p259197"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Simple LÖVE games]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259197#p259197"><![CDATA[
+Falling graphical effects<br> <strong>iframe</strong> <br>link to the repository in the video description<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258195">Bondrusiek</a> — Mon Apr 08, 2024 5:33 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-07T20:55:58+00:00</updated>
+
+		<published>2024-04-07T20:55:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259195#p259195</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259195#p259195"/>
+		<title type="html"><![CDATA[Games and Creations • Re: 3D Physics Engine]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259195#p259195"><![CDATA[
+<blockquote class="uncited"><div>Sup y'all. Been working on a 3D physics engine for a while and finally made progress with this.<br><br>This engine uses a clipping algorithm that I came up with and does not rely on GJK/EPA or SAT. This does give the disadvantage of it only working with vertex shapes.<br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">Screenshots</strong></span><br><br><img src="https://i.imgur.com/mBAgMbm.gif" class="postimage" alt="Image"><br><br><img src="https://i.imgur.com/RgeqCsS.gif" class="postimage" alt="Image"><br><br><strong class="text-strong">I'll release the source of this soon, once I clean up the code. It's not as stable and kinda laggy atm.</strong><br><br><span style="font-size:150%;line-height:116%"><strong class="text-strong">UPDATE: Here is the preview demo!</strong></span><br><br><strong class="text-strong">CONTROLS:</strong><ul><li>Use WASDEQ and mouse buttons to move the camera</li><li>Press [1] to toggle wireframe</li><li>Press [2] to toggle bounding boxes</li><li>Press [3] to pause the physics simulation and [T] to step through each frame</li><li>Press [F] to fire an object</li><li>Press [R] to move all objects</li></ul>Apologies if the code is messy. Some of it dates back to 2 years ago!<br><br><strong class="text-strong">Please also consider following my GitHub for updates: <a href="https://github.com/0x1ED1CE/FPS" class="postlink">https://github.com/0x1ED1CE/FPS</a></strong></div></blockquote>Wow! This is impresive!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Sun Apr 07, 2024 8:55 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T20:37:49+00:00</updated>
+
+		<published>2024-04-07T20:37:49+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259194#p259194</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259194#p259194"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259194#p259194"><![CDATA[
+Glad that worked.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 8:37 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T17:04:47+00:00</updated>
+
+		<published>2024-04-07T17:04:47+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259193#p259193</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259193#p259193"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259193#p259193"><![CDATA[
+Thank you, that was the problem. I have no earthly idea how that could have been muted. Must have hit some bizarre keyboard shortcut or something. Thanks again!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 5:04 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[gurenberg]]></name></author>
+		<updated>2024-04-07T13:59:05+00:00</updated>
+
+		<published>2024-04-07T13:59:05+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259192#p259192</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259192#p259192"/>
+		<title type="html"><![CDATA[Games and Creations • Refractor - Devlog]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259192#p259192"><![CDATA[
+Hello everyone <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"><br>After lurking the forums for long, I'm finally making a game.<br><br><img src="https://img.itch.zone/aW1hZ2UvMjYyMzg4OC8xNTYzMjk2MS5wbmc=/347x500/KI9Wj9.png" class="postimage" alt="Image"><br>(Screenshot) My attempt to make 'teal' color<br><br>Refractor is about combining special devices - let's call them Nodes<br>to "sculpt" any color out of pure white.<br>You can send a Node's output to another Node by linking them with a Cable.<br>A Node shall usually transform input colors into a new output color:<br>with the right combination you can make any color.<br>The game will feature a Color-dex of known colors like Red, Teal and so on;<br>to complete the game all of the colors need to be discovered.<br><br>Current version's features<br><br><strong class="text-strong">List of Nodes</strong><br>Emitter: outputs pure white to infinite Nodes<br>Screen: can display one color input<br>Refractor: outputs one of the RGB channels of a single input color<br>Attenuator: dimms the input color<br>Combiner: outputs the <strong class="text-strong">normalized</strong> sum of inputs<br><br><strong class="text-strong">How to play</strong><br>A: Adds a Emitter<br>S: Adds a Screen<br>D: Adds a Refractor<br>F: Adds a Attenuator<br>G: Adds a Combiner<br>CTRL+Left Mouse Buttton: Switch channel of Refractor/Adjust Attenuator's opacity<br>ALT+Left Mouse Buttton: Deletes a Node<br><br>To link two Nodes move the cursor over the are below the first, a circle will show up.<br>Hold left mouse' button and drag the Cable over the area above the second Node,<br>when a circle appears release the mouse: done!<br>You can remove a Cable by dragging it away from the second Node or by clicking<br>the 'X' in the middle of the Cable.<br><br><strong class="text-strong">Libraries used</strong><br><a href="https://github.com/rxi/classic" class="postlink">classic for OOP</a><br><a href="https://github.com/gvx/bitser" class="postlink">bitser for serialization</a><br><a href="https://github.com/a327ex/boipushy" class="postlink">boipushy for input</a><dl class="file"><dt><img src="./images/upload_icons/love.png" alt="" /> <a class="postlink" href="https://love2d.org/forums/download/file.php?id=24129">refractor_0dev.love</a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=265164">gurenberg</a> — Sun Apr 07, 2024 1:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-07T10:38:24+00:00</updated>
+
+		<published>2024-04-07T10:38:24+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259191#p259191</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259191#p259191"/>
+		<title type="html"><![CDATA[General • Re: Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259191#p259191"><![CDATA[
+That app/channel might be muted, Linux uses separate outputs (pulse audio) for each audio source and each audio output can be individually muted. Go to application volumes in systray and check that.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sun Apr 07, 2024 10:38 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[togFox]]></name></author>
+		<updated>2024-04-07T01:36:39+00:00</updated>
+
+		<published>2024-04-07T01:36:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259190#p259190</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259190#p259190"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259190#p259190"><![CDATA[
+- your title has "unicorn blood sacrfice" (not mad crawl)<br>- instructions on first screen is v helpful<br>- messages appear at the top AND the bottom. V confusing. Suggest you drop the one at the bottom and just fill the log at the top.<br>- graphics is awesome<br>- the 'confused' effect where keys become random is a great mechanic<br>- I can see friends and enemies through walls when I 'display' tags. Intentional?<br>- equipping things is a bit unintuitive. I got it after clicking around a bit.<br>- suggest the heart beat is turned off when health is 100%<br>- using a wand of flames requires no less than four mouse clicks. At least the 2nd click can be removed.<br>- i realised there was no line of sight with the wand until after I'd committed to an attack. I couldn't see a way to cancel the attack. (suggest right-click to cancel wand).<br>- I got stuck on some stairs and had to quit the game. That sames stairs worked on at least 3 previous occasions (I went up/down a few times) but then got stuck the 4th time. Screen shot for what it's worth.<br><br>I think the game is really engaging. Much more improved once I realised I had to follow my party. I even stopped my other background game to focus on this one.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I wanted to explore more and see what else I can pick up and whack something on the head with my club.  <img class="smilies" src="https://love2d.org/forums/images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br><br>I played the exe version (not that that matters).<dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24128&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24128" class="postimage" alt="Untitled.jpg" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=170436">togFox</a> — Sun Apr 07, 2024 1:36 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-07T01:10:35+00:00</updated>
+
+		<published>2024-04-07T01:10:35+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259189#p259189</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259189#p259189"/>
+		<title type="html"><![CDATA[Support and Development • Re: Love2d touch functions?]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259189#p259189"><![CDATA[
+<blockquote class="uncited"><div>The title was too short to explain my problem fully, so here it is:<br>Right now, keyboard movement controls for my game are working perfectly ("a" to move left, "d" to move right, "space" to jump). However, I also want to test movement on my Android phone, and I'm not sure how Love2d touch functions work (as the wiki isn't very clear). For example, after I get a camera set up (currently in progress), my player should be centered in the middle of the screen. A touch and hold on the left side of the screen would make the player move to the right, and a touch and hold on the right should make the player move to the left, with doubletap to jump. As soon as touch is released, the player should stop moving. Any suggestions as to how I should set this up?</div></blockquote>I am no Love2D expert, (in fact I just joined) but it might use the mouse and you just have to add an if clicked statement for a mobile version.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Sun Apr 07, 2024 1:10 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[keharriso]]></name></author>
+		<updated>2024-04-07T00:18:59+00:00</updated>
+
+		<published>2024-04-07T00:18:59+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259188#p259188</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259188#p259188"/>
+		<title type="html"><![CDATA[General • Re: Lua]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259188#p259188"><![CDATA[
+You need to pass the scale twice, one for X and one for Y:<div class="codebox"><p>Code: </p><pre><code>love.graphics.draw(PlaImg, posX, posY, rot, tam, tam, ori, ori)</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=74528">keharriso</a> — Sun Apr 07, 2024 12:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Khoram]]></name></author>
+		<updated>2024-04-07T00:18:17+00:00</updated>
+
+		<published>2024-04-07T00:18:17+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259187#p259187</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259187#p259187"/>
+		<title type="html"><![CDATA[General • Audio just stopped playing in all love programs]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259187#p259187"><![CDATA[
+I was in the middle of development using ZeroBrane Studio, on linux (opensuse TW). Been working all day. Made some minor tweak, totally unrelated to sound, and now whenever I execute any love program, whether from command line or through the IDE, no sounds play at all. So weird. I rebooted, uninstalled and reinstalled love, no idea. Sound is working fine in the OS and other games/programs. Anyone ever seen something similar or have any ideas?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274371">Khoram</a> — Sun Apr 07, 2024 12:18 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-06T22:56:58+00:00</updated>
+
+		<published>2024-04-06T22:56:58+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259186#p259186</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259186#p259186"/>
+		<title type="html"><![CDATA[Games and Creations • Re: Madcrawl (alpha build) - &quot;Traditional&quot; Roguelike]]></title>
+
+					<category term="Games and Creations" scheme="https://love2d.org/forums/viewforum.php?f=14" label="Games and Creations"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259186#p259186"><![CDATA[
+I got an error, but the artwork and design is AWESOME! It is a little hard to understand what is going on. I know this is an alpha build mainly for testing, but if you're going to release it, then I think it should have instructions and make the more important text easier to see.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Sat Apr 06, 2024 10:56 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[edu]]></name></author>
+		<updated>2024-04-06T14:24:28+00:00</updated>
+
+		<published>2024-04-06T14:24:28+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259184#p259184</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259184#p259184"/>
+		<title type="html"><![CDATA[General • Lua]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259184#p259184"><![CDATA[
+sup guys, for some reason, my character image doesn't render on love 2d windown. My other project is working fine but, in this one,  it doesn't. can someone help me?<br><br>posX = 250<br>posY = 250<br>tam = 1<br>ori= 120<br>angulo = 0<br><br>love.graphics.toggleFullscreen = true<br>function love.load()<br>PlaImg = love.graphics.newImage("Imgs/char.png")<br>love.mouse.setVisible = false<br>end<br><br>function love.draw()<br>rot = angulo<br>love.graphics.draw(PlaImg, posX, posY, rot, tam, ori, ori)<br>end<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274308">edu</a> — Sat Apr 06, 2024 2:24 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[dusoft]]></name></author>
+		<updated>2024-04-06T09:53:43+00:00</updated>
+
+		<published>2024-04-06T09:53:43+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259183#p259183</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259183#p259183"/>
+		<title type="html"><![CDATA[General • Re: LÖVE 11.5 released!]]></title>
+
+					<category term="General" scheme="https://love2d.org/forums/viewforum.php?f=3" label="General"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259183#p259183"><![CDATA[
+What system, provide details on how you launch it (graphical UI, from console etc.)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=134239">dusoft</a> — Sat Apr 06, 2024 9:53 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[Bondrusiek]]></name></author>
+		<updated>2024-04-05T14:17:13+00:00</updated>
+
+		<published>2024-04-05T14:17:13+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259181#p259181</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259181#p259181"/>
+		<title type="html"><![CDATA[Support and Development • Re: 2D Array]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259181#p259181"><![CDATA[
+<blockquote class="uncited"><div>Try self:withinCols(5) so the sugar becomes FallingSand.withinCols(self, 5).</div></blockquote>It works now. Thank you!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258195">Bondrusiek</a> — Fri Apr 05, 2024 2:17 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
