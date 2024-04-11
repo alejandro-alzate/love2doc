@@ -20,7 +20,7 @@
 	xmlns:property="&property;">
 
 	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/Remove_Workaround_-28Português-29">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-08T22:25:50+00:00</swivt:creationDate>
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-11T21:42:10+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
 	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/Remove_Workaround_-28Português-29">
