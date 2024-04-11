@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=259209&sid=3a08e2d6866cfae5c54e04a1dd8a7526 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Apr 2024 21:03:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Weird error for a function that is correct. - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Support and Development" href="app.php/feed/forum/4">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Weird error for a function that is correct." href="app.php/feed/topic/95658">	
+	<link rel="canonical" href="viewtopicfecf.html?t=95658">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="4"><a itemprop="item" href="viewforum31e6.html?f=4"><span itemprop="name">Support and Development</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp7a62.html?mode=login&amp;redirect=viewtopic.php%3Fp%3D259209" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopicfecf.html?t=95658">Weird error for a function that is correct.</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions about the LÖVE API, installing LÖVE and other support related questions go here.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			Before you make a thread asking for help, <a href="viewtopica648.html?f=4&amp;t=2982" class="postlink">read this</a>.
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="postingb1ca.html?mode=reply&amp;t=95658" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic3012.html?t=95658&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="95658" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			10 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p259200" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259200">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1c06.html?author_id=274305&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 06, 2024 12:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259200">
+
+					<h3 class="first">
+						<a href="viewtopic9128.html?p=259200#p259200">Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1be9.html?mode=quote&amp;p=259200" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9128.html?p=259200#p259200" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a></strong> &raquo; </span><time datetime="2024-04-09T23:57:33+00:00">Tue Apr 09, 2024 11:57 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I am trying to make a platformer engine by detecting if an object is inbetween the corners of a platform. An error I didn't get before which I didn't do anything wrong. It said expected 'end' after 'function love.load()', but as you can see below, I wrote end.<br>
+<br>
+My program:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function love.load()
+    tile = love.graphics.newImage('grassTile.png')
+    platformer = {}
+        platformer.a = {}
+            platformer.a.x = 600
+            platformer.a.y = 400
+    platformer.scroll = 0
+    platformer.y = 200
+end
+
+function love.update(dt)
+    platformer.a.corner_lb_x = platformer.a.x - (tile:getWidth()/2)
+    platformer.a.corner_lb_y = platformer.a.y - (tile:getHeight()/2)
+    platformer.a.corner_rt_x = platformer.a.x + (tile:getWidth()/2)
+    platformer.a.corner_rt_y = platformer.a.y + (tile:getHeight()/2)
+    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then
+        platformer.touching = 1
+    else if true then
+        platformer.touching = 0
+    end
+    if platformer.touching == 0 then
+        if love.keyboard.isDown("d") then
+            platformer.scroll = platformer.scroll - 2
+        end
+    end
+     platformer.y = platformer.y + 1
+end
+
+function love.draw()
+    love.graphics.setBackgroundColor(0,0.2,0.8)
+    love.graphics.rectangle("fill",400,400,10,10)
+end</code></pre></div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259201" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259201">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="avatar"><img class="avatar" src="download/file793c.png?avatar=180413_1628295275.png" width="77" height="76" alt="User avatar" /></a>														</div>
+								<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc8b4.html?author_id=180413&amp;sr=posts">611</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 06, 2021 10:30 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259201">
+
+					<h3 >
+						<a href="viewtopic6856.html?p=259201#p259201">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4991.html?mode=quote&amp;p=259201" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6856.html?p=259201#p259201" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a></strong> &raquo; </span><time datetime="2024-04-09T23:59:30+00:00">Tue Apr 09, 2024 11:59 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">line 11 is not closed. <br>
+Get an editor with block checks, really handy.<br>
+Also look at line 18 where you have a mess.</div>
+
+			
+			
+									
+						
+							<div id="sig259201" class="signature"><span style="color:#FFFFFF"><span style="font-size:50%;line-height:116%">obey</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259202" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259202">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1c06.html?author_id=274305&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 06, 2024 12:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259202">
+
+					<h3 >
+						<a href="viewtopicd9a9.html?p=259202#p259202">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingcfed.html?mode=quote&amp;p=259202" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd9a9.html?p=259202#p259202" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a></strong> &raquo; </span><time datetime="2024-04-10T00:05:36+00:00">Wed Apr 10, 2024 12:05 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259203" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259203">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="avatar"><img class="avatar" src="download/file793c.png?avatar=180413_1628295275.png" width="77" height="76" alt="User avatar" /></a>														</div>
+								<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc8b4.html?author_id=180413&amp;sr=posts">611</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 06, 2021 10:30 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259203">
+
+					<h3 >
+						<a href="viewtopicbf53.html?p=259203#p259203">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting32c4.html?mode=quote&amp;p=259203" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicbf53.html?p=259203#p259203" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a></strong> &raquo; </span><time datetime="2024-04-10T00:30:02+00:00">Wed Apr 10, 2024 12:30 am</time>
+			</p>
+			
+			
+			
+			<div class="content">It means my editor flags the function as not having a matching end, it gets eaten at line 18.<br>
+"if true then" &lt; why have you came up with this? This line effectively is not exectuted as if true cancels itself. But it eats an extra end.</div>
+
+			
+			
+									
+						
+							<div id="sig259203" class="signature"><span style="color:#FFFFFF"><span style="font-size:50%;line-height:116%">obey</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259204" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259204">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="avatar"><img class="avatar" src="download/file34bc.png?avatar=80325_1451847465.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha5b1.html?author_id=80325&amp;sr=posts">3441</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 13, 2012 2:55 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Absurdistan, Hungary</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact zorg">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact zorg</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://soon.tm.exclamationma.rk/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/zorg_z0rg_z0r8" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259204">
+
+					<h3 >
+						<a href="viewtopic345e.html?p=259204#p259204">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6126.html?mode=quote&amp;p=259204" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic345e.html?p=259204#p259204" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a></strong> &raquo; </span><time datetime="2024-04-10T07:08:32+00:00">Wed Apr 10, 2024 7:08 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=259202#p259202"><div><cite><a href="memberlist543e.html?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> wrote: <a href="viewtopicd9a9.html?p=259202#p259202" data-post-id="259202" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Apr 10, 2024 12:05 am</span></cite>
+Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.
+</div></blockquote>
+
+I doubt that's what you need to type.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then
+        platformer.touching = 1
+    else if true then
+        platformer.touching = 0
+    end
+</code></pre></div>
+This part makes no sense like this; you set platformer.touching to 1 if those 4 conditions are all true, but then you set it to 0 regardless, since "if true then" is always going to execute... and that also needs an end, hence the error in the first place.<br>
+What did you want to do there?<br>
+Did you want to just put an else there, like this?:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then
+        platformer.touching = 1
+    else
+        platformer.touching = 0
+    end
+</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig259204" class="signature"><a href="../wiki/User_Zorg.html" class="postlink">Me and my stuff <img class="smilies" src="images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"></a><span style="font-size:10%;line-height:116%">True Neutral Aspirant. Why, yes, i do indeed enjoy sarcastically correcting others when they make the most blatant of spelling mistakes. No bullying or trolling the innocent tho.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259205" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259205">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259205">
+
+					<h3 >
+						<a href="viewtopiccda0.html?p=259205#p259205">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting15f8.html?mode=quote&amp;p=259205" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopiccda0.html?p=259205#p259205" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2024-04-10T11:56:39+00:00">Wed Apr 10, 2024 11:56 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else if y then
+  something_else()
+end
+</code></pre></div>
+is exactly the same as this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else
+  if y then
+    something_else()
+  end
+</code></pre></div>
+In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+elseif y then
+  something_else()
+end
+</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig259205" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259206" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259206">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1c06.html?author_id=274305&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 06, 2024 12:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259206">
+
+					<h3 >
+						<a href="viewtopic4599.html?p=259206#p259206">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5bc2.html?mode=quote&amp;p=259206" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4599.html?p=259206#p259206" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a></strong> &raquo; </span><time datetime="2024-04-10T12:20:45+00:00">Wed Apr 10, 2024 12:20 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">NOPE. I need that incase the if statement is false, that is definitely what I need. I have not programmed every tile into a read/count system for the if condition because it's just a test. That will make it faster in the future.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259207" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259207">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1c06.html?author_id=274305&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 06, 2024 12:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259207">
+
+					<h3 >
+						<a href="viewtopic66fb.html?p=259207#p259207">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting821c.html?mode=quote&amp;p=259207" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic66fb.html?p=259207#p259207" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a></strong> &raquo; </span><time datetime="2024-04-10T12:21:25+00:00">Wed Apr 10, 2024 12:21 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=259205#p259205"><div><cite><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168">pgimeno</a> wrote: <a href="viewtopiccda0.html?p=259205#p259205" data-post-id="259205" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Apr 10, 2024 11:56 am</span></cite>
+This:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else if y then
+  something_else()
+end
+</code></pre></div>
+is exactly the same as this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else
+  if y then
+    something_else()
+  end
+</code></pre></div>
+In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+elseif y then
+  something_else()
+end
+</code></pre></div>
+
+oops wrong person sorry
+</div></blockquote></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259208" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259208">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1c06.html?author_id=274305&amp;sr=posts">8</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Apr 06, 2024 12:30 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259208">
+
+					<h3 >
+						<a href="viewtopicc569.html?p=259208#p259208">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga158.html?mode=quote&amp;p=259208" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc569.html?p=259208#p259208" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist543e.html?mode=viewprofile&amp;u=274305" class="username">SuskyTheCorgi</a></strong> &raquo; </span><time datetime="2024-04-10T12:23:20+00:00">Wed Apr 10, 2024 12:23 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=259205#p259205"><div><cite><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168">pgimeno</a> wrote: <a href="viewtopiccda0.html?p=259205#p259205" data-post-id="259205" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Apr 10, 2024 11:56 am</span></cite>
+This:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else if y then
+  something_else()
+end
+</code></pre></div>
+is exactly the same as this:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+else
+  if y then
+    something_else()
+  end
+</code></pre></div>
+In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>if x then
+  something()
+elseif y then
+  something_else()
+end
+</code></pre></div>
+</div></blockquote>
+
+TYSM!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p259209" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile259209">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="avatar"><img class="avatar" src="download/file793c.png?avatar=180413_1628295275.png" width="77" height="76" alt="User avatar" /></a>														</div>
+								<a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc8b4.html?author_id=180413&amp;sr=posts">611</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Aug 06, 2021 10:30 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content259209">
+
+					<h3 >
+						<a href="viewtopic73ff.html?p=259209#p259209">Re: Weird error for a function that is correct.</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1151.html?mode=quote&amp;p=259209" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic73ff.html?p=259209#p259209" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3ccb.html?mode=viewprofile&amp;u=180413" class="username">BrotSagtMist</a></strong> &raquo; </span><time datetime="2024-04-10T13:22:32+00:00">Wed Apr 10, 2024 1:22 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Just adding: Youre trying to set a bolean using if cases on a bolean. <br>
+Thats just adding extra steps, if you dont have anything else that uses it just do it in one go:<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y)  then
+        if love.keyboard.isDown("d") then
+            platformer.scroll = platformer.scroll - 2
+        end
+    end</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig259209" class="signature"><span style="color:#FFFFFF"><span style="font-size:50%;line-height:116%">obey</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingb1ca.html?mode=reply&amp;t=95658" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic3012.html?t=95658&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=95658">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			10 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Support and Development”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 5 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?p=259209&sid=3a08e2d6866cfae5c54e04a1dd8a7526 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Apr 2024 21:03:55 GMT -->
+</html>

@@ -5,11 +5,176 @@
 	<title>LÖVE</title>
 	
 	<link href="https://love2d.org/forums/index.php" />
-	<updated>2024-04-07T01:10:35+00:00</updated>
+	<updated>2024-04-11T12:02:46+00:00</updated>
 
 	<author><name><![CDATA[LÖVE]]></name></author>
 	<id>https://love2d.org/forums/app.php/feed/forum/4</id>
 
+		<entry>
+		<author><name><![CDATA[Bobble68]]></name></author>
+		<updated>2024-04-11T12:02:46+00:00</updated>
+
+		<published>2024-04-11T12:02:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259212#p259212</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259212#p259212"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259212#p259212"><![CDATA[
+I also want to add (I can't tell if you understand this or not, but there's a strong chance you do so if so I apologize) that the way if statements work is that it checks that the value between 'if' and 'then' evaluates as true or false so<br><div class="codebox"><p>Code: </p><pre><code>if true then    something = 1end</code></pre></div> is the same as<div class="codebox"><p>Code: </p><pre><code>something = 1</code></pre></div>It's also the same as this <div class="codebox"><p>Code: </p><pre><code>if false then  something = 0else  something = 1end</code></pre></div>It can be useful to do this if you're debugging (which if that's what you're doing, I again apologize), since it essentially locks open/closed an if statement.<br><br>Lua also uses a concept known as truthiness, which for Lua means that nil values will act as false in an if statement and numbers and strings act as true, so this is also the same:<div class="codebox"><p>Code: </p><pre><code>aValue = nilif aValue then  something = 0else  something = 1end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Thu Apr 11, 2024 12:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T13:22:32+00:00</updated>
+
+		<published>2024-04-10T13:22:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259209#p259209</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259209#p259209"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259209#p259209"><![CDATA[
+Just adding: Youre trying to set a bolean using if cases on a bolean. <br>Thats just adding extra steps, if you dont have anything else that uses it just do it in one go:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y)  then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 1:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:23:20+00:00</updated>
+
+		<published>2024-04-10T12:23:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259208#p259208</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259208#p259208"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259208#p259208"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div></div></blockquote>TYSM!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:21:25+00:00</updated>
+
+		<published>2024-04-10T12:21:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259207#p259207</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259207#p259207"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259207#p259207"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div>oops wrong person sorry</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:20:45+00:00</updated>
+
+		<published>2024-04-10T12:20:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259206#p259206</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259206#p259206"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259206#p259206"><![CDATA[
+NOPE. I need that incase the if statement is false, that is definitely what I need. I have not programmed every tile into a read/count system for the if condition because it's just a test. That will make it faster in the future.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2024-04-10T11:56:39+00:00</updated>
+
+		<published>2024-04-10T11:56:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259205#p259205</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259205#p259205"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259205#p259205"><![CDATA[
+This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Apr 10, 2024 11:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2024-04-10T07:08:32+00:00</updated>
+
+		<published>2024-04-10T07:08:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259204#p259204</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259204#p259204"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259204#p259204"><![CDATA[
+<blockquote class="uncited"><div>Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.</div></blockquote>I doubt that's what you need to type.<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end</code></pre></div>This part makes no sense like this; you set platformer.touching to 1 if those 4 conditions are all true, but then you set it to 0 regardless, since "if true then" is always going to execute... and that also needs an end, hence the error in the first place.<br>What did you want to do there?<br>Did you want to just put an else there, like this?:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else        platformer.touching = 0    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Wed Apr 10, 2024 7:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T00:30:02+00:00</updated>
+
+		<published>2024-04-10T00:30:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259203#p259203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259203#p259203"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259203#p259203"><![CDATA[
+It means my editor flags the function as not having a matching end, it gets eaten at line 18.<br>"if true then" &lt; why have you came up with this? This line effectively is not exectuted as if true cancels itself. But it eats an extra end.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 12:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T00:05:36+00:00</updated>
+
+		<published>2024-04-10T00:05:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259202#p259202</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259202#p259202"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259202#p259202"><![CDATA[
+Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-09T23:59:30+00:00</updated>
+
+		<published>2024-04-09T23:59:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259201#p259201</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259201#p259201"/>
+		<title type="html"><![CDATA[Support and Development • Re: Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259201#p259201"><![CDATA[
+line 11 is not closed. <br>Get an editor with block checks, really handy.<br>Also look at line 18 where you have a mess.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Tue Apr 09, 2024 11:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-09T23:57:33+00:00</updated>
+
+		<published>2024-04-09T23:57:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259200#p259200</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259200#p259200"/>
+		<title type="html"><![CDATA[Support and Development • Weird error for a function that is correct.]]></title>
+
+					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259200#p259200"><![CDATA[
+I am trying to make a platformer engine by detecting if an object is inbetween the corners of a platform. An error I didn't get before which I didn't do anything wrong. It said expected 'end' after 'function love.load()', but as you can see below, I wrote end.<br><br>My program:<div class="codebox"><p>Code: </p><pre><code>function love.load()    tile = love.graphics.newImage('grassTile.png')    platformer = {}        platformer.a = {}            platformer.a.x = 600            platformer.a.y = 400    platformer.scroll = 0    platformer.y = 200endfunction love.update(dt)    platformer.a.corner_lb_x = platformer.a.x - (tile:getWidth()/2)    platformer.a.corner_lb_y = platformer.a.y - (tile:getHeight()/2)    platformer.a.corner_rt_x = platformer.a.x + (tile:getWidth()/2)    platformer.a.corner_rt_y = platformer.a.y + (tile:getHeight()/2)    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end    if platformer.touching == 0 then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end     platformer.y = platformer.y + 1endfunction love.draw()    love.graphics.setBackgroundColor(0,0.2,0.8)    love.graphics.rectangle("fill",400,400,10,10)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Tue Apr 09, 2024 11:57 pm</p><hr />
+]]></content>
+	</entry>
 		<entry>
 		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
 		<updated>2024-04-07T01:10:35+00:00</updated>
@@ -218,171 +383,6 @@ Currently looking through it, however you haven't given us much to go on in term
 		
 		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259164#p259164"><![CDATA[
 Hi I have no a big experience with Lua. I have a problem with 2d array. I mark by "*" where is a critical points:<div class="codebox"><p>Code: </p><pre><code>FallingSand = Object:extend()local WIDTH  = 500local HEIGHT = 300local m_size = 5local m_colslocal m_rowslocal m_grid = {}local m_nextGrid = {}local m_clicked = falselocal m_hueValue = 0function FallingSand:new()    m_cols = math.floor(WIDTH / m_size)    m_rows = math.floor(HEIGHT / m_size)    for i = 1, m_cols do        m_grid[i]     = {}        m_nextGrid[i] = {}        for j = 1, m_rows do             m_grid[i][j] = 0            m_nextGrid[i][j] = 0        end    endendfunction FallingSand:update(dt)    local mouseX, mouseY    local mouseCol =  1    local mouseRow = 1    local matrix = 5    local extent = math.floor(matrix / 2)    if input:down('leftButton') then        mouseX, mouseY = love.mouse.getPosition()        mouseCol = math.floor(mouseX / m_size)        mouseRow = math.floor(mouseY / m_size)        for i = -extent, extent do            for j = -extent, extent do                local randomValue = love.math.random(100)                if randomValue &lt; 75 then                    local col = mouseCol + i + 1                    local row = mouseRow + j + 1                    if FallingSand:withinCols(col) and FallingSand:withinRows(row) then                        --*********** here is m_grid[i][j] set to 100                        m_grid[col][row] = 100                     end                end            end        end    for i = 1, m_cols do        for j = 1, m_rows do             m_nextGrid[i][j] = 0        end    end    for i = 1, m_cols do        for j = 1, m_rows do            --  What is the state?            --*********** state always is set to 0 from m_grid[i][j]            local state = m_grid[i][j]            -- Randomly fall left or right            if state &gt; 0 then                 local below = m_grid[i][j + 1]                -- Randomly fall left or right                local dir = 1                if love.math.random(100) &lt; 50 then                     dir = dir * -1                end                --Check below left or right                local belowA = -1                local belowB = -1                if FallingSand:withinCols(i + dir) then                     belowA = m_grid[i + dir][j + 1]                end                if FallingSand:withinCols(i - dir) then                     belowB = m_grid[i - dir][j + 1]                end                -- Can it fall below or left or right?                if below == 0 then                     m_nextGrid[i][j + 1] = state                elseif belowA == 0 then                     m_nextGrid[i + dir][j + 1] = state                elseif belowB == 0 then                    m_nextGrid[i - dir][j + 1] = state;                    -- Stay put!                else                     m_nextGrid[i][j] = state;                end            end        end    end    m_grid = m_nextGrid    endendfunction FallingSand:draw()    love.graphics.print("Falling Sand", 0, 0)    for i = 1, m_cols do         for j = 1, m_rows do             if m_grid[i][j] &gt; 0 then                 love.graphics.setColor(0.5, 1.0, 1.0)                local x = (i - 1) * m_size                local y = (j - 1) * m_size                love.graphics.rectangle('fill', x, y, m_size, m_size)            end        end    endendfunction FallingSand:withinCols(x)    return x &gt;= 1 and x &lt;= m_colsendfunction FallingSand:withinRows(y)    return y &gt;= 1 and y &lt;= m_rowsend</code></pre></div>I have no idea how solve that. I use print() func to debug value and in input:down() m_grid[][] is set on 100 but lower m_grid[] [] always return 0. Do you have nay tips ?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=258195">Bondrusiek</a> — Wed Apr 03, 2024 5:14 pm</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[zorg]]></name></author>
-		<updated>2024-04-03T13:27:46+00:00</updated>
-
-		<published>2024-04-03T13:27:46+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259161#p259161</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259161#p259161"/>
-		<title type="html"><![CDATA[Support and Development • Re: Different ways to adjust audio]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259161#p259161"><![CDATA[
-You could just use one sounddata for one "vocal" grunt, and write to a short buffer in a way to interpolate between samplepoints when you want to sample between the stored ones (to manually alter the playback rate, so, the pitch and speed)<br><br>That said, the effects themselves might not really be needed for just that kind of gibberish vocals. <a href="/wiki/EffectType">EffectType</a> does have a list explaining what they do, and if that doesn't help, look up random youtube videos on the topics or download a DAW like FL studio (demo's free) and experiment.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Wed Apr 03, 2024 1:27 pm</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[RNavega]]></name></author>
-		<updated>2024-04-03T08:36:39+00:00</updated>
-
-		<published>2024-04-03T08:36:39+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259160#p259160</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259160#p259160"/>
-		<title type="html"><![CDATA[Support and Development • Re: Different ways to adjust audio]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259160#p259160"><![CDATA[
-I'm in the same boat, in that I haven't tried the Löve audio system yet.<br>What I'd do is make a folder with a main.lua inside it and treat it like a sandbox, testing all kinds of stuff.<br><br>You mentioned that Banjo Kazooie style of speech, I think there are only two ways: playing the same source over and over, setting the pitch of the source each time, or creating a set of audio buffers for each pitch level, then queueing them at random with a queueable source, if it's supported. In this last method, also having a buffer of silence for spaces.<br>But which method works best, I don't know. Some testing should let you know better, as there might be something we're not considering here.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Wed Apr 03, 2024 8:36 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[RNavega]]></name></author>
-		<updated>2024-04-03T07:57:56+00:00</updated>
-
-		<published>2024-04-03T07:57:56+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259159#p259159</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259159#p259159"/>
-		<title type="html"><![CDATA[Support and Development • Re: Avoid table overhead by using Data when creating a mesh]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259159#p259159"><![CDATA[
-Using a flat array of attributes set by pointer index timed a bit faster than using an array of structs. But using structs leads to less cumbersome code, as instead of "myAttributes[vertexOffset + attributeOffset] = value", you'd do "myVertex.attribute = value".<br>So unfortunately it's a trade-off between readability or speed.<br><br>You can find some reference code in here:  <br><a href="https://github.com/RNavega/2DMeshAnimation-Love/blob/master/model-cpu.lua#L54" class="postlink">https://github.com/RNavega/2DMeshAnimat ... pu.lua#L54</a><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=155226">RNavega</a> — Wed Apr 03, 2024 7:57 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[zhaosida]]></name></author>
-		<updated>2024-04-02T10:22:15+00:00</updated>
-
-		<published>2024-04-02T10:22:15+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259151#p259151</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259151#p259151"/>
-		<title type="html"><![CDATA[Support and Development • Using love2d as a Library in other applications]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259151#p259151"><![CDATA[
-I want to embed love2d as a library into my iOS application, but I'm facing an issue with missing header files: love.cpp: 'common/config.h' file not found. <br>My approach is as follows: <br>1. In the Xcode project, I select 'Add Files to MyApplications'. <br>2. I locate liblove.xcodeproj and add it. <br>3. I also add love.cpp using the same method.<br><img src="https://love2d.org/forums/download/file.php?mode=view&amp;id=24122" class="postimage" alt="Image"><dl class="file"><dt class="attach-image"><a href="https://love2d.org/forums/download/file.php?id=24122&amp;mode=view"><img src="https://love2d.org/forums/download/file.php?id=24122" class="postimage" alt="WeChat3e47259d84fdc6ef44806db46d84dd8c.png" /></a></dt></dl><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274053">zhaosida</a> — Tue Apr 02, 2024 10:22 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[pgimeno]]></name></author>
-		<updated>2024-04-01T12:39:35+00:00</updated>
-
-		<published>2024-04-01T12:39:35+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259144#p259144</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259144#p259144"/>
-		<title type="html"><![CDATA[Support and Development • Re: How to force draw an image on top of another image?]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259144#p259144"><![CDATA[
-You can't reliably use ipairs() in that circumstance either. You have to either loop backwards, which ipairs() doesn't do, or manually advance the index or decrease the count as appropriate, like the loop I posted does.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Mon Apr 01, 2024 12:39 pm</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[Bobble68]]></name></author>
-		<updated>2024-04-01T11:38:41+00:00</updated>
-
-		<published>2024-04-01T11:38:41+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259143#p259143</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259143#p259143"/>
-		<title type="html"><![CDATA[Support and Development • Re: How to force draw an image on top of another image?]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259143#p259143"><![CDATA[
-<blockquote class="uncited"><div><br>Deletion won't work with this code. Now ImagesToDraw has numeric indices, therefore setting ImagesToDraw[image] to nil has </div></blockquote>Right, yeah I didn't notice that. The way I usually handle deletions is by giving each of the objects a remove flag, and then at the end of update checking which objects need removing (probably not the fastest way to do it but it works for me)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Mon Apr 01, 2024 11:38 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[zorg]]></name></author>
-		<updated>2024-04-01T09:34:54+00:00</updated>
-
-		<published>2024-04-01T09:34:54+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259142#p259142</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259142#p259142"/>
-		<title type="html"><![CDATA[Support and Development • Re: Avoid table overhead by using Data when creating a mesh]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259142#p259142"><![CDATA[
-- newMesh has two variants (one with and one without specifying a custom format) where you can just set a vertex count without defining the vertices with tables. This is something you mentioned.<br>- Both setVertices and setVertexMap methods support Data objects. This is also something you mentioned.<br><br>The actual question that remains is the last one; You need to create a ByteData object with a size enough to contain all your vertices with the format you want; no padding is necessary, but you do need to use the FFI to create a struct with the correct format that you'll use to manipulate the memory area the created ByteData occupies (by getting its pointer with Data:getFFIPointer)<br><br><a href="/wiki/Data:getFFIPointer">Data:getFFIPointer</a> has a partial snippet you can adapt to your use-case, by defining a struct.<br><br>Do note that what getVertexFormat returns is not directly useable when either calculating the size of the ByteData, nor when creating the struct. What i'd do is to first create the struct, so you can functionally get its size (details on the LuaJIT website), then create a ByteData, and finally make a pointer using the struct as its type, pointing to the memory address returned by ByteData:getFFIPointer.<br><br>After that, wherever you're getting your mesh data from, if the formats match, you can just write it directly into the bytedata object.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Mon Apr 01, 2024 9:34 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[wan-may]]></name></author>
-		<updated>2024-04-01T01:56:59+00:00</updated>
-
-		<published>2024-04-01T01:56:59+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259140#p259140</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259140#p259140"/>
-		<title type="html"><![CDATA[Support and Development • Avoid table overhead by using Data when creating a mesh]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259140#p259140"><![CDATA[
-The usual prototype for love.graphics.newMesh has you making a large number of tables: one for each vertex.<br>This isn't ideal when I could be loading large bespoke third-party models, especially if I'm not interested in changing any vertex data on the CPU.<br><br>Can I use ByteData or FFI buffers everywhere instead of tables by calling love.graphics.newMesh( vertexformat, vertexcount, mode, usage ), Mesh:setVertices( data, startvertex, count ), and Mesh:setVertexMap( data, datatype )?<br><br>If I specify a custom vertexformat in newMesh, then how do I go about making a Data object that matches the custom vertexformat? The result from Mesh:getvertexformat() seems clear enough, but I'm second guessing whether I need to pad for struct alignment or something.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=252077">wan-may</a> — Mon Apr 01, 2024 1:56 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[pgimeno]]></name></author>
-		<updated>2024-03-31T20:33:30+00:00</updated>
-
-		<published>2024-03-31T20:33:30+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259139#p259139</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259139#p259139"/>
-		<title type="html"><![CDATA[Support and Development • Re: How to force draw an image on top of another image?]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259139#p259139"><![CDATA[
-<blockquote class="uncited"><div><div class="codebox"><p>Code: </p><pre><code>[...]local function drawImages()for i, imageData in ipairs(ImagesToDraw) do[...]if imageData.y &lt; 600 thenlove.graphics.draw(image, imageData.x, imageData.y, imageData.r, 0.5, 0.5, 256/2, 256/2)elseimage:release()ImagesToDraw[image] = nilcurrentCoins = currentCoins - 1endendend</code></pre></div></div></blockquote>Deletion won't work with this code. Now ImagesToDraw has numeric indices, therefore setting ImagesToDraw[image] to nil has no effect. Furthermore, even if you change it to read `ImagesToDraw[<em class="text-italics"></em>i] = nil`, there's the problem that ipairs() will stop at the first nil. For example, if an array has 12 elements and you set the 3rd one to nil, then ipairs() will only "see" the first two elements.<br><br>I think that the proper thing to do here is using table.remove() while looping manually. You can't use ipairs() to iterate while deleting, because table.remove() will shift indices and might skip elements if you increase the index and remove from the table in the same iteration.<br><br>So, the proper drawImages() function would be something like:<br><div class="codebox"><p>Code: </p><pre><code>local function drawImages()        local i = 1        while i &lt;= currentCoins do                local imageData = ImagesToDraw[i]                [...]                if imageData.y &lt; 600 then                        love.graphics.draw(image, ...)                        i = i + 1                else                        image:release()                        table.remove(ImagesToDraw, i)                        currentCoins = currentCoins - 1                end        endend</code></pre></div>(note: untested)<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Sun Mar 31, 2024 8:33 pm</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[Bobble68]]></name></author>
-		<updated>2024-03-31T11:18:41+00:00</updated>
-
-		<published>2024-03-31T11:18:41+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259138#p259138</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259138#p259138"/>
-		<title type="html"><![CDATA[Support and Development • Re: How to force draw an image on top of another image?]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259138#p259138"><![CDATA[
-<blockquote class="uncited"><div><br>is there a library available that does array manipulation?</div></blockquote>You don't really need one - you can just use table.insert() to add it to an ordered table like this:<br><div class="codebox"><p>Code: </p><pre><code>local coinImage = love.graphics.newImage(IMAGES[1])local function createCoin()LAST_COIN = love.timer.getTime()currentCoins = currentCoins + 1table.insert(ImagesToDraw, { image = coinImage, x = love.math.random(0, 600), y = -100, r = 0 })  output = LAST_COINend[...]local function drawImages()for i, imageData in ipairs(ImagesToDraw) doimageData.y = imageData.y + 1imageData.r = imageData.r + 0.02    local image = imageData.imageif imageData.y &lt; 600 thenlove.graphics.draw(image, imageData.x, imageData.y, imageData.r, 0.5, 0.5, 256/2, 256/2)elseimage:release()ImagesToDraw[image] = nilcurrentCoins = currentCoins - 1endendend</code></pre></div>These are some other unrelated pointers, currently your code loads an image every time a coin is created. This isn't recommended since you can use the same image for all of the coins and newImage is a fairly slow function that will increase the memory of your project, so here I made it that there is a shared coinImage object that all coins will use, though I wouldn't recommend using this setup for larger projects.<br><br>I noticed you have a function where you get the addresses of all images in your project - what you could do here instead is load them to a table which you can then access later, something like this:<br><div class="codebox"><p>Code: </p><pre><code>local function registerImages()for i, filePath in ipairs(love.filesystem.getDirectoryItems("/Images")) doIMAGES[i] = love.graphics.newImage("/Images/" .. filePath)endend</code></pre></div>This way, they get loaded when the project starts, and can be indexed later<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Sun Mar 31, 2024 11:18 am</p><hr />
-]]></content>
-	</entry>
-		<entry>
-		<author><name><![CDATA[Kitsune_Dev]]></name></author>
-		<updated>2024-03-30T20:49:11+00:00</updated>
-
-		<published>2024-03-30T20:49:11+00:00</published>
-		<id>https://love2d.org/forums/viewtopic.php?p=259136#p259136</id>
-		<link href="https://love2d.org/forums/viewtopic.php?p=259136#p259136"/>
-		<title type="html"><![CDATA[Support and Development • Re: How to force draw an image on top of another image?]]></title>
-
-					<category term="Support and Development" scheme="https://love2d.org/forums/viewforum.php?f=4" label="Support and Development"/>
-		
-		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259136#p259136"><![CDATA[
-<blockquote class="uncited"><div>Images appear back-to-front in the order they're drawn - however the pairs iterator function doesn't have a defined order, so you can't rely on it for things that should be ordered.<br><br>Using an array and iterating with ipairs is the usual way to do it instead.</div></blockquote>thank you for the information, that's actually what I thought at first but I was hoping for an easier solution, is there a library available that does array manipulation?<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=272590">Kitsune_Dev</a> — Sat Mar 30, 2024 8:49 pm</p><hr />
 ]]></content>
 	</entry>
 	</feed>

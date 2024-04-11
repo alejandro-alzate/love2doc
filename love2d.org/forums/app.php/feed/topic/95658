@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-gb">
+	<link rel="self" type="application/atom+xml" href="https://love2d.org/forums/app.php/feed/topic/95658" />
+
+	<title>LÖVE</title>
+	
+	<link href="https://love2d.org/forums/index.php" />
+	<updated>2024-04-11T12:02:46+00:00</updated>
+
+	<author><name><![CDATA[LÖVE]]></name></author>
+	<id>https://love2d.org/forums/app.php/feed/topic/95658</id>
+
+		<entry>
+		<author><name><![CDATA[Bobble68]]></name></author>
+		<updated>2024-04-11T12:02:46+00:00</updated>
+
+		<published>2024-04-11T12:02:46+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259212#p259212</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259212#p259212"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259212#p259212"><![CDATA[
+I also want to add (I can't tell if you understand this or not, but there's a strong chance you do so if so I apologize) that the way if statements work is that it checks that the value between 'if' and 'then' evaluates as true or false so<br><div class="codebox"><p>Code: </p><pre><code>if true then    something = 1end</code></pre></div> is the same as<div class="codebox"><p>Code: </p><pre><code>something = 1</code></pre></div>It's also the same as this <div class="codebox"><p>Code: </p><pre><code>if false then  something = 0else  something = 1end</code></pre></div>It can be useful to do this if you're debugging (which if that's what you're doing, I again apologize), since it essentially locks open/closed an if statement.<br><br>Lua also uses a concept known as truthiness, which for Lua means that nil values will act as false in an if statement and numbers and strings act as true, so this is also the same:<div class="codebox"><p>Code: </p><pre><code>aValue = nilif aValue then  something = 0else  something = 1end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=210320">Bobble68</a> — Thu Apr 11, 2024 12:02 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T13:22:32+00:00</updated>
+
+		<published>2024-04-10T13:22:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259209#p259209</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259209#p259209"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259209#p259209"><![CDATA[
+Just adding: Youre trying to set a bolean using if cases on a bolean. <br>Thats just adding extra steps, if you dont have anything else that uses it just do it in one go:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y)  then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 1:22 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:23:20+00:00</updated>
+
+		<published>2024-04-10T12:23:20+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259208#p259208</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259208#p259208"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259208#p259208"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div></div></blockquote>TYSM!<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:23 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:21:25+00:00</updated>
+
+		<published>2024-04-10T12:21:25+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259207#p259207</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259207#p259207"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259207#p259207"><![CDATA[
+<blockquote class="uncited"><div>This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div>oops wrong person sorry</div></blockquote><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:21 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T12:20:45+00:00</updated>
+
+		<published>2024-04-10T12:20:45+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259206#p259206</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259206#p259206"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259206#p259206"><![CDATA[
+NOPE. I need that incase the if statement is false, that is definitely what I need. I have not programmed every tile into a read/count system for the if condition because it's just a test. That will make it faster in the future.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:20 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[pgimeno]]></name></author>
+		<updated>2024-04-10T11:56:39+00:00</updated>
+
+		<published>2024-04-10T11:56:39+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259205#p259205</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259205#p259205"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259205#p259205"><![CDATA[
+This:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else if y then  something_else()end</code></pre></div>is exactly the same as this:<div class="codebox"><p>Code: </p><pre><code>if x then  something()else  if y then    something_else()  end</code></pre></div>In the latter case, you can clearly see how the else is not closed. That's why we have <strong class="text-strong">elseif</strong>. This is properly closed:<div class="codebox"><p>Code: </p><pre><code>if x then  something()elseif y then  something_else()end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=137168">pgimeno</a> — Wed Apr 10, 2024 11:56 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[zorg]]></name></author>
+		<updated>2024-04-10T07:08:32+00:00</updated>
+
+		<published>2024-04-10T07:08:32+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259204#p259204</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259204#p259204"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259204#p259204"><![CDATA[
+<blockquote class="uncited"><div>Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.</div></blockquote>I doubt that's what you need to type.<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end</code></pre></div>This part makes no sense like this; you set platformer.touching to 1 if those 4 conditions are all true, but then you set it to 0 regardless, since "if true then" is always going to execute... and that also needs an end, hence the error in the first place.<br>What did you want to do there?<br>Did you want to just put an else there, like this?:<div class="codebox"><p>Code: </p><pre><code>    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else        platformer.touching = 0    end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=80325">zorg</a> — Wed Apr 10, 2024 7:08 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-10T00:30:02+00:00</updated>
+
+		<published>2024-04-10T00:30:02+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259203#p259203</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259203#p259203"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259203#p259203"><![CDATA[
+It means my editor flags the function as not having a matching end, it gets eaten at line 18.<br>"if true then" &lt; why have you came up with this? This line effectively is not exectuted as if true cancels itself. But it eats an extra end.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Wed Apr 10, 2024 12:30 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-10T00:05:36+00:00</updated>
+
+		<published>2024-04-10T00:05:36+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259202#p259202</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259202#p259202"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259202#p259202"><![CDATA[
+Wdym line 11 is not closed? I do have an editor with block check too btw. At line 18 that is what I need to type, what ELSE am I supposed to do there? Thank you for replying, and please reply back when you can.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Wed Apr 10, 2024 12:05 am</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[BrotSagtMist]]></name></author>
+		<updated>2024-04-09T23:59:30+00:00</updated>
+
+		<published>2024-04-09T23:59:30+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259201#p259201</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259201#p259201"/>
+		<title type="html"><![CDATA[Re: Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259201#p259201"><![CDATA[
+line 11 is not closed. <br>Get an editor with block checks, really handy.<br>Also look at line 18 where you have a mess.<p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=180413">BrotSagtMist</a> — Tue Apr 09, 2024 11:59 pm</p><hr />
+]]></content>
+	</entry>
+		<entry>
+		<author><name><![CDATA[SuskyTheCorgi]]></name></author>
+		<updated>2024-04-09T23:57:33+00:00</updated>
+
+		<published>2024-04-09T23:57:33+00:00</published>
+		<id>https://love2d.org/forums/viewtopic.php?p=259200#p259200</id>
+		<link href="https://love2d.org/forums/viewtopic.php?p=259200#p259200"/>
+		<title type="html"><![CDATA[Weird error for a function that is correct.]]></title>
+
+		
+		<content type="html" xml:base="https://love2d.org/forums/viewtopic.php?p=259200#p259200"><![CDATA[
+I am trying to make a platformer engine by detecting if an object is inbetween the corners of a platform. An error I didn't get before which I didn't do anything wrong. It said expected 'end' after 'function love.load()', but as you can see below, I wrote end.<br><br>My program:<div class="codebox"><p>Code: </p><pre><code>function love.load()    tile = love.graphics.newImage('grassTile.png')    platformer = {}        platformer.a = {}            platformer.a.x = 600            platformer.a.y = 400    platformer.scroll = 0    platformer.y = 200endfunction love.update(dt)    platformer.a.corner_lb_x = platformer.a.x - (tile:getWidth()/2)    platformer.a.corner_lb_y = platformer.a.y - (tile:getHeight()/2)    platformer.a.corner_rt_x = platformer.a.x + (tile:getWidth()/2)    platformer.a.corner_rt_y = platformer.a.y + (tile:getHeight()/2)    if (0 &gt; platformer.a.corner_lb_x) and (0 &lt; platformer.a.corner_rt_x) and (platformer.y &gt; platformer.a.corner_lb_y) and (platformer.y &lt; platformer.a.corner_rt_y) then        platformer.touching = 1    else if true then        platformer.touching = 0    end    if platformer.touching == 0 then        if love.keyboard.isDown("d") then            platformer.scroll = platformer.scroll - 2        end    end     platformer.y = platformer.y + 1endfunction love.draw()    love.graphics.setBackgroundColor(0,0.2,0.8)    love.graphics.rectangle("fill",400,400,10,10)end</code></pre></div><p>Statistics: Posted by <a href="https://love2d.org/forums/memberlist.php?mode=viewprofile&amp;u=274305">SuskyTheCorgi</a> — Tue Apr 09, 2024 11:57 pm</p><hr />
+]]></content>
+	</entry>
+	</feed>
