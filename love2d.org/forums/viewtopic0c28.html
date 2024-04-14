@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=8351 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:45:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Gspöt - retained GUI lib - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Gspöt - retained GUI lib" href="app.php/feed/topic/8351">	
+	<link rel="canonical" href="viewtopic8285.html?t=8351">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp3e36.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D8351" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic8285.html?t=8351">Gspöt - retained GUI lib</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="postingdaa3.html?mode=reply&amp;t=8351" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic8e7e.html?t=8351&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="8351" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			170 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>17</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;8351" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic2e8d.html?t=8351&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic3019.html?t=8351&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic4edf.html?t=8351&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopicb87c.html?t=8351&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopica735-2.html?t=8351&amp;start=160" role="button">17</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic2e8d.html?t=8351&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p51079" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51079">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51079">
+
+					<h3 class="first">
+						<a href="viewtopic36a8.html?p=51079#p51079">Gspöt - retained GUI lib</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge960.html?mode=quote&amp;p=51079" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic36a8.html?p=51079#p51079" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T11:39:09+00:00">Wed Mar 07, 2012 11:39 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Like the subject says, it's a stateful gui (moved to new thread from "what are you working on")<br>
+<br>
+Features include :<br>
+- single file lib for easy inclusion<br>
+- range of one-line GUI elements with default functionality, including circular elements, button, checkbox, scrollgroup, auto-positioning feedback, etc<br>
+- easy callbacks for a wide range of events<br>
+- element grouping with cascading styles<br>
+- flexible positioning type with operator functions<br>
+- instanced GUI for easy implementation and interaction across multiple screens<br>
+- direct access to GUI elements and attributes via reference<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>gui = require('Gspot')
+
+button = gui:button('do thing', {x = 64, y = 64, w = 64})
+button.click = function(this) gui:feedback('thing done') end</code></pre></div>
+
+Although all planned functionality is working, I would still consider this a work in progress, as it remains to some degree untested, and I'm open to suggestions and requests.<br>
+<br>
+github : <a href="https://github.com/trubblegum/Gspot" class="postlink">https://github.com/trubblegum/Gspot</a><br>
+<br>
+I try to keep the github wiki up to date, but it may lag a day or two behind.<br>
+<br>
+The license says you can do what you want with it, but don't blame me if you break it or it breaks you <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+enjöy
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file7acc.php?id=4249">Gspot.love</a></dt>
+			<dd><em>Gspot lib + demo</em></dd>			<dd>(10.38 KiB) Downloaded 2140 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a> on Fri Nov 30, 2012 10:25 am, edited 62 times in total.
+									</div>
+			
+						
+							<div id="sig51079" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51087" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51087">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51087">
+
+					<h3 >
+						<a href="viewtopic78ef.html?p=51087#p51087">Re: Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8513.html?mode=quote&amp;p=51087" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic78ef.html?p=51087#p51087" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T12:05:41+00:00">Wed Mar 07, 2012 12:05 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Correction :<br>
+option elements now receive focus and respond to the done() event without using the keyboard to edit their value.</div>
+
+			
+			
+									
+						
+							<div id="sig51087" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51089" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51089">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8313.html?author_id=3988&amp;sr=posts">1206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 02, 2011 9:07 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51089">
+
+					<h3 >
+						<a href="viewtopic7258.html?p=51089#p51089">Re: Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8e3b.html?mode=quote&amp;p=51089" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7258.html?p=51089#p51089" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a></strong> &raquo; </span><time datetime="2012-03-07T12:36:48+00:00">Wed Mar 07, 2012 12:36 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I don't think this "is another" one. It deserves a name.<br>
+Silly suggestion. Use another grey variation for the scrollbar when focused.<br>
+As I told in original WIP thread the "dn" button aligned with last option is more natural. Probably for now "only" missing multiple select. <br>
+Seems all quite nice and would be a nice library. Very nice work trubblegum!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51090" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51090">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51090">
+
+					<h3 >
+						<a href="viewtopic3b84.html?p=51090#p51090">Re: Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4c2a.html?mode=quote&amp;p=51090" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3b84.html?p=51090#p51090" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T12:43:00+00:00">Wed Mar 07, 2012 12:43 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks very much <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+<br>
+Re scrollbar controls : they're only there to demonstrate interacting with the scrollbar from outside of its element, so their positioning is entirely down to the individual implementation.<br>
+<br>
+Re a name : I wanted to call it "gooey", but it looks like that one was taken a long time ago.<br>
+I might call it FTLgui (For The Löve, not Faster Than Light or For The Lose), as I'l probably be making more libraries which can use the same prefix.<br>
+Any other suggestions?</div>
+
+			
+			
+									
+						
+							<div id="sig51090" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51091" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51091">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8313.html?author_id=3988&amp;sr=posts">1206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 02, 2011 9:07 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51091">
+
+					<h3 >
+						<a href="viewtopic0107.html?p=51091#p51091">Re: Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1465.html?mode=quote&amp;p=51091" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0107.html?p=51091#p51091" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a></strong> &raquo; </span><time datetime="2012-03-07T13:02:50+00:00">Wed Mar 07, 2012 1:02 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>trubblegum wrote:</cite>
+Any other suggestions?</div></blockquote>
+In LOVE tradition "G-Spot" = <strong class="text-strong">G</strong>raphical <strong class="text-strong">SP</strong>atial <strong class="text-strong">O</strong>riented <strong class="text-strong">T</strong>echnology, lol</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51093" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51093">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51093">
+
+					<h3 >
+						<a href="viewtopic95cd.html?p=51093#p51093">Re: Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingb6ce.html?mode=quote&amp;p=51093" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic95cd.html?p=51093#p51093" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T13:09:12+00:00">Wed Mar 07, 2012 1:09 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Very nice! I may go with "Gspöt" <img class="smilies" src="images/smilies/ms-megagrin.png" width="16" height="16" alt=":megagrin:" title="Mega Grin"></div>
+
+			
+			
+									
+						
+							<div id="sig51093" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51098" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51098">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51098">
+
+					<h3 >
+						<a href="viewtopic0900.html?p=51098#p51098">Re: Gspöt - formerly Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting882f.html?mode=quote&amp;p=51098" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0900.html?p=51098#p51098" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T14:44:40+00:00">Wed Mar 07, 2012 2:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Now with added text elements, lövingly formatted by the gui.</div>
+
+			
+			
+									
+						
+							<div id="sig51098" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51105" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51105">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51105">
+
+					<h3 >
+						<a href="viewtopicc298.html?p=51105#p51105">Re: Gspöt - formerly Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0b0b.html?mode=quote&amp;p=51105" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc298.html?p=51105#p51105" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-07T16:48:42+00:00">Wed Mar 07, 2012 4:48 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Elements should now be show/hide-able, along with their children (elementlets?).</div>
+
+			
+			
+									
+						
+							<div id="sig51105" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51200" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51200">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="avatar"><img class="avatar" src="download/fileb52b.png?avatar=33290_1333537298.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcf52.html?author_id=33290&amp;sr=posts">192</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Feb 22, 2012 10:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51200">
+
+					<h3 >
+						<a href="viewtopic01a0.html?p=51200#p51200">Re: Gspöt - formerly Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf657.html?mode=quote&amp;p=51200" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic01a0.html?p=51200#p51200" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistc922.html?mode=viewprofile&amp;u=33290" class="username">trubblegum</a></strong> &raquo; </span><time datetime="2012-03-09T02:13:20+00:00">Fri Mar 09, 2012 2:13 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Now with instancing and .love for your convenience.<br>
+<br>
+bugs : Automatic stacking in scrollgroup isn't right, and I'm not sure why.<br>
+<br>
+Some changes :<br>
+- most functions need to have a reference to the gui object passed to them, in order to support multiple gui instances.<br>
+- elements now carry a reference to their gui in element.Gspot, to make things, shall we say .. easier to find <img class="smilies" src="images/smilies/ms-monocle.png" width="16" height="16" alt=":monocle:" title="Monocle"></div>
+
+			
+			
+									
+						
+							<div id="sig51200" class="signature"><span style="font-size:85%;line-height:116%"><a href="https://github.com/trubblegum" class="postlink">https://github.com/trubblegum</a></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p51219" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile51219">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8313.html?author_id=3988&amp;sr=posts">1206</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Nov 02, 2011 9:07 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content51219">
+
+					<h3 >
+						<a href="viewtopic6659.html?p=51219#p51219">Re: Gspöt - formerly Yet another stateful GUI</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf380.html?mode=quote&amp;p=51219" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6659.html?p=51219#p51219" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist3be0.html?mode=viewprofile&amp;u=3988" class="username">coffee</a></strong> &raquo; </span><time datetime="2012-03-09T09:48:03+00:00">Fri Mar 09, 2012 9:48 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks for the .love. Easier this way. Strangely after so much of your work, only now got now a first error/problem. Please right click in head/title of Lorem ipsum box. 504 line error right?<br>
+<br>
+There's a reason for scrollbar "handler" when at top/bottom be smaller? Shouldn't the height of it be constant?<br>
+<br>
+Things are looking good, however the demo don't seem show all power of the gui like for example show all easy hide a object (and subojects). Great work.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingdaa3.html?mode=reply&amp;t=8351" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic8e7e.html?t=8351&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=8351">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			170 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>17</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;8351" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic2e8d.html?t=8351&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic3019.html?t=8351&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic4edf.html?t=8351&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopicb87c.html?t=8351&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopica735-2.html?t=8351&amp;start=160" role="button">17</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic2e8d.html?t=8351&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=8351 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:45:38 GMT -->
+</html>

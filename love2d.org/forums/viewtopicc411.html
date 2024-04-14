@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=10324 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:39:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>fakecanvas: canvases for everyone??? [tldr: barely] - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - fakecanvas: canvases for everyone??? [tldr: barely]" href="app.php/feed/topic/10324">	
+	<link rel="canonical" href="viewtopic75cb.html?t=10324">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp19c7.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D10324" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic75cb.html?t=10324">fakecanvas: canvases for everyone??? [tldr: barely]</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting3906.html?mode=reply&amp;t=10324" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic2b69.html?t=10324&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="10324" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			19 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicd2f5.html?t=10324&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicd2f5.html?t=10324&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p62366" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62366">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="avatar"><img class="avatar" src="download/file9455.png?avatar=1616_1332177306.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2691.html?author_id=1616&amp;sr=posts">211</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 19, 2010 4:20 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62366">
+
+					<h3 class="first">
+						<a href="viewtopic40c5.html?p=62366#p62366">fakecanvas: canvases for everyone??? [tldr: barely]</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc366.html?mode=quote&amp;p=62366" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic40c5.html?p=62366#p62366" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a></strong> &raquo; </span><time datetime="2012-08-02T04:26:40+00:00">Thu Aug 02, 2012 4:26 am</time>
+			</p>
+			
+			
+			
+			<div class="content">after <a href="viewtopic197c.html?p=62344#p62344" class="postlink">posting this</a> i somehow got inspired to actually try it. predictably, screenshots aren't affected by the scissor box and only capture what's in the window, so that changed my plans somewhat.<br>
+<br>
+the readme in the link below explains everything. i'll mention again, though, that i'm unsure if this will work for actual programs, because of the dodginess involved. it's pretty likely i have missed some things too. so don't get your hopes up!<br>
+<br>
+love 0.8 is required for this library<br>
+<br>
+<a href="https://github.com/fogfx/love2d-fakecanvas" class="postlink">github link</a><br>
+<br>
+attached is the mentioned "minimal test", which draws to and renders a fake canvas, and (if supported) a real canvas. this allows you to compare the results and verify that the library actually works to some extent. underneath, the shader shows that i cared enough to vertically flip the image so that it matches the unfortunately inverted real canvas' texture coordinates<br>
+<br>
+EDIT: should work without pixeleffect support now</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file517d.php?id=5267">fakecanvas.love</a></dt>
+			<dd><em>test test test</em></dd>			<dd>(3.96 KiB) Downloaded 608 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+													<div class="notice">
+					Last edited by <a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a> on Sat Aug 04, 2012 4:53 am, edited 3 times in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62371" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62371">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896c.html?mode=viewprofile&amp;u=3394" class="avatar"><img class="avatar" src="download/file3862.png?avatar=3394_1338396725.png" width="90" height="69" alt="User avatar" /></a>														</div>
+								<a href="memberlist896c.html?mode=viewprofile&amp;u=3394" class="username">Roland_Yonaba</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8ac1.html?author_id=3394&amp;sr=posts">1563</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Jun 21, 2011 6:08 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Ouagadougou (Burkina Faso)</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Roland_Yonaba">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Roland_Yonaba</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://www.yonaba.github.io/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62371">
+
+					<h3 >
+						<a href="viewtopic3cf7.html?p=62371#p62371">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4565.html?mode=quote&amp;p=62371" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3cf7.html?p=62371#p62371" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896c.html?mode=viewprofile&amp;u=3394" class="username">Roland_Yonaba</a></strong> &raquo; </span><time datetime="2012-08-02T08:44:12+00:00">Thu Aug 02, 2012 8:44 am</time>
+			</p>
+			
+			
+			
+			<div class="content">What the -  <img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <br>
+That's good news. I predict this is going to be slow, but key, if it works, that's all folks.<br>
+Watching this on Github. Kinda busy right now, will try this as soon as possible.<br>
+Xgoff, be blessed.  <img class="smilies" src="images/smilies/ms-nyu.png" width="16" height="16" alt=":nyu:" title="Nyu"></div>
+
+			
+			
+									
+						
+							<div id="sig62371" class="signature"><a href="http://yonaba.github.com/" class="postlink">DevBlog</a> | <a href="http://github.com/Yonaba" class="postlink">Github</a> | <a href="http://www.google.com/recaptcha/mailhide/d?k=01HyTvozzFr6QcQ0z5kWMOcg==&amp;c=JKAjCplG02SOWgniiVzypsN1mkpjYjRXjt4Kfdf6g0Q=" class="postlink">Email</a> | <a href="http://twitter.com/RYonaba" class="postlink">Twitter</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62373" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62373">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="avatar"><img class="avatar" src="download/file1095.png?avatar=12793_1441922280.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbf5d.html?author_id=12793&amp;sr=posts">1949</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 06, 2011 7:11 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62373">
+
+					<h3 >
+						<a href="viewtopic8c6d.html?p=62373#p62373">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9370.html?mode=quote&amp;p=62373" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8c6d.html?p=62373#p62373" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a></strong> &raquo; </span><time datetime="2012-08-02T09:37:31+00:00">Thu Aug 02, 2012 9:37 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Oh, wow, software canvas support! What does it require? Pixeleffects &gt;.&lt;</div>
+
+			
+			
+									
+						
+							<div id="sig62373" class="signature">lf = love.filesystem<br>
+ls = love.sound<br>
+la = love.audio<br>
+lp = love.physics<br>
+lt = love.thread<br>
+li = love.image<br>
+lg = love.graphics</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62376" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62376">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="avatar"><img class="avatar" src="download/file9455.png?avatar=1616_1332177306.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2691.html?author_id=1616&amp;sr=posts">211</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 19, 2010 4:20 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62376">
+
+					<h3 >
+						<a href="viewtopic3b5c.html?p=62376#p62376">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2992.html?mode=quote&amp;p=62376" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3b5c.html?p=62376#p62376" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a></strong> &raquo; </span><time datetime="2012-08-02T12:20:41+00:00">Thu Aug 02, 2012 12:20 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Nixola wrote:</cite>Oh, wow, software canvas support! What does it require? Pixeleffects &gt;.&lt;</div></blockquote>
+it doesn't actually require pixeleffects (the demo file does though, oops), unless i messed up somewhere and assumed they existed<br>
+<br>
+EDIT: apparently i did<br>
+<br>
+EDIT2: fixed hopefully</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62425" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62425">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="avatar"><img class="avatar" src="download/file0f0a.png?avatar=19455_1385206899.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="username">mickeyjm</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9ad1.html?author_id=19455&amp;sr=posts">237</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 29, 2011 11:41 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62425">
+
+					<h3 >
+						<a href="viewtopic0e13.html?p=62425#p62425">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting24f8.html?mode=quote&amp;p=62425" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0e13.html?p=62425#p62425" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="username">mickeyjm</a></strong> &raquo; </span><time datetime="2012-08-03T14:22:20+00:00">Fri Aug 03, 2012 2:22 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">As I get the text saying if you can see this take my word for it, could you upload a screenshot of it displaying the canvas version so I can see with my own eyes how similar they look?</div>
+
+			
+			
+									
+						
+							<div id="sig62425" class="signature"><span style="font-size:5%;line-height:116%"> Your screen is very zoomed in... </span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62427" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62427">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="avatar"><img class="avatar" src="download/file9455.png?avatar=1616_1332177306.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2691.html?author_id=1616&amp;sr=posts">211</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 19, 2010 4:20 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62427">
+
+					<h3 >
+						<a href="viewtopic7119.html?p=62427#p62427">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting4d20.html?mode=quote&amp;p=62427" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic7119.html?p=62427#p62427" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a></strong> &raquo; </span><time datetime="2012-08-03T15:20:04+00:00">Fri Aug 03, 2012 3:20 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>mickeyjm wrote:</cite>As I get the text saying if you can see this take my word for it, could you upload a screenshot of it displaying the canvas version so I can see with my own eyes how similar they look?</div></blockquote>
+<img src="http://www.walagata.com/w/supermetalmario/fkc.png" class="postimage" alt="Image"><br>
+<br>
+both should (in theory) always look the same since they use the same drawing functions. unless there are subtle driver differences or if canvases are handled differently, settings-wise... but that's something that has to be seen still</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62428" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62428">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist2c1d.html?mode=viewprofile&amp;u=35168" class="username">Zeliarden</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1b62.html?author_id=35168&amp;sr=posts">139</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Feb 28, 2012 4:40 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62428">
+
+					<h3 >
+						<a href="viewtopicf371.html?p=62428#p62428">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting74b7.html?mode=quote&amp;p=62428" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf371.html?p=62428#p62428" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist2c1d.html?mode=viewprofile&amp;u=35168" class="username">Zeliarden</a></strong> &raquo; </span><time datetime="2012-08-03T16:48:04+00:00">Fri Aug 03, 2012 4:48 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">anyone tested this on a real game/program? how fast is it?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62457" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62457">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="avatar"><img class="avatar" src="download/file9455.png?avatar=1616_1332177306.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2691.html?author_id=1616&amp;sr=posts">211</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Nov 19, 2010 4:20 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62457">
+
+					<h3 >
+						<a href="viewtopic0155.html?p=62457#p62457">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7f3b.html?mode=quote&amp;p=62457" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0155.html?p=62457#p62457" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteae4.html?mode=viewprofile&amp;u=1616" class="username">Xgoff</a></strong> &raquo; </span><time datetime="2012-08-04T04:52:17+00:00">Sat Aug 04, 2012 4:52 am</time>
+			</p>
+			
+			
+			
+			<div class="content">just to let everyone know: i'll still work on finishing this, but based on some tests i've lost hope in it being very useful in many cases; it's not *as* slow as i figured it would be (clearing a canvas is really slow, though, but clearing it to full transparency can probably be sped up somewhat)... however, all those screenshots eat ram like popcorn, and you will get some hilariously high memory usage if you're updating even a single canvas each frame  :( <br>
+<br>
+so, it's probably going to be limited in usefulness to things that don't need to draw to canvases often (like guis i guess)<br>
+<br>
+but it did answer my original question: is it possible? yes. but is it practical? not really!<br>
+<br>
+to quote myself:
+<blockquote class="uncited"><div>get better drivers/hardware dammit &gt;:(</div></blockquote></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62460" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62460">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="avatar"><img class="avatar" src="download/file1095.png?avatar=12793_1441922280.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchbf5d.html?author_id=12793&amp;sr=posts">1949</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Dec 06, 2011 7:11 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62460">
+
+					<h3 >
+						<a href="viewtopic0d44.html?p=62460#p62460">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2ce7.html?mode=quote&amp;p=62460" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0d44.html?p=62460#p62460" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist896d.html?mode=viewprofile&amp;u=12793" class="username">Nixola</a></strong> &raquo; </span><time datetime="2012-08-04T07:30:02+00:00">Sat Aug 04, 2012 7:30 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Xgoff wrote:</cite>
+get better drivers/hardware dammit &gt;:(</div></blockquote>
+
+Or just install Linux and stick with it</div>
+
+			
+			
+									
+						
+							<div id="sig62460" class="signature">lf = love.filesystem<br>
+ls = love.sound<br>
+la = love.audio<br>
+lp = love.physics<br>
+lt = love.thread<br>
+li = love.image<br>
+lg = love.graphics</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p62471" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile62471">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="avatar"><img class="avatar" src="download/file0f0a.png?avatar=19455_1385206899.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="username">mickeyjm</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search9ad1.html?author_id=19455&amp;sr=posts">237</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 29, 2011 11:41 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content62471">
+
+					<h3 >
+						<a href="viewtopic18b0.html?p=62471#p62471">Re: fakecanvas: canvases for everyone???</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga6fa.html?mode=quote&amp;p=62471" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic18b0.html?p=62471#p62471" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist49e3.html?mode=viewprofile&amp;u=19455" class="username">mickeyjm</a></strong> &raquo; </span><time datetime="2012-08-04T10:42:10+00:00">Sat Aug 04, 2012 10:42 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Zeliarden wrote:</cite>anyone tested this on a real game/program? how fast is it?</div></blockquote>
+I tried it on the 3D planets demo, but it looked kind of...warped, but for simpe things it seems to work well</div>
+
+			
+			
+									
+						
+							<div id="sig62471" class="signature"><span style="font-size:5%;line-height:116%"> Your screen is very zoomed in... </span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting3906.html?mode=reply&amp;t=10324" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic2b69.html?t=10324&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=10324">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			19 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicd2f5.html?t=10324&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicd2f5.html?t=10324&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=10324 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:39:15 GMT -->
+</html>

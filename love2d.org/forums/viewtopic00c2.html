@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2893 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:33:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>strong: Makes strings stronger (1.0.2) - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - strong: Makes strings stronger (1.0.2)" href="app.php/feed/topic/2893">	
+	<link rel="canonical" href="viewtopic3e69-2.html?t=2893">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp5599.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D2893" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic3e69-2.html?t=2893">strong: Makes strings stronger (1.0.2)</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting7c94.html?mode=reply&amp;t=2893" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic820a-2.html?t=2893&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2893" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			20 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicd4db.html?t=2893&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicd4db.html?t=2893&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p30158" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30158">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="avatar"><img class="avatar" src="download/filefdba.png?avatar=1722_1450137481.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search378e.html?author_id=1722&amp;sr=posts">1261</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Dec 29, 2010 8:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Queensland, Australia</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact BlackBulletIV">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact BlackBulletIV</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ebens.me/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30158">
+
+					<h3 class="first">
+						<a href="viewtopic2909.html?p=30158#p30158">strong: Makes strings stronger (1.0.2)</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1053.html?mode=quote&amp;p=30158" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2909.html?p=30158#p30158" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a></strong> &raquo; </span><time datetime="2011-04-26T01:02:05+00:00">Tue Apr 26, 2011 1:02 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I've been wanting some of the awesome features of <a href="http://www.ruby-doc.org/core/classes/String.html" class="postlink">Ruby's String class</a> for a little while now in Lua. So this morning and last night, I created a library which I've called "strong".<br>
+<br>
+GitHub repo: <a href="https://github.com/BlackBulletIV/strong" class="postlink">https://github.com/BlackBulletIV/strong</a><br>
+Documentation:  <a href="https://github.com/BlackBulletIV/strong/wiki" class="postlink">https://github.com/BlackBulletIV/strong/wiki</a><br>
+Project page on my website: <a href="http://nova-fusion.com/projects/lua/strong" class="postlink">http://nova-fusion.com/projects/lua/strong</a><br>
+Wiki page: <a href="../wiki/strong.html" class="postlink">http://love2d.org/wiki/strong</a><br>
+<br>
+For more information, consult the <a href="https://github.com/BlackBulletIV/strong#readme" class="postlink">README</a>.<br>
+<br>
+Video demonstration of <em class="text-italics">some</em> features:<br>
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/I-e3ll1gi4M?fs=1" frameborder="0" allowfullscreen=""></iframe></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a> on Thu May 12, 2011 4:17 am, edited 9 times in total.
+									</div>
+			
+						
+							<div id="sig30158" class="signature"><a href="https://ebens.me/" class="postlink">My Website</a> - <a href="http://github.com/BlackBulletIV" class="postlink">GitHub</a> - <a href="viewtopica5c3.html?f=5&amp;t=10006" class="postlink">Ammo</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30168" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30168">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="avatar"><img class="avatar" src="download/filed1c2.png?avatar=710_1275310726.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1e62.html?author_id=710&amp;sr=posts">3153</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 03, 2009 5:22 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Madrid, Spain</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact kikito">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact kikito</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://github.com/kikito" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30168">
+
+					<h3 >
+						<a href="viewtopicb705.html?p=30168#p30168">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1cae.html?mode=quote&amp;p=30168" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb705.html?p=30168#p30168" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a></strong> &raquo; </span><time datetime="2011-04-26T08:32:04+00:00">Tue Apr 26, 2011 8:32 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>BlackBulletIV wrote:</cite>I've been wanting some of the awesome features of <a href="http://www.ruby-doc.org/core/classes/String.html" class="postlink">Ruby's String class</a> for a little while now in Lua.</div></blockquote>
+
+Needless to say, I like the idea and the name. <img class="smilies" src="images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"> <br>
+
+<blockquote><div><cite>BlackBulletIV wrote:</cite>Working on creating the tests which make sure everything works. I'm rapidly making things work as they should.</div></blockquote>
+
+I don't like this part so much. If I've learned something, is that making tests first helps. A lot!<br>
+<br>
+I actually tried both approaches with inspect (see <a href="https://github.com/kikito/inspect.lua/commit/3d3840393e81d8c974708d41e126e1c75377f3d3" class="postlink">this commit</a> and the <a href="https://github.com/kikito/inspect.lua/commit/b66508cb560e520521847f780d89dd39a67658d2" class="postlink">next one</a>). The result was: implementing the test first was both easier and ... wait for it ... faster to do!<br>
+<br>
+Because doing the tests first is more fun <img class="smilies" src="images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"> !<br>
+<br>
+Testing stuff the "traditional way" (i.e. opening a lua console, importing your lib, and executing functions) is quite boring, at least for me. I found myself procrastinating, browsing the internet etc, instead of doing the tests I was supposed to be doing.<br>
+<br>
+When you write the tests first, you are actually programming. It's something creative, I enjoy it, and I don't feel tempted to do other stuff. Running the tests takes 2 keystrokes and lasts milliseconds. They pass or they don't. And then, back to programming! The "boring time" is reduced.</div>
+
+			
+			
+									
+						
+							<div id="sig30168" class="signature">When I write <strong class="text-strong">def</strong> I mean <strong class="text-strong">function</strong>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30169" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30169">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="avatar"><img class="avatar" src="download/file95dd.png?avatar=436_1359407191.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a>							</dt>
+
+						<dd class="profile-rank">The Omniscient</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1279.html?author_id=436&amp;sr=posts">6506</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Feb 20, 2009 4:29 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Robin">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Robin</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://robinwell.net/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30169">
+
+					<h3 >
+						<a href="viewtopic94e8.html?p=30169#p30169">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting43d3.html?mode=quote&amp;p=30169" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic94e8.html?p=30169#p30169" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a></strong> &raquo; </span><time datetime="2011-04-26T08:40:15+00:00">Tue Apr 26, 2011 8:40 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Your implementation of string.insert seems a bit... inefficient to me.<br>
+<br>
+I'd do something like:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function string:insert(index, other)
+  index = index % (#self+1)
+  if index == 1 then
+    return other .. self
+  elseif index == 0 then
+    return self .. other
+  else
+    return self:sub(1, index - 1) .. other .. self:sub(index)
+  end
+end</code></pre></div>
+
+Didn't test it, but it should work. It handles negative indices as well.<br>
+<br>
+EDIT: position of insertion
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---------------------
+| A | B | C | D | E |
+---------------------
+1   2   3   4   5   6
+-5 -4  -3  -2  -1   0</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig30169" class="signature"><a href="viewtopica648.html?f=4&amp;t=2982#p30978" class="postlink">Help us help you</a>: attach a .love.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30174" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30174">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="avatar"><img class="avatar" src="download/filefdba.png?avatar=1722_1450137481.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search378e.html?author_id=1722&amp;sr=posts">1261</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Dec 29, 2010 8:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Queensland, Australia</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact BlackBulletIV">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact BlackBulletIV</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ebens.me/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30174">
+
+					<h3 >
+						<a href="viewtopic9b2e.html?p=30174#p30174">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6d4f.html?mode=quote&amp;p=30174" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9b2e.html?p=30174#p30174" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a></strong> &raquo; </span><time datetime="2011-04-26T09:47:10+00:00">Tue Apr 26, 2011 9:47 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>kikito wrote:</cite>Needless to say, I like the idea and the name. <img class="smilies" src="images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"></div></blockquote>
+Thanks kikito!<br>
+
+<blockquote><div><cite>kikito wrote:</cite>I don't like this part so much. If I've learned something, is that making tests first helps. A lot!<br>
+<br>
+I actually tried both approaches with inspect (see <a href="https://github.com/kikito/inspect.lua/commit/3d3840393e81d8c974708d41e126e1c75377f3d3" class="postlink">this commit</a> and the <a href="https://github.com/kikito/inspect.lua/commit/b66508cb560e520521847f780d89dd39a67658d2" class="postlink">next one</a>). The result was: implementing the test first was both easier and ... wait for it ... faster to do!<br>
+<br>
+Because doing the tests first is more fun <img class="smilies" src="images/smilies/ms-ultra-shocked.png" width="16" height="16" alt=":ultrashocked:" title="Ultrashocked"> !<br>
+<br>
+Testing stuff the "traditional way" (i.e. opening a lua console, importing your lib, and executing functions) is quite boring, at least for me. I found myself procrastinating, browsing the internet etc, instead of doing the tests I was supposed to be doing.<br>
+<br>
+When you write the tests first, you are actually programming. It's something creative, I enjoy it, and I don't feel tempted to do other stuff. Running the tests takes 2 keystrokes and lasts milliseconds. They pass or they don't. And then, back to programming! The "boring time" is reduced.</div></blockquote>
+Of course you don't like it <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">. I'm not a TDD person by any means, I don't write tests much, but in this case I thought they were necessary for finding problems (and there's quite a few that have been found already). I find I have to force myself to write tests, I just find it boring. But maybe it would be different if I did tests first for the purpose of designing an API, I don't know.<br>
+<br>
+I find the problem is, most of the time you write more test code than application code when using tests. So as an analogy, a builder places a brick down, which takes a minute. He then spends 5 minutes inspecting that he placed it correctly. So he ends up spending an hour laying bricks, and 5 hours checking that he didn't do anything wrong.<br>
+<br>
+But anyway, I think I'm just put off by TDD because I've been doing it the exact opposite for some time now. Do you know any good way to get yourself into TDD? I guess this is same kind of ordeal I had with two-space indentation, I knew it was better (because I was coding in Ruby now), but I just couldn't get over not having four spaces; I ended up forcing myself to "get used to it", and now my eyes have adjusted and I can't stand using four spaces (except when I'm in a curly braced language, then I'm not sure what to do).<br>
+<br>
+Anyway, enough rants from me.<br>
+<br>
+<strong class="text-strong">--------------------------------</strong><br>
+<br>
+As for your post Robin, thanks heaps! I've put it in the repo and marked your kindness in the README <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.</div>
+
+			
+			
+									
+						
+							<div id="sig30174" class="signature"><a href="https://ebens.me/" class="postlink">My Website</a> - <a href="http://github.com/BlackBulletIV" class="postlink">GitHub</a> - <a href="viewtopica5c3.html?f=5&amp;t=10006" class="postlink">Ammo</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30176" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30176">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="avatar"><img class="avatar" src="download/filed1c2.png?avatar=710_1275310726.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1e62.html?author_id=710&amp;sr=posts">3153</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Oct 03, 2009 5:22 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Madrid, Spain</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact kikito">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact kikito</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://github.com/kikito" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30176">
+
+					<h3 >
+						<a href="viewtopic0b94.html?p=30176#p30176">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting10a5.html?mode=quote&amp;p=30176" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0b94.html?p=30176#p30176" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4718.html?mode=viewprofile&amp;u=710" class="username">kikito</a></strong> &raquo; </span><time datetime="2011-04-26T10:18:53+00:00">Tue Apr 26, 2011 10:18 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>BlackBulletIV wrote:</cite>Do you know any good way to get yourself into TDD?</div></blockquote>
+
+The beaten path is the best one IMHO. Very succintly:
+<ul><li>Pick a small enough problem (strong is an excellent candidate)</li>
+<li>(This is optional, but surprisingly useful) - write the README of the library. Make sure it includes some example, or the names of the methods you will use. Some people jokingly call this "README-driven development".</li> 
+<li>Build up the "blank state" (so you are able to run the tests, even if there are no tests yet, without errors). In lua this usually means something like making a return {} on your main &lt;library&gt;.lua file, and making sure that you are able to require that file from inside the test_&lt;mylib&gt;.lua file (or spec_&lt;mylib&gt;.lua). As we have talked over email, I've found that in Lua the simplest solution for this is using symbolic links for the lib files/folders inside the tests folder.</li>
+<li>Pick one method (or independent piece of functionality) for the lib. For example, the __index metamethod for strings.</li>
+<li>Write a test for the simplest case of that method. For example, __index with a number only.</li>
+<li>Make sure that the test fails. I mean, actually going to the console and making sure that the test fails properly - this makes sure that you have not, for example, made a syntax error on the test code.</li>
+<li>Write just the minimum amount of code for making that test pass. This requires you to think like a programmer, not like a code monkey. For example, if your test does ("hello")[1], you don't have to make the index method return "h" on your test. You can actually skip the very very obvious steps and make it return self:sub(key, key)</li>
+<li>Make sure that the test pass.</li>
+<li>Add more tests, make them fail, implement them, and pass the tests again, until the functionality of that first method is complete (in the index case, numbers and not-numbers) and the edge cases have been discovered (what happens when a negative number is passed? what about nil? a function?)</li>
+<li>Then move over to the next piece of functionality and start with the simplest case again.</li> 
+ </ul>
+
+This might sound like a lot of work, but take into account that running the tests is super easy - In my case, it takes more time to save the file than to run the tests (because I use the mouse). You will discover soon enough that once you get into the flow, it's more satisfying than the "usual" way.</div>
+
+			
+			
+									
+						
+							<div id="sig30176" class="signature">When I write <strong class="text-strong">def</strong> I mean <strong class="text-strong">function</strong>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30177" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30177">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="avatar"><img class="avatar" src="download/filefdba.png?avatar=1722_1450137481.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search378e.html?author_id=1722&amp;sr=posts">1261</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Dec 29, 2010 8:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Queensland, Australia</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact BlackBulletIV">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact BlackBulletIV</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ebens.me/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30177">
+
+					<h3 >
+						<a href="viewtopic24a5.html?p=30177#p30177">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting130d.html?mode=quote&amp;p=30177" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic24a5.html?p=30177#p30177" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a></strong> &raquo; </span><time datetime="2011-04-26T10:40:22+00:00">Tue Apr 26, 2011 10:40 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks for that kikito. I'll give it a try. Maybe I should create a library or two to "learn" TDD (just like you did to test TDD in Lua).</div>
+
+			
+			
+									
+						
+							<div id="sig30177" class="signature"><a href="https://ebens.me/" class="postlink">My Website</a> - <a href="http://github.com/BlackBulletIV" class="postlink">GitHub</a> - <a href="viewtopica5c3.html?f=5&amp;t=10006" class="postlink">Ammo</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30214" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30214">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="avatar"><img class="avatar" src="download/file95dd.png?avatar=436_1359407191.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a>							</dt>
+
+						<dd class="profile-rank">The Omniscient</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1279.html?author_id=436&amp;sr=posts">6506</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Feb 20, 2009 4:29 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Robin">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Robin</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://robinwell.net/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30214">
+
+					<h3 >
+						<a href="viewtopic8430.html?p=30214#p30214">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting02d2.html?mode=quote&amp;p=30214" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8430.html?p=30214#p30214" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a></strong> &raquo; </span><time datetime="2011-04-26T20:01:54+00:00">Tue Apr 26, 2011 8:01 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Another version of string.insert, which is more consistent in regard to negative indices, at the expense of slightly less elegant code:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>function string:insert(index, other)
+  index = (index &lt; 0 and index + 1 or index) % (#self+1)
+  if index == 1 then
+    return other .. self
+  elseif index == 0 then
+    return self .. other
+  else
+    return self:sub(1, index - 1) .. other .. self:sub(index)
+  end
+end</code></pre></div>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>---------------------
+| A | B | C | D | E |
+---------------------
+1   2   3   4   5   6
+-6 -5  -4  -3  -2  -1</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig30214" class="signature"><a href="viewtopica648.html?f=4&amp;t=2982#p30978" class="postlink">Help us help you</a>: attach a .love.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30226" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30226">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="avatar"><img class="avatar" src="download/filefdba.png?avatar=1722_1450137481.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search378e.html?author_id=1722&amp;sr=posts">1261</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Dec 29, 2010 8:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Queensland, Australia</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact BlackBulletIV">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact BlackBulletIV</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ebens.me/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30226">
+
+					<h3 >
+						<a href="viewtopicac25.html?p=30226#p30226">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0da9.html?mode=quote&amp;p=30226" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicac25.html?p=30226#p30226" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a></strong> &raquo; </span><time datetime="2011-04-26T22:49:23+00:00">Tue Apr 26, 2011 10:49 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks for that. I've put it in <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">.<br>
+<br>
+EDIT: Added this a library in the wiki.</div>
+
+			
+			
+									
+						
+							<div id="sig30226" class="signature"><a href="https://ebens.me/" class="postlink">My Website</a> - <a href="http://github.com/BlackBulletIV" class="postlink">GitHub</a> - <a href="viewtopica5c3.html?f=5&amp;t=10006" class="postlink">Ammo</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30337" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30337">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="avatar"><img class="avatar" src="download/filefdba.png?avatar=1722_1450137481.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search378e.html?author_id=1722&amp;sr=posts">1261</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Dec 29, 2010 8:19 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Queensland, Australia</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact BlackBulletIV">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact BlackBulletIV</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://ebens.me/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30337">
+
+					<h3 >
+						<a href="viewtopicaf10.html?p=30337#p30337">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc585.html?mode=quote&amp;p=30337" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicaf10.html?p=30337#p30337" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist557c.html?mode=viewprofile&amp;u=1722" class="username">BlackBulletIV</a></strong> &raquo; </span><time datetime="2011-04-28T01:35:53+00:00">Thu Apr 28, 2011 1:35 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Ok here's the status of strong.<br>
+<br>
+Pretty much all methods are implemented (I think the 'center' method would be the only one left) and have tests for them. If you look at the README in the Bugs/Problems section you'll find the details for a pesky problem in the squeeze method. This problem is the reason I'm hesitant to make a 1.0 release now. If anyone could help out, that would be most appreciated.<br>
+<br>
+I've also started working the documentation, have a look at the GitHub wiki for that. If anyone would like to help out in the function reference, please do.<br>
+<br>
+Finally I want your opinion on a couple of things.<br>
+<br>
+First is whether I should use camel-case naming for the functions with multiple words, or whether I should keep their Ruby names which have underscores? And no, I won't accept the Lua style of all lower-case, and no spaces; that's hard to read (and I don't know why they did that in the first place).<br>
+<br>
+And second is whether I should use function arguments for iterative methods, like bytes, chars, and eachLine, or use iterators? I've tending to like iterators more, as it's more Lua-like.<br>
+<br>
+Thanks guys!</div>
+
+			
+			
+									
+						
+							<div id="sig30337" class="signature"><a href="https://ebens.me/" class="postlink">My Website</a> - <a href="http://github.com/BlackBulletIV" class="postlink">GitHub</a> - <a href="viewtopica5c3.html?f=5&amp;t=10006" class="postlink">Ammo</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p30362" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile30362">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="avatar"><img class="avatar" src="download/file95dd.png?avatar=436_1359407191.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a>							</dt>
+
+						<dd class="profile-rank">The Omniscient</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1279.html?author_id=436&amp;sr=posts">6506</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Feb 20, 2009 4:29 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Robin">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Robin</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://robinwell.net/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content30362">
+
+					<h3 >
+						<a href="viewtopica892.html?p=30362#p30362">Re: strong: Makes strings stronger</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8194.html?mode=quote&amp;p=30362" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica892.html?p=30362#p30362" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a></strong> &raquo; </span><time datetime="2011-04-28T04:53:57+00:00">Thu Apr 28, 2011 4:53 am</time>
+			</p>
+			
+			
+			
+			<div class="content">You have no string.title(), right?
+<blockquote><div><cite>BlackBulletIV wrote:</cite>And second is whether I should use function arguments for iterative methods, like bytes, chars, and eachLine, or use iterators? I've tending to like iterators more, as it's more Lua-like.</div></blockquote>
+Definitely make them iterators.<br>
+<br>
+table.foreach and table.foreachi are deprecated in favour of pairs and ipairs.</div>
+
+			
+			
+									
+						
+							<div id="sig30362" class="signature"><a href="viewtopica648.html?f=4&amp;t=2982#p30978" class="postlink">Help us help you</a>: attach a .love.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting7c94.html?mode=reply&amp;t=2893" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic820a-2.html?t=2893&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=2893">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			20 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopicd4db.html?t=2893&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopicd4db.html?t=2893&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2893 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:33:32 GMT -->
+</html>

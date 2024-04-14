@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2334 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:43:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>TEsound - simple, easy sound/music manager - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - TEsound - simple, easy sound/music manager" href="app.php/feed/topic/2334">	
+	<link rel="canonical" href="viewtopic4e40.html?t=2334">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpc2c8.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D2334" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic4e40.html?t=2334">TEsound - simple, easy sound/music manager</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting2ca4.html?mode=reply&amp;t=2334" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopicb461.html?t=2334&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2334" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			58 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic3313.html?t=2334&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicd1a3.html?t=2334&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopicb3c7.html?t=2334&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic8bab.html?t=2334&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic05ff.html?t=2334&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic3313.html?t=2334&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+	<form method="post" action="http://love2d.org/forums/viewtopic.php?t=2334" data-ajax="vote_poll" data-refresh="true" class="topic_poll">
+
+	<div class="panel">
+		<div class="inner">
+
+		<div class="content">
+			<h2 class="poll-title">Awesome?</h2>
+			<p class="author"></p>
+
+			<fieldset class="polls">
+											<dl class=" most-votes" data-alt-text="You voted for this option" data-poll-option-id="1">
+					<dt>Yes! Thank you!</dt>
+										<dd class="resultbar"><div class="pollbar4" style="width:100%;">54</div></dd>
+					<dd class="poll_option_percent">75%</dd>
+				</dl>
+															<dl class="" data-alt-text="You voted for this option" data-poll-option-id="2">
+					<dt>Yes, but I don't need it.</dt>
+										<dd class="resultbar"><div class="pollbar2" style="width:30%;">16</div></dd>
+					<dd class="poll_option_percent">22%</dd>
+				</dl>
+															<dl class="" data-alt-text="You voted for this option" data-poll-option-id="3">
+					<dt>No. (Please tell me why)</dt>
+										<dd class="resultbar"><div class="pollbar1" style="width:4%;">2</div></dd>
+					<dd class="poll_option_percent">3%</dd>
+				</dl>
+							
+				<dl class="poll_total_votes">
+					<dt>&nbsp;</dt>
+					<dd class="resultbar">Total votes: <span class="poll_total_vote_cnt">72</span></dd>
+				</dl>
+
+			
+						</fieldset>
+			<div class="vote-submitted hidden">Your vote has been cast.</div>
+		</div>
+
+		</div>
+		
+		
+	</div>
+
+	</form>
+	<hr />
+
+
+			<div id="p24973" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24973">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="avatar"><img class="avatar" src="download/filee4dd.png?avatar=874_1276377128.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a>							</dt>
+
+						<dd class="profile-rank">Dreaming in associative arrays</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5a2c.html?author_id=874&amp;sr=posts">1025</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 11, 2010 5:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> CA, USA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Taehl">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Taehl</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sites.google.com/site/pixelperfectsite/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24973">
+
+					<h3 class="first">
+						<a href="viewtopic6176.html?p=24973#p24973">TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting404c.html?mode=quote&amp;p=24973" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6176.html?p=24973#p24973" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a></strong> &raquo; </span><time datetime="2011-01-09T02:44:19+00:00">Sun Jan 09, 2011 2:44 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Tired of not being able to overlap sounds in Love? Or maybe you just can't figure out the love.audio module? Ensayia and I wrote this module to make sound and music easy.<br>
+<br>
+<strong class="text-strong">Mini-tutorial!</strong><br>
+<br>
+Q) What do I have to do to use it?<br>
+1) Put TEsound.lua in your game's folder.<br>
+2) At the top of main.lua, add require"TEsound".<br>
+3) In love.update(), add TEsound.cleanup(). That's it! TEsound will automatically manage sound channels (sounds can overlap) and memory.<br>
+<br>
+Q) How do I just play a sound?<br>
+A) All you need to do is TEsound.play(filepath), where filepath is a string like "sounds/boom.ogg".<br>
+<br>
+Q) I have three different jump sounds, how can I play one at random?<br>
+A) TEsound.play(list), where list is a table like {"jump1.ogg", "jump2.ogg", "jump3.ogg"}<br>
+<br>
+Q) Can I make it constantly play randomized music?<br>
+A) Sure! TEsound.playLooping(list). When one song ends, a new one from the list will automatically start playing.<br>
+<br>
+Q) Now how do I stop the music? / What are sound tags?<br>
+A) The best way is to use TEsound's "tagging" feature. Simply put, TEsound lets you add one or more tags to each sound that's playing, and you can call various functions on all sounds with a given tag. So you could do this:<br>
+TEsound.playLooping("song1.ogg", "music")<br>
+TEsound.stop("music")<br>
+Sounds can have multiple tags if you desire (use a list: TEsound.play(sound, {"something", "whatever", "lol"}), and multiple sounds can share tags (if you call something like TEsound.pitch("sfx", .5), all sounds with the "sfx" tag will immediately be low-pitched). Tags can also be unique, in case you want to work with a specific sound.<br>
+<br>
+Q) What if I want to change the volume/pitch of all sounds?<br>
+A) That's what the special "all" tag is for. You don't need to give the tag to sounds, it's automatically applied to them. So if you wanted to cut the volume of everything in half, you just need to TEsound.tagVolume("all",.5).<br>
+<br>
+Q) I want to let the player choose different volume levels for sound effects, music, and voice-acting. Can TEsound handle it?<br>
+A) Yep! You can set a volume multiplier for any tag with TEsound.tagVolume(tag, volume). Tag-volume changes take immediate effect (even on sounds that are already playing!). So you could use TEsound.tagVolume("voice", .75), and any sound with the "voice" tag would play at .75 volume. This is multiplied by the sound's own volume and what the "all" tag is set to - if you TEsound.play("splat.ogg", "sfx", .5), and you've set the "sfx" and "all" tags to .6 and 1 volume, then the sound would play at .3 volume.<br>
+<br>
+Q) How do I pronounce the name of your module? "Tee ee sound"?<br>
+A) That works, but I, personally, say "teh sound" <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br>
+<br>
+Q) Anything else I should know?<br>
+A) Each function has several more optional parameters - I've just covered the basics here. Check out the documentation for a full list of functions and their parameters.<br>
+<br>
+Ready for sound and music to finally be easy to use? Download the <a href="http://dl.dropbox.com/u/3713769/web/Love/TEsound/TEsound.lua" class="postlink">module</a>, and check out the <a href="../wiki/TEsound.html" class="postlink">wiki page</a> for more documentation.<br>
+<br>
+EDIT) Updated it slightly - I streamlined it by merging playRandom into play, and playRandomLooping into playLooping (just pass them a list instead of a single filepath). Updated documentation accordingly.<br>
+EDIT2) Updated it slightly again - make pitch work identically to volume, and added special "all" tag functionality. Updated documentation accordingly.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a> on Fri Jan 14, 2011 2:43 am, edited 4 times in total.
+									</div>
+			
+						
+							<div id="sig24973" class="signature"><span style="font-size:85%;line-height:116%">Earliest Love2D supporter who can't Love anymore. Let me disable pixel shaders if I don't use them, dammit!<br>
+<a href="https://en.wikipedia.org/wiki/ThinkPad_X_Series#2006" class="postlink">Lenovo Thinkpad X60 Tablet</a>, built like a <em class="text-italics">tank</em>. But not fancy enough for Love2D 0.10.0+.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p24991" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24991">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="avatar"><img class="avatar" src="download/fileae87.png?avatar=58_1275220542.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="username">nevon</a>							</dt>
+
+						<dd class="profile-rank">Commander of the Circuloids</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e30.html?author_id=58&amp;sr=posts">938</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Feb 14, 2008 8:25 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact nevon">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact nevon</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/Nevon" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24991">
+
+					<h3 >
+						<a href="viewtopic4db4.html?p=24991#p24991">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge09d.html?mode=quote&amp;p=24991" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4db4.html?p=24991#p24991" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="username">nevon</a></strong> &raquo; </span><time datetime="2011-01-09T09:47:31+00:00">Sun Jan 09, 2011 9:47 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This seems rather useful. So far I've gotten by with a fairly rudimentary sound manager, but this definitely seems more versatile. What license is it being released under?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p24996" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24996">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistd110.html?mode=viewprofile&amp;u=1149" class="avatar"><img class="avatar" src="download/filefad5.png?avatar=1149_1303650842.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistd110.html?mode=viewprofile&amp;u=1149" class="username">Lap</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search2ee2.html?author_id=1149&amp;sr=posts">256</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Apr 30, 2010 3:46 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24996">
+
+					<h3 >
+						<a href="viewtopic07c9.html?p=24996#p24996">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting538d.html?mode=quote&amp;p=24996" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic07c9.html?p=24996#p24996" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistd110.html?mode=viewprofile&amp;u=1149" class="username">Lap</a></strong> &raquo; </span><time datetime="2011-01-09T14:54:00+00:00">Sun Jan 09, 2011 2:54 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Another win for procrastination! I kept putting off making something to manage the looping music and sound effects....glad I did.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p24997" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24997">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="avatar"><img class="avatar" src="download/filee4dd.png?avatar=874_1276377128.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a>							</dt>
+
+						<dd class="profile-rank">Dreaming in associative arrays</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5a2c.html?author_id=874&amp;sr=posts">1025</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 11, 2010 5:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> CA, USA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Taehl">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Taehl</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sites.google.com/site/pixelperfectsite/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24997">
+
+					<h3 >
+						<a href="viewtopic9bfa-2.html?p=24997#p24997">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0f40.html?mode=quote&amp;p=24997" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9bfa-2.html?p=24997#p24997" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a></strong> &raquo; </span><time datetime="2011-01-09T15:20:55+00:00">Sun Jan 09, 2011 3:20 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">License? Feh, I don't know. Guess it'll be zlib, like Love itself. But if your game ends up making a lot of money, maybe you could please consider sending a little bit of it my way? <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br>
+<br>
+EDIT) Clarified wording.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a> on Sun Jan 09, 2011 4:45 pm, edited 1 time in total.
+									</div>
+			
+						
+							<div id="sig24997" class="signature"><span style="font-size:85%;line-height:116%">Earliest Love2D supporter who can't Love anymore. Let me disable pixel shaders if I don't use them, dammit!<br>
+<a href="https://en.wikipedia.org/wiki/ThinkPad_X_Series#2006" class="postlink">Lenovo Thinkpad X60 Tablet</a>, built like a <em class="text-italics">tank</em>. But not fancy enough for Love2D 0.10.0+.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p24998" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24998">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="avatar"><img class="avatar" src="download/fileae87.png?avatar=58_1275220542.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="username">nevon</a>							</dt>
+
+						<dd class="profile-rank">Commander of the Circuloids</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e30.html?author_id=58&amp;sr=posts">938</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Feb 14, 2008 8:25 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Stockholm, Sweden</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact nevon">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact nevon</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://github.com/Nevon" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24998">
+
+					<h3 >
+						<a href="viewtopic0042.html?p=24998#p24998">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingeee7.html?mode=quote&amp;p=24998" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic0042.html?p=24998#p24998" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf948.html?mode=viewprofile&amp;u=58" class="username">nevon</a></strong> &raquo; </span><time datetime="2011-01-09T15:31:00+00:00">Sun Jan 09, 2011 3:31 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Liberal licensing makes my heart smile. <img class="smilies" src="images/smilies/ms-nyu.png" width="16" height="16" alt=":nyu:" title="Nyu"></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p24999" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile24999">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="avatar"><img class="avatar" src="download/filee4dd.png?avatar=874_1276377128.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a>							</dt>
+
+						<dd class="profile-rank">Dreaming in associative arrays</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5a2c.html?author_id=874&amp;sr=posts">1025</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 11, 2010 5:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> CA, USA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Taehl">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Taehl</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sites.google.com/site/pixelperfectsite/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content24999">
+
+					<h3 >
+						<a href="viewtopicf2ab.html?p=24999#p24999">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc3a0.html?mode=quote&amp;p=24999" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf2ab.html?p=24999#p24999" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a></strong> &raquo; </span><time datetime="2011-01-09T15:45:06+00:00">Sun Jan 09, 2011 3:45 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'm glad. So, I guess with that out of the way, this thread can be used for bug reports (hah, unlikely!), feature requests / suggestions for improvement, questions about usage, and so forth. Or, hey, if everything just works (hopefully the case), I won't say no to praise. <img class="smilies" src="images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"></div>
+
+			
+			
+									
+						
+							<div id="sig24999" class="signature"><span style="font-size:85%;line-height:116%">Earliest Love2D supporter who can't Love anymore. Let me disable pixel shaders if I don't use them, dammit!<br>
+<a href="https://en.wikipedia.org/wiki/ThinkPad_X_Series#2006" class="postlink">Lenovo Thinkpad X60 Tablet</a>, built like a <em class="text-italics">tank</em>. But not fancy enough for Love2D 0.10.0+.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p25001" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile25001">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="avatar"><img class="avatar" src="download/file95dd.png?avatar=436_1359407191.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a>							</dt>
+
+						<dd class="profile-rank">The Omniscient</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1279.html?author_id=436&amp;sr=posts">6506</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Feb 20, 2009 4:29 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> The Netherlands</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Robin">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Robin</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://robinwell.net/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content25001">
+
+					<h3 >
+						<a href="viewtopicc432.html?p=25001#p25001">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting28d9.html?mode=quote&amp;p=25001" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc432.html?p=25001#p25001" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist219d.html?mode=viewprofile&amp;u=436" class="username">Robin</a></strong> &raquo; </span><time datetime="2011-01-09T16:34:27+00:00">Sun Jan 09, 2011 4:34 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>Taehl wrote:</cite>License? Feh, I don't know. Guess it'll be zlib, like Love itself.</div></blockquote>
+Excellent choice.
+<blockquote><div><cite>Taehl wrote:</cite>Maybe with the added condition that if you use it for a game that ends up making a lot of money, I ask you to consider sending a little bit of it my way. <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"></div></blockquote>
+Please don't do that. Put it somewhere apart from the license, it could confuse people to no end.</div>
+
+			
+			
+									
+						
+							<div id="sig25001" class="signature"><a href="viewtopica648.html?f=4&amp;t=2982#p30978" class="postlink">Help us help you</a>: attach a .love.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p25002" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile25002">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="avatar"><img class="avatar" src="download/filee4dd.png?avatar=874_1276377128.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a>							</dt>
+
+						<dd class="profile-rank">Dreaming in associative arrays</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5a2c.html?author_id=874&amp;sr=posts">1025</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 11, 2010 5:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> CA, USA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Taehl">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Taehl</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sites.google.com/site/pixelperfectsite/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content25002">
+
+					<h3 >
+						<a href="viewtopic874c.html?p=25002#p25002">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting330c.html?mode=quote&amp;p=25002" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic874c.html?p=25002#p25002" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a></strong> &raquo; </span><time datetime="2011-01-09T16:44:18+00:00">Sun Jan 09, 2011 4:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Fine, fine. It was mostly a joke.</div>
+
+			
+			
+									
+						
+							<div id="sig25002" class="signature"><span style="font-size:85%;line-height:116%">Earliest Love2D supporter who can't Love anymore. Let me disable pixel shaders if I don't use them, dammit!<br>
+<a href="https://en.wikipedia.org/wiki/ThinkPad_X_Series#2006" class="postlink">Lenovo Thinkpad X60 Tablet</a>, built like a <em class="text-italics">tank</em>. But not fancy enough for Love2D 0.10.0+.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p25117" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile25117">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="avatar"><img class="avatar" src="download/filee4dd.png?avatar=874_1276377128.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a>							</dt>
+
+						<dd class="profile-rank">Dreaming in associative arrays</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5a2c.html?author_id=874&amp;sr=posts">1025</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jan 11, 2010 5:07 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> CA, USA</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact Taehl">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact Taehl</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://sites.google.com/site/pixelperfectsite/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content25117">
+
+					<h3 >
+						<a href="viewtopicc671.html?p=25117#p25117">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8489.html?mode=quote&amp;p=25117" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicc671.html?p=25117#p25117" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf9c9.html?mode=viewprofile&amp;u=874" class="username">Taehl</a></strong> &raquo; </span><time datetime="2011-01-11T19:37:50+00:00">Tue Jan 11, 2011 7:37 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Small update: I've made pitch-changing work exactly like volume-changing, hence two new functions: TEsound.tagPitch and TEsound.findPitch. I've also added a special "all" tag which automatically works on all sounds (they don't need to be assigned the tag) in ADDITION to their own volume/pitch and tag volume/pitch (if any). In other words, the volume/pitch a sound plays at is (sound's level * set tag * "all" tag). So basically, changing the "all" tag is a master volume/pitch control (using TEsound.tagVolume("all",.5) will halve the volume of all sounds, for example).</div>
+
+			
+			
+									
+						
+							<div id="sig25117" class="signature"><span style="font-size:85%;line-height:116%">Earliest Love2D supporter who can't Love anymore. Let me disable pixel shaders if I don't use them, dammit!<br>
+<a href="https://en.wikipedia.org/wiki/ThinkPad_X_Series#2006" class="postlink">Lenovo Thinkpad X60 Tablet</a>, built like a <em class="text-italics">tank</em>. But not fancy enough for Love2D 0.10.0+.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p25242" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile25242">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="avatar"><img class="avatar" src="download/file985f.jpg?avatar=649_1277354250.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="username">TechnoCat</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5db3.html?author_id=649&amp;sr=posts">1611</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 30, 2009 12:31 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denver, CO</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact TechnoCat">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact TechnoCat</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://dannyfritz.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content25242">
+
+					<h3 >
+						<a href="viewtopic4362.html?p=25242#p25242">Re: TEsound - simple, easy sound/music manager</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1b06.html?mode=quote&amp;p=25242" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4362.html?p=25242#p25242" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="username">TechnoCat</a></strong> &raquo; </span><time datetime="2011-01-13T15:32:30+00:00">Thu Jan 13, 2011 3:32 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Could you add this to the wiki please? <a href="../wiki/Category_Libraries37b0.html?action=purge" class="postlink">http://love2d.org/wiki/Category:Libraries?action=purge</a></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting2ca4.html?mode=reply&amp;t=2334" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopicb461.html?t=2334&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=2334">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			58 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic3313.html?t=2334&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopicd1a3.html?t=2334&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopicb3c7.html?t=2334&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic8bab.html?t=2334&amp;start=40" role="button">5</a></li>
+				<li><a class="button" href="viewtopic05ff.html?t=2334&amp;start=50" role="button">6</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic3313.html?t=2334&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: No registered users and 1 guest</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2334 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 19:43:47 GMT -->
+</html>
