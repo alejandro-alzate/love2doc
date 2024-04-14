@@ -20,7 +20,7 @@
 	xmlns:property="&property;">
 
 	<owl:Ontology rdf:about="http://love2d.org/wiki/Special:ExportRDF/enet.host-3Abroadcast">
-		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-09T00:19:49+00:00</swivt:creationDate>
+		<swivt:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-12T00:33:49+00:00</swivt:creationDate>
 		<owl:imports rdf:resource="http://semantic-mediawiki.org/swivt/1.0"/>
 	</owl:Ontology>
 	<swivt:Subject rdf:about="http://love2d.org/wiki/Special:URIResolver/enet.host-3Abroadcast">

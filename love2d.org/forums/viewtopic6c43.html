@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=3733 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 15:38:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Share a Shader! - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Support and Development" href="app.php/feed/forum/4">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Share a Shader!" href="app.php/feed/topic/3733">	
+	<link rel="canonical" href="viewtopic590c.html?t=3733">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="4"><a itemprop="item" href="viewforum31e6.html?f=4"><span itemprop="name">Support and Development</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp7707.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D4%26t%3D3733" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic590c.html?t=3733">Share a Shader!</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions about the LÖVE API, installing LÖVE and other support related questions go here.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			Before you make a thread asking for help, <a href="viewtopica648.html?f=4&amp;t=2982" class="postlink">read this</a>.
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="postingcac7.html?mode=reply&amp;t=3733" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic3c36.html?t=3733&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="3733" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			329 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>33</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;3733" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic941b.html?t=3733&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic047b.html?t=3733&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic401d.html?t=3733&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic0582.html?t=3733&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopicbcd8.html?t=3733&amp;start=320" role="button">33</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic941b.html?t=3733&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p37873" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile37873">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="avatar"><img class="avatar" src="download/file6628.jpg?avatar=2931_1311376103.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8177.html?author_id=2931&amp;sr=posts">277</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat May 14, 2011 10:18 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content37873">
+
+					<h3 class="first">
+						<a href="viewtopic05eb.html?p=37873#p37873">Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingc82d.html?mode=quote&amp;p=37873" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic05eb.html?p=37873#p37873" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a></strong> &raquo; </span><time datetime="2011-10-10T17:46:39+00:00">Mon Oct 10, 2011 5:46 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Seeing as shaders are pretty new and there aren't many examples yet, I thought It'd be nice to pool together what we've come up with so far, so that people who're interested in checking them out before 0.8 is properly out can see what they can do and have a play.<br>
+I'll dump a few I've come up with so far in here, and if other people have some to share too, that'd be great!<br>
+<br>
+This performs a simple box blur on boxes created by the mouse:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file1c8f.php?id=4340">shader mouse test1.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(942 Bytes) Downloaded 4837 times</dd>
+		</dl>
+		
+			</div>
+
+This is an experiment attempting to simulate sand stacking purely using shaders, may appear upside down depending on which version of 0.8 you have:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/filef5ee.php?id=4341">sand shader.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(1.28 KiB) Downloaded 3864 times</dd>
+		</dl>
+		
+			</div>
+
+<br>
+From a previous thread by GijsB about images effects, this shows a few basic effects that shaders can perform on an image:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/filea488.php?id=3168">Images Effects -shader.love</a></dt>
+						<dd>(1.02 MiB) Downloaded 3925 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a> on Fri Apr 06, 2012 12:30 am, edited 3 times in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p37874" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile37874">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="avatar"><img class="avatar" src="download/file6628.jpg?avatar=2931_1311376103.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8177.html?author_id=2931&amp;sr=posts">277</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat May 14, 2011 10:18 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content37874">
+
+					<h3 >
+						<a href="viewtopic6a73.html?p=37874#p37874">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingca01.html?mode=quote&amp;p=37874" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6a73.html?p=37874#p37874" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a></strong> &raquo; </span><time datetime="2011-10-10T17:57:19+00:00">Mon Oct 10, 2011 5:57 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Sorry for the double post, but it seems i cant attach more than 3 files.<br>
+<br>
+This is a test drawing application with layers. It uses a shader to display the color picker (middle mouse button) since chosing colors needs to be fairly responsive:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file4a53.php?id=3170">Drawing test1.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(9.23 KiB) Downloaded 3296 times</dd>
+		</dl>
+		
+			</div>
+
+This is an accident while making the sand shader, dragging the mouse across the window creates a strange fractal effect:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file4052.php?id=4343">fractal shader.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(1.46 KiB) Downloaded 2797 times</dd>
+		</dl>
+		
+			</div>
+
+This is another side project for a gallery I'm making, I wanted the icons to have a mirrored effect. WASD controls the left image, arrows for the right:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file77f9.php?id=4342">gallery mirror.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(85.49 KiB) Downloaded 2483 times</dd>
+		</dl>
+		
+			</div>
+
+<br>
+Hopefully these will be of use to someone.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a> on Fri Apr 06, 2012 12:35 am, edited 1 time in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p37875" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile37875">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist2ba9.html?mode=viewprofile&amp;u=1399" class="avatar"><img class="avatar" src="download/file6c3d.png?avatar=1399_1564614858.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist2ba9.html?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a>							</dt>
+
+						<dd class="profile-rank">Solid Snayke</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search94cc.html?author_id=1399&amp;sr=posts">3132</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Aug 23, 2010 6:45 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Nova Scotia, Canada</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact slime">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact slime</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://twitter.com/slime73" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content37875">
+
+					<h3 >
+						<a href="viewtopic5928.html?p=37875#p37875">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5256.html?mode=quote&amp;p=37875" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic5928.html?p=37875#p37875" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist2ba9.html?mode=viewprofile&amp;u=1399" style="color: #00AA00;" class="username-coloured">slime</a></strong> &raquo; </span><time datetime="2011-10-10T17:58:37+00:00">Mon Oct 10, 2011 5:58 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Instead of posting a .love file, I'll post code. <img class="smilies" src="images/smilies/ms-wink.png" width="16" height="16" alt=";)" title="Wink"><br>
+<br>
+This is a very highly unoptimized version of my dynamic lighting + normal mapping shader as seen <a href="http://www.youtube.com/watch?v=s2FNf4h6Utg&amp;feature=channel_video_title" class="postlink">here</a>. I also just changed it from the ugly to the unoptimized version right now, so it may not work correctly. <img class="smilies" src="images/smilies/ms-razz.png" width="16" height="16" alt=":P" title="Razz"><br>
+<br>
+Also it's the version without the matrix multiplication for proper lighting when the image is rotated. Maybe I'll add that to this later.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>const int numlights = 3;
+
+const vec3 gamma = vec3(2.2);
+const vec3 invgamma = 1.0/gamma;
+
+const vec3 viewdir = vec3(0.0, 0.0, 1.0);
+
+
+extern vec4 Lights[6]; // max n / 2 lights
+
+extern Image normaltexture;
+
+extern number specpower = 25.0;
+		
+extern number yres;
+extern number z = 0.0;
+		
+vec4 pow(vec4 color, vec3 exp)
+{
+	color.rgb = pow(color.rgb, exp);
+	return color;
+}
+
+vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords)
+{
+	vec3 coords = vec3(pixel_coords.x, yres - pixel_coords.y, z);
+				
+	vec4 texcolor = pow(Texel(texture, texture_coords), gamma);
+
+	vec4 finalcolor = pow(vec4(0.0), gamma) * texcolor;
+	
+	vec4 normal = Texel(normaltexture, texture_coords);
+	vec3 N = normalize(normal.xyz * 2.0 - 1.0);
+	
+	float specvalue = normal.a; // the normal texture has the specular texture inside its alpha component
+	
+	for (int i = 0; i &lt; numlights * 2; i += 2)
+	{
+		vec3 L = normalize(Lights[i].xyz - coords);
+		number NdotL = max(dot(N, L), 0.0);
+	
+		vec3 R = normalize(reflect(-L, N));
+		number specular = pow(max(dot(viewdir, R), 0.0), specpower);
+	
+		finalcolor += (texcolor * Lights[i+1] * NdotL) + (Lights[i+1] * specvalue * specular);
+	}
+
+	finalcolor.a = texcolor.a;
+	
+	return pow(finalcolor, invgamma);
+}
+</code></pre></div>
+
+EDIT: For reference, here is the optimized file I made for my space game. It's not very easy to understand.
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>Effects.Lighting = class("Effects.Lighting")
+	
+function Effects.Lighting:initialize()
+	local mt = {
+		__index = function(self, k)
+			if type(k) == "number" then self[k] = {} return self[k] end
+		end,
+	}
+	
+	self.shaders = setmetatable({numdirlights=0, numpointlights=0}, mt)
+	
+	self.lights = {
+		point = {num=0},
+		dir = {num=0},
+	}
+	
+	self.ambientcolor = {0, 0, 0, 0}
+	
+	self.current = {
+		angle = 0,
+		specpower = 25,
+		rotationmatrix = RotationMatrix(0),
+		z = 0,
+	}
+end
+
+function Effects.Lighting:GetCurrentShaders()
+	return self.shaders[self.lights.point.num][self.lights.dir.num]
+end
+
+function Effects.Lighting:AddLight(lighttype, pos, color, radius)
+	local light = {
+		pos = pos or {0, 0, 0, radius or 0},
+		radius = radius or pos[4] or 0,
+		color = color or {1, 1, 1, 1},
+		type = lighttype,
+	}
+	pos[4] = radius or pos[4]
+	
+	self.lights[lighttype][light] = true
+	self.lights[lighttype].num = self.lights[lighttype].num + 1
+	
+	self:UpdateInfo()
+	
+	return light
+end
+
+function Effects.Lighting:UpdateInfo()
+	local curshaders = self:GetCurrentShaders() or {}
+	local numpointlights = self.lights.point.num
+	local numdirlights = self.lights.dir.num
+	-- debug.debug()
+	if not next(curshaders) then
+		curshaders = {
+			standard = self:GenerateShader(false, false, numpointlights, numdirlights),
+			normals = self:GenerateShader(true, false, numpointlights, numdirlights),
+			specular = self:GenerateShader(true, true, numpointlights, numdirlights),
+		}
+		--print(curshaders, numpointlights, numdirlights)
+	else
+		--print("no new light", numpointlights, numdirlights)
+	end
+	
+	for k,v in pairs(curshaders) do
+		v:send("rotationmatrix", self.current.rotationmatrix)
+		if k == "normals" or k == "specular" then
+			if k == "specular" then
+				v:send("specpower", self.current.specpower)
+			end
+			if self.current.normaltexture then v:send("normaltexture", self.current.normaltexture) end
+		end
+	end
+	self.shaders[numpointlights][numdirlights] = curshaders
+end
+
+function Effects.Lighting:RemoveLight(light)
+	if not self.lights[light.type][light] then return end
+	
+	self.lights[light.type][light] = nil
+	self.lights[light.type].num = self.lights[light.type].num - 1
+	
+	self:UpdateInfo()
+end
+
+function Effects.Lighting:SetMaterialInfo(angle, z, normaltexture, specpower)
+	local rotationmatrix = RotationMatrix(angle or 0)
+	for k,v in pairs(self:GetCurrentShaders() or {}) do
+		if self.current.angle ~= angle then
+			v:send("rotationmatrix", rotationmatrix)
+		end
+		if self.current.z ~= z then
+			v:send("z", z)
+		end
+		if (k == "normals" or k == "specular") and normaltexture then
+			v:send("normaltexture", normaltexture)
+		end
+		if k == "specular" and specpower and self.current.specpower ~= specpower then
+			v:send("specpower", specpower)
+		end
+	end
+	
+	self.current.angle = angle
+	self.current.z = z
+	self.current.rotationmatrix = rotationmatrix
+	self.current.specpower = specpower
+	self.current.normaltexture = normaltexture
+end
+
+function Effects.Lighting:SetEffectType(etype)
+	local cureffects = self:GetCurrentShaders()
+	love.graphics.setPixelEffect(cureffects and cureffects[etype] or nil)
+end
+
+function Effects.Lighting:update(dt)
+	local dirlights, pointlights = {}, {}
+	for k in pairs(self.lights.dir) do
+		if k ~= "num" then
+			dirlights[#dirlights+1] = k.pos
+			dirlights[#dirlights+1] = k.color
+		end 
+	end
+	for k in pairs(self.lights.point) do
+		if k ~= "num" then
+			pointlights[#pointlights+1] = k.pos
+			pointlights[#pointlights+1] = k.color
+		end
+	end
+	
+	local cureffects = self:GetCurrentShaders() or {}
+	for k, v in pairs(cureffects) do
+		-- send lights
+		if #pointlights &gt; 0 then v:send("pointlights", unpack(pointlights)) end
+		if #dirlights &gt; 0 then v:send("dirlights", unpack(dirlights)) end
+	end
+end
+
+function Effects.Lighting:SetAmbientColor(r, g, b, a)
+	self.ambientcolor = {r, g, b, a}
+	for k,v in pairs(self:GetCurrentShaders()) do
+		v:send("ambientcolor", self.ambientcolor)
+	end
+end
+
+local phong_base = [[
+const vec3 gamma = vec3(2.2);
+const vec3 invgamma = 1.0/gamma;
+
+vec3 viewdir = vec3(0.0, 0.0, 1.0);
+
+/* pointlight_array */
+/* dirlight_array */
+/* normal_texture */
+		
+extern number yres = 720;
+extern number z = 0.0;
+extern number specpower = 25.0;
+
+extern mat2 rotationmatrix;
+
+extern vec4 ambientcolor = vec4(0.5);
+		
+vec4 pow(vec4 color, vec3 exp)
+{
+	color.rgb = pow(color.rgb, exp);
+	return color;
+}
+
+vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords)
+{
+	viewdir.xy = rotationmatrix * viewdir.xy; // TODO: only do this if specular is on
+	
+	vec3 coords = vec3(pixel_coords.x, yres - pixel_coords.y, z);
+				
+	vec4 texcolor = pow(Texel(texture, texture_coords), gamma);
+
+	vec4 finalcolor = pow(ambientcolor, gamma) * texcolor;
+	
+	// get normal
+	/* normal_texture_access */
+	
+	// calculate point lights (if any)
+	/* pointlight_calc */
+	
+	// calculate directional lights (if any)
+	/* dirlight_calc */
+	
+	finalcolor.a = texcolor.a;
+	return pow(finalcolor, invgamma) * color;
+}
+]]
+
+function Effects.Lighting:GenerateShader(use_normalmap, use_specularmap, num_pointlights, num_dirlights)
+	local str = string.format("%d;%d;%d;%d", use_normalmap and 1 or 0, use_specularmap and 1 or 0, num_pointlights, num_dirlights)
+	if self.shaders[str] then return self.shaders[str] end
+	
+	use_specularmap = use_normalmap and use_specularmap or false
+	
+	local shadertext = phong_base
+	
+	local formats = {
+		pointlight_array = "extern vec4 pointlights[%d];",
+		dirlight_array = "extern vec4 dirlights[%d];",
+		normal_texture = "extern Image normaltexture;",
+		normal_texture_access = [[
+		vec4 normal = Texel(normaltexture, texture_coords);
+		vec3 N = normalize(normal.xyz * 2.0 - 1.0);
+		%s
+		]],
+		pointlight_calc = [[
+		number radius_PN_ = pointlights[_PN2_].w;
+		
+		vec3 lightdir_PN_ = (pointlights[_PN2_].xyz - coords) / radius_PN_;
+		lightdir_PN_.xy = rotationmatrix * lightdir_PN_.xy;
+		vec3 L_PN_ = normalize(lightdir_PN_);
+		
+		number atten_PN_ = clamp(1.0 - dot(lightdir_PN_, lightdir_PN_), 0.0, 1.0);
+		
+		number NdotL_PN_ = max(dot(N, L_PN_), 0.0);
+		%s
+		finalcolor += (texcolor * pointlights[_PN3_] * NdotL_PN_ * atten_PN_)%s;
+		
+		]],
+	}
+	local pointlight_specular = {[[
+		vec3 R_PN_ = normalize(reflect(-L_PN_, N));
+		number specular_PN_ = pow(max(dot(viewdir, R_PN_), 0.0), specpower);]],
+	[[ + (pointlights[_PN3_] * specvalue * specular_PN_ * atten_PN_)]],
+	}
+	
+	formats.dirlight_calc = [[
+		vec3 lightdir_DN_ = dirlights[_DN2_].xyz;
+		lightdir_DN_.xy = rotationmatrix * lightdir_DN_.xy;
+		vec3 L_DN_ = normalize(lightdir_DN_);
+		
+		number NdotL_DN_ = max(dot(N, L_DN_), 0.0);
+		%s
+		finalcolor += (texcolor * dirlights[_DN3_] * NdotL_DN_)%s;
+		
+	]]
+	
+	local dirlight_specular = {}
+	for i,v in ipairs(pointlight_specular) do
+		v = v:gsub("pointlights", "dirlights")
+		v = v:gsub("_PN", "_DN")
+		dirlight_specular[i] = v:gsub(" %* atten_DN_", "")
+	end
+	
+	local t = {}
+	for k,v in pairs(formats) do t[k] = "" end
+	
+	if use_normalmap then
+		t.normal_texture = formats.normal_texture
+		if use_specularmap then
+			t.normal_texture_access = formats.normal_texture_access:format("number specvalue = normal.a;")
+			t.pointlight_calc = formats.pointlight_calc:format(unpack(pointlight_specular))
+			t.dirlight_calc = formats.dirlight_calc:format(unpack(dirlight_specular))
+		else
+			t.normal_texture_access = formats.normal_texture_access:format("")
+			t.pointlight_calc = formats.pointlight_calc:format("", "")
+			t.dirlight_calc = formats.dirlight_calc:format("", "")
+		end
+	else
+		t.normal_texture_access = "vec3 N = vec3(0.0, 0.0, 1.0);"
+		t.pointlight_calc = formats.pointlight_calc:format("", "")
+		t.dirlight_calc = formats.dirlight_calc:format("", "")
+	end
+	
+	local function add_lights(basestr, numlights)
+		local str = ""
+		for i=1, numlights do
+			local f = basestr
+			f = f:gsub("_(%a)N_", "_%1"..i.."_")
+			f = f:gsub("_(%a)N2_", (i-1)*2)
+			f = f:gsub("_(%a)N3_", (i-1)*2 + 1)
+			str = str..f
+		end
+		return str
+	end
+	
+	t.pointlight_array = num_pointlights &gt; 0 and formats.pointlight_array:format(num_pointlights * 2) or ""
+	t.pointlight_calc = add_lights(t.pointlight_calc, num_pointlights)
+	
+	num_dlights = num_dirlights
+	-- debug.debug()
+	
+	t.dirlight_array = num_dirlights &gt; 0 and formats.dirlight_array:format(num_dirlights * 2) or ""
+	t.dirlight_calc = add_lights(t.dirlight_calc, num_dirlights)
+	
+	shadertext = shadertext:gsub("\t*/%* (.-) %*/", t)
+	shadertext = shadertext:gsub("\n\t\t", "\n")
+	
+	-- print(shadertext)
+	
+	self.shaders[str] = love.graphics.newPixelEffect(shadertext)
+	return self.shaders[str]
+end
+</code></pre></div>
+
+<br>
+<br>
+This is a passthrough shader for graphics primitives (untextured things)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords)
+{
+	return color;
+}
+</code></pre></div>
+
+This is a passthrough shader for images
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords)
+{
+	return color * Texel(texture, texture_coords);
+}
+</code></pre></div>
+
+<br>
+This is one way to turn a square image into a rotating sphere (both ways are shown <a href="http://www.youtube.com/watch?v=AEcwGgA_fIM" class="postlink">here</a>)
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern number time; // time in seconds
+		
+vec4 effect(vec4 color, Image texture, vec2 tc, vec2 pixel_coords)
+{
+	vec2 p = -1.0 + 2.0 * tc;
+	number r = dot(p, p);
+	
+	if (r &gt; 1.0) discard;
+	
+	number f = (1.0 - sqrt(1.0 - r)) / (r);
+	vec2 uv;
+	uv.x = 1.0*p.x*f + time;
+	uv.y = 1.0*p.y*f;
+	
+	return vec4(Texel(texture, uv).xyz, 1.0) * color;
+}
+</code></pre></div>
+
+Here is the other way shown in the video
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>const number pi = 3.14159265;
+const number pi2 = 2.0 * pi;
+
+extern number time;
+		
+vec4 effect(vec4 color, Image texture, vec2 tc, vec2 pixel_coords)
+{
+	vec2 p = 2.0 * (tc - 0.5);
+	
+	number r = sqrt(p.x*p.x + p.y*p.y);
+
+	if (r &gt; 1.0) discard;
+	
+	number d = r != 0.0 ? asin(r) / r : 0.0;
+				
+	vec2 p2 = d * p;
+	
+	number x3 = mod(p2.x / (pi2) + 0.5 + time, 1.0);
+	number y3 = p2.y / (pi2) + 0.5;
+	
+	vec2 newCoord = vec2(x3, y3);
+	
+	vec4 sphereColor = color * Texel(texture, newCoord);
+				
+	return sphereColor;
+}
+</code></pre></div>
+
+<br>
+There are a bunch of post-processing GLSL shaders available <a href="http://www.geeks3d.com/geexlab/shader_library.php" class="postlink">here</a> which can be ported to the LÖVE pixeleffect syntax pretty easily.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p37941" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile37941">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" class="avatar"><img class="avatar" src="download/file9243.jpg?avatar=1087_1349875914.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd677.html?author_id=1087&amp;sr=posts">917</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 04, 2010 9:14 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vrld">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vrld</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://vrld.org/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content37941">
+
+					<h3 >
+						<a href="viewtopic3bc7.html?p=37941#p37941">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1c9a.html?mode=quote&amp;p=37941" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3bc7.html?p=37941#p37941" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a></strong> &raquo; </span><time datetime="2011-10-11T09:48:17+00:00">Tue Oct 11, 2011 9:48 am</time>
+			</p>
+			
+			
+			
+			<div class="content">The effects used to make <a href="viewtopic8a73.html?f=3&amp;t=2198&amp;start=100#p32978" class="postlink">this thing</a>:<br>
+<br>
+Distortion:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern number time;
+extern number distortion;
+
+vec4 effect(vec4 color, Image tex, vec2 tc, vec2 pc)
+{
+	// play with parameters here:
+	tc.x += sin(tc.y * 100 + time * 10.0) * .03  * distortion;
+	return Texel(tex,tc);
+}</code></pre></div>
+
+Chroma shift (splitting the RGB channels):
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern vec2 chroma;
+extern vec2 imageSize;
+
+vec4 effect(vec4 color, Image tex, vec2 tc, vec2 pc)
+{
+	vec2 shift = chroma / imageSize;
+	return vec4(Texel(tex, tc+shift).r, Texel(tex,tc).g, Texel(tex,tc-shift).b, 1.0);
+}</code></pre></div>
+
+Caleidoscope:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>vec4 effect(vec4 color, Image tex, vec2 tc, vec2 pc)
+{
+	tc = vec2(1.0,1.0) - abs(2.0 * tc - vec2(1.0,1.0)); // tc.x = 0 ... 1 ... 0
+	return vec4(Texel(tex, tc));
+}</code></pre></div>
+
+Combine them to get this thing: <div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/filee9e1.php?id=3181">caleidoscope.love</a></dt>
+						<dd>(888 Bytes) Downloaded 2378 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+									
+						
+							<div id="sig37941" class="signature">I have come here to chew bubblegum and kick ass... and I'm all out of bubblegum.<br>
+<br>
+<a href="http://vrld.github.com/hump/" class="postlink">hump</a> | <a href="http://vrld.github.com/HC/" class="postlink">HC</a> | <a href="http://github.com/vrld/SUIT" class="postlink">SUIT</a> | <a href="https://github.com/vrld/moonshine" class="postlink">moonshine</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p37961" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile37961">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="avatar"><img class="avatar" src="download/filea492.png?avatar=1539_1419872538.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search6b8c.html?author_id=1539&amp;sr=posts">135</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 15, 2010 10:58 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content37961">
+
+					<h3 >
+						<a href="viewtopicd8de.html?p=37961#p37961">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingf348.html?mode=quote&amp;p=37961" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd8de.html?p=37961#p37961" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a></strong> &raquo; </span><time datetime="2011-10-11T15:36:54+00:00">Tue Oct 11, 2011 3:36 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>caleidoscope.love</div></blockquote>
+ <img class="smilies" src="images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> Image buffer does not compile</div>
+
+			
+			
+									
+						
+							<div id="sig37961" class="signature">I use <a href="https://workflowy.com/invite/1f6e8217.lnx" class="postlink">Workflowy</a> but you can check out <a href="https://dynalist.io/invite/ZE35cw" class="postlink">Dynalist </a> as its the better offer.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p38007" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile38007">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="avatar"><img class="avatar" src="download/file6628.jpg?avatar=2931_1311376103.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8177.html?author_id=2931&amp;sr=posts">277</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat May 14, 2011 10:18 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content38007">
+
+					<h3 >
+						<a href="viewtopicaa68.html?p=38007#p38007">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5753.html?mode=quote&amp;p=38007" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicaa68.html?p=38007#p38007" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a></strong> &raquo; </span><time datetime="2011-10-11T19:38:17+00:00">Tue Oct 11, 2011 7:38 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>adrix89 wrote:</cite><blockquote class="uncited"><div>caleidoscope.love</div></blockquote>
+ <img class="smilies" src="images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> Image buffer does not compile</div></blockquote>
+
+<br>
+It doesn't like the word buffer, here's a quick fix:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file5372.php?id=3193">caleidoscope-fixed.love</a></dt>
+						<dd>(864 Bytes) Downloaded 2118 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p38010" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile38010">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="avatar"><img class="avatar" src="download/filea492.png?avatar=1539_1419872538.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search6b8c.html?author_id=1539&amp;sr=posts">135</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 15, 2010 10:58 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content38010">
+
+					<h3 >
+						<a href="viewtopicf8b6.html?p=38010#p38010">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3af5.html?mode=quote&amp;p=38010" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicf8b6.html?p=38010#p38010" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a></strong> &raquo; </span><time datetime="2011-10-11T19:49:51+00:00">Tue Oct 11, 2011 7:49 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>kraftman wrote:</cite><blockquote><div><cite>adrix89 wrote:</cite><blockquote class="uncited"><div>caleidoscope.love</div></blockquote>
+ <img class="smilies" src="images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> Image buffer does not compile</div></blockquote>
+
+<br>
+It doesn't like the word buffer, here's a quick fix:
+<div class="inline-attachment"><!-- ia0 -->caleidoscope-fixed.love<!-- ia0 --></div></div></blockquote>
+Awesome!</div>
+
+			
+			
+									
+						
+							<div id="sig38010" class="signature">I use <a href="https://workflowy.com/invite/1f6e8217.lnx" class="postlink">Workflowy</a> but you can check out <a href="https://dynalist.io/invite/ZE35cw" class="postlink">Dynalist </a> as its the better offer.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p38020" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile38020">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="avatar"><img class="avatar" src="download/file6628.jpg?avatar=2931_1311376103.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search8177.html?author_id=2931&amp;sr=posts">277</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat May 14, 2011 10:18 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content38020">
+
+					<h3 >
+						<a href="viewtopic97ef.html?p=38020#p38020">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting90c5.html?mode=quote&amp;p=38020" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic97ef.html?p=38020#p38020" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a></strong> &raquo; </span><time datetime="2011-10-11T20:42:43+00:00">Tue Oct 11, 2011 8:42 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I like the chroma thing a lot, had a play around with adding it to particle systems:
+<div class="inline-attachment">
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file2cdb.php?id=4344">ringfire shader.love</a></dt>
+			<dd><em>0.8</em></dd>			<dd>(2.07 KiB) Downloaded 2501 times</dd>
+		</dl>
+		
+			</div></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist36c8.html?mode=viewprofile&amp;u=2931" class="username">kraftman</a> on Fri Apr 06, 2012 12:38 am, edited 1 time in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p38049" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile38049">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" class="avatar"><img class="avatar" src="download/file9243.jpg?avatar=1087_1349875914.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd677.html?author_id=1087&amp;sr=posts">917</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Apr 04, 2010 9:14 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact vrld">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact vrld</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://vrld.org/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content38049">
+
+					<h3 >
+						<a href="viewtopic6c8c.html?p=38049#p38049">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting0b51.html?mode=quote&amp;p=38049" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6c8c.html?p=38049#p38049" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistda57.html?mode=viewprofile&amp;u=1087" style="color: #CC6600;" class="username-coloured">vrld</a></strong> &raquo; </span><time datetime="2011-10-11T23:00:17+00:00">Tue Oct 11, 2011 11:00 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Metaball shader:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern vec2[3] balls;
+
+float metaball(vec2 x, vec2 c)
+{
+	return 1.0 / dot(x-c, x-c);
+}
+
+vec4 effect(vec4 color, Image tex, vec2 tc, vec2 pc)
+{
+	float d = metaball(pc, balls[0]) + metaball(pc, balls[1]) + metaball(pc, balls[2]);
+	if (d &lt;= .0007)
+		return vec4(1.0);
+	return vec4(0.0);
+}</code></pre></div></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file1ed1.php?id=3201">metaballs.love</a></dt>
+						<dd>(581 Bytes) Downloaded 4923 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig38049" class="signature">I have come here to chew bubblegum and kick ass... and I'm all out of bubblegum.<br>
+<br>
+<a href="http://vrld.github.com/hump/" class="postlink">hump</a> | <a href="http://vrld.github.com/HC/" class="postlink">HC</a> | <a href="http://github.com/vrld/SUIT" class="postlink">SUIT</a> | <a href="https://github.com/vrld/moonshine" class="postlink">moonshine</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p38055" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile38055">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="avatar"><img class="avatar" src="download/file985f.jpg?avatar=649_1277354250.jpg" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="username">TechnoCat</a>							</dt>
+
+						<dd class="profile-rank">Inner party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search5db3.html?author_id=649&amp;sr=posts">1611</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 30, 2009 12:31 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Denver, CO</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact TechnoCat">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact TechnoCat</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://dannyfritz.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content38055">
+
+					<h3 >
+						<a href="viewtopic1a9d.html?p=38055#p38055">Re: Share a Shader!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8a7d.html?mode=quote&amp;p=38055" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1a9d.html?p=38055#p38055" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4358.html?mode=viewprofile&amp;u=649" class="username">TechnoCat</a></strong> &raquo; </span><time datetime="2011-10-11T23:52:57+00:00">Tue Oct 11, 2011 11:52 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>vrld wrote:</cite>Metaball shader:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>extern vec2[3] balls;
+
+float metaball(vec2 x, vec2 c)
+{
+	return 1.0 / dot(x-c, x-c);
+}
+
+vec4 effect(vec4 color, Image tex, vec2 tc, vec2 pc)
+{
+	float d = metaball(pc, balls[0]) + metaball(pc, balls[1]) + metaball(pc, balls[2]);
+	if (d &lt;= .0007)
+		return vec4(1.0);
+	return vec4(0.0);
+}</code></pre></div></div></blockquote>
+How would I go about parameterizing this? I can't seem to get the balls to stretch further.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingcac7.html?mode=reply&amp;t=3733" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic3c36.html?t=3733&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=3733">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			329 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>33</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;3733" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic941b.html?t=3733&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic047b.html?t=3733&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic401d.html?t=3733&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopic0582.html?t=3733&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopicbcd8.html?t=3733&amp;start=320" role="button">33</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic941b.html?t=3733&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Support and Development”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span> and 4 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=3733 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 15:38:34 GMT -->
+</html>
