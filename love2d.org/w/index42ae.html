@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from love2d.org/w/index.php?title=TexturedPolygon&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 21:07:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>View source for TexturedPolygon - LOVE</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TexturedPolygon","wgTitle":"TexturedPolygon","wgCurRevisionId":19081,"wgRevisionId":0,"wgArticleId":4282,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"edit","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":true,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"TexturedPolygon","wgRelevantArticleId":4282,"wgRequestId":"c88c63c74a89ecaca0b0a8ef","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.love.styles":"ready"});mw.loader.implement("user.tokens@17jx9nu",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.edit.collapsibleFooter","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);});</script>
+<link rel="stylesheet" href="load0df6.css?debug=false&amp;lang=en&amp;modules=ext.smw.style%7Cext.smw.tooltip.styles&amp;only=styles&amp;skin=love"/>
+<link rel="stylesheet" href="loade11b.css?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.content.externallinks%7Cmediawiki.skinning.interface%7Cskins.love.styles&amp;only=styles&amp;skin=love"/>
+<script async="" src="loadaa75.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=love"></script>
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/Love/IE60Fixes.css?303" media="screen"/><![endif]--><!--[if IE 7]><link rel="stylesheet" href="/w/skins/Love/IE70Fixes.css?303" media="screen"/><![endif]-->
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.12"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="alternate" type="application/rdf+xml" title="TexturedPolygon" href="http://love2d.org/w/index.php?title=Special:ExportRDF/TexturedPolygon&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="http://love2d.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://love2d.org/w/opensearch_desc.php" title="LOVE (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="http://love2d.org/w/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=love&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-TexturedPolygon rootpage-TexturedPolygon skin-love action-edit"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				
+						<div id="p-cactions" role="navigation">
+			<h5>Views</h5>
+
+			<div>
+				<ul>
+				<li id="ca-nstab-main" class="selected"><a href="http://love2d.org/wiki/TexturedPolygon" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="http://love2d.org/w/index.php?title=Talk:TexturedPolygon&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource" class="selected"><a href="http://love2d.org/w/index.php?title=TexturedPolygon&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li>
+				<li id="ca-history"><a href="http://love2d.org/w/index.php?title=TexturedPolygon&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				</ul>
+							</div>
+		</div>
+	
+				<h1 id="firstHeading" class="firstHeading" lang="en">View source for TexturedPolygon</h1>
+
+				<div id="bodyContent">
+					<!-- <div id="siteSub">From LOVE</div> -->
+
+					<!-- <div id="contentSub">← <a href="/wiki/TexturedPolygon" title="TexturedPolygon">TexturedPolygon</a></div> -->
+										<!-- <div id="jump-to-nav" class="mw-jump">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div> -->
+
+					<!-- start content -->
+					<div id="mw-content-text"><p>You do not have permission to edit this page, for the following reason:
+</p>
+<div class="permissions-errors">
+<p>The action you have requested is limited to users in the group: <a href="http://love2d.org/wiki/LOVE:Users" title="LOVE:Users">Users</a>.
+</p>
+</div>
+<hr />
+<p>You can view and copy the source of this page.
+</p><textarea readonly="" accesskey="," id="wpTextbox1" cols="80" rows="25" style="" class="mw-editfont-monospace" lang="en" dir="ltr" name="wpTextbox1">A function to create an [[Image]] from a polygon texturised by a texture.
+
+== function TexturedPolygon(polygon,texture, xx,yy,rr,sx,sy,ox,oy, smooth) ==
+
+=== Parameters ===
+
+&lt;code>polygon&lt;/code> a polygon to texturize in a form of table of coordinates of points: &lt;code>{x1,y1, x2,y2, ...}&lt;/code>
+
+&lt;code>texture&lt;/code> may be an [[ImageData]] object or a filename to picture. Used to fill the entire polygon, wrapping vertically and horizontally.
+
+All other parameters are optional:
+
+&lt;code>xx,yy,r,...&lt;/code> are used to shift, rotate and scale texture before applying to polygon. Think of it as about a sheet of paper, filled with repeated images of transformed texture, and you use polygon points coordinates to cut out some figure using scissors. For instance, increasing an &lt;code>xx&lt;/code> value will move texture right while the polygon itself will stay at place.
+
+&lt;code>xx,yy&lt;/code> coordinates of a (origin of) a texture.
+
+&lt;code>rr&lt;/code> rotation angle of a texture (related to origin), in degrees.
+
+&lt;code>sx,xy&lt;/code> scale factors of a texture along x and y axes (related to origin).
+
+&lt;code>ox,oy&lt;/code> position of an origin on a texture. It affects how rotation and scale are applied.
+
+On default, no some transformation is applied. It means: &lt;code>xx,yy,rr,sx,sy,ox,oy=0,0,0,1,1,0,0&lt;/code>
+
+&lt;code>smooth&lt;/code> whether to smooth image (&lt;code>true&lt;/code> or &lt;code>false&lt;/code>). Smoothed image looks better, but calculates slower. &lt;code>smooth&lt;/code> is set to &lt;code>true&lt;/code> by default.
+
+=== Return value ===
+
+Function return an object which is very simple to draw:
+
+&lt;code>{img, x,y, w,h, imgData}&lt;/code>
+
+Here:
+
+&lt;code>img&lt;/code> an [[Image]] object, may be drawn by [[love.graphics.draw]] function.
+
+&lt;code>x,y&lt;/code> where to draw image. Use it like this: &lt;code>love.graphics.draw(obj.img, obj.x,obj.y)&lt;/code>
+
+&lt;code>w,h&lt;/code> width and height of an image.
+
+&lt;code>imgData&lt;/code> an [[ImageData]] object. If you want to use it, you must to know how to do it.
+
+== Implementation ==
+
+Function uses [[ImageData:mapPixel]] function to draw resulting image pixel-by-pixel. Area which is not within polygon is left fully transparent. 
+
+As soon as we need to calculate every pixel, function gets much time. Hence you'd better use it as rare as possible, for example on loading the game or new level. Don't try to use it inside of [[love.update]] function. If you still need it, try to set &lt;code>smooth&lt;/code> to &lt;code>false&lt;/code> and see what happens.
+
+----
+
+See text itself for more details. It also contains several auxiliary functions which you can use as well. (Scroll bravely, example is right below).
+
+&lt;syntaxhighlight lang="lua">
+function TexturedPolygon(polygon,texture, xx,yy,rr,sx,sy,ox,oy, smooth) --return array of images. If drawn all, they represent textured polygon
+    if type(polygon)~="table" or #polygon%2~=0 then return nil end  --polygon must be a table of x1,y1,x2,y2...
+    if #polygon&lt;6 then return nil end --for line return nil: nothing to draw here
+
+    --load texture if needed
+    if type(texture)=="string" then
+        texture=love.image.newImageData(texture)
+    end
+
+    --default values for texture position parameters
+    if xx==nil then xx=0 end
+    if yy==nil then yy=0 end
+    if rr==nil then rr=0 end
+    if sx==nil then sx=1 end
+    if sy==nil then sy=1 end
+    if ox==nil then ox=0 end
+    if oy==nil then oy=0 end
+
+    if sx==0 then sx=1 end --avoid bad scenario
+    if sy==0 then sy=1 end
+
+    rr=rr/180*3.14159 --convert degrees to radians
+
+    if smooth==nil then smooth=true end --we draw beautiful things on default
+
+    local bb=PolygonBoundingBox(polygon) --bounding box of polygon
+
+    --simple==0 means no simplicity, 1 means we don't transform texture, 2 means we don't even need to round x,y values
+    local simple=0
+    if xx==0 and yy==0 and rr==0 and sx==1 and sy==1 and ox==0 and oy==0 then
+        simple=1
+        if bb.x==math.floor(bb.x) and bb.y==math.floor(bb.y) then
+            simple=2
+        end
+    end
+    --additionally, simple==3 means we need to transform our texture but user don't want to smooth the image
+    if simple==0 and not smooth then 
+        simple=3
+    end
+
+    --calculate some oftenly used numbers once to optimize our lovely code
+    local cr,sr=math.cos(rr), math.sin(rr)
+    local tw,th=texture:getWidth(), texture:getHeight()
+
+    --triangles is array of triangles (what a concidence!)
+    local triangles=nil
+    if #polygon==6 then 
+        triangles={polygon}
+    else
+        triangles=love.math.triangulate(polygon)
+    end
+    
+    local imageData=love.image.newImageData(math.ceil(bb.w),math.ceil(bb.h)) --empty ImageData for drawing. "empty" means every pixel has value 0,0,0,0
+
+    for i,triangle in ipairs(triangles) do --for every tirangle...
+
+        --we need three criteria to check whether pixel is within our triangle
+        --we define three linear functions y=a#+b#*(x-c#) or x=a#+b#*(y-c#) (depend on side's inclination)
+        --m# is mode: above (1), below (2), right (3) or left (4)
+        --e#: whether this line is the edge of original polygon: nil(false) or range of x or y(true)
+        local a0={}
+        local b0={}
+        local c0={}
+        local m0={}
+        local e0={}
+
+        --I'd love to make a cycle over pair of points of triangle, but 3rd pair is (1,3) points, not (3,4)
+
+        --for 1st pair of points    --we keep in mind that triangle[1]->x1,[2]->y1, [3]->x2,[4]->y2, [5]->x3,[6]->y3
+        if triangle[1]==triangle[3] or math.abs( (triangle[4]-triangle[2])/(triangle[3]-triangle[1]) ) > 1 then --inclination is close to vertical
+            m0[1]=2
+        else
+            m0[1]=1
+        end
+        if m0[1]==1 then --horizontal criterion
+            a0[1],b0[1],c0[1] = triangle[2], (triangle[4]-triangle[2])/(triangle[3]-triangle[1]), triangle[1]
+            if triangle[6] > a0[1] + b0[1]*(triangle[5]-c0[1]) then --check how another point of triangle pass this criteron
+                m0[1]=1 --above criterion
+            else
+                m0[1]=2 --under criterion
+            end
+        else --vertial criterion
+            a0[1],b0[1],c0[1] = triangle[1], (triangle[3]-triangle[1])/(triangle[4]-triangle[2]), triangle[2]
+            if triangle[5] > a0[1] + b0[1]*(triangle[6]-c0[1]) then --check how another point of triangle pass this criteron
+                m0[1]=3 --right criterion
+            else
+                m0[1]=4 --left  criterion
+            end
+        end
+        if PolygonEdgeLine(polygon, triangle[1],triangle[2],triangle[3],triangle[4]) then --check whether this line is the edge of polygon
+            if m0[1]==1 or m0[1]==2 or m0[1]==5 or m0[1]==6 then
+                e0[1]={math.min(triangle[1],triangle[3]), math.max(triangle[1],triangle[3])} --range of x where it is true
+            else
+                e0[1]={math.min(triangle[2],triangle[4]), math.max(triangle[2],triangle[4])} --range of y where it is true
+            end
+        else
+            e0[1]=nil --no, it's internal splitting line
+        end
+        --and so on...
+
+        --for 2nd pair of points
+        if triangle[3]==triangle[5] or math.abs( (triangle[6]-triangle[4])/(triangle[5]-triangle[3]) ) > 1 then --inclination is close to vertical
+            m0[2]=2
+        else
+            m0[2]=1
+        end
+        if m0[2]==1 then --horizontal criterion
+            a0[2],b0[2],c0[2] = triangle[4], (triangle[6]-triangle[4])/(triangle[5]-triangle[3]), triangle[3]
+            if triangle[2] > a0[2] + b0[2]*(triangle[1]-c0[2]) then
+                m0[2]=1 --above criterion
+            else
+                m0[2]=2
+            end
+        else --vertial criterion
+            a0[2],b0[2],c0[2] = triangle[3], (triangle[5]-triangle[3])/(triangle[6]-triangle[4]), triangle[4]
+            if triangle[1] > a0[2] + b0[2]*(triangle[2]-c0[2]) then
+                m0[2]=3
+            else
+                m0[2]=4
+            end
+        end
+        if PolygonEdgeLine(polygon, triangle[3],triangle[4],triangle[5],triangle[6]) then
+            if m0[2]==1 or m0[2]==2 or m0[2]==5 or m0[2]==6 then
+                e0[2]={math.min(triangle[3],triangle[5]), math.max(triangle[3],triangle[5])}
+            else
+                e0[2]={math.min(triangle[4],triangle[6]), math.max(triangle[4],triangle[6])}
+            end
+        else
+            e0[2]=nil
+        end
+
+        --for 3rd pair of points
+        if triangle[1]==triangle[5] or math.abs( (triangle[6]-triangle[2])/(triangle[5]-triangle[1]) ) > 1 then --inclination is close to vertical
+            m0[3]=2
+        else
+            m0[3]=1
+        end
+        if m0[3]==1 then --horizontal criterion
+            a0[3],b0[3],c0[3] = triangle[2], (triangle[6]-triangle[2])/(triangle[5]-triangle[1]), triangle[1]
+            if triangle[4] > a0[3] + b0[3]*(triangle[3]-c0[3]) then
+                m0[3]=1
+            else
+                m0[3]=2
+            end
+        else --vertial criterion
+            a0[3],b0[3],c0[3] = triangle[1], (triangle[5]-triangle[1])/(triangle[6]-triangle[2]), triangle[2]
+            if triangle[3] > a0[3] + b0[3]*(triangle[4]-c0[3]) then
+                m0[3]=3
+            else
+                m0[3]=4
+            end
+        end
+        if PolygonEdgeLine(polygon, triangle[1],triangle[2],triangle[5],triangle[6]) then
+            if m0[3]==1 or m0[3]==2 or m0[3]==5 or m0[3]==6 then
+                e0[3]={math.min(triangle[1],triangle[5]), math.max(triangle[1],triangle[5])}
+            else
+                e0[3]={math.min(triangle[2],triangle[6]), math.max(triangle[2],triangle[6])}
+            end
+        else
+            e0[3]=nil
+        end
+
+        local function func(x,y,r,g,b,a) --function to apply to mapPixel method of ImageData polygon
+            if r~=0 or g~=0 or b~=0 or a~=0 then return r,g,b,a end --pixel was already drawn, skip
+
+            x=x+bb.x --go from resulting image coordinates to internal texture coordinates
+            y=y+bb.y
+
+            local alpha=1 --transparency to smooth edge (only used if smooth==true)
+
+            --check all three criteria
+            for j=1,3 do
+
+                if m0[j]==1 then
+                    local y0=a0[j]+b0[j]*(x-c0[j]) --what to compare with
+                    if smooth and e0[j]~=nil and x>=e0[j][1] and x&lt;e0[j][2] then --whether we need to smooth edge
+                        local z=y0-y --how far we are from ideal position of edge
+                        if z>1 then --we are too far
+                            return 0,0,0,0
+                        elseif z>0 then --we are within one-pixel edge area of smoothing
+                            alpha=alpha*(1-z)
+                        end
+                    elseif y&lt;y0 then --we are outside of the triangle
+                        return 0,0,0,0
+                    end
+                    --and so on...
+
+                elseif m0[j]==2 then
+                    local y0=a0[j]+b0[j]*(x-c0[j])
+                    if smooth and e0[j]~=nil and x>=e0[j][1] and x&lt;e0[j][2] then
+                        local z=y0-y
+                        if z&lt;0 then
+                            return 0,0,0,0
+                        elseif z&lt;1 then
+                            alpha=alpha*z
+                        end
+                    elseif y>=y0 then
+                        return 0,0,0,0
+                    end
+
+                elseif m0[j]==3 then
+                    local x0=a0[j]+b0[j]*(y-c0[j])
+                    if smooth and e0[j]~=nil and y>=e0[j][1] and y&lt;e0[j][2] then
+                        local z=x0-x
+                        if z>1 then
+                            return 0,0,0,0
+                        elseif z>0 then
+                            alpha=alpha*(1-z)
+                        end
+                    elseif x&lt;x0 then
+                        return 0,0,0,0
+                    end
+
+                elseif m0[j]==4 then
+                    local x0=a0[j]+b0[j]*(y-c0[j])
+                    if smooth and e0[j]~=nil and y>=e0[j][1] and y&lt;e0[j][2] then
+                        local z=x0-x
+                        if z&lt;0 then
+                            return 0,0,0,0
+                        elseif z&lt;1 then
+                            alpha=alpha*z
+                        end
+                    elseif x>=x0 then
+                        return 0,0,0,0
+                    end
+
+                end
+            end
+
+            if simple==0 then --complicated case
+                r,g,b,a=getAveragePixel(texture, ((x+0.5-xx)*cr+(y+0.5-yy)*sr)/sx+ox, ((y+0.5-yy)*cr-(x+0.5-xx)*sr)/sy+oy, tw,th)
+            elseif simple==1 then --simpler case
+                r,g,b,a=texture:getPixel( math.floor(x)%tw, math.floor(y)%th)
+            elseif simple==2 then --simplest case
+                r,g,b,a=texture:getPixel( x%tw, y%th)
+            else--if simple==3 then --ugly but fast case
+                r,g,b,a=texture:getPixel( math.floor(((x-xx)*cr+(y-yy)*sr)/sx+ox)%tw, math.floor(((y-yy)*cr-(x-xx)*sr)/sy+oy)%th)
+            end
+
+            if smooth then a=a*alpha end --make edge as beautiful as we can
+            --return texture:getPixel( (x)%texture:getWidth(), (y)%texture:getHeight())
+            return r,g,b,a
+        end
+
+        imageData:mapPixel(func) --applying will draw one more triangle on the imageData
+    end
+
+    local image=love.graphics.newImage(imageData) --creating drawable object
+
+    return {img=image, x=bb.x,y=bb.y,w=bb.w,h=bb.h, imgData=imageData}
+end
+
+function PolygonBoundingBox(polygon) --simple function that find max and min x,y coordinates of a polygon and return them in a form of BoundingBox object: {x,y,w,h}
+    if type(polygon)~="table" or #polygon&lt;2 or #polygon%2~=0 then return nil end
+
+    local minX=polygon[1]
+    local maxX=polygon[1]
+    local minY=polygon[2]
+    local maxY=polygon[2]
+
+    for i=1,#polygon,2 do
+        if polygon[i]&lt;minX then minX=polygon[i] end
+        if polygon[i]>maxX then maxX=polygon[i] end
+        if polygon[i+1]&lt;minY then minY=polygon[i+1] end
+        if polygon[i+1]>maxY then maxY=polygon[i+1] end
+    end
+
+    return {x=minX,y=minY,w=maxX-minX,h=maxY-minY}
+end
+
+function PolygonEdgeLine(polygon, x1,y1,x2,y2) --specific function that checks whether given pair of points belongs to one edge of a polygon
+    local length=#polygon
+    if type(polygon)~="table" or length&lt;4 or length%2~=0 then return nil end
+
+    local buf={} --comparison of non-integer values may be safe only if these values are rounded (to two digits, for example)
+    for i,v in ipairs(polygon) do
+        buf[i]=math.floor(v*100)/100
+    end
+
+    local x1=math.floor(x1*100)/100
+    local y1=math.floor(y1*100)/100
+    local x2=math.floor(x2*100)/100
+    local y2=math.floor(y2*100)/100
+
+    for i=1,length-2,2 do --compare all but the last line
+        if buf[i]==x1 and buf[i+1]==y1 and buf[i+2]==x2 and buf[i+3]==y2 then
+            return true
+        elseif buf[i]==x2 and buf[i+1]==y2 and buf[i+2]==x1 and buf[i+3]==y1 then
+            return true
+        end
+    end
+
+    --compare last line separately
+    if buf[1]==x1 and buf[2]==y1 and buf[length-1]==x2 and buf[length]==y2 then
+        return true
+    elseif buf[1]==x2 and buf[2]==y2 and buf[length-1]==x1 and buf[length]==y1 then
+        return true
+    end
+
+    --if we have passed all previous checks, we fail:
+    return false
+end
+
+function getAveragePixel(texture, x,y,w,h) --return a pixel which color is averaged over neighbour pixels of a texture around x,y coordinates. w,h calculated previously to speed up the code
+    local x1,x2,y1,y2 = math.floor(x), math.ceil(x), math.floor(y), math.ceil(y) --find neighbour integer-indexed pixels
+    if x2==x1 then x2=x2+1 end
+    if y2==y1 then y2=y2+1 end
+
+    local d1,d2,d3,d4 = (x2-x)*(y2-y), (x-x1)*(y2-y), (x2-x)*(y-y1), (x-x1)*(y-y1) --find fraction of each pixel in a result
+
+    x1=x1%w --ensure we are within texture (wrapped around)
+    x2=x2%w
+    y1=y1%h
+    y2=y2%h
+
+    local r1,g1,b1,a1 = texture:getPixel(x1,y1) --obtain four raw colors
+    local r2,g2,b2,a2 = texture:getPixel(x2,y1)
+    local r3,g3,b3,a3 = texture:getPixel(x1,y2)
+    local r4,g4,b4,a4 = texture:getPixel(x2,y2)
+
+    --...and average it all
+    return d1*r1+d2*r2+d3*r3+d4*r4, d1*g1+d2*g2+d3*g3+d4*g4, d1*b1+d2*b2+d3*b3+d4*b4, d1*a1+d2*a2+d3*a3+d4*a4
+end
+&lt;/syntaxhighlight>
+
+Run an example to see how it works:
+
+&lt;syntaxhighlight lang="lua">
+require "textured_polygon" --link to a file where TexturedPolygon function is, or paste it below here
+
+function love.load()
+    texture=love.image.newImageData('texture.png')
+    bkg=love.graphics.newImage(texture)
+    polygon={100,100, 200,100, 300,200, 400,100, 520,100, 530,200, 400,200, 300,300, 200,200, 100,200}
+
+    t_start=love.timer.getTime()
+    
+    image=TexturedPolygon(polygon,'texture.png')
+
+    t_end=love.timer.getTime()
+
+    love.graphics.setBackgroundColor(128,50,100)
+end
+ 
+function love.draw()
+    love.graphics.draw( bkg, 0,20, 0, 10,10)
+    love.graphics.draw( image.img, image.x, image.y)
+
+    love.graphics.print("Spent "..(t_end-t_start).." seconds to create textured polygon")
+    love.graphics.print("&lt;- see theese pixels smoothed!", 530,140)
+    love.graphics.print("| works with concave polygons as well!", 302,80)
+    love.graphics.print("V                                     ", 300,90)
+    love.graphics.print("^                           ", 420,200)
+    love.graphics.print("| semi-transparent textures!", 422,205)
+end
+&lt;/syntaxhighlight>
+
+----
+
+Use this texture:
+
+[[File:texture.png]]
+
+----
+
+How it works:
+
+[[File:screenshot1.png]]
+
+[[Category:Snippets]]
+{{#set:LOVE Version=any}}
+{{#set:Description=A function to create an Image from a polygon textured by a texture.}}
+</textarea><div class="templatesUsed"></div><p id="mw-returnto">Return to <a href="http://love2d.org/wiki/TexturedPolygon" title="TexturedPolygon">TexturedPolygon</a>.</p>
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://love2d.org/wiki/TexturedPolygon">http://love2d.org/wiki/TexturedPolygon</a>"</div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>					<!-- end content -->
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			<div class="portlet" id="p-personal" role="navigation">
+				<h5>Personal tools</h5>
+
+				<div class="pBody">
+					<ul>
+													<li id="pt-login"><a href="http://love2d.org/w/index.php?title=Special:UserLogin&amp;returnto=TexturedPolygon&amp;returntoquery=action%3Dedit" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+											</ul>
+				</div>
+			</div>
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="http://love2d.org/wiki/Main_Page" class="mw-wiki-logo-no-image-pls" title="Visit the main page"></a>
+			</div>
+				<div class="generated-sidebar portlet" id="p-documentation" role="navigation">
+		<h5>documentation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-love"><a href="http://love2d.org/wiki/love">love</a></li>
+											<li id="n-love.audio"><a href="http://love2d.org/wiki/love.audio">love.audio</a></li>
+											<li id="n-love.data"><a href="http://love2d.org/wiki/love.data">love.data</a></li>
+											<li id="n-love.event"><a href="http://love2d.org/wiki/love.event">love.event</a></li>
+											<li id="n-love.filesystem"><a href="http://love2d.org/wiki/love.filesystem">love.filesystem</a></li>
+											<li id="n-love.font"><a href="http://love2d.org/wiki/love.font">love.font</a></li>
+											<li id="n-love.graphics"><a href="http://love2d.org/wiki/love.graphics">love.graphics</a></li>
+											<li id="n-love.image"><a href="http://love2d.org/wiki/love.image">love.image</a></li>
+											<li id="n-love.joystick"><a href="http://love2d.org/wiki/love.joystick">love.joystick</a></li>
+											<li id="n-love.keyboard"><a href="http://love2d.org/wiki/love.keyboard">love.keyboard</a></li>
+											<li id="n-love.math"><a href="http://love2d.org/wiki/love.math">love.math</a></li>
+											<li id="n-love.mouse"><a href="http://love2d.org/wiki/love.mouse">love.mouse</a></li>
+											<li id="n-love.physics"><a href="http://love2d.org/wiki/love.physics">love.physics</a></li>
+											<li id="n-love.sound"><a href="http://love2d.org/wiki/love.sound">love.sound</a></li>
+											<li id="n-love.system"><a href="http://love2d.org/wiki/love.system">love.system</a></li>
+											<li id="n-love.thread"><a href="http://love2d.org/wiki/love.thread">love.thread</a></li>
+											<li id="n-love.timer"><a href="http://love2d.org/wiki/love.timer">love.timer</a></li>
+											<li id="n-love.touch"><a href="http://love2d.org/wiki/love.touch">love.touch</a></li>
+											<li id="n-love.video"><a href="http://love2d.org/wiki/love.video">love.video</a></li>
+											<li id="n-love.window"><a href="http://love2d.org/wiki/love.window">love.window</a></li>
+											<li id="n-lua-enet"><a href="http://love2d.org/wiki/lua-enet">lua-enet</a></li>
+											<li id="n-luasocket"><a href="http://love2d.org/wiki/socket">luasocket</a></li>
+											<li id="n-utf8"><a href="http://love2d.org/wiki/utf8">utf8</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-Home"><a href="https://love2d.org/" rel="nofollow">Home</a></li>
+											<li id="n-Forums"><a href="https://love2d.org/forums/" rel="nofollow">Forums</a></li>
+											<li id="n-Issue-tracker"><a href="https://github.com/love2d/love/issues" rel="nofollow">Issue tracker</a></li>
+									</ul>
+					</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-wiki_navigation" role="navigation">
+		<h5>wiki navigation</h5>
+		<div class='pBody'>
+							<ul>
+											<li id="n-mainpage-description"><a href="http://love2d.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+											<li id="n-recentchanges"><a href="http://love2d.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+											<li id="n-randompage"><a href="http://love2d.org/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+									</ul>
+					</div>
+		</div>
+			<div id="p-search" class="portlet" role="search">
+			<h5><label for="searchInput">Search</label></h5>
+
+			<div id="searchBody" class="pBody">
+				<form action="http://love2d.org/w/index.php" id="searchform">
+					<input type='hidden' name="title" value="Special:Search"/>
+					<input type="search" name="search" placeholder="Search LOVE" title="Search LOVE [f]" accesskey="f" id="searchInput"/>
+					<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton"/>&#160;
+						<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton"/>
+				</form>
+
+							</div>
+		</div>
+			<div class="portlet" id="p-tb" role="navigation">
+			<h5>Tools</h5>
+
+			<div class="pBody">
+				<ul>
+											<li id="t-whatlinkshere"><a href="http://love2d.org/wiki/Special:WhatLinksHere/TexturedPolygon" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+											<li id="t-recentchangeslinked"><a href="http://love2d.org/wiki/Special:RecentChangesLinked/TexturedPolygon" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+											<li id="t-specialpages"><a href="http://love2d.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-info"><a href="http://love2d.org/w/index.php?title=TexturedPolygon&amp;action=info" title="More information about this page">Page information</a></li>
+									</ul>
+							</div>
+		</div>
+			</div><!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									<a href="http://www.gnu.org/copyleft/fdl.html"><img src="http://love2d.org/w/resources/assets/licenses/gnu-fdl.png" alt="GNU Free Documentation License 1.3" width="88" height="31"/></a>
+							</div>
+					<div id="f-poweredbyico">
+									<a href="http://www.mediawiki.org/"><img src="http://love2d.org/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+									<a href="https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="data:image/png;base64,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" alt="Powered by Semantic MediaWiki" class="smw-footer" width="88" height="31"/></a>
+							</div>
+					<ul id="f-list">
+									<li id="privacy"><a href="http://love2d.org/wiki/LOVE:Privacy_policy" title="LOVE:Privacy policy">Privacy policy</a></li>
+									<li id="about"><a href="http://love2d.org/wiki/LOVE:About" title="LOVE:About">About LOVE</a></li>
+									<li id="disclaimer"><a href="http://love2d.org/wiki/LOVE:General_disclaimer" title="LOVE:General disclaimer">Disclaimers</a></li>
+							</ul>
+		</div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":29});});</script></body>
+<!-- Mirrored from love2d.org/w/index.php?title=TexturedPolygon&action=edit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 21:07:09 GMT -->
+</html>

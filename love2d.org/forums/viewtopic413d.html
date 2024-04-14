@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2097&hilit=tiled by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 21:07:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Primitive &quot;Tiled&quot; map loader and 2D game lighting - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Primitive &quot;Tiled&quot; map loader and 2D game lighting" href="app.php/feed/topic/2097">	
+	<link rel="canonical" href="viewtopic8b93-2.html?t=2097">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="http://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp1ca9.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26hilit%3Dtiled%26t%3D2097" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic8b93-2.html?t=2097">Primitive &quot;Tiled&quot; map loader and 2D game lighting</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting6f55.html?mode=reply&amp;t=2097" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic79d0.html?t=2097&amp;hilit=tiled&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="http://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="2097" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			27 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic70da.html?t=2097&amp;hilit=tiled&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic2a79.html?t=2097&amp;hilit=tiled&amp;start=20" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic70da.html?t=2097&amp;hilit=tiled&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p21805" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21805">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="avatar"><img class="avatar" src="download/filece78.png?avatar=1531_1289616018.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1f63.html?author_id=1531&amp;sr=posts">118</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 12, 2010 1:21 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Metro Detroit</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ninwa">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ninwa</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="ymsgr:sendim?murcu82312" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21805">
+
+					<h3 class="first">
+						<a href="viewtopic4bd0-2.html?p=21805#p21805">Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge6d3.html?mode=quote&amp;p=21805" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic4bd0-2.html?p=21805#p21805" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a></strong> &raquo; </span><time datetime="2010-11-07T21:25:31+00:00">Sun Nov 07, 2010 9:25 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Feel free to steal from the code,<br>
+<br>
+press 1, 2, or 3 to set the lighting to different brightnesses. Notice the lightsource underneath the player. Also, this map is being loaded in from a map created with <span class="posthilit">Tiled</span>. There are a few demo maps, just look in the directory and change the map name that's being loaded.<br>
+<br>
+<a href="http://www.josephbleau.com/PC_Light.love" class="postlink">http://www.josephbleau.com/PC_Light.love</a><br>
+<br>
+<strong class="text-strong">Requires Love 0.7.0 for use of framebuffers in lighting code</strong><br>
+<br>
+The lighting is still proof of concept, it's not abstracted out to be useful unless you gut it and do it yourself, but I'll get there.<br>
+<br>
+Cheers!<br>
+Ninwa</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21826" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21826">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="avatar"><img class="avatar" src="download/filece78.png?avatar=1531_1289616018.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1f63.html?author_id=1531&amp;sr=posts">118</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 12, 2010 1:21 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Metro Detroit</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ninwa">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ninwa</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="ymsgr:sendim?murcu82312" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21826">
+
+					<h3 >
+						<a href="viewtopic61b4.html?p=21826#p21826">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5f93.html?mode=quote&amp;p=21826" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic61b4.html?p=21826#p21826" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a></strong> &raquo; </span><time datetime="2010-11-07T23:44:35+00:00">Sun Nov 07, 2010 11:44 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I abstracted the lighting code out. Feel free to use it for whatever you want.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>require "MiddleClass.lua"
+
+Candle = class('Candle')
+Flame  = class('Flame')
+
+-- The Candle library is going to take the liberty
+-- of keeping track of all of your current Flames.
+-- I need to do this because of how I'm doing the drawing.
+-- At least for now until I refactor/rethink it.
+Candle.flames = {}
+
+function Candle.new(x,y,max_shimmer,min_shimmer)
+	table.insert(Candle.flames, Flame:new(x,y,max_shimmer,min_shimmer))
+end
+
+function Candle.update(dt)
+	for _, v in ipairs(Candle.flames) do
+		v:update(dt)
+	end
+end
+
+-- We need to use a frame buffer so we can do
+-- independent blending of our light sources and
+-- our shroud without having to worry about
+-- anything else being drawn. One is good
+-- for all of our Flames though!
+Candle.buffer = love.graphics.newFramebuffer()
+
+function Candle.draw()
+	Candle.buffer:renderTo(function() 	
+		love.graphics.draw(Candle.shrouds[Candle.shroud_intensity],0,0) -- draw our shroud
+		for _, v in ipairs(Candle.flames) do
+			love.graphics.setColor(v.light_intensity,v.light_intensity,v.light_intensity)
+			love.graphics.circle('fill',v.x,v.y,v.shimmer_radius,256) 
+		end
+	end)
+	
+	love.graphics.setBlendMode("multiplicative")
+	local draw_me = love.graphics.newImage(Candle.buffer:getImageData())
+	love.graphics.draw(draw_me,0,0)
+	love.graphics.setBlendMode("alpha")
+end
+
+--[[ Note: Currently the shroud_intensity is fixed, you can change it but
+           you must also change the for loop in generateShrouds also. I initially
+		   wanted to load all possible shrouds up-front, but this takes way too long.
+		   I will find a new approach, but in the meantime... deal with it? ]]
+   
+Candle.shrouds = {}
+Candle.shroud_intensity = 200 -- Fixed for now until I figure this shit out.
+
+-- I wouldn't use this if I were you!
+function Candle.setShroudIntensity(intensity)
+	self.shroud_intensity = intensity
+end
+
+-- You can call this in love.load
+-- so that it wont stall us when we
+-- create our first Candle.
+function Candle.generateShrouds() 
+	for i=200, 200 do
+		-- TODO: Replace dimensions with a variable
+		-- screen size.
+		Candle.shrouds[i] = love.image.newImageData(768,768)
+		
+		for x=1, Candle.shrouds[i]:getWidth() do
+			for y=1, Candle.shrouds[i]:getHeight() do
+				Candle.shrouds[i]:setPixel(x,y,0,0,0,i)
+			end
+		end
+		
+		Candle.shrouds[i] = love.graphics.newImage(Candle.shrouds[i])
+	end
+end
+
+
+function Flame:initialize(x,y,max_shimmer,min_shimmer)
+	if #Candle.shrouds == 0 then
+		Candle.generateShrouds()
+	end
+	
+	self.x = x
+	self.y = y
+	if max_shimmer == nil then self.max_shimmer = 50 
+	else self.max_shimmer = max_shimmer end
+	if min_shimmer == nil then self.min_shimmer = 50
+	else self.min_shimmer = min_shimmer end
+	
+	self.light_intensity = 255
+	self.shimmer_radius = self.max_shimmer-1
+	self.shroud_intensity = 200
+	self.magic = 1 -- Every code needs a little bit of magic.
+end
+
+function Flame:update(dt)
+	-- "Shimmer" effect by growing and
+	-- shrinking Candle radius
+	
+	if self.min_shimmer ~= self.max_shimmer then
+		self.shimmer_radius  = self.shimmer_radius - 50 * dt * self.magic
+		self.shimimer_radius = math.floor(self.shimmer_radius)
+		if self.shimmer_radius &gt;= self.max_shimmer then
+			self.magic = self.magic * -1
+		end
+
+		if self.shimmer_radius &lt;= self.min_shimmer then
+			self.magic = self.magic * -1
+		end
+	end
+end
+</code></pre></div>
+
+foo = Candle.new(x,y) creates a new source.<br>
+<br>
+and make sure to do Candle.update(dt) in your update-loop and Candle.draw() in your draw loop. It must be the last thing drawn.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21827" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21827">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="avatar"><img class="avatar" src="download/file99fc.png?avatar=117_1370954297.png" width="73" height="73" alt="User avatar" /></a>														</div>
+								<a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search19db.html?author_id=117&amp;sr=posts">792</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jul 24, 2008 2:25 pm</dd>		
+		
+																					<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Berlin/Germany</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact SiENcE">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact SiENcE</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://www.icq.com/people/11516096/" title="ICQ">
+										<span class="contact-icon phpbb_icq-icon">ICQ</span>									</a>
+																																																<a href="http://crankgaming.blogspot.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21827">
+
+					<h3 >
+						<a href="viewtopic2c77.html?p=21827#p21827">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingdae2.html?mode=quote&amp;p=21827" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2c77.html?p=21827#p21827" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist72df.html?mode=viewprofile&amp;u=117" class="username">SiENcE</a></strong> &raquo; </span><time datetime="2010-11-07T23:49:59+00:00">Sun Nov 07, 2010 11:49 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Looks good.<br>
+<br>
+btw. i like your game ideas.</div>
+
+			
+			
+									
+						
+							<div id="sig21827" class="signature"><a href="http://aeonofsands.com/" class="postlink">http://aeonofsands.com/</a> | <a href="http://blog.aeonofsands.com/" class="postlink">http://blog.aeonofsands.com/</a> | <a href="https://twitter.com/#!/crank_gaming" class="postlink">https://twitter.com/#!/crank_gaming</a> | <a href="http://crankgaming.blogspot.com/" class="postlink">http://crankgaming.blogspot.com</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21838" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21838">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="avatar"><img class="avatar" src="download/filece78.png?avatar=1531_1289616018.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1f63.html?author_id=1531&amp;sr=posts">118</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 12, 2010 1:21 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Metro Detroit</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ninwa">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ninwa</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="ymsgr:sendim?murcu82312" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21838">
+
+					<h3 >
+						<a href="viewtopica101.html?p=21838#p21838">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingdc71.html?mode=quote&amp;p=21838" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica101.html?p=21838#p21838" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a></strong> &raquo; </span><time datetime="2010-11-08T06:38:24+00:00">Mon Nov 08, 2010 6:38 am</time>
+			</p>
+			
+			
+			
+			<div class="content">I think lighting looks a lot better this way. I changed how multiple lightsources blend so it works better, plus am now able to create the effect you see on the star on the house.<br>
+<br>
+<a href="http://dl.dropbox.com/u/13836131/PC.love" class="postlink">http://dl.dropbox.com/u/13836131/PC.love</a><br>
+<br>
+Also, press 'm' to load a different map. Was seeing how well my code handled doing this on the fly, and it works pretty well.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21855" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21855">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="avatar"><img class="avatar" src="download/filea492.png?avatar=1539_1419872538.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search6b8c.html?author_id=1539&amp;sr=posts">135</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Oct 15, 2010 10:58 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21855">
+
+					<h3 >
+						<a href="viewtopic2445.html?p=21855#p21855">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingfb1e.html?mode=quote&amp;p=21855" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2445.html?p=21855#p21855" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1faa.html?mode=viewprofile&amp;u=1539" class="username">adrix89</a></strong> &raquo; </span><time datetime="2010-11-08T12:01:24+00:00">Mon Nov 08, 2010 12:01 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Can you post a screenshot?<br>
+Seems the frame buffer is screwing with me,that or the blend mode(or both)<br>
+Got it not crashing by setting it up to 1024</div>
+
+			
+			
+									
+						
+							<div id="sig21855" class="signature">I use <a href="https://workflowy.com/invite/1f6e8217.lnx" class="postlink">Workflowy</a> but you can check out <a href="https://dynalist.io/invite/ZE35cw" class="postlink">Dynalist </a> as its the better offer.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21865" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21865">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="avatar"><img class="avatar" src="download/file0e16.gif?avatar=932_1304737965.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd6a7.html?author_id=932&amp;sr=posts">444</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 29, 2010 11:10 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21865">
+
+					<h3 >
+						<a href="viewtopic288e.html?p=21865#p21865">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1092.html?mode=quote&amp;p=21865" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic288e.html?p=21865#p21865" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a></strong> &raquo; </span><time datetime="2010-11-08T13:18:49+00:00">Mon Nov 08, 2010 1:18 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">This looks interesting, I was going to do some fake 2D lighting by making separate sprites but this seems much better, I may end up using it <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"></div>
+
+			
+			
+									
+						
+							<div id="sig21865" class="signature"><span style="font-size:85%;line-height:116%">@rynesaur</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21914" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21914">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="avatar"><img class="avatar" src="download/filece78.png?avatar=1531_1289616018.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1f63.html?author_id=1531&amp;sr=posts">118</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 12, 2010 1:21 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Metro Detroit</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ninwa">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ninwa</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="ymsgr:sendim?murcu82312" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21914">
+
+					<h3 >
+						<a href="viewtopic3750.html?p=21914#p21914">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7a1e.html?mode=quote&amp;p=21914" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic3750.html?p=21914#p21914" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a></strong> &raquo; </span><time datetime="2010-11-08T20:13:05+00:00">Mon Nov 08, 2010 8:13 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I'll post a screenshot up later, I'm currently at work, but the tileset the demo is using is <em class="text-italics"> not </em> PO2-friendly, which I suspect may be causing the problems. It supports any <span class="posthilit">Tiled</span> map, with any tileset, so I may have to fix that even if I'm just padding the tiles.<br>
+<br>
+@Ryne, thank you! And you're more than welcome to. I probably wouldn't use it just yet as it's really limited and the interface is likely to change but I will be releasing any changes to the library as I go along, so you're welcome to play with it! :]</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21926" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21926">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="avatar"><img class="avatar" src="download/file0e16.gif?avatar=932_1304737965.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd6a7.html?author_id=932&amp;sr=posts">444</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 29, 2010 11:10 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21926">
+
+					<h3 >
+						<a href="viewtopic41a6.html?p=21926#p21926">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1c25.html?mode=quote&amp;p=21926" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic41a6.html?p=21926#p21926" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a></strong> &raquo; </span><time datetime="2010-11-08T21:16:01+00:00">Mon Nov 08, 2010 9:16 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">I cant wait <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">, I think adding lighting to my zombie shooter would make it significantly more awesome/immersing .</div>
+
+			
+			
+									
+						
+							<div id="sig21926" class="signature"><span style="font-size:85%;line-height:116%">@rynesaur</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21954" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21954">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="avatar"><img class="avatar" src="download/filece78.png?avatar=1531_1289616018.png" width="64" height="64" alt="User avatar" /></a>														</div>
+								<a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search1f63.html?author_id=1531&amp;sr=posts">118</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Tue Oct 12, 2010 1:21 am</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Metro Detroit</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ninwa">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ninwa</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="ymsgr:sendim?murcu82312" title="Yahoo Messenger" class="last-cell">
+										<span class="contact-icon phpbb_yahoo-icon">Yahoo Messenger</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21954">
+
+					<h3 >
+						<a href="viewtopic70c2.html?p=21954#p21954">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd77e.html?mode=quote&amp;p=21954" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic70c2.html?p=21954#p21954" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist02ad.html?mode=viewprofile&amp;u=1531" class="username">ninwa</a></strong> &raquo; </span><time datetime="2010-11-09T07:24:35+00:00">Tue Nov 09, 2010 7:24 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote><div><cite>adrix89 wrote:</cite>Can you post a screenshot?<br>
+Seems the frame buffer is screwing with me,that or the blend mode(or both)<br>
+Got it not crashing by setting it up to 1024</div></blockquote>
+
+Ask and you shall receive! <img class="smilies" src="images/smilies/ms-surprise.png" width="16" height="16" alt=":o" title="Surprised">)<br>
+<br>
+Outdoor area with lighting (check out the start) in real time it shimmers a little.
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filec4c2.png?id=22459&amp;mode=view"><img src="download/file47cf.png?id=22459" class="postimage" alt="LmqAn.png" /></a></dt>
+						<dd>LmqAn.png (290.8 KiB) Viewed 893 times</dd>
+		</dl>
+		
+		
+			</div>
+
+Inside that house from the perspective of the map editor, <span class="posthilit">Tiled</span>.
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/file0911.png?id=22460&amp;mode=view"><img src="download/filebd76.png?id=22460" class="postimage" alt="KTe0o.png" /></a></dt>
+						<dd>KTe0o.png (240.31 KiB) Viewed 893 times</dd>
+		</dl>
+		
+		
+			</div></div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p21955" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile21955">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="avatar"><img class="avatar" src="download/file0e16.gif?avatar=932_1304737965.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchd6a7.html?author_id=932&amp;sr=posts">444</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Jan 29, 2010 11:10 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content21955">
+
+					<h3 >
+						<a href="viewtopic8c90.html?p=21955#p21955">Re: Primitive &quot;<span class="posthilit">Tiled</span>&quot; map loader and 2D game lighting</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1332.html?mode=quote&amp;p=21955" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8c90.html?p=21955#p21955" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistf4d8.html?mode=viewprofile&amp;u=932" class="username">Ryne</a></strong> &raquo; </span><time datetime="2010-11-09T10:18:09+00:00">Tue Nov 09, 2010 10:18 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Thats just awesome. I wonder how hard It would be to implement this. Maybe I can leave it for last and you can give me a hand with it?</div>
+
+			
+			
+									
+						
+							<div id="sig21955" class="signature"><span style="font-size:85%;line-height:116%">@rynesaur</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting6f55.html?mode=reply&amp;t=2097" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic79d0.html?t=2097&amp;hilit=tiled&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="http://love2d.org/forums/viewtopic.php?t=2097">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			27 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic70da.html?t=2097&amp;hilit=tiled&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic2a79.html?t=2097&amp;hilit=tiled&amp;start=20" role="button">3</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic70da.html?t=2097&amp;hilit=tiled&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span> and 4 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=2097&hilit=tiled by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 21:07:21 GMT -->
+</html>
