@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=93549 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:27:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Coding challenge: convex shapes - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Support and Development" href="app.php/feed/forum/4">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - Coding challenge: convex shapes" href="app.php/feed/topic/93549">	
+	<link rel="canonical" href="viewtopic3676.html?t=93549">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="4"><a itemprop="item" href="viewforum31e6.html?f=4"><span itemprop="name">Support and Development</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucpb2ac.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D4%26t%3D93549" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic3676.html?t=93549">Coding challenge: convex shapes</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions about the LÖVE API, installing LÖVE and other support related questions go here.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			Before you make a thread asking for help, <a href="viewtopica648.html?f=4&amp;t=2982" class="postlink">read this</a>.
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="posting0571.html?mode=reply&amp;t=93549" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopiced83.html?t=93549&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="93549" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice177.html?t=93549&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice177.html?t=93549&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p249561" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249561">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.png?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">773</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249561">
+
+					<h3 class="first">
+						<a href="viewtopic1d29.html?p=249561#p249561">Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting24f2.html?mode=quote&amp;p=249561" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1d29.html?p=249561#p249561" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2022-07-17T10:56:38+00:00">Sun Jul 17, 2022 10:56 am</time>
+			</p>
+			
+			
+			
+			<div class="content">At the start of the game I create a shape that has 8 segments and forms a perfect square:<br>
+<br>
+<img src="https://i.postimg.cc/6QqvdPbK/image.png" class="postimage" alt="Image"><br>
+<br>
+Love2D requires this to be convex (Box2d):<br>
+<em class="text-italics"><br>
+Creates a new PolygonShape.<br>
+This shape can have 8 vertices at most, and must form a convex shape. </em><br>
+<br>
+As the game proceeds and the player is rewarded, the shape grows by moving one 'point' "outwards", but it must do so without breaking the "convex" rule:<br>
+<br>
+<img src="https://i.postimg.cc/6QxQQmsz/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/C53349sQ/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/bNHPTN40/image.png" class="postimage" alt="Image"><img src="https://i.postimg.cc/d35BsCLm/image.png" class="postimage" alt="Image"><br>
+<br>
+<img src="https://i.postimg.cc/FsDrvHGr/image.png" class="postimage" alt="Image"><br>
+<br>
+The shape can get quite large and quite complex as the player keeps winning and getting rewarded. Over time, the size of the shape starts to work against the player and that is one of the mechanics of the game.  <br>
+<br>
+Here is the challenge:<br>
+<br>
+Assuming a 'point' is the end of one segment and the start of the next segment:<br>
+
+<ul>
+<li>Starting with the square, each time the player receives a reward, two segments (or one 'point') are moved so that the shape gets larger, i.e. the inside area increases.</li>
+<li>The shape must always be convex</li>
+<li>The 8 'points' of the convex can move according to whatever rules you invent (i.e. along axis or random or whatever)</li> 
+<li>Any point can be moved according to described rules</li>
+<li>Assume moving a 'point' is by an arbitrary distance (unless it matters) but for simplicity, assume whole numbers of pixels</li>
+<li>You can assume that moving the end of one segment means moving the start of the segment it joins</li>
+<li>Bonus points if the shape formed is irregular i.e. not a perfect square or rectangle.</li>
+</ul>
+
+What algorithm can I use to move a point in a direction such that it remains convex?</div>
+
+			
+			
+									
+						
+							<div id="sig249561" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249562" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249562">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="avatar"><img class="avatar" src="download/file9697.png?avatar=145963_1610033749.png" width="76" height="24" alt="User avatar" /></a>														</div>
+								<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha82f.html?author_id=145963&amp;sr=posts">1171</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Feb 08, 2020 11:09 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249562">
+
+					<h3 >
+						<a href="viewtopic16cc.html?p=249562#p249562">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6c9d.html?mode=quote&amp;p=249562" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic16cc.html?p=249562#p249562" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a></strong> &raquo; </span><time datetime="2022-07-17T12:21:15+00:00">Sun Jul 17, 2022 12:21 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=249561#p249561"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopic1d29.html?p=249561#p249561" data-post-id="249561" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 10:56 am</span></cite>
+What algorithm can I use to move a point in a direction such that it remains convex?
+</div></blockquote>
+
+Just keep in the green, cyan or magenta areas.
+<div class="inline-attachment">
+			
+		
+				<dl class="file">
+			<dt class="attach-image"><a href="download/filead22.png?id=21314&amp;mode=view"><img src="download/file5ac0.png?id=21314" class="postimage" alt="2022-07-17T14_13_20-Window.png" /></a></dt>
+						<dd>2022-07-17T14_13_20-Window.png (9.58 KiB) Viewed 2954 times</dd>
+		</dl>
+		
+		
+			</div></div>
+
+			
+			
+									
+						
+							<div id="sig249562" class="signature"><img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  in Lua we Löve<br>
+<img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/" class="postlink">Platformer Guide</a><br>
+ <img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="https://craftpix.net/freebies/" class="postlink">freebies</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249564" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249564">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.png?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">773</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249564">
+
+					<h3 >
+						<a href="viewtopic2e1f.html?p=249564#p249564">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingffd9.html?mode=quote&amp;p=249564" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic2e1f.html?p=249564#p249564" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2022-07-17T12:56:13+00:00">Sun Jul 17, 2022 12:56 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks.<br>
+<br>
+How would I avoid choosing a corner at the very start and fail instantly? Should I try, fail, then choose another point at random and repeat? It's a 50/50 shot so not a terrible approach.</div>
+
+			
+			
+									
+						
+							<div id="sig249564" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249566" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249566">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberliste27d.html?mode=viewprofile&amp;u=1492" class="username">Xugro</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search12d0.html?author_id=1492&amp;sr=posts">110</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 29, 2010 8:14 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249566">
+
+					<h3 >
+						<a href="viewtopic786a.html?p=249566#p249566">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting05c6.html?mode=quote&amp;p=249566" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic786a.html?p=249566#p249566" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste27d.html?mode=viewprofile&amp;u=1492" class="username">Xugro</a></strong> &raquo; </span><time datetime="2022-07-17T15:21:52+00:00">Sun Jul 17, 2022 3:21 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Just a small nitpick:
+<blockquote cite="./viewtopic.php?p=249562#p249562"><div><cite><a href="memberlisted30.html?mode=viewprofile&amp;u=145963">darkfrei</a> wrote: <a href="viewtopic16cc.html?p=249562#p249562" data-post-id="249562" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 12:21 pm</span></cite>
+Just keep in the green, cyan or magenta areas.
+</div></blockquote>
+You cannot move point A into the magenta area, because this would decrease the overall area of the polygon which is against togFoxs first point:
+<blockquote cite="./viewtopic.php?p=249561#p249561"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopic1d29.html?p=249561#p249561" data-post-id="249561" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 10:56 am</span></cite>
+<ul><li>Starting with the square, each time the player receives a reward, two segments (or one 'point') are moved so that the shape gets larger, i.e. the inside area increases.</li></ul>
+</div></blockquote>
+
+Edit:
+<blockquote cite="./viewtopic.php?p=249564#p249564"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopic2e1f.html?p=249564#p249564" data-post-id="249564" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 12:56 pm</span></cite>
+How would I avoid choosing a corner at the very start and fail instantly? Should I try, fail, then choose another point at random and repeat? It's a 50/50 shot so not a terrible approach.
+</div></blockquote>
+Should the point to move be chosen by the player or randomly?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249571" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249571">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.png?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">773</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249571">
+
+					<h3 >
+						<a href="viewtopic6e1c.html?p=249571#p249571">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting10a9.html?mode=quote&amp;p=249571" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic6e1c.html?p=249571#p249571" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2022-07-17T17:50:55+00:00">Sun Jul 17, 2022 5:50 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Not the player. The algorithm needs to choose a point and then move that line 'outwards' without breaking the rules.<br>
+<br>
+My first problem: deciding which points can legally be moved (the four corners can'tbe moved first)<br>
+<br>
+Then: with a point that can be moved legally, know which direction is a legal move.<br>
+<br>
+I suspect solving step 1 will solve step 2.</div>
+
+			
+			
+									
+						
+							<div id="sig249571" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249572" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249572">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberliste27d.html?mode=viewprofile&amp;u=1492" class="username">Xugro</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search12d0.html?author_id=1492&amp;sr=posts">110</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Sep 29, 2010 8:14 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249572">
+
+					<h3 >
+						<a href="viewtopica281.html?p=249572#p249572">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting568f.html?mode=quote&amp;p=249572" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica281.html?p=249572#p249572" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste27d.html?mode=viewprofile&amp;u=1492" class="username">Xugro</a></strong> &raquo; </span><time datetime="2022-07-17T17:56:22+00:00">Sun Jul 17, 2022 5:56 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">You can just use brute force. This will work within a few attempts (most of the time). I attached a simple example.</div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file405f.php?id=21317">random_polygon.love</a></dt>
+						<dd>(1.16 KiB) Downloaded 95 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249576" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249576">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249576">
+
+					<h3 >
+						<a href="viewtopicacad.html?p=249576#p249576">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3976.html?mode=quote&amp;p=249576" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicacad.html?p=249576#p249576" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2022-07-18T00:04:34+00:00">Mon Jul 18, 2022 12:04 am</time>
+			</p>
+			
+			
+			
+			<div class="content">There are some shapes for which no moves that extend the area and keep the shape convex are possible. What do you plan to do in that case?</div>
+
+			
+			
+									
+						
+							<div id="sig249576" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249577" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249577">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="avatar"><img class="avatar" src="download/file02ea.png?avatar=170436_1695446639.png" width="50" height="53" alt="User avatar" /></a>														</div>
+								<a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3e79.html?author_id=170436&amp;sr=posts">773</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Jan 30, 2021 9:46 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Brisbane, Oztralia</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249577">
+
+					<h3 >
+						<a href="viewtopicd620.html?p=249577#p249577">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting65d2.html?mode=quote&amp;p=249577" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicd620.html?p=249577#p249577" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436" class="username">togFox</a></strong> &raquo; </span><time datetime="2022-07-18T00:10:37+00:00">Mon Jul 18, 2022 12:10 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=249572#p249572"><div><cite><a href="memberliste27d.html?mode=viewprofile&amp;u=1492">Xugro</a> wrote: <a href="viewtopica281.html?p=249572#p249572" data-post-id="249572" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 5:56 pm</span></cite>
+You can just use brute force. This will work within a few attempts (most of the time). I attached a simple example.
+</div></blockquote>
+
+Nice one. A lot of hypothesising on Discord but this addresses all the criteria.  <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile">  I notice not all segments 'move' - either a bug or your algorithm keeps moving the same three points because that reaches success the fastest?<br>
+<br>
+Edit: I see you used a physics object to calculate mass. Very sneaky.  I approve.  <img class="smilies" src="images/smilies/ms-smile.png" width="16" height="16" alt=":)" title="Smile"><br>
+
+<blockquote class="uncited"><div>There are some shapes for which no moves that extend the area and keep the shape convex are possible. What do you plan to do in that case?</div></blockquote>
+
+Is this possible? With 8 segments surely there will always be one option?</div>
+
+			
+			
+									
+						
+							<div id="sig249577" class="signature">Current project: <br>
+<a href="https://togfox.itch.io/backyard-gridiron-manager" class="postlink">https://togfox.itch.io/backyard-gridiron-manager</a><br>
+American football manager/sim game - build and manage a roster and win season after season</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249578" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249578">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249578">
+
+					<h3 >
+						<a href="viewtopic12f4.html?p=249578#p249578">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6b5d.html?mode=quote&amp;p=249578" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic12f4.html?p=249578#p249578" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2022-07-18T00:44:43+00:00">Mon Jul 18, 2022 12:44 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=249577#p249577"><div><cite><a href="memberlisteef3.html?mode=viewprofile&amp;u=170436">togFox</a> wrote: <a href="viewtopicd620.html?p=249577#p249577" data-post-id="249577" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Mon Jul 18, 2022 12:10 am</span></cite>Is this possible? With 8 segments surely there will always be one option?
+</div></blockquote>
+Well, the minimum shape where that is outright impossible that I can think of has 9 vertices, but I assumed the playfield to be limited, and then yes, it will eventually happen. Maybe that assumption was wrong, but you've been talking about integer coordinates which suggests that.<br>
+<br>
+<del>With 8 vertices there's a shape where you can move just 1 vertex, and once the corner of the playfield is reached, there are no moves. It's also pretty boring, as the game then consists of moving that vertex towards the corner as slowly as possible.</del><br>
+<br>
+Edit: I was wrong, sorry.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a> on Mon Jul 18, 2022 8:48 am, edited 2 times in total.
+									</div>
+			
+						
+							<div id="sig249578" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p249583" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile249583">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="avatar"><img class="avatar" src="download/file9697.png?avatar=145963_1610033749.png" width="76" height="24" alt="User avatar" /></a>														</div>
+								<a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha82f.html?author_id=145963&amp;sr=posts">1171</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Feb 08, 2020 11:09 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content249583">
+
+					<h3 >
+						<a href="viewtopic1a0c.html?p=249583#p249583">Re: Coding challenge: convex shapes</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting2a41.html?mode=quote&amp;p=249583" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic1a0c.html?p=249583#p249583" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlisted30.html?mode=viewprofile&amp;u=145963" class="username">darkfrei</a></strong> &raquo; </span><time datetime="2022-07-18T04:23:13+00:00">Mon Jul 18, 2022 4:23 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=249566#p249566"><div><cite><a href="memberliste27d.html?mode=viewprofile&amp;u=1492">Xugro</a> wrote: <a href="viewtopic786a.html?p=249566#p249566" data-post-id="249566" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 3:21 pm</span></cite>
+Just a small nitpick:
+<blockquote cite="./viewtopic.php?p=249562#p249562"><div><cite><a href="memberlisted30.html?mode=viewprofile&amp;u=145963">darkfrei</a> wrote: <a href="viewtopic16cc.html?p=249562#p249562" data-post-id="249562" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Sun Jul 17, 2022 12:21 pm</span></cite>
+Just keep in the green, cyan or magenta areas.
+</div></blockquote>
+You cannot move point A into the magenta area, because this would decrease the overall area of the polygon which is against togFoxs first point:
+</div></blockquote>
+You are right,  green area makes area bigger, the magenta area makes is tinier, the line through the point A and parallel to the magenta line don't change the polygon area.<br>
+<br>
+So you can take any random point from the triangle and it will be often near the this not drawn line.</div>
+
+			
+			
+									
+						
+							<div id="sig249583" class="signature"><img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW">  in Lua we Löve<br>
+<img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/" class="postlink">Platformer Guide</a><br>
+ <img class="smilies" src="images/smilies/ms-awesome.png" width="16" height="16" alt=":awesome:" title="I'M SO HAPPY I COULD SHIT A RAINBOW RIGHT NOW"> <a href="https://craftpix.net/freebies/" class="postlink">freebies</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting0571.html?mode=reply&amp;t=93549" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopiced83.html?t=93549&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=93549">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			11 posts
+							<ul>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopice177.html?t=93549&amp;start=10" role="button">2</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopice177.html?t=93549&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Support and Development”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Ahrefs [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span> and 5 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=93549 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:27:37 GMT -->
+</html>

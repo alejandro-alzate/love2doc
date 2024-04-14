@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=93746 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:27:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>fast pixel by pixel rendering or better way ? - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Support and Development" href="app.php/feed/forum/4">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - fast pixel by pixel rendering or better way ?" href="app.php/feed/topic/93746">	
+	<link rel="canonical" href="viewtopicc9f4.html?t=93746">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="4"><a itemprop="item" href="viewforum31e6.html?f=4"><span itemprop="name">Support and Development</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp08f6.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D4%26t%3D93746" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopicc9f4.html?t=93746">fast pixel by pixel rendering or better way ?</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Questions about the LÖVE API, installing LÖVE and other support related questions go here.<br /></div>
+
+	<div class="rules">
+		<div class="inner">
+
+					<strong>Forum rules</strong><br />
+			Before you make a thread asking for help, <a href="viewtopica648.html?f=4&amp;t=2982" class="postlink">read this</a>.
+		
+		</div>
+	</div>
+
+<div class="action-bar bar-top">
+	
+			<a href="postingb1c0.html?mode=reply&amp;t=93746" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic37d8-2.html?t=93746&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="93746" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+			<div id="p250679" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250679">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="avatar"><img class="avatar" src="download/file4f70.gif?avatar=188439_1680563834.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha395.html?author_id=188439&amp;sr=posts">287</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 11, 2022 11:07 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250679">
+
+					<h3 class="first">
+						<a href="viewtopic9a81.html?p=250679#p250679">fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting8dcf.html?mode=quote&amp;p=250679" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9a81.html?p=250679#p250679" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a></strong> &raquo; </span><time datetime="2022-09-14T10:12:19+00:00">Wed Sep 14, 2022 10:12 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Hello everyone !<br>
+<br>
+To be brief, I'm trying to render an image distorted by a sinusoid but I realize that it's really slow (obviously since it's displayed pixel by pixel). So I looked for a way to render it "directly in a texture" and display it (much like in "pure SDL") but I couldn't find an equivalent in love. I tried other techniques with canvas but they were totally flawed...<br>
+<br>
+Here is a mini code that I wrote as a demo, if someone can direct me to a more suitable solution.<br>
+<br>
+I'm running around 30 FPS at home with this example.<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local WIN_W, WIN_H
+local image = {}
+local phase
+
+function love.load()
+
+    local imageData = love.image.newImageData("image.png")
+
+    WIN_W, WIN_H = love.graphics.getDimensions()
+    image.w, image.h = imageData:getDimensions()
+
+    image.x = (WIN_W-image.w) / 2
+    image.y = (WIN_H-image.h) / 2
+
+    image.pixels = {}
+
+    for x = 0, image.w - 1 do
+        for y = 0, image.h - 1 do
+
+            local r, g, b, a = imageData:getPixel(x, y)
+            image.pixels[y * image.w + x] = {r, g, b, a}
+
+        end
+    end
+
+    phase = 0
+
+end
+
+function love.update(dt)
+
+    phase = phase + 5 * dt
+
+end
+
+function love.draw()
+
+    love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)
+
+    -- Draw distorted image --
+
+    for x = 0, image.w - 1 do
+        for y = 0, image.h - 1 do
+
+            local x_sin = 10 * math.sin(y * .05 + phase)
+
+            love.graphics.setColor(
+                image.pixels[y * image.w + x]
+            )
+
+            love.graphics.points(
+                image.x + x + x_sin,
+                image.y + y
+            )
+
+        end
+    end
+
+    love.graphics.setColor(1,1,1)
+
+end</code></pre></div></div>
+
+			
+							<dl class="attachbox">
+					<dt>
+						Attachments
+					</dt>
+											<dd>
+			
+		
+		
+				<dl class="file">
+			<dt><img src="images/upload_icons/love.png" alt="" /> <a class="postlink" href="download/file007e.php?id=21519">Sinusoidal-Image-Distortion.love</a></dt>
+						<dd>(3.26 KiB) Downloaded 66 times</dd>
+		</dl>
+		
+			</dd>
+									</dl>
+			
+									
+						
+							<div id="sig250679" class="signature">My avatar code for the curious <img class="smilies" src="images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> <a href="https://tinyurl.com/getMyAvatarCode" class="postlink">V1</a>, <a href="https://tinyurl.com/getMyAvatarCode-v2" class="postlink">V2</a>, <a href="https://tinyurl.com/getMyAvatarCode-v3" class="postlink">V3</a>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250680" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250680">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="avatar"><img class="avatar" src="download/file3327.png?avatar=137182_1456439431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="username">ReFreezed</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchba8d.html?author_id=137182&amp;sr=posts">612</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 25, 2015 11:32 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ReFreezed">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ReFreezed</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://marcus.refreezed.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250680">
+
+					<h3 >
+						<a href="viewtopic27f1.html?p=250680#p250680">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga3ad.html?mode=quote&amp;p=250680" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic27f1.html?p=250680#p250680" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="username">ReFreezed</a></strong> &raquo; </span><time datetime="2022-09-14T10:51:12+00:00">Wed Sep 14, 2022 10:51 am</time>
+			</p>
+			
+			
+			
+			<div class="content">This is exactly what the GPU and <a href="../wiki/love.graphics-41.html">shaders</a> are for.</div>
+
+			
+			
+									
+						
+							<div id="sig250680" class="signature"><strong class="text-strong">Tools:</strong> <a href="viewtopicb6f8.html?f=5&amp;t=88860" class="postlink">Hot Particles</a>, <a href="viewtopic4077.html?f=5&amp;t=86190" class="postlink">LuaPreprocess</a>, <a href="viewtopic8fbf.html?f=5&amp;t=92526" class="postlink">InputField</a>, (<a href="../wiki/User_Refreezed.html" class="postlink">more</a>) <strong class="text-strong">Games:</strong> <a href="viewtopic2577.html?f=5&amp;t=82022" class="postlink">Momento Temporis</a><br>
+<em class="text-italics">"If each mistake being made is a new one, then progress is being made."</em></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250682" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250682">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250682">
+
+					<h3 >
+						<a href="viewtopicfa5d.html?p=250682#p250682">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9532.html?mode=quote&amp;p=250682" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfa5d.html?p=250682#p250682" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2022-09-14T12:23:13+00:00">Wed Sep 14, 2022 12:23 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Indeed. Shaders work pixel by pixel and they can do what you're trying to accomplish very quickly.<br>
+<br>
+Note that for shaders, you need to think in terms of how each pixel needs to be rendered, rather than in terms of where to draw each pixel. It's similar but the difference is important. In this case, it means that you have to sample each pixel from a position that is distorted by a sine wave for it to render in the right place. You may also need to draw a bigger area than that covered by the image, because the horizontal distortion makes some pixels go out of the image's rectangle, and if you want to draw these, you need the drawn objects to cover them (note: you can't use love.graphics.rectangle because that one doesn't have proper UVs).<br>
+<br>
+Remember also that the texture coordinates received by the shader are normalized, that is, they range from 0 for the left side of the leftmost pixel, to 1 for the right side of the rightmost pixel, and same vertically. The shader doesn't know about texture size; if you need it, you have to pass it as a uniform.<br>
+<br>
+Adjusting the scale properly was a bit tricky, but here's exactly the same effect as yours, implemented as a shader:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local image, sineShader, phase, WIN_W, WIN_H
+
+function love.load()
+  image = {}
+  image.texture = love.graphics.newImage('image.png')
+  image.texture:setWrap("clampzero", "clampzero")
+
+  WIN_W, WIN_H = love.graphics.getDimensions()
+  image.w, image.h = image.texture:getDimensions()
+
+  image.x = (WIN_W-image.w) / 2
+  image.y = (WIN_H-image.h) / 2
+
+  sineShader = love.graphics.newShader[[
+
+    uniform vec2 imgSize;
+    uniform float phase;
+
+    vec4 effect(vec4 colour, Image tex, vec2 texPos, vec2 scrPos)
+    {
+      vec2 samplePos;
+      samplePos.x = texPos.x * ((imgSize.x + 20.0) / imgSize.x);
+      float sinScale = 10.0 / imgSize.x;
+      samplePos.x -= sinScale * (1.0 + sin(phase + 0.05*imgSize.y*texPos.y));
+      samplePos.y = texPos.y;
+      vec4 sample = Texel(tex, samplePos);
+      return sample * colour;
+    }
+
+  ]]
+  sineShader:send('imgSize', {image.w, image.h})
+  phase = 0
+end
+
+function love.update(dt)
+  phase = phase + 5 * dt
+end
+
+function love.draw()
+  love.graphics.setShader(sineShader)
+  sineShader:send("phase", phase)
+  love.graphics.draw(image.texture, image.x - 10, image.y, 0,
+    (image.w + 20)/image.w, 1)
+  love.graphics.setShader()
+
+  love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)
+end
+</code></pre></div>
+
+Edit: Note how I subtracted the sine rather than adding it; had I not done that, the effect wouldn't match yours. That's because of what I mentioned about writing it in terms of what each pixel needs to contain, rather than where to render each pixel.</div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a> on Wed Sep 14, 2022 12:58 pm, edited 1 time in total.
+									</div>
+			
+						
+							<div id="sig250682" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250684" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250684">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="avatar"><img class="avatar" src="download/file3327.png?avatar=137182_1456439431.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="username">ReFreezed</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchba8d.html?author_id=137182&amp;sr=posts">612</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 25, 2015 11:32 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Sweden</dd>
+							
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact ReFreezed">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact ReFreezed</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://marcus.refreezed.com/" title="Website" class="last-cell">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250684">
+
+					<h3 >
+						<a href="viewtopic9cb4.html?p=250684#p250684">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1cf8.html?mode=quote&amp;p=250684" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic9cb4.html?p=250684#p250684" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberliste334.html?mode=viewprofile&amp;u=137182" class="username">ReFreezed</a></strong> &raquo; </span><time datetime="2022-09-14T12:36:54+00:00">Wed Sep 14, 2022 12:36 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">This is basically the same as pgimeno's solution, but I spent time writing it so I'm posting it anyway. <img class="smilies" src="images/smilies/ms-unplzd.png" width="16" height="16" alt=":|" title="Neutral"><br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local WAVE_AMPLITUDE = 10  -- pixels
+local WAVE_LENGTH    = 100 -- pixels
+local WAVE_INTERVAL  = 1.5 -- seconds
+
+local image = love.graphics.newImage("image.png")
+image:setWrap("clampzero") -- Don't repeat edge pixels.
+
+local shader = love.graphics.newShader[[
+	uniform float waveAmplitude;
+	uniform float waveLength;
+	uniform float wavePhase;
+	uniform float padding;
+	uniform float scale;
+
+	#define TAU 6.283185307179586 // 2*pi
+
+	vec4 effect(vec4 loveColor, Image tex, vec2 texUv, vec2 screenPos) {
+		texUv.x  = texUv.x * scale - padding; // Undo :ScaleImage and :ScalePosition.
+		texUv.x += waveAmplitude * sin((texUv.y / waveLength + wavePhase) * TAU); // Add wave.
+
+		vec4 pixel = Texel(tex, texUv);
+		pixel.a    = max(pixel.a, .5); // DEBUG: Show the bounds of the rendered rectangle.
+
+		return pixel * loveColor;
+	}
+]]
+
+function love.draw()
+	local ww, wh = love.graphics.getDimensions()
+	local iw, ih = image:getDimensions()
+
+	local wavePhase = love.timer.getTime() / WAVE_INTERVAL
+	local padding   = WAVE_AMPLITUDE -- Not adding padding would result in the texture getting cut off. Try setting this to 0!
+	local scale     = 1 + 2*padding/iw
+
+	shader:send("waveAmplitude", WAVE_AMPLITUDE/iw) -- Remember: Shaders use normalized texture coordinates.
+	shader:send("waveLength", WAVE_LENGTH/ih)
+	shader:send("wavePhase", wavePhase)
+	shader:send("padding", padding/iw)
+	shader:send("scale", scale)
+
+	local x = (ww - iw*scale) / 2 -- :ScalePosition
+	local y = (wh - ih      ) / 2
+
+	love.graphics.clear(.3, .3, .3)
+	love.graphics.setShader(shader)
+	love.graphics.draw(image, x,y, 0, scale,1) -- :ScaleImage
+end
+</code></pre></div></div>
+
+			
+			
+									
+						
+							<div id="sig250684" class="signature"><strong class="text-strong">Tools:</strong> <a href="viewtopicb6f8.html?f=5&amp;t=88860" class="postlink">Hot Particles</a>, <a href="viewtopic4077.html?f=5&amp;t=86190" class="postlink">LuaPreprocess</a>, <a href="viewtopic8fbf.html?f=5&amp;t=92526" class="postlink">InputField</a>, (<a href="../wiki/User_Refreezed.html" class="postlink">more</a>) <strong class="text-strong">Games:</strong> <a href="viewtopic2577.html?f=5&amp;t=82022" class="postlink">Momento Temporis</a><br>
+<em class="text-italics">"If each mistake being made is a new one, then progress is being made."</em></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250685" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250685">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="avatar"><img class="avatar" src="download/file4f70.gif?avatar=188439_1680563834.gif" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha395.html?author_id=188439&amp;sr=posts">287</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Fri Mar 11, 2022 11:07 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250685">
+
+					<h3 >
+						<a href="viewtopic332e.html?p=250685#p250685">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3db3.html?mode=quote&amp;p=250685" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic332e.html?p=250685#p250685" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist0934.html?mode=viewprofile&amp;u=188439" class="username">Bigfoot71</a></strong> &raquo; </span><time datetime="2022-09-14T12:51:58+00:00">Wed Sep 14, 2022 12:51 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Thanks a lot ! I had just started to read docs to do it and publish it here, I'm going to try to understand your codes to know how to reproduce it myself. I'm especially trying to learn, I didn't expect so much <img class="smilies" src="images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee"></div>
+
+			
+			
+									
+						
+							<div id="sig250685" class="signature">My avatar code for the curious <img class="smilies" src="images/smilies/ms-glad.png" width="16" height="16" alt=":D" title="Very Happy"> <a href="https://tinyurl.com/getMyAvatarCode" class="postlink">V1</a>, <a href="https://tinyurl.com/getMyAvatarCode-v2" class="postlink">V2</a>, <a href="https://tinyurl.com/getMyAvatarCode-v3" class="postlink">V3</a>.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250691" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250691">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="avatar"><img class="avatar" src="download/filecde0.png?avatar=139789_1703784207.png" width="59" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcd1c.html?author_id=139789&amp;sr=posts">472</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jan 18, 2018 9:14 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250691">
+
+					<h3 >
+						<a href="viewtopicec1c.html?p=250691#p250691">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinga715.html?mode=quote&amp;p=250691" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicec1c.html?p=250691#p250691" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a></strong> &raquo; </span><time datetime="2022-09-14T15:26:03+00:00">Wed Sep 14, 2022 3:26 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=250685#p250685"><div><cite><a href="memberlist0934.html?mode=viewprofile&amp;u=188439">Bigfoot71</a> wrote: <a href="viewtopic332e.html?p=250685#p250685" data-post-id="250685" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Sep 14, 2022 12:51 pm</span></cite>
+I'm especially trying to learn, I didn't expect so much <img class="smilies" src="images/smilies/ms-glee.png" width="16" height="16" alt="^^" title="Glee">
+</div></blockquote>
+
+Yup, awesome people here!  I lӧve this community for that reason.</div>
+
+			
+			
+									
+						
+							<div id="sig250691" class="signature">Any code samples/ideas by me should be considered Public Domain (no attribution needed) license unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250712" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250712">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250712">
+
+					<h3 >
+						<a href="viewtopic8df6.html?p=250712#p250712">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting6115.html?mode=quote&amp;p=250712" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic8df6.html?p=250712#p250712" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2022-09-15T11:58:23+00:00">Thu Sep 15, 2022 11:58 am</time>
+			</p>
+			
+			
+			
+			<div class="content">Here's the same idea but without the adjustments to make it fit, which is clearer and easier to understand:
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>local image, sineShader, phase, WIN_W, WIN_H
+
+function love.load()
+  image = {}
+  image.texture = love.graphics.newImage('image.png')
+  image.texture:setWrap("clampzero", "clampzero")
+
+  WIN_W, WIN_H = love.graphics.getDimensions()
+  image.w, image.h = image.texture:getDimensions()
+
+  image.x = (WIN_W-image.w) / 2
+  image.y = (WIN_H-image.h) / 2
+
+  sineShader = love.graphics.newShader[[
+
+    uniform vec2 imgSize;
+    uniform float phase;
+
+    vec4 effect(vec4 colour, Image tex, vec2 texPos, vec2 scrPos)
+    {
+      vec2 samplePos;
+      samplePos.x = texPos.x - (10.0 / imgSize.x) * sin(phase + 0.05*imgSize.y*texPos.y);
+      samplePos.y = texPos.y;
+      vec4 sample = Texel(tex, samplePos);
+      return sample * colour;
+    }
+
+  ]]
+  sineShader:send('imgSize', {image.w, image.h})
+  phase = 0
+end
+
+function love.update(dt)
+  phase = phase + 5 * dt
+end
+
+function love.draw()
+  love.graphics.setShader(sineShader)
+  sineShader:send("phase", phase)
+  love.graphics.draw(image.texture, image.x, image.y)
+  love.graphics.setShader()
+
+  love.graphics.print("FPS: "..tostring(love.timer.getFPS( )), 0, 0)
+end
+</code></pre></div>
+If you run it, you'll notice that it goes out of the image frame while waving; that's the reason for the other version, although this one is easier to understand. A simpler fix than the adjustments in the previous version would be to make the image bigger, so that it includes enough margin for waving without going out of the frame.<br>
+<br>
+Note the following:<br>
+
+<ul>
+<li>10.0 is the number of pixels to displace the texture, at the cusp of the sine wave. It needs to be divided by imgSize.x in order to get a normalized coordinate from 0.0 to 1.0, because these are the units used by texPos and by the Texel function.</li>
+<li>Since texPos.y is normalized, in order to match your function I had to multiply it by the texture height (imgSize.y) to obtain the position in pixels, which is what you were using for the angle of the sine.</li>
+<li>In the `return sample * colour;` line, `colour` is there just to allow for tinting; if you don't want to allow tinting you can just return `sample`.</li>
+<li>`extern` is a deprecated alias for `uniform`. Not sure why it was deprecated, but it's much clearer what it does if you change `uniform` to `extern`: it's used for the external variables that are passed via <a href="../wiki/Shader_send.html">Shader:send</a>.</li>
+</ul></div>
+
+			
+			
+									
+						
+							<div id="sig250712" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250715" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250715">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="avatar"><img class="avatar" src="download/filecde0.png?avatar=139789_1703784207.png" width="59" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchcd1c.html?author_id=139789&amp;sr=posts">472</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Jan 18, 2018 9:14 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250715">
+
+					<h3 >
+						<a href="viewtopicdf55.html?p=250715#p250715">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting7419.html?mode=quote&amp;p=250715" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicdf55.html?p=250715#p250715" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist4b21.html?mode=viewprofile&amp;u=139789" class="username">milon</a></strong> &raquo; </span><time datetime="2022-09-15T15:04:01+00:00">Thu Sep 15, 2022 3:04 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=250712#p250712"><div><cite><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168">pgimeno</a> wrote: <a href="viewtopic8df6.html?p=250712#p250712" data-post-id="250712" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Thu Sep 15, 2022 11:58 am</span></cite>
+10.0 is the number of pixels to displace the texture, at the cusp of the sine wave. It needs to be divided by imgSize.x in order to get a normalized coordinate from 0.0 to 1.0, because these are the units used by texPos and by the Texel function.
+</div></blockquote>
+One other thing to note: Shaders are very picky about number type.  In shader code, 10 and 10.0 are NOT the same thing.  10 is an integer and therefore the shader will attempt to perform integer math.  10.0 is a floating point number and the shader will use floating point math operations instead.  If this is new information to you, you can read up more on that in several places such as <a href="https://stackoverflow.com/questions/4806944/what-is-the-difference-between-the-float-and-integer-data-type-when-the-size-is" class="postlink">Stack Overflow</a>.</div>
+
+			
+			
+									
+						
+							<div id="sig250715" class="signature">Any code samples/ideas by me should be considered Public Domain (no attribution needed) license unless otherwise stated.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p250719" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile250719">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="avatar"><img class="avatar" src="download/file0cce.png?avatar=137168_1466472518.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchc6e5.html?author_id=137168&amp;sr=posts">3548</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sun Oct 18, 2015 2:58 pm</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content250719">
+
+					<h3 >
+						<a href="viewtopicebb1.html?p=250719#p250719">Re: fast pixel by pixel rendering or better way ?</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting9aed.html?mode=quote&amp;p=250719" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicebb1.html?p=250719#p250719" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99fb.html?mode=viewprofile&amp;u=137168" class="username">pgimeno</a></strong> &raquo; </span><time datetime="2022-09-15T16:13:11+00:00">Thu Sep 15, 2022 4:13 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Indeed, sorry for leaving that information out - I thought it would not be immediately relevant for someone who is learning about shaders.<br>
+<br>
+Typical desktop OpenGL drivers don't have any problem compiling a shader that includes an integer where a float is expected, because automatic type casting is part of the language specification. However, OpenGL ES (mostly used in mobile phones) does not support automatic type casting, and the shader will fail to compile in devices that lack that extension, which is most mobile phones.<br>
+<br>
+I believe that on regular GL (not GLES), using 10 instead of 10.0 will work just fine in this case, because one of the types in the division is a float, so the other operand is automatically cast to float and then everything works as expected (yep, tried, it works for me). In GLES you will get an error instead (tried by setting the environment variable LOVE_GRAPHICS_USE_OPENGLES=1).</div>
+
+			
+			
+									
+						
+							<div id="sig250719" class="signature"><a href="viewtopic187f.html?t=81198" class="postlink">Thrust II Reloaded</a> - <a href="viewtopic0012.html?t=82642" class="postlink">GifLoad for Löve</a> - <a href="https://notabug.org/pgimeno/Gspot" class="postlink">GSpöt GUI</a> - <a href="https://notabug.org/pgimeno" class="postlink">My NotABug.org repositories</a></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="postingb1c0.html?mode=reply&amp;t=93746" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopic37d8-2.html?t=93746&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=93746">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			9 posts
+							&bull; Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforum31e6.html?f=4" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Support and Development”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Ahrefs [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span> and 5 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=4&t=93746 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:27:35 GMT -->
+</html>

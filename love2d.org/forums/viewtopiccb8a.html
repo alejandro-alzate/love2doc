@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=84226 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:06:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>[11.3] AdMob support for Android + EU Consent - LÖVE</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - LÖVE" href="app.php/feed">		<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="app.php/feed/forums">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="app.php/feed/topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Libraries and Tools" href="app.php/feed/forum/5">	<link rel="alternate" type="application/atom+xml" title="Feed - Topic - [11.3] AdMob support for Android + EU Consent" href="app.php/feed/topic/84226">	
+	<link rel="canonical" href="viewtopic518d.html?t=84226">
+
+<!--
+	phpBB style name: grouplove
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:      EntranceJew ( http://ejew.in/ )
+-->
+
+<link href="assets/css/font-awesome.min2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/normalize2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/base2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/utilities2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/common2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/links2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/content2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/buttons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/cp2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/forms2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/icons2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/colours2257.css?assets_version=46" rel="stylesheet">
+<link href="styles/prosilver/theme/responsive2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/grouplove/theme/stylesheet2257.css?assets_version=46" rel="stylesheet">
+
+<link href="styles/prosilver/theme/en/stylesheet2257.css?assets_version=46" rel="stylesheet">
+<link href="../favicon.png" rel="shortcut icon" type="image/png">
+
+
+
+	<link href="assets/cookieconsent/cookieconsent.min2257.css?assets_version=46" rel="stylesheet">
+
+<!--[if lte IE 9]>
+	<link href="./styles/grouplove/theme/tweaks.css?assets_version=46" rel="stylesheet">
+<![endif]-->
+
+
+
+<link rel="stylesheet" href="../highlightjs/styles/docco.css"/>
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewtopic ltr ">
+
+<header id="love_header">
+</header>
+
+
+<div id="love_wrap">
+		<nav>
+		<a href="../index.html">Home</a>
+		<a href="../wiki/Main_Page.html">Wiki</a>
+		<a href="index.html">Forums</a>
+		<a href="https://github.com/love2d/love/issues">Issue tracker</a>
+		
+						<div id="search-box" class="search-box search-header" role="search">
+			<form action="https://love2d.org/forums/search.php" method="get" id="search">
+			<fieldset>
+				<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				
+			</fieldset>
+			</form>
+		</div>
+					</nav>
+		
+	<div id="love_content">
+		<div id="wrap" class="wrap">
+			<a id="top" class="top-anchor" accesskey="t"></a>
+			<div id="page-header">
+								<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="index-2.html" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1" /></span>
+
+											
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="5"><a itemprop="item" href="viewforume774.html?f=5"><span itemprop="name">Libraries and Tools</span></a><meta itemprop="position" content="2" /></span>
+							
+					</li>
+
+		
+					<li class="rightside responsive-search">
+				<a href="search.html" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+	
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="search33a7.html?search_id=unanswered" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="search526f.html?search_id=active_topics" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="search.html" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+											<li class="separator"></li>
+													<li>
+								<a href="memberlist.html" role="menuitem">
+									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+								</a>
+							</li>
+																			<li>
+								<a href="memberlist4bfd.html?mode=team" role="menuitem">
+									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+								</a>
+							</li>
+																<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="app.php/help/faq.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="ucp57c2.html?mode=login&amp;redirect=viewtopic.php%3Ff%3D5%26t%3D84226" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="ucp8319.html?mode=register" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+			</div>
+
+			
+			<a id="start_here" class="anchor"></a>
+			<div id="page-body" class="page-body" role="main">
+				
+				
+<h2 class="topic-title"><a href="viewtopic518d.html?t=84226">[11.3] AdMob support for Android + EU Consent</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Showcase your libraries, tools and other projects that help your fellow love users.<br /></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="posting7795.html?mode=reply&amp;t=84226" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopica6d7.html?t=84226&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="https://love2d.org/forums/search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…" />
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="search.html" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="84226" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			107 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>11</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;84226" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic84be.html?t=84226&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic3de0.html?t=84226&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic798a.html?t=84226&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopica0c5.html?t=84226&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopice13e.html?t=84226&amp;start=100" role="button">11</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic84be.html?t=84226&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+		</div>
+
+
+
+
+			<div id="p214447" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214447">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3752.html?author_id=136963&amp;sr=posts">72</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Aug 19, 2015 4:13 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214447">
+
+					<h3 class="first">
+						<a href="viewtopic70b1.html?p=214447#p214447">[11.3] AdMob support for Android + EU Consent</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting08bf.html?mode=quote&amp;p=214447" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopic70b1.html?p=214447#p214447" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a></strong> &raquo; </span><time datetime="2017-08-07T21:06:57+00:00">Mon Aug 07, 2017 9:06 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><span style="font-size:200%;line-height:116%"><span style="color:#0000FF">AdMob support for Android!</span></span><br>
+<br>
+<a href="viewtopic6c28.html?f=5&amp;t=84159&amp;p=219426#p219426" class="postlink">iOS Library</a><br>
+<br>
+(Old content)<br>
+<span style="font-size:70%;line-height:116%">Hi all.<br>
+As you may have noticed, the way to deploy Android apps has changed: the newest version of the official Android port doesn't use ant anymore, but uses the Gradle wrapper.<br>
+Therefore a new AdMob library is needed.<br>
+<br>
+I want to thank Master Both, the author of <a href="viewtopic0df9.html?f=5&amp;t=82166" class="postlink">this</a> beautiful library for having let me use some of his code.<br>
+<br>
+There is another reason I made this library: the functions are the same of the <a href="viewtopic6c28.html?f=5&amp;t=84159&amp;p=219426#p219426" class="postlink">iOS library</a> I have made before.</span><br>
+<br>
+(New content)<br>
+The library has been updated to LÖVE 11.3!<br>
+With this library you can display AdMob ads (banners, interstitial and rewarded video) and collect consent from the European users as required by the GPDR law (more info <a href="https://developers.google.com/admob/android/eu-consent" class="postlink">here</a>)<br>
+<br>
+I've added a new module:<br>
+<br>
+<strong class="text-strong"><span style="color:#FF0000">love.ads</span></strong>!<br>
+<br>
+With this module is possible to request and display ads from LÖVE!<br>
+An AdMob account is needed in order to use this module.<br>
+<br>
+I have added 11 functions and 5 callbacks:<br>
+<br>
+<span style="color:#FF0000"><span style="font-size:150%;line-height:116%">love.ads Functions</span></span><br>
+
+<ul><li><strong class="text-strong">love.ads.createBanner(string adUnitID,string position)</strong><br>
+<em class="text-italics"><span style="color:#00AAFF">string</span> adUnitID </em>: Your banner ad unit id.<br>
+<em class="text-italics"><span style="color:#00AAFF">string</span> position </em>: The position of the banner. Can be "top" or "bottom".<br>
+Initializes the banner ad without displaying it. This function may be fired only once.<br>
+The banner inizialized is a smart banner.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.showBanner()</strong><br>
+Displays the banner ad. This function may be fired after <em class="text-italics">createBanner</em></li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.hideBanner()</strong><br>
+Hides the banner ad. This function may be fired after <em class="text-italics">createBanner</em></li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.requestInterstitial(string adUnitID)</strong><br>
+<em class="text-italics"><span style="color:#00AAFF">string</span> adUnitID </em>: Your interstitial ad unit id.<br>
+Requests an interstitial ad. This function should be called every time a new ad is needed.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.isInterstitialLoaded()</strong><br>
+Check if the interstitial ad previously requested is ready to be shown. <br>
+<br>
+<span style="text-decoration:underline">Returns:</span><br>
+bool isAdReady: true if the ad is ready to be shown.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.showInterstitial()</strong><br>
+Displays the interstitial ad. May be called only if the ad is loaded.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.requestRewardedAd(string adUnitID)</strong><br>
+<em class="text-italics"><span style="color:#00AAFF">string</span> adUnitID </em>: Your rewarded ad unit id.<br>
+Requests a rewarded video ad. This function should be called every time a new ad is needed.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.isRewardedAdLoaded()</strong><br>
+Check if the rewarded video ad previously requested is ready to be shown. <br>
+<br>
+<span style="text-decoration:underline">Returns:</span><br>
+bool isAdReady: true if the ad is ready to be shown.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.showRewardedAd()</strong><br>
+Displays the rewarded video ad. May be called only if the ad is loaded.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.getDeviceLanguage()</strong><br>
+<span style="text-decoration:underline">Returns:</span><br>
+string deviceLanguage: the code of the language set on the device. (Example: EN,FR,IT)<br>
+It can be useful for internationalization.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.ads.changeEUConsent()</strong><br>
+Shows the Consent View to let the user change his consent.</li>
+</ul>
+
+<span style="color:#FF0000"><span style="font-size:150%;line-height:116%">love.ads Callbacks</span></span>
+<ul><li><strong class="text-strong">love.interstitialFailedToLoad()</strong><br>
+Fired when an interstitial ad fails to load.</li></ul>
+
+<ul><li><strong class="text-strong">love.interstitialClosed()</strong><br>
+Fired when the user closes an interstitial ad.</li></ul>
+
+<ul><li><strong class="text-strong">love.rewardedAdFailedToLoad()</strong><br>
+Fired when a rewarded video ad fails to load.</li></ul>
+
+<ul><li><strong class="text-strong">love.rewardUserWithReward(string rewardType,number rewardQuantity)</strong><br>
+<em class="text-italics"><span style="color:#00AAFF">string</span> rewardType </em>: The type of the reward you set in your AdMob dashboard.<br>
+<em class="text-italics"><span style="color:#FF40BF">number</span> rewardQuantity </em>: The quantity of rewards you set in you AdMob dashboard.<br>
+<br>
+Fired when a rewarded video ad successfully finishes playing.</li>
+</ul>
+
+<ul><li><strong class="text-strong">love.rewardedAdDidStop()</strong><br>
+Fired when a rewarded video ad is closed by the user.<br>
+This callback is fired even if the video has already finished.</li>
+</ul>
+
+<strong class="text-strong">Here is the repository of the library: </strong><br>
+<a href="https://bitbucket.org/bio1712/love2d-admob-android" class="postlink">https://bitbucket.org/bio1712/love2d-admob-android</a><br>
+(LÖVE version: 11.3)<br>
+<br>
+<span style="font-size:150%;line-height:116%">How to use:</span><br>
+In order to use this library you need to follow the instructions <a href="https://bitbucket.org/MartinFelis/love-android-sdl2" class="postlink">here</a>.<br>
+In addition, you have to open SDK manager and download <em class="text-italics">Google Play Services</em> under the <span style="text-decoration:underline">extras</span> menu.<br>
+<br>
+Included in the source, there is an example <a href="https://bitbucket.org/bio1712/love2d-admob-android/downloads/game.love" class="postlink">game.love</a>.<br>
+<br>
+<strong class="text-strong">To use the library you need to </strong> open ./love/src/main/java/org/love2d/android/AdActivity.java and<br>
+1) Insert your app ID at line 63<br>
+2) Insert your publisher ID at line 66 (needed for the Consent SDK)<br>
+3) Insert your privacy policy URL at line 67 (needed for the Consent SDK)<br>
+4) Add your test devices for each kind of ad.<br>
+<strong class="text-strong">5) You can disable the Consent SDK by turning the boolean "collectConsent" to false at line 65.</strong><br>
+<br>
+<strong class="text-strong">Then, open ./app/src/main/AndroidManifest.xml and set your app ID at line 81.</strong><br>
+<br>
+Note: all the Ad-Unit IDs in the game.love are from <a href="https://developers.google.com/admob/android/test-ads" class="postlink">this</a> url.<br>
+<br>
+Screenshots:<br>
+<br>
+<img src="https://i.postimg.cc/yxkFj9dQ/Screenshot-20200207-152135-org-love2d-android.jpg" class="postimage" alt="Image"><br>
+<br>
+<img src="https://i.postimg.cc/pT0fKk25/Screenshot-20200207-152203-org-love2d-android.jpg" class="postimage" alt="Image"><br>
+<br>
+<img src="https://i.postimg.cc/CKgs0zP5/Screenshot-20200207-152239-org-love2d-android.jpg" class="postimage" alt="Image"><br>
+<br>
+<img src="https://i.postimg.cc/k5GWNz5N/Screenshot-20200207-152419-org-love2d-android.jpg" class="postimage" alt="Image"><br>
+<br>
+Second note: This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.<br>
+<br>
+Sample APK: <a href="https://bitbucket.org/bio1712/love2d-admob-android/downloads/app-debug.apk" class="postlink">https://bitbucket.org/bio1712/love2d-ad ... -debug.apk</a></div>
+
+			
+			
+													<div class="notice">
+					Last edited by <a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a> on Fri Feb 07, 2020 2:52 pm, edited 10 times in total.
+									</div>
+			
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214470" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214470">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlista4b5.html?mode=viewprofile&amp;u=139372" class="username">greboide</a>							</dt>
+
+						<dd class="profile-rank">Prole</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searche657.html?author_id=139372&amp;sr=posts">5</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Jul 31, 2017 6:40 am</dd>		
+		
+						
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214470">
+
+					<h3 >
+						<a href="viewtopica58f.html?p=214470#p214470">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postinge183.html?mode=quote&amp;p=214470" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica58f.html?p=214470#p214470" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista4b5.html?mode=viewprofile&amp;u=139372" class="username">greboide</a></strong> &raquo; </span><time datetime="2017-08-09T03:40:02+00:00">Wed Aug 09, 2017 3:40 am</time>
+			</p>
+			
+			
+			
+			<div class="content">why dont you make a pull request to send this back to love main project, just curious, other than that nice work!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214471" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214471">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="avatar"><img class="avatar" src="download/file34bc.png?avatar=80325_1451847465.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searcha5b1.html?author_id=80325&amp;sr=posts">3441</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Thu Dec 13, 2012 2:55 pm</dd>		
+		
+																<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Absurdistan, Hungary</dd>
+												
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact zorg">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact zorg</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="http://soon.tm.exclamationma.rk/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/zorg_z0rg_z0r8" title="Twitter" class="last-cell">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214471">
+
+					<h3 >
+						<a href="viewtopica237.html?p=214471#p214471">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting06e8.html?mode=quote&amp;p=214471" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopica237.html?p=214471#p214471" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlista3d0.html?mode=viewprofile&amp;u=80325" class="username">zorg</a></strong> &raquo; </span><time datetime="2017-08-09T04:36:33+00:00">Wed Aug 09, 2017 4:36 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=214470#p214470"><div><cite><a href="memberlista4b5.html?mode=viewprofile&amp;u=139372">greboide</a> wrote: <a href="viewtopica58f.html?p=214470#p214470" data-post-id="214470" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Aug 09, 2017 3:40 am</span></cite>
+why dont you make a pull request to send this back to love main project, just curious, other than that nice work!
+</div></blockquote>
+Because it would most likely not be incorporated, ever.</div>
+
+			
+			
+									
+						
+							<div id="sig214471" class="signature"><a href="../wiki/User_Zorg.html" class="postlink">Me and my stuff <img class="smilies" src="images/smilies/ms-three.png" width="16" height="16" alt=":3" title="Awww"></a><span style="font-size:10%;line-height:116%">True Neutral Aspirant. Why, yes, i do indeed enjoy sarcastically correcting others when they make the most blatant of spelling mistakes. No bullying or trolling the innocent tho.</span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214473" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214473">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="avatar"><img class="avatar" src="download/filef2af.png?avatar=138439_1488993919.png" width="32" height="32" alt="User avatar" /></a>														</div>
+								<a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="username">yetneverdone</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search94d8.html?author_id=138439&amp;sr=posts">446</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Sep 24, 2016 11:20 am</dd>		
+		
+																					
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact yetneverdone">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact yetneverdone</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://flamendless.github.io/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/flamendless" title="Twitter">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																																																<a href="http://youtube.com/channel/UCM3v7FvMmmbsHMEpoJNtuDQ" title="YouTube" class="last-cell">
+										<span class="contact-icon youtube_channel-icon">YouTube</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214473">
+
+					<h3 >
+						<a href="viewtopicb2d9.html?p=214473#p214473">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5c87.html?mode=quote&amp;p=214473" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb2d9.html?p=214473#p214473" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="username">yetneverdone</a></strong> &raquo; </span><time datetime="2017-08-09T06:59:51+00:00">Wed Aug 09, 2017 6:59 am</time>
+			</p>
+			
+			
+			
+			<div class="content">how is this different from this: <a href="https://bitbucket.org/npinochet/love-android-sdl2" class="postlink">https://bitbucket.org/npinochet/love-android-sdl2</a> ??</div>
+
+			
+			
+									
+						
+							<div id="sig214473" class="signature"><a href="http://flamendless.github.io/" class="postlink">My GameDev Website</a><br>
+<a href="http://brbl.gamejolt.io/goinghome" class="postlink">Going Home:A Pixelated Horror Game</a><br>
+<a href="http://github.com/flamendless" class="postlink"> My Repositories! </a><br>
+Follow me <a href="http://twitter.com/flamendless" class="postlink"> lovingly! </a><br>
+Nga pala, pinoy ako.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214476" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214476">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3752.html?author_id=136963&amp;sr=posts">72</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Aug 19, 2015 4:13 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214476">
+
+					<h3 >
+						<a href="viewtopicee72.html?p=214476#p214476">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting5dfb.html?mode=quote&amp;p=214476" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicee72.html?p=214476#p214476" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a></strong> &raquo; </span><time datetime="2017-08-09T08:24:10+00:00">Wed Aug 09, 2017 8:24 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=214473#p214473"><div><cite><a href="memberlistb69a.html?mode=viewprofile&amp;u=138439">yetneverdone</a> wrote: <a href="viewtopicb2d9.html?p=214473#p214473" data-post-id="214473" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Aug 09, 2017 6:59 am</span></cite>
+how is this different from this: <a href="https://bitbucket.org/npinochet/love-android-sdl2" class="postlink">https://bitbucket.org/npinochet/love-android-sdl2</a> ??
+</div></blockquote>
+
+The way of deploying it’s different, furthermore it doesn’t have rewarded videos and functions are called in a different way.<br>
+
+<blockquote cite="./viewtopic.php?p=214470#p214470"><div><cite><a href="memberlista4b5.html?mode=viewprofile&amp;u=139372">greboide</a> wrote: <a href="viewtopica58f.html?p=214470#p214470" data-post-id="214470" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Aug 09, 2017 3:40 am</span></cite>
+why dont you make a pull request to send this back to love main project, just curious, other than that nice work!
+</div></blockquote>
+
+Thank you!</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214481" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214481">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="avatar"><img class="avatar" src="download/filef2af.png?avatar=138439_1488993919.png" width="32" height="32" alt="User avatar" /></a>														</div>
+								<a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="username">yetneverdone</a>							</dt>
+
+						<dd class="profile-rank">Party member</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search94d8.html?author_id=138439&amp;sr=posts">446</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Sat Sep 24, 2016 11:20 am</dd>		
+		
+																					
+							<dd class="profile-contact">
+				<strong>Contact:</strong>
+				<div class="dropdown-container dropdown-left">
+					<a href="#" class="dropdown-trigger" title="Contact yetneverdone">
+						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">Contact yetneverdone</span>
+					</a>
+					<div class="dropdown">
+						<div class="pointer"><div class="pointer-inner"></div></div>
+						<div class="dropdown-contents contact-icons">
+																																								<div>
+																	<a href="https://flamendless.github.io/" title="Website">
+										<span class="contact-icon phpbb_website-icon">Website</span>									</a>
+																																																<a href="http://twitter.com/flamendless" title="Twitter">
+										<span class="contact-icon phpbb_twitter-icon">Twitter</span>									</a>
+																																																<a href="http://youtube.com/channel/UCM3v7FvMmmbsHMEpoJNtuDQ" title="YouTube" class="last-cell">
+										<span class="contact-icon youtube_channel-icon">YouTube</span>									</a>
+																	</div>
+																					</div>
+					</div>
+				</div>
+			</dd>
+				
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214481">
+
+					<h3 >
+						<a href="viewtopicdfdb.html?p=214481#p214481">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingd4fd.html?mode=quote&amp;p=214481" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicdfdb.html?p=214481#p214481" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlistb69a.html?mode=viewprofile&amp;u=138439" class="username">yetneverdone</a></strong> &raquo; </span><time datetime="2017-08-09T14:03:20+00:00">Wed Aug 09, 2017 2:03 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote class="uncited"><div>The way of deploying it’s different, furthermore it doesn’t have rewarded videos and functions are called in a different way.</div></blockquote>
+
+Deploying? The link you provide for the instruction is the main wiki of master both's repo,which by the way, is very deprecated.</div>
+
+			
+			
+									
+						
+							<div id="sig214481" class="signature"><a href="http://flamendless.github.io/" class="postlink">My GameDev Website</a><br>
+<a href="http://brbl.gamejolt.io/goinghome" class="postlink">Going Home:A Pixelated Horror Game</a><br>
+<a href="http://github.com/flamendless" class="postlink"> My Repositories! </a><br>
+Follow me <a href="http://twitter.com/flamendless" class="postlink"> lovingly! </a><br>
+Nga pala, pinoy ako.</div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p214482" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile214482">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3752.html?author_id=136963&amp;sr=posts">72</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Aug 19, 2015 4:13 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content214482">
+
+					<h3 >
+						<a href="viewtopicb988.html?p=214482#p214482">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingbf47.html?mode=quote&amp;p=214482" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicb988.html?p=214482#p214482" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a></strong> &raquo; </span><time datetime="2017-08-09T16:04:16+00:00">Wed Aug 09, 2017 4:04 pm</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=214481#p214481"><div><cite><a href="memberlistb69a.html?mode=viewprofile&amp;u=138439">yetneverdone</a> wrote: <a href="viewtopicdfdb.html?p=214481#p214481" data-post-id="214481" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Wed Aug 09, 2017 2:03 pm</span></cite>
+<blockquote class="uncited"><div>The way of deploying it’s different, furthermore it doesn’t have rewarded videos and functions are called in a different way.</div></blockquote>
+
+Deploying? The link you provide for the instruction is the main wiki of master both's repo,which by the way, is very deprecated.
+</div></blockquote>
+
+The link I provide for the instruction is the readme.md file of Martin Felis’ repo. <br>
+If you compare the “Quick start” sections of my library and Master Both’s one you will notice the differences.</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p216991" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile216991">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="avatar"><img class="avatar" src="download/file0973.png?avatar=139677_1540316948.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb979.html?author_id=139677&amp;sr=posts">89</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Dec 04, 2017 1:47 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content216991">
+
+					<h3 >
+						<a href="viewtopicaafd.html?p=216991#p216991">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="postingbf29.html?mode=quote&amp;p=216991" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicaafd.html?p=216991#p216991" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a></strong> &raquo; </span><time datetime="2017-12-07T23:40:48+00:00">Thu Dec 07, 2017 11:40 pm</time>
+			</p>
+			
+			
+			
+			<div class="content">Hey bio1712. Thank you for these forked repos. I'm excited to try this out.<br>
+<br>
+@everyone But I got a problem with the deployment using this, maybe anybody can help? <img class="smilies" src="images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"> <br>
+<br>
+The common official documentations are very fussy and ant was missing the build.xml (gradle seems to be the way to go), I ended up downloading JetBrain's Android Studio to make things simple. I managed to compile the project with it, eventually. All dependencies are loaded, correctly as it seems.<br>
+<br>
+All I did was adding my own love file to app\src\main\assets, adding my own ca-app-pub ID in the AdActivity and changing target from android-25 to android-19 in the project.properties (the game needs to run on KitKat). <br>
+<br>
+I also added a gradle.properties with:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>org.gradle.jvmargs=-Xmx4096m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+org.gradle.parallel=true</code></pre></div>
+
+to increase the build process. <img class="smilies" src="images/smilies/ms-monocle.png" width="16" height="16" alt=":monocle:" title="Monocle"> <br>
+<br>
+<br>
+When I run the app on my SGS3 I get an SDL error, tho:<br>
+
+<blockquote class="uncited"><div>Couldn't load gnustl_shared from loader dalvik.system.PathClassLoader[dexPath=/data/app/org.love2d.android-1.apk,libraryPath=/data/app-lib/org.love2d.android-1]: findLibrary returned null</div></blockquote>
+
+ <img class="smilies" src="images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> <br>
+<br>
+Anybody knows how I can fix this problem?</div>
+
+			
+			
+									
+						
+							<div id="sig216991" class="signature"><strong class="text-strong"><a href="http://tinyw.in/6heO" class="postlink">Visual Studio Code Template</a> • <a href="http://tinyw.in/rx3y" class="postlink">RichLÖVE Mobile (AdMob+UnityAds+PlayGamesServices+GameCenter)</a> • <a href="https://discordapp.com/users/357997950393384960/" class="postlink">Add me on Discord</a></strong><br>
+<br>
+<span style="color:#E1EBF2">───<span style="color:#800">▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄</span>───<br>
+───<span style="color:#800">█▒▒░░░░░░░░░▒▒█</span>───<br>
+────<span style="color:#800">█░░<span style="color:#333">█</span>░░░░░<span style="color:#333">█</span>░░█</span>────<br>
+─<span style="color:#800">▄▄</span>──<span style="color:#800">█░░░<span style="color:#333">▀█▀</span>░░░█</span>──<span style="color:#800">▄▄</span>─<br>
+<span style="color:#800">█░░█</span>─<span style="color:#800">▀▄░░░░░░░▄▀</span>─<span style="color:#800">█░░█</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p217064" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile217064">
+			<dt class="has-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="search3752.html?author_id=136963&amp;sr=posts">72</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Wed Aug 19, 2015 4:13 pm</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Italy</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content217064">
+
+					<h3 >
+						<a href="viewtopicbb81.html?p=217064#p217064">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting1216.html?mode=quote&amp;p=217064" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicbb81.html?p=217064#p217064" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963" class="username">bio1712</a></strong> &raquo; </span><time datetime="2017-12-12T05:58:40+00:00">Tue Dec 12, 2017 5:58 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=216991#p216991"><div><cite><a href="memberlist99a0.html?mode=viewprofile&amp;u=139677">modiX</a> wrote: <a href="viewtopicaafd.html?p=216991#p216991" data-post-id="216991" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Thu Dec 07, 2017 11:40 pm</span></cite>
+Hey bio1712. Thank you for these forked repos. I'm excited to try this out.<br>
+<br>
+@everyone But I got a problem with the deployment using this, maybe anybody can help? <img class="smilies" src="images/smilies/ms-confused.png" width="16" height="16" alt=":?" title="Confused"> <br>
+<br>
+The common official documentations are very fussy and ant was missing the build.xml (gradle seems to be the way to go), I ended up downloading JetBrain's Android Studio to make things simple. I managed to compile the project with it, eventually. All dependencies are loaded, correctly as it seems.<br>
+<br>
+All I did was adding my own love file to app\src\main\assets, adding my own ca-app-pub ID in the AdActivity and changing target from android-25 to android-19 in the project.properties (the game needs to run on KitKat). <br>
+<br>
+I also added a gradle.properties with:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>org.gradle.jvmargs=-Xmx4096m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+org.gradle.parallel=true</code></pre></div>
+
+to increase the build process. <img class="smilies" src="images/smilies/ms-monocle.png" width="16" height="16" alt=":monocle:" title="Monocle"> <br>
+<br>
+<br>
+When I run the app on my SGS3 I get an SDL error, tho:<br>
+
+<blockquote class="uncited"><div>Couldn't load gnustl_shared from loader dalvik.system.PathClassLoader[dexPath=/data/app/org.love2d.android-1.apk,libraryPath=/data/app-lib/org.love2d.android-1]: findLibrary returned null</div></blockquote>
+
+ <img class="smilies" src="images/smilies/ms-cry.png" width="16" height="16" alt=":cry:" title="Cry"> <br>
+<br>
+Anybody knows how I can fix this problem?
+</div></blockquote>
+Have you tried using gradlew build? Why have you added a new gradle.properties file? And what version of Android Build Tools do you have?</div>
+
+			
+			
+									
+						
+										
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+				<div id="p217087" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile217087">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="avatar"><img class="avatar" src="download/file0973.png?avatar=139677_1540316948.png" width="90" height="90" alt="User avatar" /></a>														</div>
+								<a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a>							</dt>
+
+						<dd class="profile-rank">Citizen</dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="searchb979.html?author_id=139677&amp;sr=posts">89</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> Mon Dec 04, 2017 1:47 am</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> Germany</dd>
+							
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content217087">
+
+					<h3 >
+						<a href="viewtopicfd85.html?p=217087#p217087">Re: [0.10.2] AdMob support for Android!</a>
+		</h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="posting3089.html?mode=quote&amp;p=217087" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+														</ul>
+							
+						<p class="author">
+									<a class="unread" href="viewtopicfd85.html?p=217087#p217087" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="memberlist99a0.html?mode=viewprofile&amp;u=139677" class="username">Marty</a></strong> &raquo; </span><time datetime="2017-12-13T00:35:42+00:00">Wed Dec 13, 2017 12:35 am</time>
+			</p>
+			
+			
+			
+			<div class="content"><blockquote cite="./viewtopic.php?p=217064#p217064"><div><cite><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963">bio1712</a> wrote: <a href="viewtopicbb81.html?p=217064#p217064" data-post-id="217064" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Tue Dec 12, 2017 5:58 am</span></cite>
+Have you tried using gradlew build? 
+</div></blockquote>
+No, I haven't. So I gave it a shot, executed "gradlew.bat build", worked out. Then I created a keystore and signed my APK, I could install it. However, the problem persists.<br>
+
+<blockquote cite="./viewtopic.php?p=217064#p217064"><div><cite><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963">bio1712</a> wrote: <a href="viewtopicbb81.html?p=217064#p217064" data-post-id="217064" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Tue Dec 12, 2017 5:58 am</span></cite>
+Why have you added a new gradle.properties file? 
+</div></blockquote>
+The build process took almost 20 minutes, so after 2 failed attempts I decided to search for a solution. With that file with the content you see in my last post, the build process only takes 2 minutes. Now, for my confusion, I've renamed the file and it still takes only 1-2 minutes, so not sure why it took so long before. I keep the file renamed as _gradle.properties to avoid any problems caused by it, for now.<br>
+
+<blockquote cite="./viewtopic.php?p=217064#p217064"><div><cite><a href="memberlist1e9a.html?mode=viewprofile&amp;u=136963">bio1712</a> wrote: <a href="viewtopicbb81.html?p=217064#p217064" data-post-id="217064" onclick="if(document.getElementById(hash.substr(1)))href=hash">↑</a><span class="responsive-hide">Tue Dec 12, 2017 5:58 am</span></cite>
+And what version of Android Build Tools do you have? 
+</div></blockquote>
+My build.gradle file has configured to use the build tools version is 25.0.2, just as it is in your fork. I tried it with the latest 27, too, but it didn't work either. <br>
+<br>
+I'm going to test the whole thing with the original port as well as on some other devices tomorrow to see where the problem is coming from.</div>
+
+			
+			
+									
+						
+							<div id="sig217087" class="signature"><strong class="text-strong"><a href="http://tinyw.in/6heO" class="postlink">Visual Studio Code Template</a> • <a href="http://tinyw.in/rx3y" class="postlink">RichLÖVE Mobile (AdMob+UnityAds+PlayGamesServices+GameCenter)</a> • <a href="https://discordapp.com/users/357997950393384960/" class="postlink">Add me on Discord</a></strong><br>
+<br>
+<span style="color:#E1EBF2">───<span style="color:#800">▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄</span>───<br>
+───<span style="color:#800">█▒▒░░░░░░░░░▒▒█</span>───<br>
+────<span style="color:#800">█░░<span style="color:#333">█</span>░░░░░<span style="color:#333">█</span>░░█</span>────<br>
+─<span style="color:#800">▄▄</span>──<span style="color:#800">█░░░<span style="color:#333">▀█▀</span>░░░█</span>──<span style="color:#800">▄▄</span>─<br>
+<span style="color:#800">█░░█</span>─<span style="color:#800">▀▄░░░░░░░▄▀</span>─<span style="color:#800">█░░█</span></span></div>			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="posting7795.html?mode=reply&amp;t=84226" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="viewtopica6d7.html?t=84226&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="https://love2d.org/forums/viewtopic.php?t=84226">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			107 posts
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>11</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="10" data-base-url=".&#x2F;viewtopic.php&#x3F;t&#x3D;84226" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="viewtopic84be.html?t=84226&amp;start=10" role="button">2</a></li>
+				<li><a class="button" href="viewtopic3de0.html?t=84226&amp;start=20" role="button">3</a></li>
+				<li><a class="button" href="viewtopic798a.html?t=84226&amp;start=30" role="button">4</a></li>
+				<li><a class="button" href="viewtopica0c5.html?t=84226&amp;start=40" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="viewtopice13e.html?t=84226&amp;start=100" role="button">11</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="viewtopic84be.html?t=84226&amp;start=10" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="viewforume774.html?f=5" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Libraries and Tools”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="viewforum4d6b.html?f=3" class="jumpbox-forum-link"> <span> General</span></a></li>
+																<li><a href="viewforum31e6.html?f=4" class="jumpbox-forum-link"> <span> Support and Development</span></a></li>
+																<li><a href="viewforum9780.html?f=14" class="jumpbox-forum-link"> <span> Games and Creations</span></a></li>
+																<li><a href="viewforume774.html?f=5" class="jumpbox-forum-link"> <span> Libraries and Tools</span></a></li>
+																<li><a href="viewforumd42b.html?f=7" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="viewforum01c9.html?f=12" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ports</span></a></li>
+																<li><a href="viewforum15ca.html?f=10" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; nLÖVE</span></a></li>
+																<li><a href="viewforum8a83.html?f=11" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; LÖVE-Android</span></a></li>
+																<li><a href="viewforumeb13.html?f=13" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Archives</span></a></li>
+																<li><a href="viewforum957d.html?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; A Whiff of Steam</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+	<div class="stat-block online-list">
+		<h3><a href="viewonline.html">Who is online</a></h3>
+		<p>Users browsing this forum: <span style="color: #9E8DA7;" class="username-coloured">Ahrefs [Bot]</span> and 2 guests</p>
+	</div>
+
+							</div>
+
+		
+		<div id="page-footer" class="page-footer" role="contentinfo">
+			<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="index-2.html" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="ucp033a.html?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="memberlist.html" title="View complete list of members" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="memberlist4bfd.html?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="memberlist8733.html?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+			<div class="copyright">
+								Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+																			</div>
+
+			<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+				<div id="darken" class="darken">&nbsp;</div>
+			</div>
+
+			<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+			</div>
+			<div id="phpbb_confirm" class="phpbb_alert">
+				<a href="#" class="alert_close">
+					<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+				</a>
+				<div class="alert_text"></div>
+			</div>
+		</div>
+
+		<div>
+			<a id="bottom" class="anchor" accesskey="z"></a>
+					</div>
+
+		</div>
+	</div> <!-- love_content -->
+</div> <!-- love_wrap -->
+
+<script type="text/javascript" src="assets/javascript/jquery-3.6.0.min2257.js?assets_version=46"></script>
+<script type="text/javascript" src="assets/javascript/core2257.js?assets_version=46"></script>
+
+	<script src="assets/cookieconsent/cookieconsent.min2257.js?assets_version=46"></script>
+	<script>
+		window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#0F538A"
+					},
+					"button": {
+						"background": "#E5E5E5"
+					}
+				},
+				"theme": "classic",
+				"content": {
+					"message": "This\u0020website\u0020uses\u0020cookies\u0020to\u0020ensure\u0020you\u0020get\u0020the\u0020best\u0020experience\u0020on\u0020our\u0020website.",
+					"dismiss": "Got\u0020it\u0021",
+					"link": "Learn\u0020more"
+				}
+			})});
+	</script>
+
+<script type="text/javascript" src="../MathJax/MathJax.js">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["\\(","\\)"]]}
+  });
+</script>
+
+<script type="text/javascript" src="../highlightjs/highlight.pack.js"></script>
+<script type="text/javascript">
+hljs.configure();
+function hljs_init() {
+	var elements = document.getElementsByTagName("code");
+	for (var i = 0; i < elements.length; i++) {
+		hljs.highlightBlock(elements[i]);
+	}
+};
+$(document).ready(hljs_init);
+</script>
+
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="styles/prosilver/template/forum_fn2257.js?assets_version=46"></script>
+<script src="styles/prosilver/template/ajax2257.js?assets_version=46"></script>
+
+<script src="../egg.js"></script>
+
+
+</body>
+
+<!-- Mirrored from love2d.org/forums/viewtopic.php?f=5&t=84226 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Apr 2024 18:06:31 GMT -->
+</html>
